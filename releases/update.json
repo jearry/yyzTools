@@ -1,0 +1,50 @@
+{
+    "closeWindows":  [
+
+                     ],
+    "packages":  {
+                     "wallpaper":  {
+                                       "url":  "v1.0.1.120/wallpaper-1.0.1.120.7z",
+                                       "version":  "1.0.1.120",
+                                       "sha256":  "885e167398b375b9432d61458212a7137719a285d3584a34100024af0a944a20"
+                                   },
+                     "web":  {
+                                 "url":  "v1.0.1.120/web-1.0.1.120.7z",
+                                 "version":  "1.0.1.120",
+                                 "sha256":  "d8885e1fe1f0dec099ec9c8b99f77633dcd886fc7a449a9fce545bcb7bd02395"
+                             },
+                     "rapidocr":  {
+                                      "url":  "v1.0.1.120/rapidocr-1.0.1.120.7z",
+                                      "version":  "1.0.1.120",
+                                      "sha256":  "35fb912929627382f79fac333bd6f401896c41729a9fd70cc75dc77808237b5f"
+                                  },
+                     "ffmpeg":  {
+                                    "url":  "v1.0.1.120/ffmpeg-1.0.1.120.7z",
+                                    "version":  "1.0.1.120",
+                                    "sha256":  "f663f66a334448843ff54f62f15f1e7e41cacff1471666e38ea73f39824d2be4"
+                                },
+                     "modules":  {
+                                     "url":  "v1.0.1.120/modules-1.0.1.120.7z",
+                                     "version":  "1.0.1.120",
+                                     "sha256":  "6cb56594b5ecfab182e7381bf60d3c1c6e99ca2babda21f61657887224588b33"
+                                 },
+                     "main":  {
+                                  "url":  "v1.0.1.120/main-1.0.1.120.7z",
+                                  "version":  "1.0.1.120",
+                                  "sha256":  "7bffeb07e699b91d8118ece7bb9d443ec43959aea7afdf1bff42946bdbf9879d"
+                              },
+                     "yyztools":  {
+                                      "url":  "v1.0.1.120/yyztools-1.0.1.120.7z",
+                                      "version":  "1.0.1.120",
+                                      "sha256":  "7094f13651d13a4ecfb95903774f12a56f71607c9552ef6ce77b4b69eb7cbb1e"
+                                  },
+                     "tools":  {
+                                   "url":  "v1.0.1.120/tools-1.0.1.120.7z",
+                                   "version":  "1.0.1.120",
+                                   "sha256":  "f7ed337736696d3ba0ce697aeaf4dd7e066371be1a41c29013a80ed0feeb2606"
+                               }
+                 },
+    "killProcesses":  [
+
+                      ]
+}
