@@ -31,6 +31,12 @@ public:
 
     std::unique_ptr<JsonValue> Parse() {
         skipWs();
+        // 跳过 UTF-8 BOM（PowerShell Set-Content -Encoding utf8 等会写 BOM）
+        if (i_ + 2 < s_.size() && (unsigned char)s_[i_] == 0xEF &&
+            (unsigned char)s_[i_ + 1] == 0xBB && (unsigned char)s_[i_ + 2] == 0xBF) {
+            i_ += 3;
+            skipWs();
+        }
         auto v = parseValue();
         return v;
     }

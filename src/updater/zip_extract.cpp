@@ -12,15 +12,15 @@ static std::wstring Quote(const std::wstring& s) {
 bool ExtractArchive(const std::wstring& archivePath, const std::wstring& destDir) {
     CreateDirectoryW(destDir.c_str(), nullptr);
 
-    // Copy 7z.exe + 7z.dll to a temp copy. The appDir copy may be overwritten
-    // mid-extraction (self-update); using the temp copy avoids that lock/replace race.
-    std::wstring src7z  = GetAppDir() + L"\\Platform\\7z\\7z.exe";
-    std::wstring srcDll = GetAppDir() + L"\\Platform\\7z\\7z.dll";
+    // Copy 7z.exe + 7z.dll to a tools copy. The install copy may be overwritten
+    // mid-extraction (self-update); using the copy avoids that lock/replace race.
+    std::wstring src7z  = GetInstallDir() + L"\\Platform\\7z\\7z.exe";
+    std::wstring srcDll = GetInstallDir() + L"\\Platform\\7z\\7z.dll";
     if (!PathFileExistsW(src7z.c_str()) || !PathFileExistsW(srcDll.c_str())) {
         LogFmt("7z tool not found: %ls", src7z.c_str());
         return false;
     }
-    std::wstring tmpDir = GetTempDir();
+    std::wstring tmpDir = GetToolsDir();
     std::wstring tmp7z  = tmpDir + L"\\7z.exe";
     std::wstring tmpDll = tmpDir + L"\\7z.dll";
     if (!CopyFileW(src7z.c_str(), tmp7z.c_str(), FALSE) ||
@@ -60,6 +60,7 @@ bool ExtractArchive(const std::wstring& archivePath, const std::wstring& destDir
         LogFmt("7z exit code: %lu", code);
         return false;
     }
+    LogFmt("7z extract ok: %ls", archivePath.c_str());
     return true;
 }
 

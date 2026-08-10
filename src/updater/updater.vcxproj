@@ -138,9 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>winhttp.lib;bcrypt.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>copy /Y "$(OutDir)yyzUpdater.exe" "$(SolutionDir)..\bin64\Platform\yyzTools\yyzUpdater.exe"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -189,9 +186,6 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalDependencies>winhttp.lib;bcrypt.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>copy /Y "$(OutDir)yyzUpdater.exe" "$(SolutionDir)..\bin64\Platform\yyzTools\yyzUpdater.exe"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -27,8 +27,10 @@ bool WaitMainExit(const std::wstring& appDir, DWORD graceMs, bool forceKill) {
     DWORD r = WaitForSingleObject(hProc, graceMs);
     if (r == WAIT_TIMEOUT && forceKill) {
         Log("main still active, force terminating");
-        TerminateProcess(hProc, 0);
-        WaitForSingleObject(hProc, 5000);
+        BOOL tk = TerminateProcess(hProc, 0);
+        LogFmt("TerminateProcess ret=%d lasterr=%lu", tk, GetLastError());
+        DWORD w = WaitForSingleObject(hProc, 5000);
+        LogFmt("post-kill wait=%lu", w);
     }
     DWORD code = STILL_ACTIVE;
     GetExitCodeProcess(hProc, &code);
@@ -45,18 +47,41 @@ static void Kill(const std::wstring& exe) {
     if (h) { TerminateProcess(h, 0); CloseHandle(h); LogFmt("killed %ls", exe.c_str()); }
 }
 
+// 用管理员权限杀进程（服务进程如 Everything.exe 需提权）：先普通杀，仍存活才 taskkill /f /im 经 UAC runas。
+// 存活检查避免进程已不在时无谓弹 UAC（减弹窗核心）。
+static void KillWithAdmin(const std::wstring& exe) {
+    Kill(exe);
+    if (FindProcessId(exe) == 0) {
+        LogFmt("%ls already gone, skip admin kill", exe.c_str());
+        return;
+    }
+    SHELLEXECUTEINFOW sei{};
+    sei.cbSize = sizeof(sei);
+    sei.fMask = SEE_MASK_NOCLOSEPROCESS;
+    sei.lpVerb = L"runas";
+    sei.lpFile = L"taskkill.exe";
+    std::wstring params = L"/f /im " + exe;
+    sei.lpParameters = params.c_str();
+    sei.nShow = SW_HIDE;
+    if (ShellExecuteExW(&sei) && sei.hProcess) {
+        WaitForSingleObject(sei.hProcess, 5000);
+        CloseHandle(sei.hProcess);
+        LogFmt("killed with admin %ls", exe.c_str());
+    }
+}
+
+// 默认固定杀：仅主进程 yyzTools.exe（其余子进程改由各 package 的 killProcesses 声明、按包杀）。
 void KillChildProcesses() {
-    // 顺序参考 inno_setup yyztools.iss TaskKillAll（不含主进程 yyzTools.exe）
-    Kill(L"yyzWallpaper.exe");
-    Kill(L"yyzInputHint.exe");
-    Kill(L"yyzMouseFinder.exe");
-    Kill(L"yyzBrowser.exe");
-    Kill(L"aria2c.exe");
-    Kill(L"yyzCmd.exe");
-    Kill(L"RapidOCR-json.exe");
-    Kill(L"yyzScreenCap.exe");
-    Kill(L"7z.exe");
-    Sleep(500);
+    Log("killing child processes...");
+    Kill(L"yyzTools.exe");
+    Log("child processes killed");
+}
+
+// 按包杀：normal 普通杀；admin 先普通杀、仍存活才提权（减少 UAC 弹窗）。空列表不等待。
+void KillPackageProcesses(const std::vector<std::wstring>& normal, const std::vector<std::wstring>& admin) {
+    for (auto& n : normal) Kill(n);
+    for (auto& a : admin) KillWithAdmin(a);
+    if (!normal.empty() || !admin.empty()) Sleep(500);
 }
 
 static void CollectFiles(const std::wstring& root, const std::wstring& base,
@@ -83,6 +108,7 @@ bool ApplyStaging(const std::wstring& appDir, const std::wstring& stagingDir) {
     CollectFiles(stagingDir, L"", files);
     LogFmt("ApplyStaging: %zu files", files.size());
 
+    // .bak 待删除列表（.old 不入此列：yyzUpdater.exe 旧映像运行中删不掉，留给下次启动清理）
     std::vector<std::wstring> backups;
     int failures = 0;
     for (auto& f : files) {
@@ -90,10 +116,13 @@ bool ApplyStaging(const std::wstring& appDir, const std::wstring& stagingDir) {
         std::wstring destDir = dest.substr(0, dest.find_last_of(L'\\'));
         CreateDirectoryW(destDir.c_str(), nullptr);
 
-        std::wstring bak = dest + L".bak";
+        // yyzUpdater.exe 是当前运行进程的映像：Windows 允许改名运行中 exe，但不能删除/覆盖。
+        // 用 .old 后缀改名让位，新版本 move 进来；.old 不立即删（删不掉），由 main.cpp 下次启动清理。
+        bool isSelf = (f.second == L"yyzUpdater.exe");
+        std::wstring bak = dest + (isSelf ? L".old" : L".bak");
         bool hasBak = false;
         if (PathFileExistsW(dest.c_str())) {
-            DeleteFileW(bak.c_str());
+            DeleteFileW(bak.c_str());  // 清理上次残留的同名 .old/.bak
             if (MoveFileW(dest.c_str(), bak.c_str())) hasBak = true;
             else LogFmt("backup failed: %ls (%lu)", f.second.c_str(), GetLastError());
         }
@@ -108,7 +137,10 @@ bool ApplyStaging(const std::wstring& appDir, const std::wstring& stagingDir) {
         }
 
         if (applied) {
-            if (hasBak) backups.push_back(bak);
+            if (hasBak && isSelf)
+                LogFmt("self-update: %ls renamed to .old, will be cleaned on next launch", f.second.c_str());
+            else if (hasBak)
+                backups.push_back(bak);
         } else {
             LogFmt("apply failed: %ls (%lu)", f.second.c_str(), GetLastError());
             failures++;
