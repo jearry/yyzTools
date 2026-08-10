@@ -1,50 +1,71 @@
 {
-    "closeWindows":  [
-
-                     ],
-    "packages":  {
-                     "wallpaper":  {
-                                       "url":  "v1.0.1.120/wallpaper-1.0.1.120.7z",
-                                       "version":  "1.0.1.120",
-                                       "sha256":  "885e167398b375b9432d61458212a7137719a285d3584a34100024af0a944a20"
-                                   },
-                     "web":  {
-                                 "url":  "v1.0.1.120/web-1.0.1.120.7z",
-                                 "version":  "1.0.1.120",
-                                 "sha256":  "d8885e1fe1f0dec099ec9c8b99f77633dcd886fc7a449a9fce545bcb7bd02395"
-                             },
-                     "rapidocr":  {
-                                      "url":  "v1.0.1.120/rapidocr-1.0.1.120.7z",
-                                      "version":  "1.0.1.120",
-                                      "sha256":  "35fb912929627382f79fac333bd6f401896c41729a9fd70cc75dc77808237b5f"
-                                  },
-                     "ffmpeg":  {
-                                    "url":  "v1.0.1.120/ffmpeg-1.0.1.120.7z",
-                                    "version":  "1.0.1.120",
-                                    "sha256":  "f663f66a334448843ff54f62f15f1e7e41cacff1471666e38ea73f39824d2be4"
-                                },
-                     "modules":  {
-                                     "url":  "v1.0.1.120/modules-1.0.1.120.7z",
-                                     "version":  "1.0.1.120",
-                                     "sha256":  "6cb56594b5ecfab182e7381bf60d3c1c6e99ca2babda21f61657887224588b33"
-                                 },
-                     "main":  {
-                                  "url":  "v1.0.1.120/main-1.0.1.120.7z",
-                                  "version":  "1.0.1.120",
-                                  "sha256":  "7bffeb07e699b91d8118ece7bb9d443ec43959aea7afdf1bff42946bdbf9879d"
-                              },
-                     "yyztools":  {
-                                      "url":  "v1.0.1.120/yyztools-1.0.1.120.7z",
-                                      "version":  "1.0.1.120",
-                                      "sha256":  "7094f13651d13a4ecfb95903774f12a56f71607c9552ef6ce77b4b69eb7cbb1e"
-                                  },
-                     "tools":  {
-                                   "url":  "v1.0.1.120/tools-1.0.1.120.7z",
-                                   "version":  "1.0.1.120",
-                                   "sha256":  "f7ed337736696d3ba0ce697aeaf4dd7e066371be1a41c29013a80ed0feeb2606"
-                               }
-                 },
-    "killProcesses":  [
-
-                      ]
+  "packages": {
+    "web": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/web-1.0.0.1000.7z",
+      "sha256": "ac6bc05cb7cc48318a37004fc76f0ccbf7fa558c62c35ecfb17147095afc6470",
+      "killProcesses": ["yyzWallpaper.exe"],
+      "killProcessesAdmin": []
+    },
+    "modules": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/modules-1.0.0.1000.7z",
+      "sha256": "68359aef5847a87453894c947609bc492b34d102385fcdf5a61d7c27f25d41c4",
+      "killProcesses": [],
+      "killProcessesAdmin": []
+    },
+    "wallpaper": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/wallpaper-1.0.0.1000.7z",
+      "sha256": "e2cc2d4d6e80ecc1e263f1707213ae82b5f7414db1a3eadcd0bffffcb4bc96f3",
+      "killProcesses": ["yyzWallpaper.exe"],
+      "killProcessesAdmin": []
+    },
+    "yyztools": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/yyztools-1.0.0.1000.7z",
+      "sha256": "473ff6cb367cfaa501469d2742f2bd6d97c852d9196d93e1634893608cfa626e",
+      "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe"],
+      "killProcessesAdmin": []
+    },
+    "tools": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/tools-1.0.0.1000.7z",
+      "sha256": "93716e32ecc516feb3ef8fe2ad69e296a61def66c8a7505c660c8f55d725e603",
+      "killProcesses": ["aria2c.exe", "7z.exe", "openssl.exe", "pdfcpu.exe", "magick.exe", "gswin64c.exe"],
+      "killProcessesAdmin": []
+    },
+    "everything": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/everything-1.0.0.1000.7z",
+      "sha256": "388c9ed3e6ed1fcad81819f6925e4fe06485ca9dc03417115114ba002b554661",
+      "killProcesses": [],
+      "killProcessesAdmin": ["Everything.exe"]
+    },
+    "rapidocr": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/rapidocr-1.0.0.1000.7z",
+      "sha256": "58f8f129980bbfd091b74879d81940f0a1b2834d9d614e46d1c710e3e7897fcf",
+      "killProcesses": ["RapidOCR-json.exe"],
+      "killProcessesAdmin": []
+    },
+    "ffmpeg": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/ffmpeg-1.0.0.1000.7z",
+      "sha256": "b5e98be121dd275b5bf37b3a7f9cd9593d00a3867f96df81791118220e002c50",
+      "killProcesses": ["ffmpeg.exe", "ffprobe.exe"],
+      "killProcessesAdmin": []
+    },
+    "main": {
+      "version": "1.0.0.1000",
+      "url": "v1.0.0.1000/main-1.0.0.1000.7z",
+      "sha256": "aa50c694ee7a652b2b7ed53c81f363544df2e6b0794c59e51f1a8c8abd0ddecc",
+      "killProcesses": ["yyzWallpaper.exe", "yyzBrowser.exe"],
+      "killProcessesAdmin": []
+    }
+  },
+  "home": {
+    "url": "https://yyztools.com",
+    "show_type": "close"
+  }
 }
