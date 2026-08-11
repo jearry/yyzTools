@@ -11,9 +11,9 @@
 <p align="center"><a href="README.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.en.md">English</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <strong>العربية</strong></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.0.1000-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.1.1100-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
-  <img alt="languages" src="https://img.shields.io/badge/UI-10%20languages-green">
+  <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
 </p>
 
@@ -59,11 +59,11 @@ The front end calls each C++ Manager through the `window.Zen` bridge, all return
 
 ## Download
 
-- **Installer** (recommended): `yyzTools-setup-1.0.0.1000.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installer** (recommended): `yyzTools-setup-1.0.1.1100.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Or grab it from the [official download page](https://yyztools.com/en/download.html).
 
-The setup wizard supports 10 languages.
+The setup wizard supports 12 languages.
 
 ## System requirements
 
@@ -72,7 +72,7 @@ The setup wizard supports 10 languages.
 
 ## UI languages
 
-Both the UI and command-module text support 10 languages: 简体中文, 繁體中文, English, 日本語, 한국어, Français, Deutsch, Español, Русский, العربية. First launch auto-detects the system language; switch anytime in Settings.
+Both the UI and command-module text support 12 languages: 简体中文, 繁體中文, English, 日本語, 한국어, Français, Deutsch, Español, Русский, العربية, Português, Italiano. First launch auto-detects the system language; switch anytime in Settings.
 
 ## About this repo
 

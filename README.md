@@ -11,9 +11,9 @@
 <p align="center"><strong>简体中文</strong> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.en.md">English</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.0.1000-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.1.1100-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
-  <img alt="languages" src="https://img.shields.io/badge/UI-10%20languages-green">
+  <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
 </p>
 
@@ -59,11 +59,11 @@
 
 ## 下载安装
 
-- **安装包**（推荐）：`yyzTools-setup-1.0.0.1000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **安装包**（推荐）：`yyzTools-setup-1.0.1.1100.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - 国内访问慢可走镜像：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（在安装包下载链接前加对应前缀）
 - 也可从 [官网下载页](https://yyztools.com/zh-CN/download.html) 获取。
 
-安装向导支持简体中文、繁体中文、英语、日语、韩语、法语、德语、西班牙语、俄语、阿拉伯语 10 种语言。
+安装向导支持简体中文、繁体中文、英语、日语、韩语、法语、德语、西班牙语、俄语、阿拉伯语、葡萄牙语、意大利语 12 种语言。
 
 ## 系统要求
 
@@ -72,7 +72,7 @@
 
 ## 界面语言
 
-界面与命令模块文案均支持上述 10 种语言；首次启动按系统语言自动匹配，可在设置中切换。
+界面与命令模块文案均支持上述 12 种语言；首次启动按系统语言自动匹配，可在设置中切换。
 
 ## 本仓库说明
 
