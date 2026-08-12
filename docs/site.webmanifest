@@ -1,0 +1,12 @@
+{
+  "name": "yyzTools",
+  "short_name": "yyzTools",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    { "src": "/logo.png", "sizes": "28x28", "type": "image/png" }
+  ]
+}
