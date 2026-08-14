@@ -1,16 +1,16 @@
 {
   "packages": {
     "web": {
-      "version": "1.0.1.1100",
-      "url": "v1.0.1.1100/web-1.0.1.1100.7z",
-      "sha256": "e874ed6a8d1be76303bfe1c80bd44c81a79d70d23c157745a9d3c5e6212bb7db",
+      "version": "1.0.2.1200",
+      "url": "v1.0.2.1200/web-1.0.2.1200.7z",
+      "sha256": "08add6ee8dc8596b7da3a2b4beba06be99619cd9c4c8f9f951d1472e4231fb67",
       "killProcesses": ["yyzWallpaper.exe"],
       "killProcessesAdmin": []
     },
     "modules": {
-      "version": "1.0.1.1100",
-      "url": "v1.0.1.1100/modules-1.0.1.1100.7z",
-      "sha256": "529a02ecbe2b6003731a9c8c97ddeceace7e25bcb9e8248ff74a107ca0da0351",
+      "version": "1.0.2.1200",
+      "url": "v1.0.2.1200/modules-1.0.2.1200.7z",
+      "sha256": "b84cec5295089c0f9a728f0117b4b27e486e5a6f2134b794167e99a69bd08070",
       "killProcesses": [],
       "killProcessesAdmin": []
     },
@@ -22,9 +22,9 @@
       "killProcessesAdmin": []
     },
     "yyztools": {
-      "version": "1.0.1.1100",
-      "url": "v1.0.1.1100/yyztools-1.0.1.1100.7z",
-      "sha256": "f4865a6642a2c001d35b8dc10a56512cb90922f4481340d5bac35a3adc1c8a96",
+      "version": "1.0.2.1200",
+      "url": "v1.0.2.1200/yyztools-1.0.2.1200.7z",
+      "sha256": "41c75b3576d89cc66c1d156b53229b4e763291401caf8bef39286c2ac5c05e90",
       "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe"],
       "killProcessesAdmin": []
     },
@@ -57,9 +57,9 @@
       "killProcessesAdmin": []
     },
     "main": {
-      "version": "1.0.1.1100",
-      "url": "v1.0.1.1100/main-1.0.1.1100.7z",
-      "sha256": "64480ec6e8de27f6fe75ae267bb460fa33940283279297ba1345d134cb274e6b",
+      "version": "1.0.2.1200",
+      "url": "v1.0.2.1200/main-1.0.2.1200.7z",
+      "sha256": "c82d3e864e304732891efa5537be0727288825375439afc198fec6d2c36e38ab",
       "killProcesses": ["yyzWallpaper.exe", "yyzBrowser.exe"],
       "killProcessesAdmin": []
     }
