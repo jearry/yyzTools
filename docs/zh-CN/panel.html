@@ -28,26 +28,21 @@
         /* 配色对齐 cmdplate 的 --yz-* 色板（window_controls.css），嵌入后融为一体 */
         :root {
             --bg: #ffffff; /* = --yz-card-bg（浅色） */
-            --card: #f8f9fa;
             --text: #333333;
             --text-sub: #6c757d;
             --border: #e9ecef;
             --accent: #0078d4; /* = --yz-primary */
             --accent-soft: rgba(0, 120, 212, 0.08);
-            --brand-glow: rgba(0, 120, 212, 0.1);
-            --brand-shine: rgba(0, 120, 212, 0.05);
-            --radius: 14px;
+            --brand-glow: rgba(0, 120, 212, 0.10);
         }
         html[data-theme="dark"] {
             --bg: #2a2a2a; /* = --yz-card-bg（深色） */
-            --card: #333333;
             --text: #e6e6e6;
             --text-sub: #9aa0a6;
             --border: #3a3a3a;
             --accent: #4db8ff; /* = --yz-primary（深色） */
             --accent-soft: rgba(77, 184, 255, 0.12);
             --brand-glow: rgba(77, 184, 255, 0.14);
-            --brand-shine: rgba(77, 184, 255, 0.07);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { height: 100%; background: var(--bg); }
@@ -61,87 +56,127 @@
             align-items: center;
             justify-content: center;
         }
+
         /* 内容尺寸由脚本在首次加载时定格（上限 1200×300 基准）；
            此处的 min() 仅作无 JS 时的兜底，页面尺寸变化后内容不再跟随，由 flex 居中。 */
         .panel {
-            display: grid;
-            grid-template-columns: minmax(170px, auto) 1fr auto;
-            gap: clamp(12px, 2vw, 28px);
-            width: min(100%, 1200px);
-            height: min(100%, 300px);
-            padding: clamp(8px, 1.5vw, 24px);
-            align-items: stretch;
-        }
-
-        /* ---------- 左栏：品牌（卡片风格与 cmdplate 一致，附轻量动效） ---------- */
-        .brand {
             position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: clamp(8px, 1.4vh, 14px);
-            padding: clamp(10px, 1.4vw, 24px);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            background: var(--card);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            min-width: 0;
+            gap: clamp(6px, 1.4vh, 14px);
+            width: min(100%, 1200px);
+            height: min(100%, 300px);
+            padding: clamp(8px, 1.5vw, 20px);
+            overflow: hidden;
         }
-        .brand > * { position: relative; z-index: 1; }
-        /* 顶部品牌色光晕 */
-        .brand::before {
+
+        /* 整区光影（同主页轮播区手法）：极淡品牌光晕缓慢漂移 + 周期性斜向扫光；reduced-motion 时静止 */
+        .panel::before {
             content: '';
             position: absolute;
-            width: 140%;
-            height: 65%;
-            top: -32%;
-            left: -20%;
+            top: -35%;
+            left: 15%;
+            width: 70%;
+            height: 80%;
             background: radial-gradient(closest-side, var(--brand-glow), transparent);
-            filter: blur(18px);
-            animation: aurora 6s ease-in-out infinite alternate;
+            filter: blur(36px);
+            animation: aurora 8s ease-in-out infinite alternate;
+            pointer-events: none;
         }
-        /* 周期性扫光 */
-        .brand::after {
+        .panel::after {
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
-            width: 40%;
-            background: linear-gradient(105deg, transparent, var(--brand-shine), transparent);
+            width: 35%;
+            background: linear-gradient(105deg, transparent, var(--accent-soft), transparent);
             transform: translateX(-160%) skewX(-15deg);
-            animation: shine 5s ease-in-out infinite;
+            animation: shine 6s ease-in-out infinite;
+            pointer-events: none;
         }
         @keyframes aurora {
-            from { transform: translateX(-7%); }
-            to { transform: translateX(7%); }
+            from { transform: translateX(-5%); }
+            to { transform: translateX(5%); }
         }
         @keyframes shine {
-            0%, 58% { transform: translateX(-160%) skewX(-15deg); }
-            100% { transform: translateX(420%) skewX(-15deg); }
+            0%, 60% { transform: translateX(-160%) skewX(-15deg); }
+            100% { transform: translateX(400%) skewX(-15deg); }
         }
         @media (prefers-reduced-motion: reduce) {
-            .brand::before, .brand::after { animation: none; }
+            .panel::before, .panel::after { animation: none; }
         }
-        .brand-logo { width: clamp(48px, 5.5vw, 80px); height: auto; }
-        .brand-line {
-            font-size: clamp(14px, 1.5vw, 19px);
-            font-weight: 700;
-            letter-spacing: 0.4px;
+
+        /* ---------- header：logo · 标题（左）· CTA（右），一行 ---------- */
+        .panel-head {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: clamp(8px, 1vw, 14px);
+            flex-shrink: 0;
+        }
+        .brand-logo { width: clamp(16px, 1.6vw, 22px); height: auto; }
+        /* 标题样式对齐主页轮播标题：前 3 词首字母小写放大蓝色 + 末词 Tools 蓝色 */
+        .brand-title {
+            font-size: clamp(12px, 1.35vw, 16px);
+            font-weight: 600;
+            letter-spacing: 0.5px;
             color: var(--text);
             white-space: nowrap;
         }
+        .brand-title .cap { font-size: 1.3em; font-weight: 800; color: var(--accent); }
+        .brand-title .dim { font-weight: 600; color: var(--text-sub); }
+        .brand-title .tail { font-size: 1.3em; font-weight: 800; color: var(--accent); }
+        .cta-group {
+            margin-inline-start: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: var(--text-sub);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: clamp(3px, 0.8vh, 5px) clamp(12px, 1.4vw, 18px);
+            font-size: clamp(11px, 1vw, 12px);
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .cta:hover {
+            transform: translateY(-1px);
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
 
-        /* ---------- 中栏：轮播 ---------- */
+        /* ---------- footer：版本（右），一行 ---------- */
+        .panel-foot {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+        .ver {
+            color: var(--text-sub);
+            font-size: 11px;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        /* ---------- 轮播主体：无框，直接融进宿主背景 ---------- */
         .carousel {
             position: relative;
+            flex: 1;
+            min-height: 0;
             overflow: hidden;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            background: var(--card);
         }
         .slide {
             position: absolute;
@@ -149,8 +184,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: clamp(10px, 1.8vh, 26px) clamp(14px, 2vw, 32px);
-            padding-bottom: clamp(18px, 2.6vh, 34px); /* 给指示点留位 */
+            padding: clamp(8px, 1.8vh, 24px) clamp(14px, 2vw, 32px);
+            padding-bottom: clamp(16px, 2.6vh, 32px); /* 给指示点留位 */
             opacity: 0;
             transition: opacity 0.45s ease;
             pointer-events: none;
@@ -158,11 +193,11 @@
         .slide.is-active { opacity: 1; pointer-events: auto; }
 
         .slide-feature { flex-direction: row; align-items: center; gap: clamp(12px, 2vw, 28px); }
-        .slide-icon { font-size: clamp(32px, 4.6vw, 60px); line-height: 1; }
+        .slide-icon { font-size: clamp(28px, 4.4vw, 54px); line-height: 1; }
         /* 深色主题下图标降亮，避免纯白刺眼 */
         html[data-theme="dark"] .slide-icon { color: #9aa0a6; }
-        .slide-feature .slide-title { font-size: clamp(17px, 2vw, 26px); font-weight: 700; color: var(--text); }
-        .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(12px, 1.3vw, 16px); color: var(--text-sub); }
+        .slide-feature .slide-title { font-size: clamp(16px, 2vw, 25px); font-weight: 700; color: var(--text); }
+        .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(13px, 1.45vw, 16.5px); color: var(--text-sub); }
         /* FAQ 页答案较长，标题与答案各自截断 */
         .slide-faq .slide-title {
             white-space: nowrap;
@@ -178,7 +213,7 @@
 
         .dots {
             position: absolute;
-            bottom: 8px;
+            bottom: 6px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -196,41 +231,14 @@
         }
         .dot.is-active { width: 18px; background: var(--accent); }
 
-        /* ---------- 右栏：CTA ---------- */
-        .cta { display: flex; flex-direction: column; }
-        .cta-btns {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: clamp(6px, 1.2vh, 12px);
-        }
-        .cta-ver {
-            text-align: center;
-            font-size: 11px;
-            color: var(--text-sub);
-            margin-top: 8px;
-            font-variant-numeric: tabular-nums;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: clamp(12px, 1.2vw, 14px);
-            white-space: nowrap;
-            border-radius: 10px;
-            padding: clamp(7px, 1.2vh, 11px) clamp(12px, 1.4vw, 20px);
-        }
-        .btn-ghost { border: 1px solid var(--border); background: var(--card); color: var(--text); }
-        .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-
-        /* ---------- 响应式降级（基准 1200×300；容器约 760~1960 × 120~450） ----------
-           三栏与轮播指示点始终显示，仅按高度收敛信息密度。 */
+        /* ---------- 响应式降级（基准 1200×300；容器约 760~1960 × 120~450） ---------- */
         @media (max-height: 160px) {
-            .slide-icon { font-size: clamp(20px, 3vw, 32px); }
+            .slide-icon { font-size: clamp(18px, 3vw, 30px); }
             .slide-feature { gap: 10px; }
+            .brand-logo { width: clamp(14px, 1.4vw, 18px); }
+            .brand-title { font-size: clamp(11px, 1.2vw, 13px); }
+            .cta-group .cta:last-child { display: none; } /* 矮容器只留一个 CTA，避免 header 过高 */
+            .panel { gap: 4px; padding: 6px 10px; }
         }
     </style>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
@@ -239,10 +247,18 @@
 </head>
 <body>
     <main class="panel">
-        <section class="brand">
+        
+        
+        <header class="panel-head">
             <img class="brand-logo" src="/logo.png" alt="yyzTools">
-            <span class="brand-line">Yes Your Zen Tools</span>
-        </section>
+            
+            <span class="brand-title" dir="ltr"><span class="cap">y</span><span class="dim">es</span> <span class="cap">y</span><span class="dim">our</span> <span class="cap">z</span><span class="dim">en</span> <span class="tail">Tools</span></span>
+            <div class="cta-group">
+                
+                <button type="button" class="cta" data-href="/zh-CN/">访问官网</button>
+                <button type="button" class="cta" data-href="/zh-CN/changelog.html">更新日志</button>
+            </div>
+        </header>
 
         <section class="carousel" id="carousel">
             
@@ -352,6 +368,22 @@
                 </div>
             </article>
             
+            <article class="slide slide-feature slide-faq">
+                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
+                <div class="slide-body">
+                    <h2 class="slide-title">yyzTools 和 PowerToys 有什么区别？</h2>
+                    <p class="slide-desc">PowerToys 是微软的模块化工具集，面向进阶用户，需要自行启用各个组件。yyzTools 是一体化套件：命令面板、翻译、OCR、剪贴板历史、文件/图片/视频/PDF 批量处理在同一个安装包里开箱即用，界面支持 12 种语言。两者都免费，很多人会同时保留。</p>
+                </div>
+            </article>
+            
+            <article class="slide slide-feature slide-faq">
+                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                <div class="slide-body">
+                    <h2 class="slide-title">和 uTools、Wox 比呢？</h2>
+                    <p class="slide-desc">uTools 是插件平台，主体免费但不少热门插件要开会员；Wox 是专注搜索的开源启动器。yyzTools 把 40+ 模块直接打包进安装包，没有会员也没有付费解锁，剪贴板、搜索、OCR 数据都留在本机。</p>
+                </div>
+            </article>
+            
             <nav class="dots">
                 
                 <button type="button" class="dot is-active" data-i="0" aria-label="1"></button>
@@ -380,16 +412,16 @@
                 
                 <button type="button" class="dot" data-i="12" aria-label="13"></button>
                 
+                <button type="button" class="dot" data-i="13" aria-label="14"></button>
+                
+                <button type="button" class="dot" data-i="14" aria-label="15"></button>
+                
             </nav>
         </section>
 
-        <aside class="cta">
-            <div class="cta-btns">
-                <a class="btn btn-ghost" href="/zh-CN/" target="_blank" rel="noopener">访问官网</a>
-                <a class="btn btn-ghost" href="/zh-CN/changelog.html" target="_blank" rel="noopener">更新日志</a>
-            </div>
-            <span class="cta-ver">v1.0.2.1200</span>
-        </aside>
+        <footer class="panel-foot">
+            <span class="ver">v1.0.2.1200</span>
+        </footer>
     </main>
 
     <script>
@@ -400,6 +432,15 @@
             if (!panel) return;
             panel.style.width = Math.min(window.innerWidth, 1200) + 'px';
             panel.style.height = Math.min(window.innerHeight, 300) + 'px';
+        })();
+
+        (function () {
+            // CTA 用 JS 打开：见模板内注释（避免 Chromium 左下角链接预览）
+            document.querySelectorAll('.cta[data-href]').forEach(function (b) {
+                b.addEventListener('click', function () {
+                    window.open(b.dataset.href, '_blank', 'noopener');
+                });
+            });
         })();
 
         (function () {

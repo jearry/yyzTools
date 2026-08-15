@@ -1,0 +1,20 @@
+# yyzTools
+
+> yyzTools (short for "Yes Your Zen Tools") is a free, local-first Windows desktop productivity toolkit. It bundles 40+ integrated modules — command palette, dock, clipboard history, super translation, OCR, file preview, batch rename / image / video / PDF processing, live wallpaper, and desktop effects — in a single installer. 12 interface languages, no account, no paid tiers.
+
+Key facts:
+- Price: free forever — no paid unlocks, no membership tiers
+- Platform: 64-bit Windows 10 (1809+) / Windows 11, ~600 MB disk
+- Privacy: local-first — clipboard, search, and OCR data stay on the device; no account, no telemetry
+- Interface languages: English, 简体中文, 繁體中文, 日本語, 한국어, Français, Deutsch, Español, Русский, العربية, Português, Italiano
+- Distribution: GitHub Releases (installer built with Inno Setup)
+- Command modules: 379 extensible .zenmod commands (AI / App / Game / Sys / Web)
+
+Links:
+- [Home](https://yyztools.com/)
+- [Features](https://yyztools.com/features.html)
+- [Download](https://yyztools.com/download.html)
+- [Changelog](https://yyztools.com/changelog.html)
+- [Privacy Policy](https://yyztools.com/privacy.html)
+- [User Agreement](https://yyztools.com/agreement.html)
+- [GitHub repository](https://github.com/jearry/yyzTools)
