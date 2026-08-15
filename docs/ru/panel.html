@@ -107,13 +107,19 @@
             .panel::before, .panel::after { animation: none; }
         }
 
-        /* ---------- header：logo · 标题（左）· CTA（右），一行 ---------- */
+        /* ---------- header：logo · 标题（左）· CTA（右），一行；顶部对齐（CTA 为双按钮堆叠，更高） ---------- */
         .panel-head {
             position: relative;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: clamp(8px, 1vw, 14px);
             flex-shrink: 0;
+        }
+        /* logo 与标语垂直居中成一组（同一水平线），组整体随 header 顶对齐 */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: clamp(6px, 0.7vw, 10px);
         }
         .brand-logo { width: clamp(16px, 1.6vw, 22px); height: auto; }
         /* 标题样式对齐主页轮播标题：前 3 词首字母小写放大蓝色 + 末词 Tools 蓝色 */
@@ -250,9 +256,11 @@
         
         
         <header class="panel-head">
-            <img class="brand-logo" src="/logo.png" alt="yyzTools">
-            
-            <span class="brand-title" dir="ltr"><span class="cap">y</span><span class="dim">es</span> <span class="cap">y</span><span class="dim">our</span> <span class="cap">z</span><span class="dim">en</span> <span class="tail">Tools</span></span>
+            <div class="brand">
+                <img class="brand-logo" src="/logo.png" alt="yyzTools">
+                
+                <span class="brand-title" dir="ltr"><span class="cap">y</span><span class="dim">es</span> <span class="cap">y</span><span class="dim">our</span> <span class="cap">z</span><span class="dim">en</span> <span class="tail">Tools</span></span>
+            </div>
             <div class="cta-group">
                 
                 <button type="button" class="cta" data-href="/ru/">Открыть сайт</button>
