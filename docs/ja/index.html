@@ -18,11 +18,11 @@
 <meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
 <meta property="og:locale" content="ja">
 
+<meta property="og:locale:alternate" content="en">
+
 <meta property="og:locale:alternate" content="zh_CN">
 
 <meta property="og:locale:alternate" content="zh_TW">
-
-<meta property="og:locale:alternate" content="en">
 
 <meta property="og:locale:alternate" content="ko">
 
@@ -50,11 +50,11 @@
 <link rel="canonical" href="https://yyztools.com/ja/">
 
 
-<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/">
+<link rel="alternate" hreflang="en" href="https://yyztools.com/">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/">
 
 <link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/">
-
-<link rel="alternate" hreflang="en" href="https://yyztools.com/en/">
 
 <link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/">
 
@@ -74,7 +74,7 @@
 
 <link rel="alternate" hreflang="it" href="https://yyztools.com/it/">
 
-<link rel="alternate" hreflang="x-default" href="https://yyztools.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/">
 
 <meta name="theme-color" content="#2563eb">
 <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
@@ -94,8 +94,12 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
 
 <script>document.documentElement.classList.add('js');</script>
-  <script type="module" crossorigin src="/assets/main-BkUwGLoE.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-CwanVxeF.css">
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-BQ3pf64x.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B8CUEPb5.css">
 </head>
 <body>
 
@@ -125,14 +129,14 @@
                 </summary>
                 <div class="lang-menu">
                     
-                    <a href="/" hreflang="zh-CN"
+                    <a href="/" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/" hreflang="zh-CN"
                        >简体中文</a>
                     
                     <a href="/zh-TW/" hreflang="zh-TW"
                        >繁體中文</a>
-                    
-                    <a href="/en/" hreflang="en"
-                       >English</a>
                     
                     <a href="/ja/" hreflang="ja"
                        class=&#34;on&#34; aria-current=&#34;true&#34;>日本語</a>
@@ -176,7 +180,7 @@
 
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools は Windows 向けのデスクトップ効率化ツール集です。コマンドパレット、スーパー翻訳、OCR、ファイルプレビュー、クリップボード履歴、一括処理、ライブ壁紙など 40 以上の機能をまとめて導入できます。ローカル優先、永久無料。","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.2.1200","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"本当に永久無料ですか。今後有料になりませんか。","acceptedAnswer":{"@type":"Answer","text":"本当に無料です。有料アンロックや会員制度は設けず、中核機能を有料項目として切り出すこともありません。yyzTools は、また一つサブスクリプションを増やすものではなく、長くデスクトップに置いていただけるツールでありたいと考えています。"}},{"@type":"Question","name":"自分のデータはアップロードされますか。","acceptedAnswer":{"@type":"Answer","text":"いいえ。クリップボード履歴、ファイル検索、アプリ統計、OCR などはすべて本体内で処理・保存されます。翻訳のようなオンライン機能をご自身で利用されたときにのみ、入力された内容が選択したサービスの提供元へ送信されます。またソフトウェアは定期的に更新を確認しますが、その通信で送られるのはバージョン番号だけです。"}},{"@type":"Question","name":"アカウント登録は必要ですか。","acceptedAnswer":{"@type":"Answer","text":"不要です。登録を求めることはなく、身元に関する情報を自発的に収集することもありません。"}},{"@type":"Question","name":"対応する OS を教えてください。","acceptedAnswer":{"@type":"Answer","text":"Windows 10 と Windows 11 の 64 ビット版です。Microsoft Edge WebView2 ランタイムが必要で、Windows 11 には標準で搭載されています。Windows 10 で不足している場合はインストーラーが導入を案内します。"}},{"@type":"Question","name":"リソースを多く消費しますか。","acceptedAnswer":{"@type":"Answer","text":"常駐する主プロセスは非常に軽量です。壁紙、スクリーンショット、キー入力表示などは独立したプロセスになっており、使わなければ起動しません。ゲームを始めるときはワンクリックでゲームモードに切り替え、壁紙とエフェクトを一時停止できます。"}},{"@type":"Question","name":"自分で機能を追加するには、どうすればよいですか。","acceptedAnswer":{"@type":"Answer","text":"インストール先の Modules フォルダーに .zenmod（JSON）ファイルを置き、名称、アイコン、実行するコマンドを記述します。再起動すればコマンドパレットから検索できるようになり、コードのコンパイルは一切不要です。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"本当に永久無料ですか。今後有料になりませんか。","acceptedAnswer":{"@type":"Answer","text":"本当に無料です。有料アンロックや会員制度は設けず、中核機能を有料項目として切り出すこともありません。yyzTools は、また一つサブスクリプションを増やすものではなく、長くデスクトップに置いていただけるツールでありたいと考えています。"}},{"@type":"Question","name":"自分のデータはアップロードされますか。","acceptedAnswer":{"@type":"Answer","text":"いいえ。クリップボード履歴、ファイル検索、アプリ統計、OCR などはすべて本体内で処理・保存されます。翻訳のようなオンライン機能をご自身で利用されたときにのみ、入力された内容が選択したサービスの提供元へ送信されます。またソフトウェアは定期的に更新を確認しますが、その通信で送られるのはバージョン番号だけです。"}},{"@type":"Question","name":"アカウント登録は必要ですか。","acceptedAnswer":{"@type":"Answer","text":"不要です。登録を求めることはなく、身元に関する情報を自発的に収集することもありません。"}},{"@type":"Question","name":"対応する OS を教えてください。","acceptedAnswer":{"@type":"Answer","text":"Windows 10 と Windows 11 の 64 ビット版です。Microsoft Edge WebView2 ランタイムが必要で、Windows 11 には標準で搭載されています。Windows 10 で不足している場合はインストーラーが導入を案内します。"}},{"@type":"Question","name":"リソースを多く消費しますか。","acceptedAnswer":{"@type":"Answer","text":"常駐する主プロセスは非常に軽量です。壁紙、スクリーンショット、キー入力表示などは独立したプロセスになっており、使わなければ起動しません。ゲームを始めるときはワンクリックでゲームモードに切り替え、壁紙とエフェクトを一時停止できます。"}}]}</script>
 
 <section class="hero">
     <div class="hero-glow" aria-hidden="true"></div>
@@ -186,7 +190,7 @@
             <i class="fa-solid fa-arrow-right"></i>
         </a>
         <h1 class="hero-title">ひとつのツールボックスに、<br>デスクトップの細々した用事すべてを</h1>
-        <p class="hero-lead">検索、翻訳、認識、プレビュー、一括処理、スクリーンショット、壁紙——日常的に頻繁に発生する細かな作業のために、拡張機能ストアで一つずつ探し、インストールし、課金する必要はもうありません。yyzTools を一度入れておけば、必要なものはいつでもすぐ手元にあります。</p>
+        <p class="hero-lead">検索、翻訳、認識、プレビュー、一括処理、スクリーンショット、壁紙——日々の仕事や開発で頻繁に発生する細かな作業のために、いちいちツールを探したり課金したりする必要はもうありません。yyzTools を一度入れておけば、必要なものはいつでもすぐ手元にあります。</p>
         <div class="hero-cta">
             <a class="btn btn-primary btn-lg" href="/ja/download.html">
                 <i class="fa-solid fa-download"></i>無料ダウンロード
@@ -610,7 +614,7 @@
 <section class="section section-alt">
     <div class="wrap demo-grid">
         <div class="demo-copy reveal">
-            <h2>Ctrl をダブルタップすれば、何でも見つかります</h2>
+            <h2>Alt+Space で、何でも見つかります</h2>
             <p>コマンドパレットは yyzTools の中枢です。アプリ、ファイル、プロセス、ウィンドウ、ブックマーク、クリップボードがすべて同じ入力欄に集まります。接頭辞を付けるだけで検索対象を切り替えられるので、ツールの名前を覚える必要はありません。</p>
             <div class="keys">
                 
@@ -636,7 +640,7 @@
             <picture>
                 <source srcset="/carousel/en-dark/01.webp" media="(prefers-color-scheme: dark)">
                 <img src="/carousel/en-light/01.webp"
-                     alt="Ctrl をダブルタップすれば、何でも見つかります"
+                     alt="Alt+Space で、何でも見つかります"
                      width="797" height="599"
                      loading="lazy" decoding="async">
             </picture>
@@ -655,7 +659,7 @@
             <a class="card card-link reveal" href="/ja/features.html#cmdplate">
                 <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
                 <h3>コマンドパレット</h3>
-                <p>Ctrl のダブルタップで呼び出す統合入口。ひとつの検索欄がパソコン全体を貫きます。</p>
+                <p>Alt+Space で呼び出す統合入口。ひとつの検索欄がパソコン全体を貫きます。</p>
                 <ul class="card-tags">
                     
                     <li>アプリ検索</li>
@@ -789,33 +793,43 @@
         <div class="faq">
             
             <details class="faq-item reveal" open>
-                <summary>本当に永久無料ですか。今後有料になりませんか。<i class="fa-solid fa-chevron-down"></i></summary>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-gift" aria-hidden="true"></i><span>本当に永久無料ですか。今後有料になりませんか。</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
                 <p>本当に無料です。有料アンロックや会員制度は設けず、中核機能を有料項目として切り出すこともありません。yyzTools は、また一つサブスクリプションを増やすものではなく、長くデスクトップに置いていただけるツールでありたいと考えています。</p>
             </details>
             
             <details class="faq-item reveal" >
-                <summary>自分のデータはアップロードされますか。<i class="fa-solid fa-chevron-down"></i></summary>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>自分のデータはアップロードされますか。</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
                 <p>いいえ。クリップボード履歴、ファイル検索、アプリ統計、OCR などはすべて本体内で処理・保存されます。翻訳のようなオンライン機能をご自身で利用されたときにのみ、入力された内容が選択したサービスの提供元へ送信されます。またソフトウェアは定期的に更新を確認しますが、その通信で送られるのはバージョン番号だけです。</p>
             </details>
             
             <details class="faq-item reveal" >
-                <summary>アカウント登録は必要ですか。<i class="fa-solid fa-chevron-down"></i></summary>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-user-plus" aria-hidden="true"></i><span>アカウント登録は必要ですか。</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
                 <p>不要です。登録を求めることはなく、身元に関する情報を自発的に収集することもありません。</p>
             </details>
             
             <details class="faq-item reveal" >
-                <summary>対応する OS を教えてください。<i class="fa-solid fa-chevron-down"></i></summary>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-display" aria-hidden="true"></i><span>対応する OS を教えてください。</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
                 <p>Windows 10 と Windows 11 の 64 ビット版です。Microsoft Edge WebView2 ランタイムが必要で、Windows 11 には標準で搭載されています。Windows 10 で不足している場合はインストーラーが導入を案内します。</p>
             </details>
             
             <details class="faq-item reveal" >
-                <summary>リソースを多く消費しますか。<i class="fa-solid fa-chevron-down"></i></summary>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-microchip" aria-hidden="true"></i><span>リソースを多く消費しますか。</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
                 <p>常駐する主プロセスは非常に軽量です。壁紙、スクリーンショット、キー入力表示などは独立したプロセスになっており、使わなければ起動しません。ゲームを始めるときはワンクリックでゲームモードに切り替え、壁紙とエフェクトを一時停止できます。</p>
-            </details>
-            
-            <details class="faq-item reveal" >
-                <summary>自分で機能を追加するには、どうすればよいですか。<i class="fa-solid fa-chevron-down"></i></summary>
-                <p>インストール先の Modules フォルダーに .zenmod（JSON）ファイルを置き、名称、アイコン、実行するコマンドを記述します。再起動すればコマンドパレットから検索できるようになり、コードのコンパイルは一切不要です。</p>
             </details>
             
         </div>
@@ -825,7 +839,7 @@
 <section class="final">
     <div class="wrap final-inner">
         <h2>デスクトップをひとつのツールボックスに任せる</h2>
-        <p>無料でダウンロードできます。インストール後、Ctrl をダブルタップすればすぐに始められます。</p>
+        <p>無料でダウンロードできます。インストール後、Alt+Space ですぐに始められます。</p>
         <a class="btn btn-primary btn-lg" href="/ja/download.html">
             <i class="fa-solid fa-download"></i>yyzTools をダウンロード
         </a>
