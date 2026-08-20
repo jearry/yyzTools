@@ -11,7 +11,7 @@
 <p align="center"><a href="README.en.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <strong>한국어</strong> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.2.1200-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.3.1300-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
@@ -35,7 +35,7 @@
 | | |
 |---|---|
 | **커맨드 팔레트** | 앱 검색 · 파일 검색 · 프로세스 관리 · 창 관리 · 북마크 검색 · 클립보드 기록 · 명령줄 · 즉시 계산 |
-| **실행과 효율** | 독 · 클립보드 기록 · 앱 사용 통계 · 화면 캡처 · 알림 도우미 · 만세력 · 키 입력 표시 · 마우스 찾기 |
+| **실행과 효율** | 독 · 클립보드 기록 · 앱 사용 통계 · 화면 캡처 · 화면 녹화 · 알림 도우미 · 만세력 · 키 입력 표시 · 마우스 찾기 |
 | **텍스트와 언어** | 슈퍼 번역 · 문자 인식 OCR · 정규식 · 인코딩 · 디코딩 · 해시 계산 · 암호화 · 복호화 · 데이터 변환 · 데이터 생성 |
 | **파일과 미디어** | 파일 미리보기 · 일괄 이름 변경 · 이미지 일괄 처리 · 비디오 일괄 처리 · PDF 일괄 처리 · 파일 다운로드 |
 | **계산과 확장** | 계산 노트 · QR 코드 · 명령 모듈 · 내장 브라우저 · 사용자 확장 |
@@ -59,7 +59,7 @@ The front end calls each C++ Manager through the `window.Zen` bridge, all return
 
 ## Download
 
-- **Installer** (recommended): `yyzTools-setup-1.0.2.1200.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installer** (recommended): `yyzTools-setup-1.0.3.1300.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Or grab it from the [official download page](https://yyztools.com/download.html).
 

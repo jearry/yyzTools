@@ -11,7 +11,7 @@
 <p align="center"><a href="README.en.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <strong>Français</strong> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.2.1200-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.3.1300-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
@@ -35,7 +35,7 @@ Rechercher, traduire, reconnaître, prévisualiser, traiter par lots, capturer, 
 | | |
 |---|---|
 | **Palette de commandes** | Recherche d’applications · Recherche de fichiers · Gestion des processus · Gestion des fenêtres · Recherche de favoris · Historique du presse-papiers · Ligne de commande · Calcul instantané |
-| **Lancement et productivité** | Dock · Historique du presse-papiers · Statistiques d’applications · Capture d’écran · Assistant de rappels · Calendrier perpétuel · Indication des touches · Localisation de la souris |
+| **Lancement et productivité** | Dock · Historique du presse-papiers · Statistiques d’applications · Capture d’écran · Enregistrement d’écran · Assistant de rappels · Calendrier perpétuel · Indication des touches · Localisation de la souris |
 | **Texte et langues** | Traduction avancée · Reconnaissance de texte OCR · Expressions régulières · Encodage et décodage · Calcul de hachage · Chiffrement et déchiffrement · Conversion de données · Génération de données |
 | **Fichiers et médias** | Aperçu de fichiers · Renommage par lots · Traitement d’images par lots · Traitement vidéo par lots · Traitement PDF par lots · Téléchargement de fichiers |
 | **Calcul et extensions** | Bloc de calcul · QR code · Modules de commandes · Navigateur intégré · Extensions personnalisées |
@@ -59,7 +59,7 @@ The front end calls each C++ Manager through the `window.Zen` bridge, all return
 
 ## Download
 
-- **Installer** (recommended): `yyzTools-setup-1.0.2.1200.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installer** (recommended): `yyzTools-setup-1.0.3.1300.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Or grab it from the [official download page](https://yyztools.com/download.html).
 

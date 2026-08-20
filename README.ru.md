@@ -11,7 +11,7 @@
 <p align="center"><a href="README.en.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <strong>Русский</strong> · <a href="README.ar.md">العربية</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.2.1200-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.3.1300-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
@@ -35,7 +35,7 @@
 | | |
 |---|---|
 | **Командная панель** | Поиск приложений · Поиск файлов · Управление процессами · Управление окнами · Поиск закладок · История буфера обмена · Командная строка · Мгновенный расчёт |
-| **Запуск и эффективность** | Док · История буфера обмена · Статистика приложений · Снимок экрана · Помощник напоминаний · Вечный календарь · Подсказки клавиш · Поиск курсора |
+| **Запуск и эффективность** | Док · История буфера обмена · Статистика приложений · Снимок экрана · Запись экрана · Помощник напоминаний · Вечный календарь · Подсказки клавиш · Поиск курсора |
 | **Текст и язык** | Суперперевод · Распознавание текста OCR · Регулярные выражения · Кодирование и декодирование · Расчёт хешей · Шифрование и расшифровка · Преобразование данных · Генерация данных |
 | **Файлы и медиа** | Предпросмотр файлов · Пакетное переименование · Пакетная обработка изображений · Пакетная обработка видео · Пакетная обработка PDF · Загрузка файлов |
 | **Вычисления и расширения** | Черновик вычислений · QR-код · Командные модули · Встроенный браузер · Свои расширения |
@@ -59,7 +59,7 @@ The front end calls each C++ Manager through the `window.Zen` bridge, all return
 
 ## Download
 
-- **Installer** (recommended): `yyzTools-setup-1.0.2.1200.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installer** (recommended): `yyzTools-setup-1.0.3.1300.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Or grab it from the [official download page](https://yyztools.com/download.html).
 
