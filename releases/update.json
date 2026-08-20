@@ -1,16 +1,16 @@
 {
   "packages": {
     "web": {
-      "version": "1.0.2.1200",
-      "url": "v1.0.2.1200/web-1.0.2.1200.7z",
-      "sha256": "08add6ee8dc8596b7da3a2b4beba06be99619cd9c4c8f9f951d1472e4231fb67",
+      "version": "1.0.3.1300",
+      "url": "v1.0.3.1300/web-1.0.3.1300.7z",
+      "sha256": "0b9f4f686199d883004da84e903e2fefbb1588cd0ecf516d0f3f6de6a7654b9c",
       "killProcesses": ["yyzWallpaper.exe"],
       "killProcessesAdmin": []
     },
     "modules": {
-      "version": "1.0.2.1200",
-      "url": "v1.0.2.1200/modules-1.0.2.1200.7z",
-      "sha256": "b84cec5295089c0f9a728f0117b4b27e486e5a6f2134b794167e99a69bd08070",
+      "version": "1.0.3.1300",
+      "url": "v1.0.3.1300/modules-1.0.3.1300.7z",
+      "sha256": "3ffbb6707e81206cf32e479570ee008ba33105132bececfe6b52979988226051",
       "killProcesses": [],
       "killProcessesAdmin": []
     },
@@ -22,10 +22,10 @@
       "killProcessesAdmin": []
     },
     "yyztools": {
-      "version": "1.0.2.1200",
-      "url": "v1.0.2.1200/yyztools-1.0.2.1200.7z",
-      "sha256": "41c75b3576d89cc66c1d156b53229b4e763291401caf8bef39286c2ac5c05e90",
-      "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe"],
+      "version": "1.0.3.1300",
+      "url": "v1.0.3.1300/yyztools-1.0.3.1300.7z",
+      "sha256": "28c99ea254cfe8010868ead619fa06e3637fc040b74e6386e90f47c8f344ec81",
+      "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe", "yyzScreenRec.exe"],
       "killProcessesAdmin": []
     },
     "tools": {
@@ -57,15 +57,15 @@
       "killProcessesAdmin": []
     },
     "main": {
-      "version": "1.0.2.1200",
-      "url": "v1.0.2.1200/main-1.0.2.1200.7z",
-      "sha256": "c82d3e864e304732891efa5537be0727288825375439afc198fec6d2c36e38ab",
+      "version": "1.0.3.1300",
+      "url": "v1.0.3.1300/main-1.0.3.1300.7z",
+      "sha256": "1724a8f5609d04c33ad205930b8d3105429f13fe423ae8f42ac8d032a96a125e",
       "killProcesses": ["yyzWallpaper.exe", "yyzBrowser.exe"],
       "killProcessesAdmin": []
     }
   },
   "home": {
-    "url": "https://yyztools.com",
-    "show_type": "close"
+    "url": "https://yyztools.com/panel.html",
+    "show_type": "show"
   }
 }
