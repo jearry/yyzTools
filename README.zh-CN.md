@@ -14,7 +14,7 @@
   <img alt="version" src="https://img.shields.io/badge/version-1.0.3.1300-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
+  <img alt="license" src="https://img.shields.io/badge/license-免费-red">
 </p>
 
 ---
@@ -82,8 +82,12 @@
 - [`docs/`](docs/) —— 官网 <https://yyztools.com> 的静态站点（经 GitHub Pages 托管）
 - [`src/updater/`](src/updater/) —— 自动更新器源码
 
-> 软件主体源码不在本仓库。如需反馈功能问题，请至 [Issues](https://github.com/jearry/yyzTools/issues)。
+如需反馈功能问题，请至 [Issues](https://github.com/jearry/yyzTools/issues)。
 
-## 许可证
+## 许可证与致谢
 
-[MIT License](LICENSE)
+yyzTools 是专有软件，可免费使用。目前仅开源了自动更新部分，该开源组件遵循 **MIT 协议**。后续是否开源其他部分和全部开源，将根据情况决定。
+
+本软件使用了多个开源库和工具，完整的第三方组件列表及其许可证请参见 [LICENSE](LICENSE)。
+
+衷心感谢所有为这些开源项目做出贡献的开发者们！

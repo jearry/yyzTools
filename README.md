@@ -14,7 +14,7 @@
   <img alt="version" src="https://img.shields.io/badge/version-1.0.3.1300-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
+  <img alt="license" src="https://img.shields.io/badge/license-Proprietary-red">
 </p>
 
 ---
@@ -82,8 +82,12 @@ This repo (`jearry/yyzTools`) hosts releases and the official website:
 - [`docs/`](docs/) — static site for <https://yyztools.com> (GitHub Pages)
 - [`src/updater/`](src/updater/) — auto-updater source
 
-> The main application source is not in this repo. For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
+For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
 
-## License
+## License & Acknowledgments
 
-[MIT License](LICENSE)
+yyzTools is proprietary software that is available for free use. Currently, only the auto-update component is open source and licensed under the **MIT License**. Whether to open source additional components in the future will be decided based on circumstances.
+
+The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
+
+We sincerely thank all the developers who have contributed to these open-source projects!

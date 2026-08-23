@@ -14,7 +14,7 @@
   <img alt="version" src="https://img.shields.io/badge/version-1.0.3.1300-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-success">
+  <img alt="license" src="https://img.shields.io/badge/license-Free-red">
 </p>
 
 ---
@@ -84,6 +84,10 @@ This repo (`jearry/yyzTools`) hosts releases and the official website:
 
 > The main application source is not in this repo. For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
 
-## License
+## License & Acknowledgments
 
-[MIT License](LICENSE)
+yyzTools is a free software. The source code is not open source.
+
+The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
+
+We sincerely thank all the developers who have contributed to these open-source projects!

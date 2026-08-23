@@ -1,6 +1,6 @@
-MIT License
+# MIT License for Open-Source Components
 
-Copyright (c) 2026 hotnews.pub
+Copyright (c) 2026 yyzTools
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,99 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+**Note:** The MIT License above applies only to the open-source components in this repository (specifically the auto-update component in `src/updater/`). The main yyzTools application remains proprietary software.
+
+---
+
+# Third-Party Open Source Software Acknowledgments
+
+yyzTools is proprietary software that is available for free use.
+
+The software incorporates several excellent open-source software and libraries, to which we express our gratitude:
+
+## Frontend Framework & Build Tools
+
+- **[Alpine.js](https://alpinejs.dev/)** - Lightweight frontend framework (MIT License)
+- **[Vite](https://vitejs.dev/)** - Next-generation frontend build tool (MIT License)
+- **[i18next](https://www.i18next.com/)** - Internationalization framework (MIT License)
+
+## Code Editor
+
+- **[CodeMirror 6](https://codemirror.net/)** - Code editor (MIT License)
+  - Supports multiple languages: HTML, JSON, Markdown, PHP, XML, etc.
+
+## Documentation & Media Processing
+
+- **[PDF.js](https://mozilla.github.io/pdf.js/)** - PDF rendering library (Apache License 2.0)
+- **[docx-preview](https://github.com/mwilliamson/node-docx-preview)** - Word document preview (MIT License)
+- **[pptx-preview](https://github.com/SDDTech/pptx-preview)** - PowerPoint document preview (MIT License)
+- **[ViewerJS](https://viewerjs.org/)** - Image viewer (MIT License)
+- **[html2canvas](https://html2canvas.hertzen.com/)** - Screenshot library (MIT License)
+- **[jsQR](https://github.com/cozmo/jsQR)** - QR code recognition (Apache License 2.0)
+- **[qrcode](https://github.com/soldair/node-qrcode)** - QR code generation (MIT License)
+
+## Text & Data Processing
+
+- **[Marked](https://marked.js.org/)** - Markdown parser (MIT License)
+- **[KaTeX](https://katex.org/)** - Math formula rendering (MIT License)
+- **[Math.js](https://mathjs.org/)** - Math calculation library (Apache License 2.0)
+- **[dayjs](https://day.js.org/)** - Date processing library (MIT License)
+- **[XLSX](https://github.com/SheetJS/sheetjs)** - Excel processing library (Apache License 2.0)
+- **[js-yaml](https://github.com/nodeca/js-yaml)** - YAML parser (MIT License)
+- **[fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser)** - XML parser (MIT License)
+- **[smol-toml](https://github.com/smol-rs/smol-toml)** - TOML parser (MIT License)
+
+## 3D Rendering
+
+- **[Three.js](https://threejs.org/)** - 3D graphics library (MIT License)
+- **[three-dxf-loader](https://github.com/vkunitsky/three-dxf-loader)** - DXF file loader (MIT License)
+
+## Utilities
+
+- **[color](https://github.com/Qix-/color-convert)** - Color conversion library (MIT License)
+- **[opencc-js](https://github.com/nighc/opencc-js)** - Traditional/Simplified Chinese conversion (MIT License)
+- **[text-encoding](https://github.com/inexorabletext/text-encoding)** - Text encoding (MIT License)
+
+## Microsoft Official Libraries
+
+- **[Microsoft WebView2](https://developer.microsoft.com/microsoft-edge/webview2/)** - Web hosting framework
+- **[Microsoft Windows Implementation Library](https://github.com/microsoft/wil)** - Windows library (MIT License)
+- **[Microsoft CppWinRT](https://github.com/microsoft/cppwinrt)** - C++/WinRT library (MIT License)
+
+## Third-Party Executable Tools
+
+### System & File Utilities
+
+- **[7-Zip](https://www.7-zip.org/)** - File compression tool (LGPL)
+- **[Everything](https://www.voidtools.com/)** - Fast file search tool
+- **[Aria2](https://github.com/aria2/aria2)** - Multi-protocol download tool (GPLv2)
+
+### Multimedia & Image Processing
+
+- **[FFmpeg](https://ffmpeg.org/)** - Multimedia processing framework (GPL/LGPL)
+- **[ImageMagick](https://imagemagick.org/)** - Image conversion and processing (GPL/LGPL)
+
+### Document & OCR
+
+- **[Ghostscript](https://www.ghostscript.com/)** - PDF and PostScript interpreter (GPL)
+- **[pdfCPU](https://pdfcpu.io/)** - PDF processing toolkit (MIT License)
+- **[RapidOCR-json](https://github.com/RapidAI/RapidOCR)** - OCR text recognition tool
+- **[Umi-OCR](https://github.com/hiroi-sora/Umi-OCR)** - OCR text recognition tool
+
+### Security & Utilities
+
+- **[OpenSSL](https://www.openssl.org/)** - Cryptography toolkit (Apache License 1.0/3.0)
+- **[ScreenCapture](https://github.com/ShareX/ScreenCapture)** - Screenshot and screen recording tool (GPLv3)
+
+## Fonts & Icons
+
+- **[Font Awesome](https://fontawesome.com/)** - Icon font (MIT License)
+
+---
+
+All open-source software and libraries mentioned above are subject to their respective open-source licenses. This software is only a user of these excellent tools, and their copyright belongs to their respective owners.
+
+Thank you to all developers who have contributed to the open-source community!
