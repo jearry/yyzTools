@@ -204,18 +204,6 @@
         html[data-theme="dark"] .slide-icon { color: #9aa0a6; }
         .slide-feature .slide-title { font-size: clamp(16px, 2vw, 25px); font-weight: 700; color: var(--text); }
         .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(13px, 1.45vw, 16.5px); color: var(--text-sub); }
-        /* FAQ 页答案较长，标题与答案各自截断 */
-        .slide-faq .slide-title {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .slide-faq .slide-desc {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
 
         .dots {
             position: absolute;
@@ -342,80 +330,6 @@
                 </div>
             </article>
             
-            
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Is it really free forever? Will you start charging?</h2>
-                    <p class="slide-desc">Genuinely free. No paid unlocks, no membership tiers, and no holding core features back behind a paywall. We want yyzTools to be a tool you are happy to keep on your desktop long-term, not another subscription.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Is my data uploaded anywhere?</h2>
-                    <p class="slide-desc">No. Clipboard history, file search, app usage, and OCR are processed and stored locally. Only when you actively use an online feature such as translation does your input go to the third-party service you selected.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Do I need an account?</h2>
-                    <p class="slide-desc">No. There is no sign-up, and the software does not collect identifying information.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Which systems are supported?</h2>
-                    <p class="slide-desc">64-bit Windows 10 and Windows 11. The Microsoft Edge WebView2 runtime is required; Windows 11 ships with it, and on Windows 10 the installer will guide you through adding it.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Is it heavy on resources?</h2>
-                    <p class="slide-desc">The resident main process is light, and wallpaper, capture, and input hints run as separate processes that only start when used. Game mode pauses wallpaper and effects in a single click.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">How does yyzTools differ from PowerToys?</h2>
-                    <p class="slide-desc">PowerToys is Microsoft’s modular utility set for power users - you enable the pieces you want. yyzTools is an integrated suite: command palette, translation, OCR, clipboard history, and batch file / image / video / PDF tools come preconfigured in one installer, with a 12-language interface. Both are free, so many people simply keep both.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">How does it compare with Flow Launcher or Raycast?</h2>
-                    <p class="slide-desc">Flow Launcher is an excellent open-source launcher that shines at search and plugins. Raycast comes from macOS; its Windows version is still in beta and the full experience needs a Pro subscription. yyzTools is complete out of the box: translation, OCR, clipboard history, batch processing, and live wallpaper are all built in — no plugin hunting, no subscription.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">I already use PowerToys — can I still install yyzTools?</h2>
-                    <p class="slide-desc">Yes, they coexist fine. The resident yyzTools process is light, wallpaper and capture start on demand, and every hotkey is customisable. A common setup: PowerToys for window snapping and key remapping, yyzTools for launching, translation, OCR, and batch processing.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">What about uTools, Wox, or ZTools?</h2>
-                    <p class="slide-desc">uTools is a plugin platform - the shell is free, but popular plugins sit behind a paid membership. Wox is an open-source launcher focused on search. ZTools is an open-source uTools alternative assembled from a plugin market. yyzTools bundles 40+ modules into one installer with no membership and no paid unlocks, and keeps clipboard, search, and OCR data on your machine.</p>
-                </div>
-            </article>
-            
             <nav class="dots">
                 
                 <button type="button" class="dot is-active" data-i="0" aria-label="1"></button>
@@ -435,24 +349,6 @@
                 <button type="button" class="dot" data-i="7" aria-label="8"></button>
                 
                 <button type="button" class="dot" data-i="8" aria-label="9"></button>
-                
-                <button type="button" class="dot" data-i="9" aria-label="10"></button>
-                
-                <button type="button" class="dot" data-i="10" aria-label="11"></button>
-                
-                <button type="button" class="dot" data-i="11" aria-label="12"></button>
-                
-                <button type="button" class="dot" data-i="12" aria-label="13"></button>
-                
-                <button type="button" class="dot" data-i="13" aria-label="14"></button>
-                
-                <button type="button" class="dot" data-i="14" aria-label="15"></button>
-                
-                <button type="button" class="dot" data-i="15" aria-label="16"></button>
-                
-                <button type="button" class="dot" data-i="16" aria-label="17"></button>
-                
-                <button type="button" class="dot" data-i="17" aria-label="18"></button>
                 
             </nav>
         </section>

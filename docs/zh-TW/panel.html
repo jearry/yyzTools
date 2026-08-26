@@ -204,18 +204,6 @@
         html[data-theme="dark"] .slide-icon { color: #9aa0a6; }
         .slide-feature .slide-title { font-size: clamp(16px, 2vw, 25px); font-weight: 700; color: var(--text); }
         .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(13px, 1.45vw, 16.5px); color: var(--text-sub); }
-        /* FAQ 页答案较长，标题与答案各自截断 */
-        .slide-faq .slide-title {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .slide-faq .slide-desc {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
 
         .dots {
             position: absolute;
@@ -342,80 +330,6 @@
                 </div>
             </article>
             
-            
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">真的永久免費嗎？以後會不會收費？</h2>
-                    <p class="slide-desc">真的免費。不設付費解鎖、不設會員制，也不會把核心能力刻意削減成付費項目。我們希望 yyzTools 是你願意長期留在桌面上的工具，而不是又一筆訂閱。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">我的資料會被上傳嗎？</h2>
-                    <p class="slide-desc">不會。剪貼簿歷史、檔案搜尋、應用程式統計、OCR 等都在本機處理與儲存。只有你主動使用翻譯這類連網功能時，才會把你輸入的內容依你選擇的服務傳給對應的第三方。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">需要註冊帳號嗎？</h2>
-                    <p class="slide-desc">不需要。軟體不要求註冊，也不主動蒐集你的身分資訊。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">支援哪些系統？</h2>
-                    <p class="slide-desc">Windows 10 與 Windows 11 的 64 位元版本。需要 Microsoft Edge WebView2 執行階段，Win11 已內建，Win10 若缺少，安裝程式會引導你裝上。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">會佔用很多資源嗎？</h2>
-                    <p class="slide-desc">主程序常駐很輕量，桌布、截圖、按鍵提示等做成了獨立處理程序，用不到就不啟動。開遊戲時可以一鍵進入遊戲模式，暫停桌布與特效。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">yyzTools 和 PowerToys 有什麼區別？</h2>
-                    <p class="slide-desc">PowerToys 是微軟的模組化工具集，面向進階使用者，需要自行啟用各個元件。yyzTools 是一體化套件：命令面板、翻譯、OCR、剪貼簿歷史、檔案/圖片/影片/PDF 批次處理在同一個安裝檔裡開箱即用，介面支援 12 種語言。兩者都免費，很多人會同時保留。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">和 Flow Launcher、Raycast 比呢？</h2>
-                    <p class="slide-desc">Flow Launcher 是優秀的開源啟動器，強在搜尋與外掛；Raycast 來自 macOS，Windows 版仍在公測，完整體驗需 Pro 訂閱。yyzTools 的差異是「裝完即全」：翻譯、OCR、剪貼簿歷史、批次處理、動態桌布全部內建，不必裝外掛，也不必訂閱。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">已經在用 PowerToys，還能裝 yyzTools 嗎？</h2>
-                    <p class="slide-desc">可以，互不衝突。yyzTools 主程序常駐很輕，桌布、截圖等按需啟動，快捷鍵也都能自訂。常見組合：PowerToys 管視窗分割與鍵盤重映射，yyzTools 管啟動、翻譯、OCR 與批次處理。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">和 uTools、Wox、ZTools 比呢？</h2>
-                    <p class="slide-desc">uTools 是外掛平台，主體免費但不少熱門外掛要開會員；Wox 是專注搜尋的開源啟動器。ZTools 是開源的 uTools 平替，功能靠外掛市集拼裝。yyzTools 把 40+ 模組直接打包進安裝檔，沒有會員也沒有付費解鎖，剪貼簿、搜尋、OCR 資料都留在本機。</p>
-                </div>
-            </article>
-            
             <nav class="dots">
                 
                 <button type="button" class="dot is-active" data-i="0" aria-label="1"></button>
@@ -435,24 +349,6 @@
                 <button type="button" class="dot" data-i="7" aria-label="8"></button>
                 
                 <button type="button" class="dot" data-i="8" aria-label="9"></button>
-                
-                <button type="button" class="dot" data-i="9" aria-label="10"></button>
-                
-                <button type="button" class="dot" data-i="10" aria-label="11"></button>
-                
-                <button type="button" class="dot" data-i="11" aria-label="12"></button>
-                
-                <button type="button" class="dot" data-i="12" aria-label="13"></button>
-                
-                <button type="button" class="dot" data-i="13" aria-label="14"></button>
-                
-                <button type="button" class="dot" data-i="14" aria-label="15"></button>
-                
-                <button type="button" class="dot" data-i="15" aria-label="16"></button>
-                
-                <button type="button" class="dot" data-i="16" aria-label="17"></button>
-                
-                <button type="button" class="dot" data-i="17" aria-label="18"></button>
                 
             </nav>
         </section>

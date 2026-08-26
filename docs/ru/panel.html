@@ -204,18 +204,6 @@
         html[data-theme="dark"] .slide-icon { color: #9aa0a6; }
         .slide-feature .slide-title { font-size: clamp(16px, 2vw, 25px); font-weight: 700; color: var(--text); }
         .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(13px, 1.45vw, 16.5px); color: var(--text-sub); }
-        /* FAQ 页答案较长，标题与答案各自截断 */
-        .slide-faq .slide-title {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .slide-faq .slide-desc {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
 
         .dots {
             position: absolute;
@@ -342,80 +330,6 @@
                 </div>
             </article>
             
-            
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Программа действительно бесплатна навсегда? Не появится ли плата позже?</h2>
-                    <p class="slide-desc">Действительно бесплатна. Ни платной разблокировки, ни уровней подписки, и ключевые возможности не переносятся за платный барьер. Мы хотим, чтобы yyzTools был инструментом, который вы надолго оставите на рабочем столе, а не очередной подпиской.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Отправляются ли мои данные куда-либо?</h2>
-                    <p class="slide-desc">Нет. История буфера обмена, поиск файлов, статистика приложений и OCR обрабатываются и хранятся локально. Только когда вы сами используете сетевую функцию вроде перевода, введённый текст уходит выбранному вами сторонному сервису. Кроме того, программа периодически проверяет обновления — в этом запросе передаётся только номер версии.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Нужна ли учётная запись?</h2>
-                    <p class="slide-desc">Нет. Регистрация не требуется, и программа не собирает данные о вашей личности.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Какие системы поддерживаются?</h2>
-                    <p class="slide-desc">64-битные Windows 10 и Windows 11. Требуется среда выполнения Microsoft Edge WebView2: в Windows 11 она встроена, а в Windows 10 установщик поможет её добавить, если она отсутствует.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Много ли расходуется ресурсов?</h2>
-                    <p class="slide-desc">Постоянно работающий основной процесс очень лёгкий, а обои, скриншоты и подсказки клавиш вынесены в отдельные процессы и запускаются только по необходимости. Перед игрой можно одним нажатием включить игровой режим и приостановить обои и эффекты.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Чем yyzTools отличается от PowerToys?</h2>
-                    <p class="slide-desc">PowerToys - модульный набор утилит Microsoft для опытных пользователей: нужные компоненты включаются вручную. yyzTools - интегрированный пакет: командная панель, перевод, OCR, история буфера обмена и пакетная обработка файлов, изображений, видео и PDF уже настроены и готовы к работе в одном установщике, интерфейс переведён на 12 языков. Оба бесплатны, поэтому многие держат оба.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Как насчёт Flow Launcher или Raycast?</h2>
-                    <p class="slide-desc">Flow Launcher - отличный открытый лаунчер, силён в поиске и плагинах. Raycast родом из macOS: версия для Windows ещё в бете, а полный опыт требует подписки Pro. yyzTools «полон сразу после установки»: перевод, OCR, история буфера обмена, пакетная обработка и живые обои встроены - не нужно искать плагины и оформлять подписку.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Я уже пользуюсь PowerToys - можно поставить и yyzTools?</h2>
-                    <p class="slide-desc">Да, они отлично уживаются. Резидентный процесс yyzTools лёгкий, обои и скриншоты запускаются по требованию, а горячие клавиши полностью настраиваются. Типичная связка: PowerToys - за прилипание окон и переназначение клавиш, yyzTools - за запуск, перевод, OCR и пакетную обработку.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">А как насчёт uTools, Wox или ZTools?</h2>
-                    <p class="slide-desc">uTools - платформа с плагинами: сама оболочка бесплатна, но многие популярные плагины требуют платной подписки. Wox - лаунчер с открытым кодом, ориентированный на поиск. ZTools - открытая альтернатива uTools, собирающая функции из магазина плагинов. yyzTools объединяет более 40 модулей в одном установщике - без подписки и платных разблокировок, - а данные буфера обмена, поиска и OCR остаются на вашем компьютере.</p>
-                </div>
-            </article>
-            
             <nav class="dots">
                 
                 <button type="button" class="dot is-active" data-i="0" aria-label="1"></button>
@@ -435,24 +349,6 @@
                 <button type="button" class="dot" data-i="7" aria-label="8"></button>
                 
                 <button type="button" class="dot" data-i="8" aria-label="9"></button>
-                
-                <button type="button" class="dot" data-i="9" aria-label="10"></button>
-                
-                <button type="button" class="dot" data-i="10" aria-label="11"></button>
-                
-                <button type="button" class="dot" data-i="11" aria-label="12"></button>
-                
-                <button type="button" class="dot" data-i="12" aria-label="13"></button>
-                
-                <button type="button" class="dot" data-i="13" aria-label="14"></button>
-                
-                <button type="button" class="dot" data-i="14" aria-label="15"></button>
-                
-                <button type="button" class="dot" data-i="15" aria-label="16"></button>
-                
-                <button type="button" class="dot" data-i="16" aria-label="17"></button>
-                
-                <button type="button" class="dot" data-i="17" aria-label="18"></button>
                 
             </nav>
         </section>

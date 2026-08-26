@@ -204,18 +204,6 @@
         html[data-theme="dark"] .slide-icon { color: #9aa0a6; }
         .slide-feature .slide-title { font-size: clamp(16px, 2vw, 25px); font-weight: 700; color: var(--text); }
         .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(13px, 1.45vw, 16.5px); color: var(--text-sub); }
-        /* FAQ 页答案较长，标题与答案各自截断 */
-        .slide-faq .slide-title {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .slide-faq .slide-desc {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
 
         .dots {
             position: absolute;
@@ -342,80 +330,6 @@
                 </div>
             </article>
             
-            
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">È davvero gratuito per sempre? Diventerà a pagamento?</h2>
-                    <p class="slide-desc">È davvero gratuito. Nessuno sblocco a pagamento, nessun piano di abbonamento e nessuna funzione essenziale trattenuta dietro un muro di pagamento. Vogliamo che yyzTools sia uno strumento che ti fa piacere tenere sul desktop a lungo, non un altro abbonamento.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">I miei dati vengono caricati da qualche parte?</h2>
-                    <p class="slide-desc">No. Cronologia degli appunti, ricerca file, statistiche delle applicazioni e OCR vengono elaborati e conservati in locale. Solo quando usi attivamente una funzione online come la traduzione, ciò che digiti viene inviato al servizio di terze parti che hai scelto. Il software controlla inoltre periodicamente la presenza di aggiornamenti: quella richiesta trasmette soltanto i numeri di versione.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Serve un account?</h2>
-                    <p class="slide-desc">No. Non è prevista alcuna registrazione e il software non raccoglie informazioni identificative.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Quali sistemi sono supportati?</h2>
-                    <p class="slide-desc">Windows 10 e Windows 11 a 64 bit. È richiesto il runtime Microsoft Edge WebView2: in Windows 11 è già incluso, mentre in Windows 10, se manca, il programma di installazione ti guiderà nell’aggiunta.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Consuma molte risorse?</h2>
-                    <p class="slide-desc">Il processo principale residente è leggero, mentre sfondi, cattura schermo e suggerimenti dei tasti girano come processi separati che si avviano solo quando li usi. La modalità gioco mette in pausa sfondi ed effetti con un solo clic.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">In cosa si differenzia yyzTools da PowerToys?</h2>
-                    <p class="slide-desc">PowerToys è la raccolta modulare di utilità di Microsoft pensata per gli utenti avanzati: attivi tu i componenti che ti servono. yyzTools è una suite integrata: palette dei comandi, traduzione, OCR, cronologia degli appunti ed elaborazione in blocco di file, immagini, video e PDF arrivano preconfigurati in un unico programma di installazione, con interfaccia in 12 lingue. Entrambi sono gratuiti, quindi molte persone li tengono entrambi.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">E rispetto a Flow Launcher o Raycast?</h2>
-                    <p class="slide-desc">Flow Launcher è un eccellente launcher open source, forte nella ricerca e nei plugin. Raycast arriva da macOS: la versione per Windows è ancora in beta e l’esperienza completa richiede un abbonamento Pro. yyzTools è “completo appena installato”: traduzione, OCR, cronologia degli appunti, elaborazione in blocco e sfondi dinamici sono tutti integrati — niente caccia alle estensioni, niente abbonamenti.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Uso già PowerToys — posso installare comunque yyzTools?</h2>
-                    <p class="slide-desc">Sì, convivono senza problemi. Il processo residente di yyzTools è leggero, sfondi e screenshot si avviano su richiesta e ogni scorciatoia è personalizzabile. Una combinazione comune: PowerToys per lo snap delle finestre e la rimappatura dei tasti, yyzTools per avvio, traduzione, OCR ed elaborazione in blocco.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">E rispetto a uTools, Wox o ZTools?</h2>
-                    <p class="slide-desc">uTools è una piattaforma a plugin: la base è gratuita, ma molti plugin popolari richiedono un abbonamento a pagamento. Wox è un launcher open source focalizzato sulla ricerca. ZTools è un’alternativa open source a uTools, assemblata da un mercato di plugin. yyzTools raccoglie oltre 40 moduli in un unico programma di installazione, senza abbonamenti né sblocchi a pagamento, e conserva i dati di appunti, ricerca e OCR sul tuo computer.</p>
-                </div>
-            </article>
-            
             <nav class="dots">
                 
                 <button type="button" class="dot is-active" data-i="0" aria-label="1"></button>
@@ -435,24 +349,6 @@
                 <button type="button" class="dot" data-i="7" aria-label="8"></button>
                 
                 <button type="button" class="dot" data-i="8" aria-label="9"></button>
-                
-                <button type="button" class="dot" data-i="9" aria-label="10"></button>
-                
-                <button type="button" class="dot" data-i="10" aria-label="11"></button>
-                
-                <button type="button" class="dot" data-i="11" aria-label="12"></button>
-                
-                <button type="button" class="dot" data-i="12" aria-label="13"></button>
-                
-                <button type="button" class="dot" data-i="13" aria-label="14"></button>
-                
-                <button type="button" class="dot" data-i="14" aria-label="15"></button>
-                
-                <button type="button" class="dot" data-i="15" aria-label="16"></button>
-                
-                <button type="button" class="dot" data-i="16" aria-label="17"></button>
-                
-                <button type="button" class="dot" data-i="17" aria-label="18"></button>
                 
             </nav>
         </section>

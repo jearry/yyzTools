@@ -204,18 +204,6 @@
         html[data-theme="dark"] .slide-icon { color: #9aa0a6; }
         .slide-feature .slide-title { font-size: clamp(16px, 2vw, 25px); font-weight: 700; color: var(--text); }
         .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(13px, 1.45vw, 16.5px); color: var(--text-sub); }
-        /* FAQ 页答案较长，标题与答案各自截断 */
-        .slide-faq .slide-title {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .slide-faq .slide-desc {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
 
         .dots {
             position: absolute;
@@ -342,80 +330,6 @@
                 </div>
             </article>
             
-            
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">本当に永久無料ですか。今後有料になりませんか。</h2>
-                    <p class="slide-desc">本当に無料です。有料アンロックや会員制度は設けず、中核機能を有料項目として切り出すこともありません。yyzTools は、また一つサブスクリプションを増やすものではなく、長くデスクトップに置いていただけるツールでありたいと考えています。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">自分のデータはアップロードされますか。</h2>
-                    <p class="slide-desc">いいえ。クリップボード履歴、ファイル検索、アプリ統計、OCR などはすべて本体内で処理・保存されます。翻訳のようなオンライン機能をご自身で利用されたときにのみ、入力された内容が選択したサービスの提供元へ送信されます。またソフトウェアは定期的に更新を確認しますが、その通信で送られるのはバージョン番号だけです。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">アカウント登録は必要ですか。</h2>
-                    <p class="slide-desc">不要です。登録を求めることはなく、身元に関する情報を自発的に収集することもありません。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">対応する OS を教えてください。</h2>
-                    <p class="slide-desc">Windows 10 と Windows 11 の 64 ビット版です。Microsoft Edge WebView2 ランタイムが必要で、Windows 11 には標準で搭載されています。Windows 10 で不足している場合はインストーラーが導入を案内します。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">リソースを多く消費しますか。</h2>
-                    <p class="slide-desc">常駐する主プロセスは非常に軽量です。壁紙、スクリーンショット、キー入力表示などは独立したプロセスになっており、使わなければ起動しません。ゲームを始めるときはワンクリックでゲームモードに切り替え、壁紙とエフェクトを一時停止できます。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">yyzTools と PowerToys の違いは何ですか。</h2>
-                    <p class="slide-desc">PowerToys は Microsoft のモジュール型ユーティリティ集で、上級者向けに使う部品を自分で有効化していくものです。yyzTools は一体化スイートで、コマンドパレット、翻訳、OCR、クリップボード履歴、ファイル・画像・動画・PDF の一括処理が同じインストーラーで初期設定済みですぐ使えます。UI は 12 言語に対応しています。どちらも無料なので、両方入れておく人も多くいます。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">Flow Launcher や Raycast と比べるとどうですか。</h2>
-                    <p class="slide-desc">Flow Launcher は検索とプラグインに強い優秀なオープンソースランチャーです。Raycast は macOS 出身で、Windows 版はまだベータ、完全な体験には Pro サブスクリプションが必要です。yyzTools は「インストールしたら全部入り」：翻訳・OCR・クリップボード履歴・一括処理・ライブ壁紙をすべて内蔵し、プラグイン探しもサブスクリプションも不要です。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">すでに PowerToys を使っていますが、yyzTools も入れられますか。</h2>
-                    <p class="slide-desc">はい、問題なく共存できます。yyzTools の常駐プロセスは軽く、壁紙やスクリーンショットは必要なときだけ起動し、ホットキーもすべてカスタマイズできます。よくある組み合わせ：PowerToys はウィンドウ分割とキー割り当て、yyzTools は起動・翻訳・OCR・一括処理に。</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">uTools、Wox、ZTools と比べるとどうですか。</h2>
-                    <p class="slide-desc">uTools はプラグインプラットフォームで、本体は無料ですが人気プラグインの多くは有料会員制です。Wox は検索に特化したオープンソースのランチャーです。ZTools はオープンソースの uTools 代替で、機能はプラグインマーケットから組み合わせます。yyzTools は 40 以上のモジュールをインストーラーに同梱し、会員制度も有料アンロックもなく、クリップボード・検索・OCR のデータはすべて端末内に留まります。</p>
-                </div>
-            </article>
-            
             <nav class="dots">
                 
                 <button type="button" class="dot is-active" data-i="0" aria-label="1"></button>
@@ -435,24 +349,6 @@
                 <button type="button" class="dot" data-i="7" aria-label="8"></button>
                 
                 <button type="button" class="dot" data-i="8" aria-label="9"></button>
-                
-                <button type="button" class="dot" data-i="9" aria-label="10"></button>
-                
-                <button type="button" class="dot" data-i="10" aria-label="11"></button>
-                
-                <button type="button" class="dot" data-i="11" aria-label="12"></button>
-                
-                <button type="button" class="dot" data-i="12" aria-label="13"></button>
-                
-                <button type="button" class="dot" data-i="13" aria-label="14"></button>
-                
-                <button type="button" class="dot" data-i="14" aria-label="15"></button>
-                
-                <button type="button" class="dot" data-i="15" aria-label="16"></button>
-                
-                <button type="button" class="dot" data-i="16" aria-label="17"></button>
-                
-                <button type="button" class="dot" data-i="17" aria-label="18"></button>
                 
             </nav>
         </section>

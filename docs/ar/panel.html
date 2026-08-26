@@ -204,18 +204,6 @@
         html[data-theme="dark"] .slide-icon { color: #9aa0a6; }
         .slide-feature .slide-title { font-size: clamp(16px, 2vw, 25px); font-weight: 700; color: var(--text); }
         .slide-desc { margin-top: clamp(3px, 0.8vh, 8px); font-size: clamp(13px, 1.45vw, 16.5px); color: var(--text-sub); }
-        /* FAQ 页答案较长，标题与答案各自截断 */
-        .slide-faq .slide-title {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .slide-faq .slide-desc {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
 
         .dots {
             position: absolute;
@@ -342,80 +330,6 @@
                 </div>
             </article>
             
-            
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">هل هو مجاني للأبد فعلًا؟ هل ستفرضون رسومًا لاحقًا؟</h2>
-                    <p class="slide-desc">مجاني فعلًا. لا فتح مدفوع، ولا نظام عضويات، ولن نحجب القدرات الأساسية خلف جدار دفع. نريد أن يكون yyzTools أداة تسعد بإبقائها على سطح مكتبك على المدى الطويل، لا اشتراكًا آخر.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">هل تُرفَع بياناتي إلى أي مكان؟</h2>
-                    <p class="slide-desc">لا. سجل الحافظة والبحث في الملفات وإحصاءات التطبيقات والتعرّف على النصوص تُعالَج وتُخزَّن على جهازك. ولا يُرسَل ما تُدخله إلى طرف ثالث إلا عندما تستخدم بنفسك ميزة تتطلب اتصالًا بالإنترنت كالترجمة، وحينها يُرسَل إلى الخدمة التي اخترتها. كما يتحقق البرنامج من التحديثات دوريًا، وهذا الطلب ينقل رقم الإصدار فقط.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">هل أحتاج إلى إنشاء حساب؟</h2>
-                    <p class="slide-desc">لا. البرنامج لا يطلب التسجيل ولا يجمع معلومات هويتك من تلقاء نفسه.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">ما أنظمة التشغيل المدعومة؟</h2>
-                    <p class="slide-desc">إصدارات 64 بت من Windows 10 و Windows 11. يتطلب البرنامج بيئة تشغيل Microsoft Edge WebView2، وهي مدمجة في Windows 11، وإن كانت مفقودة في Windows 10 سيرشدك المُثبِّت إلى تثبيتها.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">هل يستهلك موارد كثيرة؟</h2>
-                    <p class="slide-desc">العملية الرئيسية المقيمة خفيفة جدًا، أما الخلفيات والتقاط الشاشة وتلميحات المفاتيح فهي عمليات مستقلة لا تعمل إلا عند الحاجة. وعند اللعب يمكنك الدخول إلى وضع اللعب بنقرة واحدة لإيقاف الخلفيات والمؤثرات مؤقتًا.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">ما الفرق بين yyzTools و PowerToys؟</h2>
-                    <p class="slide-desc">PowerToys هي مجموعة أدوات معيارية من Microsoft موجهة للمستخدمين المتقدمين، حيث تُفعِّل بنفسك المكوّنات التي تحتاجها. أما yyzTools فهي حزمة متكاملة: لوحة الأوامر والترجمة والتعرّف على النصوص وسجل الحافظة والمعالجة الدفعية للملفات والصور والفيديو و PDF تأتي جميعها مهيأة وجاهزة في حزمة تثبيت واحدة، وبواجهة تدعم 12 لغة. كلاهما مجاني، لذا يحتفظ كثيرون بالاثنين معًا.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">وماذا عن المقارنة مع Flow Launcher أو Raycast؟</h2>
-                    <p class="slide-desc">Flow Launcher مُطلِق تطبيقات مفتوح المصدر ممتاز يتفوق في البحث والإضافات، أما Raycast فمصدره macOS، ونسخة Windows منه لا تزال في مرحلة تجريبية، والتجربة الكاملة تتطلب اشتراك Pro. أما yyzTools فـ«مكتمل بمجرد التثبيت»: الترجمة والتعرّف على النصوص وسجل الحافظة والمعالجة الدفعية والخلفيات الديناميكية كلها مدمجة — دون البحث عن إضافات ودون اشتراك.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">أستخدم PowerToys بالفعل، فهل يمكنني تثبيت yyzTools أيضًا؟</h2>
-                    <p class="slide-desc">نعم، يتعايشان دون تعارض. عملية yyzTools المقيمة خفيفة، والخلفيات والتقاط الشاشة يبدآن عند الحاجة فقط، وكل الاختصارات قابلة للتخصيص. تشكيلة شائعة: PowerToys لتقسيم النوافذ وإعادة تعيين المفاتيح، و yyzTools للإطلاق والترجمة والتعرّف على النصوص والمعالجة الدفعية.</p>
-                </div>
-            </article>
-            
-            <article class="slide slide-feature slide-faq">
-                <div class="slide-icon"><i class="fa-solid fa-display" aria-hidden="true"></i></div>
-                <div class="slide-body">
-                    <h2 class="slide-title">ماذا عن المقارنة مع uTools أو Wox أو ZTools؟</h2>
-                    <p class="slide-desc">uTools منصة إضافات: القشرة مجانية لكن كثيرًا من الإضافات الشائعة يتطلب عضوية مدفوعة، و Wox مُطلِق تطبيقات مفتوح المصدر يركز على البحث، و ZTools بديل مفتوح المصدر لـ uTools تُجمَع وظائفه من سوق الإضافات. أما yyzTools فيضم أكثر من 40 وحدة في حزمة تثبيت واحدة دون عضويات ولا فتحًا مدفوعًا، ويُبقي بيانات الحافظة والبحث والتعرّف على النصوص على جهازك.</p>
-                </div>
-            </article>
-            
             <nav class="dots">
                 
                 <button type="button" class="dot is-active" data-i="0" aria-label="1"></button>
@@ -435,24 +349,6 @@
                 <button type="button" class="dot" data-i="7" aria-label="8"></button>
                 
                 <button type="button" class="dot" data-i="8" aria-label="9"></button>
-                
-                <button type="button" class="dot" data-i="9" aria-label="10"></button>
-                
-                <button type="button" class="dot" data-i="10" aria-label="11"></button>
-                
-                <button type="button" class="dot" data-i="11" aria-label="12"></button>
-                
-                <button type="button" class="dot" data-i="12" aria-label="13"></button>
-                
-                <button type="button" class="dot" data-i="13" aria-label="14"></button>
-                
-                <button type="button" class="dot" data-i="14" aria-label="15"></button>
-                
-                <button type="button" class="dot" data-i="15" aria-label="16"></button>
-                
-                <button type="button" class="dot" data-i="16" aria-label="17"></button>
-                
-                <button type="button" class="dot" data-i="17" aria-label="18"></button>
                 
             </nav>
         </section>
