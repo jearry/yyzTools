@@ -8,7 +8,7 @@
   <strong>Yes Your Zen Tools</strong>
 </p>
 
-<p align="center"><a href="README.en.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <strong>한국어</strong> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a></p>
+<p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <strong>한국어</strong> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/badge/version-1.0.4.1400-blue">
@@ -41,53 +41,53 @@
 | **계산과 확장** | 계산 노트 · QR 코드 · 명령 모듈 · 내장 브라우저 · 사용자 확장 |
 | **개인화** | 다이내믹 배경화면 · 바탕화면 특수 효과 · 게임 모드 · 내비게이션 페이지 · 지구 방위전 |
 
-## Architecture
+## 아키텍처
 
-Hybrid: a **C++ (Win32 + WebView2) host** carrying a **front end (Alpine.js + vanilla JS + Vite)**, with feature areas isolated into separate processes.
+하이브리드 구조: **C++(Win32 + WebView2) 호스트**가 **프런트엔드(Alpine.js + 바닐라 JS + Vite)**를 담고 있으며, 기능 영역은 프로세스로 격리되어 있습니다.
 
-| Process | Role |
+| 프로세스 | 역할 |
 |---------|------|
-| `yyzTools.exe` | Main process — hosts the command palette, translate, OCR and most features |
-| `yyzWallpaper.exe` | Live wallpaper — composites web/video under the desktop icon layer via the Windows Composition API |
-| `yyzBrowser.exe` | Frameless built-in browser for command modules opening URLs |
-| `yyzCmd.exe` | Pure Win32 command runner (shutdown / restart / volume / display / recycle bin, etc.) |
-| `yyzInputHint.exe` | Live keyboard / mouse key overlay (RawInput) |
-| `yyzMouseFinder.exe` | Quickly locate the mouse cursor |
-| `yyzUpdater.exe` | Incremental auto-updater (see `src/updater/`) |
+| `yyzTools.exe` | 메인 프로세스 — 커맨드 팔레트 / 번역 / OCR 등 대부분의 기능 탑재 |
+| `yyzWallpaper.exe` | 다이내믹 배경화면 — Windows Composition API로 데스크톱 아이콘 레이어 아래에 합성 |
+| `yyzBrowser.exe` | 명령 모듈이 URL을 열 때 사용하는 프레임 없는 내장 브라우저 |
+| `yyzCmd.exe` | 순수 Win32 명령 실행기 (종료 / 재시작 / 볼륨 / 디스플레이 / 휴지통 등) |
+| `yyzInputHint.exe` | 키보드 / 마우스 버튼 실시간 표시 (RawInput) |
+| `yyzMouseFinder.exe` | 마우스 커서 빠르게 찾기 |
+| `yyzUpdater.exe` | 증분 자동 업데이터 (`src/updater/` 참조) |
 
-The front end calls each C++ Manager through the `window.Zen` bridge, all returning an `{ error, ... }` contract.
+프런트엔드는 `window.Zen` 브리지를 통해 C++의 각 Manager를 호출하며, 모두 `{ error, ... }` 계약으로 통일된 결과를 반환합니다.
 
-## Download
+## 다운로드
 
-- **Installer** (recommended): `yyzTools-setup-1.0.4.1400.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
-- Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
-- Or grab it from the [official download page](https://yyztools.com/download.html).
+- **설치 패키지**(권장): `yyzTools-setup-1.0.4.1400.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- 중국 내부에서 접속이 느리면 미러를 이용하세요: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/) (설치 패키지 다운로드 URL 앞에 해당 접두사를 붙이면 됩니다)
+- [공식 다운로드 페이지](https://yyztools.com/ko/download.html)에서도 받을 수 있습니다.
 
-The setup wizard supports 12 languages.
+설치 마법사는 중국어 간체·번체, 영어, 일본어, 한국어, 프랑스어, 독일어, 스페인어, 러시아어, 아랍어, 포르투갈어, 이탈리아어 12개 언어를 지원합니다.
 
-## System requirements
+## 시스템 요구 사항
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (preinstalled on recent systems; the installer pulls it in if missing)
+- WebView2 Runtime (최신 시스템에는 미리 설치되어 있으며, 없으면 설치 패키지가 자동으로 설치합니다)
 
-## UI languages
+## 인터페이스 언어
 
-Both the UI and command-module text support 12 languages: 简体中文, 繁體中文, English, 日本語, 한국어, Français, Deutsch, Español, Русский, العربية, Português, Italiano. First launch auto-detects the system language; switch anytime in Settings.
+인터페이스와 명령 모듈 문안 모두 위 12개 언어를 지원합니다. 첫 실행 시 시스템 언어를 자동으로 감지하며, 설정에서 언제든 변경할 수 있습니다.
 
-## About this repo
+## 이 저장소에 대하여
 
-This repo (`jearry/yyzTools`) hosts releases and the official website:
+이 저장소(`jearry/yyzTools`)는 yyzTools의 **릴리스 및 공식 웹사이트 호스팅 저장소**입니다:
 
-- [`releases/`](releases/) — versioned installers and `.7z` packages, plus the `update.json` manifest
-- [`docs/`](docs/) — static site for <https://yyztools.com> (GitHub Pages)
-- [`src/updater/`](src/updater/) — auto-updater source
+- [`releases/`](releases/) —— 버전 관리된 설치 패키지와 분할 압축 파일(`.7z`), 자동 업데이트 매니페스트 `update.json`
+- [`docs/`](docs/) —— 공식 웹사이트 <https://yyztools.com>의 정적 사이트 (GitHub Pages로 호스팅)
+- [`src/updater/`](src/updater/) —— 자동 업데이터 소스 코드
 
-> The main application source is not in this repo. For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
+기능 관련 문제는 [Issues](https://github.com/jearry/yyzTools/issues)를 이용해 주세요.
 
-## License & Acknowledgments
+## 라이선스 및 감사
 
-yyzTools is a free software. The source code is not open source.
+yyzTools는 독점 소프트웨어이며 무료로 사용할 수 있습니다. 현재 자동 업데이트 모듈만 오픈소스로 공개되어 있으며, 해당 오픈소스 컴포넌트는 **MIT 라이선스**를 따릅니다. 향후 다른 부분 또는 전체를 오픈소스로 공개할지는 상황에 따라 결정됩니다.
 
-The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
+본 소프트웨어는 여러 오픈소스 라이브러리와 도구를 사용합니다. 서드파티 컴포넌트의 전체 목록과 각 라이선스는 [LICENSE](LICENSE)를 참조하십시오.
 
-We sincerely thank all the developers who have contributed to these open-source projects!
+이 오픈소스 프로젝트에 기여해 주신 모든 개발자분들께 진심으로 감사드립니다!

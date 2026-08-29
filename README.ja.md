@@ -8,7 +8,7 @@
   <strong>Yes Your Zen Tools</strong>
 </p>
 
-<p align="center"><a href="README.en.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <strong>日本語</strong> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a></p>
+<p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <strong>日本語</strong> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/badge/version-1.0.4.1400-blue">
@@ -41,53 +41,53 @@
 | **計算と拡張** | 計算用紙 · QR コード · コマンドモジュール · 内蔵ブラウザー · カスタム拡張 |
 | **パーソナライズ** | ライブ壁紙 · デスクトップエフェクト · ゲームモード · ナビゲーションページ · 地球防衛戦 |
 
-## Architecture
+## アーキテクチャ
 
-Hybrid: a **C++ (Win32 + WebView2) host** carrying a **front end (Alpine.js + vanilla JS + Vite)**, with feature areas isolated into separate processes.
+ハイブリッド構成：**C++（Win32 + WebView2）ホスト**が **フロントエンド（Alpine.js + ネイティブ JS + Vite）** を搭载し、機能ごとにプロセスを分離しています。
 
-| Process | Role |
+| プロセス | 職責 |
 |---------|------|
-| `yyzTools.exe` | Main process — hosts the command palette, translate, OCR and most features |
-| `yyzWallpaper.exe` | Live wallpaper — composites web/video under the desktop icon layer via the Windows Composition API |
-| `yyzBrowser.exe` | Frameless built-in browser for command modules opening URLs |
-| `yyzCmd.exe` | Pure Win32 command runner (shutdown / restart / volume / display / recycle bin, etc.) |
-| `yyzInputHint.exe` | Live keyboard / mouse key overlay (RawInput) |
-| `yyzMouseFinder.exe` | Quickly locate the mouse cursor |
-| `yyzUpdater.exe` | Incremental auto-updater (see `src/updater/`) |
+| `yyzTools.exe` | メインプロセス。コマンドパレット / 翻訳 / OCR など大多数の機能を搭载 |
+| `yyzWallpaper.exe` | ライブ壁紙。Windows Composition API でデスクトップアイコン層の下に合成表示 |
+| `yyzBrowser.exe` | コマンドモジュールが URL を開くための内蔵フレームレスブラウザー |
+| `yyzCmd.exe` | 純 Win32 製コマンド実行ツール（シャットダウン / 再起動 / 音量 / ディスプレイ / ごみ箱など） |
+| `yyzInputHint.exe` | キー / マウスボタンのリアルタイム表示（RawInput） |
+| `yyzMouseFinder.exe` | マウスカーソルの高速検出 |
+| `yyzUpdater.exe` | 差分自動アップデーター（`src/updater/` 参照） |
 
-The front end calls each C++ Manager through the `window.Zen` bridge, all returning an `{ error, ... }` contract.
+フロントエンドは `window.Zen` ブリッジを介して C++ の各 Manager を呼び出し、すべて `{ error, ... }` 契約で統一された結果を返します。
 
-## Download
+## ダウンロード
 
-- **Installer** (recommended): `yyzTools-setup-1.0.4.1400.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
-- Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
-- Or grab it from the [official download page](https://yyztools.com/download.html).
+- **インストーラー**（推奨）：`yyzTools-setup-1.0.4.1400.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- 中国本土からアクセスが遅い場合はミラーをご利用ください：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（インストーラーのダウンロード URL の先頭に対応するプレフィックスを付ける）
+- [公式ダウンロードページ](https://yyztools.com/ja/download.html)からも取得できます。
 
-The setup wizard supports 12 languages.
+インストールウィザードは簡体字中国語、繁体字中国語、英語、日本語、韓国語、フランス語、ドイツ語、スペイン語、ロシア語、アラビア語、ポルトガル語、イタリア語の 12 言語に対応しています。
 
-## System requirements
+## 動作環境
 
-- Windows 10 / 11 (x64)
-- WebView2 Runtime (preinstalled on recent systems; the installer pulls it in if missing)
+- Windows 10 / 11（x64）
+- WebView2 Runtime（新しいシステムにはプリインストール済み。不足している場合はインストーラーが自動で導入します）
 
-## UI languages
+## 界面言語
 
-Both the UI and command-module text support 12 languages: 简体中文, 繁體中文, English, 日本語, 한국어, Français, Deutsch, Español, Русский, العربية, Português, Italiano. First launch auto-detects the system language; switch anytime in Settings.
+インターフェースとコマンドモジュールの文言はいずれも上記 12 言語に対応しています。初回起動時にシステム言語を自動判定し、設定でいつでも切り替えられます。
 
-## About this repo
+## 本リポジトリについて
 
-This repo (`jearry/yyzTools`) hosts releases and the official website:
+本リポジトリ（`jearry/yyzTools`）は yyzTools の **リリースおよび公式サイト ホスティング用リポジトリ** です：
 
-- [`releases/`](releases/) — versioned installers and `.7z` packages, plus the `update.json` manifest
-- [`docs/`](docs/) — static site for <https://yyztools.com> (GitHub Pages)
-- [`src/updater/`](src/updater/) — auto-updater source
+- [`releases/`](releases/) —— バージョン管理されたインストーラーと分割圧縮パッケージ（`.7z`）、および自動更新マニフェスト `update.json`
+- [`docs/`](docs/) —— 公式サイト <https://yyztools.com> の静的サイト（GitHub Pages でホスティング）
+- [`src/updater/`](src/updater/) —— 自動アップデーターのソースコード
 
-> The main application source is not in this repo. For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
+機能に関する問題の報告は [Issues](https://github.com/jearry/yyzTools/issues) までお願いします。
 
-## License & Acknowledgments
+## ライセンスと謝辞
 
-yyzTools is a free software. The source code is not open source.
+yyzTools はプロプライエタリソフトウェアで、無料で利用できます。現時点でオープンソース化されているのは自動アップデーターのみで、そのオープンソースコンポーネントは **MIT ライセンス** に従います。今後他の部分または全体をオープンソース化するかどうかは、状況に応じて判断いたします。
 
-The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
+本ソフトウェアは複数のオープンソースライブラリおよびツールを使用しています。サードパーティコンポーネントの完全な一覧と各ライセンスについては [LICENSE](LICENSE) を参照してください。
 
-We sincerely thank all the developers who have contributed to these open-source projects!
+これらのオープンソースプロジェクトに貢献してくださったすべての開発者の皆様に、心より感謝申し上げます！

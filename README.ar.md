@@ -8,7 +8,7 @@
   <strong>Yes Your Zen Tools</strong>
 </p>
 
-<p align="center"><a href="README.en.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <strong>العربية</strong></p>
+<p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <strong>العربية</strong> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/badge/version-1.0.4.1400-blue">
@@ -41,53 +41,53 @@
 | **الحساب والإضافات** | مسودة الحساب · رمز QR · وحدات الأوامر · المتصفح المدمج · الإضافات المخصّصة |
 | **التخصيص** | الخلفيات الديناميكية · مؤثرات سطح المكتب · وضع اللعب · صفحة التنقل · الدفاع عن الأرض |
 
-## Architecture
+## البنية
 
-Hybrid: a **C++ (Win32 + WebView2) host** carrying a **front end (Alpine.js + vanilla JS + Vite)**, with feature areas isolated into separate processes.
+بنية هجينة: **مضيف C++\u200E (Win32 + WebView2)** يحمل **واجهة أمامية (Alpine.js + JS أصلي + Vite)**، مع عزل المناطق الوظيفية في عمليات منفصلة.
 
-| Process | Role |
-|---------|------|
-| `yyzTools.exe` | Main process — hosts the command palette, translate, OCR and most features |
-| `yyzWallpaper.exe` | Live wallpaper — composites web/video under the desktop icon layer via the Windows Composition API |
-| `yyzBrowser.exe` | Frameless built-in browser for command modules opening URLs |
-| `yyzCmd.exe` | Pure Win32 command runner (shutdown / restart / volume / display / recycle bin, etc.) |
-| `yyzInputHint.exe` | Live keyboard / mouse key overlay (RawInput) |
-| `yyzMouseFinder.exe` | Quickly locate the mouse cursor |
-| `yyzUpdater.exe` | Incremental auto-updater (see `src/updater/`) |
+| العملية | الدور |
+|---------|-------|
+| `yyzTools.exe` | العملية الرئيسية — تستضيف لوحة الأوامر والترجمة والتعرّف على النصوص ومعظم الوظائف |
+| `yyzWallpaper.exe` | الخلفية الديناميكية — تركّب محتوى الويب/الفيديو تحت طبقة أيقونات سطح المكتب عبر واجهة Windows Composition |
+| `yyzBrowser.exe` | متصفح مدمج بلا إطار تفتح من خلاله وحدات الأوامر عناوين URL |
+| `yyzCmd.exe` | منفّذ أوامر نظامي بخالص Win32 (إيقاف التشغيل / إعادة التشغيل / الصوت / الشاشة / سلة المحذوفات وغيرها) |
+| `yyzInputHint.exe` | إظهار مفاتيح لوحة المفاتيح / الفأرة لحظيًا (RawInput) |
+| `yyzMouseFinder.exe` | تحديد موقع مؤشر الفأرة بسرعة |
+| `yyzUpdater.exe` | محدّث تلقائي تزايدي (انظر `src/updater/`) |
 
-The front end calls each C++ Manager through the `window.Zen` bridge, all returning an `{ error, ... }` contract.
+تستدعي الواجهةُ الأمامية كل Manager في C++\u200E عبر جسر `window.Zen`، وجميعها تعيد نتائج وفق عقد موحّد `{ error, ... }`.
 
-## Download
+## التنزيل
 
-- **Installer** (recommended): `yyzTools-setup-1.0.4.1400.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
-- Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
-- Or grab it from the [official download page](https://yyztools.com/download.html).
+- **حزمة التثبيت** (مستحسنة): `yyzTools-setup-1.0.4.1400.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- الاتصال بطيء من داخل الصين؟ أضف بادئة إحدى المرايا قبل رابط تنزيل حزمة التثبيت: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
+- يمكنك أيضًا الحصول عليها من [صفحة التنزيل الرسمية](https://yyztools.com/ar/download.html).
 
-The setup wizard supports 12 languages.
+يدعم معالج التثبيت 12 لغة: الصينية المبسطة والتقليدية، والإنجليزية، واليابانية، والكورية، والفرنسية، والألمانية، والإسبانية، والروسية، والعربية، والبرتغالية، والإيطالية.
 
-## System requirements
+## متطلبات النظام
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (preinstalled on recent systems; the installer pulls it in if missing)
+- WebView2 Runtime (مثبّت مسبقًا في الأنظمة الحديثة؛ وإن غاب ثبّته معالج التثبيت تلقائيًا)
 
-## UI languages
+## لغات الواجهة
 
-Both the UI and command-module text support 12 languages: 简体中文, 繁體中文, English, 日本語, 한국어, Français, Deutsch, Español, Русский, العربية, Português, Italiano. First launch auto-detects the system language; switch anytime in Settings.
+تدعم الواجهة ونصوص وحدات الأوامر اللغات الاثنتي عشرة المذكورة أعلاه. عند التشغيل الأول تُطابَق لغة النظام تلقائيًا، ويمكن التبديل في أي وقت من الإعدادات.
 
-## About this repo
+## عن هذا المستودع
 
-This repo (`jearry/yyzTools`) hosts releases and the official website:
+هذا المستودع (`jearry/yyzTools`) هو **مستودع النشر واستضافة الموقع الرسمي** لـ yyzTools:
 
-- [`releases/`](releases/) — versioned installers and `.7z` packages, plus the `update.json` manifest
-- [`docs/`](docs/) — static site for <https://yyztools.com> (GitHub Pages)
-- [`src/updater/`](src/updater/) — auto-updater source
+- [`releases/`](releases/) —— حزم تثبيت مُصدَّرة وملفات مضغوطة مقسّمة (`.7z`)، إضافة إلى بيان تحديث التلقائي `update.json`
+- [`docs/`](docs/) —— الموقع الثابت لـ <https://yyztools.com> (مستضاف عبر GitHub Pages)
+- [`src/updater/`](src/updater/) —— الشيفرة المصدرية للمحدّث التلقائي
 
-> The main application source is not in this repo. For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
+للإبلاغ عن مشكلات الوظائف يُرجى استخدام [Issues](https://github.com/jearry/yyzTools/issues).
 
-## License & Acknowledgments
+## الترخيص والإشادات
 
-yyzTools is a free software. The source code is not open source.
+yyzTools برنامج احتكاري يمكن استخدامه مجانًا. حاليًا الجزء الوحيد المفتوح المصدر هو وحدة التحديث التلقائي، وتخضع هذه المكوّنات مفتوحة المصدر **لرخصة MIT**. أما ما إذا كان سيُفتح مصدر الأجزاء الأخرى أو البرنامج بالكامل فسيُقرَّر حسب الظروف.
 
-The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
+يستخدم هذا البرنامج عدة مكتبات وأدوات مفتوحة المصدر. راجع [LICENSE](LICENSE) للاطلاع على القائمة الكاملة للمكوّنات الخارجية وتراخيصها.
 
-We sincerely thank all the developers who have contributed to these open-source projects!
+نتقدم بجزيل الشكر لجميع المطوّرين المساهمين في هذه المشاريع مفتوحة المصدر!

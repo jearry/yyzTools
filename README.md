@@ -8,13 +8,13 @@
   <strong>Yes Your Zen Tools</strong>
 </p>
 
-<p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a></p>
+<p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/badge/version-1.0.4.1400-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
-  <img alt="license" src="https://img.shields.io/badge/license-Proprietary-red">
+  <img alt="license" src="https://img.shields.io/badge/license-Free-red">
 </p>
 
 ---
@@ -32,28 +32,28 @@ Search, translate, recognise, preview, batch-process, capture, decorate — the 
 
 ## Features
 
-| | |
-|---|---|
-| **CmdPlate** | App search · File search · Process manager · Window manager · Bookmark search · Clipboard history · Command line · Instant calculator |
-| **Speed & efficiency** | Dock · Clipboard history · App usage · Screen capture · Screen recorder · Reminders · Calendar · Input hints · Mouse finder |
-| **Text & language** | Super translate · OCR · Regex tester · Encode / decode · Hash calculator · Encryption · Data conversion · Data generator |
-| **Files & media** | File preview · Batch rename · Batch image tool · Batch video tool · Batch PDF tool · Downloader |
-| **Compute & extend** | Calculator pad · QR codes · Command modules · Built-in browser · Custom extensions |
-| **Personalisation** | Live wallpaper · Desktop effects · Game mode · Navigation page · Earth Defender |
+|                        |                                                                                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **CmdPlate**           | App search · File search · Process manager · Window manager · Bookmark search · Clipboard history · Command line · Instant calculator |
+| **Speed & efficiency** | Dock · Clipboard history · App usage · Screen capture · Screen recorder · Reminders · Calendar · Input hints · Mouse finder           |
+| **Text & language**    | Super translate · OCR · Regex tester · Encode / decode · Hash calculator · Encryption · Data conversion · Data generator              |
+| **Files & media**      | File preview · Batch rename · Batch image tool · Batch video tool · Batch PDF tool · Downloader                                       |
+| **Compute & extend**   | Calculator pad · QR codes · Command modules · Built-in browser · Custom extensions                                                    |
+| **Personalisation**    | Live wallpaper · Desktop effects · Game mode · Navigation page · Earth Defender                                                       |
 
 ## Architecture
 
 Hybrid: a **C++ (Win32 + WebView2) host** carrying a **front end (Alpine.js + vanilla JS + Vite)**, with feature areas isolated into separate processes.
 
-| Process | Role |
-|---------|------|
-| `yyzTools.exe` | Main process — hosts the command palette, translate, OCR and most features |
-| `yyzWallpaper.exe` | Live wallpaper — composites web/video under the desktop icon layer via the Windows Composition API |
-| `yyzBrowser.exe` | Frameless built-in browser for command modules opening URLs |
-| `yyzCmd.exe` | Pure Win32 command runner (shutdown / restart / volume / display / recycle bin, etc.) |
-| `yyzInputHint.exe` | Live keyboard / mouse key overlay (RawInput) |
-| `yyzMouseFinder.exe` | Quickly locate the mouse cursor |
-| `yyzUpdater.exe` | Incremental auto-updater (see `src/updater/`) |
+| Process              | Role                                                                                               |
+| -------------------- | -------------------------------------------------------------------------------------------------- |
+| `yyzTools.exe`       | Main process — hosts the command palette, translate, OCR and most features                         |
+| `yyzWallpaper.exe`   | Live wallpaper — composites web/video under the desktop icon layer via the Windows Composition API |
+| `yyzBrowser.exe`     | Frameless built-in browser for command modules opening URLs                                        |
+| `yyzCmd.exe`         | Pure Win32 command runner (shutdown / restart / volume / display / recycle bin, etc.)              |
+| `yyzInputHint.exe`   | Live keyboard / mouse key overlay (RawInput)                                                       |
+| `yyzMouseFinder.exe` | Quickly locate the mouse cursor                                                                    |
+| `yyzUpdater.exe`     | Incremental auto-updater (see `src/updater/`)                                                      |
 
 The front end calls each C++ Manager through the `window.Zen` bridge, all returning an `{ error, ... }` contract.
 
@@ -86,7 +86,7 @@ For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issue
 
 ## License & Acknowledgments
 
-yyzTools is proprietary software that is available for free use. Currently, only the auto-update component is open source and licensed under the **MIT License**. Whether to open source additional components in the future will be decided based on circumstances.
+yyzTools is proprietary software, free to use. Only the auto-updater is currently open source, under the **MIT License**. Whether other parts or the whole application will be open-sourced will be decided in due course.
 
 The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
 

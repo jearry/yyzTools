@@ -8,7 +8,7 @@
   <strong>Yes Your Zen Tools</strong>
 </p>
 
-<p align="center"><a href="README.en.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <strong>Español</strong> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a></p>
+<p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <strong>Español</strong> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/badge/version-1.0.4.1400-blue">
@@ -41,53 +41,53 @@ Buscar, traducir, reconocer, previsualizar, procesar por lotes, capturar pantall
 | **Cálculo y extensiones** | Hoja de cálculo libre · Códigos QR · Módulos de comandos · Navegador integrado · Extensiones propias |
 | **Personalización** | Fondo de pantalla dinámico · Efectos de escritorio · Modo juego · Página de navegación · Defensa de la Tierra |
 
-## Architecture
+## Arquitectura
 
-Hybrid: a **C++ (Win32 + WebView2) host** carrying a **front end (Alpine.js + vanilla JS + Vite)**, with feature areas isolated into separate processes.
+Híbrida: un **host C++ (Win32 + WebView2)** que alberga un **front end (Alpine.js + JS nativo + Vite)**, con áreas funcionales aisladas en procesos separados.
 
-| Process | Role |
-|---------|------|
-| `yyzTools.exe` | Main process — hosts the command palette, translate, OCR and most features |
-| `yyzWallpaper.exe` | Live wallpaper — composites web/video under the desktop icon layer via the Windows Composition API |
-| `yyzBrowser.exe` | Frameless built-in browser for command modules opening URLs |
-| `yyzCmd.exe` | Pure Win32 command runner (shutdown / restart / volume / display / recycle bin, etc.) |
-| `yyzInputHint.exe` | Live keyboard / mouse key overlay (RawInput) |
-| `yyzMouseFinder.exe` | Quickly locate the mouse cursor |
-| `yyzUpdater.exe` | Incremental auto-updater (see `src/updater/`) |
+| Proceso | Función |
+|---------|---------|
+| `yyzTools.exe` | Proceso principal — aloja la paleta de comandos, la traducción, el OCR y la mayoría de las funciones |
+| `yyzWallpaper.exe` | Fondo dinámico — compone web/vídeo bajo la capa de iconos del escritorio mediante la API de Windows Composition |
+| `yyzBrowser.exe` | Navegador integrado sin marco para que los módulos de comandos abran URL |
+| `yyzCmd.exe` | Ejecutor de comandos en Win32 puro (apagado / reinicio / volumen / pantalla / papelera, etc.) |
+| `yyzInputHint.exe` | Indicación en tiempo real de teclas de teclado / ratón (RawInput) |
+| `yyzMouseFinder.exe` | Localización rápida del cursor del ratón |
+| `yyzUpdater.exe` | Actualizador automático incremental (ver `src/updater/`) |
 
-The front end calls each C++ Manager through the `window.Zen` bridge, all returning an `{ error, ... }` contract.
+El front end llama a cada Manager de C++ a través del puente `window.Zen`; todos responden con el contrato `{ error, ... }`.
 
-## Download
+## Descarga
 
-- **Installer** (recommended): `yyzTools-setup-1.0.4.1400.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
-- Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
-- Or grab it from the [official download page](https://yyztools.com/download.html).
+- **Instalador** (recomendado): `yyzTools-setup-1.0.4.1400.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- ¿Lento desde China? Anteponga al URL del instalador un espejo: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
+- También puede obtenerlo en la [página oficial de descargas](https://yyztools.com/es/download.html).
 
-The setup wizard supports 12 languages.
+El asistente de instalación admite 12 idiomas: chino simplificado y tradicional, inglés, japonés, coreano, francés, alemán, español, ruso, árabe, portugués e italiano.
 
-## System requirements
+## Requisitos del sistema
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (preinstalled on recent systems; the installer pulls it in if missing)
+- WebView2 Runtime (preinstalado en sistemas recientes; el instalador lo incorpora si falta)
 
-## UI languages
+## Idiomas de la interfaz
 
-Both the UI and command-module text support 12 languages: 简体中文, 繁體中文, English, 日本語, 한국어, Français, Deutsch, Español, Русский, العربية, Português, Italiano. First launch auto-detects the system language; switch anytime in Settings.
+Tanto la interfaz como los textos de los módulos de comandos admiten los 12 idiomas mencionados. El primer inicio detecta automáticamente el idioma del sistema; puede cambiarlo en cualquier momento en la configuración.
 
-## About this repo
+## Acerca de este repositorio
 
-This repo (`jearry/yyzTools`) hosts releases and the official website:
+Este repositorio (`jearry/yyzTools`) es el **repositorio de publicación y alojamiento del sitio oficial** de yyzTools:
 
-- [`releases/`](releases/) — versioned installers and `.7z` packages, plus the `update.json` manifest
-- [`docs/`](docs/) — static site for <https://yyztools.com> (GitHub Pages)
-- [`src/updater/`](src/updater/) — auto-updater source
+- [`releases/`](releases/) —— instaladores versionados y archivos comprimidos divididos (`.7z`), además del manifiesto de actualización automática `update.json`
+- [`docs/`](docs/) —— sitio estático de <https://yyztools.com> (alojado en GitHub Pages)
+- [`src/updater/`](src/updater/) —— código fuente del actualizador automático
 
-> The main application source is not in this repo. For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
+Para informar de problemas de funcionalidad, utilice [Issues](https://github.com/jearry/yyzTools/issues).
 
-## License & Acknowledgments
+## Licencia y agradecimientos
 
-yyzTools is a free software. The source code is not open source.
+yyzTools es software propietario de uso gratuito. Por ahora solo se ha publicado como código abierto el módulo de actualización automática, bajo la **licencia MIT**. La apertura del código de otras partes o de la aplicación completa se decidirá según las circunstancias.
 
-The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
+Este software utiliza varias bibliotecas y herramientas de código abierto. Consulte [LICENSE](LICENSE) para ver la lista completa de componentes de terceros y sus respectivas licencias.
 
-We sincerely thank all the developers who have contributed to these open-source projects!
+¡Agradecemos sinceramente a todos los desarrolladores que han contribuido a estos proyectos de código abierto!
