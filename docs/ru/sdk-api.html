@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Справочник Native API yyzTools</title>
+<meta name="description" content="Полный справочник Native API yyzTools: окна, приложения, процессы, файлы, медиа, OCR, шифрование, буфер обмена, закладки, команды и обновления.">
+
+<meta property="og:title" content="Справочник Native API yyzTools">
+<meta property="og:description" content="Полный справочник Native API yyzTools: окна, приложения, процессы, файлы, медиа, OCR, шифрование, буфер обмена, закладки, команды и обновления.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ru/sdk-api.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ru">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Справочник Native API yyzTools">
+<meta name="twitter:description" content="Полный справочник Native API yyzTools: окна, приложения, процессы, файлы, медиа, OCR, шифрование, буфер обмена, закладки, команды и обновления.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ru/sdk-api.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk-api.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk-api.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk-api.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk-api.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk-api.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk-api.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk-api.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk-api.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk-api.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk-api.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ru/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ru/" >Главная</a>
+            <a href="/ru/features.html" >Функции</a>
+            <a href="/ru/download.html" >Загрузка</a>
+            <a href="/ru/changelog.html" >Обновления</a>
+            
+            <a href="/ru/sdk.html" class=&#34;on&#34;>Разработчикам</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Обратная связь</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="Язык">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">Русский</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk-api.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk-api.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk-api.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk-api.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk-api.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk-api.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk-api.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk-api.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk-api.html" hreflang="ru"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>Русский</a>
+                    
+                    <a href="/ar/sdk-api.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk-api.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk-api.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/ru/download.html">Скачать</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Разработчикам","item":"https://yyztools.com/ru/sdk.html"},{"@type":"ListItem","position":3,"name":"Справочник API","item":"https://yyztools.com/ru/sdk-api.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Справочник API","description":"Полный справочник Native API yyzTools: окна, приложения, процессы, файлы, медиа, OCR, шифрование, буфер обмена, закладки, команды и обновления.","inLanguage":"ru","url":"https://yyztools.com/ru/sdk-api.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Expert"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> Содержание</summary>
+            <nav aria-label="Содержание">
+                <ol>
+                    
+                    <li>
+                        <a href="#история-версий">История версий</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#1-общие-соглашения">1. Общие соглашения</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#способ-вызова">Способ вызова</a></li>
+                            
+                            <li><a href="#способ-определения-ошибок">Способ определения ошибок</a></li>
+                            
+                            <li><a href="#синхронная-асинхронная-привязка">Синхронная / асинхронная привязка</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-общие-интерфейсы">2. Общие интерфейсы</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-получение-версии-клиента">1. Получение версии клиента</a></li>
+                            
+                            <li><a href="#2-получение-конфигурации">2. Получение конфигурации</a></li>
+                            
+                            <li><a href="#3-изменение-конфигурации">3. Изменение конфигурации</a></li>
+                            
+                            <li><a href="#4-добавление-конфигурации">4. Добавление конфигурации</a></li>
+                            
+                            <li><a href="#5-получение-списка">5. Получение списка</a></li>
+                            
+                            <li><a href="#6-запись-журнала-фронтенда">6. Запись журнала фронтенда</a></li>
+                            
+                            <li><a href="#7-запись-кэша-обратного-отсчёта">7. Запись кэша обратного отсчёта</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-управление-окнами">3. Управление окнами</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-поиск-окон">1. Поиск окон</a></li>
+                            
+                            <li><a href="#2-управление-окном">2. Управление окном</a></li>
+                            
+                            <li><a href="#3-получение-состояния-окна">3. Получение состояния окна</a></li>
+                            
+                            <li><a href="#4-открытие-командной-панели-с-выполнением-поиска">4. Открытие командной панели с выполнением поиска</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-управление-приложениями">4. Управление приложениями</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-поиск-приложений">1. Поиск приложений</a></li>
+                            
+                            <li><a href="#2-пакетное-получение-информации-о-приложениях-по-id-асинхронно">2. Пакетное получение информации о приложениях по id (асинхронно)</a></li>
+                            
+                            <li><a href="#3-запуск-приложения">3. Запуск приложения</a></li>
+                            
+                            <li><a href="#4-получение-статистики-использования">4. Получение статистики использования</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-управление-процессами">5. Управление процессами</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-поиск-процессов">1. Поиск процессов</a></li>
+                            
+                            <li><a href="#2-управление-процессом">2. Управление процессом</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-операции-с-файлами">6. Операции с файлами</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-поиск-файлов-асинхронно">1. Поиск файлов (асинхронно)</a></li>
+                            
+                            <li><a href="#2-открытие-файла">2. Открытие файла</a></li>
+                            
+                            <li><a href="#3-открытие-расположения-файла">3. Открытие расположения файла</a></li>
+                            
+                            <li><a href="#4-открытие-предпросмотра-файла">4. Открытие предпросмотра файла</a></li>
+                            
+                            <li><a href="#5-копированиевырезание-файлов-в-буфер-обмена">5. Копирование/вырезание файлов в буфер обмена</a></li>
+                            
+                            <li><a href="#6-выбор-файла">6. Выбор файла</a></li>
+                            
+                            <li><a href="#7-выбор-каталога">7. Выбор каталога</a></li>
+                            
+                            <li><a href="#8-получение-указанного-каталога">8. Получение указанного каталога</a></li>
+                            
+                            <li><a href="#9-сохранение-файла">9. Сохранение файла</a></li>
+                            
+                            <li><a href="#10-получение-иконки-файла">10. Получение иконки файла</a></li>
+                            
+                            <li><a href="#11-чтение-файла">11. Чтение файла</a></li>
+                            
+                            <li><a href="#12-чтение-большого-файла-по-частям">12. Чтение большого файла по частям</a></li>
+                            
+                            <li><a href="#13-запись-файла">13. Запись файла</a></li>
+                            
+                            <li><a href="#14-дозапись-в-файл">14. Дозапись в файл</a></li>
+                            
+                            <li><a href="#15-переименованиеперемещение">15. Переименование/перемещение</a></li>
+                            
+                            <li><a href="#16-копирование-файла">16. Копирование файла</a></li>
+                            
+                            <li><a href="#17-удаление-файла-или-каталога">17. Удаление файла или каталога</a></li>
+                            
+                            <li><a href="#18-создание-каталога">18. Создание каталога</a></li>
+                            
+                            <li><a href="#19-чтение-каталога">19. Чтение каталога</a></li>
+                            
+                            <li><a href="#20-проверка-существования-пути">20. Проверка существования пути</a></li>
+                            
+                            <li><a href="#21-получение-информации-о-файле">21. Получение информации о файле</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-обработка-медиа">7. Обработка медиа</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-выполнение-команды-magick-асинхронно">1. Выполнение команды magick (асинхронно)</a></li>
+                            
+                            <li><a href="#2-выполнение-команды-ffmpeg-асинхронно">2. Выполнение команды ffmpeg (асинхронно)</a></li>
+                            
+                            <li><a href="#3-выполнение-команды-ffprobe-получение-метаданных-синхронно">3. Выполнение команды ffprobe (получение метаданных, синхронно)</a></li>
+                            
+                            <li><a href="#4-выполнение-команды-pdfcpu-асинхронно">4. Выполнение команды pdfcpu (асинхронно)</a></li>
+                            
+                            <li><a href="#5-выполнение-команды-ghostscript-асинхронно">5. Выполнение команды Ghostscript (асинхронно)</a></li>
+                            
+                            <li><a href="#6-отмена-текущего-медиа-подпроцесса">6. Отмена текущего медиа-подпроцесса</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-скриншоты-и-ocr">8. Скриншоты и OCR</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-скриншот-закрепление-на-рабочем-столе">1. Скриншот / закрепление на рабочем столе</a></li>
+                            
+                            <li><a href="#2-инициализация-ocr">2. Инициализация OCR</a></li>
+                            
+                            <li><a href="#3-распознавание-ocr-асинхронно">3. Распознавание OCR (асинхронно)</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#9-шифрование-и-расшифровка">9. Шифрование и расшифровка</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-шифрование-данных">1. Шифрование данных</a></li>
+                            
+                            <li><a href="#2-расшифровка-данных">2. Расшифровка данных</a></li>
+                            
+                            <li><a href="#3-генерация-ключа">3. Генерация ключа</a></li>
+                            
+                            <li><a href="#4-генерация-iv">4. Генерация IV</a></li>
+                            
+                            <li><a href="#5-вычисление-хеша">5. Вычисление хеша</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#10-история-буфера-обмена">10. История буфера обмена</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-поиск-в-буфере-обмена">1. Поиск в буфере обмена</a></li>
+                            
+                            <li><a href="#2-удаление-одной-записи">2. Удаление одной записи</a></li>
+                            
+                            <li><a href="#3-очистка-записей">3. Очистка записей</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#11-закладки">11. Закладки</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-поиск-закладок">1. Поиск закладок</a></li>
+                            
+                            <li><a href="#2-открытие-закладки">2. Открытие закладки</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#12-выполнение-команд">12. Выполнение команд</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-запуск-командной-строки">1. Запуск командной строки</a></li>
+                            
+                            <li><a href="#2-запуск-произвольной-программы">2. Запуск произвольной программы</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#13-обновление">13. Обновление</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-проверка-обновлений">1. Проверка обновлений</a></li>
+                            
+                            <li><a href="#2-получение-состояния-обновления">2. Получение состояния обновления</a></li>
+                            
+                            <li><a href="#3-применение-загруженного-обновления">3. Применение загруженного обновления</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>Справочник API</h1>
+            <p class="doc-meta">Авторитетное описание всех Native API</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="Связанные ресурсы">
+    <a class="sdk-link" href="/ru/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Быстрый старт</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Скачать пример проекта</span>
+    </a>
+</nav>
+
+
+            <h2 id="история-версий" tabindex="-1">История версий <a class="doc-anchor" href="#история-версий" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Версия</th>
+<th>Автор правки</th>
+<th>Дата правки</th>
+<th>Описание правки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>yyzTools</td>
+<td>2026-09-01</td>
+<td>Начальная версия</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-общие-соглашения" tabindex="-1">1. Общие соглашения <a class="doc-anchor" href="#1-общие-соглашения" aria-hidden="true">#</a></h2>
+<p>Этот документ определяет все интерфейсы, связанные со взаимодействием с Native, и охватывает только интерфейсы, зарегистрированные <strong>главным процессом yyzTools.exe</strong> (<code>SetupBindings()</code> в <code>src/yyztools/NativeApi.cpp</code>).</p>
+<h3 id="способ-вызова" tabindex="-1">Способ вызова <a class="doc-anchor" href="#способ-вызова" aria-hidden="true">#</a></h3>
+<ul>
+<li>
+<p>Фронтенд вызывает функции интерфейсов через объект <code>window.Zen</code>; рекомендуется единообразно использовать класс-обёртку <code>ZenAPI</code>: <code>web/lib/zen_api.js</code>. Не обращайтесь к <code>window.Zen</code> напрямую из бизнес-кода — это удобно использовать как слой совместимости интерфейсов при их изменении при обновлениях.</p>
+</li>
+<li>
+<p>Входные данные: передаются позиционными аргументами; конкретное количество и типы параметров см. в описании соответствующего интерфейса.</p>
+</li>
+<li>
+<p>Выходные данные: передаются через возвращаемое значение, значением является json-объект, содержащий следующее:</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    ...
+}
+</code></pre>
+<ul>
+<li>
+<p>error: 0 — успех, не 0 — ошибка</p>
+</li>
+<li>
+<p>errorMsg (необязательно): сообщение об ошибке</p>
+</li>
+<li>
+<p>прочее (необязательно): см. конкретный интерфейс</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="способ-определения-ошибок" tabindex="-1">Способ определения ошибок <a class="doc-anchor" href="#способ-определения-ошибок" aria-hidden="true">#</a></h3>
+<p><code>error</code> всегда <strong>число</strong>: 0 — успех, не 0 — ошибка (при исключении вызова — -1).</p>
+<h3 id="синхронная-асинхронная-привязка" tabindex="-1">Синхронная / асинхронная привязка <a class="doc-anchor" href="#синхронная-асинхронная-привязка" aria-hidden="true">#</a></h3>
+<p>Подавляющее большинство интерфейсов имеют синхронную привязку (<code>BindSync</code>) — вызов возвращает результат сразу. Следующие 7 интерфейсов имеют асинхронную привязку (<code>BindAsync</code>), выполняются в фоновом потоке, возвращают результат через Promise и не блокируют поток UI:</p>
+<p><code>getAppInfo</code>, <code>searchFile</code>, <code>imageRun</code>, <code>ffmpegRun</code>, <code>pdfRun</code>, <code>gsRun</code>, <code>ocrRecognition</code></p>
+<p>Ограничения на поведение асинхронных интерфейсов в каждый момент времени см. в конкретных статьях (например, медиапятёрка выполняется последовательно, отмена общая через <code>cancelRun</code>).</p>
+<h2 id="2-общие-интерфейсы" tabindex="-1">2. Общие интерфейсы <a class="doc-anchor" href="#2-общие-интерфейсы" aria-hidden="true">#</a></h2>
+<h3 id="1-получение-версии-клиента" tabindex="-1">1. Получение версии клиента <a class="doc-anchor" href="#1-получение-версии-клиента" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getVersion() : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные: нет</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apiVersion&quot;: &quot;1.0.1&quot;,
+    &quot;appVersion&quot;: &quot;1.0.1&quot;,
+    &quot;usageTime&quot;: 90,
+    &quot;usageTimes&quot;: 3602,
+    &quot;firstUseTime&quot;: &quot;20250910&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>apiVersion: информация о версии API клиента. При каждом обновлении интерфейсов номер версии увеличивается на 1; цифры от 0 до 9, после 9 снова с 0, например 1.0.0, 1.0.1, 1.0.2... 1.0.9, 1.1.0 и т. д.</p>
+</li>
+<li>
+<p>appVersion: информация о версии клиента</p>
+</li>
+<li>
+<p>usageTime: время использования (единица: с)</p>
+</li>
+<li>
+<p>usageTimes: количество активаций</p>
+</li>
+<li>
+<p>firstUseTime: время первого использования, формат: yyyymmdd</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-получение-конфигурации" tabindex="-1">2. Получение конфигурации <a class="doc-anchor" href="#2-получение-конфигурации" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getConfig(key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>key (необязательно): взять только этот ключ, поддерживается точечный путь <code>a.b</code>. Без аргумента возвращается вся конфигурация.</p>
+<ul>
+<li>
+<p>Совпадение: возвращает <code>{&quot;error&quot;:0, &quot;&lt;key&gt;&quot;: &lt;значение&gt;}</code>, например <code>getConfig(&quot;language&quot;)</code> → <code>{&quot;error&quot;:0,&quot;language&quot;:&quot;zh_cn&quot;}</code>; <code>getConfig(&quot;dock.categories&quot;)</code> → <code>{&quot;error&quot;:0,&quot;dock&quot;:{&quot;categories&quot;:[...]}}</code></p>
+</li>
+<li>
+<p>Нет совпадения: возвращает <code>{&quot;error&quot;:0}</code> (без ошибки, вызывающая сторона сама обрабатывает запасной вариант)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные (пример; поля зависят от фактической конфигурации)</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;logLevel&quot;: &quot;1&quot;,
+    &quot;wallpaperEnabled&quot;: &quot;1&quot;,
+    &quot;overlayEnabled&quot;: &quot;0&quot;,
+    &quot;gameMode&quot;: &quot;0&quot;,
+    &quot;clipboardHistoryMaxCount&quot;: &quot;500&quot;,
+    &quot;autoStart&quot;: &quot;1&quot;,
+    &quot;shortcutKeys&quot;: {
+        &quot;main&quot;: {
+            &quot;doubleCtrlEnabled&quot;: &quot;1&quot;,
+            &quot;doubleAltEnabled&quot;: &quot;1&quot;,
+            &quot;modifier&quot;: 1,
+            &quot;virtualCode&quot;: 32
+        },
+        &quot;apps&quot;: [
+            {
+                &quot;appId&quot;: &quot;translate&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 49
+            },
+            {
+                &quot;appId&quot;: &quot;ocr&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 50
+            }
+        ]
+    },
+    &quot;quickOpen&quot;: [
+        {
+            &quot;name&quot;: &quot;谷歌搜索&quot;,
+            &quot;type&quot;: &quot;normal&quot;,
+            &quot;index&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;https://www.google.com/search?q={query}&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ],
+    &quot;customApps&quot;: [
+        {
+            &quot;filePath&quot;: &quot;d:\test\test1.exe&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>logLevel: уровень журналирования (0: Trace / 1: Debug / 2: Info / 3: Warning / 4: Error / 5: Fatal)</p>
+</li>
+<li>
+<p>wallpaperEnabled: включить динамические обои</p>
+</li>
+<li>
+<p>overlayEnabled: включить эффекты рабочего стола</p>
+</li>
+<li>
+<p>gameMode: игровой режим</p>
+</li>
+<li>
+<p>clipboardHistoryMaxCount: максимальное количество записей в истории буфера обмена</p>
+</li>
+<li>
+<p>autoStart: автозапуск при включении</p>
+</li>
+<li>
+<p>shortcutKeys: глобальные горячие клавиши</p>
+<ul>
+<li>
+<p>main: главный интерфейс</p>
+<ul>
+<li>
+<p>doubleCtrlEnabled: вызов двойным нажатием Ctrl</p>
+</li>
+<li>
+<p>doubleAltEnabled: вызов двойным нажатием Alt</p>
+</li>
+<li>
+<p>modifier: клавиша-модификатор</p>
+</li>
+<li>
+<p>virtualCode: основная клавиша</p>
+</li>
+</ul>
+</li>
+<li>
+<p>apps: приложения</p>
+<ul>
+<li>
+<p>appId: id приложения</p>
+</li>
+<li>
+<p>modifier: клавиша-модификатор</p>
+</li>
+<li>
+<p>virtualCode: основная клавиша</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>quickOpen: быстрый запуск</p>
+<ul>
+<li>
+<p>name: название</p>
+</li>
+<li>
+<p>type: тип (normal: обычный поиск / spec: вертикальный поиск)</p>
+</li>
+<li>
+<p>index: порядковый номер</p>
+</li>
+<li>
+<p>url: шаблон url</p>
+</li>
+<li>
+<p>enabled: включено ли</p>
+</li>
+</ul>
+</li>
+<li>
+<p>customApps: пользовательские приложения</p>
+<ul>
+<li>
+<p>filePath: путь к exe соответствующего приложения</p>
+</li>
+<li>
+<p>enabled: включено ли</p>
+</li>
+</ul>
+</li>
+<li>
+<p>dock: док-панель (категории + содержимое)</p>
+<ul>
+<li>
+<p><strong>Общее соглашение: отсутствие</strong> <strong><code>name</code>/<code>icon</code></strong> <strong>означает «использовать встроенное значение по умолчанию»</strong> (выводится во время выполнения из i18n или из <strong><code>.zenmod</code></strong>, соответствующего <strong><code>appId</code></strong>, меняется вместе с языком интерфейса); наличие поля означает, что пользователь настроил его — отображается как есть и больше не переводится.</p>
+</li>
+<li>
+<p>categories: категории</p>
+<ul>
+<li>
+<p>id: встроенные категории — семантические id (<code>folder</code>/<code>tools</code>/<code>ai</code>/<code>game</code>/<code>system</code>), созданные пользователем — <code>category_&lt;метка времени&gt;</code></p>
+</li>
+<li>
+<p>name: необязательно, появляется только после переименования пользователем</p>
+</li>
+<li>
+<p>icon: FontAwesome class</p>
+</li>
+<li>
+<p>color: цвет темы</p>
+</li>
+<li>
+<p>order: порядковый номер сортировки</p>
+</li>
+</ul>
+</li>
+<li>
+<p>contents: элементы содержимого</p>
+<ul>
+<li>
+<p>id: встроенные элементы каталогов — семантические id (<code>desktop</code>/<code>documents</code>/<code>downloads</code>/<code>music</code>/<code>videos</code>), остальные — <code>content_&lt;метка времени&gt;</code></p>
+</li>
+<li>
+<p>categoryId: id категории, к которой относится элемент</p>
+</li>
+<li>
+<p>type: <code>app</code> | <code>folder</code> | <code>url</code></p>
+</li>
+<li>
+<p>appId: обязателен при <code>type=app</code>, соответствует id из <code>.zenmod</code>; имя и иконка полностью выводятся из него, <strong>не сохранять на диск</strong></p>
+</li>
+<li>
+<p>folderPath: обязателен при <code>type=folder</code>, поддерживает переменные окружения вроде <code>%USERPROFILE%</code></p>
+</li>
+<li>
+<p>url: обязателен при <code>type=url</code>, нормализованный полный адрес (без префикса протокола автоматически добавляется <code>https://</code>); открывается браузером по умолчанию системы. Имя вводит пользователь, иконка захватывается во время выполнения с favicon сайта (при неудаче запасной вариант <code>fas fa-globe</code>), <strong>не сохранять на диск</strong></p>
+</li>
+<li>
+<p>name / icon: необязательно, семантика та же (обязательны для выбранных пользователем каталогов <code>type=folder</code>)</p>
+</li>
+<li>
+<p>color: тонировка иконки</p>
+</li>
+<li>
+<p>order: порядковый номер сортировки внутри своей категории</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-изменение-конфигурации" tabindex="-1">3. Изменение конфигурации <a class="doc-anchor" href="#3-изменение-конфигурации" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setConfig(config: json_obj, replace?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>config: как в getConfig</p>
+<ul>
+<li>
+<p>Передавайте только то, что меняете, весь состав передавать не нужно</p>
+</li>
+<li>
+<p>Содержимое под одним ключом нужно передавать полностью</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;logLevel&quot;: &quot;1&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>replace (необязательно, по умолчанию false): false — инкрементальное слияние с существующей конфигурацией, true — полная замена (для импорта резервной копии, позволяет очистить удалённые элементы списков). Передаётся строка <code>&quot;true&quot;</code> или <code>&quot;false&quot;</code>, отсутствие эквивалентно <code>&quot;false&quot;</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Примечание: <strong>не «читайте всю конфигурацию через getConfig и не записывайте её целиком через setConfig»</strong> — возвращаемое значение <code>getConfig</code> содержит поле <code>error</code>, и полная запись сохранит его в файл конфигурации. Всегда пишите узкогранулярно, например <code>setConfig({ dock: { categories } })</code>.</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-добавление-конфигурации" tabindex="-1">4. Добавление конфигурации <a class="doc-anchor" href="#4-добавление-конфигурации" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.addConfig(key: string, value: json_obj) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>key: тип значения должен быть StringList или StringMapList</p>
+</li>
+<li>
+<p>value</p>
+<ul>
+<li>
+<p>Если тип значения key — StringList, передавайте string</p>
+</li>
+<li>
+<p>Если тип значения key — StringMapList, передавайте json_obj</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-получение-списка" tabindex="-1">5. Получение списка <a class="doc-anchor" href="#5-получение-списка" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getList(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>type: тип списка</p>
+<ul>
+<li>font: список системных шрифтов (читается реестр <code>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts</code>, для выбора шрифта в водяных знаках и т. п.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;list&quot;: [
+        {
+            &quot;name&quot;: &quot;Arial&quot;,
+            &quot;file&quot;: &quot;arial.ttf&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>list: список шрифтов</p>
+<ul>
+<li>
+<p>name: имя шрифта (суффикс &quot; (TrueType)&quot; / &quot; (OpenType)&quot; уже удалён)</p>
+</li>
+<li>
+<p>file: имя файла шрифта</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-запись-журнала-фронтенда" tabindex="-1">6. Запись журнала фронтенда <a class="doc-anchor" href="#6-запись-журнала-фронтенда" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.log(msg: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>msg: содержимое журнала, пишется в журнал главного процесса (InfoMsg)</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="7-запись-кэша-обратного-отсчёта" tabindex="-1">7. Запись кэша обратного отсчёта <a class="doc-anchor" href="#7-запись-кэша-обратного-отсчёта" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
+</code></pre>
+<p>Кэшированные данные напоминаний с обратным отсчётом, записываются в память, общую для главного процесса и процесса обоев, и немедленно уведомляют процесс обоев о перечитывании (иначе обои подхватят их только при собственном 30-секундном опросе). Предназначено для связки reminder / wallpaper, обычному бизнесу полагаться на него не следует.</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>data: JSON-строка обратного отсчёта (payload, определённый модулем reminder)</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="3-управление-окнами" tabindex="-1">3. Управление окнами <a class="doc-anchor" href="#3-управление-окнами" aria-hidden="true">#</a></h2>
+<h3 id="1-поиск-окон" tabindex="-1">1. Поиск окон <a class="doc-anchor" href="#1-поиск-окон" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchWindow(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>keyword: ключевое слово поиска</p>
+</li>
+<li>
+<p>maxResults: максимальное число записей</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;windows&quot;: [
+        {
+            &quot;hwnd&quot;: 18811010,
+            &quot;processId&quot;: 20708,
+            &quot;visible&quot;: 1,
+            &quot;topmost&quot;: 0,
+            &quot;name&quot;: &quot;Native API接口.md - MarkText&quot;,
+            &quot;className&quot;: &quot;Chrome_WidgetWin_1&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files\\MarkText\\MarkText.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\Program Files\\MarkText\\MarkText.exe\&quot; \&quot;D:\\doc\\a.md\&quot;&quot;,
+            &quot;desc&quot;: &quot;MarkText&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 180
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>windows: список окон</p>
+<ul>
+<li>
+<p>hwnd: дескриптор окна</p>
+</li>
+<li>
+<p>processId: id процесса, которому принадлежит окно</p>
+</li>
+<li>
+<p>visible: видно ли</p>
+</li>
+<li>
+<p>topmost: закреплено ли поверх всех окон</p>
+</li>
+<li>
+<p>name: имя окна</p>
+</li>
+<li>
+<p>className: имя класса окна</p>
+</li>
+<li>
+<p>path: полный путь к исполняемому файлу процесса</p>
+</li>
+<li>
+<p>cmdArgs: командная строка запуска процесса</p>
+</li>
+<li>
+<p>desc: описание</p>
+</li>
+<li>
+<p>icon: иконка окна, формат base64</p>
+</li>
+<li>
+<p>score: оценка поиска</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-управление-окном" tabindex="-1">2. Управление окном <a class="doc-anchor" href="#2-управление-окном" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowControl(window: string, action: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>window: Name или string-форма HWND</p>
+<ul>
+<li>
+<p>cmdPlate: лаунчер</p>
+</li>
+<li>
+<p>translate: супер-перевод</p>
+</li>
+<li>
+<p>download: сверхбыстрая загрузка</p>
+</li>
+<li>
+<p>calculator: супер-калькулятор</p>
+</li>
+<li>
+<p>filePreview: просмотрщик файлов</p>
+</li>
+<li>
+<p>ocr: OCR</p>
+</li>
+<li>
+<p>quickocr: быстрое окно OCR-перевода поверх экрана</p>
+</li>
+<li>
+<p>calendar: вечный календарь</p>
+</li>
+<li>
+<p>appUsage: статистика использования приложений</p>
+</li>
+<li>
+<p>tray: меню трея</p>
+</li>
+<li>
+<p>overlay: эффекты рабочего стола</p>
+</li>
+<li>
+<p>setting: настройки</p>
+</li>
+<li>
+<p>main: главное окно (эквивалентно cmdPlate)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>action</p>
+<ul>
+<li>
+<p>show: показать и активировать</p>
+</li>
+<li>
+<p>showNoActivate: показать без активации</p>
+</li>
+<li>
+<p>min: свернуть</p>
+</li>
+<li>
+<p>max: развернуть</p>
+</li>
+<li>
+<p>restore: восстановить</p>
+</li>
+<li>
+<p>hide: скрыть</p>
+</li>
+<li>
+<p>close: закрыть</p>
+</li>
+<li>
+<p>darg: перетащить</p>
+</li>
+<li>
+<p>topmost: закрепить поверх</p>
+</li>
+<li>
+<p>noTopmost: открепить</p>
+</li>
+<li>
+<p>quit: выйти из приложения</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-получение-состояния-окна" tabindex="-1">3. Получение состояния окна <a class="doc-anchor" href="#3-получение-состояния-окна" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>window: Name или string-форма HWND, см. «Управление окном»</p>
+</li>
+<li>
+<p>can_suspend (необязательно): разрешить ли приостановку WebView этого окна (переключатель экономии ресурсов, по умолчанию false)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Примечание: интерфейс имеет побочный эффект — после запроса состояния, если окно в состоянии show/max, рендеринг WebView возобновляется, иначе WebView приостанавливается для экономии ресурсов (приостановка разрешена только при can_suspend = true). При постоянном опросе собственного состояния страницей фронтенда передавайте true, при обычных запросах — false.</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;state&quot;: &quot;show&quot;,
+    &quot;topmost&quot;: &quot;0&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>state: состояние (show: нормальный показ / min: свёрнуто / max: развёрнуто / close: закрыто)</p>
+</li>
+<li>
+<p>topmost: закреплено ли поверх всех окон</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-открытие-командной-панели-с-выполнением-поиска" tabindex="-1">4. Открытие командной панели с выполнением поиска <a class="doc-anchor" href="#4-открытие-командной-панели-с-выполнением-поиска" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>command: команда поиска, пример: <code>f path:C:\Users\Documents</code> (поиск в файловом модуле по указанному каталогу)</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Примечания</p>
+<ul>
+<li>
+<p>Интерфейс открывает окно командной панели и автоматически выполняет команду поиска</p>
+</li>
+<li>
+<p>Обычно используется для быстрого открытия поиска файлов из док-панели и других модулей</p>
+</li>
+<li>
+<p>Формат команды поддерживает весь поисковый синтаксис cmdplate</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-управление-приложениями" tabindex="-1">4. Управление приложениями <a class="doc-anchor" href="#4-управление-приложениями" aria-hidden="true">#</a></h2>
+<h3 id="1-поиск-приложений" tabindex="-1">1. Поиск приложений <a class="doc-anchor" href="#1-поиск-приложений" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchApp(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>keyword: ключевое слово поиска</p>
+</li>
+<li>
+<p>maxResults: максимальное число записей</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;Microsoft.WindowsCamera&quot;,
+            &quot;name&quot;: &quot;相机&quot;,
+            &quot;path&quot;: &quot;C:\Program Files\WindowsApps\Microsoft.WindowsCamera&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 1,
+            &quot;score&quot;: 90
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>apps: список приложений</p>
+<ul>
+<li>
+<p>id: уникальный id приложения, нужен при запуске</p>
+</li>
+<li>
+<p>name: название</p>
+</li>
+<li>
+<p>desc: описание</p>
+</li>
+<li>
+<p>icon: иконка base64</p>
+</li>
+<li>
+<p>appType: тип приложения (0: приложение win32 / 1: приложение uwp / 2: системная команда / 3: системные настройки / 4: встроенный модуль)</p>
+</li>
+<li>
+<p>score: оценка результата поиска</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-пакетное-получение-информации-о-приложениях-по-id-асинхронно" tabindex="-1">2. Пакетное получение информации о приложениях по id (асинхронно) <a class="doc-anchor" href="#2-пакетное-получение-информации-о-приложениях-по-id-асинхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppInfo(appIds: string[]) : object
+</code></pre>
+<p>В конфигурации хранится только <code>appId</code>, имя и иконка всегда выводятся во время выполнения (<code>name</code> в <code>.zenmod</code> многоязычный, снимок в конфигурации устареет после смены языка). Именно для этого сценария и предназначен этот интерфейс.</p>
+<p>⚠️ <strong>Не заменяйте его циклом</strong> <strong><code>searchApp(appId, 1)</code></strong>: каждый вызов <code>searchApp</code> выполняет полный скан всего индекса приложений + пиньинь-сопоставление + оценку и сортировку, дополнительно запускает два потока и возвращает несколько записей с иконками base64. В док-панели вместе с горячими клавишами десятки appId — запросы по одному заметно замедлят запуск. Этот интерфейс собирает всё за один вызов, на native-стороне — точное попадание через <code>map::find</code>.</p>
+<p>Внутри дожидается готовности индекса приложений (индекс формируется фоновым потоком), поэтому привязка <strong>асинхронная</strong>: вызов в начале холодного старта не вернёт пустой результат.</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>appIds: массив appId, например <code>[&quot;calculator&quot;, &quot;Microsoft.WindowsCamera&quot;]</code></li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<p>Формат полностью совпадает с <code>searchApp</code> (тот же <code>BuildAppResult</code>), но:</p>
+<ul>
+<li>
+<p>возвращаются только точно совпавшие элементы, <strong>ненайденные id молча пропускаются</strong>, поэтому <code>apps.length</code> может быть меньше длины входного массива (используется для выявления недействительных appId в конфигурации)</p>
+</li>
+<li>
+<p>порядок соответствует порядку аргументов, <code>score</code> всегда 0 (в оценке не участвует)</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;calculator&quot;,
+            &quot;name&quot;: &quot;超级计算器&quot;,
+            &quot;path&quot;: &quot;calculator&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 4,
+            &quot;score&quot;: 0
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-запуск-приложения" tabindex="-1">3. Запуск приложения <a class="doc-anchor" href="#3-запуск-приложения" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.launchApp(id: string, admin : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>id: id приложения (поле <code>id</code> из возврата <code>searchApp</code> / <code>getAppInfo</code>)</p>
+</li>
+<li>
+<p>admin: запуск от имени администратора</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-получение-статистики-использования" tabindex="-1">4. Получение статистики использования <a class="doc-anchor" href="#4-получение-статистики-использования" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppUsage(mode: string, startTime: string, stopTime: string, forceSync : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>mode: тип статистики: day, week, month, year</p>
+</li>
+<li>
+<p>startTime: время начала, формат: yyyymmddhh, пример: 2025110300</p>
+</li>
+<li>
+<p>stopTime: время окончания, формат: yyyymmddhh, пример: 2025110300</p>
+</li>
+<li>
+<p>forceSync: форсировать ли обновление</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;usages&quot;: [
+        {
+            &quot;time&quot;: &quot;20251104&quot;,
+            &quot;name&quot;: &quot;yyzTools.exe&quot;,
+            &quot;logo&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;usageTimes&quot;: 2,
+            &quot;usageTime&quot;: 4.172,
+            &quot;clickTimes&quot;: 4,
+            &quot;moveDistance&quot;: 105.572357,
+            &quot;pressTimes&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>usages: статистика использования</p>
+<ul>
+<li>
+<p>time: время, day: yyyymmdd, week: yyyyww, month: yyyymm, year: yyyy</p>
+</li>
+<li>
+<p>name: имя приложения</p>
+</li>
+<li>
+<p>logo: иконка приложения</p>
+</li>
+<li>
+<p>usageTimes: количество запусков</p>
+</li>
+<li>
+<p>usageTime: длительность использования (единица: секунды)</p>
+</li>
+<li>
+<p>clickTimes: количество щелчков мыши</p>
+</li>
+<li>
+<p>moveDistance: расстояние перемещения мыши (единица: см)</p>
+</li>
+<li>
+<p>pressTimes: количество нажатий клавиш</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-управление-процессами" tabindex="-1">5. Управление процессами <a class="doc-anchor" href="#5-управление-процессами" aria-hidden="true">#</a></h2>
+<h3 id="1-поиск-процессов" tabindex="-1">1. Поиск процессов <a class="doc-anchor" href="#1-поиск-процессов" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchProcess(keyword: string, maxResults: number) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>keyword: ключевое слово поиска</p>
+</li>
+<li>
+<p>maxResults: максимальное число записей</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;processes&quot;: [
+        {
+            &quot;id&quot;: 1228,
+            &quot;name&quot;: &quot;msedge.exe&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\...\\msedge.exe\&quot; --type=renderer&quot;,
+            &quot;suspend&quot;: 0,
+            &quot;desc&quot;: &quot;Microsoft Edge&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 60
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>processes: список процессов</p>
+<ul>
+<li>
+<p>id: id процесса</p>
+</li>
+<li>
+<p>name: имя процесса</p>
+</li>
+<li>
+<p>path: полный путь к исполняемому файлу процесса</p>
+</li>
+<li>
+<p>cmdArgs: командная строка запуска процесса</p>
+</li>
+<li>
+<p>suspend: приостановлен ли</p>
+</li>
+<li>
+<p>desc: описание</p>
+</li>
+<li>
+<p>icon: иконка процесса, формат base64</p>
+</li>
+<li>
+<p>score: оценка поиска</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-управление-процессом" tabindex="-1">2. Управление процессом <a class="doc-anchor" href="#2-управление-процессом" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.processControl(processId: number, action: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>processId: ID процесса</p>
+</li>
+<li>
+<p>action: действие</p>
+<ul>
+<li>
+<p>terminate: завершить</p>
+</li>
+<li>
+<p>suspend: приостановить</p>
+</li>
+<li>
+<p>resume: возобновить</p>
+</li>
+<li>
+<p>restart: перезапустить</p>
+</li>
+</ul>
+</li>
+<li>
+<p>admin: запускать ли новый процесс от имени администратора (действует при restart)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="6-операции-с-файлами" tabindex="-1">6. Операции с файлами <a class="doc-anchor" href="#6-операции-с-файлами" aria-hidden="true">#</a></h2>
+<h3 id="1-поиск-файлов-асинхронно" tabindex="-1">1. Поиск файлов (асинхронно) <a class="doc-anchor" href="#1-поиск-файлов-асинхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchFile(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Примечание: поиск выполняет собственный сервис yyzFileSearch (MFT-индекс + IPC через именованный канал), поддерживается синтаксис запросов в стиле Everything (например <code>size:&gt;100MB</code>, <code>!ext:mp4</code>), результаты отсортированы по релевантности. Поиск выполняется в фоновом потоке, привязка <strong>асинхронная</strong>.</p>
+</li>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>keyword: ключевое слово поиска</p>
+</li>
+<li>
+<p>maxResults: максимальное число записей</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;WinMain.cpp&quot;,
+      &quot;path&quot;: &quot;D:\\WorkCodeup\\yyztools\\src\\yyztools&quot;,
+      &quot;dateModified&quot;: &quot;2025/10/18 14:05:00&quot;,
+      &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0,
+      &quot;isDir&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>files: список файлов</p>
+<ul>
+<li>
+<p>name: имя файла</p>
+</li>
+<li>
+<p>path: каталог файла (без имени файла), полный путь = path + &quot;\&quot; + name</p>
+</li>
+<li>
+<p>dateModified: время изменения</p>
+</li>
+<li>
+<p>icon: иконка файла, формат base64</p>
+</li>
+<li>
+<p>score: оценка поиска</p>
+</li>
+<li>
+<p>isDir: 1 — каталог, 0 — файл</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-открытие-файла" tabindex="-1">2. Открытие файла <a class="doc-anchor" href="#2-открытие-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFile(path: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>path: путь к файлу</p>
+</li>
+<li>
+<p>admin: открыть от имени администратора</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-открытие-расположения-файла" tabindex="-1">3. Открытие расположения файла <a class="doc-anchor" href="#3-открытие-расположения-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFileLocation(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>path: путь к файлу</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-открытие-предпросмотра-файла" tabindex="-1">4. Открытие предпросмотра файла <a class="doc-anchor" href="#4-открытие-предпросмотра-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFilePreview(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>path: путь к файлу</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-копированиевырезание-файлов-в-буфер-обмена" tabindex="-1">5. Копирование/вырезание файлов в буфер обмена <a class="doc-anchor" href="#5-копированиевырезание-файлов-в-буфер-обмена" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFilesToClipboard(paths: string[], operation: string) : object
+</code></pre>
+<p>Помещает сами файлы в буфер обмена (CF_HDROP), после чего их можно вставить через Ctrl+V в Проводнике.</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>paths: массив путей к файлам</p>
+</li>
+<li>
+<p>operation: <code>copy</code> | <code>move</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="6-выбор-файла" tabindex="-1">6. Выбор файла <a class="doc-anchor" href="#6-выбор-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseFile(filterName: string,
+                        filter: string, initDir: string, supportMulti: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>filterName: имя фильтра</p>
+</li>
+<li>
+<p>filter: фильтр, '<em>.html;</em>.htm'</p>
+</li>
+<li>
+<p>initDir: начальный каталог просмотра</p>
+</li>
+<li>
+<p>supportMulti: разрешён ли множественный выбор</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;paths&quot;: [&quot;d:\test\1.txt&quot;, &quot;d:\test\2.txt&quot;]
+}
+</code></pre>
+<ul>
+<li>paths: список полных путей выбранных файлов; при отмене пользователем <code>error</code> равен <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="7-выбор-каталога" tabindex="-1">7. Выбор каталога <a class="doc-anchor" href="#7-выбор-каталога" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseDir(initDir: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>initDir: начальный каталог просмотра</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;d:\test&quot;
+}
+</code></pre>
+<ul>
+<li>path: полный путь выбранного каталога; при отмене пользователем <code>error</code> равен <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="8-получение-указанного-каталога" tabindex="-1">8. Получение указанного каталога <a class="doc-anchor" href="#8-получение-указанного-каталога" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getKnownDir(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>type: тип</p>
+<ul>
+<li>
+<p>download: загрузки</p>
+</li>
+<li>
+<p>video: видео</p>
+</li>
+<li>
+<p>music: музыка</p>
+</li>
+<li>
+<p>picture: изображения</p>
+</li>
+<li>
+<p>document: документы</p>
+</li>
+<li>
+<p>appDataRoaming: AppData/Roaming</p>
+</li>
+<li>
+<p>appDataLocal: AppData/Local</p>
+</li>
+<li>
+<p>appDir: каталог программы</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;D:\Downloads&quot;
+}
+</code></pre>
+<ul>
+<li>path: полный путь к каталогу указанного типа</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-сохранение-файла" tabindex="-1">9. Сохранение файла <a class="doc-anchor" href="#9-сохранение-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.saveFile(filePath: string, data: string, binaryFile: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>filePath: путь к файлу</p>
+</li>
+<li>
+<p>data: содержимое файла</p>
+<ul>
+<li>
+<p>Текстовый файл: содержимое</p>
+</li>
+<li>
+<p>Двоичный файл: base64-кодировка содержимого</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binaryFile: является ли файл двоичным</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="10-получение-иконки-файла" tabindex="-1">10. Получение иконки файла <a class="doc-anchor" href="#10-получение-иконки-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileIcon(filePath: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>filePath: путь к файлу</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;icon&quot;: &quot;data:image/png;base64,&quot;
+}
+</code></pre>
+<ul>
+<li>icon: иконка файла, кодировка base64</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-чтение-файла" tabindex="-1">11. Чтение файла <a class="doc-anchor" href="#11-чтение-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFile(path: string, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>path: путь к файлу</p>
+</li>
+<li>
+<p>encoding: способ кодирования</p>
+<ul>
+<li>
+<p>&quot;utf8&quot;: текстовый режим (по умолчанию)</p>
+</li>
+<li>
+<p>&quot;base64&quot; или &quot;binary&quot;: двоичный режим</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<p>При успехе:</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;文件内容&quot;,
+  &quot;encoding&quot;: &quot;utf8&quot;,
+  &quot;size&quot;: 1024
+}
+</code></pre>
+<p>При слишком большом файле (&gt;50MB):</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 3,
+  &quot;errorMsg&quot;: &quot;file too large, use readFileChunk instead&quot;,
+  &quot;fileSize&quot;: 52428800,
+  &quot;chunkSize&quot;: 1048576
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="12-чтение-большого-файла-по-частям" tabindex="-1">12. Чтение большого файла по частям <a class="doc-anchor" href="#12-чтение-большого-файла-по-частям" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFileChunk(path: string, offset: number, length: number, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>path: путь к файлу</p>
+</li>
+<li>
+<p>offset: начальное смещение (в байтах)</p>
+</li>
+<li>
+<p>length: длина чтения (в байтах, максимум 1MB)</p>
+</li>
+<li>
+<p>encoding: способ кодирования (фиксированно &quot;base64&quot;)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;base64编码的数据&quot;,
+  &quot;offset&quot;: 0,
+  &quot;length&quot;: 1048576,
+  &quot;encoding&quot;: &quot;base64&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="13-запись-файла" tabindex="-1">13. Запись файла <a class="doc-anchor" href="#13-запись-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.writeFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>path: путь к файлу</p>
+</li>
+<li>
+<p>data: содержимое файла</p>
+<ul>
+<li>
+<p>Текстовый файл: текстовое содержимое</p>
+</li>
+<li>
+<p>Двоичный файл: содержимое в кодировке base64</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary: двоичный режим или нет</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="14-дозапись-в-файл" tabindex="-1">14. Дозапись в файл <a class="doc-anchor" href="#14-дозапись-в-файл" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.appendFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>path: путь к файлу</p>
+</li>
+<li>
+<p>data: добавляемое содержимое</p>
+<ul>
+<li>
+<p>Текстовый файл: текстовое содержимое</p>
+</li>
+<li>
+<p>Двоичный файл: содержимое в кодировке base64</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary: двоичный режим или нет</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="15-переименованиеперемещение" tabindex="-1">15. Переименование/перемещение <a class="doc-anchor" href="#15-переименованиеперемещение" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.rename(oldPath: string, newPath: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>oldPath: исходный путь</p>
+</li>
+<li>
+<p>newPath: новый путь</p>
+</li>
+<li>
+<p>overwrite: перезаписывать ли существующий файл</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="16-копирование-файла" tabindex="-1">16. Копирование файла <a class="doc-anchor" href="#16-копирование-файла" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFile(source: string, destination: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>source: путь к исходному файлу</p>
+</li>
+<li>
+<p>destination: путь к целевому файлу</p>
+</li>
+<li>
+<p>overwrite: перезаписывать ли существующий файл</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="17-удаление-файла-или-каталога" tabindex="-1">17. Удаление файла или каталога <a class="doc-anchor" href="#17-удаление-файла-или-каталога" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deletePath(path: string, useRecycleBin: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>path: путь к файлу или каталогу</p>
+</li>
+<li>
+<p>useRecycleBin: перемещать ли в корзину (при false удаляется напрямую, <strong>восстановление невозможно</strong>)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Примечание: каталоги всегда удаляются рекурсивно (включая всё вложенное содержимое).</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="18-создание-каталога" tabindex="-1">18. Создание каталога <a class="doc-anchor" href="#18-создание-каталога" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.mkdir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>path: путь к каталогу</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="19-чтение-каталога" tabindex="-1">19. Чтение каталога <a class="doc-anchor" href="#19-чтение-каталога" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readDir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>path: путь к каталогу</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [&quot;file1.txt&quot;, &quot;file2.jpg&quot;],
+  &quot;directories&quot;: [&quot;subdir1&quot;, &quot;subdir2&quot;]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="20-проверка-существования-пути" tabindex="-1">20. Проверка существования пути <a class="doc-anchor" href="#20-проверка-существования-пути" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.exists(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>path: путь к файлу или каталогу</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;exists&quot;: true
+}
+</code></pre>
+<ul>
+<li>exists: нативный булев</li>
+</ul>
+</li>
+</ul>
+<h3 id="21-получение-информации-о-файле" tabindex="-1">21. Получение информации о файле <a class="doc-anchor" href="#21-получение-информации-о-файле" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileInfo(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>path: путь к файлу или каталогу</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;path&quot;: &quot;D:\\test\\file.txt&quot;,
+  &quot;name&quot;: &quot;file.txt&quot;,
+  &quot;isDirectory&quot;: false,
+  &quot;size&quot;: 1024,
+  &quot;readonly&quot;: false,
+  &quot;hidden&quot;: false,
+  &quot;system&quot;: false,
+  &quot;modifiedTime&quot;: &quot;2025-10-19 18:48:29&quot;,
+  &quot;createdTime&quot;: &quot;2025-10-15 10:30:00&quot;,
+  &quot;extension&quot;: &quot;.txt&quot;
+}
+</code></pre>
+<ul>
+<li>isDirectory / readonly / hidden / system: нативные булевы</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-обработка-медиа" tabindex="-1">7. Обработка медиа <a class="doc-anchor" href="#7-обработка-медиа" aria-hidden="true">#</a></h2>
+<p>Медиапятёрка запускает сторонние CLI-инструменты из <code>bin64\Platform\</code> на стороне C++. Все, кроме <code>ffprobeRun</code>, имеют <strong>асинхронную привязку</strong> (выполняются в фоновом потоке, не блокируют поток UI); пакетная обработка последовательная, одновременно выполняется только один подпроцесс, текущее выполнение можно прервать через <code>Zen.cancelRun()</code> (при отмене возвращается <code>errorMsg: &quot;cancelled&quot;</code>).</p>
+<h3 id="1-выполнение-команды-magick-асинхронно" tabindex="-1">1. Выполнение команды magick (асинхронно) <a class="doc-anchor" href="#1-выполнение-команды-magick-асинхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.imageRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>args: полные аргументы командной строки magick (без самого magick.exe), собираются фронтендом. Пути нужно самостоятельно заключать в двойные кавычки, например <code>&quot;D:\\in.jpg&quot; -resize 800x600 &quot;D:\\out.jpg&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Примечание: сторона C++ не собирает аргументы, только выполняет <code>magick.exe &lt;args&gt;</code> и захватывает результат. При error ≠ 0 errorMsg прозрачно передаёт stderr magick; stdout — стандартный вывод magick (результат команд identify и т. п.)</p>
+</li>
+</ul>
+<h3 id="2-выполнение-команды-ffmpeg-асинхронно" tabindex="-1">2. Выполнение команды ffmpeg (асинхронно) <a class="doc-anchor" href="#2-выполнение-команды-ffmpeg-асинхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffmpegRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>args: полные аргументы командной строки ffmpeg (без самого ffmpeg.exe), собираются фронтендом. Пути нужно самостоятельно заключать в двойные кавычки, например <code>-i &quot;D:\in.mp4&quot; -vf &quot;scale=1280:720&quot; -c:v libx264 -crf 23 &quot;D:\out.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Примечание: сторона C++ не собирает аргументы, только выполняет <code>ffmpeg.exe &lt;args&gt;</code> и захватывает результат. При error ≠ 0 errorMsg прозрачно передаёт stderr ffmpeg; stdout — стандартный вывод ffmpeg. Обработка видео занимает много времени, таймаут C++ по умолчанию 1800 с</p>
+</li>
+</ul>
+<h3 id="3-выполнение-команды-ffprobe-получение-метаданных-синхронно" tabindex="-1">3. Выполнение команды ffprobe (получение метаданных, синхронно) <a class="doc-anchor" href="#3-выполнение-команды-ffprobe-получение-метаданных-синхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffprobeRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>args: полные аргументы командной строки ffprobe (без самого ffprobe.exe). Часто используется <code>-v quiet -print_format json -show_format -show_streams &quot;D:\in.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;{ ...json... }&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Примечание: сторона C++ только выполняет <code>ffprobe.exe &lt;args&gt;</code> и возвращает результат. stdout обычно JSON, фронтенд разбирает его сам. Опрос быстрый, привязка остаётся синхронной, таймаут по умолчанию 30 с</p>
+</li>
+</ul>
+<h3 id="4-выполнение-команды-pdfcpu-асинхронно" tabindex="-1">4. Выполнение команды pdfcpu (асинхронно) <a class="doc-anchor" href="#4-выполнение-команды-pdfcpu-асинхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pdfRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>args: полные аргументы командной строки pdfcpu (без самого pdfcpu.exe), собираются фронтендом. Пути нужно самостоятельно заключать в двойные кавычки, например <code>merge &quot;D:\out.pdf&quot; &quot;D:\in1.pdf&quot; &quot;D:\in2.pdf&quot; --force</code></li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Примечание: сторона C++ не собирает аргументы, только выполняет <code>pdfcpu.exe &lt;args&gt;</code> и захватывает результат. При error ≠ 0 errorMsg прозрачно передаёт stderr pdfcpu; stdout — стандартный вывод pdfcpu (результат команд <code>info -j</code> и т. п.). Таймаут C++ по умолчанию 1800 с</p>
+</li>
+</ul>
+<h3 id="5-выполнение-команды-ghostscript-асинхронно" tabindex="-1">5. Выполнение команды Ghostscript (асинхронно) <a class="doc-anchor" href="#5-выполнение-команды-ghostscript-асинхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.gsRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>args: полные аргументы командной строки Ghostscript (без самого gswin64c.exe), собираются фронтендом. Пути нужно самостоятельно заключать в двойные кавычки, например <code>-sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=150 -sOutputFile=&quot;D:\out.pdf&quot; &quot;D:\in.pdf&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Примечание: сторона C++ не собирает аргументы, только выполняет <code>Platform\Ghostscript\gswin64c.exe &lt;args&gt;</code> и захватывает результат. При error ≠ 0 errorMsg прозрачно передаёт stderr Ghostscript. Таймаут C++ по умолчанию 1800 с. Используется для шага сжатия (optimize) PDF-инструментов, остальные PDF-операции идут через <code>pdfRun</code> (pdfcpu)</p>
+</li>
+</ul>
+<h3 id="6-отмена-текущего-медиа-подпроцесса" tabindex="-1">6. Отмена текущего медиа-подпроцесса <a class="doc-anchor" href="#6-отмена-текущего-медиа-подпроцесса" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.cancelRun() : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные: нет</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0
+}
+</code></pre>
+</li>
+<li>
+<p>Примечание: подаёт сигнал отмены и завершает текущий выполняющийся подпроцесс <code>imageRun</code>/<code>ffmpegRun</code>/<code>pdfRun</code>/<code>gsRun</code> (<code>TerminateProcess</code>). Отменённый вызов вернёт <code>{error:2, errorMsg:&quot;cancelled&quot;}</code>. Пакетная обработка последовательная, одновременно выполняется только один подпроцесс.</p>
+</li>
+</ul>
+<h2 id="8-скриншоты-и-ocr" tabindex="-1">8. Скриншоты и OCR <a class="doc-anchor" href="#8-скриншоты-и-ocr" aria-hidden="true">#</a></h2>
+<h3 id="1-скриншот-закрепление-на-рабочем-столе" tabindex="-1">1. Скриншот / закрепление на рабочем столе <a class="doc-anchor" href="#1-скриншот-закрепление-на-рабочем-столе" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.screenCap(mode:string, wait:bool, file: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>mode: режим</p>
+<ul>
+<li>
+<p>normal: обычный</p>
+</li>
+<li>
+<p>long: длинный скриншот</p>
+</li>
+<li>
+<p>fast: быстрый скриншот в буфер обмена (без аннотаций, подходит для OCR)</p>
+</li>
+<li>
+<p>quickocr: сразу после выделения области — OCR+перевод, перевод отображается поверх экрана в месте исходного текста выделения (быстрый OCR-перевод)</p>
+</li>
+<li>
+<p>pinClipboard: закрепить изображение из буфера обмена на рабочем столе</p>
+</li>
+<li>
+<p>pinFile: закрепить изображение из файла на рабочем столе</p>
+</li>
+<li>
+<p>pinArea: захватить указанную область экрана и закрепить её на рабочем столе на месте (param принимает &quot;x,y,w,h&quot; в физических пикселях)</p>
+</li>
+<li>
+<p>pinWin: захватить клиентскую область указанного окна и закрепить её на рабочем столе на месте (param принимает HWND в десятичном виде)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>wait: ждать ли завершения скриншота</p>
+</li>
+<li>
+<p>param: путь к файлу (pinFile); строка области &quot;x,y,w,h&quot; (pinArea); HWND в десятичном виде (pinWin)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-инициализация-ocr" tabindex="-1">2. Инициализация OCR <a class="doc-anchor" href="#2-инициализация-ocr" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrInit(lang: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>lang: язык</p>
+<ul>
+<li>
+<p>zh-CN: китайский упрощённый</p>
+</li>
+<li>
+<p>zh-TW: китайский традиционный</p>
+</li>
+<li>
+<p>en-US: английский</p>
+</li>
+<li>
+<p>ja-JP: японский</p>
+</li>
+<li>
+<p>ko-KR: корейский</p>
+</li>
+<li>
+<p>ru-RU: русский</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-распознавание-ocr-асинхронно" tabindex="-1">3. Распознавание OCR (асинхронно) <a class="doc-anchor" href="#3-распознавание-ocr-асинхронно" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrRecognition(image: string) : object
+</code></pre>
+<p>OCR — длительная операция, привязка <strong>асинхронная</strong>, результат возвращается через Promise.</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>image: изображение в кодировке base64</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;result&quot;: {
+        &quot;code&quot;: 100,
+        &quot;data&quot;: [
+            {
+                &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+                &quot;score&quot;: 0.9605724896703448,
+                &quot;text&quot;: &quot;有发热症状患者&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>result: результат распознавания</p>
+<ul>
+<li>
+<p>code: код, фиксированно 100</p>
+</li>
+<li>
+<p>data: набор результатов</p>
+<ul>
+<li>
+<p>box: положение текста (координаты 4 углов)</p>
+</li>
+<li>
+<p>text: распознанный текст</p>
+</li>
+<li>
+<p>score: оценка распознавания</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-шифрование-и-расшифровка" tabindex="-1">9. Шифрование и расшифровка <a class="doc-anchor" href="#9-шифрование-и-расшифровка" aria-hidden="true">#</a></h2>
+<h3 id="1-шифрование-данных" tabindex="-1">1. Шифрование данных <a class="doc-anchor" href="#1-шифрование-данных" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.encrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>target: данные для шифрования</p>
+<ul>
+<li>
+<p>при type=&quot;text&quot; — текстовая строка</p>
+</li>
+<li>
+<p>при type=&quot;data&quot; — двоичные данные в кодировке Base64</p>
+</li>
+<li>
+<p>при type=&quot;hex&quot; — шестнадцатеричная строка</p>
+</li>
+<li>
+<p>при type=&quot;file&quot; — путь к файлу</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm: алгоритм шифрования</p>
+<ul>
+<li>
+<p>Симметричное шифрование: &quot;aes-128-cbc&quot;, &quot;aes-192-cbc&quot;, &quot;aes-256-cbc&quot;, &quot;aes-128-ecb&quot;, &quot;aes-256-ecb&quot;, &quot;aes-128-ctr&quot;, &quot;aes-256-ctr&quot;, &quot;des-cbc&quot;, &quot;des-ecb&quot;, &quot;des-ede3-cbc&quot; (3DES), &quot;des-ede3-ecb&quot;, &quot;rc4&quot;, &quot;bf-ecb&quot; (Blowfish), &quot;rc2-cbc&quot;, &quot;sm4-cbc&quot;, &quot;sm4-ecb&quot;, &quot;sm4-ctr&quot;</p>
+</li>
+<li>
+<p>Асимметричное шифрование: &quot;rsa-pkcs1&quot;, &quot;rsa-oaep&quot; (RSA, шифрование открытым ключом, расшифровка закрытым), &quot;sm2&quot; (отечественная эллиптическая кривая sm2p256v1, шифрование открытым ключом, расшифровка закрытым; за один раз обрабатывает данные любой длины, блочное разбиение не требуется)</p>
+</li>
+<li>
+<p>key/iv в Base64; внутри переводятся в шестнадцатеричный вид и передаются как <code>enc -K &lt;hex&gt; -iv &lt;hex&gt;</code>, длина ключа должна точно соответствовать алгоритму</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type: тип входных данных (по умолчанию &quot;text&quot;)</p>
+<ul>
+<li>
+<p>&quot;text&quot;: текстовые данные</p>
+</li>
+<li>
+<p>&quot;data&quot;: двоичные данные в кодировке Base64</p>
+</li>
+<li>
+<p>&quot;hex&quot;: шестнадцатеричная строка</p>
+</li>
+<li>
+<p>&quot;file&quot;: путь к файлу</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key: для симметричных — ключ в кодировке Base64; для асимметричных (rsa-*, sm2) — текст PEM (для шифрования передаётся открытый ключ, для расшифровки — закрытый, передаётся как есть, Base64-декодирование не выполняется)</p>
+</li>
+<li>
+<p>iv: вектор инициализации в кодировке Base64 (необязательно, нужен для некоторых алгоритмов; для асимметричных игнорируется)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的加密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;text&quot;,
+  &quot;inputSize&quot;: 1024,
+  &quot;outputSize&quot;: 1040
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-расшифровка-данных" tabindex="-1">2. Расшифровка данных <a class="doc-anchor" href="#2-расшифровка-данных" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.decrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>target: данные для расшифровки</p>
+<ul>
+<li>
+<p>при type=&quot;data&quot; — шифртекст в кодировке Base64</p>
+</li>
+<li>
+<p>при type=&quot;file&quot; — путь к файлу шифртекста</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm: алгоритм шифрования (как в encrypt)</p>
+</li>
+<li>
+<p>type: тип входных данных (по умолчанию &quot;data&quot;)</p>
+<ul>
+<li>
+<p>&quot;data&quot;: шифртекст в кодировке Base64</p>
+</li>
+<li>
+<p>&quot;file&quot;: путь к файлу шифртекста</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key: для симметричных — ключ в кодировке Base64; для асимметричных (rsa-*, sm2) — текст PEM (для шифрования передаётся открытый ключ, для расшифровки — закрытый, передаётся как есть, Base64-декодирование не выполняется)</p>
+</li>
+<li>
+<p>iv: вектор инициализации в кодировке Base64 (необязательно; для асимметричных игнорируется)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的解密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;data&quot;,
+  &quot;inputSize&quot;: 1040,
+  &quot;outputSize&quot;: 1024
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-генерация-ключа" tabindex="-1">3. Генерация ключа <a class="doc-anchor" href="#3-генерация-ключа" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateKey(algorithm: string, bits: string = '') : object
+</code></pre>
+<p>Единая точка входа для генерации ключей (генерирует встроенный openssl.exe, зависимости от браузерного WebCrypto у фронтенда нет).</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>algorithm: имя алгоритма</p>
+<ul>
+<li>
+<p>Симметричные: aes-128-cbc / aes-256-cbc / des-cbc / des-ede3-cbc / sm4-cbc / sm4-ecb / sm4-ctr / rc2-cbc / rc4 / bf-ecb и т. д. (длина ключа извлекается из имени алгоритма)</p>
+</li>
+<li>
+<p>Асимметричные: &quot;rsa&quot; (bits действует) / &quot;sm2&quot; (фиксированная кривая sm2p256v1)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>bits: разрядность ключа RSA (&quot;2048&quot;/&quot;4096&quot;, по умолчанию 2048); для симметричных алгоритмов и SM2 игнорируется</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">// 对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;key&quot;: &quot;Base64编码的密钥&quot; }
+// 非对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;sm2&quot;, &quot;publicKey&quot;: &quot;-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n&quot;, &quot;privateKey&quot;: &quot;-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n&quot; }
+</code></pre>
+</li>
+</ul>
+<h3 id="4-генерация-iv" tabindex="-1">4. Генерация IV <a class="doc-anchor" href="#4-генерация-iv" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateIv(algorithm: string) : object
+</code></pre>
+<p>Генерирует случайный IV по размеру блока симметричного алгоритма (генерирует встроенный openssl.exe).</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>algorithm: имя симметричного алгоритма (список симметричных алгоритмов из encrypt)</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;iv&quot;: &quot;Base64编码的IV&quot; }
+</code></pre>
+<p>Примечание: размер блока AES/SM4 — 16 байт; DES/3DES/RC2 — 8 байт; режим ECB и потоковые шифры (rc4) не нуждаются в IV, <code>iv</code> возвращает пустую строку.</p>
+</li>
+</ul>
+<h3 id="5-вычисление-хеша" tabindex="-1">5. Вычисление хеша <a class="doc-anchor" href="#5-вычисление-хеша" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.calcHash(target: string, algorithm: string, type?: string, key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>target: цель вычисления, смысл зависит от type</p>
+<ul>
+<li>
+<p>при type=&quot;file&quot; — путь к файлу</p>
+</li>
+<li>
+<p>при type=&quot;text&quot; — текстовая строка (дайджест вычисляется в UTF-8)</p>
+</li>
+<li>
+<p>при type=&quot;data&quot; — двоичные данные в кодировке Base64</p>
+</li>
+<li>
+<p>при type=&quot;hex&quot; — шестнадцатеричная строка</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm: алгоритм хеширования</p>
+<ul>
+<li>
+<p>&quot;md5&quot;</p>
+</li>
+<li>
+<p>&quot;sha1&quot;</p>
+</li>
+<li>
+<p>&quot;sha224&quot;</p>
+</li>
+<li>
+<p>&quot;sha256&quot;</p>
+</li>
+<li>
+<p>&quot;sha384&quot;</p>
+</li>
+<li>
+<p>&quot;sha512&quot;</p>
+</li>
+<li>
+<p>&quot;ripemd160&quot;</p>
+</li>
+<li>
+<p>&quot;sm3&quot; (отечественный дайджест SM3, 256 бит / 64 шестнадцатеричных знака)</p>
+</li>
+<li>
+<p>&quot;sha3-224&quot; / &quot;sha3-256&quot; / &quot;sha3-384&quot; / &quot;sha3-512&quot; (SHA-3 / Keccak, NIST FIPS 202)</p>
+</li>
+<li>
+<p>&quot;blake2b512&quot; / &quot;blake2s256&quot; (BLAKE2, современный высокопроизводительный дайджест)</p>
+</li>
+<li>
+<p>&quot;crc32&quot; (контрольная сумма CRC32, 8 шестнадцатеричных знаков)</p>
+</li>
+<li>
+<p>&quot;crc16&quot; (контрольная сумма CRC16, 4 шестнадцатеричных знака)</p>
+</li>
+<li>
+<p>&quot;checksum&quot; (накопительная сумма байтов, 8 шестнадцатеричных знаков)</p>
+</li>
+<li>
+<p>&quot;hmac-md5&quot; / &quot;hmac-sha1&quot; / &quot;hmac-sha256&quot; / &quot;hmac-sha512&quot; / &quot;hmac-sm3&quot; / &quot;hmac-sha3-256&quot; / &quot;hmac-sha3-512&quot; (HMAC, 4-й параметр key — ключ, вывод — шестнадцатеричный MAC)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type: тип входных данных (необязательно, по умолчанию &quot;file&quot;)</p>
+<ul>
+<li>
+<p>&quot;file&quot;: вычислить хеш файла</p>
+</li>
+<li>
+<p>&quot;text&quot;: вычислить хеш текста</p>
+</li>
+<li>
+<p>&quot;data&quot;: вычислить хеш двоичных данных (target должен быть строкой Base64)</p>
+</li>
+<li>
+<p>&quot;hex&quot;: вычислить хеш шестнадцатеричной строки (target — hex-строка, вычисляется побайтово после декодирования)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;hash&quot;: &quot;D41D8CD98F00B204E9800998ECF8427E&quot;,
+  &quot;algorithm&quot;: &quot;md5&quot;,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="10-история-буфера-обмена" tabindex="-1">10. История буфера обмена <a class="doc-anchor" href="#10-история-буфера-обмена" aria-hidden="true">#</a></h2>
+<h3 id="1-поиск-в-буфере-обмена" tabindex="-1">1. Поиск в буфере обмена <a class="doc-anchor" href="#1-поиск-в-буфере-обмена" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchClip(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>keyword: ключевое слово поиска</p>
+</li>
+<li>
+<p>maxResults: максимальное число записей</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;clips&quot;: [
+    {
+      &quot;id&quot;: &quot;1235642340977&quot;,
+      &quot;name&quot;: &quot;Weixin.exe&quot;,
+      &quot;text&quot;: &quot;文本内容&quot;,
+      &quot;ocrJson&quot;: &quot;{\&quot;code\&quot;:100,\&quot;data\&quot;:[...]}&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:29&quot;,
+      &quot;image&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0
+    },
+    {
+      &quot;id&quot;: &quot;235634234232&quot;,
+      &quot;name&quot;: &quot;MarkText.exe&quot;,
+      &quot;text&quot;: &quot;function&quot;,
+      &quot;ocrJson&quot;: &quot;&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:21&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;score&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>clips: список исторического содержимого буфера обмена</p>
+<ul>
+<li>
+<p>id: id записи, уникальный идентификатор</p>
+</li>
+<li>
+<p>name: имя исходного процесса, из которого выполнено копирование</p>
+</li>
+<li>
+<p>text: текстовое содержимое (если image не пусто — распознанный OCR-текст изображения)</p>
+</li>
+<li>
+<p>image: содержимое изображения, формат base64</p>
+</li>
+<li>
+<p>dateCreated: дата создания</p>
+</li>
+<li>
+<p>ocrJson: форматированное содержимое вывода OCR изображения</p>
+<ul>
+<li>
+<p>box: положение текста (координаты 4 углов)</p>
+</li>
+<li>
+<p>text: распознанный текст</p>
+</li>
+<li>
+<p>score: оценка распознавания</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;code&quot;: 100,
+    &quot;data&quot;: [
+        {
+            &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+            &quot;score&quot;: 0.9605724896703448,
+            &quot;text&quot;: &quot;有发热症状患者&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-удаление-одной-записи" tabindex="-1">2. Удаление одной записи <a class="doc-anchor" href="#2-удаление-одной-записи" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deleteClip(id: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>id: id записи</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-очистка-записей" tabindex="-1">3. Очистка записей <a class="doc-anchor" href="#3-очистка-записей" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.clearClip() : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные: нет</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="11-закладки" tabindex="-1">11. Закладки <a class="doc-anchor" href="#11-закладки" aria-hidden="true">#</a></h2>
+<h3 id="1-поиск-закладок" tabindex="-1">1. Поиск закладок <a class="doc-anchor" href="#1-поиск-закладок" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchBookmark(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>keyword: ключевое слово поиска</p>
+</li>
+<li>
+<p>maxResults: максимальное число записей</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;bookmarks&quot;: [
+        {
+            &quot;id&quot;: &quot;13568723452&quot;,
+            &quot;name&quot;: &quot;DeepSeek | 深度求索&quot;,
+            &quot;url&quot;: &quot;https://www.deepseek.com/&quot;,
+            &quot;dateAdded&quot;: &quot;2018-12-19 21:20:48&quot;,
+            &quot;dateLastUsed&quot;: &quot;2025-05-21 15:04:06&quot;,
+            &quot;visitCount&quot;: 37,
+            &quot;score&quot;: 80
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>bookmarks: список закладок</p>
+<ul>
+<li>
+<p>id: уникальный ID</p>
+</li>
+<li>
+<p>name: название</p>
+</li>
+<li>
+<p>url: ссылка</p>
+</li>
+<li>
+<p>dateAdded: время добавления</p>
+</li>
+<li>
+<p>dateLastUsed: время использования</p>
+</li>
+<li>
+<p>visitCount: количество использований</p>
+</li>
+<li>
+<p>score: оценка поиска</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-открытие-закладки" tabindex="-1">2. Открытие закладки <a class="doc-anchor" href="#2-открытие-закладки" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openBookmark(id: string, privacyMode: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>id: id</p>
+</li>
+<li>
+<p>privacyMode: приватный режим</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="12-выполнение-команд" tabindex="-1">12. Выполнение команд <a class="doc-anchor" href="#12-выполнение-команд" aria-hidden="true">#</a></h2>
+<h3 id="1-запуск-командной-строки" tabindex="-1">1. Запуск командной строки <a class="doc-anchor" href="#1-запуск-командной-строки" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runCmd(cmd: string, admin : bool) : object
+</code></pre>
+<p>Открывает видимое окно командной строки через <code>cmd.exe /k &lt;cmd&gt;</code> и выполняет команду (окно остаётся открытым).</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>cmd: команда</p>
+</li>
+<li>
+<p>admin: запускать ли от имени администратора</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-запуск-произвольной-программы" tabindex="-1">2. Запуск произвольной программы <a class="doc-anchor" href="#2-запуск-произвольной-программы" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runAny(cmdExe: string, cmdArgs: string, admin : bool) : object
+</code></pre>
+<p>Напрямую запускает произвольный исполняемый файл или URL (URL открывается через системную ассоциацию по умолчанию, например браузер).</p>
+<ul>
+<li>
+<p>Входные данные</p>
+<ul>
+<li>
+<p>cmdExe: путь к команде или URL</p>
+</li>
+<li>
+<p>cmdArgs: аргументы команды</p>
+</li>
+<li>
+<p>admin: запускать ли от имени администратора</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="13-обновление" tabindex="-1">13. Обновление <a class="doc-anchor" href="#13-обновление" aria-hidden="true">#</a></h2>
+<p>Обновление выполняет отдельный процесс <code>yyzUpdater.exe</code>, главный процесс только запускает его и опрашивает состояние.</p>
+<h3 id="1-проверка-обновлений" tabindex="-1">1. Проверка обновлений <a class="doc-anchor" href="#1-проверка-обновлений" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.checkUpdate() : object
+</code></pre>
+<p>Запускает <code>yyzUpdater.exe --check-and-apply</code> (проверка + загрузка + применение одним циклом).</p>
+<ul>
+<li>
+<p>Входные данные: нет</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+<p>Примечание: <code>error:0</code> означает только успешный запуск обновлятора, <strong>но не результат обновления</strong>. Состояние «обновление идёт / готово к применению» запрашивается через <code>getUpdateState</code>.</p>
+</li>
+</ul>
+<h3 id="2-получение-состояния-обновления" tabindex="-1">2. Получение состояния обновления <a class="doc-anchor" href="#2-получение-состояния-обновления" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getUpdateState() : object
+</code></pre>
+<p>Опрашивает состояние обновления в реальном времени (для опроса из трея):</p>
+<ul>
+<li>
+<p>запущен ли updater → мьютекс единственного экземпляра <code>Local\yyzUpdater_SingleInstance</code></p>
+</li>
+<li>
+<p>загружено ли и ждёт ли применения → существует ли <code>%APPDATA%\yyzTools\Update\update.ready</code> (если существует, разбирается version пакета main)</p>
+</li>
+<li>
+<p>завершилась ли ручная проверка без обновлений → маркер <code>%APPDATA%\yyzTools\Update\update.result</code> (<strong>считывается и удаляется</strong>)</p>
+</li>
+<li>
+<p>Входные данные: нет</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
+</code></pre>
+<ul>
+<li>
+<p>status: <code>idle</code> (нет активности обновления) / <code>checking</code> (обновлятор работает) / <code>ready</code> (загрузка завершена, можно обновиться)</p>
+</li>
+<li>
+<p>version: значение только в состоянии <code>ready</code> — номер новой версии, ожидающей применения (берётся из пакета main), в остальных случаях пустая строка</p>
+</li>
+<li>
+<p>lastResult: значение возможно только в состоянии <code>idle</code> — результат последней <strong>ручной</strong> проверки (<code>--check-and-apply</code>): <code>uptodate</code> (уже последняя версия) / <code>error</code> (проверка не удалась), при отсутствии маркера — пустая строка. Маркер пишется обновлятором и удаляется этим интерфейсом сразу после чтения, поэтому <strong>возвращается только один раз</strong> — фронтенд показывает один Toast; тихий <code>--check</code> маркер не пишет и не создаёт беспокойства.</p>
+</li>
+<li>
+<p>Приоритет состояний: <code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-применение-загруженного-обновления" tabindex="-1">3. Применение загруженного обновления <a class="doc-anchor" href="#3-применение-загруженного-обновления" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.applyUpdate() : object
+</code></pre>
+<p>Запускает <code>yyzUpdater.exe --apply</code>: читает <code>update.ready</code> → ждёт выхода главного процесса → заменяет файлы → перезапускает главный процесс. Вызывать только когда <code>getUpdateState</code> возвращает <code>ready</code>.</p>
+<ul>
+<li>
+<p>Входные данные: нет</p>
+</li>
+<li>
+<p>Выходные данные</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h2 id="замечания-по-безопасности" tabindex="-1">⚠️ Замечания по безопасности <a class="doc-anchor" href="#замечания-по-безопасности" aria-hidden="true">#</a></h2>
+<p>Native API для разработчиков модулей <strong>полностью открывает</strong> системные возможности процесса-хоста, включая чтение/запись и удаление файлов, создание и завершение процессов, управление окнами, чтение/запись буфера обмена, изменение реестра и системных настроек, загрузку из сети и выполнение командной строки — <strong>опасные операции</strong>.</p>
+<p>Эти интерфейсы <strong>не имеют диалогов запроса прав, не изолируются песочницей и не предоставляют механизма отмены</strong> — вызов немедленно вступает в силу с правами текущего пользователя; ошибка использования может привести к безвозвратной потере данных или сбоям системы.</p>
+<p>Поэтому обязательно учитывайте следующее:</p>
+<ul>
+<li><strong>Самостоятельно оценивайте безопасность</strong>: перед вызовом любого интерфейса убедитесь, что источник параметров (особенно путей, имён процессов, командных строк) доверенный и данные тщательно проверены; для необратимых операций — удаление, перезапись, завершение процессов — рекомендуется сначала сделать резервную копию или запросить у пользователя повторное подтверждение.</li>
+<li><strong>Остерегайтесь недоверенного ввода</strong>: никогда не вставляйте пользовательский ввод, сетевые ответы или сторонние данные в параметры интерфейсов без проверки; остерегайтесь path traversal и инъекций в командную строку.</li>
+<li><strong>Принцип наименьших привилегий</strong>: запрашивайте только возможности, реально нужные бизнес-логике, и не используйте ради удобства интерфейсы с более широким влиянием.</li>
+<li><strong>Ответственность на разработчике</strong>: разработчик сам несёт все последствия использования этого API, включая, но не ограничиваясь, потерей данных, повреждением системы и рисками безопасности.</li>
+</ul>
+</blockquote>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="Связанные ресурсы">
+    <a class="sdk-link" href="/ru/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Быстрый старт</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Скачать пример проекта</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ru/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Набор инструментов производительности для Windows. Сначала локально, бесплатно навсегда.</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Продукт</h3>
+            <a href="/ru/features.html">Функции</a>
+            <a href="/ru/download.html">Загрузка</a>
+            <a href="/ru/changelog.html">Обновления</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Ресурсы</h3>
+            <a href="/ru/sdk.html">Разработчикам</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Обратная связь</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Правовая информация</h3>
+            <a href="/ru/agreement.html">Пользовательское соглашение</a>
+            <a href="/ru/privacy.html">Политика конфиденциальности</a>
+            
+            <a class="js-email" href="#">Электронная почта</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · Все права защищены</p>
+        <p class="footer-fine">Windows — зарегистрированный товарный знак Microsoft Corporation. Этот сайт не связан с Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools Native API リファレンス</title>
+<meta name="description" content="yyzTools Native API の完全なリファレンス：ウィンドウ制御、アプリ管理、プロセス、ファイル操作、メディア処理、OCR、暗号化、クリップボード、ブックマーク、コマンド実行、更新。">
+
+<meta property="og:title" content="yyzTools Native API リファレンス">
+<meta property="og:description" content="yyzTools Native API の完全なリファレンス：ウィンドウ制御、アプリ管理、プロセス、ファイル操作、メディア処理、OCR、暗号化、クリップボード、ブックマーク、コマンド実行、更新。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ja/sdk-api.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ja">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools Native API リファレンス">
+<meta name="twitter:description" content="yyzTools Native API の完全なリファレンス：ウィンドウ制御、アプリ管理、プロセス、ファイル操作、メディア処理、OCR、暗号化、クリップボード、ブックマーク、コマンド実行、更新。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ja/sdk-api.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk-api.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk-api.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk-api.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk-api.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk-api.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk-api.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk-api.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk-api.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk-api.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk-api.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ja/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ja/" >ホーム</a>
+            <a href="/ja/features.html" >機能</a>
+            <a href="/ja/download.html" >ダウンロード</a>
+            <a href="/ja/changelog.html" >更新履歴</a>
+            
+            <a href="/ja/sdk.html" class=&#34;on&#34;>開発者</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">フィードバック</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="言語を選択">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">日本語</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk-api.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk-api.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk-api.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk-api.html" hreflang="ja"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>日本語</a>
+                    
+                    <a href="/ko/sdk-api.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk-api.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk-api.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk-api.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk-api.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk-api.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk-api.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk-api.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/ja/download.html">無料ダウンロード</a>
+            <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"開発者","item":"https://yyztools.com/ja/sdk.html"},{"@type":"ListItem","position":3,"name":"API リファレンス","item":"https://yyztools.com/ja/sdk-api.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"API リファレンス","description":"yyzTools Native API の完全なリファレンス：ウィンドウ制御、アプリ管理、プロセス、ファイル操作、メディア処理、OCR、暗号化、クリップボード、ブックマーク、コマンド実行、更新。","inLanguage":"ja","url":"https://yyztools.com/ja/sdk-api.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Expert"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> このページの目次</summary>
+            <nav aria-label="このページの目次">
+                <ol>
+                    
+                    <li>
+                        <a href="#改版履歴">改版履歴</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#1-共通の規約">1. 共通の規約</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#呼び出し方法">呼び出し方法</a></li>
+                            
+                            <li><a href="#エラー判定方法">エラー判定方法</a></li>
+                            
+                            <li><a href="#同期-非同期バインド">同期 / 非同期バインド</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-共通インターフェース">2. 共通インターフェース</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-クライアントバージョンの取得">1. クライアントバージョンの取得</a></li>
+                            
+                            <li><a href="#2-設定の取得">2. 設定の取得</a></li>
+                            
+                            <li><a href="#3-設定の変更">3. 設定の変更</a></li>
+                            
+                            <li><a href="#4-設定の追加">4. 設定の追加</a></li>
+                            
+                            <li><a href="#5-リストの取得">5. リストの取得</a></li>
+                            
+                            <li><a href="#6-フロントエンドログの書き込み">6. フロントエンドログの書き込み</a></li>
+                            
+                            <li><a href="#7-カウントダウンキャッシュの書き込み">7. カウントダウンキャッシュの書き込み</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-ウィンドウコントロール">3. ウィンドウコントロール</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-ウィンドウの検索">1. ウィンドウの検索</a></li>
+                            
+                            <li><a href="#2-ウィンドウコントロール">2. ウィンドウコントロール</a></li>
+                            
+                            <li><a href="#3-ウィンドウ状態の取得">3. ウィンドウ状態の取得</a></li>
+                            
+                            <li><a href="#4-コマンドパレットを開いて検索を実行">4. コマンドパレットを開いて検索を実行</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-アプリ管理">4. アプリ管理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-アプリの検索">1. アプリの検索</a></li>
+                            
+                            <li><a href="#2-id-によるアプリ情報の一括取得非同期">2. id によるアプリ情報の一括取得（非同期）</a></li>
+                            
+                            <li><a href="#3-アプリの起動">3. アプリの起動</a></li>
+                            
+                            <li><a href="#4-使用統計の取得">4. 使用統計の取得</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-プロセス管理">5. プロセス管理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-プロセスの検索">1. プロセスの検索</a></li>
+                            
+                            <li><a href="#2-プロセスコントロール">2. プロセスコントロール</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-ファイル操作">6. ファイル操作</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-ファイルの検索非同期">1. ファイルの検索（非同期）</a></li>
+                            
+                            <li><a href="#2-ファイルを開く">2. ファイルを開く</a></li>
+                            
+                            <li><a href="#3-ファイルの位置を開く">3. ファイルの位置を開く</a></li>
+                            
+                            <li><a href="#4-ファイルプレビューを開く">4. ファイルプレビューを開く</a></li>
+                            
+                            <li><a href="#5-ファイルをクリップボードへコピーカット">5. ファイルをクリップボードへコピー/カット</a></li>
+                            
+                            <li><a href="#6-ファイルのブラウズ">6. ファイルのブラウズ</a></li>
+                            
+                            <li><a href="#7-ディレクトリのブラウズ">7. ディレクトリのブラウズ</a></li>
+                            
+                            <li><a href="#8-指定ディレクトリの取得">8. 指定ディレクトリの取得</a></li>
+                            
+                            <li><a href="#9-ファイルの保存">9. ファイルの保存</a></li>
+                            
+                            <li><a href="#10-ファイルアイコンの取得">10. ファイルアイコンの取得</a></li>
+                            
+                            <li><a href="#11-ファイルの読み取り">11. ファイルの読み取り</a></li>
+                            
+                            <li><a href="#12-大ファイルの分割読み取り">12. 大ファイルの分割読み取り</a></li>
+                            
+                            <li><a href="#13-ファイルへの書き込み">13. ファイルへの書き込み</a></li>
+                            
+                            <li><a href="#14-ファイルへの追記">14. ファイルへの追記</a></li>
+                            
+                            <li><a href="#15-名前の変更移動">15. 名前の変更/移動</a></li>
+                            
+                            <li><a href="#16-ファイルのコピー">16. ファイルのコピー</a></li>
+                            
+                            <li><a href="#17-ファイルまたはディレクトリの削除">17. ファイルまたはディレクトリの削除</a></li>
+                            
+                            <li><a href="#18-ディレクトリの作成">18. ディレクトリの作成</a></li>
+                            
+                            <li><a href="#19-ディレクトリの読み取り">19. ディレクトリの読み取り</a></li>
+                            
+                            <li><a href="#20-パスの存在チェック">20. パスの存在チェック</a></li>
+                            
+                            <li><a href="#21-ファイル情報の取得">21. ファイル情報の取得</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-メディア処理">7. メディア処理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-magick-コマンドの実行非同期">1. magick コマンドの実行（非同期）</a></li>
+                            
+                            <li><a href="#2-ffmpeg-コマンドの実行非同期">2. ffmpeg コマンドの実行（非同期）</a></li>
+                            
+                            <li><a href="#3-ffprobe-コマンドの実行メタデータの検出同期">3. ffprobe コマンドの実行（メタデータの検出、同期）</a></li>
+                            
+                            <li><a href="#4-pdfcpu-コマンドの実行非同期">4. pdfcpu コマンドの実行（非同期）</a></li>
+                            
+                            <li><a href="#5-ghostscript-コマンドの実行非同期">5. Ghostscript コマンドの実行（非同期）</a></li>
+                            
+                            <li><a href="#6-現在のメディアサブプロセスのキャンセル">6. 現在のメディアサブプロセスのキャンセル</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-スクリーンショットと-ocr">8. スクリーンショットと OCR</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-スクリーンショットデスクトップへピン留め">1. スクリーンショット/デスクトップへピン留め</a></li>
+                            
+                            <li><a href="#2-ocr-の初期化">2. OCR の初期化</a></li>
+                            
+                            <li><a href="#3-ocr-認識非同期">3. OCR 認識（非同期）</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#9-暗号化復号">9. 暗号化・復号</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-データの暗号化">1. データの暗号化</a></li>
+                            
+                            <li><a href="#2-データの復号">2. データの復号</a></li>
+                            
+                            <li><a href="#3-鍵の生成">3. 鍵の生成</a></li>
+                            
+                            <li><a href="#4-iv-の生成">4. IV の生成</a></li>
+                            
+                            <li><a href="#5-ハッシュの計算">5. ハッシュの計算</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#10-クリップボード履歴">10. クリップボード履歴</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-クリップボードの検索">1. クリップボードの検索</a></li>
+                            
+                            <li><a href="#2-レコードの-1-件削除">2. レコードの 1 件削除</a></li>
+                            
+                            <li><a href="#3-レコードの消去">3. レコードの消去</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#11-ブックマーク">11. ブックマーク</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-ブックマークの検索">1. ブックマークの検索</a></li>
+                            
+                            <li><a href="#2-ブックマークを開く">2. ブックマークを開く</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#12-コマンド実行">12. コマンド実行</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-コマンドラインの実行">1. コマンドラインの実行</a></li>
+                            
+                            <li><a href="#2-任意のプログラムの実行">2. 任意のプログラムの実行</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#13-アップデート">13. アップデート</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-アップデートのチェック">1. アップデートのチェック</a></li>
+                            
+                            <li><a href="#2-アップデート状態の取得">2. アップデート状態の取得</a></li>
+                            
+                            <li><a href="#3-ダウンロード済みのアップデートの適用">3. ダウンロード済みのアップデートの適用</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>API リファレンス</h1>
+            <p class="doc-meta">すべての Native API の正式な定義</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="関連リソース">
+    <a class="sdk-link" href="/ja/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>クイックスタート</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>サンプルプロジェクトをダウンロード</span>
+    </a>
+</nav>
+
+
+            <h2 id="改版履歴" tabindex="-1">改版履歴 <a class="doc-anchor" href="#改版履歴" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>バージョン</th>
+<th>修正者</th>
+<th>修正日時</th>
+<th>修正内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>yyzTools</td>
+<td>2026-09-01</td>
+<td>初版</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-共通の規約" tabindex="-1">1. 共通の規約 <a class="doc-anchor" href="#1-共通の規約" aria-hidden="true">#</a></h2>
+<p>本ドキュメントは Native との対話に関わるすべてのインターフェースを定義し、<strong>メインプロセス yyzTools.exe</strong> が登録したインターフェースのみを対象とします（<code>src/yyztools/NativeApi.cpp</code> の <code>SetupBindings()</code>）。</p>
+<h3 id="呼び出し方法" tabindex="-1">呼び出し方法 <a class="doc-anchor" href="#呼び出し方法" aria-hidden="true">#</a></h3>
+<ul>
+<li>
+<p>フロントエンドは <code>window.Zen</code> オブジェクト経由でインターフェース関数を呼び出します。統一して <code>ZenAPI</code> ラッパークラス（<code>web/lib/zen_api.js</code>）を使うことを推奨します。業務コードで <code>window.Zen</code> を直結せず、インターフェースのアップグレード・調整時に互換レイヤーとして扱えるようにしてください。</p>
+</li>
+<li>
+<p>入力：位置パラメータで渡します。パラメータの個数と型は各インターフェースの説明を参照</p>
+</li>
+<li>
+<p>出力：戻り値で渡し、値は json オブジェクトで、以下の内容を含みます</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    ...
+}
+</code></pre>
+<ul>
+<li>
+<p>error：0 が正解、0 以外がエラー</p>
+</li>
+<li>
+<p>errorMsg（任意）：エラー情報</p>
+</li>
+<li>
+<p>その他（任意）：各インターフェースの説明を参照</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="エラー判定方法" tabindex="-1">エラー判定方法 <a class="doc-anchor" href="#エラー判定方法" aria-hidden="true">#</a></h3>
+<p><code>error</code> は常に<strong>数値</strong>です：0 が正解、0 以外がエラー（呼び出し例外時は -1）。</p>
+<h3 id="同期-非同期バインド" tabindex="-1">同期 / 非同期バインド <a class="doc-anchor" href="#同期-非同期バインド" aria-hidden="true">#</a></h3>
+<p>大多数のインターフェースは同期バインド（<code>BindSync</code>）で、呼び出すと即返ります。以下の 7 つのインターフェースは非同期バインド（<code>BindAsync</code>）で、バックグラウンドスレッドで実行され、Promise で結果が返り、UI スレッドをブロックしません：</p>
+<p><code>getAppInfo</code>、<code>searchFile</code>、<code>imageRun</code>、<code>ffmpegRun</code>、<code>pdfRun</code>、<code>gsRun</code>、<code>ocrRecognition</code></p>
+<p>非同期インターフェースの同一時刻における動作制約は各項目を参照（たとえばメディア 5 種は逐次実行で、共通の <code>cancelRun</code> でキャンセル）。</p>
+<h2 id="2-共通インターフェース" tabindex="-1">2. 共通インターフェース <a class="doc-anchor" href="#2-共通インターフェース" aria-hidden="true">#</a></h2>
+<h3 id="1-クライアントバージョンの取得" tabindex="-1">1. クライアントバージョンの取得 <a class="doc-anchor" href="#1-クライアントバージョンの取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getVersion() : object
+</code></pre>
+<ul>
+<li>
+<p>入力：なし</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apiVersion&quot;: &quot;1.0.1&quot;,
+    &quot;appVersion&quot;: &quot;1.0.1&quot;,
+    &quot;usageTime&quot;: 90,
+    &quot;usageTimes&quot;: 3602,
+    &quot;firstUseTime&quot;: &quot;20250910&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>apiVersion：クライアント API バージョン情報。インターフェース更新に関わるたびにバージョン番号を 1 増やす。数字は 0 から 9 で、9 の後は 0 に戻る。例：1.0.0、1.0.1、1.0.2... 1.0.9、1.1.0 など</p>
+</li>
+<li>
+<p>appVersion：クライアントバージョン情報</p>
+</li>
+<li>
+<p>usageTime：使用時間（単位：s）</p>
+</li>
+<li>
+<p>usageTimes：起動回数</p>
+</li>
+<li>
+<p>firstUseTime：初回使用時刻。形式：yyyymmdd</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-設定の取得" tabindex="-1">2. 設定の取得 <a class="doc-anchor" href="#2-設定の取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getConfig(key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>key（任意）：そのキーのみ取得。<code>a.b</code> のドットパス対応。省略時は全量の設定を返す。</p>
+<ul>
+<li>
+<p>ヒット：<code>{&quot;error&quot;:0, &quot;&lt;key&gt;&quot;: &lt;値&gt;}</code> を返す。例：<code>getConfig(&quot;language&quot;)</code> → <code>{&quot;error&quot;:0,&quot;language&quot;:&quot;zh_cn&quot;}</code>；<code>getConfig(&quot;dock.categories&quot;)</code> → <code>{&quot;error&quot;:0,&quot;dock&quot;:{&quot;categories&quot;:[...]}}</code></p>
+</li>
+<li>
+<p>未ヒット：<code>{&quot;error&quot;:0}</code> を返す（エラーにはせず、読み取り側でフォールバックする）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力（例、フィールドは実際の設定による）</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;logLevel&quot;: &quot;1&quot;,
+    &quot;wallpaperEnabled&quot;: &quot;1&quot;,
+    &quot;overlayEnabled&quot;: &quot;0&quot;,
+    &quot;gameMode&quot;: &quot;0&quot;,
+    &quot;clipboardHistoryMaxCount&quot;: &quot;500&quot;,
+    &quot;autoStart&quot;: &quot;1&quot;,
+    &quot;shortcutKeys&quot;: {
+        &quot;main&quot;: {
+            &quot;doubleCtrlEnabled&quot;: &quot;1&quot;,
+            &quot;doubleAltEnabled&quot;: &quot;1&quot;,
+            &quot;modifier&quot;: 1,
+            &quot;virtualCode&quot;: 32
+        },
+        &quot;apps&quot;: [
+            {
+                &quot;appId&quot;: &quot;translate&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 49
+            },
+            {
+                &quot;appId&quot;: &quot;ocr&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 50
+            }
+        ]
+    },
+    &quot;quickOpen&quot;: [
+        {
+            &quot;name&quot;: &quot;谷歌搜索&quot;,
+            &quot;type&quot;: &quot;normal&quot;,
+            &quot;index&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;https://www.google.com/search?q={query}&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ],
+    &quot;customApps&quot;: [
+        {
+            &quot;filePath&quot;: &quot;d:\test\test1.exe&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>logLevel：ログレベル（0: Trace / 1: Debug / 2: Info / 3: Warning / 4: Error / 5: Fatal）</p>
+</li>
+<li>
+<p>wallpaperEnabled：ダイナミック壁紙の有効化</p>
+</li>
+<li>
+<p>overlayEnabled：デスクトップエフェクトの有効化</p>
+</li>
+<li>
+<p>gameMode：ゲームモード</p>
+</li>
+<li>
+<p>clipboardHistoryMaxCount：クリップボードの最大履歴件数</p>
+</li>
+<li>
+<p>autoStart：起動時の自動開始</p>
+</li>
+<li>
+<p>shortcutKeys：グローバルショートカットキー</p>
+<ul>
+<li>
+<p>main：メイン画面</p>
+<ul>
+<li>
+<p>doubleCtrlEnabled：Ctrl ダブルクリックで呼び出し</p>
+</li>
+<li>
+<p>doubleAltEnabled：Alt ダブルクリックで呼び出し</p>
+</li>
+<li>
+<p>modifier：修飾キー</p>
+</li>
+<li>
+<p>virtualCode：主キー</p>
+</li>
+</ul>
+</li>
+<li>
+<p>apps：アプリ</p>
+<ul>
+<li>
+<p>appId：アプリ id</p>
+</li>
+<li>
+<p>modifier：修飾キー</p>
+</li>
+<li>
+<p>virtualCode：主キー</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>quickOpen：クイックオープン</p>
+<ul>
+<li>
+<p>name：名称</p>
+</li>
+<li>
+<p>type：タイプ（normal：汎用検索 / spec：垂直検索）</p>
+</li>
+<li>
+<p>index：連番</p>
+</li>
+<li>
+<p>url：url テンプレート</p>
+</li>
+<li>
+<p>enabled：有効かどうか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>customApps：カスタム app</p>
+<ul>
+<li>
+<p>filePath：app に対応する exe の所在パス</p>
+</li>
+<li>
+<p>enabled：有効かどうか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>dock：ドック（カテゴリ + コンテンツ）</p>
+<ul>
+<li>
+<p><strong>共通の規約：</strong> <strong><code>name</code>/<code>icon</code></strong> <strong>が欠けている場合は「内蔵デフォルト値を使う」ことを意味する（i18n または</strong> <strong><code>appId</code></strong> <strong>に対応する</strong> <strong><code>.zenmod</code></strong> <strong>から実行時に派生し、画面言語に応じて変化）。このフィールドがあればユーザーがカスタマイズ済みを意味し、原文のまま表示して翻訳しない。</strong></p>
+</li>
+<li>
+<p>categories：カテゴリ</p>
+<ul>
+<li>
+<p>id：内蔵カテゴリはセマンティック id（<code>folder</code>/<code>tools</code>/<code>ai</code>/<code>game</code>/<code>system</code>）。ユーザー新規作成は <code>category_&lt;タイムスタンプ&gt;</code></p>
+</li>
+<li>
+<p>name：任意。ユーザーが改名した場合のみ存在</p>
+</li>
+<li>
+<p>icon：FontAwesome class</p>
+</li>
+<li>
+<p>color：テーマカラー</p>
+</li>
+<li>
+<p>order：ソート順</p>
+</li>
+</ul>
+</li>
+<li>
+<p>contents：コンテンツ項目</p>
+<ul>
+<li>
+<p>id：内蔵ディレクトリ項目はセマンティック id（<code>desktop</code>/<code>documents</code>/<code>downloads</code>/<code>music</code>/<code>videos</code>）。その他は <code>content_&lt;タイムスタンプ&gt;</code></p>
+</li>
+<li>
+<p>categoryId：所属カテゴリの id</p>
+</li>
+<li>
+<p>type：<code>app</code> | <code>folder</code> | <code>url</code></p>
+</li>
+<li>
+<p>appId：<code>type=app</code> のとき必須。<code>.zenmod</code> の id に対応。名称とアイコンはすべてここから派生し、<strong>ディスクに書き込まない</strong></p>
+</li>
+<li>
+<p>folderPath：<code>type=folder</code> のとき必須。<code>%USERPROFILE%</code> などの環境変数対応</p>
+</li>
+<li>
+<p>url：<code>type=url</code> のとき必須。正規化済みの完全な URL（プロトコル接頭辞がなければ自動で <code>https://</code> を補完）。クリックするとシステムデフォルトのブラウザで開く。名称はユーザーが入力し、アイコンは実行時にサイトの favicon を取得（失敗時は <code>fas fa-globe</code> にフォールバック）。<strong>ディスクに書き込まない</strong></p>
+</li>
+<li>
+<p>name / icon：任意。意味は上記のとおり（<code>type=folder</code> のユーザー選択ディレクトリでは必須）</p>
+</li>
+<li>
+<p>color：アイコンの着色</p>
+</li>
+<li>
+<p>order：同じカテゴリ内のソート順</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-設定の変更" tabindex="-1">3. 設定の変更 <a class="doc-anchor" href="#3-設定の変更" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setConfig(config: json_obj, replace?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>config：getConfig と同じ</p>
+<ul>
+<li>
+<p>変更する内容だけを渡し、全内容を渡す必要はない</p>
+</li>
+<li>
+<p>同じキーの下の内容は完全な形で渡す必要がある</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;logLevel&quot;: &quot;1&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>replace（任意、デフォルト false）：false=既存設定への増分マージ、true=全体置換（バックアップインポート用。削除済みリスト項目を消せる）。<code>&quot;true&quot;</code> または <code>&quot;false&quot;</code> の文字列を渡し、省略時は <code>&quot;false&quot;</code> と同等。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意：<strong>「全量の getConfig を読んでから丸ごと setConfig で書き戻す」ことの禁止</strong>——<code>getConfig</code> の戻り値には <code>error</code> フィールドが含まれ、丸ごと書き戻すとそれが設定ファイルに保存されてしまう。必ず狭粒度で書くこと。例：<code>setConfig({ dock: { categories } })</code>。</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-設定の追加" tabindex="-1">4. 設定の追加 <a class="doc-anchor" href="#4-設定の追加" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.addConfig(key: string, value: json_obj) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>key：値の型は StringList または StringMapList でなければならない</p>
+</li>
+<li>
+<p>value</p>
+<ul>
+<li>
+<p>key の値の型が StringList の場合は string を渡す</p>
+</li>
+<li>
+<p>key の値の型が StringMapList の場合は json_obj を渡す</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-リストの取得" tabindex="-1">5. リストの取得 <a class="doc-anchor" href="#5-リストの取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getList(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>type：リストのタイプ</p>
+<ul>
+<li>font：システムフォントリスト（レジストリ <code>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts</code> を読む。ウォーターマークなどの用途でフォント選択に使用）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;list&quot;: [
+        {
+            &quot;name&quot;: &quot;Arial&quot;,
+            &quot;file&quot;: &quot;arial.ttf&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>list：フォントリスト</p>
+<ul>
+<li>
+<p>name：フォント名（&quot; (TrueType)&quot; / &quot; (OpenType)&quot; 接尾辞は除去済み）</p>
+</li>
+<li>
+<p>file：フォントファイル名</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-フロントエンドログの書き込み" tabindex="-1">6. フロントエンドログの書き込み <a class="doc-anchor" href="#6-フロントエンドログの書き込み" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.log(msg: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>msg：ログ内容。メインプロセスのログ（InfoMsg）に書き込まれる</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="7-カウントダウンキャッシュの書き込み" tabindex="-1">7. カウントダウンキャッシュの書き込み <a class="doc-anchor" href="#7-カウントダウンキャッシュの書き込み" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
+</code></pre>
+<p>カウントダウン通知のキャッシュデータ。メインプロセスと壁紙プロセスが共有するメモリに書き込み、直ちに壁紙プロセスへ再読み込みを通知します（通知しない場合、壁紙は自身の 30 秒ポーリングを待たなければ反映されない）。reminder / wallpaper の連携用であり、一般の業務は依存しないでください。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>data：カウントダウンの JSON 文字列（reminder モジュールが定義する payload）</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="3-ウィンドウコントロール" tabindex="-1">3. ウィンドウコントロール <a class="doc-anchor" href="#3-ウィンドウコントロール" aria-hidden="true">#</a></h2>
+<h3 id="1-ウィンドウの検索" tabindex="-1">1. ウィンドウの検索 <a class="doc-anchor" href="#1-ウィンドウの検索" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchWindow(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>keyword：検索キーワード</p>
+</li>
+<li>
+<p>maxResults：最大レコード数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;windows&quot;: [
+        {
+            &quot;hwnd&quot;: 18811010,
+            &quot;processId&quot;: 20708,
+            &quot;visible&quot;: 1,
+            &quot;topmost&quot;: 0,
+            &quot;name&quot;: &quot;Native API接口.md - MarkText&quot;,
+            &quot;className&quot;: &quot;Chrome_WidgetWin_1&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files\\MarkText\\MarkText.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\Program Files\\MarkText\\MarkText.exe\&quot; \&quot;D:\\doc\\a.md\&quot;&quot;,
+            &quot;desc&quot;: &quot;MarkText&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 180
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>windows：ウィンドウリスト</p>
+<ul>
+<li>
+<p>hwnd：ウィンドウハンドル</p>
+</li>
+<li>
+<p>processId：ウィンドウの所属プロセス id</p>
+</li>
+<li>
+<p>visible：可視かどうか</p>
+</li>
+<li>
+<p>topmost：最前面かどうか</p>
+</li>
+<li>
+<p>name：ウィンドウ名</p>
+</li>
+<li>
+<p>className：ウィンドウクラス名</p>
+</li>
+<li>
+<p>path：プロセス実行ファイルの完全パス</p>
+</li>
+<li>
+<p>cmdArgs：プロセスの起動コマンドライン</p>
+</li>
+<li>
+<p>desc：説明</p>
+</li>
+<li>
+<p>icon：ウィンドウアイコン。base64 形式</p>
+</li>
+<li>
+<p>score：検索スコア</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-ウィンドウコントロール" tabindex="-1">2. ウィンドウコントロール <a class="doc-anchor" href="#2-ウィンドウコントロール" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowControl(window: string, action: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>window：Name または HWND の string 形式</p>
+<ul>
+<li>
+<p>cmdPlate：ランチャー</p>
+</li>
+<li>
+<p>translate：スーパー翻訳</p>
+</li>
+<li>
+<p>download：高速ダウンロード</p>
+</li>
+<li>
+<p>calculator：スーパー電卓</p>
+</li>
+<li>
+<p>filePreview：ファイルプレビューア</p>
+</li>
+<li>
+<p>ocr：OCR</p>
+</li>
+<li>
+<p>quickocr：クイック OCR 翻訳ピン留めウィンドウ</p>
+</li>
+<li>
+<p>calendar：万年カレンダー</p>
+</li>
+<li>
+<p>appUsage：アプリ使用統計</p>
+</li>
+<li>
+<p>tray：トレイメニュー</p>
+</li>
+<li>
+<p>overlay：デスクトップエフェクト</p>
+</li>
+<li>
+<p>setting：設定</p>
+</li>
+<li>
+<p>main：メインウィンドウ（cmdPlate と同等）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>action</p>
+<ul>
+<li>
+<p>show：表示してアクティブ化</p>
+</li>
+<li>
+<p>showNoActivate：表示するがアクティブ化しない</p>
+</li>
+<li>
+<p>min：最小化</p>
+</li>
+<li>
+<p>max：最大化</p>
+</li>
+<li>
+<p>restore：復元</p>
+</li>
+<li>
+<p>hide：非表示</p>
+</li>
+<li>
+<p>close：閉じる</p>
+</li>
+<li>
+<p>darg：ドラッグ</p>
+</li>
+<li>
+<p>topmost：最前面化</p>
+</li>
+<li>
+<p>noTopmost：最前面解除</p>
+</li>
+<li>
+<p>quit：アプリの終了</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-ウィンドウ状態の取得" tabindex="-1">3. ウィンドウ状態の取得 <a class="doc-anchor" href="#3-ウィンドウ状態の取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>window：Name または HWND の string 形式。ウィンドウコントロールを参照</p>
+</li>
+<li>
+<p>can_suspend（任意）：そのウィンドウの WebView のサスペンドを許可するか（リソース管理スイッチ。省略時 false）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>説明：本インターフェースには副作用があります——状態を照会した後、ウィンドウが show/max 状態なら WebView の描画を復元し、そうでなければリソース節約のため WebView をサスペンドします（サスペンドは can_suspend が true のときのみ許可）。フロントエンドの常駐ページが自分の状態をポーリングする場合は true を渡し、通常の照会では false を渡す。</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;state&quot;: &quot;show&quot;,
+    &quot;topmost&quot;: &quot;0&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>state：状態（show：通常表示 / min：最小化 / max：最大化 / close：閉じる）</p>
+</li>
+<li>
+<p>topmost：最前面かどうか</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-コマンドパレットを開いて検索を実行" tabindex="-1">4. コマンドパレットを開いて検索を実行 <a class="doc-anchor" href="#4-コマンドパレットを開いて検索を実行" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>command：検索コマンド。例：<code>f path:C:\Users\Documents</code>（ファイルモジュールで指定ディレクトリを検索）</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>説明</p>
+<ul>
+<li>
+<p>コマンドパレットウィンドウを開き、検索コマンドを自動実行するためのインターフェース</p>
+</li>
+<li>
+<p>ドックなどのモジュールからファイル検索を素早く開くによく使われる</p>
+</li>
+<li>
+<p>コマンド形式は cmdplate が対応するすべての検索構文に対応</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-アプリ管理" tabindex="-1">4. アプリ管理 <a class="doc-anchor" href="#4-アプリ管理" aria-hidden="true">#</a></h2>
+<h3 id="1-アプリの検索" tabindex="-1">1. アプリの検索 <a class="doc-anchor" href="#1-アプリの検索" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchApp(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>keyword：検索キーワード</p>
+</li>
+<li>
+<p>maxResults：最大レコード数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;Microsoft.WindowsCamera&quot;,
+            &quot;name&quot;: &quot;相机&quot;,
+            &quot;path&quot;: &quot;C:\Program Files\WindowsApps\Microsoft.WindowsCamera&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 1,
+            &quot;score&quot;: 90
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>apps：アプリリスト</p>
+<ul>
+<li>
+<p>id：アプリの一意な id。起動時に必要</p>
+</li>
+<li>
+<p>name：名称</p>
+</li>
+<li>
+<p>desc：説明</p>
+</li>
+<li>
+<p>icon：base64 のアイコン</p>
+</li>
+<li>
+<p>appType：アプリタイプ（0：win32 アプリ / 1：uwp アプリ / 2：システムコマンド / 3：システム設定 / 4：内蔵モジュール）</p>
+</li>
+<li>
+<p>score：検索結果スコア</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-id-によるアプリ情報の一括取得非同期" tabindex="-1">2. id によるアプリ情報の一括取得（非同期） <a class="doc-anchor" href="#2-id-によるアプリ情報の一括取得非同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppInfo(appIds: string[]) : object
+</code></pre>
+<p>設定には <code>appId</code> のみを保存し、名称とアイコンは一律実行時に派生させます（<code>.zenmod</code> の <code>name</code> は多言語であり、スナップショットを設定に保存すると言語切替後に陳腐化する）。このインターフェースはまさにこのユースケースのためのものです。</p>
+<p>⚠️ <strong>ループで</strong> <strong><code>searchApp(appId, 1)</code></strong> <strong>を呼んで代用しないこと</strong>：<code>searchApp</code> は毎回アプリインデックス全体に対する全表スキャン + ピンインマッチング + スコアリング・ソートを行い、さらに 2 つのスレッドを並行して起動し、base64 アイコン付きの結果を複数件返します。ドックにショートカットキーを加えると数十個の appId があり、1 件ずつ照会すると起動が明らかに遅くなります。本インターフェースは 1 回で全部を受け取り、native 側は <code>map::find</code> で正確にヒットします。</p>
+<p>内部でアプリインデックスの準備完了を待つため（インデックスはバックグラウンドスレッドで生成される）、<strong>非同期バインド</strong>であり、コールドスタートの早期に呼んでも空の結果にはなりません。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>appIds：appId の配列。例：<code>[&quot;calculator&quot;, &quot;Microsoft.WindowsCamera&quot;]</code></li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<p>形式は <code>searchApp</code> と完全に同一（同じ <code>BuildAppResult</code>）ですが：</p>
+<ul>
+<li>
+<p>正確にヒットした項目のみを返し、<strong>見つからない id はサイレントにスキップされる</strong>ため、<code>apps.length</code> が入力の長さより小さくなることがある（設定内の無効な appId の検出に使える）</p>
+</li>
+<li>
+<p>順序は入力順で、<code>score</code> は常に 0（スコアリングに未参加）</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;calculator&quot;,
+            &quot;name&quot;: &quot;超级计算器&quot;,
+            &quot;path&quot;: &quot;calculator&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 4,
+            &quot;score&quot;: 0
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-アプリの起動" tabindex="-1">3. アプリの起動 <a class="doc-anchor" href="#3-アプリの起動" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.launchApp(id: string, admin : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>id：app の id（<code>searchApp</code> / <code>getAppInfo</code> が返した <code>id</code>）</p>
+</li>
+<li>
+<p>admin：管理者として実行するか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-使用統計の取得" tabindex="-1">4. 使用統計の取得 <a class="doc-anchor" href="#4-使用統計の取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppUsage(mode: string, startTime: string, stopTime: string, forceSync : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>mode：統計タイプ。day、week、month、year</p>
+</li>
+<li>
+<p>startTime：開始時刻。形式：yyyymmddhh。例：2025110300</p>
+</li>
+<li>
+<p>stopTime：終了時刻。形式：yyyymmddhh。例：2025110300</p>
+</li>
+<li>
+<p>forceSync：強制リフレッシュするか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;usages&quot;: [
+        {
+            &quot;time&quot;: &quot;20251104&quot;,
+            &quot;name&quot;: &quot;yyzTools.exe&quot;,
+            &quot;logo&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;usageTimes&quot;: 2,
+            &quot;usageTime&quot;: 4.172,
+            &quot;clickTimes&quot;: 4,
+            &quot;moveDistance&quot;: 105.572357,
+            &quot;pressTimes&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>usages：使用状況の統計</p>
+<ul>
+<li>
+<p>time：時間。day：yyyymmdd、week：yyyyww、month：yyyymm、year：yyyy</p>
+</li>
+<li>
+<p>name：アプリ名</p>
+</li>
+<li>
+<p>logo：アプリアイコン</p>
+</li>
+<li>
+<p>usageTimes：使用回数</p>
+</li>
+<li>
+<p>usageTime：使用時間（単位：秒）</p>
+</li>
+<li>
+<p>clickTimes：マウスクリック回数</p>
+</li>
+<li>
+<p>moveDistance：マウス移動距離（単位：cm）</p>
+</li>
+<li>
+<p>pressTimes：キー押下回数</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-プロセス管理" tabindex="-1">5. プロセス管理 <a class="doc-anchor" href="#5-プロセス管理" aria-hidden="true">#</a></h2>
+<h3 id="1-プロセスの検索" tabindex="-1">1. プロセスの検索 <a class="doc-anchor" href="#1-プロセスの検索" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchProcess(keyword: string, maxResults: number) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>keyword：検索キーワード</p>
+</li>
+<li>
+<p>maxResults：最大レコード数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;processes&quot;: [
+        {
+            &quot;id&quot;: 1228,
+            &quot;name&quot;: &quot;msedge.exe&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\...\\msedge.exe\&quot; --type=renderer&quot;,
+            &quot;suspend&quot;: 0,
+            &quot;desc&quot;: &quot;Microsoft Edge&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 60
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>processes：プロセスリスト</p>
+<ul>
+<li>
+<p>id：プロセス id</p>
+</li>
+<li>
+<p>name：プロセス名</p>
+</li>
+<li>
+<p>path：プロセス実行ファイルの完全パス</p>
+</li>
+<li>
+<p>cmdArgs：プロセスの起動コマンドライン</p>
+</li>
+<li>
+<p>suspend：サスペンド中かどうか</p>
+</li>
+<li>
+<p>desc：説明</p>
+</li>
+<li>
+<p>icon：プロセスアイコン。base64 形式</p>
+</li>
+<li>
+<p>score：検索スコア</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-プロセスコントロール" tabindex="-1">2. プロセスコントロール <a class="doc-anchor" href="#2-プロセスコントロール" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.processControl(processId: number, action: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>processId：プロセス ID</p>
+</li>
+<li>
+<p>action：アクション</p>
+<ul>
+<li>
+<p>terminate：終了</p>
+</li>
+<li>
+<p>suspend：サスペンド</p>
+</li>
+<li>
+<p>resume：再開</p>
+</li>
+<li>
+<p>restart：再起動</p>
+</li>
+</ul>
+</li>
+<li>
+<p>admin：新しいプロセスを管理者として実行するか（restart のとき有効）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="6-ファイル操作" tabindex="-1">6. ファイル操作 <a class="doc-anchor" href="#6-ファイル操作" aria-hidden="true">#</a></h2>
+<h3 id="1-ファイルの検索非同期" tabindex="-1">1. ファイルの検索（非同期） <a class="doc-anchor" href="#1-ファイルの検索非同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchFile(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>説明：自社開発の yyzFileSearch サービス（MFT インデックス + 名前付きパイプ IPC）が検索を実行し、Everything 風のクエリ構文に対応（例：<code>size:&gt;100MB</code>、<code>!ext:mp4</code>）。結果は関連性順にソート。検索はバックグラウンドスレッドで実行され、<strong>非同期バインド</strong>です。</p>
+</li>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>keyword：検索キーワード</p>
+</li>
+<li>
+<p>maxResults：最大レコード数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;WinMain.cpp&quot;,
+      &quot;path&quot;: &quot;D:\\WorkCodeup\\yyztools\\src\\yyztools&quot;,
+      &quot;dateModified&quot;: &quot;2025/10/18 14:05:00&quot;,
+      &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0,
+      &quot;isDir&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>files：ファイルリスト</p>
+<ul>
+<li>
+<p>name：ファイル名</p>
+</li>
+<li>
+<p>path：ファイルの所在ディレクトリ（ファイル名を含まない）。完全パス = path + &quot;\&quot; + name</p>
+</li>
+<li>
+<p>dateModified：更新時刻</p>
+</li>
+<li>
+<p>icon：ファイルアイコン。base64 形式</p>
+</li>
+<li>
+<p>score：検索スコア</p>
+</li>
+<li>
+<p>isDir：1 はディレクトリ、0 はファイル</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-ファイルを開く" tabindex="-1">2. ファイルを開く <a class="doc-anchor" href="#2-ファイルを開く" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFile(path: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>path：ファイルパス</p>
+</li>
+<li>
+<p>admin：管理者として開くか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-ファイルの位置を開く" tabindex="-1">3. ファイルの位置を開く <a class="doc-anchor" href="#3-ファイルの位置を開く" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFileLocation(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>path：ファイルパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-ファイルプレビューを開く" tabindex="-1">4. ファイルプレビューを開く <a class="doc-anchor" href="#4-ファイルプレビューを開く" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFilePreview(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>path：ファイルパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-ファイルをクリップボードへコピーカット" tabindex="-1">5. ファイルをクリップボードへコピー/カット <a class="doc-anchor" href="#5-ファイルをクリップボードへコピーカット" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFilesToClipboard(paths: string[], operation: string) : object
+</code></pre>
+<p>ファイルそのものをクリップボード（CF_HDROP）へコピー/カットし、エクスプローラーで Ctrl+V 貼り付けできます。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>paths：ファイルパスの配列</p>
+</li>
+<li>
+<p>operation：<code>copy</code> | <code>move</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="6-ファイルのブラウズ" tabindex="-1">6. ファイルのブラウズ <a class="doc-anchor" href="#6-ファイルのブラウズ" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseFile(filterName: string,
+                        filter: string, initDir: string, supportMulti: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>filterName：フィルター名</p>
+</li>
+<li>
+<p>filter：フィルター。'<em>.html;</em>.htm'</p>
+</li>
+<li>
+<p>initDir：初期ブラウズパス</p>
+</li>
+<li>
+<p>supportMulti：複数選択を許可するか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;paths&quot;: [&quot;d:\test\1.txt&quot;, &quot;d:\test\2.txt&quot;]
+}
+</code></pre>
+<ul>
+<li>paths：ブラウズで選択したファイルの完全パスのリスト。ユーザーがキャンセルした場合 <code>error</code> は <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="7-ディレクトリのブラウズ" tabindex="-1">7. ディレクトリのブラウズ <a class="doc-anchor" href="#7-ディレクトリのブラウズ" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseDir(initDir: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>initDir：初期ブラウズパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;d:\test&quot;
+}
+</code></pre>
+<ul>
+<li>path：ブラウズで選択したディレクトリの完全パス。ユーザーがキャンセルした場合 <code>error</code> は <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="8-指定ディレクトリの取得" tabindex="-1">8. 指定ディレクトリの取得 <a class="doc-anchor" href="#8-指定ディレクトリの取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getKnownDir(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>type：タイプ</p>
+<ul>
+<li>
+<p>download：ダウンロード</p>
+</li>
+<li>
+<p>video：ビデオ</p>
+</li>
+<li>
+<p>music：ミュージック</p>
+</li>
+<li>
+<p>picture：ピクチャ</p>
+</li>
+<li>
+<p>document：ドキュメント</p>
+</li>
+<li>
+<p>appDataRoaming：AppData/Roaming</p>
+</li>
+<li>
+<p>appDataLocal：AppData/Local</p>
+</li>
+<li>
+<p>appDir：プログラムの所在ディレクトリ</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;D:\Downloads&quot;
+}
+</code></pre>
+<ul>
+<li>path：指定タイプのディレクトリの完全パス</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-ファイルの保存" tabindex="-1">9. ファイルの保存 <a class="doc-anchor" href="#9-ファイルの保存" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.saveFile(filePath: string, data: string, binaryFile: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>filePath：ファイルパス</p>
+</li>
+<li>
+<p>data：ファイル内容</p>
+<ul>
+<li>
+<p>テキストファイル：内容</p>
+</li>
+<li>
+<p>バイナリファイル：内容の base64 エンコード</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binaryFile：バイナリファイルかどうか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="10-ファイルアイコンの取得" tabindex="-1">10. ファイルアイコンの取得 <a class="doc-anchor" href="#10-ファイルアイコンの取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileIcon(filePath: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>filePath：ファイルパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;icon&quot;: &quot;data:image/png;base64,&quot;
+}
+</code></pre>
+<ul>
+<li>icon：ファイルアイコン。base64 エンコード</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-ファイルの読み取り" tabindex="-1">11. ファイルの読み取り <a class="doc-anchor" href="#11-ファイルの読み取り" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFile(path: string, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>path：ファイルパス</p>
+</li>
+<li>
+<p>encoding：エンコード方式</p>
+<ul>
+<li>
+<p>&quot;utf8&quot;：テキストモード（デフォルト）</p>
+</li>
+<li>
+<p>&quot;base64&quot; または &quot;binary&quot;：バイナリモード</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<p>成功時：</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;文件内容&quot;,
+  &quot;encoding&quot;: &quot;utf8&quot;,
+  &quot;size&quot;: 1024
+}
+</code></pre>
+<p>ファイルが大きすぎる場合（&gt;50MB）：</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 3,
+  &quot;errorMsg&quot;: &quot;file too large, use readFileChunk instead&quot;,
+  &quot;fileSize&quot;: 52428800,
+  &quot;chunkSize&quot;: 1048576
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="12-大ファイルの分割読み取り" tabindex="-1">12. 大ファイルの分割読み取り <a class="doc-anchor" href="#12-大ファイルの分割読み取り" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFileChunk(path: string, offset: number, length: number, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>path：ファイルパス</p>
+</li>
+<li>
+<p>offset：開始オフセット（バイト）</p>
+</li>
+<li>
+<p>length：読み取り長（バイト、最大 1MB）</p>
+</li>
+<li>
+<p>encoding：エンコード方式（&quot;base64&quot; に固定）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;base64编码的数据&quot;,
+  &quot;offset&quot;: 0,
+  &quot;length&quot;: 1048576,
+  &quot;encoding&quot;: &quot;base64&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="13-ファイルへの書き込み" tabindex="-1">13. ファイルへの書き込み <a class="doc-anchor" href="#13-ファイルへの書き込み" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.writeFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>path：ファイルパス</p>
+</li>
+<li>
+<p>data：ファイル内容</p>
+<ul>
+<li>
+<p>テキストファイル：テキスト内容</p>
+</li>
+<li>
+<p>バイナリファイル：base64 エンコードされた内容</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary：バイナリモードかどうか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="14-ファイルへの追記" tabindex="-1">14. ファイルへの追記 <a class="doc-anchor" href="#14-ファイルへの追記" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.appendFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>path：ファイルパス</p>
+</li>
+<li>
+<p>data：追記内容</p>
+<ul>
+<li>
+<p>テキストファイル：テキスト内容</p>
+</li>
+<li>
+<p>バイナリファイル：base64 エンコードされた内容</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary：バイナリモードかどうか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="15-名前の変更移動" tabindex="-1">15. 名前の変更/移動 <a class="doc-anchor" href="#15-名前の変更移動" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.rename(oldPath: string, newPath: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>oldPath：元のパス</p>
+</li>
+<li>
+<p>newPath：新しいパス</p>
+</li>
+<li>
+<p>overwrite：既存のファイルを上書きするか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="16-ファイルのコピー" tabindex="-1">16. ファイルのコピー <a class="doc-anchor" href="#16-ファイルのコピー" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFile(source: string, destination: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>source：ソースファイルのパス</p>
+</li>
+<li>
+<p>destination：宛先ファイルのパス</p>
+</li>
+<li>
+<p>overwrite：既存のファイルを上書きするか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="17-ファイルまたはディレクトリの削除" tabindex="-1">17. ファイルまたはディレクトリの削除 <a class="doc-anchor" href="#17-ファイルまたはディレクトリの削除" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deletePath(path: string, useRecycleBin: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>path：ファイルまたはディレクトリのパス</p>
+</li>
+<li>
+<p>useRecycleBin：ごみ箱へ移すかどうか（false の場合は直接削除、<strong>復元不可</strong>）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>説明：ディレクトリは一律再帰削除（すべての子内容を含む）。</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="18-ディレクトリの作成" tabindex="-1">18. ディレクトリの作成 <a class="doc-anchor" href="#18-ディレクトリの作成" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.mkdir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>path：ディレクトリパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="19-ディレクトリの読み取り" tabindex="-1">19. ディレクトリの読み取り <a class="doc-anchor" href="#19-ディレクトリの読み取り" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readDir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>path：ディレクトリパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [&quot;file1.txt&quot;, &quot;file2.jpg&quot;],
+  &quot;directories&quot;: [&quot;subdir1&quot;, &quot;subdir2&quot;]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="20-パスの存在チェック" tabindex="-1">20. パスの存在チェック <a class="doc-anchor" href="#20-パスの存在チェック" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.exists(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>path：ファイルまたはディレクトリのパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;exists&quot;: true
+}
+</code></pre>
+<ul>
+<li>exists：ネイティブブール</li>
+</ul>
+</li>
+</ul>
+<h3 id="21-ファイル情報の取得" tabindex="-1">21. ファイル情報の取得 <a class="doc-anchor" href="#21-ファイル情報の取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileInfo(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>path：ファイルまたはディレクトリのパス</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;path&quot;: &quot;D:\\test\\file.txt&quot;,
+  &quot;name&quot;: &quot;file.txt&quot;,
+  &quot;isDirectory&quot;: false,
+  &quot;size&quot;: 1024,
+  &quot;readonly&quot;: false,
+  &quot;hidden&quot;: false,
+  &quot;system&quot;: false,
+  &quot;modifiedTime&quot;: &quot;2025-10-19 18:48:29&quot;,
+  &quot;createdTime&quot;: &quot;2025-10-15 10:30:00&quot;,
+  &quot;extension&quot;: &quot;.txt&quot;
+}
+</code></pre>
+<ul>
+<li>isDirectory / readonly / hidden / system：ネイティブブール</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-メディア処理" tabindex="-1">7. メディア処理 <a class="doc-anchor" href="#7-メディア処理" aria-hidden="true">#</a></h2>
+<p>メディア 5 種は C++ 側が <code>bin64\Platform\</code> 配下のサードパーティ CLI ツールを呼び出して実行します。<code>ffprobeRun</code> 以外はすべて<strong>非同期バインド</strong>（バックグラウンドスレッドで実行、UI スレッドをブロックしない）。バッチ処理は逐次で、同一時刻に実行されるサブプロセスは 1 つだけで、<code>Zen.cancelRun()</code> で現在の実行を中断できます（キャンセル時は <code>errorMsg: &quot;cancelled&quot;</code> を返す）。</p>
+<h3 id="1-magick-コマンドの実行非同期" tabindex="-1">1. magick コマンドの実行（非同期） <a class="doc-anchor" href="#1-magick-コマンドの実行非同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.imageRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>args：完全な magick コマンドライン引数（magick.exe 本体を除く）。フロントエンドが組み立てる。パスは自分でダブルクォートで囲むこと。例：<code>&quot;D:\\in.jpg&quot; -resize 800x600 &quot;D:\\out.jpg&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 側は引数を組み立てず、<code>magick.exe &lt;args&gt;</code> を実行して結果をキャプチャするだけです。error が 0 以外のとき errorMsg は magick の stderr を透過し、stdout は magick の標準出力（identify などのコマンドの結果）</p>
+</li>
+</ul>
+<h3 id="2-ffmpeg-コマンドの実行非同期" tabindex="-1">2. ffmpeg コマンドの実行（非同期） <a class="doc-anchor" href="#2-ffmpeg-コマンドの実行非同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffmpegRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>args：完全な ffmpeg コマンドライン引数（ffmpeg.exe 本体を除く）。フロントエンドが組み立てる。パスは自分でダブルクォートで囲むこと。例：<code>-i &quot;D:\in.mp4&quot; -vf &quot;scale=1280:720&quot; -c:v libx264 -crf 23 &quot;D:\out.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 側は引数を組み立てず、<code>ffmpeg.exe &lt;args&gt;</code> を実行して結果をキャプチャするだけです。error が 0 以外のとき errorMsg は ffmpeg の stderr を透過し、stdout は ffmpeg の標準出力。動画処理は時間がかかるため、C++ のデフォルトタイムアウトは 1800s</p>
+</li>
+</ul>
+<h3 id="3-ffprobe-コマンドの実行メタデータの検出同期" tabindex="-1">3. ffprobe コマンドの実行（メタデータの検出、同期） <a class="doc-anchor" href="#3-ffprobe-コマンドの実行メタデータの検出同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffprobeRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>args：完全な ffprobe コマンドライン引数（ffprobe.exe 本体を除く）。よく使うのは <code>-v quiet -print_format json -show_format -show_streams &quot;D:\in.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;{ ...json... }&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 側は <code>ffprobe.exe &lt;args&gt;</code> を実行して返すだけです。stdout は通常 JSON で、フロントエンドが自分でパースする。検出は高速なため同期バインドを維持、デフォルトタイムアウト 30s</p>
+</li>
+</ul>
+<h3 id="4-pdfcpu-コマンドの実行非同期" tabindex="-1">4. pdfcpu コマンドの実行（非同期） <a class="doc-anchor" href="#4-pdfcpu-コマンドの実行非同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pdfRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>args：完全な pdfcpu コマンドライン引数（pdfcpu.exe 本体を除く）。フロントエンドが組み立てる。パスは自分でダブルクォートで囲むこと。例：<code>merge &quot;D:\out.pdf&quot; &quot;D:\in1.pdf&quot; &quot;D:\in2.pdf&quot; --force</code></li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 側は引数を組み立てず、<code>pdfcpu.exe &lt;args&gt;</code> を実行して結果をキャプチャするだけです。error が 0 以外のとき errorMsg は pdfcpu の stderr を透過し、stdout は pdfcpu の標準出力（<code>info -j</code> などのコマンドの結果）。C++ のデフォルトタイムアウトは 1800s</p>
+</li>
+</ul>
+<h3 id="5-ghostscript-コマンドの実行非同期" tabindex="-1">5. Ghostscript コマンドの実行（非同期） <a class="doc-anchor" href="#5-ghostscript-コマンドの実行非同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.gsRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>args：完全な Ghostscript コマンドライン引数（gswin64c.exe 本体を除く）。フロントエンドが組み立てる。パスは自分でダブルクォートで囲むこと。例：<code>-sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=150 -sOutputFile=&quot;D:\out.pdf&quot; &quot;D:\in.pdf&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 側は引数を組み立てず、<code>Platform\Ghostscript\gswin64c.exe &lt;args&gt;</code> を実行して結果をキャプチャするだけです。error が 0 以外のとき errorMsg は Ghostscript の stderr を透過。C++ のデフォルトタイムアウトは 1800s。現在は PDF ツールの圧縮（optimize）ステップに使用しており、その他の PDF 操作は引き続き <code>pdfRun</code>（pdfcpu）を使う</p>
+</li>
+</ul>
+<h3 id="6-現在のメディアサブプロセスのキャンセル" tabindex="-1">6. 現在のメディアサブプロセスのキャンセル <a class="doc-anchor" href="#6-現在のメディアサブプロセスのキャンセル" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.cancelRun() : object
+</code></pre>
+<ul>
+<li>
+<p>入力：なし</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0
+}
+</code></pre>
+</li>
+<li>
+<p>注：キャンセルシグナルを発火し、現在実行中の <code>imageRun</code>/<code>ffmpegRun</code>/<code>pdfRun</code>/<code>gsRun</code> のサブプロセスを終了させます（<code>TerminateProcess</code>）。キャンセルされた呼び出しは <code>{error:2, errorMsg:&quot;cancelled&quot;}</code> を返す。バッチ処理は逐次で、同一時刻に実行されるサブプロセスは 1 つだけ。</p>
+</li>
+</ul>
+<h2 id="8-スクリーンショットと-ocr" tabindex="-1">8. スクリーンショットと OCR <a class="doc-anchor" href="#8-スクリーンショットと-ocr" aria-hidden="true">#</a></h2>
+<h3 id="1-スクリーンショットデスクトップへピン留め" tabindex="-1">1. スクリーンショット/デスクトップへピン留め <a class="doc-anchor" href="#1-スクリーンショットデスクトップへピン留め" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.screenCap(mode:string, wait:bool, file: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>mode：モード</p>
+<ul>
+<li>
+<p>normal：通常</p>
+</li>
+<li>
+<p>long：長いスクリーンショット</p>
+</li>
+<li>
+<p>fast：クリップボードへの高速スクリーンショット（注釈なし、OCR 向け）</p>
+</li>
+<li>
+<p>quickocr：範囲をドラッグ選択後、即座に OCR+翻訳し、訳文を選択範囲の元テキスト位置に画面へピン留め表示（クイック OCR 翻訳）</p>
+</li>
+<li>
+<p>pinClipboard：クリップボードの画像をデスクトップへピン留め</p>
+</li>
+<li>
+<p>pinFile：画像ファイルの画像をデスクトップへピン留め</p>
+</li>
+<li>
+<p>pinArea：画面の指定領域を直接キャプチャし、その場でデスクトップにピン留め（file は &quot;x,y,w,h&quot; の物理ピクセル）</p>
+</li>
+<li>
+<p>pinWin：指定ウィンドウのクライアント領域を直接キャプチャし、その場でデスクトップにピン留め（param は10進数 HWND）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>wait：スクリーンショットの完了を待つか</p>
+</li>
+<li>
+<p>param: ファイルパス（pinFile用）；領域文字列 &quot;x,y,w,h&quot;（pinArea用）；10進数 HWND（pinWin用）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-ocr-の初期化" tabindex="-1">2. OCR の初期化 <a class="doc-anchor" href="#2-ocr-の初期化" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrInit(lang: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>lang：言語</p>
+<ul>
+<li>
+<p>zh-CN：簡体字中国語</p>
+</li>
+<li>
+<p>zh-TW：繁体字中国語</p>
+</li>
+<li>
+<p>en-US：英語</p>
+</li>
+<li>
+<p>ja-JP：日本語</p>
+</li>
+<li>
+<p>ko-KR：韓国語</p>
+</li>
+<li>
+<p>ru-RU：ロシア語</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-ocr-認識非同期" tabindex="-1">3. OCR 認識（非同期） <a class="doc-anchor" href="#3-ocr-認識非同期" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrRecognition(image: string) : object
+</code></pre>
+<p>OCR は時間のかかる操作のため<strong>非同期バインド</strong>で、Promise で結果が返ります。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>image：画像。base64 エンコード</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;result&quot;: {
+        &quot;code&quot;: 100,
+        &quot;data&quot;: [
+            {
+                &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+                &quot;score&quot;: 0.9605724896703448,
+                &quot;text&quot;: &quot;有发热症状患者&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>result：認識結果</p>
+<ul>
+<li>
+<p>code：エンコード。100 に固定</p>
+</li>
+<li>
+<p>data：結果の集合</p>
+<ul>
+<li>
+<p>box：テキストの位置（4 つの角の座標）</p>
+</li>
+<li>
+<p>text：認識後のテキスト</p>
+</li>
+<li>
+<p>score：認識スコア</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-暗号化復号" tabindex="-1">9. 暗号化・復号 <a class="doc-anchor" href="#9-暗号化復号" aria-hidden="true">#</a></h2>
+<h3 id="1-データの暗号化" tabindex="-1">1. データの暗号化 <a class="doc-anchor" href="#1-データの暗号化" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.encrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>target：暗号化するデータ</p>
+<ul>
+<li>
+<p>type=&quot;text&quot; の場合はテキスト文字列</p>
+</li>
+<li>
+<p>type=&quot;data&quot; の場合は Base64 エンコードされたバイナリデータ</p>
+</li>
+<li>
+<p>type=&quot;hex&quot; の場合は 16 進文字列</p>
+</li>
+<li>
+<p>type=&quot;file&quot; の場合はファイルパス</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：暗号化アルゴリズム</p>
+<ul>
+<li>
+<p>対称暗号：&quot;aes-128-cbc&quot;, &quot;aes-192-cbc&quot;, &quot;aes-256-cbc&quot;, &quot;aes-128-ecb&quot;, &quot;aes-256-ecb&quot;, &quot;aes-128-ctr&quot;, &quot;aes-256-ctr&quot;, &quot;des-cbc&quot;, &quot;des-ecb&quot;, &quot;des-ede3-cbc&quot; (3DES), &quot;des-ede3-ecb&quot;, &quot;rc4&quot;, &quot;bf-ecb&quot; (Blowfish), &quot;rc2-cbc&quot;, &quot;sm4-cbc&quot;, &quot;sm4-ecb&quot;, &quot;sm4-ctr&quot;</p>
+</li>
+<li>
+<p>非対称暗号：&quot;rsa-pkcs1&quot;, &quot;rsa-oaep&quot;（RSA。公開鍵で暗号化、秘密鍵で復号）、&quot;sm2&quot;（中国国標の楕円曲線 sm2p256v1。公開鍵で暗号化、秘密鍵で復号。1 回で任意長を処理でき、分割不要）</p>
+</li>
+<li>
+<p>key/iv は Base64。内部で 16 進に変換したうえで <code>enc -K &lt;hex&gt; -iv &lt;hex&gt;</code> の形式で渡され、鍵長はアルゴリズムに正確に一致する必要がある</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type：入力タイプ（デフォルト &quot;text&quot;）</p>
+<ul>
+<li>
+<p>&quot;text&quot;：テキストデータ</p>
+</li>
+<li>
+<p>&quot;data&quot;：Base64 エンコードされたバイナリデータ</p>
+</li>
+<li>
+<p>&quot;hex&quot;：16 進文字列</p>
+</li>
+<li>
+<p>&quot;file&quot;：ファイルパス</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key：対称は Base64 エンコードされた鍵。非対称（rsa-*、sm2）は PEM テキスト（暗号化では公開鍵、復号では秘密鍵を渡す。そのまま透過し Base64 デコードしない）</p>
+</li>
+<li>
+<p>iv：Base64 エンコードされた初期化ベクトル（任意。一部のアルゴリズムで必要。非対称では無視）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的加密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;text&quot;,
+  &quot;inputSize&quot;: 1024,
+  &quot;outputSize&quot;: 1040
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-データの復号" tabindex="-1">2. データの復号 <a class="doc-anchor" href="#2-データの復号" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.decrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>target：復号するデータ</p>
+<ul>
+<li>
+<p>type=&quot;data&quot; の場合は Base64 エンコードされた暗号文</p>
+</li>
+<li>
+<p>type=&quot;file&quot; の場合は暗号文ファイルのパス</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：暗号化アルゴリズム（encrypt と同じ）</p>
+</li>
+<li>
+<p>type：入力タイプ（デフォルト &quot;data&quot;）</p>
+<ul>
+<li>
+<p>&quot;data&quot;：Base64 エンコードされた暗号文</p>
+</li>
+<li>
+<p>&quot;file&quot;：暗号文ファイルのパス</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key：対称は Base64 エンコードされた鍵。非対称（rsa-*、sm2）は PEM テキスト（暗号化では公開鍵、復号では秘密鍵を渡す。そのまま透過し Base64 デコードしない）</p>
+</li>
+<li>
+<p>iv：Base64 エンコードされた初期化ベクトル（任意。非対称では無視）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的解密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;data&quot;,
+  &quot;inputSize&quot;: 1040,
+  &quot;outputSize&quot;: 1024
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-鍵の生成" tabindex="-1">3. 鍵の生成 <a class="doc-anchor" href="#3-鍵の生成" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateKey(algorithm: string, bits: string = '') : object
+</code></pre>
+<p>鍵生成の統一入口（内蔵の openssl.exe で生成するため、フロントエンドはブラウザの WebCrypto に依存しない）。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>algorithm：アルゴリズム名</p>
+<ul>
+<li>
+<p>対称：aes-128-cbc / aes-256-cbc / des-cbc / des-ede3-cbc / sm4-cbc / sm4-ecb / sm4-ctr / rc2-cbc / rc4 / bf-ecb など（鍵長はアルゴリズム名から解析）</p>
+</li>
+<li>
+<p>非対称：&quot;rsa&quot;（bits が有効）/ &quot;sm2&quot;（固定曲線 sm2p256v1）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>bits：RSA 鍵長（&quot;2048&quot;/&quot;4096&quot;、デフォルト 2048）。対称アルゴリズムと SM2 では無視</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">// 対称アルゴリズム
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;key&quot;: &quot;Base64编码的密钥&quot; }
+// 非対称アルゴリズム
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;sm2&quot;, &quot;publicKey&quot;: &quot;-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n&quot;, &quot;privateKey&quot;: &quot;-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n&quot; }
+</code></pre>
+</li>
+</ul>
+<h3 id="4-iv-の生成" tabindex="-1">4. IV の生成 <a class="doc-anchor" href="#4-iv-の生成" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateIv(algorithm: string) : object
+</code></pre>
+<p>対称アルゴリズムのブロックサイズに応じてランダムな IV を生成（内蔵の openssl.exe で生成）。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>algorithm：対称アルゴリズム名（encrypt の対称アルゴリズム一覧と同じ）</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;iv&quot;: &quot;Base64编码的IV&quot; }
+</code></pre>
+<p>注：AES/SM4 のブロックサイズは 16 バイト。DES/3DES/RC2 は 8 バイト。ECB モードとストリーム暗号（rc4）は IV 不要で、<code>iv</code> は空文字列を返す。</p>
+</li>
+</ul>
+<h3 id="5-ハッシュの計算" tabindex="-1">5. ハッシュの計算 <a class="doc-anchor" href="#5-ハッシュの計算" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.calcHash(target: string, algorithm: string, type?: string, key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>target：計算対象。意味は type により変わる</p>
+<ul>
+<li>
+<p>type=&quot;file&quot; の場合はファイルパス</p>
+</li>
+<li>
+<p>type=&quot;text&quot; の場合はテキスト文字列（UTF-8 でダイジェストを計算）</p>
+</li>
+<li>
+<p>type=&quot;data&quot; の場合は Base64 エンコードされたバイナリデータ</p>
+</li>
+<li>
+<p>type=&quot;hex&quot; の場合は 16 進文字列</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：ハッシュアルゴリズム</p>
+<ul>
+<li>
+<p>&quot;md5&quot;</p>
+</li>
+<li>
+<p>&quot;sha1&quot;</p>
+</li>
+<li>
+<p>&quot;sha224&quot;</p>
+</li>
+<li>
+<p>&quot;sha256&quot;</p>
+</li>
+<li>
+<p>&quot;sha384&quot;</p>
+</li>
+<li>
+<p>&quot;sha512&quot;</p>
+</li>
+<li>
+<p>&quot;ripemd160&quot;</p>
+</li>
+<li>
+<p>&quot;sm3&quot;（中国国標 SM3 ダイジェスト。256 ビット / 64 桁の 16 進）</p>
+</li>
+<li>
+<p>&quot;sha3-224&quot; / &quot;sha3-256&quot; / &quot;sha3-384&quot; / &quot;sha3-512&quot;（SHA-3 / Keccak、NIST FIPS 202）</p>
+</li>
+<li>
+<p>&quot;blake2b512&quot; / &quot;blake2s256&quot;（BLAKE2。モダンな高性能ダイジェスト）</p>
+</li>
+<li>
+<p>&quot;crc32&quot;（CRC32 チェックサム。8 桁の 16 進）</p>
+</li>
+<li>
+<p>&quot;crc16&quot;（CRC16 チェックサム。4 桁の 16 進）</p>
+</li>
+<li>
+<p>&quot;checksum&quot;（バイト累積和。8 桁の 16 進）</p>
+</li>
+<li>
+<p>&quot;hmac-md5&quot; / &quot;hmac-sha1&quot; / &quot;hmac-sha256&quot; / &quot;hmac-sha512&quot; / &quot;hmac-sm3&quot; / &quot;hmac-sha3-256&quot; / &quot;hmac-sha3-512&quot;（HMAC。第 4 引数 key が鍵で、出力は 16 進の MAC）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type：入力タイプ（任意、デフォルト &quot;file&quot;）</p>
+<ul>
+<li>
+<p>&quot;file&quot;：ファイルのハッシュを計算</p>
+</li>
+<li>
+<p>&quot;text&quot;：テキストのハッシュを計算</p>
+</li>
+<li>
+<p>&quot;data&quot;：バイナリデータのハッシュを計算（target は Base64 文字列であること）</p>
+</li>
+<li>
+<p>&quot;hex&quot;：16 進文字列のハッシュを計算（target は hex 文字列。デコード後にバイト単位で計算）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;hash&quot;: &quot;D41D8CD98F00B204E9800998ECF8427E&quot;,
+  &quot;algorithm&quot;: &quot;md5&quot;,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="10-クリップボード履歴" tabindex="-1">10. クリップボード履歴 <a class="doc-anchor" href="#10-クリップボード履歴" aria-hidden="true">#</a></h2>
+<h3 id="1-クリップボードの検索" tabindex="-1">1. クリップボードの検索 <a class="doc-anchor" href="#1-クリップボードの検索" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchClip(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>keyword：検索キーワード</p>
+</li>
+<li>
+<p>maxResults：最大レコード数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;clips&quot;: [
+    {
+      &quot;id&quot;: &quot;1235642340977&quot;,
+      &quot;name&quot;: &quot;Weixin.exe&quot;,
+      &quot;text&quot;: &quot;文本内容&quot;,
+      &quot;ocrJson&quot;: &quot;{\&quot;code\&quot;:100,\&quot;data\&quot;:[...]}&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:29&quot;,
+      &quot;image&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0
+    },
+    {
+      &quot;id&quot;: &quot;235634234232&quot;,
+      &quot;name&quot;: &quot;MarkText.exe&quot;,
+      &quot;text&quot;: &quot;function&quot;,
+      &quot;ocrJson&quot;: &quot;&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:21&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;score&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>clips：クリップボードの履歴内容リスト</p>
+<ul>
+<li>
+<p>id：レコード id。一意な識別子</p>
+</li>
+<li>
+<p>name：コピー元のソースプロセス名</p>
+</li>
+<li>
+<p>text：テキスト内容（image が空でない場合、画像の OCR テキスト内容）</p>
+</li>
+<li>
+<p>image：画像内容。base64 形式</p>
+</li>
+<li>
+<p>dateCreated：作成日時</p>
+</li>
+<li>
+<p>ocrJson：画像 OCR 出力の整形済み内容</p>
+<ul>
+<li>
+<p>box：テキストの位置（4 つの角の座標）</p>
+</li>
+<li>
+<p>text：認識後のテキスト</p>
+</li>
+<li>
+<p>score：認識スコア</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;code&quot;: 100,
+    &quot;data&quot;: [
+        {
+            &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+            &quot;score&quot;: 0.9605724896703448,
+            &quot;text&quot;: &quot;有发热症状患者&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-レコードの-1-件削除" tabindex="-1">2. レコードの 1 件削除 <a class="doc-anchor" href="#2-レコードの-1-件削除" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deleteClip(id: string) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>id：レコード id</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-レコードの消去" tabindex="-1">3. レコードの消去 <a class="doc-anchor" href="#3-レコードの消去" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.clearClip() : object
+</code></pre>
+<ul>
+<li>
+<p>入力：なし</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="11-ブックマーク" tabindex="-1">11. ブックマーク <a class="doc-anchor" href="#11-ブックマーク" aria-hidden="true">#</a></h2>
+<h3 id="1-ブックマークの検索" tabindex="-1">1. ブックマークの検索 <a class="doc-anchor" href="#1-ブックマークの検索" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchBookmark(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>keyword：検索キーワード</p>
+</li>
+<li>
+<p>maxResults：最大レコード数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;bookmarks&quot;: [
+        {
+            &quot;id&quot;: &quot;13568723452&quot;,
+            &quot;name&quot;: &quot;DeepSeek | 深度求索&quot;,
+            &quot;url&quot;: &quot;https://www.deepseek.com/&quot;,
+            &quot;dateAdded&quot;: &quot;2018-12-19 21:20:48&quot;,
+            &quot;dateLastUsed&quot;: &quot;2025-05-21 15:04:06&quot;,
+            &quot;visitCount&quot;: 37,
+            &quot;score&quot;: 80
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>bookmarks：ブックマークリスト</p>
+<ul>
+<li>
+<p>id：一意な ID</p>
+</li>
+<li>
+<p>name：名称</p>
+</li>
+<li>
+<p>url：リンク</p>
+</li>
+<li>
+<p>dateAdded：追加日時</p>
+</li>
+<li>
+<p>dateLastUsed：使用日時</p>
+</li>
+<li>
+<p>visitCount：使用回数</p>
+</li>
+<li>
+<p>score：検索スコア</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-ブックマークを開く" tabindex="-1">2. ブックマークを開く <a class="doc-anchor" href="#2-ブックマークを開く" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openBookmark(id: string, privacyMode: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>id：id</p>
+</li>
+<li>
+<p>privacyMode：プライベートモード</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="12-コマンド実行" tabindex="-1">12. コマンド実行 <a class="doc-anchor" href="#12-コマンド実行" aria-hidden="true">#</a></h2>
+<h3 id="1-コマンドラインの実行" tabindex="-1">1. コマンドラインの実行 <a class="doc-anchor" href="#1-コマンドラインの実行" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runCmd(cmd: string, admin : bool) : object
+</code></pre>
+<p><code>cmd.exe /k &lt;cmd&gt;</code> で可視のコマンドラインウィンドウを開きコマンドを実行します（ウィンドウは開いたまま）。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>cmd：コマンド</p>
+</li>
+<li>
+<p>admin：管理者として実行するか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-任意のプログラムの実行" tabindex="-1">2. 任意のプログラムの実行 <a class="doc-anchor" href="#2-任意のプログラムの実行" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runAny(cmdExe: string, cmdArgs: string, admin : bool) : object
+</code></pre>
+<p>任意の実行可能ファイルまたは URL を直接起動します（URL はシステムのデフォルト関連付けで開く。ブラウザなど）。</p>
+<ul>
+<li>
+<p>入力</p>
+<ul>
+<li>
+<p>cmdExe：コマンドのパスまたは URL</p>
+</li>
+<li>
+<p>cmdArgs：コマンド引数</p>
+</li>
+<li>
+<p>admin：管理者として実行するか</p>
+</li>
+</ul>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="13-アップデート" tabindex="-1">13. アップデート <a class="doc-anchor" href="#13-アップデート" aria-hidden="true">#</a></h2>
+<p>アップデートは独立したプロセス <code>yyzUpdater.exe</code> が行い、メインプロセスは起動と状態の検出のみを担います。</p>
+<h3 id="1-アップデートのチェック" tabindex="-1">1. アップデートのチェック <a class="doc-anchor" href="#1-アップデートのチェック" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.checkUpdate() : object
+</code></pre>
+<p><code>yyzUpdater.exe --check-and-apply</code> を起動します（検出 + ダウンロード + 適用を一括で行う）。</p>
+<ul>
+<li>
+<p>入力：なし</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+<p>注：<code>error:0</code> はアップデータの起動に成功したことのみを表し、<strong>アップデートの結果を表さない</strong>。アップデートの進行中/準備完了の状態は <code>getUpdateState</code> で照会する。</p>
+</li>
+</ul>
+<h3 id="2-アップデート状態の取得" tabindex="-1">2. アップデート状態の取得 <a class="doc-anchor" href="#2-アップデート状態の取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getUpdateState() : object
+</code></pre>
+<p>アップデート状態をリアルタイムで検出します（トレイのポーリング用）：</p>
+<ul>
+<li>
+<p>updater が実行中か → シングルトンミューテックス <code>Local\yyzUpdater_SingleInstance</code></p>
+</li>
+<li>
+<p>ダウンロード済みで適用待ちか → <code>%APPDATA%\yyzTools\Update\update.ready</code> が存在するか（存在すればその中の main パッケージの version を解析）</p>
+</li>
+<li>
+<p>手動チェックが終了し更新なしか → <code>%APPDATA%\yyzTools\Update\update.result</code> マーカー（<strong>読んだら削除</strong>）</p>
+</li>
+<li>
+<p>入力：なし</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
+</code></pre>
+<ul>
+<li>
+<p>status：<code>idle</code>（アップデート活動なし）/ <code>checking</code>（アップデータ実行中）/ <code>ready</code>（ダウンロード済みでアップグレード可能）</p>
+</li>
+<li>
+<p>version：<code>ready</code> 状態のみ値を持ち、適用待ちの新バージョン番号（main パッケージから取得）。それ以外は空文字列</p>
+</li>
+<li>
+<p>lastResult：<code>idle</code> 状態のみ値を持つことがあり、前回の<strong>手動</strong>チェック（<code>--check-and-apply</code>）の結果：<code>uptodate</code>（最新済み）/ <code>error</code>（チェック失敗）。マーカーがなければ空文字列。このマーカーは updater が書き込み、本インターフェースが読んだ直後に削除するため、<strong>1 回しか返らない</strong>。フロントエンドが 1 度 Toast を出すためのもの。サイレントの <code>--check</code> はマーカーを書かず、邪魔が入りません。</p>
+</li>
+<li>
+<p>状態の優先度：<code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-ダウンロード済みのアップデートの適用" tabindex="-1">3. ダウンロード済みのアップデートの適用 <a class="doc-anchor" href="#3-ダウンロード済みのアップデートの適用" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.applyUpdate() : object
+</code></pre>
+<p><code>yyzUpdater.exe --apply</code> を起動します：<code>update.ready</code> を読む → メインプロセスの終了を待つ → ファイルを置換 → メインプロセスを再起動。<code>getUpdateState</code> が <code>ready</code> を返したときのみ呼び出すこと。</p>
+<ul>
+<li>
+<p>入力：なし</p>
+</li>
+<li>
+<p>出力</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h2 id="セキュリティ上の注意" tabindex="-1">⚠️ セキュリティ上の注意 <a class="doc-anchor" href="#セキュリティ上の注意" aria-hidden="true">#</a></h2>
+<p>Native API はモジュール開発者に対してホストプロセスのシステム能力を<strong>完全に開放</strong>しており、ファイルの読み書きと削除、プロセスの作成と終了、ウィンドウコントロール、クリップボードの読み書き、レジストリとシステム設定の変更、ネットワークダウンロード、コマンドライン実行などの<strong>高リスク操作</strong>を含みます。</p>
+<p>これらのインターフェースは<strong>権限ダイアログなし、サンドボックス分離なし、取り消し機構なし</strong>です——呼び出しは即座に現在のユーザー権限で直接反映され、誤用によりデータの永久喪失やシステム異常を招く可能性があります。</p>
+<p>したがって必ず以下に留意してください：</p>
+<ul>
+<li><strong>安全性の自己評価</strong>：いかなるインターフェースを呼ぶ前にも、パラメータ（特にパス、プロセス名、コマンドライン）の出所が信頼でき、十分に検証済みであることを確認すること。削除、上書き、プロセス終了など不可逆な操作の前に、バックアップを取るかユーザーに再度確認することを推奨。</li>
+<li><strong>信頼できない入力への警戒</strong>：ユーザー入力、ネットワーク応答、サードパーティデータを検証せずにインターフェースのパラメータへ直接連結しないこと。パストラバーサルとコマンドインジェクションに警戒。</li>
+<li><strong>最小権限の原則</strong>：業務が本当に必要とする能力のみを求め、手抜きのために影響範囲の大きいインターフェースを使用しない。</li>
+<li><strong>責任は自己負担</strong>：開発者は本 API の使用によって生じる一切の結果（データ喪失、システム破損、セキュリティリスクを含むがこれに限らない）を自ら負担すること。</li>
+</ul>
+</blockquote>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="関連リソース">
+    <a class="sdk-link" href="/ja/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>クイックスタート</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>サンプルプロジェクトをダウンロード</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ja/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows デスクトップ効率化ツール集。ローカル優先、永久無料。</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>製品</h3>
+            <a href="/ja/features.html">機能</a>
+            <a href="/ja/download.html">ダウンロード</a>
+            <a href="/ja/changelog.html">更新履歴</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>リソース</h3>
+            <a href="/ja/sdk.html">開発者</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">フィードバック</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法的情報</h3>
+            <a href="/ja/agreement.html">利用規約</a>
+            <a href="/ja/privacy.html">プライバシーポリシー</a>
+            
+            <a class="js-email" href="#">お問い合わせ</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　全著作権所有</p>
+        <p class="footer-fine">Windows は Microsoft Corporation の登録商標です。本サイトは Microsoft と提携関係にありません。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

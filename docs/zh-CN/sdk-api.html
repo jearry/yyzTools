@@ -1,0 +1,3110 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools Native API 接口参考手册</title>
+<meta name="description" content="yyzTools Native API 完整接口定义：窗口控制、应用管理、进程、文件操作、媒体处理、截图 OCR、加密、剪贴板、书签、命令执行与更新。">
+
+<meta property="og:title" content="yyzTools Native API 接口参考手册">
+<meta property="og:description" content="yyzTools Native API 完整接口定义：窗口控制、应用管理、进程、文件操作、媒体处理、截图 OCR、加密、剪贴板、书签、命令执行与更新。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-CN/sdk-api.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_CN">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools Native API 接口参考手册">
+<meta name="twitter:description" content="yyzTools Native API 完整接口定义：窗口控制、应用管理、进程、文件操作、媒体处理、截图 OCR、加密、剪贴板、书签、命令执行与更新。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-CN/sdk-api.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk-api.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk-api.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk-api.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk-api.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk-api.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk-api.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk-api.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk-api.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk-api.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk-api.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+<link rel="dns-prefetch" href="https://ghfast.top">
+<link rel="dns-prefetch" href="https://ghproxy.com">
+<link rel="dns-prefetch" href="https://gh-proxy.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-CN/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-CN/" >首页</a>
+            <a href="/zh-CN/features.html" >功能</a>
+            <a href="/zh-CN/download.html" >下载</a>
+            <a href="/zh-CN/changelog.html" >更新日志</a>
+            
+            <a href="/zh-CN/sdk.html" class=&#34;on&#34;>开发者</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">交流反馈</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="选择语言">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">简体中文</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk-api.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk-api.html" hreflang="zh-CN"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>简体中文</a>
+                    
+                    <a href="/zh-TW/sdk-api.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk-api.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk-api.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk-api.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk-api.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk-api.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk-api.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk-api.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk-api.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk-api.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/zh-CN/download.html">免费下载</a>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"开发者","item":"https://yyztools.com/zh-CN/sdk.html"},{"@type":"ListItem","position":3,"name":"接口参考手册","item":"https://yyztools.com/zh-CN/sdk-api.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"接口参考手册","description":"yyzTools Native API 完整接口定义：窗口控制、应用管理、进程、文件操作、媒体处理、截图 OCR、加密、剪贴板、书签、命令执行与更新。","inLanguage":"zh-CN","url":"https://yyztools.com/zh-CN/sdk-api.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Expert"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> 本页目录</summary>
+            <nav aria-label="本页目录">
+                <ol>
+                    
+                    <li>
+                        <a href="#版本记录">版本记录</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#一通用约定">一、通用约定</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#调用方式">调用方式</a></li>
+                            
+                            <li><a href="#判错方式">判错方式</a></li>
+                            
+                            <li><a href="#同步-异步绑定">同步 / 异步绑定</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#二公用接口">二、公用接口</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1获取客户端版本">1、获取客户端版本</a></li>
+                            
+                            <li><a href="#2获取配置">2、获取配置</a></li>
+                            
+                            <li><a href="#3修改配置">3、修改配置</a></li>
+                            
+                            <li><a href="#4添加配置">4、添加配置</a></li>
+                            
+                            <li><a href="#5获取列表">5、获取列表</a></li>
+                            
+                            <li><a href="#6写前端日志">6、写前端日志</a></li>
+                            
+                            <li><a href="#7写倒计时缓存">7、写倒计时缓存</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#三窗口控制">三、窗口控制</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜索窗口">1、搜索窗口</a></li>
+                            
+                            <li><a href="#2窗口控制">2、窗口控制</a></li>
+                            
+                            <li><a href="#3窗口状态获取">3、窗口状态获取</a></li>
+                            
+                            <li><a href="#4打开命令面板并执行搜索">4、打开命令面板并执行搜索</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#四应用管理">四、应用管理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜索应用">1、搜索应用</a></li>
+                            
+                            <li><a href="#2按-id-批量取应用信息异步">2、按 id 批量取应用信息（异步）</a></li>
+                            
+                            <li><a href="#3启动应用">3、启动应用</a></li>
+                            
+                            <li><a href="#4获取使用统计">4、获取使用统计</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#五进程管理">五、进程管理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜索进程">1、搜索进程</a></li>
+                            
+                            <li><a href="#2进程控制">2、进程控制</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#六文件操作">六、文件操作</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜索文件异步">1、搜索文件（异步）</a></li>
+                            
+                            <li><a href="#2打开文件">2、打开文件</a></li>
+                            
+                            <li><a href="#3打开文件位置">3、打开文件位置</a></li>
+                            
+                            <li><a href="#4打开文件预览">4、打开文件预览</a></li>
+                            
+                            <li><a href="#5复制剪切文件到剪贴板">5、复制/剪切文件到剪贴板</a></li>
+                            
+                            <li><a href="#6浏览文件">6、浏览文件</a></li>
+                            
+                            <li><a href="#7浏览目录">7、浏览目录</a></li>
+                            
+                            <li><a href="#8获取指定目录">8、获取指定目录</a></li>
+                            
+                            <li><a href="#9保存文件">9、保存文件</a></li>
+                            
+                            <li><a href="#10获取文件图标">10、获取文件图标</a></li>
+                            
+                            <li><a href="#11读取文件">11、读取文件</a></li>
+                            
+                            <li><a href="#12分块读取大文件">12、分块读取大文件</a></li>
+                            
+                            <li><a href="#13写入文件">13、写入文件</a></li>
+                            
+                            <li><a href="#14追加写入文件">14、追加写入文件</a></li>
+                            
+                            <li><a href="#15重命名移动">15、重命名/移动</a></li>
+                            
+                            <li><a href="#16复制文件">16、复制文件</a></li>
+                            
+                            <li><a href="#17删除文件或目录">17、删除文件或目录</a></li>
+                            
+                            <li><a href="#18创建目录">18、创建目录</a></li>
+                            
+                            <li><a href="#19读取目录">19、读取目录</a></li>
+                            
+                            <li><a href="#20检查路径存在">20、检查路径存在</a></li>
+                            
+                            <li><a href="#21获取文件信息">21、获取文件信息</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#七媒体处理">七、媒体处理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1执行-magick-命令异步">1、执行 magick 命令（异步）</a></li>
+                            
+                            <li><a href="#2执行-ffmpeg-命令异步">2、执行 ffmpeg 命令（异步）</a></li>
+                            
+                            <li><a href="#3执行-ffprobe-命令探测元数据同步">3、执行 ffprobe 命令（探测元数据，同步）</a></li>
+                            
+                            <li><a href="#4执行-pdfcpu-命令异步">4、执行 pdfcpu 命令（异步）</a></li>
+                            
+                            <li><a href="#5执行-ghostscript-命令异步">5、执行 Ghostscript 命令（异步）</a></li>
+                            
+                            <li><a href="#6取消当前媒体子进程">6、取消当前媒体子进程</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#八截图与-ocr">八、截图与 OCR</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1截图钉在桌面">1、截图/钉在桌面</a></li>
+                            
+                            <li><a href="#2ocr初始化">2、OCR初始化</a></li>
+                            
+                            <li><a href="#3ocr识别异步">3、OCR识别（异步）</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#九加密解密">九、加密解密</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1加密数据">1、加密数据</a></li>
+                            
+                            <li><a href="#2解密数据">2、解密数据</a></li>
+                            
+                            <li><a href="#3生成密钥">3、生成密钥</a></li>
+                            
+                            <li><a href="#4生成iv">4、生成IV</a></li>
+                            
+                            <li><a href="#5计算哈希">5、计算哈希</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十剪贴板历史">十、剪贴板历史</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜索剪贴板">1、搜索剪贴板</a></li>
+                            
+                            <li><a href="#2删除一条记录">2、删除一条记录</a></li>
+                            
+                            <li><a href="#3清空记录">3、清空记录</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十一书签">十一、书签</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜索书签">1、搜索书签</a></li>
+                            
+                            <li><a href="#2打开书签">2、打开书签</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十二命令执行">十二、命令执行</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1运行命令行">1、运行命令行</a></li>
+                            
+                            <li><a href="#2运行任意程序">2、运行任意程序</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十三更新">十三、更新</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1检查更新">1、检查更新</a></li>
+                            
+                            <li><a href="#2获取更新状态">2、获取更新状态</a></li>
+                            
+                            <li><a href="#3应用已下载完毕的更新">3、应用已下载完毕的更新</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>接口参考手册</h1>
+            <p class="doc-meta">全部 Native API 的权威定义</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="相关资源">
+    <a class="sdk-link" href="/zh-CN/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>快速入门指南</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>下载样例工程</span>
+    </a>
+</nav>
+
+
+            <h2 id="版本记录" tabindex="-1">版本记录 <a class="doc-anchor" href="#版本记录" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>修订人</th>
+<th>修订时间</th>
+<th>修订说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>yyzTools</td>
+<td>2026-09-01</td>
+<td>初始版本</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一通用约定" tabindex="-1">一、通用约定 <a class="doc-anchor" href="#一通用约定" aria-hidden="true">#</a></h2>
+<p>本文档定义所有和 Native 交互相关的接口，仅覆盖<strong>主进程 yyzTools.exe</strong> 注册的接口（<code>src/yyztools/NativeApi.cpp</code> 的 <code>SetupBindings()</code>）。</p>
+<h3 id="调用方式" tabindex="-1">调用方式 <a class="doc-anchor" href="#调用方式" aria-hidden="true">#</a></h3>
+<ul>
+<li>
+<p>前端通过 <code>window.Zen</code> 对象调用接口函数，建议统一走 <code>ZenAPI</code> 封装类：<code>web/lib/zen_api.js</code>，不要在业务代码里直连 <code>window.Zen</code>，方便升级调整接口时作为接口兼容层处理。</p>
+</li>
+<li>
+<p>输入：采用位置参数方式传递，具体参数个数和类型参考具体接口</p>
+</li>
+<li>
+<p>输出：通过返回值传递，值为 json 对象，包含以下内容</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    ...
+}
+</code></pre>
+<ul>
+<li>
+<p>error：0 正确，非 0 错误</p>
+</li>
+<li>
+<p>errorMsg（可选）：错误信息</p>
+</li>
+<li>
+<p>其他（可选）：参考具体接口</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="判错方式" tabindex="-1">判错方式 <a class="doc-anchor" href="#判错方式" aria-hidden="true">#</a></h3>
+<p><code>error</code> 恒为<strong>数字</strong>：0 正确，非 0 错误（调用异常时为 -1）。</p>
+<h3 id="同步-异步绑定" tabindex="-1">同步 / 异步绑定 <a class="doc-anchor" href="#同步-异步绑定" aria-hidden="true">#</a></h3>
+<p>绝大多数接口为同步绑定（<code>BindSync</code>），调用即返回。以下 7 个接口为异步绑定（<code>BindAsync</code>），在后台线程执行，通过 Promise 回扑，不阻塞 UI 线程：</p>
+<p><code>getAppInfo</code>、<code>searchFile</code>、<code>imageRun</code>、<code>ffmpegRun</code>、<code>pdfRun</code>、<code>gsRun</code>、<code>ocrRecognition</code></p>
+<p>异步接口同一时刻的行为约束参考具体条目（如媒体五件套为串行执行，共用 <code>cancelRun</code> 取消）。</p>
+<h2 id="二公用接口" tabindex="-1">二、公用接口 <a class="doc-anchor" href="#二公用接口" aria-hidden="true">#</a></h2>
+<h3 id="1获取客户端版本" tabindex="-1">1、获取客户端版本 <a class="doc-anchor" href="#1获取客户端版本" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getVersion() : object
+</code></pre>
+<ul>
+<li>
+<p>输入：无</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apiVersion&quot;: &quot;1.0.1&quot;,
+    &quot;appVersion&quot;: &quot;1.0.1&quot;,
+    &quot;usageTime&quot;: 90,
+    &quot;usageTimes&quot;: 3602,
+    &quot;firstUseTime&quot;: &quot;20250910&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>apiVersion：客户端API版本信息。每一次涉及到接口更新，版本号都加1；数字从0到9，9以后从0开始，比如1.0.0，1.0.1，1.0.2... 1.0.9，1.1.0等</p>
+</li>
+<li>
+<p>appVersion：客户端版本信息</p>
+</li>
+<li>
+<p>usageTime：使用时间（单位：s）</p>
+</li>
+<li>
+<p>usageTimes：激活次数</p>
+</li>
+<li>
+<p>firstUseTime：首次使用时间，格式：yyyymmdd</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2获取配置" tabindex="-1">2、获取配置 <a class="doc-anchor" href="#2获取配置" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getConfig(key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>key（可选）：只取该键，支持 <code>a.b</code> 点路径。缺省返回全量配置。</p>
+<ul>
+<li>
+<p>命中：返回 <code>{&quot;error&quot;:0, &quot;&lt;key&gt;&quot;: &lt;值&gt;}</code>，如 <code>getConfig(&quot;language&quot;)</code> → <code>{&quot;error&quot;:0,&quot;language&quot;:&quot;zh_cn&quot;}</code>；<code>getConfig(&quot;dock.categories&quot;)</code> → <code>{&quot;error&quot;:0,&quot;dock&quot;:{&quot;categories&quot;:[...]}}</code></p>
+</li>
+<li>
+<p>未命中：返回 <code>{&quot;error&quot;:0}</code>（不报错，读取方自行兜底）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出（示例，字段以实际配置为准）</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;logLevel&quot;: &quot;1&quot;,
+    &quot;wallpaperEnabled&quot;: &quot;1&quot;,
+    &quot;overlayEnabled&quot;: &quot;0&quot;,
+    &quot;gameMode&quot;: &quot;0&quot;,
+    &quot;clipboardHistoryMaxCount&quot;: &quot;500&quot;,
+    &quot;autoStart&quot;: &quot;1&quot;,
+    &quot;shortcutKeys&quot;: {
+        &quot;main&quot;: {
+            &quot;doubleCtrlEnabled&quot;: &quot;1&quot;,
+            &quot;doubleAltEnabled&quot;: &quot;1&quot;,
+            &quot;modifier&quot;: 1,
+            &quot;virtualCode&quot;: 32
+        },
+        &quot;apps&quot;: [
+            {
+                &quot;appId&quot;: &quot;translate&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 49
+            },
+            {
+                &quot;appId&quot;: &quot;ocr&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 50
+            }
+        ]
+    },
+    &quot;quickOpen&quot;: [
+        {
+            &quot;name&quot;: &quot;谷歌搜索&quot;,
+            &quot;type&quot;: &quot;normal&quot;,
+            &quot;index&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;https://www.google.com/search?q={query}&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ],
+    &quot;customApps&quot;: [
+        {
+            &quot;filePath&quot;: &quot;d:\test\test1.exe&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>logLevel：日志等级（0: Trace / 1: Debug / 2: Info / 3: Warning / 4: Error / 5: Fatal）</p>
+</li>
+<li>
+<p>wallpaperEnabled：启用动态壁纸</p>
+</li>
+<li>
+<p>overlayEnabled：启用桌面特效</p>
+</li>
+<li>
+<p>gameMode：游戏模式</p>
+</li>
+<li>
+<p>clipboardHistoryMaxCount：剪贴板最大历史记录个数</p>
+</li>
+<li>
+<p>autoStart：开机自启动</p>
+</li>
+<li>
+<p>shortcutKeys：全局快捷键</p>
+<ul>
+<li>
+<p>main：主界面</p>
+<ul>
+<li>
+<p>doubleCtrlEnabled：双击Ctrl唤醒</p>
+</li>
+<li>
+<p>doubleAltEnabled：双击Alt唤醒</p>
+</li>
+<li>
+<p>modifier：修饰键</p>
+</li>
+<li>
+<p>virtualCode：主键</p>
+</li>
+</ul>
+</li>
+<li>
+<p>apps：应用</p>
+<ul>
+<li>
+<p>appId：应用id</p>
+</li>
+<li>
+<p>modifier：修饰键</p>
+</li>
+<li>
+<p>virtualCode：主键</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>quickOpen：快开</p>
+<ul>
+<li>
+<p>name：名称</p>
+</li>
+<li>
+<p>type：类型（normal：通用搜索 / spec：垂直搜索）</p>
+</li>
+<li>
+<p>index：序号</p>
+</li>
+<li>
+<p>url：url模板</p>
+</li>
+<li>
+<p>enabled：是否启用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>customApps：自定义app</p>
+<ul>
+<li>
+<p>filePath：app对应exe的所在路径</p>
+</li>
+<li>
+<p>enabled：是否启用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>dock：程序坞（类目 + 内容）</p>
+<ul>
+<li>
+<p><strong>通用约定：缺</strong> <strong><code>name</code>/<code>icon</code></strong> <strong>表示&quot;用内置默认值&quot;（由 i18n 或</strong> <strong><code>appId</code></strong> <strong>对应的</strong> <strong><code>.zenmod</code></strong> <strong>运行时派生，随界面语言变化）；有该字段表示用户自定义过，原样显示不再翻译。</strong></p>
+</li>
+<li>
+<p>categories：类目</p>
+<ul>
+<li>
+<p>id：内置类目为语义 id（<code>folder</code>/<code>tools</code>/<code>ai</code>/<code>game</code>/<code>system</code>），用户新建为 <code>category_&lt;时间戳&gt;</code></p>
+</li>
+<li>
+<p>name：可选，用户改名后才有</p>
+</li>
+<li>
+<p>icon：FontAwesome class</p>
+</li>
+<li>
+<p>color：主题色</p>
+</li>
+<li>
+<p>order：排序序号</p>
+</li>
+</ul>
+</li>
+<li>
+<p>contents：内容项</p>
+<ul>
+<li>
+<p>id：内置目录项为语义 id（<code>desktop</code>/<code>documents</code>/<code>downloads</code>/<code>music</code>/<code>videos</code>），其余为 <code>content_&lt;时间戳&gt;</code></p>
+</li>
+<li>
+<p>categoryId：所属类目 id</p>
+</li>
+<li>
+<p>type：<code>app</code> | <code>folder</code> | <code>url</code></p>
+</li>
+<li>
+<p>appId：<code>type=app</code> 时必填，对应 <code>.zenmod</code> 的 id；名称与图标全部由它派生，<strong>不要落盘</strong></p>
+</li>
+<li>
+<p>folderPath：<code>type=folder</code> 时必填，支持 <code>%USERPROFILE%</code> 等环境变量</p>
+</li>
+<li>
+<p>url：<code>type=url</code> 时必填，规范化后的完整网址（无协议前缀自动补 <code>https://</code>）；点击用系统默认浏览器打开。名称由用户填写，图标运行时抓取网站 favicon（失败兜底 <code>fas fa-globe</code>），<strong>不落盘</strong></p>
+</li>
+<li>
+<p>name / icon：可选，语义同上（<code>type=folder</code> 的用户自选目录必填）</p>
+</li>
+<li>
+<p>color：图标着色</p>
+</li>
+<li>
+<p>order：同类目内的排序序号</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3修改配置" tabindex="-1">3、修改配置 <a class="doc-anchor" href="#3修改配置" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setConfig(config: json_obj, replace?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>config：同getConfig</p>
+<ul>
+<li>
+<p>修改什么就传什么，无需传全部内容</p>
+</li>
+<li>
+<p>同一键值下的内容需要传完整</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;logLevel&quot;: &quot;1&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>replace（可选，默认 false）：false=增量合并到现有配置，true=整体替换（导入备份用，能清掉已删除的列表项）。传入 <code>&quot;true&quot;</code> 或 <code>&quot;false&quot;</code> 字符串，缺省等同 <code>&quot;false&quot;</code>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意：<strong>不要&quot;读全量 getConfig 再整份 setConfig 回写&quot;</strong>——<code>getConfig</code> 返回值带 <code>error</code> 字段，整份回写会把它存进配置文件。一律窄粒度写，如 <code>setConfig({ dock: { categories } })</code>。</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4添加配置" tabindex="-1">4、添加配置 <a class="doc-anchor" href="#4添加配置" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.addConfig(key: string, value: json_obj) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>key：值类型必须为StringList或StringMapList</p>
+</li>
+<li>
+<p>value</p>
+<ul>
+<li>
+<p>key的值类型为StringList时，传string</p>
+</li>
+<li>
+<p>key的值类型为StringMapList时，传json_obj</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5获取列表" tabindex="-1">5、获取列表 <a class="doc-anchor" href="#5获取列表" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getList(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>type：列表类型</p>
+<ul>
+<li>font：系统字体列表（读注册表 <code>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts</code>，供水印等场景选择字体）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;list&quot;: [
+        {
+            &quot;name&quot;: &quot;Arial&quot;,
+            &quot;file&quot;: &quot;arial.ttf&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>list：字体列表</p>
+<ul>
+<li>
+<p>name：字体名（已去除 &quot; (TrueType)&quot; / &quot; (OpenType)&quot; 后缀）</p>
+</li>
+<li>
+<p>file：字体文件名</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6写前端日志" tabindex="-1">6、写前端日志 <a class="doc-anchor" href="#6写前端日志" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.log(msg: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>msg：日志内容，写入主进程日志（InfoMsg）</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="7写倒计时缓存" tabindex="-1">7、写倒计时缓存 <a class="doc-anchor" href="#7写倒计时缓存" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
+</code></pre>
+<p>倒计时提醒的缓存数据，写入主进程与壁纸进程共享的内存，并立即通知壁纸进程重读（否则壁纸要等自身 30s 轮询才生效）。供 reminder / wallpaper 联动使用，一般业务勿依赖。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>data：倒计时 JSON 字符串（reminder 模块定义的 payload）</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="三窗口控制" tabindex="-1">三、窗口控制 <a class="doc-anchor" href="#三窗口控制" aria-hidden="true">#</a></h2>
+<h3 id="1搜索窗口" tabindex="-1">1、搜索窗口 <a class="doc-anchor" href="#1搜索窗口" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchWindow(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>keyword：搜索关键字</p>
+</li>
+<li>
+<p>maxResults：最大记录数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;windows&quot;: [
+        {
+            &quot;hwnd&quot;: 18811010,
+            &quot;processId&quot;: 20708,
+            &quot;visible&quot;: 1,
+            &quot;topmost&quot;: 0,
+            &quot;name&quot;: &quot;Native API接口.md - MarkText&quot;,
+            &quot;className&quot;: &quot;Chrome_WidgetWin_1&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files\\MarkText\\MarkText.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\Program Files\\MarkText\\MarkText.exe\&quot; \&quot;D:\\doc\\a.md\&quot;&quot;,
+            &quot;desc&quot;: &quot;MarkText&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 180
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>windows：窗口列表</p>
+<ul>
+<li>
+<p>hwnd：窗口句柄</p>
+</li>
+<li>
+<p>processId：窗口所属进程id</p>
+</li>
+<li>
+<p>visible：是否可见</p>
+</li>
+<li>
+<p>topmost：是否置顶</p>
+</li>
+<li>
+<p>name：窗口名</p>
+</li>
+<li>
+<p>className：窗口类名</p>
+</li>
+<li>
+<p>path：进程可执行文件的全路径</p>
+</li>
+<li>
+<p>cmdArgs：进程的启动命令行</p>
+</li>
+<li>
+<p>desc：描述</p>
+</li>
+<li>
+<p>icon：窗口图标，base64格式</p>
+</li>
+<li>
+<p>score：搜索评分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2窗口控制" tabindex="-1">2、窗口控制 <a class="doc-anchor" href="#2窗口控制" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowControl(window: string, action: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>window：Name或HWND的string形式</p>
+<ul>
+<li>
+<p>cmdPlate：启动器</p>
+</li>
+<li>
+<p>translate：超级翻译</p>
+</li>
+<li>
+<p>download：极速下载</p>
+</li>
+<li>
+<p>calculator：超级计算器</p>
+</li>
+<li>
+<p>filePreview：文件预览器</p>
+</li>
+<li>
+<p>ocr：OCR</p>
+</li>
+<li>
+<p>quickocr：快捷OCR翻译贴屏窗</p>
+</li>
+<li>
+<p>calendar：万年历</p>
+</li>
+<li>
+<p>appUsage：应用使用统计</p>
+</li>
+<li>
+<p>tray：托盘菜单</p>
+</li>
+<li>
+<p>overlay：桌面特效</p>
+</li>
+<li>
+<p>setting：设置</p>
+</li>
+<li>
+<p>main：主窗口（等同cmdPlate）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>action</p>
+<ul>
+<li>
+<p>show：显示并激活</p>
+</li>
+<li>
+<p>showNoActivate：显示不激活</p>
+</li>
+<li>
+<p>min：最小化</p>
+</li>
+<li>
+<p>max：最大化</p>
+</li>
+<li>
+<p>restore：恢复</p>
+</li>
+<li>
+<p>hide：隐藏</p>
+</li>
+<li>
+<p>close：关闭</p>
+</li>
+<li>
+<p>darg：拖动</p>
+</li>
+<li>
+<p>topmost：置顶</p>
+</li>
+<li>
+<p>noTopmost：取消置顶</p>
+</li>
+<li>
+<p>quit：退出应用</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3窗口状态获取" tabindex="-1">3、窗口状态获取 <a class="doc-anchor" href="#3窗口状态获取" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>window：Name或HWND的string形式，参见窗口控制</p>
+</li>
+<li>
+<p>can_suspend（可选）：是否允许挂起该窗口的 WebView（资源管理开关，缺省 false）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>说明：本接口带副作用——查询状态后，若窗口处于 show/max 状态则恢复 WebView 渲染，否则挂起 WebView 以省资源（仅当 can_suspend 为 true 时允许挂起）。前端常驻页面轮询自身状态时传 true，一般查询传 false。</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;state&quot;: &quot;show&quot;,
+    &quot;topmost&quot;: &quot;0&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>state：状态（show：正常显示 / min：最小化 / max：最大化 / close：关闭）</p>
+</li>
+<li>
+<p>topmost：是否置顶</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4打开命令面板并执行搜索" tabindex="-1">4、打开命令面板并执行搜索 <a class="doc-anchor" href="#4打开命令面板并执行搜索" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>command：搜索命令，示例：<code>f path:C:\Users\Documents</code>（在文件模块中搜索指定目录）</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>说明</p>
+<ul>
+<li>
+<p>此接口用于打开命令面板窗口并自动执行搜索命令</p>
+</li>
+<li>
+<p>常用于从程序坞等模块快速打开文件搜索</p>
+</li>
+<li>
+<p>命令格式支持所有 cmdplate 支持的搜索语法</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="四应用管理" tabindex="-1">四、应用管理 <a class="doc-anchor" href="#四应用管理" aria-hidden="true">#</a></h2>
+<h3 id="1搜索应用" tabindex="-1">1、搜索应用 <a class="doc-anchor" href="#1搜索应用" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchApp(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>keyword：搜索关键字</p>
+</li>
+<li>
+<p>maxResults：最大记录数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;Microsoft.WindowsCamera&quot;,
+            &quot;name&quot;: &quot;相机&quot;,
+            &quot;path&quot;: &quot;C:\Program Files\WindowsApps\Microsoft.WindowsCamera&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 1,
+            &quot;score&quot;: 90
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>apps：应用列表</p>
+<ul>
+<li>
+<p>id：应用的唯一id，启动时需要用到</p>
+</li>
+<li>
+<p>name：名称</p>
+</li>
+<li>
+<p>desc：描述</p>
+</li>
+<li>
+<p>icon：base64的图标</p>
+</li>
+<li>
+<p>appType：应用类型（0：win32应用 / 1：uwp应用 / 2：系统命令 / 3：系统设置 / 4：内置模块）</p>
+</li>
+<li>
+<p>score：搜索结果评分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2按-id-批量取应用信息异步" tabindex="-1">2、按 id 批量取应用信息（异步） <a class="doc-anchor" href="#2按-id-批量取应用信息异步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppInfo(appIds: string[]) : object
+</code></pre>
+<p>配置里只存 <code>appId</code>，名称与图标一律运行时派生（<code>.zenmod</code> 的 <code>name</code> 是多语言的，快照进配置会在切语言后过期）。这个接口就是给这个场景用的。</p>
+<p>⚠️ <strong>不要用循环</strong> <strong><code>searchApp(appId, 1)</code></strong> <strong>代替它</strong>：<code>searchApp</code> 每次都是对整个应用索引做全表扫描 + 拼音匹配 + 打分排序，还会并发起两个线程、返回多条带 base64 图标的结果。程序坞加上快捷键有几十个 appId，逐个查会明显拖慢启动。本接口一次收全，native 侧走 <code>map::find</code> 精确命中。</p>
+<p>内部会等应用索引就绪（索引由后台线程生成），故是<strong>异步绑定</strong>，冷启动早期调用不会拿到空结果。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>appIds：appId 数组，如 <code>[&quot;calculator&quot;, &quot;Microsoft.WindowsCamera&quot;]</code></li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<p>格式与 <code>searchApp</code> 完全一致（同一个 <code>BuildAppResult</code>），但：</p>
+<ul>
+<li>
+<p>只返回精确命中的项，<strong>查不到的 id 会被静默跳过</strong>，故 <code>apps.length</code> 可能小于入参长度（用来检出配置里的失效 appId）</p>
+</li>
+<li>
+<p>顺序按入参顺序，<code>score</code> 恒为 0（未参与打分）</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;calculator&quot;,
+            &quot;name&quot;: &quot;超级计算器&quot;,
+            &quot;path&quot;: &quot;calculator&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 4,
+            &quot;score&quot;: 0
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3启动应用" tabindex="-1">3、启动应用 <a class="doc-anchor" href="#3启动应用" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.launchApp(id: string, admin : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>id：app的id（来自 <code>searchApp</code> / <code>getAppInfo</code> 返回的 <code>id</code>）</p>
+</li>
+<li>
+<p>admin：以管理员身份运行</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4获取使用统计" tabindex="-1">4、获取使用统计 <a class="doc-anchor" href="#4获取使用统计" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppUsage(mode: string, startTime: string, stopTime: string, forceSync : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>mode：统计类型，day，week，month，year</p>
+</li>
+<li>
+<p>startTime：开始时间，格式：yyyymmddhh，样例：2025110300</p>
+</li>
+<li>
+<p>stopTime：结束时间，格式：yyyymmddhh，样例：2025110300</p>
+</li>
+<li>
+<p>forceSync：是否强制刷新</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;usages&quot;: [
+        {
+            &quot;time&quot;: &quot;20251104&quot;,
+            &quot;name&quot;: &quot;yyzTools.exe&quot;,
+            &quot;logo&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;usageTimes&quot;: 2,
+            &quot;usageTime&quot;: 4.172,
+            &quot;clickTimes&quot;: 4,
+            &quot;moveDistance&quot;: 105.572357,
+            &quot;pressTimes&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>usages：使用情况统计</p>
+<ul>
+<li>
+<p>time：时间，day：yyyymmdd，week：yyyyww，month：yyyymm，year：yyyy</p>
+</li>
+<li>
+<p>name：应用名称</p>
+</li>
+<li>
+<p>logo：应用图标</p>
+</li>
+<li>
+<p>usageTimes：使用次数</p>
+</li>
+<li>
+<p>usageTime：使用时长（单位：秒）</p>
+</li>
+<li>
+<p>clickTimes：鼠标点击次数</p>
+</li>
+<li>
+<p>moveDistance：鼠标移动距离（单位：cm）</p>
+</li>
+<li>
+<p>pressTimes：键盘按下次数</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="五进程管理" tabindex="-1">五、进程管理 <a class="doc-anchor" href="#五进程管理" aria-hidden="true">#</a></h2>
+<h3 id="1搜索进程" tabindex="-1">1、搜索进程 <a class="doc-anchor" href="#1搜索进程" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchProcess(keyword: string, maxResults: number) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>keyword：搜索关键字</p>
+</li>
+<li>
+<p>maxResults：最大记录数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;processes&quot;: [
+        {
+            &quot;id&quot;: 1228,
+            &quot;name&quot;: &quot;msedge.exe&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\...\\msedge.exe\&quot; --type=renderer&quot;,
+            &quot;suspend&quot;: 0,
+            &quot;desc&quot;: &quot;Microsoft Edge&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 60
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>processes：进程列表</p>
+<ul>
+<li>
+<p>id：进程id</p>
+</li>
+<li>
+<p>name：进程名称</p>
+</li>
+<li>
+<p>path：进程执行文件的全路径</p>
+</li>
+<li>
+<p>cmdArgs：进程的启动命令行</p>
+</li>
+<li>
+<p>suspend：是否挂起</p>
+</li>
+<li>
+<p>desc：描述</p>
+</li>
+<li>
+<p>icon：进程图标，base64格式</p>
+</li>
+<li>
+<p>score：搜索评分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2进程控制" tabindex="-1">2、进程控制 <a class="doc-anchor" href="#2进程控制" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.processControl(processId: number, action: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>processId：进程ID</p>
+</li>
+<li>
+<p>action：动作</p>
+<ul>
+<li>
+<p>terminate：终止</p>
+</li>
+<li>
+<p>suspend：挂起</p>
+</li>
+<li>
+<p>resume：恢复</p>
+</li>
+<li>
+<p>restart：重启</p>
+</li>
+</ul>
+</li>
+<li>
+<p>admin：新进程是否以管理员身份运行（restart 时生效）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="六文件操作" tabindex="-1">六、文件操作 <a class="doc-anchor" href="#六文件操作" aria-hidden="true">#</a></h2>
+<h3 id="1搜索文件异步" tabindex="-1">1、搜索文件（异步） <a class="doc-anchor" href="#1搜索文件异步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchFile(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>说明：由自研 yyzFileSearch 服务（MFT 索引 + 命名管道 IPC）执行搜索，支持 Everything 风格查询语法（如 <code>size:&gt;100MB</code>、<code>!ext:mp4</code>），结果按相关性排序。搜索在后台线程执行，为<strong>异步绑定</strong>。</p>
+</li>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>keyword：搜索关键字</p>
+</li>
+<li>
+<p>maxResults：最大记录数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;WinMain.cpp&quot;,
+      &quot;path&quot;: &quot;D:\\WorkCodeup\\yyztools\\src\\yyztools&quot;,
+      &quot;dateModified&quot;: &quot;2025/10/18 14:05:00&quot;,
+      &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0,
+      &quot;isDir&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>files：文件列表</p>
+<ul>
+<li>
+<p>name：文件名</p>
+</li>
+<li>
+<p>path：文件所在目录（不含文件名），完整路径 = path + &quot;\&quot; + name</p>
+</li>
+<li>
+<p>dateModified：修改时间</p>
+</li>
+<li>
+<p>icon：文件图标，base64格式</p>
+</li>
+<li>
+<p>score：搜索评分</p>
+</li>
+<li>
+<p>isDir：1 表示目录，0 表示文件</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2打开文件" tabindex="-1">2、打开文件 <a class="doc-anchor" href="#2打开文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFile(path: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>path：文件路径</p>
+</li>
+<li>
+<p>admin：以管理员身份打开</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3打开文件位置" tabindex="-1">3、打开文件位置 <a class="doc-anchor" href="#3打开文件位置" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFileLocation(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>path：文件路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4打开文件预览" tabindex="-1">4、打开文件预览 <a class="doc-anchor" href="#4打开文件预览" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFilePreview(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>path：文件路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5复制剪切文件到剪贴板" tabindex="-1">5、复制/剪切文件到剪贴板 <a class="doc-anchor" href="#5复制剪切文件到剪贴板" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFilesToClipboard(paths: string[], operation: string) : object
+</code></pre>
+<p>复制/剪切文件本身到剪贴板（CF_HDROP），可在资源管理器 Ctrl+V 粘贴。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>paths：文件路径数组</p>
+</li>
+<li>
+<p>operation：<code>copy</code> | <code>move</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="6浏览文件" tabindex="-1">6、浏览文件 <a class="doc-anchor" href="#6浏览文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseFile(filterName: string,
+                        filter: string, initDir: string, supportMulti: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>filterName：过滤器名称</p>
+</li>
+<li>
+<p>filter：过滤器，'<em>.html;</em>.htm'</p>
+</li>
+<li>
+<p>initDir：起始浏览路径</p>
+</li>
+<li>
+<p>supportMulti：是否允许多选</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;paths&quot;: [&quot;d:\test\1.txt&quot;, &quot;d:\test\2.txt&quot;]
+}
+</code></pre>
+<ul>
+<li>paths：浏览选择的文件的全路径列表；用户取消时 <code>error</code> 为 <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="7浏览目录" tabindex="-1">7、浏览目录 <a class="doc-anchor" href="#7浏览目录" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseDir(initDir: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>initDir：起始浏览路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;d:\test&quot;
+}
+</code></pre>
+<ul>
+<li>path：浏览选择的目录的全路径；用户取消时 <code>error</code> 为 <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="8获取指定目录" tabindex="-1">8、获取指定目录 <a class="doc-anchor" href="#8获取指定目录" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getKnownDir(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>type：类型</p>
+<ul>
+<li>
+<p>download：下载</p>
+</li>
+<li>
+<p>video：视频</p>
+</li>
+<li>
+<p>music：音乐</p>
+</li>
+<li>
+<p>picture：图片</p>
+</li>
+<li>
+<p>document：文档</p>
+</li>
+<li>
+<p>appDataRoaming：AppData/Roaming</p>
+</li>
+<li>
+<p>appDataLocal：AppData/Local</p>
+</li>
+<li>
+<p>appDir：程序所在目录</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;D:\Downloads&quot;
+}
+</code></pre>
+<ul>
+<li>path：指定类型目录的全路径</li>
+</ul>
+</li>
+</ul>
+<h3 id="9保存文件" tabindex="-1">9、保存文件 <a class="doc-anchor" href="#9保存文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.saveFile(filePath: string, data: string, binaryFile: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>filePath：文件路径</p>
+</li>
+<li>
+<p>data：文件内容</p>
+<ul>
+<li>
+<p>文本文件：内容</p>
+</li>
+<li>
+<p>二进制文件：内容的base64编码</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binaryFile：是否是二进制文件</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="10获取文件图标" tabindex="-1">10、获取文件图标 <a class="doc-anchor" href="#10获取文件图标" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileIcon(filePath: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>filePath：文件路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;icon&quot;: &quot;data:image/png;base64,&quot;
+}
+</code></pre>
+<ul>
+<li>icon：文件图标，base64编码</li>
+</ul>
+</li>
+</ul>
+<h3 id="11读取文件" tabindex="-1">11、读取文件 <a class="doc-anchor" href="#11读取文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFile(path: string, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>path：文件路径</p>
+</li>
+<li>
+<p>encoding：编码方式</p>
+<ul>
+<li>
+<p>&quot;utf8&quot;：文本模式（默认）</p>
+</li>
+<li>
+<p>&quot;base64&quot; 或 &quot;binary&quot;：二进制模式</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<p>成功时：</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;文件内容&quot;,
+  &quot;encoding&quot;: &quot;utf8&quot;,
+  &quot;size&quot;: 1024
+}
+</code></pre>
+<p>文件过大时（&gt;50MB）：</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 3,
+  &quot;errorMsg&quot;: &quot;file too large, use readFileChunk instead&quot;,
+  &quot;fileSize&quot;: 52428800,
+  &quot;chunkSize&quot;: 1048576
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="12分块读取大文件" tabindex="-1">12、分块读取大文件 <a class="doc-anchor" href="#12分块读取大文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFileChunk(path: string, offset: number, length: number, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>path：文件路径</p>
+</li>
+<li>
+<p>offset：起始偏移量（字节）</p>
+</li>
+<li>
+<p>length：读取长度（字节，最大1MB）</p>
+</li>
+<li>
+<p>encoding：编码方式（固定为&quot;base64&quot;）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;base64编码的数据&quot;,
+  &quot;offset&quot;: 0,
+  &quot;length&quot;: 1048576,
+  &quot;encoding&quot;: &quot;base64&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="13写入文件" tabindex="-1">13、写入文件 <a class="doc-anchor" href="#13写入文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.writeFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>path：文件路径</p>
+</li>
+<li>
+<p>data：文件内容</p>
+<ul>
+<li>
+<p>文本文件：文本内容</p>
+</li>
+<li>
+<p>二进制文件：base64编码的内容</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary：是否二进制模式</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="14追加写入文件" tabindex="-1">14、追加写入文件 <a class="doc-anchor" href="#14追加写入文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.appendFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>path：文件路径</p>
+</li>
+<li>
+<p>data：追加内容</p>
+<ul>
+<li>
+<p>文本文件：文本内容</p>
+</li>
+<li>
+<p>二进制文件：base64编码的内容</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary：是否二进制模式</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="15重命名移动" tabindex="-1">15、重命名/移动 <a class="doc-anchor" href="#15重命名移动" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.rename(oldPath: string, newPath: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>oldPath：原路径</p>
+</li>
+<li>
+<p>newPath：新路径</p>
+</li>
+<li>
+<p>overwrite：是否覆盖已存在的文件</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="16复制文件" tabindex="-1">16、复制文件 <a class="doc-anchor" href="#16复制文件" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFile(source: string, destination: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>source：源文件路径</p>
+</li>
+<li>
+<p>destination：目标文件路径</p>
+</li>
+<li>
+<p>overwrite：是否覆盖已存在的文件</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="17删除文件或目录" tabindex="-1">17、删除文件或目录 <a class="doc-anchor" href="#17删除文件或目录" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deletePath(path: string, useRecycleBin: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>path：文件或目录路径</p>
+</li>
+<li>
+<p>useRecycleBin：是否移到回收站（false 时直接删除，<strong>不可恢复</strong>）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>说明：目录一律递归删除（含全部子内容）。</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="18创建目录" tabindex="-1">18、创建目录 <a class="doc-anchor" href="#18创建目录" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.mkdir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>path：目录路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="19读取目录" tabindex="-1">19、读取目录 <a class="doc-anchor" href="#19读取目录" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readDir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>path：目录路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [&quot;file1.txt&quot;, &quot;file2.jpg&quot;],
+  &quot;directories&quot;: [&quot;subdir1&quot;, &quot;subdir2&quot;]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="20检查路径存在" tabindex="-1">20、检查路径存在 <a class="doc-anchor" href="#20检查路径存在" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.exists(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>path：文件或目录路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;exists&quot;: true
+}
+</code></pre>
+<ul>
+<li>exists：原生布尔</li>
+</ul>
+</li>
+</ul>
+<h3 id="21获取文件信息" tabindex="-1">21、获取文件信息 <a class="doc-anchor" href="#21获取文件信息" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileInfo(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>path：文件或目录路径</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;path&quot;: &quot;D:\\test\\file.txt&quot;,
+  &quot;name&quot;: &quot;file.txt&quot;,
+  &quot;isDirectory&quot;: false,
+  &quot;size&quot;: 1024,
+  &quot;readonly&quot;: false,
+  &quot;hidden&quot;: false,
+  &quot;system&quot;: false,
+  &quot;modifiedTime&quot;: &quot;2025-10-19 18:48:29&quot;,
+  &quot;createdTime&quot;: &quot;2025-10-15 10:30:00&quot;,
+  &quot;extension&quot;: &quot;.txt&quot;
+}
+</code></pre>
+<ul>
+<li>isDirectory / readonly / hidden / system：原生布尔</li>
+</ul>
+</li>
+</ul>
+<h2 id="七媒体处理" tabindex="-1">七、媒体处理 <a class="doc-anchor" href="#七媒体处理" aria-hidden="true">#</a></h2>
+<p>媒体五件套由 C++ 侧调起 <code>bin64\Platform\</code> 下的第三方 CLI 工具执行。除 <code>ffprobeRun</code> 外均为<strong>异步绑定</strong>（后台线程执行，不阻塞 UI 线程）；批量处理为串行，同一时刻仅有一个子进程在执行，可用 <code>Zen.cancelRun()</code> 终止当前执行（被取消时返回 <code>errorMsg: &quot;cancelled&quot;</code>）。</p>
+<h3 id="1执行-magick-命令异步" tabindex="-1">1、执行 magick 命令（异步） <a class="doc-anchor" href="#1执行-magick-命令异步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.imageRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>args：完整的 magick 命令行参数（不含 magick.exe 本身），由前端拼接。路径需自行加双引号，例如 <code>&quot;D:\\in.jpg&quot; -resize 800x600 &quot;D:\\out.jpg&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接参数，只执行 <code>magick.exe &lt;args&gt;</code> 并捕获结果。error 非 0 时 errorMsg 透传 magick stderr；stdout 为 magick 标准输出（identify 等命令的结果）</p>
+</li>
+</ul>
+<h3 id="2执行-ffmpeg-命令异步" tabindex="-1">2、执行 ffmpeg 命令（异步） <a class="doc-anchor" href="#2执行-ffmpeg-命令异步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffmpegRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>args：完整的 ffmpeg 命令行参数（不含 ffmpeg.exe 本身），由前端拼接。路径需自行加双引号，例如 <code>-i &quot;D:\in.mp4&quot; -vf &quot;scale=1280:720&quot; -c:v libx264 -crf 23 &quot;D:\out.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接参数，只执行 <code>ffmpeg.exe &lt;args&gt;</code> 并捕获结果。error 非 0 时 errorMsg 透传 ffmpeg stderr；stdout 为 ffmpeg 标准输出。视频处理耗时较长，C++ 默认超时 1800s</p>
+</li>
+</ul>
+<h3 id="3执行-ffprobe-命令探测元数据同步" tabindex="-1">3、执行 ffprobe 命令（探测元数据，同步） <a class="doc-anchor" href="#3执行-ffprobe-命令探测元数据同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffprobeRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>args：完整的 ffprobe 命令行参数（不含 ffprobe.exe 本身）。常用 <code>-v quiet -print_format json -show_format -show_streams &quot;D:\in.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;{ ...json... }&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端只执行 <code>ffprobe.exe &lt;args&gt;</code> 并返回。stdout 通常为 JSON，前端自行解析。探测很快，保持同步绑定，默认超时 30s</p>
+</li>
+</ul>
+<h3 id="4执行-pdfcpu-命令异步" tabindex="-1">4、执行 pdfcpu 命令（异步） <a class="doc-anchor" href="#4执行-pdfcpu-命令异步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pdfRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>args：完整的 pdfcpu 命令行参数（不含 pdfcpu.exe 本身），由前端拼接。路径需自行加双引号，例如 <code>merge &quot;D:\out.pdf&quot; &quot;D:\in1.pdf&quot; &quot;D:\in2.pdf&quot; --force</code></li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接参数，只执行 <code>pdfcpu.exe &lt;args&gt;</code> 并捕获结果。error 非 0 时 errorMsg 透传 pdfcpu stderr；stdout 为 pdfcpu 标准输出（<code>info -j</code> 等命令的结果）。C++ 默认超时 1800s</p>
+</li>
+</ul>
+<h3 id="5执行-ghostscript-命令异步" tabindex="-1">5、执行 Ghostscript 命令（异步） <a class="doc-anchor" href="#5执行-ghostscript-命令异步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.gsRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>args：完整的 Ghostscript 命令行参数（不含 gswin64c.exe 本身），由前端拼接。路径需自行加双引号，例如 <code>-sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=150 -sOutputFile=&quot;D:\out.pdf&quot; &quot;D:\in.pdf&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接参数，只执行 <code>Platform\Ghostscript\gswin64c.exe &lt;args&gt;</code> 并捕获结果。error 非 0 时 errorMsg 透传 Ghostscript stderr。C++ 默认超时 1800s。当前用于 PDF 工具的压缩（optimize）步骤，其余 PDF 操作仍走 <code>pdfRun</code>（pdfcpu）</p>
+</li>
+</ul>
+<h3 id="6取消当前媒体子进程" tabindex="-1">6、取消当前媒体子进程 <a class="doc-anchor" href="#6取消当前媒体子进程" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.cancelRun() : object
+</code></pre>
+<ul>
+<li>
+<p>输入：无</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0
+}
+</code></pre>
+</li>
+<li>
+<p>注：触发取消信号，终止当前正在执行的 <code>imageRun</code>/<code>ffmpegRun</code>/<code>pdfRun</code>/<code>gsRun</code> 子进程（<code>TerminateProcess</code>）。被取消的调用会以 <code>{error:2, errorMsg:&quot;cancelled&quot;}</code> 返回。批量处理为串行，同一时刻仅有一个子进程在执行。</p>
+</li>
+</ul>
+<h2 id="八截图与-ocr" tabindex="-1">八、截图与 OCR <a class="doc-anchor" href="#八截图与-ocr" aria-hidden="true">#</a></h2>
+<h3 id="1截图钉在桌面" tabindex="-1">1、截图/钉在桌面 <a class="doc-anchor" href="#1截图钉在桌面" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.screenCap(mode:string, wait:bool, file: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>mode：模式</p>
+<ul>
+<li>
+<p>normal：常规</p>
+</li>
+<li>
+<p>long：长截图</p>
+</li>
+<li>
+<p>fast：快速截图到剪贴板（无标注，适合ocr）</p>
+</li>
+<li>
+<p>quickocr：拖选区域后立即 OCR+翻译，译文贴屏显示在选区原文字位置（快捷OCR翻译）</p>
+</li>
+<li>
+<p>pinClipboard：把剪贴板的图片钉在桌面</p>
+</li>
+<li>
+<p>pinFile：把图片文件的图片钉在桌面</p>
+</li>
+<li>
+<p>pinArea：把屏幕指定区域直抓并原位钉在桌面（param 传 &quot;x,y,w,h&quot;，屏幕物理像素）</p>
+</li>
+<li>
+<p>pinWin：把指定窗口客户区的内容直抓并原位钉在桌面（param 传十进制 HWND）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>wait：是否等待截图完成</p>
+</li>
+<li>
+<p>param：文件路径（pinFile用）；区域串 &quot;x,y,w,h&quot;（pinArea用）；十进制 HWND（pinWin用）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2ocr初始化" tabindex="-1">2、OCR初始化 <a class="doc-anchor" href="#2ocr初始化" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrInit(lang: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>lang：语言</p>
+<ul>
+<li>
+<p>zh-CN：简体中文</p>
+</li>
+<li>
+<p>zh-TW：繁体中文</p>
+</li>
+<li>
+<p>en-US：英文</p>
+</li>
+<li>
+<p>ja-JP：日文</p>
+</li>
+<li>
+<p>ko-KR：韩文</p>
+</li>
+<li>
+<p>ru-RU：俄文</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3ocr识别异步" tabindex="-1">3、OCR识别（异步） <a class="doc-anchor" href="#3ocr识别异步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrRecognition(image: string) : object
+</code></pre>
+<p>OCR 为耗时操作，为<strong>异步绑定</strong>，通过 Promise 回扑。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>image：图片，base64编码</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;result&quot;: {
+        &quot;code&quot;: 100,
+        &quot;data&quot;: [
+            {
+                &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+                &quot;score&quot;: 0.9605724896703448,
+                &quot;text&quot;: &quot;有发热症状患者&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>result：识别结果</p>
+<ul>
+<li>
+<p>code：编码，固定为100</p>
+</li>
+<li>
+<p>data：结果集合</p>
+<ul>
+<li>
+<p>box：文字的位置（4个角落坐标）</p>
+</li>
+<li>
+<p>text：识别后的文本</p>
+</li>
+<li>
+<p>score：识别评分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="九加密解密" tabindex="-1">九、加密解密 <a class="doc-anchor" href="#九加密解密" aria-hidden="true">#</a></h2>
+<h3 id="1加密数据" tabindex="-1">1、加密数据 <a class="doc-anchor" href="#1加密数据" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.encrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>target：要加密的数据</p>
+<ul>
+<li>
+<p>type=&quot;text&quot; 时为文本字符串</p>
+</li>
+<li>
+<p>type=&quot;data&quot; 时为 Base64 编码的二进制数据</p>
+</li>
+<li>
+<p>type=&quot;hex&quot; 时为十六进制字符串</p>
+</li>
+<li>
+<p>type=&quot;file&quot; 时为文件路径</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：加密算法</p>
+<ul>
+<li>
+<p>对称加密：&quot;aes-128-cbc&quot;, &quot;aes-192-cbc&quot;, &quot;aes-256-cbc&quot;, &quot;aes-128-ecb&quot;, &quot;aes-256-ecb&quot;, &quot;aes-128-ctr&quot;, &quot;aes-256-ctr&quot;, &quot;des-cbc&quot;, &quot;des-ecb&quot;, &quot;des-ede3-cbc&quot; (3DES), &quot;des-ede3-ecb&quot;, &quot;rc4&quot;, &quot;bf-ecb&quot; (Blowfish), &quot;rc2-cbc&quot;, &quot;sm4-cbc&quot;, &quot;sm4-ecb&quot;, &quot;sm4-ctr&quot;</p>
+</li>
+<li>
+<p>非对称加密：&quot;rsa-pkcs1&quot;, &quot;rsa-oaep&quot;（RSA，公钥加密、私钥解密）、&quot;sm2&quot;（国密椭圆曲线 sm2p256v1，公钥加密、私钥解密；单次可处理任意长度，无需分块）</p>
+</li>
+<li>
+<p>key/iv 为 Base64；内部转十六进制后以 <code>enc -K &lt;hex&gt; -iv &lt;hex&gt;</code> 形式传递，密钥长度需精确匹配算法</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type：输入类型（默认 &quot;text&quot;）</p>
+<ul>
+<li>
+<p>&quot;text&quot;：文本数据</p>
+</li>
+<li>
+<p>&quot;data&quot;：Base64 编码的二进制数据</p>
+</li>
+<li>
+<p>&quot;hex&quot;：十六进制字符串</p>
+</li>
+<li>
+<p>&quot;file&quot;：文件路径</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key：对称为 Base64 编码的密钥；非对称(rsa-*、sm2)为 PEM 文本（加密传公钥、解密传私钥，原样透传不 Base64 解码）</p>
+</li>
+<li>
+<p>iv：Base64 编码的初始化向量（可选，某些算法需要；非对称忽略）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的加密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;text&quot;,
+  &quot;inputSize&quot;: 1024,
+  &quot;outputSize&quot;: 1040
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2解密数据" tabindex="-1">2、解密数据 <a class="doc-anchor" href="#2解密数据" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.decrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>target：要解密的数据</p>
+<ul>
+<li>
+<p>type=&quot;data&quot; 时为 Base64 编码的密文</p>
+</li>
+<li>
+<p>type=&quot;file&quot; 时为密文文件路径</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：加密算法（同 encrypt）</p>
+</li>
+<li>
+<p>type：输入类型（默认 &quot;data&quot;）</p>
+<ul>
+<li>
+<p>&quot;data&quot;：Base64 编码的密文</p>
+</li>
+<li>
+<p>&quot;file&quot;：密文文件路径</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key：对称为 Base64 编码的密钥；非对称(rsa-*、sm2)为 PEM 文本（加密传公钥、解密传私钥，原样透传不 Base64 解码）</p>
+</li>
+<li>
+<p>iv：Base64 编码的初始化向量（可选；非对称忽略）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的解密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;data&quot;,
+  &quot;inputSize&quot;: 1040,
+  &quot;outputSize&quot;: 1024
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3生成密钥" tabindex="-1">3、生成密钥 <a class="doc-anchor" href="#3生成密钥" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateKey(algorithm: string, bits: string = '') : object
+</code></pre>
+<p>统一密钥生成入口（由内置 openssl.exe 生成，前端无需依赖浏览器 WebCrypto）。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>algorithm：算法名</p>
+<ul>
+<li>
+<p>对称：aes-128-cbc / aes-256-cbc / des-cbc / des-ede3-cbc / sm4-cbc / sm4-ecb / sm4-ctr / rc2-cbc / rc4 / bf-ecb 等（密钥长度由算法名解析）</p>
+</li>
+<li>
+<p>非对称：&quot;rsa&quot;（bits 生效）/ &quot;sm2&quot;（固定曲线 sm2p256v1）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>bits：RSA 密钥位数（&quot;2048&quot;/&quot;4096&quot;，默认 2048）；对称算法与 SM2 忽略</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">// 对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;key&quot;: &quot;Base64编码的密钥&quot; }
+// 非对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;sm2&quot;, &quot;publicKey&quot;: &quot;-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n&quot;, &quot;privateKey&quot;: &quot;-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n&quot; }
+</code></pre>
+</li>
+</ul>
+<h3 id="4生成iv" tabindex="-1">4、生成IV <a class="doc-anchor" href="#4生成iv" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateIv(algorithm: string) : object
+</code></pre>
+<p>按对称算法块大小生成随机 IV（由内置 openssl.exe 生成）。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>algorithm：对称算法名（同 encrypt 的对称算法清单）</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;iv&quot;: &quot;Base64编码的IV&quot; }
+</code></pre>
+<p>注：AES/SM4 块大小 16 字节；DES/3DES/RC2 为 8 字节；ECB 模式与流密码(rc4)无需 IV，<code>iv</code> 返回空串。</p>
+</li>
+</ul>
+<h3 id="5计算哈希" tabindex="-1">5、计算哈希 <a class="doc-anchor" href="#5计算哈希" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.calcHash(target: string, algorithm: string, type?: string, key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>target：计算目标，含义随 type 变化</p>
+<ul>
+<li>
+<p>type=&quot;file&quot; 时为文件路径</p>
+</li>
+<li>
+<p>type=&quot;text&quot; 时为文本字符串（按 UTF-8 计算摘要）</p>
+</li>
+<li>
+<p>type=&quot;data&quot; 时为 Base64 编码的二进制数据</p>
+</li>
+<li>
+<p>type=&quot;hex&quot; 时为十六进制字符串</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：哈希算法</p>
+<ul>
+<li>
+<p>&quot;md5&quot;</p>
+</li>
+<li>
+<p>&quot;sha1&quot;</p>
+</li>
+<li>
+<p>&quot;sha224&quot;</p>
+</li>
+<li>
+<p>&quot;sha256&quot;</p>
+</li>
+<li>
+<p>&quot;sha384&quot;</p>
+</li>
+<li>
+<p>&quot;sha512&quot;</p>
+</li>
+<li>
+<p>&quot;ripemd160&quot;</p>
+</li>
+<li>
+<p>&quot;sm3&quot;（国密 SM3 摘要，256 位 / 64 位十六进制）</p>
+</li>
+<li>
+<p>&quot;sha3-224&quot; / &quot;sha3-256&quot; / &quot;sha3-384&quot; / &quot;sha3-512&quot;（SHA-3 / Keccak，NIST FIPS 202）</p>
+</li>
+<li>
+<p>&quot;blake2b512&quot; / &quot;blake2s256&quot;（BLAKE2，现代高性能摘要）</p>
+</li>
+<li>
+<p>&quot;crc32&quot;（CRC32 校验和，8 位十六进制）</p>
+</li>
+<li>
+<p>&quot;crc16&quot;（CRC16 校验和，4 位十六进制）</p>
+</li>
+<li>
+<p>&quot;checksum&quot;（字节累加和，8 位十六进制）</p>
+</li>
+<li>
+<p>&quot;hmac-md5&quot; / &quot;hmac-sha1&quot; / &quot;hmac-sha256&quot; / &quot;hmac-sha512&quot; / &quot;hmac-sm3&quot; / &quot;hmac-sha3-256&quot; / &quot;hmac-sha3-512&quot;（HMAC，第 4 参 key 为密钥，输出十六进制 MAC）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type：输入类型（可选，默认 &quot;file&quot;）</p>
+<ul>
+<li>
+<p>&quot;file&quot;：计算文件哈希</p>
+</li>
+<li>
+<p>&quot;text&quot;：计算文本哈希</p>
+</li>
+<li>
+<p>&quot;data&quot;：计算二进制数据哈希（target 需为 Base64 字符串）</p>
+</li>
+<li>
+<p>&quot;hex&quot;：计算十六进制字符串哈希（target 为 hex 字符串，解码后按字节计算）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;hash&quot;: &quot;D41D8CD98F00B204E9800998ECF8427E&quot;,
+  &quot;algorithm&quot;: &quot;md5&quot;,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十剪贴板历史" tabindex="-1">十、剪贴板历史 <a class="doc-anchor" href="#十剪贴板历史" aria-hidden="true">#</a></h2>
+<h3 id="1搜索剪贴板" tabindex="-1">1、搜索剪贴板 <a class="doc-anchor" href="#1搜索剪贴板" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchClip(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>keyword：搜索关键字</p>
+</li>
+<li>
+<p>maxResults：最大记录数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;clips&quot;: [
+    {
+      &quot;id&quot;: &quot;1235642340977&quot;,
+      &quot;name&quot;: &quot;Weixin.exe&quot;,
+      &quot;text&quot;: &quot;文本内容&quot;,
+      &quot;ocrJson&quot;: &quot;{\&quot;code\&quot;:100,\&quot;data\&quot;:[...]}&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:29&quot;,
+      &quot;image&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0
+    },
+    {
+      &quot;id&quot;: &quot;235634234232&quot;,
+      &quot;name&quot;: &quot;MarkText.exe&quot;,
+      &quot;text&quot;: &quot;function&quot;,
+      &quot;ocrJson&quot;: &quot;&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:21&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;score&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>clips：剪贴板的历史内容列表</p>
+<ul>
+<li>
+<p>id：记录id，唯一标识</p>
+</li>
+<li>
+<p>name：存放复制的源进程名称</p>
+</li>
+<li>
+<p>text：文本内容（image不为空时，为图片的OCR文本内容）</p>
+</li>
+<li>
+<p>image：图片内容，base64格式</p>
+</li>
+<li>
+<p>dateCreated：创建日期</p>
+</li>
+<li>
+<p>ocrJson：图片OCR输出的格式化内容</p>
+<ul>
+<li>
+<p>box：文字的位置（4个角落坐标）</p>
+</li>
+<li>
+<p>text：识别后的文本</p>
+</li>
+<li>
+<p>score：识别评分</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;code&quot;: 100,
+    &quot;data&quot;: [
+        {
+            &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+            &quot;score&quot;: 0.9605724896703448,
+            &quot;text&quot;: &quot;有发热症状患者&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2删除一条记录" tabindex="-1">2、删除一条记录 <a class="doc-anchor" href="#2删除一条记录" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deleteClip(id: string) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>id：记录id</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3清空记录" tabindex="-1">3、清空记录 <a class="doc-anchor" href="#3清空记录" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.clearClip() : object
+</code></pre>
+<ul>
+<li>
+<p>输入：无</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十一书签" tabindex="-1">十一、书签 <a class="doc-anchor" href="#十一书签" aria-hidden="true">#</a></h2>
+<h3 id="1搜索书签" tabindex="-1">1、搜索书签 <a class="doc-anchor" href="#1搜索书签" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchBookmark(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>keyword：搜索关键字</p>
+</li>
+<li>
+<p>maxResults：最大记录数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;bookmarks&quot;: [
+        {
+            &quot;id&quot;: &quot;13568723452&quot;,
+            &quot;name&quot;: &quot;DeepSeek | 深度求索&quot;,
+            &quot;url&quot;: &quot;https://www.deepseek.com/&quot;,
+            &quot;dateAdded&quot;: &quot;2018-12-19 21:20:48&quot;,
+            &quot;dateLastUsed&quot;: &quot;2025-05-21 15:04:06&quot;,
+            &quot;visitCount&quot;: 37,
+            &quot;score&quot;: 80
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>bookmarks：书签列表</p>
+<ul>
+<li>
+<p>id：唯一ID</p>
+</li>
+<li>
+<p>name：名称</p>
+</li>
+<li>
+<p>url：链接</p>
+</li>
+<li>
+<p>dateAdded：添加时间</p>
+</li>
+<li>
+<p>dateLastUsed：使用时间</p>
+</li>
+<li>
+<p>visitCount：使用次数</p>
+</li>
+<li>
+<p>score：搜索评分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2打开书签" tabindex="-1">2、打开书签 <a class="doc-anchor" href="#2打开书签" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openBookmark(id: string, privacyMode: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>id：id</p>
+</li>
+<li>
+<p>privacyMode：隐私模式</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十二命令执行" tabindex="-1">十二、命令执行 <a class="doc-anchor" href="#十二命令执行" aria-hidden="true">#</a></h2>
+<h3 id="1运行命令行" tabindex="-1">1、运行命令行 <a class="doc-anchor" href="#1运行命令行" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runCmd(cmd: string, admin : bool) : object
+</code></pre>
+<p>以 <code>cmd.exe /k &lt;cmd&gt;</code> 打开可见的命令行窗口并执行命令（窗口保持打开）。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>cmd：命令</p>
+</li>
+<li>
+<p>admin：是否以管理员身份运行</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2运行任意程序" tabindex="-1">2、运行任意程序 <a class="doc-anchor" href="#2运行任意程序" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runAny(cmdExe: string, cmdArgs: string, admin : bool) : object
+</code></pre>
+<p>直接启动任意可执行文件或 URL（URL 走系统默认关联打开，如浏览器）。</p>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>cmdExe：命令路径或 URL</p>
+</li>
+<li>
+<p>cmdArgs：命令参数</p>
+</li>
+<li>
+<p>admin：是否以管理员身份运行</p>
+</li>
+</ul>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十三更新" tabindex="-1">十三、更新 <a class="doc-anchor" href="#十三更新" aria-hidden="true">#</a></h2>
+<p>更新由独立进程 <code>yyzUpdater.exe</code> 完成，主进程仅负责拉起与状态探测。</p>
+<h3 id="1检查更新" tabindex="-1">1、检查更新 <a class="doc-anchor" href="#1检查更新" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.checkUpdate() : object
+</code></pre>
+<p>拉起 <code>yyzUpdater.exe --check-and-apply</code>（检测 + 下载 + 应用一条龙）。</p>
+<ul>
+<li>
+<p>输入：无</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+<p>注：<code>error:0</code> 仅表示成功拉起更新器，<strong>不代表更新结果</strong>。更新进行中/已就绪的状态用 <code>getUpdateState</code> 查询。</p>
+</li>
+</ul>
+<h3 id="2获取更新状态" tabindex="-1">2、获取更新状态 <a class="doc-anchor" href="#2获取更新状态" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getUpdateState() : object
+</code></pre>
+<p>实时探测更新状态（供托盘轮询）：</p>
+<ul>
+<li>
+<p>updater 是否在运行 → 单例互斥体 <code>Local\yyzUpdater_SingleInstance</code></p>
+</li>
+<li>
+<p>是否已下载待应用 → <code>%APPDATA%\yyzTools\Update\update.ready</code> 是否存在（存在则解析其中 main 包 version）</p>
+</li>
+<li>
+<p>手动检查是否已结束且无更新 → <code>%APPDATA%\yyzTools\Update\update.result</code> 标记（<strong>读到即删</strong>）</p>
+</li>
+<li>
+<p>输入：无</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
+</code></pre>
+<ul>
+<li>
+<p>status：<code>idle</code>（无更新活动）/ <code>checking</code>（更新器运行中）/ <code>ready</code>（已下载完毕可升级）</p>
+</li>
+<li>
+<p>version：仅 <code>ready</code> 态有值，为待应用的新版本号（取 main 包），其余为空串</p>
+</li>
+<li>
+<p>lastResult：仅 <code>idle</code> 态可能有值，为上一次<strong>手动</strong>检查（<code>--check-and-apply</code>）的结果：<code>uptodate</code>（已是最新）/ <code>error</code>（检查失败），无标记时为空串。该标记由 updater 写入、本接口读取后立即删除，因此<strong>只会返回一次</strong>，供前端弹一次 Toast；静默的 <code>--check</code> 不写标记，不会产生打扰。</p>
+</li>
+<li>
+<p>状态优先级：<code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3应用已下载完毕的更新" tabindex="-1">3、应用已下载完毕的更新 <a class="doc-anchor" href="#3应用已下载完毕的更新" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.applyUpdate() : object
+</code></pre>
+<p>拉起 <code>yyzUpdater.exe --apply</code>：读 <code>update.ready</code> → 等主进程退出 → 替换文件 → 重启主进程。仅在 <code>getUpdateState</code> 返回 <code>ready</code> 时调用。</p>
+<ul>
+<li>
+<p>输入：无</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h2 id="安全须知" tabindex="-1">⚠️ 安全须知 <a class="doc-anchor" href="#安全须知" aria-hidden="true">#</a></h2>
+<p>Native API 面向模块开发者<strong>完整开放</strong>宿主进程的系统能力，其中包含文件读写与删除、进程创建与终止、窗口控制、剪贴板读写、注册表与系统设置修改、网络下载及命令行执行等<strong>高危操作</strong>。</p>
+<p>这些接口<strong>不设权限弹窗、不做沙箱隔离、不提供撤销机制</strong>——调用即以当前用户权限直接生效，误用可能导致数据永久丢失或系统异常。</p>
+<p>因此请务必注意：</p>
+<ul>
+<li><strong>自行评估安全性</strong>：调用任何接口前，先确认参数（尤其是路径、进程名、命令行）来源可信且已充分校验；对删除、覆盖、结束进程等不可逆操作，建议先行备份或向用户二次确认。</li>
+<li><strong>警惕不可信输入</strong>：切勿将用户输入、网络响应或第三方数据未经校验地直接拼入接口参数，谨防路径穿越与命令注入。</li>
+<li><strong>最小权限原则</strong>：只申请业务真正需要的能力，避免为图省事使用影响面更大的接口。</li>
+<li><strong>责任自负</strong>：开发者须自行承担因使用本 API 而造成的一切后果，包括但不限于数据丢失、系统损坏与安全风险。</li>
+</ul>
+</blockquote>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="相关资源">
+    <a class="sdk-link" href="/zh-CN/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>快速入门指南</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>下载样例工程</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-CN/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>产品</h3>
+            <a href="/zh-CN/features.html">功能</a>
+            <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/changelog.html">更新日志</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>资源</h3>
+            <a href="/zh-CN/sdk.html">开发者</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">问题反馈</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-CN/agreement.html">用户协议</a>
+            <a href="/zh-CN/privacy.html">隐私政策</a>
+            
+            <a class="js-email" href="#">联系邮箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留所有权利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

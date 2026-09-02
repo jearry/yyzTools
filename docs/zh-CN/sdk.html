@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开发一个 yyzTools 模块 —— 快速入门指南</title>
+<meta name="description" content="从零创建一个运行在 yyzTools 内的 Web 应用：页面目录、窗口宿主、多语言、异步 Native API、配置持久化。纯原生 JS，免构建。">
+
+<meta property="og:title" content="开发一个 yyzTools 模块 —— 快速入门指南">
+<meta property="og:description" content="从零创建一个运行在 yyzTools 内的 Web 应用：页面目录、窗口宿主、多语言、异步 Native API、配置持久化。纯原生 JS，免构建。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-CN/sdk.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_CN">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="开发一个 yyzTools 模块 —— 快速入门指南">
+<meta name="twitter:description" content="从零创建一个运行在 yyzTools 内的 Web 应用：页面目录、窗口宿主、多语言、异步 Native API、配置持久化。纯原生 JS，免构建。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-CN/sdk.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+<link rel="dns-prefetch" href="https://ghfast.top">
+<link rel="dns-prefetch" href="https://ghproxy.com">
+<link rel="dns-prefetch" href="https://gh-proxy.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-CN/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-CN/" >首页</a>
+            <a href="/zh-CN/features.html" >功能</a>
+            <a href="/zh-CN/download.html" >下载</a>
+            <a href="/zh-CN/changelog.html" >更新日志</a>
+            
+            <a href="/zh-CN/sdk.html" class=&#34;on&#34;>开发者</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">交流反馈</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="选择语言">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">简体中文</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk.html" hreflang="zh-CN"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>简体中文</a>
+                    
+                    <a href="/zh-TW/sdk.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/zh-CN/download.html">免费下载</a>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"开发者","item":"https://yyztools.com/zh-CN/sdk.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"快速入门指南","description":"从零创建一个运行在 yyzTools 内的 Web 应用：页面目录、窗口宿主、多语言、异步 Native API、配置持久化。纯原生 JS，免构建。","inLanguage":"zh-CN","url":"https://yyztools.com/zh-CN/sdk.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Beginner"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> 本页目录</summary>
+            <nav aria-label="本页目录">
+                <ol>
+                    
+                    <li>
+                        <a href="#一样例目录与部署方式">一、样例目录与部署方式</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#二架构总览一个-web-应用是如何跑起来的">二、架构总览：一个 Web 应用是如何跑起来的</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#三页面结构原生-js四个文件">三、页面结构（原生 JS，四个文件）</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#indexhtml">index.html</a></li>
+                            
+                            <li><a href="#filefinderjs核心逻辑">filefinder.js（核心逻辑）</a></li>
+                            
+                            <li><a href="#searchfile-返回结构-error-files">searchFile 返回结构（`{ error, files[] }`）</a></li>
+                            
+                            <li><a href="#本样例调用的接口一览">本样例调用的接口一览</a></li>
+                            
+                            <li><a href="#调用规范四条铁律">调用规范（四条铁律）</a></li>
+                            
+                            <li><a href="#常用接口速查样例之外的更多能力">常用接口速查（样例之外的更多能力）</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#四创建-zenmod-模块文件窗口宿主">四、创建 .zenmod 模块文件（窗口宿主）</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#五多语言文案字典方式">五、多语言文案（字典方式）</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#六调试与集成">六、调试与集成</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#七完整最小示例汇总">七、完整最小示例汇总</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#八安全须知">八、安全须知</a>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>快速入门指南</h1>
+            <p class="doc-meta">从零写出你的第一个模块，无需任何构建工具</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="相关资源">
+    <a class="sdk-link" href="/zh-CN/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>接口参考手册</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>下载样例工程</span>
+    </a>
+</nav>
+
+
+            <p>本文面向模块开发者，演示如何从零创建一个运行在 yyzTools 主进程内的 Web 应用（以 SDK 样例工程 <code>SDK_Sample</code>——一个急速文件查询器——为例），覆盖：页面目录、窗口宿主、i18n、异步 Native API（全盘文件搜索）、文件打开、配置持久化，以及需要扩展 C++ 能力时的 native 方法新增模板。</p>
+<p>样例是<strong>纯原生 JS、零第三方依赖、免构建</strong>的：不需要 Vite / Alpine / FontAwesome，复制 <code>Web</code> 与 <code>Modules</code> 两个目录到 yyzTools.exe 所在目录即可运行。</p>
+<h2 id="一样例目录与部署方式" tabindex="-1">一、样例目录与部署方式 <a class="doc-anchor" href="#一样例目录与部署方式" aria-hidden="true">#</a></h2>
+<pre><code>sdk/sample/
+  Web/                        ← 复制到 &lt;yyzTools.exe 所在目录&gt;\Web\        （与现有 Web 目录合并）
+    SDK_Sample/               ← 样例自包含目录，整个文件夹即一个完整模块
+      index.html              # 页面结构（原生 DOM，data-i18n 标注文案位）
+      filefinder.js           # 全部逻辑：搜索 / 打开 / 历史 / Esc
+      filefinder.css          # 页面样式（全部用 --zen-* 变量，自动适配深浅色）
+      i18n.js                 # 文案字典（zh_cn / en）
+      lib/
+        zen_api.js            # ZenAPI 封装类（Native API 的 JS 包装，唯一 lib 依赖）
+        window_controls.css   # 主题变量（--zen-*）+ 窗口控制栏样式
+  Modules/                   ← 复制到 &lt;yyzTools.exe 所在目录&gt;\Modules\    （与现有 Modules 目录合并）
+    SDK_Sample.zenmod         # type:&quot;web&quot; 模块声明，ModuleManager 自动创建宿主窗口
+</code></pre>
+<p>部署：</p>
+<pre><code class="language-text">把 sdk/sample/Web     复制/合并到  bin64\Web\
+把 sdk/sample/Modules 复制/合并到  bin64\Modules\
+重启 yyzTools.exe，命令面板搜&quot;SDK样例工程&quot;即可启动
+</code></pre>
+<p>主程序读取位置的约定：</p>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>页面</td>
+<td><code>&lt;exe目录&gt;\Web\{page}\index.html</code></td>
+</tr>
+<tr>
+<td>模块</td>
+<td><code>&lt;exe目录&gt;\Modules\&lt;分类&gt;\*.zenmod</code>（只扫一层子目录）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二架构总览一个-web-应用是如何跑起来的" tabindex="-1">二、架构总览：一个 Web 应用是如何跑起来的 <a class="doc-anchor" href="#二架构总览一个-web-应用是如何跑起来的" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">Modules/SDK_Sample.zenmod   ← 声明 type:&quot;web&quot; 的模块文件（数据驱动，无需写 C++）
+        │  主程序启动时扫描 .zenmod
+        ▼
+WebModule 宿主窗口（原生窗口 + WebView2）
+        │  加载 Web\SDK_Sample\index.html
+        ▼
+Web/SDK_Sample/             ← 你的全部前端代码（原生 JS，零依赖）
+        │  window.Zen.xxx(...)  ←→  主程序注册的原生接口
+        ▼
+C++ 各 Manager（文件/进程/窗口/剪贴板/OCR...）
+</code></pre>
+<p>关键结论：</p>
+<ul>
+<li>
+<p><strong>不需要写任何 C++ 代码</strong>。<code>type: &quot;web&quot;</code> 的 <code>.zenmod</code> 会被主程序自动创建为 WebModule 宿主窗口，窗口尺寸、图标、多语言名称都由模块文件声明。</p>
+</li>
+<li>
+<p>模块自动获得：命令面板搜索（含拼音索引）、全局快捷键绑定、程序坞挂载、<code>windowControl</code> 名称表注册。</p>
+</li>
+<li>
+<p>前端与 C++ 的唯一通道是 <code>window.Zen</code>，请统一通过 <code>ZenAPI</code> 封装类调用（样例已附带 <code>lib/zen_api.js</code>）。</p>
+</li>
+<li>
+<p>免构建页面直接是静态文件，改完刷新窗口即生效（<code>windowControl('sdk_sample','hide')</code> 再 show，或重启 exe），无需任何编译步骤。</p>
+</li>
+</ul>
+<h2 id="三页面结构原生-js四个文件" tabindex="-1">三、页面结构（原生 JS，四个文件） <a class="doc-anchor" href="#三页面结构原生-js四个文件" aria-hidden="true">#</a></h2>
+<h3 id="indexhtml" tabindex="-1">index.html <a class="doc-anchor" href="#indexhtml" aria-hidden="true">#</a></h3>
+<p>不引任何第三方库；窗口控制栏的三个按钮用 Unicode 字符当图标（− / □ / ×），样式由 <code>lib/window_controls.css</code> 提供。文案位用 <code>data-i18n</code> / <code>data-i18n-ph</code> 标注，JS 初始化时统一填充。结构分四块：搜索栏、搜索历史 chips、状态栏（结果数 + 语法提示）、结果列表：</p>
+<pre><code class="language-html">&lt;div class=&quot;search-bar&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;searchInput&quot; class=&quot;search-input&quot; data-i18n-ph=&quot;inputPlaceholder&quot;
+           spellcheck=&quot;false&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;button class=&quot;search-btn&quot; id=&quot;btnSearch&quot; data-i18n=&quot;search&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;history-chips&quot; id=&quot;historyChips&quot;&gt; ... &lt;/div&gt;
+&lt;div class=&quot;status-bar&quot;&gt;
+    &lt;span id=&quot;statusText&quot; data-i18n=&quot;empty&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;syntax-hint&quot; data-i18n=&quot;syntaxHint&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;result-list&quot; id=&quot;resultList&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="filefinderjs核心逻辑" tabindex="-1">filefinder.js（核心逻辑） <a class="doc-anchor" href="#filefinderjs核心逻辑" aria-hidden="true">#</a></h3>
+<p>五个职责，全部照抄样例即可：</p>
+<ol>
+<li><strong>窗口控制</strong>：<code>ZenAPI.windowControl('sdk_sample', 'min'|'max'|'close'|'drag')</code>；标题栏拖动判定位移超过 5px 才触发；Esc 键——输入框有焦点先 blur，否则关窗。</li>
+<li><strong>主题</strong>：注册 <code>window.__applyTheme</code> 接收 C++ 回推（首屏 <code>data-theme</code> 由 C++ 注入，无需 JS 处理）。</li>
+<li><strong>i18n</strong>：读 <code>getConfig().language</code>，从字典取文案，遍历 <code>data-i18n</code> 元素填充；带 <code>{{count}}</code> 占位的句子用插值函数展开。</li>
+<li><strong>搜索</strong>：<code>searchFile(keyword, maxResults)</code> 是<strong>异步绑定</strong>接口（后台线程执行，不阻塞 UI）；回车立即搜、输入防抖 300ms 自动搜；用递增序号丢弃乱序回包——native 侧有搜索槽机制（新请求直接顶掉未完成的旧请求，旧 Promise 拿到的是空结果），前端序号防止这个&quot;空结果晚到&quot;覆盖掉新结果的渲染，二者配合。</li>
+<li><strong>结果操作</strong>：<code>openFile(fullPath, false)</code> 打开文件（双击同，第二参数是&quot;是否管理员权限&quot;）；<code>openFileLocation(fullPath)</code> 打开所在目录；完整路径由 <code>path + '\\' + name</code> 拼出；图标直接用结果里现成的 <code>icon</code> 字段（base64）；文件大小用 <code>size</code> 数字字段格式化展示。</li>
+</ol>
+<h3 id="searchfile-返回结构-error-files" tabindex="-1">searchFile 返回结构（<code>{ error, files[] }</code>） <a class="doc-anchor" href="#searchfile-返回结构-error-files" aria-hidden="true">#</a></h3>
+<p><code>files[]</code> 每项的字段：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> / <code>path</code></td>
+<td>字符串</td>
+<td>文件名 / 所在目录。完整路径 = <code>path + '\\' + name</code></td>
+</tr>
+<tr>
+<td><code>dateModified</code></td>
+<td>字符串</td>
+<td>修改时间（本地化格式文本）</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>数字</td>
+<td>文件字节数，<strong>原生数字直接用</strong></td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>字符串</td>
+<td>base64 图标，<code>&lt;img src&gt;</code> 直饮，无需再调 <code>getFileIcon</code></td>
+</tr>
+<tr>
+<td><code>score</code></td>
+<td>数字</td>
+<td>相关度打分（native 已按分排序）</td>
+</tr>
+<tr>
+<td><code>isDir</code></td>
+<td>数字</td>
+<td><strong>1/0 数字而非原生布尔</strong>（手拼 JSON 路径），判断用 truthy 或 <code>=== 1</code>，不要 <code>=== true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="本样例调用的接口一览" tabindex="-1">本样例调用的接口一览 <a class="doc-anchor" href="#本样例调用的接口一览" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>接口</th>
+<th>绑定</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>searchFile(keyword, maxResults)</code></td>
+<td>异步</td>
+<td>全盘 MFT 索引搜索，支持 Everything 语法（<code>size:&gt;100MB</code>、<code>ext:mp4</code>、<code>!ext:tmp</code>）</td>
+</tr>
+<tr>
+<td><code>openFile(path, admin)</code></td>
+<td>同步</td>
+<td>打开文件/目录（shell 默认行为），<code>admin=true</code> 时以管理员权限</td>
+</tr>
+<tr>
+<td><code>openFileLocation(path)</code></td>
+<td>同步</td>
+<td>在资源管理器中定位到该文件</td>
+</tr>
+<tr>
+<td><code>getConfig(key?)</code></td>
+<td>同步</td>
+<td>读配置：缺省全量、传 key 只取该键（支持 <code>a.b</code> 点路径）</td>
+</tr>
+<tr>
+<td><code>setConfig(patch, replace?)</code></td>
+<td>同步</td>
+<td><strong>窄粒度</strong>写搜索历史：<code>setConfig({ sdk_sample: { history } })</code>；<code>replace=true</code> 整体替换（仅导入备份用）</td>
+</tr>
+<tr>
+<td><code>log(message)</code></td>
+<td>同步</td>
+<td>前端日志，写入主进程日志，便于排查</td>
+</tr>
+<tr>
+<td><code>windowControl(name, action)</code></td>
+<td>同步</td>
+<td>窗口最小化/最大化/关闭/拖动</td>
+</tr>
+</tbody>
+</table>
+<h3 id="调用规范四条铁律" tabindex="-1">调用规范（四条铁律） <a class="doc-anchor" href="#调用规范四条铁律" aria-hidden="true">#</a></h3>
+<pre><code class="language-js">import ZenAPI from './lib/zen_api.js';
+
+// 1. 判错用 isOk()（error 恒为数字：0 成功，-1 表示调用异常）
+const res = await ZenAPI.searchFile('yyztools', 200);
+if (!ZenAPI.isOk(res)) { ... }
+
+// 2. 接口返回的布尔字段是原生布尔，直接判断
+//    （例外一：config 的值由前端写入决定类型，通常是字符串，比较时注意归一）
+//    （例外二：searchFile 结果的 isDir 是 1/0 数字——手拼 JSON 路径，用 truthy 或 === 1）
+const ex = await ZenAPI.exists(path);
+if (ex.exists === true) { ... }
+
+// 3. 配置写入必须窄粒度，禁止全量回写
+await ZenAPI.setConfig({ sdk_sample: { history } });   // 只写自己的键
+
+// 4. 按 id 批量取应用信息用 getAppInfo，禁止循环 searchApp
+const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
+</code></pre>
+<p>异步接口（<code>getAppInfo</code> / <code>searchFile</code> / 媒体五件套 / <code>ocrRecognition</code>）在后台线程执行，注意同一时刻仅有一个媒体子进程在跑，长时间任务要提供 <code>cancelRun()</code> 取消入口。</p>
+<h3 id="常用接口速查样例之外的更多能力" tabindex="-1">常用接口速查（样例之外的更多能力） <a class="doc-anchor" href="#常用接口速查样例之外的更多能力" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读/写自己的配置</td>
+<td><code>getConfig</code> / <code>setConfig</code>（窄粒度 patch）/ <code>addConfig</code>（追加列表项）</td>
+</tr>
+<tr>
+<td>打开/另存文件</td>
+<td><code>browseFile</code> / <code>browseDir</code> / <code>writeFile</code> / <code>readFile</code>（&gt;50MB 用 <code>readFileChunk</code>）</td>
+</tr>
+<tr>
+<td>获取系统目录</td>
+<td><code>getKnownDir('download')</code> 等</td>
+</tr>
+<tr>
+<td>打开网页/外部程序</td>
+<td><code>runAny('https://...', '')</code></td>
+</tr>
+<tr>
+<td>复制到剪贴板</td>
+<td>前端 <code>navigator.clipboard</code>（文本场景无需 native）</td>
+</tr>
+<tr>
+<td>截图/OCR</td>
+<td><code>screenCap('fast', ...)</code> → <code>ocrRecognition(base64)</code>（均异步）</td>
+</tr>
+<tr>
+<td>调起其他模块窗口</td>
+<td><code>windowControl('translate', 'show')</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="四创建-zenmod-模块文件窗口宿主" tabindex="-1">四、创建 .zenmod 模块文件（窗口宿主） <a class="doc-anchor" href="#四创建-zenmod-模块文件窗口宿主" aria-hidden="true">#</a></h2>
+<p>在 <code>Modules/&lt;分类&gt;/</code> 下新建 <code>.zenmod</code>（样例文件：<code>sdk/sample/Modules/SDK_Sample.zenmod</code>）：</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;sdk_sample&quot;,
+    &quot;type&quot;: &quot;web&quot;,
+    &quot;name&quot;: { &quot;zh_cn&quot;: &quot;SDK样例工程&quot;, &quot;en&quot;: &quot;SDK Sample Project&quot;, &quot;...&quot;: &quot;共 12 门语言&quot; },
+    &quot;desc&quot;: { &quot;zh_cn&quot;: &quot;基于 MFT 索引的全盘急速文件搜索，支持 Everything 语法&quot;, &quot;en&quot;: &quot;...&quot; },
+    &quot;icon&quot;: &quot;fas fa-search&quot;,
+    &quot;winClassName&quot;: &quot;yyzTools::SdkSampleWindowClass&quot;,
+    &quot;width&quot;: 760,
+    &quot;height&quot;: 540,
+    &quot;layoutType&quot;: 34,
+    &quot;url&quot;: &quot;SDK_Sample/index.html&quot;,
+    &quot;preCreate&quot;: 0
+}
+</code></pre>
+<p>字段说明（<code>type:&quot;web&quot;</code> 时主程序读取的全部字段）：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>是</td>
+<td>全局唯一。同时是 <code>windowControl</code>/<code>windowState</code> 的窗口名、快捷键 <code>appId</code>、dock 挂载 id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>是</td>
+<td>固定 <code>web</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>是</td>
+<td>12 语言对象；也允许纯字符串写法（仅建议内部测试用），取值回落：当前语言 → en → 纯字符串</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>否</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>否</td>
+<td>FontAwesome class（如上）或 base64 图片</td>
+</tr>
+<tr>
+<td>winClassName</td>
+<td>否</td>
+<td>Win32 窗口类名，全局唯一即可</td>
+</tr>
+<tr>
+<td>width / height</td>
+<td>否</td>
+<td>初始窗口尺寸，默认 800x600</td>
+</tr>
+<tr>
+<td>layoutType</td>
+<td>否</td>
+<td>初始位置布局位掩码，34 = 水平居中 + 垂直居中</td>
+</tr>
+<tr>
+<td>url</td>
+<td>是</td>
+<td>相对 Web 根目录的页面路径（<code>SDK_Sample/index.html</code>）；也支持 <code>http(s)</code> 开头的在线地址</td>
+</tr>
+<tr>
+<td>preCreate</td>
+<td>否</td>
+<td>1 = 启动时预创建窗口（加快首次打开），默认 0 按需创建</td>
+</tr>
+<tr>
+<td>canSuspend</td>
+<td>否</td>
+<td>1 = 允许窗口隐藏时挂起 WebView 省资源（默认 1）</td>
+</tr>
+</tbody>
+</table>
+<p>改完自查：JSON 可解析、UTF-8 无 BOM、id 全局唯一、12 门语言均非空。</p>
+<p><strong>至此应用已完成</strong>——按第一节复制两个目录，命令面板搜索&quot;SDK样例工程&quot;或&quot;sdk&quot;即可启动（拼音索引自动生成），<code>windowControl('sdk_sample', 'show')</code> 也能唤起它。</p>
+<h2 id="五多语言文案字典方式" tabindex="-1">五、多语言文案（字典方式） <a class="doc-anchor" href="#五多语言文案字典方式" aria-hidden="true">#</a></h2>
+<p>免构建方案用普通 ES module 字典即可（<code>i18n.js</code>）：</p>
+<pre><code class="language-js">const messages = {
+    zh_cn: { title: 'SDK样例工程', results: '{{count}} 个结果，耗时 {{ms}} ms', ... },
+    en:    { title: 'SDK Sample Project', results: '{{count}} results in {{ms}} ms', ... }
+};
+export function getMessages(lang) { return messages[lang] || messages.en; }
+export function interpolate(dict) {
+    return (key, params) =&gt; { /* {{count}} → params.count */ };
+}
+</code></pre>
+<p>初始化时读 <code>getConfig().language</code> 选语言，查不到回落 <code>en</code>；带占位符的句子用 <code>tf('results', { count, ms })</code> 展开。</p>
+<p>注意：</p>
+<ul>
+<li>
+<p>语言码用下划线小写风格（<code>zh_cn</code>），与 <code>.zenmod</code> 一致，不是 BCP47。</p>
+</li>
+<li>
+<p><strong><code>.zenmod</code></strong> <strong>的</strong> <strong><code>name</code>/<code>desc</code></strong> <strong>必须 12 门语言齐全</strong>；页面内文案没有强制要求，样例只给 zh_cn/en，按需扩展。</p>
+</li>
+<li>
+<p>需要跟随界面语言即时切换的模块，可把字典改为按需 <code>import()</code> 懒加载多语言文件，机制与本文相同。</p>
+</li>
+</ul>
+<h2 id="六调试与集成" tabindex="-1">六、调试与集成 <a class="doc-anchor" href="#六调试与集成" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">1. 免构建直接跑（推荐起步）：
+   复制 sdk/sample/Web、sdk/sample/Modules 到 bin64\（Release exe 所在目录），重启 exe。
+   改前端后 windowControl('sdk_sample','close') 再打开，或重启 exe 生效。
+
+2. 浏览器看结构：
+   直接双击 Web/SDK_Sample/index.html 用浏览器打开。
+   浏览器里没有 window.Zen，ZenAPI.call 会走异常路径返回 error: -1，
+   页面结构 / 样式 / 输入防抖 / 渲染逻辑均可正常调试（原生接口除外）。
+</code></pre>
+<p>搜索性能提示：<code>searchFile</code> 走 C++ 侧 MFT 全盘索引，通常毫秒级返回；native 有搜索槽机制——新请求会顶掉未完成的旧请求（旧的返回空结果），前端配 300ms 防抖 + 递增序号丢弃乱序回包，连续击键也不会打爆后台线程或闪烁旧结果。结果图标（base64）由 <code>searchFile</code> 顺手带回，无需额外调 <code>getFileIcon</code>。</p>
+<p>接口能力不够用时（例如需要新的 C++ 能力），可通过官网反馈渠道提出需求，由主程序在后续版本扩展接口。</p>
+<h2 id="七完整最小示例汇总" tabindex="-1">七、完整最小示例汇总 <a class="doc-anchor" href="#七完整最小示例汇总" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>改动</th>
+<th>文件</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新建页面</td>
+<td><code>Web/SDK_Sample/</code>（index.html / filefinder.js / filefinder.css / i18n.js）</td>
+<td>是</td>
+</tr>
+<tr>
+<td>公共依赖</td>
+<td><code>Web/SDK_Sample/lib/</code>（zen_api.js / window_controls.css，随样例自包含）</td>
+<td>是</td>
+</tr>
+<tr>
+<td>新建模块</td>
+<td><code>Modules/SDK_Sample.zenmod</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>C++ 改动</td>
+<td>无</td>
+<td>—</td>
+</tr>
+<tr>
+<td>构建步骤</td>
+<td>无（免构建，复制即用）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="八安全须知" tabindex="-1">八、安全须知 <a class="doc-anchor" href="#八安全须知" aria-hidden="true">#</a></h2>
+<p>Native API 面向模块开发者<strong>完整开放</strong>宿主进程的系统能力，其中包含文件读写与删除、进程创建与终止、窗口控制、剪贴板读写、系统设置修改、命令行执行等<strong>高危操作</strong>，且<strong>不设权限弹窗、不做沙箱隔离、不提供撤销机制</strong>。</p>
+<p>调用前请自行评估每一次操作的安全性：校验一切外部输入，涉及不可逆操作前先备份或请用户确认，并只使用功能真正需要的能力。由此造成的一切后果由开发者自行承担。</p>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="相关资源">
+    <a class="sdk-link" href="/zh-CN/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>接口参考手册</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>下载样例工程</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-CN/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>产品</h3>
+            <a href="/zh-CN/features.html">功能</a>
+            <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/changelog.html">更新日志</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>资源</h3>
+            <a href="/zh-CN/sdk.html">开发者</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">问题反馈</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-CN/agreement.html">用户协议</a>
+            <a href="/zh-CN/privacy.html">隐私政策</a>
+            
+            <a class="js-email" href="#">联系邮箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留所有权利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

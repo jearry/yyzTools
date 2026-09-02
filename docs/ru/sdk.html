@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Создание модуля yyzTools — краткое руководство</title>
+<meta name="description" content="Создайте с нуля веб-приложение, работающее внутри yyzTools: структура страницы, окно-хост, локализация, асинхронные Native API и сохранение настроек. Без сборки.">
+
+<meta property="og:title" content="Создание модуля yyzTools — краткое руководство">
+<meta property="og:description" content="Создайте с нуля веб-приложение, работающее внутри yyzTools: структура страницы, окно-хост, локализация, асинхронные Native API и сохранение настроек. Без сборки.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ru/sdk.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ru">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Создание модуля yyzTools — краткое руководство">
+<meta name="twitter:description" content="Создайте с нуля веб-приложение, работающее внутри yyzTools: структура страницы, окно-хост, локализация, асинхронные Native API и сохранение настроек. Без сборки.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ru/sdk.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ru/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ru/" >Главная</a>
+            <a href="/ru/features.html" >Функции</a>
+            <a href="/ru/download.html" >Загрузка</a>
+            <a href="/ru/changelog.html" >Обновления</a>
+            
+            <a href="/ru/sdk.html" class=&#34;on&#34;>Разработчикам</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Обратная связь</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="Язык">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">Русский</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk.html" hreflang="ru"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>Русский</a>
+                    
+                    <a href="/ar/sdk.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/ru/download.html">Скачать</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Разработчикам","item":"https://yyztools.com/ru/sdk.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Быстрый старт","description":"Создайте с нуля веб-приложение, работающее внутри yyzTools: структура страницы, окно-хост, локализация, асинхронные Native API и сохранение настроек. Без сборки.","inLanguage":"ru","url":"https://yyztools.com/ru/sdk.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Beginner"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> Содержание</summary>
+            <nav aria-label="Содержание">
+                <ol>
+                    
+                    <li>
+                        <a href="#1-каталог-образца-и-способ-развертывания">1. Каталог образца и способ развертывания</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-обзор-архитектуры-как-работает-веб-приложение">2. Обзор архитектуры: как работает веб-приложение</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-структура-страницы-нативный-js-четыре-файла">3. Структура страницы (нативный JS, четыре файла)</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#indexhtml">index.html</a></li>
+                            
+                            <li><a href="#filefinderjs-основная-логика">filefinder.js (основная логика)</a></li>
+                            
+                            <li><a href="#структура-возврата-searchfile-error-files">Структура возврата searchFile (`{ error, files[] }`)</a></li>
+                            
+                            <li><a href="#обзор-интерфейсов-вызываемых-в-этом-образце">Обзор интерфейсов, вызываемых в этом образце</a></li>
+                            
+                            <li><a href="#правила-вызова-четыре-железных-правила">Правила вызова (четыре железных правила)</a></li>
+                            
+                            <li><a href="#краткая-справка-по-частым-интерфейсам-дополнительные-возможности-помимо-образца">Краткая справка по частым интерфейсам (дополнительные возможности помимо образца)</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-создание-файла-модуля-zenmod-оконный-хост">4. Создание файла модуля .zenmod (оконный хост)</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-многоязычные-тексты-через-словарь">5. Многоязычные тексты (через словарь)</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-отладка-и-интеграция">6. Отладка и интеграция</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-сводка-полного-минимального-примера">7. Сводка полного минимального примера</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-замечания-по-безопасности">8. Замечания по безопасности</a>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>Быстрый старт</h1>
+            <p class="doc-meta">Первый модуль без каких-либо инструментов сборки</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="Связанные ресурсы">
+    <a class="sdk-link" href="/ru/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Справочник API</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Скачать пример проекта</span>
+    </a>
+</nav>
+
+
+            <p>Документ адресован разработчикам модулей и демонстрирует, как с нуля создать веб-приложение, работающее внутри главного процесса yyzTools (на примере образцового проекта SDK <code>SDK_Sample</code> — сверхбыстрого файлового поисковика). Охватываются: структура каталога страницы, оконный хост, i18n, асинхронный Native API (полнодисковый поиск файлов), открытие файлов, сохранение конфигурации, а также шаблон добавления native-методов на случай расширения возможностей C++.</p>
+<p>Образец — <strong>чистый нативный JS, нулевые сторонние зависимости, без этапа сборки</strong>: не нужны Vite / Alpine / FontAwesome; достаточно скопировать каталоги <code>Web</code> и <code>Modules</code> в каталог yyzTools.exe.</p>
+<h2 id="1-каталог-образца-и-способ-развертывания" tabindex="-1">1. Каталог образца и способ развертывания <a class="doc-anchor" href="#1-каталог-образца-и-способ-развертывания" aria-hidden="true">#</a></h2>
+<pre><code>sdk/sample/
+  Web/                        ← скопировать в &lt;каталог yyzTools.exe&gt;\Web\        (слить с существующим каталогом Web)
+    SDK_Sample/               ← самодостаточный каталог образца, вся папка — один цельный модуль
+      index.html              # структура страницы (нативный DOM, места текстов помечены data-i18n)
+      filefinder.js           # вся логика: поиск / открытие / история / Esc
+      filefinder.css          # стили страницы (все через переменные --zen-*, автоматическая адаптация к светлой/тёмной теме)
+      i18n.js                 # словарь текстов (zh_cn / en)
+      lib/
+        zen_api.js            # класс-обёртка ZenAPI (JS-обёртка Native API, единственная зависимость lib)
+        window_controls.css   # переменные темы (--zen-*) + стили панели управления окном
+  Modules/                   ← скопировать в &lt;каталог yyzTools.exe&gt;\Modules\    (слить с существующим каталогом Modules)
+    SDK_Sample.zenmod         # объявление модуля type:&quot;web&quot;, ModuleManager автоматически создаёт окно-хост
+</code></pre>
+<p>Развертывание:</p>
+<pre><code class="language-text">Скопируйте/слейте sdk/sample/Web     в bin64\Web\
+Скопируйте/слейте sdk/sample/Modules в bin64\Modules\
+Перезапустите yyzTools.exe и найдите «SDK样例工程» в командной панели для запуска
+</code></pre>
+<p>Соглашение о месте, из которого читает главная программа:</p>
+<table>
+<thead>
+<tr>
+<th>Ресурс</th>
+<th>Расположение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Страница</td>
+<td><code>&lt;exe目录&gt;\Web\{page}\index.html</code></td>
+</tr>
+<tr>
+<td>Модули</td>
+<td><code>&lt;exe目录&gt;\Modules\&lt;分类&gt;\*.zenmod</code> (сканируется один уровень подкаталогов)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-обзор-архитектуры-как-работает-веб-приложение" tabindex="-1">2. Обзор архитектуры: как работает веб-приложение <a class="doc-anchor" href="#2-обзор-архитектуры-как-работает-веб-приложение" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">Modules/SDK_Sample.zenmod   ← файл модуля с type:&quot;web&quot; (управляется данными, C++ писать не нужно)
+        │  главная программа при запуске сканирует .zenmod
+        ▼
+WebModule окно-хост (нативное окно + WebView2)
+        │  загружает Web\SDK_Sample\index.html
+        ▼
+Web/SDK_Sample/             ← весь ваш фронтенд-код (нативный JS, ноль зависимостей)
+        │  window.Zen.xxx(...)  ←→  нативные интерфейсы, зарегистрированные главной программой
+        ▼
+Менеджеры C++ (файлы/процессы/окна/буфер обмена/OCR...)
+</code></pre>
+<p>Ключевые выводы:</p>
+<ul>
+<li>
+<p><strong>Не нужно писать ни строчки кода на C++</strong>. <code>.zenmod</code> с <code>type: &quot;web&quot;</code> главная программа автоматически создает как окно-хост WebModule; размер окна, иконка и многоязычное имя задаются самим файлом модуля.</p>
+</li>
+<li>
+<p>Модуль автоматически получает: поиск в командной панели (включая пиньинь-индекс), привязку глобальных горячих клавиш, подключение к док-панели, регистрацию имени в таблице <code>windowControl</code>.</p>
+</li>
+<li>
+<p>Единственный канал между фронтендом и C++ — <code>window.Zen</code>; вызывайте всё единообразно через класс-обёртку <code>ZenAPI</code> (в образце уже приложен <code>lib/zen_api.js</code>).</p>
+</li>
+<li>
+<p>Страница без сборки — это просто статические файлы: после правки достаточно обновить окно (<code>windowControl('sdk_sample','hide')</code> и затем show, либо перезапуск exe), никакой компиляции не требуется.</p>
+</li>
+</ul>
+<h2 id="3-структура-страницы-нативный-js-четыре-файла" tabindex="-1">3. Структура страницы (нативный JS, четыре файла) <a class="doc-anchor" href="#3-структура-страницы-нативный-js-четыре-файла" aria-hidden="true">#</a></h2>
+<h3 id="indexhtml" tabindex="-1">index.html <a class="doc-anchor" href="#indexhtml" aria-hidden="true">#</a></h3>
+<p>Не подключает никаких сторонних библиотек; три кнопки панели управления окном используют символы Unicode как иконки (− / □ / ×), стили предоставляются <code>lib/window_controls.css</code>. Места текстов размечены <code>data-i18n</code> / <code>data-i18n-ph</code> и заполняются JS при инициализации. Структура из четырёх блоков: строка поиска, чипы истории поиска, строка состояния (количество результатов + подсказка по синтаксису), список результатов:</p>
+<pre><code class="language-html">&lt;div class=&quot;search-bar&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;searchInput&quot; class=&quot;search-input&quot; data-i18n-ph=&quot;inputPlaceholder&quot;
+           spellcheck=&quot;false&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;button class=&quot;search-btn&quot; id=&quot;btnSearch&quot; data-i18n=&quot;search&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;history-chips&quot; id=&quot;historyChips&quot;&gt; ... &lt;/div&gt;
+&lt;div class=&quot;status-bar&quot;&gt;
+    &lt;span id=&quot;statusText&quot; data-i18n=&quot;empty&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;syntax-hint&quot; data-i18n=&quot;syntaxHint&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;result-list&quot; id=&quot;resultList&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="filefinderjs-основная-логика" tabindex="-1">filefinder.js (основная логика) <a class="doc-anchor" href="#filefinderjs-основная-логика" aria-hidden="true">#</a></h3>
+<p>Пять обязанностей, всё можно просто скопировать из образца:</p>
+<ol>
+<li><strong>Управление окном</strong>: <code>ZenAPI.windowControl('sdk_sample', 'min'|'max'|'close'|'drag')</code>; перетаскивание заголовка срабатывает только при смещении более 5px; клавиша Esc — если фокус в поле ввода, сначала blur, иначе закрыть окно.</li>
+<li><strong>Тема</strong>: регистрируется <code>window.__applyTheme</code> для приёма обратных вызовов от C++ (<code>data-theme</code> на первом экране внедряется C++, JS обрабатывать не нужно).</li>
+<li><strong>i18n</strong>: читается <code>getConfig().language</code>, тексты берутся из словаря, обходятся элементы с <code>data-i18n</code> и заполняются; предложения с заполнителем <code>{{count}}</code> раскрываются функцией интерполяции.</li>
+<li><strong>Поиск</strong>: <code>searchFile(keyword, maxResults)</code> — интерфейс с <strong>асинхронной привязкой</strong> (выполняется в фоновом потоке, не блокирует UI); поиск сразу по Enter и автоматически с антидребезгом ввода 300 мс; возрастающий порядковый номер используется для отбрасывания приходящих не по порядку ответов — на native-стороне есть механизм слотов поиска (новый запрос сразу вытесняет незавершённый старый, старый Promise получает пустой результат), фронтендовый порядковый номер не даёт этому «пустому результату, пришедшему позже» затереть рендер новых результатов; оба механизма работают в связке.</li>
+<li><strong>Действия с результатами</strong>: <code>openFile(fullPath, false)</code> открывает файл (то же по двойному щелчку; второй параметр — «запуск от администратора»); <code>openFileLocation(fullPath)</code> открывает содержащий каталог; полный путь собирается как <code>path + '\\' + name</code>; иконка берётся прямо из готового поля <code>icon</code> в результатах (base64); размер файла форматируется из числового поля <code>size</code>.</li>
+</ol>
+<h3 id="структура-возврата-searchfile-error-files" tabindex="-1">Структура возврата searchFile (<code>{ error, files[] }</code>) <a class="doc-anchor" href="#структура-возврата-searchfile-error-files" aria-hidden="true">#</a></h3>
+<p>Поля каждого элемента <code>files[]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> / <code>path</code></td>
+<td>строка</td>
+<td>Имя файла / содержащий каталог. Полный путь = <code>path + '\\' + name</code></td>
+</tr>
+<tr>
+<td><code>dateModified</code></td>
+<td>строка</td>
+<td>Время изменения (локализованный текстовый формат)</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>число</td>
+<td>Размер файла в байтах, <strong>нативное число, использовать напрямую</strong></td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>строка</td>
+<td>Иконка base64, подключается прямо в <code>&lt;img src&gt;</code>, вызывать <code>getFileIcon</code> не нужно</td>
+</tr>
+<tr>
+<td><code>score</code></td>
+<td>число</td>
+<td>Оценка релевантности (native уже отсортировал по ней)</td>
+</tr>
+<tr>
+<td><code>isDir</code></td>
+<td>число</td>
+<td><strong>Число 1/0, а не нативный булев</strong> (путь ручной сборки JSON), проверяйте через truthy или <code>=== 1</code>, не <code>=== true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="обзор-интерфейсов-вызываемых-в-этом-образце" tabindex="-1">Обзор интерфейсов, вызываемых в этом образце <a class="doc-anchor" href="#обзор-интерфейсов-вызываемых-в-этом-образце" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Интерфейс</th>
+<th>Привязка</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>searchFile(keyword, maxResults)</code></td>
+<td>асинхронная</td>
+<td>Полнодисковый поиск по MFT-индексу, поддержка синтаксиса Everything (<code>size:&gt;100MB</code>, <code>ext:mp4</code>, <code>!ext:tmp</code>)</td>
+</tr>
+<tr>
+<td><code>openFile(path, admin)</code></td>
+<td>синхронная</td>
+<td>Открыть файл/каталог (поведение shell по умолчанию), при <code>admin=true</code> — от имени администратора</td>
+</tr>
+<tr>
+<td><code>openFileLocation(path)</code></td>
+<td>синхронная</td>
+<td>Показать файл в Проводнике</td>
+</tr>
+<tr>
+<td><code>getConfig(key?)</code></td>
+<td>синхронная</td>
+<td>Чтение конфигурации: без аргумента — вся, с key — только этот ключ (поддержка точечного пути <code>a.b</code>)</td>
+</tr>
+<tr>
+<td><code>setConfig(patch, replace?)</code></td>
+<td>синхронная</td>
+<td><strong>Узкогранулярная</strong> запись истории поиска: <code>setConfig({ sdk_sample: { history } })</code>; <code>replace=true</code> — полная замена (только для импорта резервной копии)</td>
+</tr>
+<tr>
+<td><code>log(message)</code></td>
+<td>синхронная</td>
+<td>Лог фронтенда, пишется в журнал главного процесса, удобно для отладки</td>
+</tr>
+<tr>
+<td><code>windowControl(name, action)</code></td>
+<td>синхронная</td>
+<td>Минимизация/максимизация/закрытие/перетаскивание окна</td>
+</tr>
+</tbody>
+</table>
+<h3 id="правила-вызова-четыре-железных-правила" tabindex="-1">Правила вызова (четыре железных правила) <a class="doc-anchor" href="#правила-вызова-четыре-железных-правила" aria-hidden="true">#</a></h3>
+<pre><code class="language-js">import ZenAPI from './lib/zen_api.js';
+
+// 1. 判错用 isOk()（error 恒为数字：0 成功，-1 表示调用异常）
+const res = await ZenAPI.searchFile('yyztools', 200);
+if (!ZenAPI.isOk(res)) { ... }
+
+// 2. 接口返回的布尔字段是原生布尔，直接判断
+//    （例外一：config 的值由前端写入决定类型，通常是字符串，比较时注意归一）
+//    （例外二：searchFile 结果的 isDir 是 1/0 数字——手拼 JSON 路径，用 truthy 或 === 1）
+const ex = await ZenAPI.exists(path);
+if (ex.exists === true) { ... }
+
+// 3. 配置写入必须窄粒度，禁止全量回写
+await ZenAPI.setConfig({ sdk_sample: { history } });   // 只写自己的键
+
+// 4. 按 id 批量取应用信息用 getAppInfo，禁止循环 searchApp
+const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
+</code></pre>
+<p>Асинхронные интерфейсы (<code>getAppInfo</code> / <code>searchFile</code> / медиапятёрка / <code>ocrRecognition</code>) выполняются в фоновом потоке; учтите, что одновременно работает только один медиа-подпроцесс, а для долгих задач нужно предусмотреть возможность отмены через <code>cancelRun()</code>.</p>
+<h3 id="краткая-справка-по-частым-интерфейсам-дополнительные-возможности-помимо-образца" tabindex="-1">Краткая справка по частым интерфейсам (дополнительные возможности помимо образца) <a class="doc-anchor" href="#краткая-справка-по-частым-интерфейсам-дополнительные-возможности-помимо-образца" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Сценарий</th>
+<th>Интерфейс</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Чтение/запись своей конфигурации</td>
+<td><code>getConfig</code> / <code>setConfig</code> (узкогранулярный patch) / <code>addConfig</code> (добавление элемента списка)</td>
+</tr>
+<tr>
+<td>Открытие/сохранение файла</td>
+<td><code>browseFile</code> / <code>browseDir</code> / <code>writeFile</code> / <code>readFile</code> (для &gt;50MB — <code>readFileChunk</code>)</td>
+</tr>
+<tr>
+<td>Получение системных каталогов</td>
+<td><code>getKnownDir('download')</code> и т. д.</td>
+</tr>
+<tr>
+<td>Открытие веб-страницы/внешней программы</td>
+<td><code>runAny('https://...', '')</code></td>
+</tr>
+<tr>
+<td>Копирование в буфер обмена</td>
+<td>фронтендовый <code>navigator.clipboard</code> (для текстов native не нужен)</td>
+</tr>
+<tr>
+<td>Скриншот/OCR</td>
+<td><code>screenCap('fast', ...)</code> → <code>ocrRecognition(base64)</code> (оба асинхронные)</td>
+</tr>
+<tr>
+<td>Вызов окна другого модуля</td>
+<td><code>windowControl('translate', 'show')</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-создание-файла-модуля-zenmod-оконный-хост" tabindex="-1">4. Создание файла модуля .zenmod (оконный хост) <a class="doc-anchor" href="#4-создание-файла-модуля-zenmod-оконный-хост" aria-hidden="true">#</a></h2>
+<p>Создайте <code>.zenmod</code> в <code>Modules/&lt;分类&gt;/</code> (файл образца: <code>sdk/sample/Modules/SDK_Sample.zenmod</code>):</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;sdk_sample&quot;,
+    &quot;type&quot;: &quot;web&quot;,
+    &quot;name&quot;: { &quot;zh_cn&quot;: &quot;SDK样例工程&quot;, &quot;en&quot;: &quot;SDK Sample Project&quot;, &quot;...&quot;: &quot;共 12 门语言&quot; },
+    &quot;desc&quot;: { &quot;zh_cn&quot;: &quot;基于 MFT 索引的全盘急速文件搜索，支持 Everything 语法&quot;, &quot;en&quot;: &quot;...&quot; },
+    &quot;icon&quot;: &quot;fas fa-search&quot;,
+    &quot;winClassName&quot;: &quot;yyzTools::SdkSampleWindowClass&quot;,
+    &quot;width&quot;: 760,
+    &quot;height&quot;: 540,
+    &quot;layoutType&quot;: 34,
+    &quot;url&quot;: &quot;SDK_Sample/index.html&quot;,
+    &quot;preCreate&quot;: 0
+}
+</code></pre>
+<p>Описание полей (все поля, читаемые главной программой при <code>type:&quot;web&quot;</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Обязательное</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>да</td>
+<td>Глобально уникальный. Одновременно является именем окна для <code>windowControl</code>/<code>windowState</code>, <code>appId</code> горячих клавиш, id подключения в dock</td>
+</tr>
+<tr>
+<td>type</td>
+<td>да</td>
+<td>Фиксированно <code>web</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>да</td>
+<td>Объект на 12 языков; допускается и чистая строка (рекомендуется только для внутреннего тестирования); порядок возврата: текущий язык → en → чистая строка</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>нет</td>
+<td>То же</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>нет</td>
+<td>FontAwesome class (как выше) или изображение base64</td>
+</tr>
+<tr>
+<td>winClassName</td>
+<td>нет</td>
+<td>Имя класса окна Win32, достаточно глобальной уникальности</td>
+</tr>
+<tr>
+<td>width / height</td>
+<td>нет</td>
+<td>Начальный размер окна, по умолчанию 800x600</td>
+</tr>
+<tr>
+<td>layoutType</td>
+<td>нет</td>
+<td>Битовая маска начального расположения, 34 = по центру горизонтали + по центру вертикали</td>
+</tr>
+<tr>
+<td>url</td>
+<td>да</td>
+<td>Путь к странице относительно корня Web (<code>SDK_Sample/index.html</code>); также поддерживаются онлайн-адреса с <code>http(s)</code></td>
+</tr>
+<tr>
+<td>preCreate</td>
+<td>нет</td>
+<td>1 = предсоздавать окно при запуске (ускоряет первое открытие), по умолчанию 0 — создавать по требованию</td>
+</tr>
+<tr>
+<td>canSuspend</td>
+<td>нет</td>
+<td>1 = разрешить приостанавливать WebView при скрытии окна для экономии ресурсов (по умолчанию 1)</td>
+</tr>
+</tbody>
+</table>
+<p>Самопроверка после правки: JSON парсится, UTF-8 без BOM, id глобально уникален, все 12 языков непустые.</p>
+<p><strong>На этом приложение готово</strong> — скопируйте два каталога, как в разделе 1, найдите в командной панели «SDK样例工程» или «sdk» для запуска (пиньинь-индекс строится автоматически); вызвать его можно и через <code>windowControl('sdk_sample', 'show')</code>.</p>
+<h2 id="5-многоязычные-тексты-через-словарь" tabindex="-1">5. Многоязычные тексты (через словарь) <a class="doc-anchor" href="#5-многоязычные-тексты-через-словарь" aria-hidden="true">#</a></h2>
+<p>Для схемы без сборки достаточно обычного словаря-ES module (<code>i18n.js</code>):</p>
+<pre><code class="language-js">const messages = {
+    zh_cn: { title: 'SDK样例工程', results: '{{count}} 个结果，耗时 {{ms}} ms', ... },
+    en:    { title: 'SDK Sample Project', results: '{{count}} results in {{ms}} ms', ... }
+};
+export function getMessages(lang) { return messages[lang] || messages.en; }
+export function interpolate(dict) {
+    return (key, params) =&gt; { /* {{count}} → params.count */ };
+}
+</code></pre>
+<p>При инициализации читается <code>getConfig().language</code> для выбора языка, при отсутствии — возврат к <code>en</code>; предложения с заполнителями раскрываются через <code>tf('results', { count, ms })</code>.</p>
+<p>Примечания:</p>
+<ul>
+<li>
+<p>Коды языков в стиле подчёркивания и нижнего регистра (<code>zh_cn</code>), как в <code>.zenmod</code>, а не BCP47.</p>
+</li>
+<li>
+<p><strong><code>name</code>/<code>desc</code></strong> <strong>в</strong> <strong><code>.zenmod</code></strong> <strong>обязаны быть полными на все 12 языков</strong>; для текстов внутри страницы жёсткого требования нет, образец даёт только zh_cn/en — расширяйте по необходимости.</p>
+</li>
+<li>
+<p>Если модулю нужно мгновенное переключение вслед за языком интерфейса, словарь можно перевести на ленивую загрузку многоязычных файлов через <code>import()</code> по требованию — механизм тот же, что в этом документе.</p>
+</li>
+</ul>
+<h2 id="6-отладка-и-интеграция" tabindex="-1">6. Отладка и интеграция <a class="doc-anchor" href="#6-отладка-и-интеграция" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">1. 免构建直接跑（推荐起步）：
+   复制 sdk/sample/Web、sdk/sample/Modules 到 bin64\（Release exe 所在目录），重启 exe。
+   改前端后 windowControl('sdk_sample','close') 再打开，或重启 exe 生效。
+
+2. 浏览器看结构：
+   直接双击 Web/SDK_Sample/index.html 用浏览器打开。
+   浏览器里没有 window.Zen，ZenAPI.call 会走异常路径返回 error: -1，
+   页面结构 / 样式 / 输入防抖 / 渲染逻辑均可正常调试（原生接口除外）。
+</code></pre>
+<p>Совет по производительности поиска: <code>searchFile</code> идёт через полнодисковый MFT-индекс на стороне C++, обычно возвращает за миллисекунды; на native есть механизм слотов поиска — новый запрос вытесняет незавершённый старый (старый возвращает пустой результат), а на фронтенде антидребезг 300 мс + возрастающий порядковый номер отбрасывают ответы не по порядку, так что быстрая печать не перегрузит фоновый поток и не заставит мигать старые результаты. Иконки результатов (base64) <code>searchFile</code> приносит сразу, вызывать отдельно <code>getFileIcon</code> не нужно.</p>
+<p>Если возможностей интерфейсов не хватает (например, нужна новая функциональность C++), можно отправить запрос через канал обратной связи на официальном сайте — интерфейсы будут расширены в последующих версиях главной программы.</p>
+<h2 id="7-сводка-полного-минимального-примера" tabindex="-1">7. Сводка полного минимального примера <a class="doc-anchor" href="#7-сводка-полного-минимального-примера" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Изменение</th>
+<th>Файл</th>
+<th>Обязательно</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Новая страница</td>
+<td><code>Web/SDK_Sample/</code> (index.html / filefinder.js / filefinder.css / i18n.js)</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Общие зависимости</td>
+<td><code>Web/SDK_Sample/lib/</code> (zen_api.js / window_controls.css, самодостаточны в образце)</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Новый модуль</td>
+<td><code>Modules/SDK_Sample.zenmod</code></td>
+<td>да</td>
+</tr>
+<tr>
+<td>Изменения C++</td>
+<td>нет</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Шаги сборки</td>
+<td>нет (без сборки, скопировал — работает)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-замечания-по-безопасности" tabindex="-1">8. Замечания по безопасности <a class="doc-anchor" href="#8-замечания-по-безопасности" aria-hidden="true">#</a></h2>
+<p>Native API для разработчиков модулей <strong>полностью открывает</strong> системные возможности процесса-хоста, включая чтение/запись и удаление файлов, создание и завершение процессов, управление окнами, чтение/запись буфера обмена, изменение системных настроек, выполнение командной строки и другие <strong>опасные операции</strong>, причём <strong>нет диалогов запроса прав, нет песочницы, нет механизма отмены</strong>.</p>
+<p>Перед каждым вызовом самостоятельно оценивайте безопасность операции: проверяйте все внешние входные данные, перед необратимыми действиями делайте резервную копию или запрашивайте подтверждение у пользователя, и используйте только те возможности, которые реально нужны функциональности. Вся ответственность за последствия лежит на разработчике.</p>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="Связанные ресурсы">
+    <a class="sdk-link" href="/ru/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Справочник API</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Скачать пример проекта</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ru/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Набор инструментов производительности для Windows. Сначала локально, бесплатно навсегда.</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Продукт</h3>
+            <a href="/ru/features.html">Функции</a>
+            <a href="/ru/download.html">Загрузка</a>
+            <a href="/ru/changelog.html">Обновления</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Ресурсы</h3>
+            <a href="/ru/sdk.html">Разработчикам</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Обратная связь</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Правовая информация</h3>
+            <a href="/ru/agreement.html">Пользовательское соглашение</a>
+            <a href="/ru/privacy.html">Политика конфиденциальности</a>
+            
+            <a class="js-email" href="#">Электронная почта</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · Все права защищены</p>
+        <p class="footer-fine">Windows — зарегистрированный товарный знак Microsoft Corporation. Этот сайт не связан с Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="zh-TW" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools Native API 介面參考手冊</title>
+<meta name="description" content="yyzTools Native API 完整介面定義：視窗控制、應用管理、行程、檔案操作、媒體處理、螢幕擷取 OCR、加密、剪貼簿、書籤、命令執行與更新。">
+
+<meta property="og:title" content="yyzTools Native API 介面參考手冊">
+<meta property="og:description" content="yyzTools Native API 完整介面定義：視窗控制、應用管理、行程、檔案操作、媒體處理、螢幕擷取 OCR、加密、剪貼簿、書籤、命令執行與更新。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-TW/sdk-api.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_TW">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools Native API 介面參考手冊">
+<meta name="twitter:description" content="yyzTools Native API 完整介面定義：視窗控制、應用管理、行程、檔案操作、媒體處理、螢幕擷取 OCR、加密、剪貼簿、書籤、命令執行與更新。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-TW/sdk-api.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk-api.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk-api.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk-api.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk-api.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk-api.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk-api.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk-api.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk-api.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk-api.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk-api.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-TW/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-TW/" >首頁</a>
+            <a href="/zh-TW/features.html" >功能</a>
+            <a href="/zh-TW/download.html" >下載</a>
+            <a href="/zh-TW/changelog.html" >更新紀錄</a>
+            
+            <a href="/zh-TW/sdk.html" class=&#34;on&#34;>開發者</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">交流回饋</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="選擇語言">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">繁體中文</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk-api.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk-api.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk-api.html" hreflang="zh-TW"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>繁體中文</a>
+                    
+                    <a href="/ja/sdk-api.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk-api.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk-api.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk-api.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk-api.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk-api.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk-api.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk-api.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk-api.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/zh-TW/download.html">免費下載</a>
+            <button class="nav-toggle" id="navToggle" aria-label="選單" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"開發者","item":"https://yyztools.com/zh-TW/sdk.html"},{"@type":"ListItem","position":3,"name":"介面參考手冊","item":"https://yyztools.com/zh-TW/sdk-api.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"介面參考手冊","description":"yyzTools Native API 完整介面定義：視窗控制、應用管理、行程、檔案操作、媒體處理、螢幕擷取 OCR、加密、剪貼簿、書籤、命令執行與更新。","inLanguage":"zh-TW","url":"https://yyztools.com/zh-TW/sdk-api.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Expert"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> 本頁目錄</summary>
+            <nav aria-label="本頁目錄">
+                <ol>
+                    
+                    <li>
+                        <a href="#版本記錄">版本記錄</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#一通用約定">一、通用約定</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#呼叫方式">呼叫方式</a></li>
+                            
+                            <li><a href="#判錯方式">判錯方式</a></li>
+                            
+                            <li><a href="#同步-非同步綁定">同步 / 非同步綁定</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#二公用介面">二、公用介面</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1取得用戶端版本">1、取得用戶端版本</a></li>
+                            
+                            <li><a href="#2取得設定">2、取得設定</a></li>
+                            
+                            <li><a href="#3修改設定">3、修改設定</a></li>
+                            
+                            <li><a href="#4加入設定">4、加入設定</a></li>
+                            
+                            <li><a href="#5取得清單">5、取得清單</a></li>
+                            
+                            <li><a href="#6寫前端日誌">6、寫前端日誌</a></li>
+                            
+                            <li><a href="#7寫倒數計時快取">7、寫倒數計時快取</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#三視窗控制">三、視窗控制</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜尋視窗">1、搜尋視窗</a></li>
+                            
+                            <li><a href="#2視窗控制">2、視窗控制</a></li>
+                            
+                            <li><a href="#3視窗狀態取得">3、視窗狀態取得</a></li>
+                            
+                            <li><a href="#4開啟命令面板並執行搜尋">4、開啟命令面板並執行搜尋</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#四應用管理">四、應用管理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜尋應用">1、搜尋應用</a></li>
+                            
+                            <li><a href="#2按-id-批次取應用資訊非同步">2、按 id 批次取應用資訊（非同步）</a></li>
+                            
+                            <li><a href="#3啟動應用">3、啟動應用</a></li>
+                            
+                            <li><a href="#4取得使用統計">4、取得使用統計</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#五處理程序管理">五、處理程序管理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜尋處理程序">1、搜尋處理程序</a></li>
+                            
+                            <li><a href="#2處理程序控制">2、處理程序控制</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#六檔案操作">六、檔案操作</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜尋檔案非同步">1、搜尋檔案（非同步）</a></li>
+                            
+                            <li><a href="#2開啟檔案">2、開啟檔案</a></li>
+                            
+                            <li><a href="#3開啟檔案位置">3、開啟檔案位置</a></li>
+                            
+                            <li><a href="#4開啟檔案預覽">4、開啟檔案預覽</a></li>
+                            
+                            <li><a href="#5複製剪下檔案到剪貼簿">5、複製/剪下檔案到剪貼簿</a></li>
+                            
+                            <li><a href="#6瀏覽檔案">6、瀏覽檔案</a></li>
+                            
+                            <li><a href="#7瀏覽目錄">7、瀏覽目錄</a></li>
+                            
+                            <li><a href="#8取得指定目錄">8、取得指定目錄</a></li>
+                            
+                            <li><a href="#9儲存檔案">9、儲存檔案</a></li>
+                            
+                            <li><a href="#10取得檔案圖示">10、取得檔案圖示</a></li>
+                            
+                            <li><a href="#11讀取檔案">11、讀取檔案</a></li>
+                            
+                            <li><a href="#12分塊讀取大檔案">12、分塊讀取大檔案</a></li>
+                            
+                            <li><a href="#13寫入檔案">13、寫入檔案</a></li>
+                            
+                            <li><a href="#14追加寫入檔案">14、追加寫入檔案</a></li>
+                            
+                            <li><a href="#15重新命名移動">15、重新命名/移動</a></li>
+                            
+                            <li><a href="#16複製檔案">16、複製檔案</a></li>
+                            
+                            <li><a href="#17刪除檔案或目錄">17、刪除檔案或目錄</a></li>
+                            
+                            <li><a href="#18建立目錄">18、建立目錄</a></li>
+                            
+                            <li><a href="#19讀取目錄">19、讀取目錄</a></li>
+                            
+                            <li><a href="#20檢查路徑存在">20、檢查路徑存在</a></li>
+                            
+                            <li><a href="#21取得檔案資訊">21、取得檔案資訊</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#七媒體處理">七、媒體處理</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1執行-magick-命令非同步">1、執行 magick 命令（非同步）</a></li>
+                            
+                            <li><a href="#2執行-ffmpeg-命令非同步">2、執行 ffmpeg 命令（非同步）</a></li>
+                            
+                            <li><a href="#3執行-ffprobe-命令探測元資料同步">3、執行 ffprobe 命令（探測元資料，同步）</a></li>
+                            
+                            <li><a href="#4執行-pdfcpu-命令非同步">4、執行 pdfcpu 命令（非同步）</a></li>
+                            
+                            <li><a href="#5執行-ghostscript-命令非同步">5、執行 Ghostscript 命令（非同步）</a></li>
+                            
+                            <li><a href="#6取消目前媒體子處理程序">6、取消目前媒體子處理程序</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#八螢幕擷取與-ocr">八、螢幕擷取與 OCR</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1螢幕擷取釘在桌面">1、螢幕擷取/釘在桌面</a></li>
+                            
+                            <li><a href="#2ocr初始化">2、OCR初始化</a></li>
+                            
+                            <li><a href="#3ocr識別非同步">3、OCR識別（非同步）</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#九加密解密">九、加密解密</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1加密資料">1、加密資料</a></li>
+                            
+                            <li><a href="#2解密資料">2、解密資料</a></li>
+                            
+                            <li><a href="#3產生金鑰">3、產生金鑰</a></li>
+                            
+                            <li><a href="#4產生iv">4、產生IV</a></li>
+                            
+                            <li><a href="#5計算雜湊">5、計算雜湊</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十剪貼簿歷史">十、剪貼簿歷史</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜尋剪貼簿">1、搜尋剪貼簿</a></li>
+                            
+                            <li><a href="#2刪除一條記錄">2、刪除一條記錄</a></li>
+                            
+                            <li><a href="#3清空記錄">3、清空記錄</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十一書籤">十一、書籤</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1搜尋書籤">1、搜尋書籤</a></li>
+                            
+                            <li><a href="#2開啟書籤">2、開啟書籤</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十二命令執行">十二、命令執行</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1執行命令列">1、執行命令列</a></li>
+                            
+                            <li><a href="#2執行任意程式">2、執行任意程式</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#十三更新">十三、更新</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1檢查更新">1、檢查更新</a></li>
+                            
+                            <li><a href="#2取得更新狀態">2、取得更新狀態</a></li>
+                            
+                            <li><a href="#3套用已下載完畢的更新">3、套用已下載完畢的更新</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>介面參考手冊</h1>
+            <p class="doc-meta">全部 Native API 的權威定義</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="相關資源">
+    <a class="sdk-link" href="/zh-TW/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>快速入門指南</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>下載範例專案</span>
+    </a>
+</nav>
+
+
+            <h2 id="版本記錄" tabindex="-1">版本記錄 <a class="doc-anchor" href="#版本記錄" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>修訂人</th>
+<th>修訂時間</th>
+<th>修訂說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>yyzTools</td>
+<td>2026-09-01</td>
+<td>初始版本</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一通用約定" tabindex="-1">一、通用約定 <a class="doc-anchor" href="#一通用約定" aria-hidden="true">#</a></h2>
+<p>本文檔定義所有和 Native 互動相關的介面，僅涵蓋<strong>主程序 yyzTools.exe</strong> 註冊的介面（<code>src/yyztools/NativeApi.cpp</code> 的 <code>SetupBindings()</code>）。</p>
+<h3 id="呼叫方式" tabindex="-1">呼叫方式 <a class="doc-anchor" href="#呼叫方式" aria-hidden="true">#</a></h3>
+<ul>
+<li>
+<p>前端透過 <code>window.Zen</code> 物件呼叫介面函數，建議統一走 <code>ZenAPI</code> 封裝類別：<code>web/lib/zen_api.js</code>，不要在業務程式碼裡直連 <code>window.Zen</code>，方便升級調整介面時作為介面相容層處理。</p>
+</li>
+<li>
+<p>輸入：採用位置參數方式傳遞，具體參數個數和類型參考具體介面</p>
+</li>
+<li>
+<p>輸出：透過回傳值傳遞，值為 json 物件，包含以下內容</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    ...
+}
+</code></pre>
+<ul>
+<li>
+<p>error：0 正確，非 0 錯誤</p>
+</li>
+<li>
+<p>errorMsg（可選）：錯誤訊息</p>
+</li>
+<li>
+<p>其他（可選）：參考具體介面</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="判錯方式" tabindex="-1">判錯方式 <a class="doc-anchor" href="#判錯方式" aria-hidden="true">#</a></h3>
+<p><code>error</code> 恆為<strong>數字</strong>：0 正確，非 0 錯誤（呼叫異常時為 -1）。</p>
+<h3 id="同步-非同步綁定" tabindex="-1">同步 / 非同步綁定 <a class="doc-anchor" href="#同步-非同步綁定" aria-hidden="true">#</a></h3>
+<p>絕大多數介面為同步綁定（<code>BindSync</code>），呼叫即返回。以下 7 個介面為非同步綁定（<code>BindAsync</code>），在背景執行緒執行，透過 Promise 回撲，不阻塞 UI 執行緒：</p>
+<p><code>getAppInfo</code>、<code>searchFile</code>、<code>imageRun</code>、<code>ffmpegRun</code>、<code>pdfRun</code>、<code>gsRun</code>、<code>ocrRecognition</code></p>
+<p>非同步介面同一時刻的行為約束參考具體條目（如媒體五件套為串列執行，共用 <code>cancelRun</code> 取消）。</p>
+<h2 id="二公用介面" tabindex="-1">二、公用介面 <a class="doc-anchor" href="#二公用介面" aria-hidden="true">#</a></h2>
+<h3 id="1取得用戶端版本" tabindex="-1">1、取得用戶端版本 <a class="doc-anchor" href="#1取得用戶端版本" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getVersion() : object
+</code></pre>
+<ul>
+<li>
+<p>輸入：無</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apiVersion&quot;: &quot;1.0.1&quot;,
+    &quot;appVersion&quot;: &quot;1.0.1&quot;,
+    &quot;usageTime&quot;: 90,
+    &quot;usageTimes&quot;: 3602,
+    &quot;firstUseTime&quot;: &quot;20250910&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>apiVersion：用戶端API版本資訊。每一次涉及到介面更新，版本號都加1；數字從0到9，9以後從0開始，比如1.0.0，1.0.1，1.0.2... 1.0.9，1.1.0等</p>
+</li>
+<li>
+<p>appVersion：用戶端版本資訊</p>
+</li>
+<li>
+<p>usageTime：使用時間（單位：s）</p>
+</li>
+<li>
+<p>usageTimes：啟用次數</p>
+</li>
+<li>
+<p>firstUseTime：首次使用時間，格式：yyyymmdd</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2取得設定" tabindex="-1">2、取得設定 <a class="doc-anchor" href="#2取得設定" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getConfig(key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>key（可選）：只取該鍵，支援 <code>a.b</code> 點路徑。缺省返回全量設定。</p>
+<ul>
+<li>
+<p>命中：返回 <code>{&quot;error&quot;:0, &quot;&lt;key&gt;&quot;: &lt;值&gt;}</code>，如 <code>getConfig(&quot;language&quot;)</code> → <code>{&quot;error&quot;:0,&quot;language&quot;:&quot;zh_cn&quot;}</code>；<code>getConfig(&quot;dock.categories&quot;)</code> → <code>{&quot;error&quot;:0,&quot;dock&quot;:{&quot;categories&quot;:[...]}}</code></p>
+</li>
+<li>
+<p>未命中：返回 <code>{&quot;error&quot;:0}</code>（不報錯，讀取方自行兜底）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出（示例，欄位以實際設定為準）</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;logLevel&quot;: &quot;1&quot;,
+    &quot;wallpaperEnabled&quot;: &quot;1&quot;,
+    &quot;overlayEnabled&quot;: &quot;0&quot;,
+    &quot;gameMode&quot;: &quot;0&quot;,
+    &quot;clipboardHistoryMaxCount&quot;: &quot;500&quot;,
+    &quot;autoStart&quot;: &quot;1&quot;,
+    &quot;shortcutKeys&quot;: {
+        &quot;main&quot;: {
+            &quot;doubleCtrlEnabled&quot;: &quot;1&quot;,
+            &quot;doubleAltEnabled&quot;: &quot;1&quot;,
+            &quot;modifier&quot;: 1,
+            &quot;virtualCode&quot;: 32
+        },
+        &quot;apps&quot;: [
+            {
+                &quot;appId&quot;: &quot;translate&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 49
+            },
+            {
+                &quot;appId&quot;: &quot;ocr&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 50
+            }
+        ]
+    },
+    &quot;quickOpen&quot;: [
+        {
+            &quot;name&quot;: &quot;谷歌搜索&quot;,
+            &quot;type&quot;: &quot;normal&quot;,
+            &quot;index&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;https://www.google.com/search?q={query}&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ],
+    &quot;customApps&quot;: [
+        {
+            &quot;filePath&quot;: &quot;d:\test\test1.exe&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>logLevel：日誌等級（0: Trace / 1: Debug / 2: Info / 3: Warning / 4: Error / 5: Fatal）</p>
+</li>
+<li>
+<p>wallpaperEnabled：啟用動態桌布</p>
+</li>
+<li>
+<p>overlayEnabled：啟用桌面特效</p>
+</li>
+<li>
+<p>gameMode：遊戲模式</p>
+</li>
+<li>
+<p>clipboardHistoryMaxCount：剪貼簿最大歷史記錄個數</p>
+</li>
+<li>
+<p>autoStart：開機自啟動</p>
+</li>
+<li>
+<p>shortcutKeys：全域快捷鍵</p>
+<ul>
+<li>
+<p>main：主介面</p>
+<ul>
+<li>
+<p>doubleCtrlEnabled：雙擊Ctrl喚醒</p>
+</li>
+<li>
+<p>doubleAltEnabled：雙擊Alt喚醒</p>
+</li>
+<li>
+<p>modifier：修飾鍵</p>
+</li>
+<li>
+<p>virtualCode：主鍵</p>
+</li>
+</ul>
+</li>
+<li>
+<p>apps：應用</p>
+<ul>
+<li>
+<p>appId：應用id</p>
+</li>
+<li>
+<p>modifier：修飾鍵</p>
+</li>
+<li>
+<p>virtualCode：主鍵</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>quickOpen：快開</p>
+<ul>
+<li>
+<p>name：名稱</p>
+</li>
+<li>
+<p>type：類型（normal：通用搜尋 / spec：垂直搜尋）</p>
+</li>
+<li>
+<p>index：序號</p>
+</li>
+<li>
+<p>url：url模板</p>
+</li>
+<li>
+<p>enabled：是否啟用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>customApps：自訂app</p>
+<ul>
+<li>
+<p>filePath：app對應exe的所在路徑</p>
+</li>
+<li>
+<p>enabled：是否啟用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>dock：程序塢（類目 + 內容）</p>
+<ul>
+<li>
+<p><strong>通用約定：缺</strong> <strong><code>name</code>/<code>icon</code></strong> <strong>表示「用內建預設值」（由 i18n 或</strong> <strong><code>appId</code></strong> <strong>對應的</strong> <strong><code>.zenmod</code></strong> <strong>執行時派生，隨介面語言變化）；有該欄位表示使用者自訂過，原樣顯示不再翻譯。</strong></p>
+</li>
+<li>
+<p>categories：類目</p>
+<ul>
+<li>
+<p>id：內建類目為語義 id（<code>folder</code>/<code>tools</code>/<code>ai</code>/<code>game</code>/<code>system</code>），用戶新建為 <code>category_&lt;時間戳&gt;</code></p>
+</li>
+<li>
+<p>name：可選，使用者改名後才有</p>
+</li>
+<li>
+<p>icon：FontAwesome class</p>
+</li>
+<li>
+<p>color：主題色</p>
+</li>
+<li>
+<p>order：排序序號</p>
+</li>
+</ul>
+</li>
+<li>
+<p>contents：內容項</p>
+<ul>
+<li>
+<p>id：內建目錄項為語義 id（<code>desktop</code>/<code>documents</code>/<code>downloads</code>/<code>music</code>/<code>videos</code>），其餘為 <code>content_&lt;時間戳&gt;</code></p>
+</li>
+<li>
+<p>categoryId：所屬類目 id</p>
+</li>
+<li>
+<p>type：<code>app</code> | <code>folder</code> | <code>url</code></p>
+</li>
+<li>
+<p>appId：<code>type=app</code> 時必填，對應 <code>.zenmod</code> 的 id；名稱與圖示全部由它派生，<strong>不要落盤</strong></p>
+</li>
+<li>
+<p>folderPath：<code>type=folder</code> 時必填，支援 <code>%USERPROFILE%</code> 等環境變數</p>
+</li>
+<li>
+<p>url：<code>type=url</code> 時必填，規範化後的完整網址（無協定前綴自動補 <code>https://</code>）；點選用系統預設瀏覽器開啟。名稱由使用者填寫，圖示執行時抓取網站 favicon（失敗兜底 <code>fas fa-globe</code>），<strong>不落盤</strong></p>
+</li>
+<li>
+<p>name / icon：可選，語義同上（<code>type=folder</code> 的使用者自選目錄必填）</p>
+</li>
+<li>
+<p>color：圖示著色</p>
+</li>
+<li>
+<p>order：同類目內的排序序號</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3修改設定" tabindex="-1">3、修改設定 <a class="doc-anchor" href="#3修改設定" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setConfig(config: json_obj, replace?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>config：同getConfig</p>
+<ul>
+<li>
+<p>修改什麼就傳什麼，無需傳全部內容</p>
+</li>
+<li>
+<p>同一鍵值下的內容需要傳完整</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;logLevel&quot;: &quot;1&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>replace（可選，預設 false）：false=增量合併到現有設定，true=整體替換（匯入備份用，能清掉已刪除的清單項）。傳入 <code>&quot;true&quot;</code> 或 <code>&quot;false&quot;</code> 字串，缺省等同 <code>&quot;false&quot;</code>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意：<strong>不要「讀全量 getConfig 再整份 setConfig 回寫」</strong>——<code>getConfig</code> 回傳值帶 <code>error</code> 欄位，整份回寫會把它存進設定檔。一律窄粒度寫，如 <code>setConfig({ dock: { categories } })</code>。</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4加入設定" tabindex="-1">4、加入設定 <a class="doc-anchor" href="#4加入設定" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.addConfig(key: string, value: json_obj) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>key：值類型必須為StringList或StringMapList</p>
+</li>
+<li>
+<p>value</p>
+<ul>
+<li>
+<p>key的值類型為StringList時，傳string</p>
+</li>
+<li>
+<p>key的值類型為StringMapList時，傳json_obj</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5取得清單" tabindex="-1">5、取得清單 <a class="doc-anchor" href="#5取得清單" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getList(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>type：清單類型</p>
+<ul>
+<li>font：系統字型清單（讀登錄檔 <code>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts</code>，供水印等場景選擇字型）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;list&quot;: [
+        {
+            &quot;name&quot;: &quot;Arial&quot;,
+            &quot;file&quot;: &quot;arial.ttf&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>list：字型清單</p>
+<ul>
+<li>
+<p>name：字型名（已去除 &quot; (TrueType)&quot; / &quot; (OpenType)&quot; 後綴）</p>
+</li>
+<li>
+<p>file：字型檔案名</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6寫前端日誌" tabindex="-1">6、寫前端日誌 <a class="doc-anchor" href="#6寫前端日誌" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.log(msg: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>msg：日誌內容，寫入主程序日誌（InfoMsg）</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="7寫倒數計時快取" tabindex="-1">7、寫倒數計時快取 <a class="doc-anchor" href="#7寫倒數計時快取" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
+</code></pre>
+<p>倒數計時提醒的快取資料，寫入主程序與桌布程序共用的記憶體，並立即通知桌布程序重讀（否則桌布要等自身 30s 輪詢才生效）。供 reminder / wallpaper 聯動使用，一般業務勿依賴。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>data：倒數計時 JSON 字串（reminder 模組定義的 payload）</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="三視窗控制" tabindex="-1">三、視窗控制 <a class="doc-anchor" href="#三視窗控制" aria-hidden="true">#</a></h2>
+<h3 id="1搜尋視窗" tabindex="-1">1、搜尋視窗 <a class="doc-anchor" href="#1搜尋視窗" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchWindow(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>keyword：搜尋關鍵字</p>
+</li>
+<li>
+<p>maxResults：最大記錄數</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;windows&quot;: [
+        {
+            &quot;hwnd&quot;: 18811010,
+            &quot;processId&quot;: 20708,
+            &quot;visible&quot;: 1,
+            &quot;topmost&quot;: 0,
+            &quot;name&quot;: &quot;Native API接口.md - MarkText&quot;,
+            &quot;className&quot;: &quot;Chrome_WidgetWin_1&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files\\MarkText\\MarkText.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\Program Files\\MarkText\\MarkText.exe\&quot; \&quot;D:\\doc\\a.md\&quot;&quot;,
+            &quot;desc&quot;: &quot;MarkText&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 180
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>windows：視窗清單</p>
+<ul>
+<li>
+<p>hwnd：視窗控制代碼</p>
+</li>
+<li>
+<p>processId：視窗所屬處理程序id</p>
+</li>
+<li>
+<p>visible：是否可見</p>
+</li>
+<li>
+<p>topmost：是否置頂</p>
+</li>
+<li>
+<p>name：視窗名</p>
+</li>
+<li>
+<p>className：視窗類別名</p>
+</li>
+<li>
+<p>path：處理程序可執行檔的全路徑</p>
+</li>
+<li>
+<p>cmdArgs：處理程序的啟動命令列</p>
+</li>
+<li>
+<p>desc：描述</p>
+</li>
+<li>
+<p>icon：視窗圖示，base64格式</p>
+</li>
+<li>
+<p>score：搜尋評分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2視窗控制" tabindex="-1">2、視窗控制 <a class="doc-anchor" href="#2視窗控制" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowControl(window: string, action: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>window：Name或HWND的string形式</p>
+<ul>
+<li>
+<p>cmdPlate：啟動器</p>
+</li>
+<li>
+<p>translate：超級翻譯</p>
+</li>
+<li>
+<p>download：極速下載</p>
+</li>
+<li>
+<p>calculator：超級計算器</p>
+</li>
+<li>
+<p>filePreview：檔案預覽器</p>
+</li>
+<li>
+<p>ocr：OCR</p>
+</li>
+<li>
+<p>quickocr：快捷OCR翻譯貼屏窗</p>
+</li>
+<li>
+<p>calendar：萬年曆</p>
+</li>
+<li>
+<p>appUsage：應用使用統計</p>
+</li>
+<li>
+<p>tray：系統匣選單</p>
+</li>
+<li>
+<p>overlay：桌面特效</p>
+</li>
+<li>
+<p>setting：設定</p>
+</li>
+<li>
+<p>main：主視窗（等同cmdPlate）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>action</p>
+<ul>
+<li>
+<p>show：顯示並啟用</p>
+</li>
+<li>
+<p>showNoActivate：顯示不啟用</p>
+</li>
+<li>
+<p>min：最小化</p>
+</li>
+<li>
+<p>max：最大化</p>
+</li>
+<li>
+<p>restore：還原</p>
+</li>
+<li>
+<p>hide：隱藏</p>
+</li>
+<li>
+<p>close：關閉</p>
+</li>
+<li>
+<p>darg：拖動</p>
+</li>
+<li>
+<p>topmost：置頂</p>
+</li>
+<li>
+<p>noTopmost：取消置頂</p>
+</li>
+<li>
+<p>quit：結束應用</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3視窗狀態取得" tabindex="-1">3、視窗狀態取得 <a class="doc-anchor" href="#3視窗狀態取得" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>window：Name或HWND的string形式，參見視窗控制</p>
+</li>
+<li>
+<p>can_suspend（可選）：是否允許掛起該視窗的 WebView（資源管理開關，缺省 false）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>說明：本介面帶副作用——查詢狀態後，若視窗處於 show/max 狀態則還原 WebView 渲染，否則掛起 WebView 以省資源（僅當 can_suspend 為 true 時允許掛起）。前端常駐頁面輪詢自身狀態時傳 true，一般查詢傳 false。</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;state&quot;: &quot;show&quot;,
+    &quot;topmost&quot;: &quot;0&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>state：狀態（show：正常顯示 / min：最小化 / max：最大化 / close：關閉）</p>
+</li>
+<li>
+<p>topmost：是否置頂</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4開啟命令面板並執行搜尋" tabindex="-1">4、開啟命令面板並執行搜尋 <a class="doc-anchor" href="#4開啟命令面板並執行搜尋" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>command：搜尋命令，示例：<code>f path:C:\Users\Documents</code>（在檔案模組中搜尋指定目錄）</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>說明</p>
+<ul>
+<li>
+<p>此介面用於開啟命令面板視窗並自動執行搜尋命令</p>
+</li>
+<li>
+<p>常用於從程序塢等模組快速開啟檔案搜尋</p>
+</li>
+<li>
+<p>命令格式支援所有 cmdplate 支援的搜尋語法</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="四應用管理" tabindex="-1">四、應用管理 <a class="doc-anchor" href="#四應用管理" aria-hidden="true">#</a></h2>
+<h3 id="1搜尋應用" tabindex="-1">1、搜尋應用 <a class="doc-anchor" href="#1搜尋應用" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchApp(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>keyword：搜尋關鍵字</p>
+</li>
+<li>
+<p>maxResults：最大記錄數</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;Microsoft.WindowsCamera&quot;,
+            &quot;name&quot;: &quot;相机&quot;,
+            &quot;path&quot;: &quot;C:\Program Files\WindowsApps\Microsoft.WindowsCamera&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 1,
+            &quot;score&quot;: 90
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>apps：應用清單</p>
+<ul>
+<li>
+<p>id：應用的唯一id，啟動時需要用到</p>
+</li>
+<li>
+<p>name：名稱</p>
+</li>
+<li>
+<p>desc：描述</p>
+</li>
+<li>
+<p>icon：base64的圖示</p>
+</li>
+<li>
+<p>appType：應用類型（0：win32應用 / 1：uwp應用 / 2：系統命令 / 3：系統設定 / 4：內建模組）</p>
+</li>
+<li>
+<p>score：搜尋結果評分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2按-id-批次取應用資訊非同步" tabindex="-1">2、按 id 批次取應用資訊（非同步） <a class="doc-anchor" href="#2按-id-批次取應用資訊非同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppInfo(appIds: string[]) : object
+</code></pre>
+<p>設定裡只存 <code>appId</code>，名稱與圖示一律執行時派生（<code>.zenmod</code> 的 <code>name</code> 是多語言的，快照進設定會在切語言後過期）。這個介面就是給這個場景用的。</p>
+<p>⚠️ <strong>不要用循環</strong> <strong><code>searchApp(appId, 1)</code></strong> <strong>代替它</strong>：<code>searchApp</code> 每次都是對整個應用索引做全表掃描 + 拼音匹配 + 打分排序，還會並發起兩個執行緒、返回多條帶 base64 圖示的結果。程序塢加上快捷鍵有幾十個 appId，逐個查會明顯拖慢啟動。本介面一次收全，native 側走 <code>map::find</code> 精確命中。</p>
+<p>內部會等應用索引就緒（索引由背景執行緒生成），故是<strong>非同步綁定</strong>，冷啟動早期呼叫不會拿到空結果。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>appIds：appId 陣列，如 <code>[&quot;calculator&quot;, &quot;Microsoft.WindowsCamera&quot;]</code></li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<p>格式與 <code>searchApp</code> 完全一致（同一個 <code>BuildAppResult</code>），但：</p>
+<ul>
+<li>
+<p>只返回精確命中的項，<strong>查不到的 id 會被靜默跳過</strong>，故 <code>apps.length</code> 可能小於入參長度（用來檢出設定裡的失效 appId）</p>
+</li>
+<li>
+<p>順序按入參順序，<code>score</code> 恆為 0（未參與打分）</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;calculator&quot;,
+            &quot;name&quot;: &quot;超级计算器&quot;,
+            &quot;path&quot;: &quot;calculator&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 4,
+            &quot;score&quot;: 0
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3啟動應用" tabindex="-1">3、啟動應用 <a class="doc-anchor" href="#3啟動應用" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.launchApp(id: string, admin : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>id：app的id（來自 <code>searchApp</code> / <code>getAppInfo</code> 返回的 <code>id</code>）</p>
+</li>
+<li>
+<p>admin：以管理員身分執行</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4取得使用統計" tabindex="-1">4、取得使用統計 <a class="doc-anchor" href="#4取得使用統計" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppUsage(mode: string, startTime: string, stopTime: string, forceSync : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>mode：統計類型，day，week，month，year</p>
+</li>
+<li>
+<p>startTime：開始時間，格式：yyyymmddhh，樣例：2025110300</p>
+</li>
+<li>
+<p>stopTime：結束時間，格式：yyyymmddhh，樣例：2025110300</p>
+</li>
+<li>
+<p>forceSync：是否強制重新整理</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;usages&quot;: [
+        {
+            &quot;time&quot;: &quot;20251104&quot;,
+            &quot;name&quot;: &quot;yyzTools.exe&quot;,
+            &quot;logo&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;usageTimes&quot;: 2,
+            &quot;usageTime&quot;: 4.172,
+            &quot;clickTimes&quot;: 4,
+            &quot;moveDistance&quot;: 105.572357,
+            &quot;pressTimes&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>usages：使用情況統計</p>
+<ul>
+<li>
+<p>time：時間，day：yyyymmdd，week：yyyyww，month：yyyymm，year：yyyy</p>
+</li>
+<li>
+<p>name：應用名稱</p>
+</li>
+<li>
+<p>logo：應用圖示</p>
+</li>
+<li>
+<p>usageTimes：使用次數</p>
+</li>
+<li>
+<p>usageTime：使用時長（單位：秒）</p>
+</li>
+<li>
+<p>clickTimes：滑鼠點選次數</p>
+</li>
+<li>
+<p>moveDistance：滑鼠移動距離（單位：cm）</p>
+</li>
+<li>
+<p>pressTimes：鍵盤按下次數</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="五處理程序管理" tabindex="-1">五、處理程序管理 <a class="doc-anchor" href="#五處理程序管理" aria-hidden="true">#</a></h2>
+<h3 id="1搜尋處理程序" tabindex="-1">1、搜尋處理程序 <a class="doc-anchor" href="#1搜尋處理程序" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchProcess(keyword: string, maxResults: number) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>keyword：搜尋關鍵字</p>
+</li>
+<li>
+<p>maxResults：最大記錄數</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;processes&quot;: [
+        {
+            &quot;id&quot;: 1228,
+            &quot;name&quot;: &quot;msedge.exe&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\...\\msedge.exe\&quot; --type=renderer&quot;,
+            &quot;suspend&quot;: 0,
+            &quot;desc&quot;: &quot;Microsoft Edge&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 60
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>processes：處理程序清單</p>
+<ul>
+<li>
+<p>id：處理程序id</p>
+</li>
+<li>
+<p>name：處理程序名稱</p>
+</li>
+<li>
+<p>path：處理程序執行檔的全路徑</p>
+</li>
+<li>
+<p>cmdArgs：處理程序的啟動命令列</p>
+</li>
+<li>
+<p>suspend：是否掛起</p>
+</li>
+<li>
+<p>desc：描述</p>
+</li>
+<li>
+<p>icon：處理程序圖示，base64格式</p>
+</li>
+<li>
+<p>score：搜尋評分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2處理程序控制" tabindex="-1">2、處理程序控制 <a class="doc-anchor" href="#2處理程序控制" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.processControl(processId: number, action: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>processId：處理程序ID</p>
+</li>
+<li>
+<p>action：動作</p>
+<ul>
+<li>
+<p>terminate：終止</p>
+</li>
+<li>
+<p>suspend：掛起</p>
+</li>
+<li>
+<p>resume：還原</p>
+</li>
+<li>
+<p>restart：重啟</p>
+</li>
+</ul>
+</li>
+<li>
+<p>admin：新處理程序是否以管理員身分執行（restart 時生效）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="六檔案操作" tabindex="-1">六、檔案操作 <a class="doc-anchor" href="#六檔案操作" aria-hidden="true">#</a></h2>
+<h3 id="1搜尋檔案非同步" tabindex="-1">1、搜尋檔案（非同步） <a class="doc-anchor" href="#1搜尋檔案非同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchFile(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>說明：由自研 yyzFileSearch 服務（MFT 索引 + 具名管道 IPC）執行搜尋，支援 Everything 風格查詢語法（如 <code>size:&gt;100MB</code>、<code>!ext:mp4</code>），結果按相關性排序。搜尋在背景執行緒執行，為<strong>非同步綁定</strong>。</p>
+</li>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>keyword：搜尋關鍵字</p>
+</li>
+<li>
+<p>maxResults：最大記錄數</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;WinMain.cpp&quot;,
+      &quot;path&quot;: &quot;D:\\WorkCodeup\\yyztools\\src\\yyztools&quot;,
+      &quot;dateModified&quot;: &quot;2025/10/18 14:05:00&quot;,
+      &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0,
+      &quot;isDir&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>files：檔案清單</p>
+<ul>
+<li>
+<p>name：檔名</p>
+</li>
+<li>
+<p>path：檔案所在目錄（不含檔名），完整路徑 = path + &quot;\&quot; + name</p>
+</li>
+<li>
+<p>dateModified：修改時間</p>
+</li>
+<li>
+<p>icon：檔案圖示，base64格式</p>
+</li>
+<li>
+<p>score：搜尋評分</p>
+</li>
+<li>
+<p>isDir：1 表示目錄，0 表示檔案</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2開啟檔案" tabindex="-1">2、開啟檔案 <a class="doc-anchor" href="#2開啟檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFile(path: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>path：檔案路徑</p>
+</li>
+<li>
+<p>admin：以管理員身分開啟</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3開啟檔案位置" tabindex="-1">3、開啟檔案位置 <a class="doc-anchor" href="#3開啟檔案位置" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFileLocation(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>path：檔案路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4開啟檔案預覽" tabindex="-1">4、開啟檔案預覽 <a class="doc-anchor" href="#4開啟檔案預覽" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFilePreview(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>path：檔案路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5複製剪下檔案到剪貼簿" tabindex="-1">5、複製/剪下檔案到剪貼簿 <a class="doc-anchor" href="#5複製剪下檔案到剪貼簿" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFilesToClipboard(paths: string[], operation: string) : object
+</code></pre>
+<p>複製/剪下檔案本身到剪貼簿（CF_HDROP），可在檔案總管 Ctrl+V 貼上。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>paths：檔案路徑陣列</p>
+</li>
+<li>
+<p>operation：<code>copy</code> | <code>move</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="6瀏覽檔案" tabindex="-1">6、瀏覽檔案 <a class="doc-anchor" href="#6瀏覽檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseFile(filterName: string,
+                        filter: string, initDir: string, supportMulti: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>filterName：過濾器名稱</p>
+</li>
+<li>
+<p>filter：過濾器，'<em>.html;</em>.htm'</p>
+</li>
+<li>
+<p>initDir：起始瀏覽路徑</p>
+</li>
+<li>
+<p>supportMulti：是否允許多選</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;paths&quot;: [&quot;d:\test\1.txt&quot;, &quot;d:\test\2.txt&quot;]
+}
+</code></pre>
+<ul>
+<li>paths：瀏覽選擇的檔案的全路徑清單；使用者取消時 <code>error</code> 為 <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="7瀏覽目錄" tabindex="-1">7、瀏覽目錄 <a class="doc-anchor" href="#7瀏覽目錄" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseDir(initDir: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>initDir：起始瀏覽路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;d:\test&quot;
+}
+</code></pre>
+<ul>
+<li>path：瀏覽選擇的目錄的全路徑；使用者取消時 <code>error</code> 為 <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="8取得指定目錄" tabindex="-1">8、取得指定目錄 <a class="doc-anchor" href="#8取得指定目錄" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getKnownDir(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>type：類型</p>
+<ul>
+<li>
+<p>download：下載</p>
+</li>
+<li>
+<p>video：影片</p>
+</li>
+<li>
+<p>music：音樂</p>
+</li>
+<li>
+<p>picture：圖片</p>
+</li>
+<li>
+<p>document：文件</p>
+</li>
+<li>
+<p>appDataRoaming：AppData/Roaming</p>
+</li>
+<li>
+<p>appDataLocal：AppData/Local</p>
+</li>
+<li>
+<p>appDir：程式所在目錄</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;D:\Downloads&quot;
+}
+</code></pre>
+<ul>
+<li>path：指定類型目錄的全路徑</li>
+</ul>
+</li>
+</ul>
+<h3 id="9儲存檔案" tabindex="-1">9、儲存檔案 <a class="doc-anchor" href="#9儲存檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.saveFile(filePath: string, data: string, binaryFile: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>filePath：檔案路徑</p>
+</li>
+<li>
+<p>data：檔案內容</p>
+<ul>
+<li>
+<p>文字檔：內容</p>
+</li>
+<li>
+<p>二進位檔案：內容的base64編碼</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binaryFile：是否是二進位檔案</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="10取得檔案圖示" tabindex="-1">10、取得檔案圖示 <a class="doc-anchor" href="#10取得檔案圖示" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileIcon(filePath: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>filePath：檔案路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;icon&quot;: &quot;data:image/png;base64,&quot;
+}
+</code></pre>
+<ul>
+<li>icon：檔案圖示，base64編碼</li>
+</ul>
+</li>
+</ul>
+<h3 id="11讀取檔案" tabindex="-1">11、讀取檔案 <a class="doc-anchor" href="#11讀取檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFile(path: string, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>path：檔案路徑</p>
+</li>
+<li>
+<p>encoding：編碼方式</p>
+<ul>
+<li>
+<p>&quot;utf8&quot;：文字模式（預設）</p>
+</li>
+<li>
+<p>&quot;base64&quot; 或 &quot;binary&quot;：二進位模式</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<p>成功時：</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;文件内容&quot;,
+  &quot;encoding&quot;: &quot;utf8&quot;,
+  &quot;size&quot;: 1024
+}
+</code></pre>
+<p>檔案過大時（&gt;50MB）：</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 3,
+  &quot;errorMsg&quot;: &quot;file too large, use readFileChunk instead&quot;,
+  &quot;fileSize&quot;: 52428800,
+  &quot;chunkSize&quot;: 1048576
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="12分塊讀取大檔案" tabindex="-1">12、分塊讀取大檔案 <a class="doc-anchor" href="#12分塊讀取大檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFileChunk(path: string, offset: number, length: number, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>path：檔案路徑</p>
+</li>
+<li>
+<p>offset：起始偏移量（位元組）</p>
+</li>
+<li>
+<p>length：讀取長度（位元組，最大1MB）</p>
+</li>
+<li>
+<p>encoding：編碼方式（固定為&quot;base64&quot;）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;base64编码的数据&quot;,
+  &quot;offset&quot;: 0,
+  &quot;length&quot;: 1048576,
+  &quot;encoding&quot;: &quot;base64&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="13寫入檔案" tabindex="-1">13、寫入檔案 <a class="doc-anchor" href="#13寫入檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.writeFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>path：檔案路徑</p>
+</li>
+<li>
+<p>data：檔案內容</p>
+<ul>
+<li>
+<p>文字檔：文字內容</p>
+</li>
+<li>
+<p>二進位檔案：base64編碼的內容</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary：是否二進位模式</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="14追加寫入檔案" tabindex="-1">14、追加寫入檔案 <a class="doc-anchor" href="#14追加寫入檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.appendFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>path：檔案路徑</p>
+</li>
+<li>
+<p>data：追加內容</p>
+<ul>
+<li>
+<p>文字檔：文字內容</p>
+</li>
+<li>
+<p>二進位檔案：base64編碼的內容</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary：是否二進位模式</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="15重新命名移動" tabindex="-1">15、重新命名/移動 <a class="doc-anchor" href="#15重新命名移動" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.rename(oldPath: string, newPath: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>oldPath：原路徑</p>
+</li>
+<li>
+<p>newPath：新路徑</p>
+</li>
+<li>
+<p>overwrite：是否覆蓋已存在的檔案</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="16複製檔案" tabindex="-1">16、複製檔案 <a class="doc-anchor" href="#16複製檔案" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFile(source: string, destination: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>source：來源檔案路徑</p>
+</li>
+<li>
+<p>destination：目標檔案路徑</p>
+</li>
+<li>
+<p>overwrite：是否覆蓋已存在的檔案</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="17刪除檔案或目錄" tabindex="-1">17、刪除檔案或目錄 <a class="doc-anchor" href="#17刪除檔案或目錄" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deletePath(path: string, useRecycleBin: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>path：檔案或目錄路徑</p>
+</li>
+<li>
+<p>useRecycleBin：是否移到資源回收筒（false 時直接刪除，<strong>不可復原</strong>）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>說明：目錄一律遞迴刪除（含全部子內容）。</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="18建立目錄" tabindex="-1">18、建立目錄 <a class="doc-anchor" href="#18建立目錄" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.mkdir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>path：目錄路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="19讀取目錄" tabindex="-1">19、讀取目錄 <a class="doc-anchor" href="#19讀取目錄" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readDir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>path：目錄路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [&quot;file1.txt&quot;, &quot;file2.jpg&quot;],
+  &quot;directories&quot;: [&quot;subdir1&quot;, &quot;subdir2&quot;]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="20檢查路徑存在" tabindex="-1">20、檢查路徑存在 <a class="doc-anchor" href="#20檢查路徑存在" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.exists(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>path：檔案或目錄路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;exists&quot;: true
+}
+</code></pre>
+<ul>
+<li>exists：原生布林</li>
+</ul>
+</li>
+</ul>
+<h3 id="21取得檔案資訊" tabindex="-1">21、取得檔案資訊 <a class="doc-anchor" href="#21取得檔案資訊" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileInfo(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>path：檔案或目錄路徑</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;path&quot;: &quot;D:\\test\\file.txt&quot;,
+  &quot;name&quot;: &quot;file.txt&quot;,
+  &quot;isDirectory&quot;: false,
+  &quot;size&quot;: 1024,
+  &quot;readonly&quot;: false,
+  &quot;hidden&quot;: false,
+  &quot;system&quot;: false,
+  &quot;modifiedTime&quot;: &quot;2025-10-19 18:48:29&quot;,
+  &quot;createdTime&quot;: &quot;2025-10-15 10:30:00&quot;,
+  &quot;extension&quot;: &quot;.txt&quot;
+}
+</code></pre>
+<ul>
+<li>isDirectory / readonly / hidden / system：原生布林</li>
+</ul>
+</li>
+</ul>
+<h2 id="七媒體處理" tabindex="-1">七、媒體處理 <a class="doc-anchor" href="#七媒體處理" aria-hidden="true">#</a></h2>
+<p>媒體五件套由 C++ 側呼起 <code>bin64\Platform\</code> 下的第三方 CLI 工具執行。除 <code>ffprobeRun</code> 外均為<strong>非同步綁定</strong>（背景執行緒執行，不阻塞 UI 執行緒）；批次處理為串列，同一時刻僅有一個子處理程序在執行，可用 <code>Zen.cancelRun()</code> 終止目前執行（被取消時返回 <code>errorMsg: &quot;cancelled&quot;</code>）。</p>
+<h3 id="1執行-magick-命令非同步" tabindex="-1">1、執行 magick 命令（非同步） <a class="doc-anchor" href="#1執行-magick-命令非同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.imageRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>args：完整的 magick 命令列參數（不含 magick.exe 本身），由前端拼接。路徑需自行加雙引號，例如 <code>&quot;D:\\in.jpg&quot; -resize 800x600 &quot;D:\\out.jpg&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接參數，只執行 <code>magick.exe &lt;args&gt;</code> 並擷取結果。error 非 0 時 errorMsg 透傳 magick stderr；stdout 為 magick 標準輸出（identify 等命令的結果）</p>
+</li>
+</ul>
+<h3 id="2執行-ffmpeg-命令非同步" tabindex="-1">2、執行 ffmpeg 命令（非同步） <a class="doc-anchor" href="#2執行-ffmpeg-命令非同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffmpegRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>args：完整的 ffmpeg 命令列參數（不含 ffmpeg.exe 本身），由前端拼接。路徑需自行加雙引號，例如 <code>-i &quot;D:\in.mp4&quot; -vf &quot;scale=1280:720&quot; -c:v libx264 -crf 23 &quot;D:\out.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接參數，只執行 <code>ffmpeg.exe &lt;args&gt;</code> 並擷取結果。error 非 0 時 errorMsg 透傳 ffmpeg stderr；stdout 為 ffmpeg 標準輸出。影片處理耗時較長，C++ 預設逾時 1800s</p>
+</li>
+</ul>
+<h3 id="3執行-ffprobe-命令探測元資料同步" tabindex="-1">3、執行 ffprobe 命令（探測元資料，同步） <a class="doc-anchor" href="#3執行-ffprobe-命令探測元資料同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffprobeRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>args：完整的 ffprobe 命令列參數（不含 ffprobe.exe 本身）。常用 <code>-v quiet -print_format json -show_format -show_streams &quot;D:\in.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;{ ...json... }&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端只執行 <code>ffprobe.exe &lt;args&gt;</code> 並返回。stdout 通常為 JSON，前端自行解析。探測很快，保持同步綁定，預設逾時 30s</p>
+</li>
+</ul>
+<h3 id="4執行-pdfcpu-命令非同步" tabindex="-1">4、執行 pdfcpu 命令（非同步） <a class="doc-anchor" href="#4執行-pdfcpu-命令非同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pdfRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>args：完整的 pdfcpu 命令列參數（不含 pdfcpu.exe 本身），由前端拼接。路徑需自行加雙引號，例如 <code>merge &quot;D:\out.pdf&quot; &quot;D:\in1.pdf&quot; &quot;D:\in2.pdf&quot; --force</code></li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接參數，只執行 <code>pdfcpu.exe &lt;args&gt;</code> 並擷取結果。error 非 0 時 errorMsg 透傳 pdfcpu stderr；stdout 為 pdfcpu 標準輸出（<code>info -j</code> 等命令的結果）。C++ 預設逾時 1800s</p>
+</li>
+</ul>
+<h3 id="5執行-ghostscript-命令非同步" tabindex="-1">5、執行 Ghostscript 命令（非同步） <a class="doc-anchor" href="#5執行-ghostscript-命令非同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.gsRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>args：完整的 Ghostscript 命令列參數（不含 gswin64c.exe 本身），由前端拼接。路徑需自行加雙引號，例如 <code>-sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=150 -sOutputFile=&quot;D:\out.pdf&quot; &quot;D:\in.pdf&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>注：C++ 端不拼接參數，只執行 <code>Platform\Ghostscript\gswin64c.exe &lt;args&gt;</code> 並擷取結果。error 非 0 時 errorMsg 透傳 Ghostscript stderr。C++ 預設逾時 1800s。目前用於 PDF 工具的壓縮（optimize）步驟，其餘 PDF 操作仍走 <code>pdfRun</code>（pdfcpu）</p>
+</li>
+</ul>
+<h3 id="6取消目前媒體子處理程序" tabindex="-1">6、取消目前媒體子處理程序 <a class="doc-anchor" href="#6取消目前媒體子處理程序" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.cancelRun() : object
+</code></pre>
+<ul>
+<li>
+<p>輸入：無</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0
+}
+</code></pre>
+</li>
+<li>
+<p>注：觸發取消訊號，終止目前正在執行的 <code>imageRun</code>/<code>ffmpegRun</code>/<code>pdfRun</code>/<code>gsRun</code> 子處理程序（<code>TerminateProcess</code>）。被取消的呼叫會以 <code>{error:2, errorMsg:&quot;cancelled&quot;}</code> 返回。批次處理為串列，同一時刻僅有一個子處理程序在執行。</p>
+</li>
+</ul>
+<h2 id="八螢幕擷取與-ocr" tabindex="-1">八、螢幕擷取與 OCR <a class="doc-anchor" href="#八螢幕擷取與-ocr" aria-hidden="true">#</a></h2>
+<h3 id="1螢幕擷取釘在桌面" tabindex="-1">1、螢幕擷取/釘在桌面 <a class="doc-anchor" href="#1螢幕擷取釘在桌面" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.screenCap(mode:string, wait:bool, file: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>mode：模式</p>
+<ul>
+<li>
+<p>normal：常規</p>
+</li>
+<li>
+<p>long：長截圖</p>
+</li>
+<li>
+<p>fast：快速截圖到剪貼簿（無標註，適合ocr）</p>
+</li>
+<li>
+<p>quickocr：拖選區域後立即 OCR+翻譯，譯文貼屏顯示在選區原文字位置（快捷OCR翻譯）</p>
+</li>
+<li>
+<p>pinClipboard：把剪貼簿的圖片釘在桌面</p>
+</li>
+<li>
+<p>pinFile：把圖片檔案的圖片釘在桌面</p>
+</li>
+<li>
+<p>pinArea：把螢幕指定區域直抓並原位釘在桌面（param 傳 &quot;x,y,w,h&quot;，螢幕物理像素）</p>
+</li>
+<li>
+<p>pinWin：把指定視窗客戶區的內容直抓並原位釘在桌面（param 傳十進位 HWND）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>wait：是否等待截圖完成</p>
+</li>
+<li>
+<p>param: 檔案路徑（pinFile用）；區域串 &quot;x,y,w,h&quot;（pinArea用）；十進位 HWND（pinWin用）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2ocr初始化" tabindex="-1">2、OCR初始化 <a class="doc-anchor" href="#2ocr初始化" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrInit(lang: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>lang：語言</p>
+<ul>
+<li>
+<p>zh-CN：簡體中文</p>
+</li>
+<li>
+<p>zh-TW：繁體中文</p>
+</li>
+<li>
+<p>en-US：英文</p>
+</li>
+<li>
+<p>ja-JP：日文</p>
+</li>
+<li>
+<p>ko-KR：韓文</p>
+</li>
+<li>
+<p>ru-RU：俄文</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3ocr識別非同步" tabindex="-1">3、OCR識別（非同步） <a class="doc-anchor" href="#3ocr識別非同步" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrRecognition(image: string) : object
+</code></pre>
+<p>OCR 為耗時操作，為<strong>非同步綁定</strong>，透過 Promise 回撲。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>image：圖片，base64編碼</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;result&quot;: {
+        &quot;code&quot;: 100,
+        &quot;data&quot;: [
+            {
+                &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+                &quot;score&quot;: 0.9605724896703448,
+                &quot;text&quot;: &quot;有发热症状患者&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>result：識別結果</p>
+<ul>
+<li>
+<p>code：編碼，固定為100</p>
+</li>
+<li>
+<p>data：結果集合</p>
+<ul>
+<li>
+<p>box：文字的位置（4個角落座標）</p>
+</li>
+<li>
+<p>text：識別後的文字</p>
+</li>
+<li>
+<p>score：識別評分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="九加密解密" tabindex="-1">九、加密解密 <a class="doc-anchor" href="#九加密解密" aria-hidden="true">#</a></h2>
+<h3 id="1加密資料" tabindex="-1">1、加密資料 <a class="doc-anchor" href="#1加密資料" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.encrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>target：要加密的資料</p>
+<ul>
+<li>
+<p>type=&quot;text&quot; 時為文字字串</p>
+</li>
+<li>
+<p>type=&quot;data&quot; 時為 Base64 編碼的二進位資料</p>
+</li>
+<li>
+<p>type=&quot;hex&quot; 時為十六進位字串</p>
+</li>
+<li>
+<p>type=&quot;file&quot; 時為檔案路徑</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：加密演算法</p>
+<ul>
+<li>
+<p>對稱加密：&quot;aes-128-cbc&quot;, &quot;aes-192-cbc&quot;, &quot;aes-256-cbc&quot;, &quot;aes-128-ecb&quot;, &quot;aes-256-ecb&quot;, &quot;aes-128-ctr&quot;, &quot;aes-256-ctr&quot;, &quot;des-cbc&quot;, &quot;des-ecb&quot;, &quot;des-ede3-cbc&quot; (3DES), &quot;des-ede3-ecb&quot;, &quot;rc4&quot;, &quot;bf-ecb&quot; (Blowfish), &quot;rc2-cbc&quot;, &quot;sm4-cbc&quot;, &quot;sm4-ecb&quot;, &quot;sm4-ctr&quot;</p>
+</li>
+<li>
+<p>非對稱加密：&quot;rsa-pkcs1&quot;, &quot;rsa-oaep&quot;（RSA，公鑰加密、私鑰解密）、&quot;sm2&quot;（國密橢圓曲線 sm2p256v1，公鑰加密、私鑰解密；單次可處理任意長度，無需分塊）</p>
+</li>
+<li>
+<p>key/iv 為 Base64；內部轉十六進位後以 <code>enc -K &lt;hex&gt; -iv &lt;hex&gt;</code> 形式傳遞，金鑰長度需精確匹配演算法</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type：輸入類型（預設 &quot;text&quot;）</p>
+<ul>
+<li>
+<p>&quot;text&quot;：文字資料</p>
+</li>
+<li>
+<p>&quot;data&quot;：Base64 編碼的二進位資料</p>
+</li>
+<li>
+<p>&quot;hex&quot;：十六進位字串</p>
+</li>
+<li>
+<p>&quot;file&quot;：檔案路徑</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key：對稱為 Base64 編碼的金鑰；非對稱(rsa-*、sm2)為 PEM 文字（加密傳公鑰、解密傳私鑰，原樣透傳不 Base64 解碼）</p>
+</li>
+<li>
+<p>iv：Base64 編碼的初始化向量（可選，某些演算法需要；非對稱忽略）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的加密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;text&quot;,
+  &quot;inputSize&quot;: 1024,
+  &quot;outputSize&quot;: 1040
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2解密資料" tabindex="-1">2、解密資料 <a class="doc-anchor" href="#2解密資料" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.decrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>target：要解密的資料</p>
+<ul>
+<li>
+<p>type=&quot;data&quot; 時為 Base64 編碼的密文</p>
+</li>
+<li>
+<p>type=&quot;file&quot; 時為密文檔案路徑</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：加密演算法（同 encrypt）</p>
+</li>
+<li>
+<p>type：輸入類型（預設 &quot;data&quot;）</p>
+<ul>
+<li>
+<p>&quot;data&quot;：Base64 編碼的密文</p>
+</li>
+<li>
+<p>&quot;file&quot;：密文檔案路徑</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key：對稱為 Base64 編碼的金鑰；非對稱(rsa-*、sm2)為 PEM 文字（加密傳公鑰、解密傳私鑰，原樣透傳不 Base64 解碼）</p>
+</li>
+<li>
+<p>iv：Base64 編碼的初始化向量（可選；非對稱忽略）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的解密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;data&quot;,
+  &quot;inputSize&quot;: 1040,
+  &quot;outputSize&quot;: 1024
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3產生金鑰" tabindex="-1">3、產生金鑰 <a class="doc-anchor" href="#3產生金鑰" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateKey(algorithm: string, bits: string = '') : object
+</code></pre>
+<p>統一金鑰產生入口（由內建 openssl.exe 產生，前端無需依賴瀏覽器 WebCrypto）。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>algorithm：演算法名</p>
+<ul>
+<li>
+<p>對稱：aes-128-cbc / aes-256-cbc / des-cbc / des-ede3-cbc / sm4-cbc / sm4-ecb / sm4-ctr / rc2-cbc / rc4 / bf-ecb 等（金鑰長度由演算法名解析）</p>
+</li>
+<li>
+<p>非對稱：&quot;rsa&quot;（bits 生效）/ &quot;sm2&quot;（固定曲線 sm2p256v1）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>bits：RSA 金鑰位元數（&quot;2048&quot;/&quot;4096&quot;，預設 2048）；對稱演算法與 SM2 忽略</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">// 对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;key&quot;: &quot;Base64编码的密钥&quot; }
+// 非对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;sm2&quot;, &quot;publicKey&quot;: &quot;-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n&quot;, &quot;privateKey&quot;: &quot;-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n&quot; }
+</code></pre>
+</li>
+</ul>
+<h3 id="4產生iv" tabindex="-1">4、產生IV <a class="doc-anchor" href="#4產生iv" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateIv(algorithm: string) : object
+</code></pre>
+<p>按對稱演算法塊大小產生隨機 IV（由內建 openssl.exe 產生）。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>algorithm：對稱演算法名（同 encrypt 的對稱演算法清單）</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;iv&quot;: &quot;Base64编码的IV&quot; }
+</code></pre>
+<p>注：AES/SM4 塊大小 16 位元組；DES/3DES/RC2 為 8 位元組；ECB 模式與流密碼(rc4)無需 IV，<code>iv</code> 返回空字串。</p>
+</li>
+</ul>
+<h3 id="5計算雜湊" tabindex="-1">5、計算雜湊 <a class="doc-anchor" href="#5計算雜湊" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.calcHash(target: string, algorithm: string, type?: string, key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>target：計算目標，含義隨 type 變化</p>
+<ul>
+<li>
+<p>type=&quot;file&quot; 時為檔案路徑</p>
+</li>
+<li>
+<p>type=&quot;text&quot; 時為文字字串（按 UTF-8 計算摘要）</p>
+</li>
+<li>
+<p>type=&quot;data&quot; 時為 Base64 編碼的二進位資料</p>
+</li>
+<li>
+<p>type=&quot;hex&quot; 時為十六進位字串</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm：雜湊演算法</p>
+<ul>
+<li>
+<p>&quot;md5&quot;</p>
+</li>
+<li>
+<p>&quot;sha1&quot;</p>
+</li>
+<li>
+<p>&quot;sha224&quot;</p>
+</li>
+<li>
+<p>&quot;sha256&quot;</p>
+</li>
+<li>
+<p>&quot;sha384&quot;</p>
+</li>
+<li>
+<p>&quot;sha512&quot;</p>
+</li>
+<li>
+<p>&quot;ripemd160&quot;</p>
+</li>
+<li>
+<p>&quot;sm3&quot;（國密 SM3 摘要，256 位元 / 64 位十六進位）</p>
+</li>
+<li>
+<p>&quot;sha3-224&quot; / &quot;sha3-256&quot; / &quot;sha3-384&quot; / &quot;sha3-512&quot;（SHA-3 / Keccak，NIST FIPS 202）</p>
+</li>
+<li>
+<p>&quot;blake2b512&quot; / &quot;blake2s256&quot;（BLAKE2，現代高效能摘要）</p>
+</li>
+<li>
+<p>&quot;crc32&quot;（CRC32 校驗和，8 位十六進位）</p>
+</li>
+<li>
+<p>&quot;crc16&quot;（CRC16 校驗和，4 位十六進位）</p>
+</li>
+<li>
+<p>&quot;checksum&quot;（位元組累加和，8 位十六進位）</p>
+</li>
+<li>
+<p>&quot;hmac-md5&quot; / &quot;hmac-sha1&quot; / &quot;hmac-sha256&quot; / &quot;hmac-sha512&quot; / &quot;hmac-sm3&quot; / &quot;hmac-sha3-256&quot; / &quot;hmac-sha3-512&quot;（HMAC，第 4 參 key 為金鑰，輸出十六進位 MAC）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type：輸入類型（可選，預設 &quot;file&quot;）</p>
+<ul>
+<li>
+<p>&quot;file&quot;：計算檔案雜湊</p>
+</li>
+<li>
+<p>&quot;text&quot;：計算文字雜湊</p>
+</li>
+<li>
+<p>&quot;data&quot;：計算二進位資料雜湊（target 需為 Base64 字串）</p>
+</li>
+<li>
+<p>&quot;hex&quot;：計算十六進位字串雜湊（target 為 hex 字串，解碼後按位元組計算）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;hash&quot;: &quot;D41D8CD98F00B204E9800998ECF8427E&quot;,
+  &quot;algorithm&quot;: &quot;md5&quot;,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十剪貼簿歷史" tabindex="-1">十、剪貼簿歷史 <a class="doc-anchor" href="#十剪貼簿歷史" aria-hidden="true">#</a></h2>
+<h3 id="1搜尋剪貼簿" tabindex="-1">1、搜尋剪貼簿 <a class="doc-anchor" href="#1搜尋剪貼簿" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchClip(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>keyword：搜尋關鍵字</p>
+</li>
+<li>
+<p>maxResults：最大記錄數</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;clips&quot;: [
+    {
+      &quot;id&quot;: &quot;1235642340977&quot;,
+      &quot;name&quot;: &quot;Weixin.exe&quot;,
+      &quot;text&quot;: &quot;文本内容&quot;,
+      &quot;ocrJson&quot;: &quot;{\&quot;code\&quot;:100,\&quot;data\&quot;:[...]}&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:29&quot;,
+      &quot;image&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0
+    },
+    {
+      &quot;id&quot;: &quot;235634234232&quot;,
+      &quot;name&quot;: &quot;MarkText.exe&quot;,
+      &quot;text&quot;: &quot;function&quot;,
+      &quot;ocrJson&quot;: &quot;&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:21&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;score&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>clips：剪貼簿的歷史內容清單</p>
+<ul>
+<li>
+<p>id：記錄id，唯一標識</p>
+</li>
+<li>
+<p>name：存放複製的來源處理程序名稱</p>
+</li>
+<li>
+<p>text：文字內容（image不為空時，為圖片的OCR文字內容）</p>
+</li>
+<li>
+<p>image：圖片內容，base64格式</p>
+</li>
+<li>
+<p>dateCreated：建立日期</p>
+</li>
+<li>
+<p>ocrJson：圖片OCR輸出的格式化內容</p>
+<ul>
+<li>
+<p>box：文字的位置（4個角落座標）</p>
+</li>
+<li>
+<p>text：識別後的文字</p>
+</li>
+<li>
+<p>score：識別評分</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;code&quot;: 100,
+    &quot;data&quot;: [
+        {
+            &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+            &quot;score&quot;: 0.9605724896703448,
+            &quot;text&quot;: &quot;有发热症状患者&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2刪除一條記錄" tabindex="-1">2、刪除一條記錄 <a class="doc-anchor" href="#2刪除一條記錄" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deleteClip(id: string) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>id：記錄id</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3清空記錄" tabindex="-1">3、清空記錄 <a class="doc-anchor" href="#3清空記錄" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.clearClip() : object
+</code></pre>
+<ul>
+<li>
+<p>輸入：無</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十一書籤" tabindex="-1">十一、書籤 <a class="doc-anchor" href="#十一書籤" aria-hidden="true">#</a></h2>
+<h3 id="1搜尋書籤" tabindex="-1">1、搜尋書籤 <a class="doc-anchor" href="#1搜尋書籤" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchBookmark(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>keyword：搜尋關鍵字</p>
+</li>
+<li>
+<p>maxResults：最大記錄數</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;bookmarks&quot;: [
+        {
+            &quot;id&quot;: &quot;13568723452&quot;,
+            &quot;name&quot;: &quot;DeepSeek | 深度求索&quot;,
+            &quot;url&quot;: &quot;https://www.deepseek.com/&quot;,
+            &quot;dateAdded&quot;: &quot;2018-12-19 21:20:48&quot;,
+            &quot;dateLastUsed&quot;: &quot;2025-05-21 15:04:06&quot;,
+            &quot;visitCount&quot;: 37,
+            &quot;score&quot;: 80
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>bookmarks：書籤清單</p>
+<ul>
+<li>
+<p>id：唯一ID</p>
+</li>
+<li>
+<p>name：名稱</p>
+</li>
+<li>
+<p>url：連結</p>
+</li>
+<li>
+<p>dateAdded：加入時間</p>
+</li>
+<li>
+<p>dateLastUsed：使用時間</p>
+</li>
+<li>
+<p>visitCount：使用次數</p>
+</li>
+<li>
+<p>score：搜尋評分</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2開啟書籤" tabindex="-1">2、開啟書籤 <a class="doc-anchor" href="#2開啟書籤" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openBookmark(id: string, privacyMode: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>id：id</p>
+</li>
+<li>
+<p>privacyMode：隱私模式</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十二命令執行" tabindex="-1">十二、命令執行 <a class="doc-anchor" href="#十二命令執行" aria-hidden="true">#</a></h2>
+<h3 id="1執行命令列" tabindex="-1">1、執行命令列 <a class="doc-anchor" href="#1執行命令列" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runCmd(cmd: string, admin : bool) : object
+</code></pre>
+<p>以 <code>cmd.exe /k &lt;cmd&gt;</code> 開啟可見的命令列視窗並執行命令（視窗保持開啟）。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>cmd：命令</p>
+</li>
+<li>
+<p>admin：是否以管理員身分執行</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2執行任意程式" tabindex="-1">2、執行任意程式 <a class="doc-anchor" href="#2執行任意程式" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runAny(cmdExe: string, cmdArgs: string, admin : bool) : object
+</code></pre>
+<p>直接啟動任意可執行檔或 URL（URL 走系統預設關聯開啟，如瀏覽器）。</p>
+<ul>
+<li>
+<p>輸入</p>
+<ul>
+<li>
+<p>cmdExe：命令路徑或 URL</p>
+</li>
+<li>
+<p>cmdArgs：命令參數</p>
+</li>
+<li>
+<p>admin：是否以管理員身分執行</p>
+</li>
+</ul>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="十三更新" tabindex="-1">十三、更新 <a class="doc-anchor" href="#十三更新" aria-hidden="true">#</a></h2>
+<p>更新由獨立程序 <code>yyzUpdater.exe</code> 完成，主程序僅負責拉起與狀態探測。</p>
+<h3 id="1檢查更新" tabindex="-1">1、檢查更新 <a class="doc-anchor" href="#1檢查更新" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.checkUpdate() : object
+</code></pre>
+<p>拉起 <code>yyzUpdater.exe --check-and-apply</code>（檢測 + 下載 + 套用一條龍）。</p>
+<ul>
+<li>
+<p>輸入：無</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+<p>注：<code>error:0</code> 僅表示成功拉起更新器，<strong>不代表更新結果</strong>。更新進行中/已就緒的狀態用 <code>getUpdateState</code> 查詢。</p>
+</li>
+</ul>
+<h3 id="2取得更新狀態" tabindex="-1">2、取得更新狀態 <a class="doc-anchor" href="#2取得更新狀態" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getUpdateState() : object
+</code></pre>
+<p>即時探測更新狀態（供系統匣輪詢）：</p>
+<ul>
+<li>
+<p>updater 是否在執行 → 單一實例互斥體 <code>Local\yyzUpdater_SingleInstance</code></p>
+</li>
+<li>
+<p>是否已下載待套用 → <code>%APPDATA%\yyzTools\Update\update.ready</code> 是否存在（存在則解析其中 main 包 version）</p>
+</li>
+<li>
+<p>手動檢查是否已結束且無更新 → <code>%APPDATA%\yyzTools\Update\update.result</code> 標記（<strong>讀到即刪</strong>）</p>
+</li>
+<li>
+<p>輸入：無</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
+</code></pre>
+<ul>
+<li>
+<p>status：<code>idle</code>（無更新活動）/ <code>checking</code>（更新器執行中）/ <code>ready</code>（已下載完畢可升級）</p>
+</li>
+<li>
+<p>version：僅 <code>ready</code> 態有值，為待套用的新版本號（取 main 包），其餘為空字串</p>
+</li>
+<li>
+<p>lastResult：僅 <code>idle</code> 態可能有值，為上一次<strong>手動</strong>檢查（<code>--check-and-apply</code>）的結果：<code>uptodate</code>（已是最新）/ <code>error</code>（檢查失敗），無標記時為空字串。該標記由 updater 寫入、本介面讀取後立即刪除，因此<strong>只會返回一次</strong>，供前端彈一次 Toast；靜默的 <code>--check</code> 不寫標記，不會產生打擾。</p>
+</li>
+<li>
+<p>狀態優先級：<code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3套用已下載完畢的更新" tabindex="-1">3、套用已下載完畢的更新 <a class="doc-anchor" href="#3套用已下載完畢的更新" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.applyUpdate() : object
+</code></pre>
+<p>拉起 <code>yyzUpdater.exe --apply</code>：讀 <code>update.ready</code> → 等主程序結束 → 替換檔案 → 重啟主程序。僅在 <code>getUpdateState</code> 返回 <code>ready</code> 時呼叫。</p>
+<ul>
+<li>
+<p>輸入：無</p>
+</li>
+<li>
+<p>輸出</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h2 id="安全須知" tabindex="-1">⚠️ 安全須知 <a class="doc-anchor" href="#安全須知" aria-hidden="true">#</a></h2>
+<p>Native API 面向模組開發者<strong>完整開放</strong>宿主處理程序的系統能力，其中包含檔案讀寫與刪除、處理程序建立與終止、視窗控制、剪貼簿讀寫、登錄檔與系統設定修改、網路下載及命令列執行等<strong>高危操作</strong>。</p>
+<p>這些介面<strong>不設權限彈窗、不做沙箱隔離、不提供復原機制</strong>——呼叫即以目前使用者權限直接生效，誤用可能導致資料永久遺失或系統異常。</p>
+<p>因此請務必注意：</p>
+<ul>
+<li><strong>自行評估安全性</strong>：呼叫任何介面前，先確認參數（尤其是路徑、處理程序名、命令列）來源可信且已充分校驗；對刪除、覆蓋、結束處理程序等不可逆操作，建議先行備份或向使用者二次確認。</li>
+<li><strong>警惕不可信輸入</strong>：切勿將使用者輸入、網路回應或第三方資料未經校驗地直接拼入介面參數，謹防路徑穿越與命令注入。</li>
+<li><strong>最小權限原則</strong>：只申請業務真正需要的能力，避免為圖省事使用影響面更大的介面。</li>
+<li><strong>責任自負</strong>：開發者須自行承擔因使用本 API 而造成的一切後果，包括但不限於資料遺失、系統損壞與安全風險。</li>
+</ul>
+</blockquote>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="相關資源">
+    <a class="sdk-link" href="/zh-TW/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>快速入門指南</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>下載範例專案</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-TW/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本機優先，永久免費。</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>產品</h3>
+            <a href="/zh-TW/features.html">功能</a>
+            <a href="/zh-TW/download.html">下載</a>
+            <a href="/zh-TW/changelog.html">更新紀錄</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>資源</h3>
+            <a href="/zh-TW/sdk.html">開發者</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">問題回報</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-TW/agreement.html">使用者協議</a>
+            <a href="/zh-TW/privacy.html">隱私權政策</a>
+            
+            <a class="js-email" href="#">聯絡信箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留一切權利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的註冊商標。本站與 Microsoft 無隸屬關係。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

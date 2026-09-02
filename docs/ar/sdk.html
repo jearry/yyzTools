@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إنشاء وحدة yyzTools — دليل البدء السريع</title>
+<meta name="description" content="أنشئ من الصفر تطبيق ويب يعمل داخل yyzTools: بنية الصفحة، مضيف النافذة، التعريب، واجهات Native غير المتزامنة، وحفظ الإعدادات. دون أي خطوة بناء.">
+
+<meta property="og:title" content="إنشاء وحدة yyzTools — دليل البدء السريع">
+<meta property="og:description" content="أنشئ من الصفر تطبيق ويب يعمل داخل yyzTools: بنية الصفحة، مضيف النافذة، التعريب، واجهات Native غير المتزامنة، وحفظ الإعدادات. دون أي خطوة بناء.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ar/sdk.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ar">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="إنشاء وحدة yyzTools — دليل البدء السريع">
+<meta name="twitter:description" content="أنشئ من الصفر تطبيق ويب يعمل داخل yyzTools: بنية الصفحة، مضيف النافذة، التعريب، واجهات Native غير المتزامنة، وحفظ الإعدادات. دون أي خطوة بناء.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ar/sdk.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ar/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ar/" >الرئيسية</a>
+            <a href="/ar/features.html" >المزايا</a>
+            <a href="/ar/download.html" >التنزيل</a>
+            <a href="/ar/changelog.html" >سجل التغييرات</a>
+            
+            <a href="/ar/sdk.html" class=&#34;on&#34;>المطوّرون</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">الملاحظات</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="اختيار اللغة">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">العربية</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk.html" hreflang="ar"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>العربية</a>
+                    
+                    <a href="/pt/sdk.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/ar/download.html">تنزيل مجاني</a>
+            <button class="nav-toggle" id="navToggle" aria-label="القائمة" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"المطوّرون","item":"https://yyztools.com/ar/sdk.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"البدء السريع","description":"أنشئ من الصفر تطبيق ويب يعمل داخل yyzTools: بنية الصفحة، مضيف النافذة، التعريب، واجهات Native غير المتزامنة، وحفظ الإعدادات. دون أي خطوة بناء.","inLanguage":"ar","url":"https://yyztools.com/ar/sdk.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Beginner"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> محتويات الصفحة</summary>
+            <nav aria-label="محتويات الصفحة">
+                <ol>
+                    
+                    <li>
+                        <a href="#1-بنية-عينة-الوحدات-وطريقة-النشر">1. بنية عيّنة الوحدات وطريقة النشر</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-نظرة-معمارية-عامة-كيف-يعمل-تطبيق-الويب">2. نظرة معمارية عامة: كيف يعمل تطبيق الويب</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-بنية-الصفحة-js-أصلي-أربعة-ملفات">3. بنية الصفحة (JS أصلي، أربعة ملفات)</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#indexhtml">index.html</a></li>
+                            
+                            <li><a href="#filefinderjs-المنطق-الأساسي">filefinder.js (المنطق الأساسي)</a></li>
+                            
+                            <li><a href="#بنية-إرجاع-searchfile-error-files">بنية إرجاع searchFile (`{ error, files[] }`)</a></li>
+                            
+                            <li><a href="#الواجهات-التي-تستدعيها-هذه-العينة">الواجهات التي تستدعيها هذه العيّنة</a></li>
+                            
+                            <li><a href="#قواعد-الاستدعاء-القواعد-الأربع-الذهبية">قواعد الاستدعاء (القواعد الأربع الذهبية)</a></li>
+                            
+                            <li><a href="#مرجع-سريع-للواجهات-الشائعة-قدرات-إضافية-غير-العينة">مرجع سريع للواجهات الشائعة (قدرات إضافية غير العيّنة)</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-إنشاء-ملف-وحدة-zenmod-مستضيف-النافذة">4. إنشاء ملف وحدة .zenmod (مستضيف النافذة)</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-النصوص-متعددة-اللغات-بأسلوب-القاموس">5. النصوص متعددة اللغات (بأسلوب القاموس)</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-التصحيح-والدمج">6. التصحيح والدمج</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-ملخص-المثال-الأدنى-الكامل">7. ملخص المثال الأدنى الكامل</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-إرشادات-الأمان">8. إرشادات الأمان</a>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>البدء السريع</h1>
+            <p class="doc-meta">أنشئ وحدتك الأولى دون أي أدوات بناء</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="موارد ذات صلة">
+    <a class="sdk-link" href="/ar/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>مرجع الواجهات</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>تنزيل المشروع النموذجي</span>
+    </a>
+</nav>
+
+
+            <p>هذا المستند موجَّه لمطوّري الوحدات، ويوضح كيفية إنشاء تطبيق ويب يعمل داخل العملية الرئيسية yyzTools من الصفر (باستخدام مشروع عيّنة SDK <code>SDK_Sample</code> — أداة بحث سريع عن الملفات — كمثال)، ويغطي: بنية صفحة الوحدة، نافذة الاستضافة، i18n، واجهة Native غير المتزامنة (البحث في كامل الأقراص)، فتح الملفات، حفظ الإعدادات (config)، بالإضافة إلى قالب إضافة طريقة native جديدة عند الحاجة لتوسيع قدرات C++.</p>
+<p>العيّنة هي <strong>JavaScript أصلية خالصة، بدون أي اعتماديات طرف ثالث، وبدون بناء (build)</strong>: لا حاجة إلى Vite / Alpine / FontAwesome؛ فقط انسخ المجلدين <code>Web</code> و<code>Modules</code> إلى المجلد الذي يحتوي على yyzTools.exe ليشتغل.</p>
+<h2 id="1-بنية-عينة-الوحدات-وطريقة-النشر" tabindex="-1">1. بنية عيّنة الوحدات وطريقة النشر <a class="doc-anchor" href="#1-بنية-عينة-الوحدات-وطريقة-النشر" aria-hidden="true">#</a></h2>
+<pre><code>sdk/sample/
+  Web/                        ← انسخ إلى &lt;مجلد yyzTools.exe&gt;\Web\        (دمج مع مجلد Web الموجود)
+    SDK_Sample/               ← مجلد العيّنة ذاتي الاحتواء؛ المجلد بأكمله هو وحدة كاملة
+      index.html              # بنية الصفحة (DOM أصلي، data-i18n لتحديد مواضع النصوص)
+      filefinder.js           # كل المنطق: البحث / الفتح / السجل / Esc
+      filefinder.css          # أنماط الصفحة (كلها بمتغيرات --zen-*، تتكيف تلقائيًا مع الوضع الفاتح والداكن)
+      i18n.js                 # قاموس النصوص (zh_cn / en)
+      lib/
+        zen_api.js            # فئة التغليف ZenAPI (غلاف JS لـ Native API، الاعتمادية الوحيدة في lib)
+        window_controls.css   # متغيرات الثيم (--zen-) + أنماط شريط التحكم بالنافذة
+  Modules/                   ← انسخ إلى &lt;مجلد yyzTools.exe&gt;\Modules\    (دمج مع مجلد Modules الموجود)
+    SDK_Sample.zenmod         # إعلان وحدة type:&quot;web&quot;، ينشئ ModuleManager نافذة الاستضافة تلقائيًا
+</code></pre>
+<p>النشر:</p>
+<pre><code class="language-text">انسخ sdk/sample/Web     إلى  bin64\Web\  (نسخ/دمج)
+انسخ sdk/sample/Modules إلى  bin64\Modules\  (نسخ/دمج)
+أعد تشغيل yyzTools.exe، وابحث عن &quot;SDK样例工程&quot; في لوحة الأوامر لتشغيلها
+</code></pre>
+<p>اصطلاحات مواقع القراءة في البرنامج الرئيسي:</p>
+<table>
+<thead>
+<tr>
+<th>المورد</th>
+<th>الموقع</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الصفحة</td>
+<td><code>&lt;exe目录&gt;\Web\{page}\index.html</code></td>
+</tr>
+<tr>
+<td>الوحدة</td>
+<td><code>&lt;exe目录&gt;\Modules\&lt;分类&gt;\*.zenmod</code>（只扫一层子目录）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-نظرة-معمارية-عامة-كيف-يعمل-تطبيق-الويب" tabindex="-1">2. نظرة معمارية عامة: كيف يعمل تطبيق الويب <a class="doc-anchor" href="#2-نظرة-معمارية-عامة-كيف-يعمل-تطبيق-الويب" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">Modules/SDK_Sample.zenmod   ← ملف وحدة يعلن type:&quot;web&quot; (موجّه بالبيانات، دون كتابة C++)
+        │  الموقع الرئيسي يمسح .zenmod عند الإقلاع
+        ▼
+نافذة استضافة WebModule (نافذة أصلية + WebView2)
+        │  تحمّل Web\SDK_Sample\index.html
+        ▼
+Web/SDK_Sample/             ← كل شيفرة الواجهة الأمامية (JS أصلي، بدون اعتماديات)
+        │  window.Zen.xxx(...)  ←→  الواجهات الأصلية المسجلة لدى البرنامج الرئيسي
+        ▼
+مديرات C++ المختلفة (ملفات/عمليات/نوافذ/الحافظة/OCR...)
+</code></pre>
+<p>خلاصات أساسية:</p>
+<ul>
+<li>
+<p><strong>لا حاجة لكتابة أي شيفرة C++</strong>. ملف <code>.zenmod</code> من نوع <code>type: &quot;web&quot;</code> يُنشَّأ تلقائيًا كنافذة استضافة WebModule بواسطة البرنامج الرئيسي، وتُعلن الوحدةُ حجمَ النافذة والأيقونة والاسم متعدد اللغات.</p>
+</li>
+<li>
+<p>تحصل الوحدة تلقائيًا على: البحث في لوحة الأوامر (مع فهرس البينيين)، ربط الاختصارات العامة، التحم في شريط التطبيقات (dock)، والتسجيل في جدول أسماء <code>windowControl</code>.</p>
+</li>
+<li>
+<p>القناة الوحيدة بين الواجهة الأمامية و C++ هي <code>window.Zen</code>؛ يُنصح بالاستدعاء الموحّد عبر فئة التغليف <code>ZenAPI</code> (العيّنة تتضمن <code>lib/zen_api.js</code>).</p>
+</li>
+<li>
+<p>الصفحات بدون بناء هي ملفات ثابتة مباشرة؛ بعد التعديل يكفي تحديث النافذة (<code>windowControl('sdk_sample','hide')</code> ثم show، أو إعادة تشغيل exe) — دون أي خطوة تصريف.</p>
+</li>
+</ul>
+<h2 id="3-بنية-الصفحة-js-أصلي-أربعة-ملفات" tabindex="-1">3. بنية الصفحة (JS أصلي، أربعة ملفات) <a class="doc-anchor" href="#3-بنية-الصفحة-js-أصلي-أربعة-ملفات" aria-hidden="true">#</a></h2>
+<h3 id="indexhtml" tabindex="-1">index.html <a class="doc-anchor" href="#indexhtml" aria-hidden="true">#</a></h3>
+<p>لا تستورد أي مكتبة طرف ثالث؛ الأزرار الثلاثة لشريط التحكم بالنافذة تستخدم رموز Unicode كأيقونات (− / □ / ×)، وتوفر <code>lib/window_controls.css</code> الأنماط. تُعلَّم مواضع النصوص بـ <code>data-i18n</code> / <code>data-i18n-ph</code> وتُملأ دفعةً واحدة عند تهيئة JS. البنية مقسمة إلى أربعة أجزاء: شريط البحث، شرائح سجل البحث، شريط الحالة (عدد النتائج + تلميح الصياغة)، قائمة النتائج:</p>
+<pre><code class="language-html">&lt;div class=&quot;search-bar&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;searchInput&quot; class=&quot;search-input&quot; data-i18n-ph=&quot;inputPlaceholder&quot;
+           spellcheck=&quot;false&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;button class=&quot;search-btn&quot; id=&quot;btnSearch&quot; data-i18n=&quot;search&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;history-chips&quot; id=&quot;historyChips&quot;&gt; ... &lt;/div&gt;
+&lt;div class=&quot;status-bar&quot;&gt;
+    &lt;span id=&quot;statusText&quot; data-i18n=&quot;empty&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;syntax-hint&quot; data-i18n=&quot;syntaxHint&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;result-list&quot; id=&quot;resultList&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="filefinderjs-المنطق-الأساسي" tabindex="-1">filefinder.js (المنطق الأساسي) <a class="doc-anchor" href="#filefinderjs-المنطق-الأساسي" aria-hidden="true">#</a></h3>
+<p>خمس مسؤوليات، كلها يمكن نسخها من العيّنة كما هي:</p>
+<ol>
+<li><strong>التحكم بالنافذة</strong>: <code>ZenAPI.windowControl('sdk_sample', 'min'|'max'|'close'|'drag')</code>؛ سحب شريط العنوان لا يُفعَّل إلا إذا تجاوز الإزاحة 5px؛ مفتاح Esc — إذا كان حقل الإدخال مركَّزًا يتم blur أولًا، وإلا تُغلق النافذة.</li>
+<li><strong>الثيم</strong>: تسجيل <code>window.__applyTheme</code> لاستقبال الإرجاع من C++ (<code>data-theme</code> للشاشة الأولى يُحقن من C++، دون معالجة من JS).</li>
+<li><strong>i18n</strong>: قراءة <code>getConfig().language</code>، أخذ النصوص من القاموس، وملء عناصر <code>data-i18n</code> بالمرور عليها؛ الجمل ذات العناصر النائبة مثل <code>{{count}}</code> تُفكّ بدالة استيفاء.</li>
+<li><strong>البحث</strong>: <code>searchFile(keyword, maxResults)</code> واجهة <strong>ربط غير متزامن</strong> (تعمل في خيط خلفي دون حجب الواجهة)؛ Enter للبحث الفوري، وتثبيت الإدخال (debounce) بمقدار 300ms للبحث التلقائي؛ استخدام رقم تسلسلي متزايد لتجاهل الردود غير المرتبة — يمتلك الجانب الأصلي آلية &quot;فتحة بحث&quot; (الطلب الجديد يستبدل الطلب القديم غير المكتمل مباشرةً، ويحصل الـ Promise القديم على نتيجة فارغة)، والرقم التسلسلي في الواجهة يمنع هذه &quot;النتيجة الفارغة المتأخرة&quot; من الكتابة فوق عرض النتيجة الجديدة؛ الاثنان يعملان معًا.</li>
+<li><strong>التعامل مع النتائج</strong>: <code>openFile(fullPath, false)</code> لفتح الملف (النقر المزدوج بالمثل؛ المعامل الثاني هو &quot;بصلاحيات المدير&quot;)؛ <code>openFileLocation(fullPath)</code> لفتح المجلد الحاوي؛ يُبنى المسار الكامل من <code>path + '\\' + name</code>؛ الأيقونة تؤخذ مباشرة من حقل <code>icon</code> الجاهز في النتيجة (base64)؛ حجم الملف يُعرض منسقًا من الحقل الرقمي <code>size</code>.</li>
+</ol>
+<h3 id="بنية-إرجاع-searchfile-error-files" tabindex="-1">بنية إرجاع searchFile (<code>{ error, files[] }</code>) <a class="doc-anchor" href="#بنية-إرجاع-searchfile-error-files" aria-hidden="true">#</a></h3>
+<p>حقول كل عنصر في <code>files[]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>الحقل</th>
+<th>النوع</th>
+<th>الوصف</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> / <code>path</code></td>
+<td>سلسلة</td>
+<td>اسم الملف / المجلد الحاوي. المسار الكامل = <code>path + '\\' + name</code></td>
+</tr>
+<tr>
+<td><code>dateModified</code></td>
+<td>سلسلة</td>
+<td>وقت التعديل (نص بتنسيق محلّي)</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>رقم</td>
+<td>حجم الملف بالبايت، <strong>رقم أصلي يُستخدم مباشرة</strong></td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>سلسلة</td>
+<td>أيقونة base64، تُستخدم مباشرة في <code>&lt;img src&gt;</code> دون الحاجة لاستدعاء <code>getFileIcon</code></td>
+</tr>
+<tr>
+<td><code>score</code></td>
+<td>رقم</td>
+<td>درجة الصلة (الجانب الأصلي رتّبها حسب الدرجة)</td>
+</tr>
+<tr>
+<td><code>isDir</code></td>
+<td>رقم</td>
+<td><strong>1/0 رقم وليس قيمة منطقية أصلية</strong> (مسار JSON مبني يدويًا)؛ احكم بـ truthy أو <code>=== 1</code>، لا تستخدم <code>=== true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="الواجهات-التي-تستدعيها-هذه-العينة" tabindex="-1">الواجهات التي تستدعيها هذه العيّنة <a class="doc-anchor" href="#الواجهات-التي-تستدعيها-هذه-العينة" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>الواجهة</th>
+<th>الربط</th>
+<th>الوصف</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>searchFile(keyword, maxResults)</code></td>
+<td>غير متزامن</td>
+<td>بحث بفهرس MFT في كامل الأقراص، يدعم صياغة Everything (<code>size:&gt;100MB</code>、<code>ext:mp4</code>、<code>!ext:tmp</code>)</td>
+</tr>
+<tr>
+<td><code>openFile(path, admin)</code></td>
+<td>متزامن</td>
+<td>فتح ملف/مجلد (سلوك shell الافتراضي)، وبصلاحيات المدير عند <code>admin=true</code></td>
+</tr>
+<tr>
+<td><code>openFileLocation(path)</code></td>
+<td>متزامن</td>
+<td>تحديد الملف في مستكشف الملفات</td>
+</tr>
+<tr>
+<td><code>getConfig(key?)</code></td>
+<td>متزامن</td>
+<td>قراءة الإعدادات: الكل عند الإغفال، أو المفتاح المحدد فقط عند تمرير key (يدعم المسار النقطي <code>a.b</code>)</td>
+</tr>
+<tr>
+<td><code>setConfig(patch, replace?)</code></td>
+<td>متزامن</td>
+<td>كتابة سجل البحث <strong>بدقة ناعمة (granular)</strong>: <code>setConfig({ sdk_sample: { history } })</code>؛ <code>replace=true</code> استبدال كامل (لاستيراد نسخة احتياطية فقط)</td>
+</tr>
+<tr>
+<td><code>log(message)</code></td>
+<td>متزامن</td>
+<td>سجل الواجهة الأمامية، يُكتب في سجل العملية الرئيسية لسهولة التشخيص</td>
+</tr>
+<tr>
+<td><code>windowControl(name, action)</code></td>
+<td>متزامن</td>
+<td>تصغير/تكبير/إغلاق/سحب النافذة</td>
+</tr>
+</tbody>
+</table>
+<h3 id="قواعد-الاستدعاء-القواعد-الأربع-الذهبية" tabindex="-1">قواعد الاستدعاء (القواعد الأربع الذهبية) <a class="doc-anchor" href="#قواعد-الاستدعاء-القواعد-الأربع-الذهبية" aria-hidden="true">#</a></h3>
+<pre><code class="language-js">import ZenAPI from './lib/zen_api.js';
+
+// 1. 判错用 isOk()（error 恒为数字：0 成功，-1 表示调用异常）
+const res = await ZenAPI.searchFile('yyztools', 200);
+if (!ZenAPI.isOk(res)) { ... }
+
+// 2. 接口返回的布尔字段是原生布尔，直接判断
+//    （例外一：config 的值由前端写入决定类型，通常是字符串，比较时注意归一）
+//    （例外二：searchFile 结果的 isDir 是 1/0 数字——手拼 JSON 路径，用 truthy 或 === 1）
+const ex = await ZenAPI.exists(path);
+if (ex.exists === true) { ... }
+
+// 3. 配置写入必须窄粒度，禁止全量回写
+await ZenAPI.setConfig({ sdk_sample: { history } });   // 只写自己的键
+
+// 4. 按 id 批量取应用信息用 getAppInfo，禁止循环 searchApp
+const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
+</code></pre>
+<p>الواجهات غير المتزامنة (<code>getAppInfo</code> / <code>searchFile</code> / حزمة الوسائط الخمسة / <code>ocrRecognition</code>) تُنفَّذ في خيط الخلفي؛ انتبه إلى أن عملية وسيط وسائط واحدة فقط تعمل في نفس اللحظة، والمهام الطويلة يجب أن توفر مدخل إلغاء عبر <code>cancelRun()</code>.</p>
+<h3 id="مرجع-سريع-للواجهات-الشائعة-قدرات-إضافية-غير-العينة" tabindex="-1">مرجع سريع للواجهات الشائعة (قدرات إضافية غير العيّنة) <a class="doc-anchor" href="#مرجع-سريع-للواجهات-الشائعة-قدرات-إضافية-غير-العينة" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>السيناريو</th>
+<th>الواجهة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>قراءة/كتابة إعداداتك</td>
+<td><code>getConfig</code> / <code>setConfig</code>（patch ناعم）/ <code>addConfig</code>（إضافة عنصر لقائمة）</td>
+</tr>
+<tr>
+<td>فتح/حفظ ملف</td>
+<td><code>browseFile</code> / <code>browseDir</code> / <code>writeFile</code> / <code>readFile</code>（&gt;50MB استخدم <code>readFileChunk</code>）</td>
+</tr>
+<tr>
+<td>الحصول على مجلدات النظام</td>
+<td><code>getKnownDir('download')</code> 等</td>
+</tr>
+<tr>
+<td>فتح صفحة ويب/برنامج خارجي</td>
+<td><code>runAny('https://...', '')</code></td>
+</tr>
+<tr>
+<td>النسخ إلى الحافظة</td>
+<td>الواجهة الأمامية <code>navigator.clipboard</code>（حالات النص لا تحتاج native）</td>
+</tr>
+<tr>
+<td>لقطة شاشة/OCR</td>
+<td><code>screenCap('fast', ...)</code> → <code>ocrRecognition(base64)</code>（كلاهما غير متزامن）</td>
+</tr>
+<tr>
+<td>استدعاء نافذة وحدة أخرى</td>
+<td><code>windowControl('translate', 'show')</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-إنشاء-ملف-وحدة-zenmod-مستضيف-النافذة" tabindex="-1">4. إنشاء ملف وحدة .zenmod (مستضيف النافذة) <a class="doc-anchor" href="#4-إنشاء-ملف-وحدة-zenmod-مستضيف-النافذة" aria-hidden="true">#</a></h2>
+<p>أنشئ ملف <code>.zenmod</code> جديدًا في <code>Modules/&lt;分类&gt;/</code> (ملف العيّنة: <code>sdk/sample/Modules/SDK_Sample.zenmod</code>):</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;sdk_sample&quot;,
+    &quot;type&quot;: &quot;web&quot;,
+    &quot;name&quot;: { &quot;zh_cn&quot;: &quot;SDK样例工程&quot;, &quot;en&quot;: &quot;SDK Sample Project&quot;, &quot;...&quot;: &quot;共 12 门语言&quot; },
+    &quot;desc&quot;: { &quot;zh_cn&quot;: &quot;基于 MFT 索引的全盘急速文件搜索，支持 Everything 语法&quot;, &quot;en&quot;: &quot;...&quot; },
+    &quot;icon&quot;: &quot;fas fa-search&quot;,
+    &quot;winClassName&quot;: &quot;yyzTools::SdkSampleWindowClass&quot;,
+    &quot;width&quot;: 760,
+    &quot;height&quot;: 540,
+    &quot;layoutType&quot;: 34,
+    &quot;url&quot;: &quot;SDK_Sample/index.html&quot;,
+    &quot;preCreate&quot;: 0
+}
+</code></pre>
+<p>شرح الحقول (كل الحقول التي يقرأها البرنامج الرئيسي عند <code>type:&quot;web&quot;</code>):</p>
+<table>
+<thead>
+<tr>
+<th>الحقل</th>
+<th>إلزامي</th>
+<th>الوصف</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>نعم</td>
+<td>فريد عالميًا. وهو في الوقت نفسه اسم النافذة في <code>windowControl</code>/<code>windowState</code>، و<code>appId</code> للاختصارات، ومعرّف التحم في dock</td>
+</tr>
+<tr>
+<td>type</td>
+<td>نعم</td>
+<td>ثابت <code>web</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>نعم</td>
+<td>كائن بـ 12 لغة؛ يُسمح أيضًا بصيغة سلسلة نصية خالصة (تُنصح للاختبار الداخلي فقط)؛ ترتيب القيم: اللغة الحالية → en → السلسلة</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>لا</td>
+<td>كما أعلاه</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>لا</td>
+<td>FontAwesome class (كما أعلاه) أو صورة base64</td>
+</tr>
+<tr>
+<td>winClassName</td>
+<td>لا</td>
+<td>اسم فئة نافذة Win32، يكفي أن يكون فريدًا عالميًا</td>
+</tr>
+<tr>
+<td>width / height</td>
+<td>لا</td>
+<td>حجم النافذة الأولي، الافتراضي 800x600</td>
+</tr>
+<tr>
+<td>layoutType</td>
+<td>لا</td>
+<td>قناع بتات تخطيط الموضع الأولي، 34 = توسيط أفقي + توسيط رأسي</td>
+</tr>
+<tr>
+<td>url</td>
+<td>نعم</td>
+<td>مسار الصفحة نسبةً إلى جذر Web (<code>SDK_Sample/index.html</code>)؛ يدعم أيضًا العناوين الإلكترونية التي تبدأ بـ <code>http(s)</code></td>
+</tr>
+<tr>
+<td>preCreate</td>
+<td>لا</td>
+<td>1 = إنشاء النافذة مسبقًا عند الإقلاع (تسريع الفتح الأول)، الافتراضي 0 أي عند الحاجة</td>
+</tr>
+<tr>
+<td>canSuspend</td>
+<td>لا</td>
+<td>1 = السماح بتعليق WebView عند إخفاء النافذة لتوفير الموارد (الافتراضي 1)</td>
+</tr>
+</tbody>
+</table>
+<p>قائمة تحقق بعد التعديل: JSON قابل للتحليل، UTF-8 بدون BOM، id فريد عالميًا، اللغات الـ 12 كلها غير فارغة.</p>
+<p><strong>عند هذه النقطة اكتمل التطبيق</strong> — انسخ المجلدين كما في القسم الأول، وابحث في لوحة الأوامر عن &quot;SDK样例工程&quot; أو &quot;sdk&quot; لتشغيله (فهرس البينيين يُنشأ تلقائيًا)، كما يمكن استدعاؤه عبر <code>windowControl('sdk_sample', 'show')</code>.</p>
+<h2 id="5-النصوص-متعددة-اللغات-بأسلوب-القاموس" tabindex="-1">5. النصوص متعددة اللغات (بأسلوب القاموس) <a class="doc-anchor" href="#5-النصوص-متعددة-اللغات-بأسلوب-القاموس" aria-hidden="true">#</a></h2>
+<p>الحل بدون بناء يكفيه قاموس ES module عادي (<code>i18n.js</code>):</p>
+<pre><code class="language-js">const messages = {
+    zh_cn: { title: 'SDK样例工程', results: '{{count}} 个结果，耗时 {{ms}} ms', ... },
+    en:    { title: 'SDK Sample Project', results: '{{count}} results in {{ms}} ms', ... }
+};
+export function getMessages(lang) { return messages[lang] || messages.en; }
+export function interpolate(dict) {
+    return (key, params) =&gt; { /* {{count}} → params.count */ };
+}
+</code></pre>
+<p>عند التهيئة اقرأ <code>getConfig().language</code> لاختيار اللغة، مع الرجوع إلى <code>en</code> عند عدم العثور؛ الجمل ذات العناصر النائبة تُفكّ عبر <code>tf('results', { count, ms })</code>.</p>
+<p>ملاحظات:</p>
+<ul>
+<li>
+<p>رموز اللغات بأسلوب الشرطة السفلية الصغيرة (<code>zh_cn</code>)، متوافقة مع <code>.zenmod</code>، وليست BCP47.</p>
+</li>
+<li>
+<p><strong><code>name</code>/<code>desc</code> في <code>.zenmod</code> يجب أن تتضمن اللغات الـ 12 كاملة</strong>؛ نصوص الصفحة لا يوجد إلزام بها، والعيّنة تعطي zh_cn/en فقط، ويمكن توسيعها حسب الحاجة.</p>
+</li>
+<li>
+<p>للوحدات التي يجب أن تتبع لغة الواجهة فورًا، يمكن تحويل القاموس إلى ملفات لغات تُحمَّل بـ <code>import()</code> كسولًا عند الحاجة؛ الآلية نفسها الموضحة في هذا المستند.</p>
+</li>
+</ul>
+<h2 id="6-التصحيح-والدمج" tabindex="-1">6. التصحيح والدمج <a class="doc-anchor" href="#6-التصحيح-والدمج" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">1. 免构建直接跑（推荐起步）：
+   复制 sdk/sample/Web、sdk/sample/Modules 到 bin64\（Release exe 所在目录），重启 exe。
+   改前端后 windowControl('sdk_sample','close') 再打开，或重启 exe 生效。
+
+2. 浏览器看结构：
+   直接双击 Web/SDK_Sample/index.html 用浏览器打开。
+   浏览器里没有 window.Zen，ZenAPI.call 会走异常路径返回 error: -1，
+   页面结构 / 样式 / 输入防抖 / 渲染逻辑均可正常调试（原生接口除外）。
+</code></pre>
+<p>نصيحة أداء البحث: <code>searchFile</code> تعتمد فهرس MFT الشامل في الجانب C++ وتعيد النتائج عادة خلال أجزاء من الثانية؛ يمتلك الجانب الأصلي آلية فتحة البحث — الطلب الجديد يستبدل الطلب القديم غير المكتمل (والقديم يعيد نتيجة فارغة)، والواجهة تستخدم تثبيتًا 300ms + رقمًا تسلسليًا متزايدًا لتجاهل الردود غير المرتبة، فلا تطوف ضغطات المفاتيح المتتالية خيط الخلفي ولا تُظهر نتائج قديمة وميضًا. أيقونات النتائج (base64) يعيدها <code>searchFile</code> جاهزة، دون استدعاء <code>getFileIcon</code> إضافي.</p>
+<p>عندما لا تكفي قدرات الواجهات (مثلًا حاجة لقدرة C++ جديدة)، يمكن تقديم الطلب عبر قنوات الملاحظات في الموقع الرسمي، وسيوسّع البرنامج الرئيسي الواجهات في إصدارات لاحقة.</p>
+<h2 id="7-ملخص-المثال-الأدنى-الكامل" tabindex="-1">7. ملخص المثال الأدنى الكامل <a class="doc-anchor" href="#7-ملخص-المثال-الأدنى-الكامل" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>التغيير</th>
+<th>الملف</th>
+<th>إلزامي</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>إنشاء الصفحة</td>
+<td><code>Web/SDK_Sample/</code>（index.html / filefinder.js / filefinder.css / i18n.js）</td>
+<td>نعم</td>
+</tr>
+<tr>
+<td>الاعتماديات المشتركة</td>
+<td><code>Web/SDK_Sample/lib/</code>（zen_api.js / window_controls.css، ذاتية الاحتواء مع العيّنة）</td>
+<td>نعم</td>
+</tr>
+<tr>
+<td>إنشاء الوحدة</td>
+<td><code>Modules/SDK_Sample.zenmod</code></td>
+<td>نعم</td>
+</tr>
+<tr>
+<td>تغييرات C++</td>
+<td>لا</td>
+<td>—</td>
+</tr>
+<tr>
+<td>خطوات البناء</td>
+<td>لا (بدون بناء، انسخ واستخدم)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-إرشادات-الأمان" tabindex="-1">8. إرشادات الأمان <a class="doc-anchor" href="#8-إرشادات-الأمان" aria-hidden="true">#</a></h2>
+<p>تمنح واجهة Native API مطوّري الوحدات وصولًا <strong>كاملًا ومفتوحًا</strong> لقدرات النظام في العملية المضيفة، بما في ذلك قراءة الملفات وكتابتها وحذفها، إنشاء العمليات وإنهاؤها، التحكم بالنوافذ، قراءة الحافظة وكتابتها، تعديل إعدادات النظام، تنفيذ أسطر الأوامر وغيرها من <strong>العمليات عالية الخطورة</strong>، و<strong>بدون نوافذ أذونات، وبدون عزل في صندوق حماية (sandbox)، وبدون آلية تراجع</strong>.</p>
+<p>قيّم بنفسك أمان كل عملية قبل الاستدعاء: تحقّق من كل مدخلات خارجية، وخذ نسخة احتياطية أو اطلب تأكيد المستخدم قبل العمليات غير القابلة للتراجع، ولا تستخدم إلا القدرات التي يحتاجها التطبيق فعلًا. ويتحمل المطوّر بنفسه كل العواقب المترتبة عن ذلك.</p>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="موارد ذات صلة">
+    <a class="sdk-link" href="/ar/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>مرجع الواجهات</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>تنزيل المشروع النموذجي</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ar/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">مجموعة أدوات إنتاجية لسطح مكتب Windows، تعالج بياناتك محليًا أولًا، ومجانية للأبد.</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>المنتج</h3>
+            <a href="/ar/features.html">المزايا</a>
+            <a href="/ar/download.html">التنزيل</a>
+            <a href="/ar/changelog.html">سجل التغييرات</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>المصادر</h3>
+            <a href="/ar/sdk.html">المطوّرون</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">الملاحظات</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>الشؤون القانونية</h3>
+            <a href="/ar/agreement.html">اتفاقية المستخدم</a>
+            <a href="/ar/privacy.html">سياسة الخصوصية</a>
+            
+            <a class="js-email" href="#">بريد التواصل</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · جميع الحقوق محفوظة</p>
+        <p class="footer-fine">Windows علامة تجارية مسجّلة لشركة Microsoft Corporation. ولا توجد أي علاقة تبعية بين هذا الموقع و Microsoft&amp;rlm;.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

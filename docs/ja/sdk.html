@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools モジュール開発 — クイックスタート</title>
+<meta name="description" content="yyzTools 内で動作する Web アプリをゼロから作成：ページ構成、ウィンドウホスト、多言語化、非同期 Native API、設定の永続化。ビルド不要。">
+
+<meta property="og:title" content="yyzTools モジュール開発 — クイックスタート">
+<meta property="og:description" content="yyzTools 内で動作する Web アプリをゼロから作成：ページ構成、ウィンドウホスト、多言語化、非同期 Native API、設定の永続化。ビルド不要。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ja/sdk.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ja">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools モジュール開発 — クイックスタート">
+<meta name="twitter:description" content="yyzTools 内で動作する Web アプリをゼロから作成：ページ構成、ウィンドウホスト、多言語化、非同期 Native API、設定の永続化。ビルド不要。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ja/sdk.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ja/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ja/" >ホーム</a>
+            <a href="/ja/features.html" >機能</a>
+            <a href="/ja/download.html" >ダウンロード</a>
+            <a href="/ja/changelog.html" >更新履歴</a>
+            
+            <a href="/ja/sdk.html" class=&#34;on&#34;>開発者</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">フィードバック</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="言語を選択">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">日本語</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk.html" hreflang="ja"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>日本語</a>
+                    
+                    <a href="/ko/sdk.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/ja/download.html">無料ダウンロード</a>
+            <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"開発者","item":"https://yyztools.com/ja/sdk.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"クイックスタート","description":"yyzTools 内で動作する Web アプリをゼロから作成：ページ構成、ウィンドウホスト、多言語化、非同期 Native API、設定の永続化。ビルド不要。","inLanguage":"ja","url":"https://yyztools.com/ja/sdk.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Beginner"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> このページの目次</summary>
+            <nav aria-label="このページの目次">
+                <ol>
+                    
+                    <li>
+                        <a href="#1-サンプルのディレクトリ構成とデプロイ方法">1. サンプルのディレクトリ構成とデプロイ方法</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-アーキテクチャ概観web-アプリはどのように動くのか">2. アーキテクチャ概観：Web アプリはどのように動くのか</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-ページ構造ネイティブ-js4-ファイル">3. ページ構造（ネイティブ JS、4 ファイル）</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#indexhtml">index.html</a></li>
+                            
+                            <li><a href="#filefinderjsコアロジック">filefinder.js（コアロジック）</a></li>
+                            
+                            <li><a href="#searchfile-の戻り値構造-error-files">searchFile の戻り値構造（`{ error, files[] }`）</a></li>
+                            
+                            <li><a href="#本サンプルが呼び出すインターフェース一覧">本サンプルが呼び出すインターフェース一覧</a></li>
+                            
+                            <li><a href="#呼び出し規約4-つの鉄則">呼び出し規約（4 つの鉄則）</a></li>
+                            
+                            <li><a href="#よく使うインターフェース早見表サンプル以外のさらなる能力">よく使うインターフェース早見表（サンプル以外のさらなる能力）</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-zenmod-モジュールファイルの作成ウィンドウホスト">4. .zenmod モジュールファイルの作成（ウィンドウホスト）</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-多言語文言辞書方式">5. 多言語文言（辞書方式）</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-デバッグと統合">6. デバッグと統合</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-完全な最小サンプルのまとめ">7. 完全な最小サンプルのまとめ</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-セキュリティ上の注意">8. セキュリティ上の注意</a>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>クイックスタート</h1>
+            <p class="doc-meta">ビルドツール不要で最初のモジュールを作る</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="関連リソース">
+    <a class="sdk-link" href="/ja/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>API リファレンス</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>サンプルプロジェクトをダウンロード</span>
+    </a>
+</nav>
+
+
+            <p>本ドキュメントはモジュール開発者向けに、yyzTools メインプロセス内で動作する Web アプリをゼロから作成する方法を解説します（SDK サンプルプロジェクト <code>SDK_Sample</code>——高速ファイル検索ツール——を例に）。対象は以下のとおりです：ページのディレクトリ構成、ウィンドウホスト、i18n、非同期 Native API（全ディスクファイル検索）、ファイルを開く操作、設定の永続化、そして C++ の能力を拡張したい場合の native メソッド追加テンプレート。</p>
+<p>サンプルは<strong>純ネイティブ JS・サードパーティ依存ゼロ・ビルド不要</strong>です。Vite / Alpine / FontAwesome は不要で、<code>Web</code> と <code>Modules</code> の 2 つのディレクトリを yyzTools.exe のあるディレクトリにコピーするだけで動作します。</p>
+<h2 id="1-サンプルのディレクトリ構成とデプロイ方法" tabindex="-1">1. サンプルのディレクトリ構成とデプロイ方法 <a class="doc-anchor" href="#1-サンプルのディレクトリ構成とデプロイ方法" aria-hidden="true">#</a></h2>
+<pre><code>sdk/sample/
+  Web/                        ← &lt;yyzTools.exe のあるディレクトリ&gt;\Web\ へコピー      （既存の Web ディレクトリとマージ）
+    SDK_Sample/               ← サンプルの自己完結ディレクトリ。このフォルダ全体が 1 つの完全なモジュール
+      index.html              # ページ構造（ネイティブ DOM、data-i18n で文言位置をマーキング）
+      filefinder.js           # 全ロジック：検索 / 開く / 履歴 / Esc
+      filefinder.css          # ページスタイル（すべて --zen-* 変数を使用、ダーク/ライト両対応）
+      i18n.js                 # 文言辞書（zh_cn / en）
+      lib/
+        zen_api.js            # ZenAPI ラッパークラス（Native API の JS ラッパー、唯一の lib 依存）
+        window_controls.css   # テーマ変数（--zen-*）+ ウィンドウコントロールバーのスタイル
+  Modules/                   ← &lt;yyzTools.exe のあるディレクトリ&gt;\Modules\ へコピー    （既存の Modules ディレクトリとマージ）
+    SDK_Sample.zenmod         # type:&quot;web&quot; モジュール宣言。ModuleManager が自動でホストウィンドウを作成
+</code></pre>
+<p>デプロイ：</p>
+<pre><code class="language-text">sdk/sample/Web     を bin64\Web\     へコピー/マージ
+sdk/sample/Modules を bin64\Modules\ へコピー/マージ
+yyzTools.exe を再起動し、コマンドパレットで「SDK样例工程」を検索して起動
+</code></pre>
+<p>メインプログラムの読み込み位置の規約：</p>
+<table>
+<thead>
+<tr>
+<th>リソース</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ページ</td>
+<td><code>&lt;exeディレクトリ&gt;\Web\{page}\index.html</code></td>
+</tr>
+<tr>
+<td>モジュール</td>
+<td><code>&lt;exeディレクトリ&gt;\Modules\&lt;分類&gt;\*.zenmod</code>（サブディレクトリは 1 階層のみスキャン）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-アーキテクチャ概観web-アプリはどのように動くのか" tabindex="-1">2. アーキテクチャ概観：Web アプリはどのように動くのか <a class="doc-anchor" href="#2-アーキテクチャ概観web-アプリはどのように動くのか" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">Modules/SDK_Sample.zenmod   ← type:&quot;web&quot; を宣言するモジュールファイル（データ駆動、C++ の記述不要）
+        │  メインプログラム起動時に .zenmod をスキャン
+        ▼
+WebModule ホストウィンドウ（ネイティブウィンドウ + WebView2）
+        │  Web\SDK_Sample\index.html を読み込む
+        ▼
+Web/SDK_Sample/             ← フロントエンドコードのすべて（ネイティブ JS、依存ゼロ）
+        │  window.Zen.xxx(...)  ←→  メインプログラムが登録したネイティブインターフェース
+        ▼
+C++ 各 Manager（ファイル/プロセス/ウィンドウ/クリップボード/OCR...）
+</code></pre>
+<p>重要な結論：</p>
+<ul>
+<li>
+<p><strong>C++ コードは一切書く必要がありません</strong>。<code>type: &quot;web&quot;</code> の <code>.zenmod</code> はメインプログラムが自動的に WebModule ホストウィンドウとして作成し、ウィンドウサイズ・アイコン・多言語名称はすべてモジュールファイルで宣言します。</p>
+</li>
+<li>
+<p>モジュールは自動的に以下を獲得します：コマンドパレット検索（ピンインインデックス含む）、グローバルショートカットキーのバインド、ドックへのマウント、<code>windowControl</code> 名称テーブルへの登録。</p>
+</li>
+<li>
+<p>フロントエンドと C++ の唯一のチャネルは <code>window.Zen</code> です。統一して <code>ZenAPI</code> ラッパークラス経由で呼び出してください（サンプルには <code>lib/zen_api.js</code> が同梱されています）。</p>
+</li>
+<li>
+<p>ビルド不要のページはそのまま静的ファイルなので、編集後にウィンドウを更新すれば即反映されます（<code>windowControl('sdk_sample','hide')</code> の後に show、または exe を再起動）。コンパイル手順は一切不要です。</p>
+</li>
+</ul>
+<h2 id="3-ページ構造ネイティブ-js4-ファイル" tabindex="-1">3. ページ構造（ネイティブ JS、4 ファイル） <a class="doc-anchor" href="#3-ページ構造ネイティブ-js4-ファイル" aria-hidden="true">#</a></h2>
+<h3 id="indexhtml" tabindex="-1">index.html <a class="doc-anchor" href="#indexhtml" aria-hidden="true">#</a></h3>
+<p>サードパーティライブラリは一切読み込みません。ウィンドウコントロールバーの 3 つのボタンは Unicode 文字をアイコンとして使用し（− / □ / ×）、スタイルは <code>lib/window_controls.css</code> が提供します。文言位置は <code>data-i18n</code> / <code>data-i18n-ph</code> でマーキングし、JS 初期化時に一括で埋め込みます。構造は 4 ブロック：検索バー、検索履歴 chips、ステータスバー（結果件数 + 構文ヒント）、結果リスト：</p>
+<pre><code class="language-html">&lt;div class=&quot;search-bar&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;searchInput&quot; class=&quot;search-input&quot; data-i18n-ph=&quot;inputPlaceholder&quot;
+           spellcheck=&quot;false&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;button class=&quot;search-btn&quot; id=&quot;btnSearch&quot; data-i18n=&quot;search&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;history-chips&quot; id=&quot;historyChips&quot;&gt; ... &lt;/div&gt;
+&lt;div class=&quot;status-bar&quot;&gt;
+    &lt;span id=&quot;statusText&quot; data-i18n=&quot;empty&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;syntax-hint&quot; data-i18n=&quot;syntaxHint&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;result-list&quot; id=&quot;resultList&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="filefinderjsコアロジック" tabindex="-1">filefinder.js（コアロジック） <a class="doc-anchor" href="#filefinderjsコアロジック" aria-hidden="true">#</a></h3>
+<p>5 つの責務があり、すべてサンプルをそのまま写せばよいです：</p>
+<ol>
+<li><strong>ウィンドウコントロール</strong>：<code>ZenAPI.windowControl('sdk_sample', 'min'|'max'|'close'|'drag')</code>。タイトルバーのドラッグは変位が 5px を超えた場合のみトリガー。Esc キー——入力ボックスにフォーカスがある場合は先に blur、なければウィンドウを閉じる。</li>
+<li><strong>テーマ</strong>：<code>window.__applyTheme</code> を登録して C++ からのプッシュを受信（初回の <code>data-theme</code> は C++ が注入するため JS での処理不要）。</li>
+<li><strong>i18n</strong>：<code>getConfig().language</code> を読み、辞書から文言を取得し、<code>data-i18n</code> 要素を走査して埋め込み。<code>{{count}}</code> プレースホルダー付きの文は補間関数で展開。</li>
+<li><strong>検索</strong>：<code>searchFile(keyword, maxResults)</code> は<strong>非同期バインド</strong>インターフェース（バックグラウンドスレッドで実行、UI をブロックしない）。Enter で即検索、入力のデバウンス 300ms で自動検索。増加するシーケンス番号で順序不正の応答を破棄——native 側には検索スロット機構があり（新しいリクエストが未完了の旧リクエストを差し替え、旧 Promise が受け取るのは空結果）、フロントエンドのシーケンス番号はこの「空結果の遅延到着」が新しい結果の描画を上書きするのを防ぎ、両者が連携します。</li>
+<li><strong>結果操作</strong>：<code>openFile(fullPath, false)</code> でファイルを開く（ダブルクリックも同様、第 2 引数は「管理者権限かどうか」）。<code>openFileLocation(fullPath)</code> で所在ディレクトリを開く。完全パスは <code>path + '\\' + name</code> で組み立て。アイコンは結果に含まれる <code>icon</code> フィールド（base64）をそのまま使用。ファイルサイズは <code>size</code> の数値フィールドを整形して表示。</li>
+</ol>
+<h3 id="searchfile-の戻り値構造-error-files" tabindex="-1">searchFile の戻り値構造（<code>{ error, files[] }</code>） <a class="doc-anchor" href="#searchfile-の戻り値構造-error-files" aria-hidden="true">#</a></h3>
+<p><code>files[]</code> の各項目のフィールド：</p>
+<table>
+<thead>
+<tr>
+<th>フィールド</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> / <code>path</code></td>
+<td>文字列</td>
+<td>ファイル名 / 所在ディレクトリ。完全パス = <code>path + '\\' + name</code></td>
+</tr>
+<tr>
+<td><code>dateModified</code></td>
+<td>文字列</td>
+<td>更新時刻（ローカライズされた書式テキスト）</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>数値</td>
+<td>ファイルのバイト数。<strong>ネイティブ数値をそのまま使用</strong></td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>文字列</td>
+<td>base64 アイコン。<code>&lt;img src&gt;</code> に直接渡せ、<code>getFileIcon</code> を再呼び出しする不要</td>
+</tr>
+<tr>
+<td><code>score</code></td>
+<td>数値</td>
+<td>関連度スコア（native 側でスコア順にソート済み）</td>
+</tr>
+<tr>
+<td><code>isDir</code></td>
+<td>数値</td>
+<td><strong>1/0 の数値でありネイティブブールではない</strong>（手組み立て JSON パス）。truthy または <code>=== 1</code> で判定し、<code>=== true</code> は使わない</td>
+</tr>
+</tbody>
+</table>
+<h3 id="本サンプルが呼び出すインターフェース一覧" tabindex="-1">本サンプルが呼び出すインターフェース一覧 <a class="doc-anchor" href="#本サンプルが呼び出すインターフェース一覧" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>インターフェース</th>
+<th>バインド</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>searchFile(keyword, maxResults)</code></td>
+<td>非同期</td>
+<td>全ディスク MFT インデックス検索。Everything 構文対応（<code>size:&gt;100MB</code>、<code>ext:mp4</code>、<code>!ext:tmp</code>）</td>
+</tr>
+<tr>
+<td><code>openFile(path, admin)</code></td>
+<td>同期</td>
+<td>ファイル/ディレクトリを開く（shell のデフォルト動作）。<code>admin=true</code> で管理者権限</td>
+</tr>
+<tr>
+<td><code>openFileLocation(path)</code></td>
+<td>同期</td>
+<td>エクスプローラーでそのファイルを定位</td>
+</tr>
+<tr>
+<td><code>getConfig(key?)</code></td>
+<td>同期</td>
+<td>設定の読み取り：省略時は全量、key 指定時はそのキーのみ（<code>a.b</code> のドットパス対応）</td>
+</tr>
+<tr>
+<td><code>setConfig(patch, replace?)</code></td>
+<td>同期</td>
+<td><strong>狭粒度</strong>で検索履歴を書き込む：<code>setConfig({ sdk_sample: { history } })</code>。<code>replace=true</code> で全体置換（バックアップインポート専用）</td>
+</tr>
+<tr>
+<td><code>log(message)</code></td>
+<td>同期</td>
+<td>フロントエンドログ。メインプロセスのログに書き込まれ、障害調査に便利</td>
+</tr>
+<tr>
+<td><code>windowControl(name, action)</code></td>
+<td>同步</td>
+<td>ウィンドウの最小化/最大化/閉じる/ドラッグ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="呼び出し規約4-つの鉄則" tabindex="-1">呼び出し規約（4 つの鉄則） <a class="doc-anchor" href="#呼び出し規約4-つの鉄則" aria-hidden="true">#</a></h3>
+<pre><code class="language-js">import ZenAPI from './lib/zen_api.js';
+
+// 1. エラー判定は isOk() を使う（error は常に数値：0 が成功、-1 は呼び出し例外）
+const res = await ZenAPI.searchFile('yyztools', 200);
+if (!ZenAPI.isOk(res)) { ... }
+
+// 2. インターフェースが返すブールフィールドはネイティブブール、直接判定できる
+//    （例外 1：config の値はフロントエンドが書き込んだ内容で型が決まり、通常は文字列。比較時に正規化に注意）
+//    （例外 2：searchFile 結果の isDir は 1/0 の数値——手組み立て JSON パス。truthy または === 1 を使う）
+const ex = await ZenAPI.exists(path);
+if (ex.exists === true) { ... }
+
+// 3. 設定の書き込みは必ず狭粒度に。全量の書き戻しは禁止
+await ZenAPI.setConfig({ sdk_sample: { history } });   // 自分のキーのみ書き込む
+
+// 4. id によるアプリ情報の一括取得は getAppInfo を使い、ループで searchApp を呼ぶことは禁止
+const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
+</code></pre>
+<p>非同期インターフェース（<code>getAppInfo</code> / <code>searchFile</code> / メディア 5 種 / <code>ocrRecognition</code>）はバックグラウンドスレッドで実行されます。同一時刻に実行されるメディアサブプロセスは 1 つだけなので、長時間タスクには <code>cancelRun()</code> によるキャンセル導線を用意してください。</p>
+<h3 id="よく使うインターフェース早見表サンプル以外のさらなる能力" tabindex="-1">よく使うインターフェース早見表（サンプル以外のさらなる能力） <a class="doc-anchor" href="#よく使うインターフェース早見表サンプル以外のさらなる能力" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>シナリオ</th>
+<th>インターフェース</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自分の設定の読み/書き</td>
+<td><code>getConfig</code> / <code>setConfig</code>（狭粒度 patch）/ <code>addConfig</code>（リスト項目の追加）</td>
+</tr>
+<tr>
+<td>ファイルを開く/名前を付けて保存</td>
+<td><code>browseFile</code> / <code>browseDir</code> / <code>writeFile</code> / <code>readFile</code>（&gt;50MB は <code>readFileChunk</code>）</td>
+</tr>
+<tr>
+<td>システムディレクトリの取得</td>
+<td><code>getKnownDir('download')</code> など</td>
+</tr>
+<tr>
+<td>Web ページ/外部プログラムを開く</td>
+<td><code>runAny('https://...', '')</code></td>
+</tr>
+<tr>
+<td>クリップボードへコピー</td>
+<td>フロントエンドの <code>navigator.clipboard</code>（テキスト场景では native 不要）</td>
+</tr>
+<tr>
+<td>スクリーンショット/OCR</td>
+<td><code>screenCap('fast', ...)</code> → <code>ocrRecognition(base64)</code>（いずれも非同期）</td>
+</tr>
+<tr>
+<td>他のモジュールウィンドウの呼び出し</td>
+<td><code>windowControl('translate', 'show')</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-zenmod-モジュールファイルの作成ウィンドウホスト" tabindex="-1">4. .zenmod モジュールファイルの作成（ウィンドウホスト） <a class="doc-anchor" href="#4-zenmod-モジュールファイルの作成ウィンドウホスト" aria-hidden="true">#</a></h2>
+<p><code>Modules/&lt;分類&gt;/</code> の下に <code>.zenmod</code> を新規作成します（サンプルファイル：<code>sdk/sample/Modules/SDK_Sample.zenmod</code>）：</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;sdk_sample&quot;,
+    &quot;type&quot;: &quot;web&quot;,
+    &quot;name&quot;: { &quot;zh_cn&quot;: &quot;SDK样例工程&quot;, &quot;en&quot;: &quot;SDK Sample Project&quot;, &quot;...&quot;: &quot;共 12 门语言&quot; },
+    &quot;desc&quot;: { &quot;zh_cn&quot;: &quot;基于 MFT 索引的全盘急速文件搜索，支持 Everything 语法&quot;, &quot;en&quot;: &quot;...&quot; },
+    &quot;icon&quot;: &quot;fas fa-search&quot;,
+    &quot;winClassName&quot;: &quot;yyzTools::SdkSampleWindowClass&quot;,
+    &quot;width&quot;: 760,
+    &quot;height&quot;: 540,
+    &quot;layoutType&quot;: 34,
+    &quot;url&quot;: &quot;SDK_Sample/index.html&quot;,
+    &quot;preCreate&quot;: 0
+}
+</code></pre>
+<p>フィールド説明（<code>type:&quot;web&quot;</code> のときメインプログラムが読み取る全フィールド）：</p>
+<table>
+<thead>
+<tr>
+<th>フィールド</th>
+<th>必須</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>はい</td>
+<td>グローバルで一意。<code>windowControl</code>/<code>windowState</code> のウィンドウ名、ショートカットキーの <code>appId</code>、dock マウント id を兼ねる</td>
+</tr>
+<tr>
+<td>type</td>
+<td>はい</td>
+<td>固定で <code>web</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>はい</td>
+<td>12 言語のオブジェクト。純文字列の書き方も許容（内部テスト用にのみ推奨）。値のフォールバック：現在の言語 → en → 純文字列</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>いいえ</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>いいえ</td>
+<td>FontAwesome class（上記のとおり）または base64 画像</td>
+</tr>
+<tr>
+<td>winClassName</td>
+<td>いいえ</td>
+<td>Win32 ウィンドウクラス名。グローバルで一意であればよい</td>
+</tr>
+<tr>
+<td>width / height</td>
+<td>いいえ</td>
+<td>初期ウィンドウサイズ。デフォルトは 800x600</td>
+</tr>
+<tr>
+<td>layoutType</td>
+<td>いいえ</td>
+<td>初期位置のレイアウトビットマスク。34 = 水平中央 + 垂直中央</td>
+</tr>
+<tr>
+<td>url</td>
+<td>はい</td>
+<td>Web ルートディレクトリ相対のページパス（<code>SDK_Sample/index.html</code>）。<code>http(s)</code> で始まるオンラインアドレスも対応</td>
+</tr>
+<tr>
+<td>preCreate</td>
+<td>いいえ</td>
+<td>1 = 起動時にウィンドウを先行作成（初回オープンを高速化）。デフォルト 0 は必要時に作成</td>
+</tr>
+<tr>
+<td>canSuspend</td>
+<td>いいえ</td>
+<td>1 = ウィンドウ非表示時に WebView のサスペンドを許可しリソースを節約（デフォルト 1）</td>
+</tr>
+</tbody>
+</table>
+<p>編集後の自己チェック：JSON がパース可能、UTF-8 BOM なし、id がグローバルで一意、12 言語すべて空でない。</p>
+<p><strong>これでアプリは完成です</strong>——第 1 節のとおり 2 つのディレクトリをコピーすれば、コマンドパレットで「SDK样例工程」や「sdk」を検索して起動できます（ピンインインデックスは自動生成）。<code>windowControl('sdk_sample', 'show')</code> でも呼び出せます。</p>
+<h2 id="5-多言語文言辞書方式" tabindex="-1">5. 多言語文言（辞書方式） <a class="doc-anchor" href="#5-多言語文言辞書方式" aria-hidden="true">#</a></h2>
+<p>ビルド不要の方式では、通常の ES module の辞書で十分です（<code>i18n.js</code>）：</p>
+<pre><code class="language-js">const messages = {
+    zh_cn: { title: 'SDK样例工程', results: '{{count}} 个结果，耗时 {{ms}} ms', ... },
+    en:    { title: 'SDK Sample Project', results: '{{count}} results in {{ms}} ms', ... }
+};
+export function getMessages(lang) { return messages[lang] || messages.en; }
+export function interpolate(dict) {
+    return (key, params) =&gt; { /* {{count}} → params.count */ };
+}
+</code></pre>
+<p>初期化時に <code>getConfig().language</code> を読んで言語を選択し、見つからない場合は <code>en</code> にフォールバック。プレースホルダー付きの文は <code>tf('results', { count, ms })</code> で展開します。</p>
+<p>注意点：</p>
+<ul>
+<li>
+<p>言語コードはアンダースコア小文字スタイル（<code>zh_cn</code>）を使用し、<code>.zenmod</code> と一致します。BCP47 ではありません。</p>
+</li>
+<li>
+<p><strong><code>.zenmod</code></strong> <strong>の</strong> <strong><code>name</code>/<code>desc</code></strong> <strong>は 12 言語すべて必須</strong>です。ページ内の文言に強制はなく、サンプルは zh_cn/en のみで、必要に応じて拡張してください。</p>
+</li>
+<li>
+<p>インターフェース言語に即時追従して切り替えたいモジュールは、辞書を必要時に <code>import()</code> で多言語ファイルを遅延読み込みする形に変更できます。仕組みは本文と同じです。</p>
+</li>
+</ul>
+<h2 id="6-デバッグと統合" tabindex="-1">6. デバッグと統合 <a class="doc-anchor" href="#6-デバッグと統合" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">1. ビルド不要でそのまま実行（導入の推奨）：
+   sdk/sample/Web、sdk/sample/Modules を bin64\（Release exe のあるディレクトリ）へコピーし、exe を再起動。
+   フロントエンド変更後は windowControl('sdk_sample','close') で閉じてから開き直すか、exe を再起動すれば反映。
+
+2. ブラウザで構造を確認：
+   Web/SDK_Sample/index.html をダブルクリックしてブラウザで開く。
+   ブラウザには window.Zen がないため、ZenAPI.call は例外パスを通り error: -1 を返すが、
+   ページ構造 / スタイル / 入力デバウンス / 描画ロジックは（ネイティブインターフェースを除き）通常どおりデバッグ可能。
+</code></pre>
+<p>検索性能のヒント：<code>searchFile</code> は C++ 側の MFT 全ディスクインデックスを経由し、通常はミリ秒レベルで返ります。native には検索スロット機構があり——新しいリクエストが未完了の旧リクエストを差し替え（旧リクエストは空結果を返す）、フロントエンドは 300ms のデバウンス + 増加シーケンス番号で順序不正の応答を破棄するため、連続入力してもバックグラウンドスレッドを圧迫したり旧結果が点滅したりしません。結果のアイコン（base64）は <code>searchFile</code> がついでに返すため、追加で <code>getFileIcon</code> を呼ぶ必要はありません。</p>
+<p>インターフェースの能力が足りない場合（新しい C++ 能力が必要な場合など）は、公式サイトのフィードバック窓口から要望を出してください。メインプログラムの今後のバージョンでインターフェースを拡張します。</p>
+<h2 id="7-完全な最小サンプルのまとめ" tabindex="-1">7. 完全な最小サンプルのまとめ <a class="doc-anchor" href="#7-完全な最小サンプルのまとめ" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>変更</th>
+<th>ファイル</th>
+<th>必須か</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新規ページ</td>
+<td><code>Web/SDK_Sample/</code>（index.html / filefinder.js / filefinder.css / i18n.js）</td>
+<td>はい</td>
+</tr>
+<tr>
+<td>共有依存</td>
+<td><code>Web/SDK_Sample/lib/</code>（zen_api.js / window_controls.css、サンプルに同梱）</td>
+<td>はい</td>
+</tr>
+<tr>
+<td>新規モジュール</td>
+<td><code>Modules/SDK_Sample.zenmod</code></td>
+<td>はい</td>
+</tr>
+<tr>
+<td>C++ の変更</td>
+<td>なし</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ビルド手順</td>
+<td>なし（ビルド不要、コピーしてすぐ使える）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-セキュリティ上の注意" tabindex="-1">8. セキュリティ上の注意 <a class="doc-anchor" href="#8-セキュリティ上の注意" aria-hidden="true">#</a></h2>
+<p>Native API はモジュール開発者に対してホストプロセスのシステム能力を<strong>完全に開放</strong>しており、ファイルの読み書きと削除、プロセスの作成と終了、ウィンドウコントロール、クリップボードの読み書き、システム設定の変更、コマンドライン実行などの<strong>高リスク操作</strong>を含みます。かつ<strong>権限ダイアログなし、サンドボックス分離なし、取り消し機構なし</strong>です。</p>
+<p>呼び出し前に、操作ごとの安全性を必ず自己評価してください。すべての外部入力を検証し、不可逆な操作の前にバックアップを取るかユーザーに確認を求め、機能が本当に必要とする能力のみを使用してください。これによって生じた一切の結果は開発者自身が負担します。</p>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="関連リソース">
+    <a class="sdk-link" href="/ja/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>API リファレンス</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>サンプルプロジェクトをダウンロード</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ja/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows デスクトップ効率化ツール集。ローカル優先、永久無料。</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>製品</h3>
+            <a href="/ja/features.html">機能</a>
+            <a href="/ja/download.html">ダウンロード</a>
+            <a href="/ja/changelog.html">更新履歴</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>リソース</h3>
+            <a href="/ja/sdk.html">開発者</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">フィードバック</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法的情報</h3>
+            <a href="/ja/agreement.html">利用規約</a>
+            <a href="/ja/privacy.html">プライバシーポリシー</a>
+            
+            <a class="js-email" href="#">お問い合わせ</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　全著作権所有</p>
+        <p class="footer-fine">Windows は Microsoft Corporation の登録商標です。本サイトは Microsoft と提携関係にありません。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

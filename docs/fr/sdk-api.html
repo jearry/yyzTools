@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Référence de l’API native yyzTools</title>
+<meta name="description" content="Référence complète de l’API native yyzTools : fenêtres, applications, processus, fichiers, média, OCR, chiffrement, presse-papiers, favoris, commandes et mises à jour.">
+
+<meta property="og:title" content="Référence de l’API native yyzTools">
+<meta property="og:description" content="Référence complète de l’API native yyzTools : fenêtres, applications, processus, fichiers, média, OCR, chiffrement, presse-papiers, favoris, commandes et mises à jour.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/fr/sdk-api.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="fr">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Référence de l’API native yyzTools">
+<meta name="twitter:description" content="Référence complète de l’API native yyzTools : fenêtres, applications, processus, fichiers, média, OCR, chiffrement, presse-papiers, favoris, commandes et mises à jour.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/fr/sdk-api.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk-api.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk-api.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk-api.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk-api.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk-api.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk-api.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk-api.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk-api.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk-api.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk-api.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/fr/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/fr/" >Accueil</a>
+            <a href="/fr/features.html" >Fonctions</a>
+            <a href="/fr/download.html" >Télécharger</a>
+            <a href="/fr/changelog.html" >Nouveautés</a>
+            
+            <a href="/fr/sdk.html" class=&#34;on&#34;>Développeurs</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Commentaires</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="Langue">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">Français</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk-api.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk-api.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk-api.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk-api.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk-api.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk-api.html" hreflang="fr"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>Français</a>
+                    
+                    <a href="/de/sdk-api.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk-api.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk-api.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk-api.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk-api.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk-api.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/fr/download.html">Télécharger gratuitement</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Développeurs","item":"https://yyztools.com/fr/sdk.html"},{"@type":"ListItem","position":3,"name":"Référence de l’API","item":"https://yyztools.com/fr/sdk-api.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Référence de l’API","description":"Référence complète de l’API native yyzTools : fenêtres, applications, processus, fichiers, média, OCR, chiffrement, presse-papiers, favoris, commandes et mises à jour.","inLanguage":"fr","url":"https://yyztools.com/fr/sdk-api.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Expert"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> Sur cette page</summary>
+            <nav aria-label="Sur cette page">
+                <ol>
+                    
+                    <li>
+                        <a href="#historique-des-versions">Historique des versions</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#1-conventions-générales">1. Conventions générales</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#mode-dappel">Mode d&#39;appel</a></li>
+                            
+                            <li><a href="#détection-des-erreurs">Détection des erreurs</a></li>
+                            
+                            <li><a href="#liaison-synchrone-asynchrone">Liaison synchrone / asynchrone</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-interfaces-communes">2. Interfaces communes</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-obtenir-la-version-du-client">1. Obtenir la version du client</a></li>
+                            
+                            <li><a href="#2-obtenir-la-configuration">2. Obtenir la configuration</a></li>
+                            
+                            <li><a href="#3-modifier-la-configuration">3. Modifier la configuration</a></li>
+                            
+                            <li><a href="#4-ajouter-à-la-configuration">4. Ajouter à la configuration</a></li>
+                            
+                            <li><a href="#5-obtenir-une-liste">5. Obtenir une liste</a></li>
+                            
+                            <li><a href="#6-écrire-un-journal-front-end">6. Écrire un journal front-end</a></li>
+                            
+                            <li><a href="#7-écrire-le-cache-de-compte-à-rebours">7. Écrire le cache de compte à rebours</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-contrôle-des-fenêtres">3. Contrôle des fenêtres</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-rechercher-des-fenêtres">1. Rechercher des fenêtres</a></li>
+                            
+                            <li><a href="#2-contrôle-des-fenêtres">2. Contrôle des fenêtres</a></li>
+                            
+                            <li><a href="#3-obtenir-létat-dune-fenêtre">3. Obtenir l&#39;état d&#39;une fenêtre</a></li>
+                            
+                            <li><a href="#4-ouvrir-le-panneau-de-commandes-et-exécuter-une-recherche">4. Ouvrir le panneau de commandes et exécuter une recherche</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-gestion-des-applications">4. Gestion des applications</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-rechercher-des-applications">1. Rechercher des applications</a></li>
+                            
+                            <li><a href="#2-obtenir-des-informations-dapplications-en-lot-par-id-asynchrone">2. Obtenir des informations d&#39;applications en lot par id (asynchrone)</a></li>
+                            
+                            <li><a href="#3-lancer-une-application">3. Lancer une application</a></li>
+                            
+                            <li><a href="#4-obtenir-les-statistiques-dutilisation">4. Obtenir les statistiques d&#39;utilisation</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-gestion-des-processus">5. Gestion des processus</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-rechercher-des-processus">1. Rechercher des processus</a></li>
+                            
+                            <li><a href="#2-contrôle-des-processus">2. Contrôle des processus</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-opérations-sur-les-fichiers">6. Opérations sur les fichiers</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-rechercher-des-fichiers-asynchrone">1. Rechercher des fichiers (asynchrone)</a></li>
+                            
+                            <li><a href="#2-ouvrir-un-fichier">2. Ouvrir un fichier</a></li>
+                            
+                            <li><a href="#3-ouvrir-lemplacement-du-fichier">3. Ouvrir l&#39;emplacement du fichier</a></li>
+                            
+                            <li><a href="#4-ouvrir-laperçu-du-fichier">4. Ouvrir l&#39;aperçu du fichier</a></li>
+                            
+                            <li><a href="#5-copiercouper-des-fichiers-vers-le-presse-papiers">5. Copier/couper des fichiers vers le presse-papiers</a></li>
+                            
+                            <li><a href="#6-parcourir-les-fichiers">6. Parcourir les fichiers</a></li>
+                            
+                            <li><a href="#7-parcourir-les-répertoires">7. Parcourir les répertoires</a></li>
+                            
+                            <li><a href="#8-obtenir-un-répertoire-connu">8. Obtenir un répertoire connu</a></li>
+                            
+                            <li><a href="#9-enregistrer-un-fichier">9. Enregistrer un fichier</a></li>
+                            
+                            <li><a href="#10-obtenir-licône-dun-fichier">10. Obtenir l&#39;icône d&#39;un fichier</a></li>
+                            
+                            <li><a href="#11-lire-un-fichier">11. Lire un fichier</a></li>
+                            
+                            <li><a href="#12-lecture-par-blocs-de-gros-fichiers">12. Lecture par blocs de gros fichiers</a></li>
+                            
+                            <li><a href="#13-écrire-un-fichier">13. Écrire un fichier</a></li>
+                            
+                            <li><a href="#14-ajouter-à-un-fichier">14. Ajouter à un fichier</a></li>
+                            
+                            <li><a href="#15-renommerdéplacer">15. Renommer/déplacer</a></li>
+                            
+                            <li><a href="#16-copier-un-fichier">16. Copier un fichier</a></li>
+                            
+                            <li><a href="#17-supprimer-un-fichier-ou-un-répertoire">17. Supprimer un fichier ou un répertoire</a></li>
+                            
+                            <li><a href="#18-créer-un-répertoire">18. Créer un répertoire</a></li>
+                            
+                            <li><a href="#19-lire-un-répertoire">19. Lire un répertoire</a></li>
+                            
+                            <li><a href="#20-vérifier-lexistence-dun-chemin">20. Vérifier l&#39;existence d&#39;un chemin</a></li>
+                            
+                            <li><a href="#21-obtenir-les-informations-dun-fichier">21. Obtenir les informations d&#39;un fichier</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-traitement-multimédia">7. Traitement multimédia</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-exécuter-une-commande-magick-asynchrone">1. Exécuter une commande magick (asynchrone)</a></li>
+                            
+                            <li><a href="#2-exécuter-une-commande-ffmpeg-asynchrone">2. Exécuter une commande ffmpeg (asynchrone)</a></li>
+                            
+                            <li><a href="#3-exécuter-une-commande-ffprobe-sondage-de-métadonnées-synchrone">3. Exécuter une commande ffprobe (sondage de métadonnées, synchrone)</a></li>
+                            
+                            <li><a href="#4-exécuter-une-commande-pdfcpu-asynchrone">4. Exécuter une commande pdfcpu (asynchrone)</a></li>
+                            
+                            <li><a href="#5-exécuter-une-commande-ghostscript-asynchrone">5. Exécuter une commande Ghostscript (asynchrone)</a></li>
+                            
+                            <li><a href="#6-annuler-le-sous-processus-multimédia-en-cours">6. Annuler le sous-processus multimédia en cours</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-capture-décran-et-ocr">8. Capture d&#39;écran et OCR</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-capture-décran-épingler-sur-le-bureau">1. Capture d&#39;écran / épingler sur le bureau</a></li>
+                            
+                            <li><a href="#2-initialisation-de-locr">2. Initialisation de l&#39;OCR</a></li>
+                            
+                            <li><a href="#3-reconnaissance-ocr-asynchrone">3. Reconnaissance OCR (asynchrone)</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#9-chiffrement-et-déchiffrement">9. Chiffrement et déchiffrement</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-chiffrer-des-données">1. Chiffrer des données</a></li>
+                            
+                            <li><a href="#2-déchiffrer-des-données">2. Déchiffrer des données</a></li>
+                            
+                            <li><a href="#3-générer-une-clé">3. Générer une clé</a></li>
+                            
+                            <li><a href="#4-générer-un-iv">4. Générer un IV</a></li>
+                            
+                            <li><a href="#5-calculer-un-hash">5. Calculer un hash</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#10-historique-du-presse-papiers">10. Historique du presse-papiers</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-rechercher-dans-le-presse-papiers">1. Rechercher dans le presse-papiers</a></li>
+                            
+                            <li><a href="#2-supprimer-un-enregistrement">2. Supprimer un enregistrement</a></li>
+                            
+                            <li><a href="#3-vider-les-enregistrements">3. Vider les enregistrements</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#11-favoris">11. Favoris</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-rechercher-des-favoris">1. Rechercher des favoris</a></li>
+                            
+                            <li><a href="#2-ouvrir-un-favori">2. Ouvrir un favori</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#12-exécution-de-commandes">12. Exécution de commandes</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-exécuter-une-ligne-de-commande">1. Exécuter une ligne de commande</a></li>
+                            
+                            <li><a href="#2-exécuter-un-programme-quelconque">2. Exécuter un programme quelconque</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#13-mise-à-jour">13. Mise à jour</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-vérifier-les-mises-à-jour">1. Vérifier les mises à jour</a></li>
+                            
+                            <li><a href="#2-obtenir-létat-de-la-mise-à-jour">2. Obtenir l&#39;état de la mise à jour</a></li>
+                            
+                            <li><a href="#3-appliquer-une-mise-à-jour-déjà-téléchargée">3. Appliquer une mise à jour déjà téléchargée</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>Référence de l’API</h1>
+            <p class="doc-meta">La définition de référence de toutes les API natives</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="Ressources associées">
+    <a class="sdk-link" href="/fr/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Démarrage rapide</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Télécharger le projet d’exemple</span>
+    </a>
+</nav>
+
+
+            <h2 id="historique-des-versions" tabindex="-1">Historique des versions <a class="doc-anchor" href="#historique-des-versions" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Réviseur</th>
+<th>Date de révision</th>
+<th>Description de la révision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>yyzTools</td>
+<td>2026-09-01</td>
+<td>version initiale</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-conventions-générales" tabindex="-1">1. Conventions générales <a class="doc-anchor" href="#1-conventions-générales" aria-hidden="true">#</a></h2>
+<p>Ce document définit toutes les interfaces liées aux interactions avec le composant natif (Native) ; il couvre uniquement les interfaces enregistrées par le <strong>processus principal yyzTools.exe</strong> (<code>SetupBindings()</code> dans <code>src/yyztools/NativeApi.cpp</code>).</p>
+<h3 id="mode-dappel" tabindex="-1">Mode d'appel <a class="doc-anchor" href="#mode-dappel" aria-hidden="true">#</a></h3>
+<ul>
+<li>
+<p>Le front-end appelle les fonctions d'interface via l'objet <code>window.Zen</code> ; il est recommandé de passer systématiquement par la classe d'encapsulation <code>ZenAPI</code> : <code>web/lib/zen_api.js</code>, et non de se connecter directement à <code>window.Zen</code> dans le code métier, afin de servir de couche de compatibilité lors des évolutions des interfaces.</p>
+</li>
+<li>
+<p>Entrées : transmises sous forme de paramètres positionnels ; le nombre et les types de paramètres dépendent de chaque interface</p>
+</li>
+<li>
+<p>Sorties : transmises par valeur de retour, un objet json contenant les éléments suivants</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    ...
+}
+</code></pre>
+<ul>
+<li>
+<p>error : 0 succès, non 0 erreur</p>
+</li>
+<li>
+<p>errorMsg (optionnel) : message d'erreur</p>
+</li>
+<li>
+<p>autres (optionnels) : voir chaque interface</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="détection-des-erreurs" tabindex="-1">Détection des erreurs <a class="doc-anchor" href="#détection-des-erreurs" aria-hidden="true">#</a></h3>
+<p><code>error</code> est toujours un <strong>nombre</strong> : 0 succès, non 0 erreur (-1 en cas d'exception d'appel).</p>
+<h3 id="liaison-synchrone-asynchrone" tabindex="-1">Liaison synchrone / asynchrone <a class="doc-anchor" href="#liaison-synchrone-asynchrone" aria-hidden="true">#</a></h3>
+<p>La grande majorité des interfaces sont des liaisons synchrones (<code>BindSync</code>) : l'appel retourne immédiatement. Les 7 interfaces suivantes sont des liaisons asynchrones (<code>BindAsync</code>), exécutées dans un thread d'arrière-plan, qui reviennent via une Promise sans bloquer le thread UI :</p>
+<p><code>getAppInfo</code>, <code>searchFile</code>, <code>imageRun</code>, <code>ffmpegRun</code>, <code>pdfRun</code>, <code>gsRun</code>, <code>ocrRecognition</code></p>
+<p>Les contraintes de comportement des interfaces asynchrones à un instant donné sont décrites dans chaque entrée (par exemple, le quintette média s'exécute en série et partage <code>cancelRun</code> pour l'annulation).</p>
+<h2 id="2-interfaces-communes" tabindex="-1">2. Interfaces communes <a class="doc-anchor" href="#2-interfaces-communes" aria-hidden="true">#</a></h2>
+<h3 id="1-obtenir-la-version-du-client" tabindex="-1">1. Obtenir la version du client <a class="doc-anchor" href="#1-obtenir-la-version-du-client" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getVersion() : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées : aucune</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apiVersion&quot;: &quot;1.0.1&quot;,
+    &quot;appVersion&quot;: &quot;1.0.1&quot;,
+    &quot;usageTime&quot;: 90,
+    &quot;usageTimes&quot;: 3602,
+    &quot;firstUseTime&quot;: &quot;20250910&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>apiVersion : informations de version de l'API client. Le numéro s'incrémente de 1 à chaque mise à jour des interfaces ; le dernier chiffre va de 0 à 9 puis repart à 0, par exemple 1.0.0, 1.0.1, 1.0.2... 1.0.9, 1.1.0, etc.</p>
+</li>
+<li>
+<p>appVersion : informations de version du client</p>
+</li>
+<li>
+<p>usageTime : temps d'utilisation (unité : s)</p>
+</li>
+<li>
+<p>usageTimes : nombre d'activations</p>
+</li>
+<li>
+<p>firstUseTime : date de première utilisation, format : yyyymmdd</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-obtenir-la-configuration" tabindex="-1">2. Obtenir la configuration <a class="doc-anchor" href="#2-obtenir-la-configuration" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getConfig(key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>key (optionnel) : ne retourne que cette clé ; les chemins en points <code>a.b</code> sont pris en charge. Par défaut, retourne la configuration complète.</p>
+<ul>
+<li>
+<p>clé trouvée : retourne <code>{&quot;error&quot;:0, &quot;&lt;key&gt;&quot;: &lt;valeur&gt;}</code>, par exemple <code>getConfig(&quot;language&quot;)</code> → <code>{&quot;error&quot;:0,&quot;language&quot;:&quot;zh_cn&quot;}</code> ; <code>getConfig(&quot;dock.categories&quot;)</code> → <code>{&quot;error&quot;:0,&quot;dock&quot;:{&quot;categories&quot;:[...]}}</code></p>
+</li>
+<li>
+<p>clé absente : retourne <code>{&quot;error&quot;:0}</code> (pas d'erreur ; le lecteur doit gérer le repli)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties (exemple, les champs dépendent de la configuration réelle)</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;logLevel&quot;: &quot;1&quot;,
+    &quot;wallpaperEnabled&quot;: &quot;1&quot;,
+    &quot;overlayEnabled&quot;: &quot;0&quot;,
+    &quot;gameMode&quot;: &quot;0&quot;,
+    &quot;clipboardHistoryMaxCount&quot;: &quot;500&quot;,
+    &quot;autoStart&quot;: &quot;1&quot;,
+    &quot;shortcutKeys&quot;: {
+        &quot;main&quot;: {
+            &quot;doubleCtrlEnabled&quot;: &quot;1&quot;,
+            &quot;doubleAltEnabled&quot;: &quot;1&quot;,
+            &quot;modifier&quot;: 1,
+            &quot;virtualCode&quot;: 32
+        },
+        &quot;apps&quot;: [
+            {
+                &quot;appId&quot;: &quot;translate&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 49
+            },
+            {
+                &quot;appId&quot;: &quot;ocr&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 50
+            }
+        ]
+    },
+    &quot;quickOpen&quot;: [
+        {
+            &quot;name&quot;: &quot;谷歌搜索&quot;,
+            &quot;type&quot;: &quot;normal&quot;,
+            &quot;index&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;https://www.google.com/search?q={query}&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ],
+    &quot;customApps&quot;: [
+        {
+            &quot;filePath&quot;: &quot;d:\test\test1.exe&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>logLevel : niveau de journalisation (0 : Trace / 1 : Debug / 2 : Info / 3 : Warning / 4 : Error / 5 : Fatal)</p>
+</li>
+<li>
+<p>wallpaperEnabled : activer le fond d'écran dynamique</p>
+</li>
+<li>
+<p>overlayEnabled : activer les effets de bureau</p>
+</li>
+<li>
+<p>gameMode : mode jeu</p>
+</li>
+<li>
+<p>clipboardHistoryMaxCount : nombre maximal d'entrées dans l'historique du presse-papiers</p>
+</li>
+<li>
+<p>autoStart : démarrage automatique au lancement du système</p>
+</li>
+<li>
+<p>shortcutKeys : raccourcis globaux</p>
+<ul>
+<li>
+<p>main : interface principale</p>
+<ul>
+<li>
+<p>doubleCtrlEnabled : réveil par double Ctrl</p>
+</li>
+<li>
+<p>doubleAltEnabled : réveil par double Alt</p>
+</li>
+<li>
+<p>modifier : touche modificatrice</p>
+</li>
+<li>
+<p>virtualCode : touche principale</p>
+</li>
+</ul>
+</li>
+<li>
+<p>apps : applications</p>
+<ul>
+<li>
+<p>appId : id de l'application</p>
+</li>
+<li>
+<p>modifier : touche modificatrice</p>
+</li>
+<li>
+<p>virtualCode : touche principale</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>quickOpen : ouverture rapide</p>
+<ul>
+<li>
+<p>name : nom</p>
+</li>
+<li>
+<p>type : type (normal : recherche générale / spec : recherche verticale)</p>
+</li>
+<li>
+<p>index : numéro d'ordre</p>
+</li>
+<li>
+<p>url : modèle d'url</p>
+</li>
+<li>
+<p>enabled : activé ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>customApps : applications personnalisées</p>
+<ul>
+<li>
+<p>filePath : chemin de l'exe correspondant à l'application</p>
+</li>
+<li>
+<p>enabled : activé ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>dock : dock (catégories + contenus)</p>
+<ul>
+<li>
+<p><strong>Convention générale : l'absence de</strong> <strong><code>name</code>/<code>icon</code></strong> <strong>signifie « utiliser les valeurs intégrées par défaut » (dérivées à l'exécution par l'i18n ou par le</strong> <strong><code>.zenmod</code></strong> <strong>correspondant à</strong> <strong><code>appId</code></strong>, varient selon la langue de l'interface) ; la présence de ces champs signifie une personnalisation utilisateur, affichée telle quelle sans re-traduction.**</p>
+</li>
+<li>
+<p>categories : catégories</p>
+<ul>
+<li>
+<p>id : les catégories intégrées utilisent des id sémantiques (<code>folder</code>/<code>tools</code>/<code>ai</code>/<code>game</code>/<code>system</code>), les créations utilisateur utilisent <code>category_&lt;horodatage&gt;</code></p>
+</li>
+<li>
+<p>name : optionnel, présent uniquement après renommage par l'utilisateur</p>
+</li>
+<li>
+<p>icon : classe FontAwesome</p>
+</li>
+<li>
+<p>color : couleur de thème</p>
+</li>
+<li>
+<p>order : ordre de tri</p>
+</li>
+</ul>
+</li>
+<li>
+<p>contents : éléments de contenu</p>
+<ul>
+<li>
+<p>id : les éléments de répertoires intégrés utilisent des id sémantiques (<code>desktop</code>/<code>documents</code>/<code>downloads</code>/<code>music</code>/<code>videos</code>), les autres sont <code>content_&lt;horodatage&gt;</code></p>
+</li>
+<li>
+<p>categoryId : id de la catégorie de rattachement</p>
+</li>
+<li>
+<p>type : <code>app</code> | <code>folder</code> | <code>url</code></p>
+</li>
+<li>
+<p>appId : obligatoire si <code>type=app</code>, correspond à l'id du <code>.zenmod</code> ; le nom et l'icône en sont tous deux dérivés, <strong>ne pas persister</strong></p>
+</li>
+<li>
+<p>folderPath : obligatoire si <code>type=folder</code>, prend en charge les variables d'environnement telles que <code>%USERPROFILE%</code></p>
+</li>
+<li>
+<p>url : obligatoire si <code>type=url</code>, URL complète normalisée (le préfixe <code>https://</code> est ajouté automatiquement si absent) ; au clic, ouverture par le navigateur par défaut du système. Le nom est saisi par l'utilisateur, l'icône est récupérée à l'exécution via le favicon du site (repli <code>fas fa-globe</code> en cas d'échec), <strong>non persistée</strong></p>
+</li>
+<li>
+<p>name / icon : optionnels, sémantique identique ci-dessus (obligatoires pour les répertoires choisis par l'utilisateur en <code>type=folder</code>)</p>
+</li>
+<li>
+<p>color : teinte de l'icône</p>
+</li>
+<li>
+<p>order : ordre de tri au sein de la même catégorie</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-modifier-la-configuration" tabindex="-1">3. Modifier la configuration <a class="doc-anchor" href="#3-modifier-la-configuration" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setConfig(config: json_obj, replace?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>config : identique à getConfig</p>
+<ul>
+<li>
+<p>ne transmettre que ce qui doit être modifié, pas besoin de tout transmettre</p>
+</li>
+<li>
+<p>le contenu sous une même clé doit être transmis en entier</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;logLevel&quot;: &quot;1&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>replace (optionnel, false par défaut) : false = fusion incrémentale dans la configuration existante, true = remplacement intégral (pour l'import de sauvegarde, permet de nettoyer les éléments de liste supprimés). Transmettre les chaînes <code>&quot;true&quot;</code> ou <code>&quot;false&quot;</code>, l'absence équivaut à <code>&quot;false&quot;</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Remarque : <strong>ne pas « lire toute la configuration avec getConfig puis la réécrire en entier avec setConfig »</strong> — la valeur retournée par <code>getConfig</code> contient le champ <code>error</code>, et une réécriture intégrale le persiste dans le fichier de configuration. Toujours écrire à granularité étroite, par ex. <code>setConfig({ dock: { categories } })</code>.</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-ajouter-à-la-configuration" tabindex="-1">4. Ajouter à la configuration <a class="doc-anchor" href="#4-ajouter-à-la-configuration" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.addConfig(key: string, value: json_obj) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>key : le type de valeur doit être StringList ou StringMapList</p>
+</li>
+<li>
+<p>value</p>
+<ul>
+<li>
+<p>si le type de valeur de key est StringList, transmettre une string</p>
+</li>
+<li>
+<p>si le type de valeur de key est StringMapList, transmettre un json_obj</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-obtenir-une-liste" tabindex="-1">5. Obtenir une liste <a class="doc-anchor" href="#5-obtenir-une-liste" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getList(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>type : type de liste</p>
+<ul>
+<li>font : liste des polices système (lit le registre <code>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts</code>, pour la sélection de polices dans le filigrane, etc.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;list&quot;: [
+        {
+            &quot;name&quot;: &quot;Arial&quot;,
+            &quot;file&quot;: &quot;arial.ttf&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>list : liste des polices</p>
+<ul>
+<li>
+<p>name : nom de la police (suffixe &quot; (TrueType)&quot; / &quot; (OpenType)&quot; déjà retiré)</p>
+</li>
+<li>
+<p>file : nom du fichier de police</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-écrire-un-journal-front-end" tabindex="-1">6. Écrire un journal front-end <a class="doc-anchor" href="#6-écrire-un-journal-front-end" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.log(msg: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>msg : contenu du journal, écrit dans le journal du processus principal (InfoMsg)</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="7-écrire-le-cache-de-compte-à-rebours" tabindex="-1">7. Écrire le cache de compte à rebours <a class="doc-anchor" href="#7-écrire-le-cache-de-compte-à-rebours" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
+</code></pre>
+<p>Données de cache des rappels de compte à rebours, écrites dans une mémoire partagée entre le processus principal et le processus fond d'écran, avec notification immédiate du processus fond d'écran pour relecture (sinon le fond d'écran attendrait son propre cycle de 30s). Destiné à la coordination reminder / wallpaper, ne pas en dépendre pour les usages métier ordinaires.</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>data : chaîne JSON de compte à rebours (payload défini par le module reminder)</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="3-contrôle-des-fenêtres" tabindex="-1">3. Contrôle des fenêtres <a class="doc-anchor" href="#3-contrôle-des-fenêtres" aria-hidden="true">#</a></h2>
+<h3 id="1-rechercher-des-fenêtres" tabindex="-1">1. Rechercher des fenêtres <a class="doc-anchor" href="#1-rechercher-des-fenêtres" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchWindow(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>keyword : mot-clé de recherche</p>
+</li>
+<li>
+<p>maxResults : nombre maximal d'enregistrements</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;windows&quot;: [
+        {
+            &quot;hwnd&quot;: 18811010,
+            &quot;processId&quot;: 20708,
+            &quot;visible&quot;: 1,
+            &quot;topmost&quot;: 0,
+            &quot;name&quot;: &quot;Native API接口.md - MarkText&quot;,
+            &quot;className&quot;: &quot;Chrome_WidgetWin_1&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files\\MarkText\\MarkText.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\Program Files\\MarkText\\MarkText.exe\&quot; \&quot;D:\\doc\\a.md\&quot;&quot;,
+            &quot;desc&quot;: &quot;MarkText&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 180
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>windows : liste des fenêtres</p>
+<ul>
+<li>
+<p>hwnd : handle de la fenêtre</p>
+</li>
+<li>
+<p>processId : id du processus propriétaire de la fenêtre</p>
+</li>
+<li>
+<p>visible : visible ou non</p>
+</li>
+<li>
+<p>topmost : toujours au premier plan ou non</p>
+</li>
+<li>
+<p>name : nom de la fenêtre</p>
+</li>
+<li>
+<p>className : nom de classe de la fenêtre</p>
+</li>
+<li>
+<p>path : chemin complet de l'exécutable du processus</p>
+</li>
+<li>
+<p>cmdArgs : ligne de commande de lancement du processus</p>
+</li>
+<li>
+<p>desc : description</p>
+</li>
+<li>
+<p>icon : icône de la fenêtre, format base64</p>
+</li>
+<li>
+<p>score : score de recherche</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-contrôle-des-fenêtres" tabindex="-1">2. Contrôle des fenêtres <a class="doc-anchor" href="#2-contrôle-des-fenêtres" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowControl(window: string, action: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>window : Name ou forme string du HWND</p>
+<ul>
+<li>
+<p>cmdPlate : lanceur</p>
+</li>
+<li>
+<p>translate : super-traduction</p>
+</li>
+<li>
+<p>download : téléchargement ultra-rapide</p>
+</li>
+<li>
+<p>calculator : super-calculatrice</p>
+</li>
+<li>
+<p>filePreview : aperçu de fichiers</p>
+</li>
+<li>
+<p>ocr : OCR</p>
+</li>
+<li>
+<p>quickocr : fenêtre d'OCR-traduction rapide épinglée</p>
+</li>
+<li>
+<p>calendar : calendrier perpétuel</p>
+</li>
+<li>
+<p>appUsage : statistiques d'utilisation des applications</p>
+</li>
+<li>
+<p>tray : menu de la zone de notification</p>
+</li>
+<li>
+<p>overlay : effets de bureau</p>
+</li>
+<li>
+<p>setting : paramètres</p>
+</li>
+<li>
+<p>main : fenêtre principale (équivaut à cmdPlate)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>action</p>
+<ul>
+<li>
+<p>show : afficher et activer</p>
+</li>
+<li>
+<p>showNoActivate : afficher sans activer</p>
+</li>
+<li>
+<p>min : réduire</p>
+</li>
+<li>
+<p>max : agrandir</p>
+</li>
+<li>
+<p>restore : restaurer</p>
+</li>
+<li>
+<p>hide : masquer</p>
+</li>
+<li>
+<p>close : fermer</p>
+</li>
+<li>
+<p>darg : déplacer</p>
+</li>
+<li>
+<p>topmost : épingler au premier plan</p>
+</li>
+<li>
+<p>noTopmost : annuler l'épinglage</p>
+</li>
+<li>
+<p>quit : quitter l'application</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-obtenir-létat-dune-fenêtre" tabindex="-1">3. Obtenir l'état d'une fenêtre <a class="doc-anchor" href="#3-obtenir-létat-dune-fenêtre" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>window : Name ou forme string du HWND, voir contrôle des fenêtres</p>
+</li>
+<li>
+<p>can_suspend (optionnel) : autoriser la suspension du WebView de cette fenêtre (interrupteur de gestion des ressources, false par défaut)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Description : cette interface a des effets de bord — après la consultation de l'état, si la fenêtre est en état show/max, le rendu WebView est restauré, sinon le WebView est suspendu pour économiser des ressources (la suspension n'est permise que si can_suspend est true). Transmettre true pour les pages persistantes qui sondent leur propre état, false pour les consultations ordinaires.</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;state&quot;: &quot;show&quot;,
+    &quot;topmost&quot;: &quot;0&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>state : état (show : affichage normal / min : réduit / max : agrandi / close : fermée)</p>
+</li>
+<li>
+<p>topmost : épinglée ou non</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-ouvrir-le-panneau-de-commandes-et-exécuter-une-recherche" tabindex="-1">4. Ouvrir le panneau de commandes et exécuter une recherche <a class="doc-anchor" href="#4-ouvrir-le-panneau-de-commandes-et-exécuter-une-recherche" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>command : commande de recherche, exemple : <code>f path:C:\Users\Documents</code> (recherche dans un répertoire donné du module de fichiers)</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Description</p>
+<ul>
+<li>
+<p>Cette interface ouvre la fenêtre du panneau de commandes et exécute automatiquement la commande de recherche</p>
+</li>
+<li>
+<p>Couramment utilisée pour ouvrir rapidement la recherche de fichiers depuis le dock ou d'autres modules</p>
+</li>
+<li>
+<p>Le format de commande prend en charge toute la syntaxe de recherche supportée par cmdplate</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-gestion-des-applications" tabindex="-1">4. Gestion des applications <a class="doc-anchor" href="#4-gestion-des-applications" aria-hidden="true">#</a></h2>
+<h3 id="1-rechercher-des-applications" tabindex="-1">1. Rechercher des applications <a class="doc-anchor" href="#1-rechercher-des-applications" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchApp(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>keyword : mot-clé de recherche</p>
+</li>
+<li>
+<p>maxResults : nombre maximal d'enregistrements</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;Microsoft.WindowsCamera&quot;,
+            &quot;name&quot;: &quot;相机&quot;,
+            &quot;path&quot;: &quot;C:\Program Files\WindowsApps\Microsoft.WindowsCamera&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 1,
+            &quot;score&quot;: 90
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>apps : liste des applications</p>
+<ul>
+<li>
+<p>id : identifiant unique de l'application, requis au lancement</p>
+</li>
+<li>
+<p>name : nom</p>
+</li>
+<li>
+<p>desc : description</p>
+</li>
+<li>
+<p>icon : icône en base64</p>
+</li>
+<li>
+<p>appType : type d'application (0 : application win32 / 1 : application uwp / 2 : commande système / 3 : réglage système / 4 : module intégré)</p>
+</li>
+<li>
+<p>score : score du résultat de recherche</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-obtenir-des-informations-dapplications-en-lot-par-id-asynchrone" tabindex="-1">2. Obtenir des informations d'applications en lot par id (asynchrone) <a class="doc-anchor" href="#2-obtenir-des-informations-dapplications-en-lot-par-id-asynchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppInfo(appIds: string[]) : object
+</code></pre>
+<p>La configuration ne persiste que <code>appId</code> ; nom et icône sont dérivés à l'exécution (le <code>name</code> du <code>.zenmod</code> est multilingue ; un instantané dans la configuration deviendrait obsolète après un changement de langue). C'est précisément à ce scénario que cette interface est destinée.</p>
+<p>⚠️ <strong>Ne pas la remplacer par une boucle de</strong> <strong><code>searchApp(appId, 1)</code></strong> : chaque <code>searchApp</code> effectue un balayage complet de l'index des applications + correspondance pinyin + tri par score, lance en outre deux threads concurrents et retourne plusieurs résultats avec icônes base64. Le dock plus les raccourcis comptent des dizaines d'appId ; les interroger un par un ralentirait nettement le démarrage. Cette interface les récupère en un seul appel ; côté native, résolution exacte par <code>map::find</code>.</p>
+<p>Elle attend en interne que l'index des applications soit prêt (index généré par un thread d'arrière-plan) ; c'est donc une <strong>liaison asynchrone</strong>, et un appel au tout début d'un démarrage à froid ne retournera pas de résultat vide.</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>appIds : tableau d'appId, ex. <code>[&quot;calculator&quot;, &quot;Microsoft.WindowsCamera&quot;]</code></li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<p>Format strictement identique à <code>searchApp</code> (même <code>BuildAppResult</code>), sauf que :</p>
+<ul>
+<li>
+<p>seuls les éléments trouvés exactement sont retournés ; <strong>les id introuvables sont silencieusement ignorés</strong>, si bien que <code>apps.length</code> peut être inférieur à la longueur d'entrée (utile pour détecter des appId invalides dans la configuration)</p>
+</li>
+<li>
+<p>l'ordre suit celui des paramètres d'entrée, <code>score</code> vaut toujours 0 (non soumis au scoring)</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;calculator&quot;,
+            &quot;name&quot;: &quot;超级计算器&quot;,
+            &quot;path&quot;: &quot;calculator&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 4,
+            &quot;score&quot;: 0
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-lancer-une-application" tabindex="-1">3. Lancer une application <a class="doc-anchor" href="#3-lancer-une-application" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.launchApp(id: string, admin : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>id : id de l'application (le champ <code>id</code> retourné par <code>searchApp</code> / <code>getAppInfo</code>)</p>
+</li>
+<li>
+<p>admin : exécuter en tant qu'administrateur</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-obtenir-les-statistiques-dutilisation" tabindex="-1">4. Obtenir les statistiques d'utilisation <a class="doc-anchor" href="#4-obtenir-les-statistiques-dutilisation" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppUsage(mode: string, startTime: string, stopTime: string, forceSync : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>mode : type de statistique, day, week, month, year</p>
+</li>
+<li>
+<p>startTime : heure de début, format : yyyymmddhh, exemple : 2025110300</p>
+</li>
+<li>
+<p>stopTime : heure de fin, format : yyyymmddhh, exemple : 2025110300</p>
+</li>
+<li>
+<p>forceSync : forcer l'actualisation ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;usages&quot;: [
+        {
+            &quot;time&quot;: &quot;20251104&quot;,
+            &quot;name&quot;: &quot;yyzTools.exe&quot;,
+            &quot;logo&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;usageTimes&quot;: 2,
+            &quot;usageTime&quot;: 4.172,
+            &quot;clickTimes&quot;: 4,
+            &quot;moveDistance&quot;: 105.572357,
+            &quot;pressTimes&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>usages : statistiques d'utilisation</p>
+<ul>
+<li>
+<p>time : date, day : yyyymmdd, week : yyyyww, month : yyyymm, year : yyyy</p>
+</li>
+<li>
+<p>name : nom de l'application</p>
+</li>
+<li>
+<p>logo : icône de l'application</p>
+</li>
+<li>
+<p>usageTimes : nombre d'utilisations</p>
+</li>
+<li>
+<p>usageTime : durée d'utilisation (unité : secondes)</p>
+</li>
+<li>
+<p>clickTimes : nombre de clics de souris</p>
+</li>
+<li>
+<p>moveDistance : distance de déplacement de la souris (unité : cm)</p>
+</li>
+<li>
+<p>pressTimes : nombre de frappes clavier</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-gestion-des-processus" tabindex="-1">5. Gestion des processus <a class="doc-anchor" href="#5-gestion-des-processus" aria-hidden="true">#</a></h2>
+<h3 id="1-rechercher-des-processus" tabindex="-1">1. Rechercher des processus <a class="doc-anchor" href="#1-rechercher-des-processus" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchProcess(keyword: string, maxResults: number) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>keyword : mot-clé de recherche</p>
+</li>
+<li>
+<p>maxResults : nombre maximal d'enregistrements</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;processes&quot;: [
+        {
+            &quot;id&quot;: 1228,
+            &quot;name&quot;: &quot;msedge.exe&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\...\\msedge.exe\&quot; --type=renderer&quot;,
+            &quot;suspend&quot;: 0,
+            &quot;desc&quot;: &quot;Microsoft Edge&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 60
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>processes : liste des processus</p>
+<ul>
+<li>
+<p>id : id du processus</p>
+</li>
+<li>
+<p>name : nom du processus</p>
+</li>
+<li>
+<p>path : chemin complet de l'exécutable du processus</p>
+</li>
+<li>
+<p>cmdArgs : ligne de commande de lancement du processus</p>
+</li>
+<li>
+<p>suspend : suspendu ou non</p>
+</li>
+<li>
+<p>desc : description</p>
+</li>
+<li>
+<p>icon : icône du processus, format base64</p>
+</li>
+<li>
+<p>score : score de recherche</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-contrôle-des-processus" tabindex="-1">2. Contrôle des processus <a class="doc-anchor" href="#2-contrôle-des-processus" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.processControl(processId: number, action: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>processId : ID du processus</p>
+</li>
+<li>
+<p>action : action</p>
+<ul>
+<li>
+<p>terminate : arrêter</p>
+</li>
+<li>
+<p>suspend : suspendre</p>
+</li>
+<li>
+<p>resume : reprendre</p>
+</li>
+<li>
+<p>restart : redémarrer</p>
+</li>
+</ul>
+</li>
+<li>
+<p>admin : le nouveau processus doit-il s'exécuter en tant qu'administrateur (effectif lors d'un restart)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="6-opérations-sur-les-fichiers" tabindex="-1">6. Opérations sur les fichiers <a class="doc-anchor" href="#6-opérations-sur-les-fichiers" aria-hidden="true">#</a></h2>
+<h3 id="1-rechercher-des-fichiers-asynchrone" tabindex="-1">1. Rechercher des fichiers (asynchrone) <a class="doc-anchor" href="#1-rechercher-des-fichiers-asynchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchFile(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Description : la recherche est exécutée par le service maison yyzFileSearch (index MFT + IPC par canal nommé) ; la syntaxe de requête style Everything est prise en charge (ex. <code>size:&gt;100MB</code>, <code>!ext:mp4</code>), résultats triés par pertinence. La recherche s'exécute dans un thread d'arrière-plan : <strong>liaison asynchrone</strong>.</p>
+</li>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>keyword : mot-clé de recherche</p>
+</li>
+<li>
+<p>maxResults : nombre maximal d'enregistrements</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;WinMain.cpp&quot;,
+      &quot;path&quot;: &quot;D:\\WorkCodeup\\yyztools\\src\\yyztools&quot;,
+      &quot;dateModified&quot;: &quot;2025/10/18 14:05:00&quot;,
+      &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0,
+      &quot;isDir&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>files : liste des fichiers</p>
+<ul>
+<li>
+<p>name : nom du fichier</p>
+</li>
+<li>
+<p>path : répertoire contenant le fichier (sans le nom de fichier), chemin complet = path + &quot;\&quot; + name</p>
+</li>
+<li>
+<p>dateModified : date de modification</p>
+</li>
+<li>
+<p>icon : icône du fichier, format base64</p>
+</li>
+<li>
+<p>score : score de recherche</p>
+</li>
+<li>
+<p>isDir : 1 signifie répertoire, 0 signifie fichier</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-ouvrir-un-fichier" tabindex="-1">2. Ouvrir un fichier <a class="doc-anchor" href="#2-ouvrir-un-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFile(path: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>path : chemin du fichier</p>
+</li>
+<li>
+<p>admin : ouvrir en tant qu'administrateur</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-ouvrir-lemplacement-du-fichier" tabindex="-1">3. Ouvrir l'emplacement du fichier <a class="doc-anchor" href="#3-ouvrir-lemplacement-du-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFileLocation(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>path : chemin du fichier</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-ouvrir-laperçu-du-fichier" tabindex="-1">4. Ouvrir l'aperçu du fichier <a class="doc-anchor" href="#4-ouvrir-laperçu-du-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFilePreview(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>path : chemin du fichier</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-copiercouper-des-fichiers-vers-le-presse-papiers" tabindex="-1">5. Copier/couper des fichiers vers le presse-papiers <a class="doc-anchor" href="#5-copiercouper-des-fichiers-vers-le-presse-papiers" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFilesToClipboard(paths: string[], operation: string) : object
+</code></pre>
+<p>Place les fichiers eux-mêmes (CF_HDROP) dans le presse-papiers ; un Ctrl+V dans l'Explorateur les colle.</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>paths : tableau de chemins de fichiers</p>
+</li>
+<li>
+<p>operation : <code>copy</code> | <code>move</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="6-parcourir-les-fichiers" tabindex="-1">6. Parcourir les fichiers <a class="doc-anchor" href="#6-parcourir-les-fichiers" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseFile(filterName: string,
+                        filter: string, initDir: string, supportMulti: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>filterName : nom du filtre</p>
+</li>
+<li>
+<p>filter : filtre, '<em>.html;</em>.htm'</p>
+</li>
+<li>
+<p>initDir : répertoire de départ du parcours</p>
+</li>
+<li>
+<p>supportMulti : sélection multiple autorisée ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;paths&quot;: [&quot;d:\test\1.txt&quot;, &quot;d:\test\2.txt&quot;]
+}
+</code></pre>
+<ul>
+<li>paths : liste des chemins complets des fichiers sélectionnés ; en cas d'annulation par l'utilisateur, <code>error</code> vaut <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="7-parcourir-les-répertoires" tabindex="-1">7. Parcourir les répertoires <a class="doc-anchor" href="#7-parcourir-les-répertoires" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseDir(initDir: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>initDir : répertoire de départ du parcours</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;d:\test&quot;
+}
+</code></pre>
+<ul>
+<li>path : chemin complet du répertoire sélectionné ; en cas d'annulation par l'utilisateur, <code>error</code> vaut <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="8-obtenir-un-répertoire-connu" tabindex="-1">8. Obtenir un répertoire connu <a class="doc-anchor" href="#8-obtenir-un-répertoire-connu" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getKnownDir(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>type : type</p>
+<ul>
+<li>
+<p>download : téléchargements</p>
+</li>
+<li>
+<p>video : vidéos</p>
+</li>
+<li>
+<p>music : musique</p>
+</li>
+<li>
+<p>picture : images</p>
+</li>
+<li>
+<p>document : documents</p>
+</li>
+<li>
+<p>appDataRoaming : AppData/Roaming</p>
+</li>
+<li>
+<p>appDataLocal : AppData/Local</p>
+</li>
+<li>
+<p>appDir : répertoire du programme</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;D:\Downloads&quot;
+}
+</code></pre>
+<ul>
+<li>path : chemin complet du répertoire du type demandé</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-enregistrer-un-fichier" tabindex="-1">9. Enregistrer un fichier <a class="doc-anchor" href="#9-enregistrer-un-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.saveFile(filePath: string, data: string, binaryFile: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>filePath : chemin du fichier</p>
+</li>
+<li>
+<p>data : contenu du fichier</p>
+<ul>
+<li>
+<p>fichier texte : contenu</p>
+</li>
+<li>
+<p>fichier binaire : contenu encodé en base64</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binaryFile : fichier binaire ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="10-obtenir-licône-dun-fichier" tabindex="-1">10. Obtenir l'icône d'un fichier <a class="doc-anchor" href="#10-obtenir-licône-dun-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileIcon(filePath: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>filePath : chemin du fichier</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;icon&quot;: &quot;data:image/png;base64,&quot;
+}
+</code></pre>
+<ul>
+<li>icon : icône du fichier, encodée en base64</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-lire-un-fichier" tabindex="-1">11. Lire un fichier <a class="doc-anchor" href="#11-lire-un-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFile(path: string, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>path : chemin du fichier</p>
+</li>
+<li>
+<p>encoding : mode d'encodage</p>
+<ul>
+<li>
+<p>&quot;utf8&quot; : mode texte (par défaut)</p>
+</li>
+<li>
+<p>&quot;base64&quot; ou &quot;binary&quot; : mode binaire</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<p>En cas de succès :</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;文件内容&quot;,
+  &quot;encoding&quot;: &quot;utf8&quot;,
+  &quot;size&quot;: 1024
+}
+</code></pre>
+<p>Fichier trop volumineux (&gt;50 Mo) :</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 3,
+  &quot;errorMsg&quot;: &quot;file too large, use readFileChunk instead&quot;,
+  &quot;fileSize&quot;: 52428800,
+  &quot;chunkSize&quot;: 1048576
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="12-lecture-par-blocs-de-gros-fichiers" tabindex="-1">12. Lecture par blocs de gros fichiers <a class="doc-anchor" href="#12-lecture-par-blocs-de-gros-fichiers" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFileChunk(path: string, offset: number, length: number, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>path : chemin du fichier</p>
+</li>
+<li>
+<p>offset : décalage de départ (octets)</p>
+</li>
+<li>
+<p>length : longueur à lire (octets, 1 Mo maximum)</p>
+</li>
+<li>
+<p>encoding : mode d'encodage (fixé à &quot;base64&quot;)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;base64编码的数据&quot;,
+  &quot;offset&quot;: 0,
+  &quot;length&quot;: 1048576,
+  &quot;encoding&quot;: &quot;base64&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="13-écrire-un-fichier" tabindex="-1">13. Écrire un fichier <a class="doc-anchor" href="#13-écrire-un-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.writeFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>path : chemin du fichier</p>
+</li>
+<li>
+<p>data : contenu du fichier</p>
+<ul>
+<li>
+<p>fichier texte : contenu texte</p>
+</li>
+<li>
+<p>fichier binaire : contenu encodé en base64</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary : mode binaire ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="14-ajouter-à-un-fichier" tabindex="-1">14. Ajouter à un fichier <a class="doc-anchor" href="#14-ajouter-à-un-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.appendFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>path : chemin du fichier</p>
+</li>
+<li>
+<p>data : contenu à ajouter</p>
+<ul>
+<li>
+<p>fichier texte : contenu texte</p>
+</li>
+<li>
+<p>fichier binaire : contenu encodé en base64</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary : mode binaire ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="15-renommerdéplacer" tabindex="-1">15. Renommer/déplacer <a class="doc-anchor" href="#15-renommerdéplacer" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.rename(oldPath: string, newPath: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>oldPath : chemin d'origine</p>
+</li>
+<li>
+<p>newPath : nouveau chemin</p>
+</li>
+<li>
+<p>overwrite : écraser un fichier existant ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="16-copier-un-fichier" tabindex="-1">16. Copier un fichier <a class="doc-anchor" href="#16-copier-un-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFile(source: string, destination: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>source : chemin du fichier source</p>
+</li>
+<li>
+<p>destination : chemin du fichier cible</p>
+</li>
+<li>
+<p>overwrite : écraser un fichier existant ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="17-supprimer-un-fichier-ou-un-répertoire" tabindex="-1">17. Supprimer un fichier ou un répertoire <a class="doc-anchor" href="#17-supprimer-un-fichier-ou-un-répertoire" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deletePath(path: string, useRecycleBin: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>path : chemin du fichier ou du répertoire</p>
+</li>
+<li>
+<p>useRecycleBin : envoyer à la corbeille ou non (si false, suppression directe, <strong>irrécupérable</strong>)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Description : les répertoires sont toujours supprimés récursivement (avec tout leur contenu).</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="18-créer-un-répertoire" tabindex="-1">18. Créer un répertoire <a class="doc-anchor" href="#18-créer-un-répertoire" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.mkdir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>path : chemin du répertoire</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="19-lire-un-répertoire" tabindex="-1">19. Lire un répertoire <a class="doc-anchor" href="#19-lire-un-répertoire" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readDir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>path : chemin du répertoire</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [&quot;file1.txt&quot;, &quot;file2.jpg&quot;],
+  &quot;directories&quot;: [&quot;subdir1&quot;, &quot;subdir2&quot;]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="20-vérifier-lexistence-dun-chemin" tabindex="-1">20. Vérifier l'existence d'un chemin <a class="doc-anchor" href="#20-vérifier-lexistence-dun-chemin" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.exists(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>path : chemin du fichier ou du répertoire</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;exists&quot;: true
+}
+</code></pre>
+<ul>
+<li>exists : booléen natif</li>
+</ul>
+</li>
+</ul>
+<h3 id="21-obtenir-les-informations-dun-fichier" tabindex="-1">21. Obtenir les informations d'un fichier <a class="doc-anchor" href="#21-obtenir-les-informations-dun-fichier" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileInfo(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>path : chemin du fichier ou du répertoire</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;path&quot;: &quot;D:\\test\\file.txt&quot;,
+  &quot;name&quot;: &quot;file.txt&quot;,
+  &quot;isDirectory&quot;: false,
+  &quot;size&quot;: 1024,
+  &quot;readonly&quot;: false,
+  &quot;hidden&quot;: false,
+  &quot;system&quot;: false,
+  &quot;modifiedTime&quot;: &quot;2025-10-19 18:48:29&quot;,
+  &quot;createdTime&quot;: &quot;2025-10-15 10:30:00&quot;,
+  &quot;extension&quot;: &quot;.txt&quot;
+}
+</code></pre>
+<ul>
+<li>isDirectory / readonly / hidden / system : booléens natifs</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-traitement-multimédia" tabindex="-1">7. Traitement multimédia <a class="doc-anchor" href="#7-traitement-multimédia" aria-hidden="true">#</a></h2>
+<p>Le quintette média fait appel, côté C++, à des outils CLI tiers situés sous <code>bin64\Platform\</code>. Tous, sauf <code>ffprobeRun</code>, sont des <strong>liaisons asynchrones</strong> (exécution dans un thread d'arrière-plan, sans blocage du thread UI) ; les traitements par lot sont sériels, un seul sous-processus s'exécute à la fois, et <code>Zen.cancelRun()</code> permet d'interrompre l'exécution en cours (en cas d'annulation, retour de <code>errorMsg: &quot;cancelled&quot;</code>).</p>
+<h3 id="1-exécuter-une-commande-magick-asynchrone" tabindex="-1">1. Exécuter une commande magick (asynchrone) <a class="doc-anchor" href="#1-exécuter-une-commande-magick-asynchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.imageRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>args : arguments complets de la ligne de commande magick (magick.exe lui-même exclu), assemblés par le front-end. Les chemins doivent être entourés de guillemets doubles, par exemple <code>&quot;D:\\in.jpg&quot; -resize 800x600 &quot;D:\\out.jpg&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Remarque : le côté C++ n'assemble pas les arguments, il exécute simplement <code>magick.exe &lt;args&gt;</code> et capture le résultat. Si error est non 0, errorMsg transmet le stderr de magick ; stdout est la sortie standard de magick (résultat des commandes identify, etc.)</p>
+</li>
+</ul>
+<h3 id="2-exécuter-une-commande-ffmpeg-asynchrone" tabindex="-1">2. Exécuter une commande ffmpeg (asynchrone) <a class="doc-anchor" href="#2-exécuter-une-commande-ffmpeg-asynchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffmpegRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>args : arguments complets de la ligne de commande ffmpeg (ffmpeg.exe lui-même exclu), assemblés par le front-end. Les chemins doivent être entourés de guillemets doubles, par exemple <code>-i &quot;D:\in.mp4&quot; -vf &quot;scale=1280:720&quot; -c:v libx264 -crf 23 &quot;D:\out.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Remarque : le côté C++ n'assemble pas les arguments, il exécute simplement <code>ffmpeg.exe &lt;args&gt;</code> et capture le résultat. Si error est non 0, errorMsg transmet le stderr de ffmpeg ; stdout est la sortie standard de ffmpeg. Le traitement vidéo est long ; délai d'attente par défaut côté C++ : 1800s</p>
+</li>
+</ul>
+<h3 id="3-exécuter-une-commande-ffprobe-sondage-de-métadonnées-synchrone" tabindex="-1">3. Exécuter une commande ffprobe (sondage de métadonnées, synchrone) <a class="doc-anchor" href="#3-exécuter-une-commande-ffprobe-sondage-de-métadonnées-synchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffprobeRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>args : arguments complets de la ligne de commande ffprobe (ffprobe.exe lui-même exclu). Usage courant : <code>-v quiet -print_format json -show_format -show_streams &quot;D:\in.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;{ ...json... }&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Remarque : le côté C++ exécute simplement <code>ffprobe.exe &lt;args&gt;</code> et retourne. stdout est généralement du JSON, à analyser côté front. Le sondage est très rapide ; liaison synchrone conservée, délai par défaut : 30s</p>
+</li>
+</ul>
+<h3 id="4-exécuter-une-commande-pdfcpu-asynchrone" tabindex="-1">4. Exécuter une commande pdfcpu (asynchrone) <a class="doc-anchor" href="#4-exécuter-une-commande-pdfcpu-asynchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pdfRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>args : arguments complets de la ligne de commande pdfcpu (pdfcpu.exe lui-même exclu), assemblés par le front-end. Les chemins doivent être entourés de guillemets doubles, par exemple <code>merge &quot;D:\out.pdf&quot; &quot;D:\in1.pdf&quot; &quot;D:\in2.pdf&quot; --force</code></li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Remarque : le côté C++ n'assemble pas les arguments, il exécute simplement <code>pdfcpu.exe &lt;args&gt;</code> et capture le résultat. Si error est non 0, errorMsg transmet le stderr de pdfcpu ; stdout est la sortie standard de pdfcpu (résultat des commandes <code>info -j</code>, etc.). Délai par défaut côté C++ : 1800s</p>
+</li>
+</ul>
+<h3 id="5-exécuter-une-commande-ghostscript-asynchrone" tabindex="-1">5. Exécuter une commande Ghostscript (asynchrone) <a class="doc-anchor" href="#5-exécuter-une-commande-ghostscript-asynchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.gsRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>args : arguments complets de la ligne de commande Ghostscript (gswin64c.exe lui-même exclu), assemblés par le front-end. Les chemins doivent être entourés de guillemets doubles, par exemple <code>-sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=150 -sOutputFile=&quot;D:\out.pdf&quot; &quot;D:\in.pdf&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Remarque : le côté C++ n'assemble pas les arguments, il exécute simplement <code>Platform\Ghostscript\gswin64c.exe &lt;args&gt;</code> et capture le résultat. Si error est non 0, errorMsg transmet le stderr de Ghostscript. Délai par défaut côté C++ : 1800s. Actuellement utilisé pour l'étape de compression (optimize) des outils PDF ; les autres opérations PDF passent toujours par <code>pdfRun</code> (pdfcpu)</p>
+</li>
+</ul>
+<h3 id="6-annuler-le-sous-processus-multimédia-en-cours" tabindex="-1">6. Annuler le sous-processus multimédia en cours <a class="doc-anchor" href="#6-annuler-le-sous-processus-multimédia-en-cours" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.cancelRun() : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées : aucune</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0
+}
+</code></pre>
+</li>
+<li>
+<p>Remarque : déclenche le signal d'annulation et termine le sous-processus <code>imageRun</code>/<code>ffmpegRun</code>/<code>pdfRun</code>/<code>gsRun</code> en cours d'exécution (<code>TerminateProcess</code>). L'appel annulé retourne <code>{error:2, errorMsg:&quot;cancelled&quot;}</code>. Les traitements par lot sont sériels, un seul sous-processus s'exécute à la fois.</p>
+</li>
+</ul>
+<h2 id="8-capture-décran-et-ocr" tabindex="-1">8. Capture d'écran et OCR <a class="doc-anchor" href="#8-capture-décran-et-ocr" aria-hidden="true">#</a></h2>
+<h3 id="1-capture-décran-épingler-sur-le-bureau" tabindex="-1">1. Capture d'écran / épingler sur le bureau <a class="doc-anchor" href="#1-capture-décran-épingler-sur-le-bureau" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.screenCap(mode:string, wait:bool, file: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>mode : mode</p>
+<ul>
+<li>
+<p>normal : standard</p>
+</li>
+<li>
+<p>long : capture longue</p>
+</li>
+<li>
+<p>fast : capture rapide vers le presse-papiers (sans annotation, adaptée à l'OCR)</p>
+</li>
+<li>
+<p>quickocr : après sélection d'une zone par glissement, OCR + traduction immédiats ; la traduction est affichée épinglée à l'écran à l'emplacement du texte d'origine de la sélection (OCR-traduction rapide)</p>
+</li>
+<li>
+<p>pinClipboard : épingler l'image du presse-papiers sur le bureau</p>
+</li>
+<li>
+<p>pinFile : épingler l'image d'un fichier image sur le bureau</p>
+</li>
+<li>
+<p>pinArea : capturer la zone d'écran indiquée et l'épingler sur le bureau à cet emplacement (param prend &quot;x,y,w,h&quot; en pixels physiques)</p>
+</li>
+<li>
+<p>pinWin : capturer la zone client de la fenêtre indiquée et l'épingler sur le bureau à cet emplacement (param prend un HWND décimal)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>wait : attendre la fin de la capture ou non</p>
+</li>
+<li>
+<p>param: chemin du fichier (pinFile) ; chaîne de zone &quot;x,y,w,h&quot; (pinArea) ; HWND décimal (pinWin)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-initialisation-de-locr" tabindex="-1">2. Initialisation de l'OCR <a class="doc-anchor" href="#2-initialisation-de-locr" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrInit(lang: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>lang : langue</p>
+<ul>
+<li>
+<p>zh-CN : chinois simplifié</p>
+</li>
+<li>
+<p>zh-TW : chinois traditionnel</p>
+</li>
+<li>
+<p>en-US : anglais</p>
+</li>
+<li>
+<p>ja-JP : japonais</p>
+</li>
+<li>
+<p>ko-KR : coréen</p>
+</li>
+<li>
+<p>ru-RU : russe</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-reconnaissance-ocr-asynchrone" tabindex="-1">3. Reconnaissance OCR (asynchrone) <a class="doc-anchor" href="#3-reconnaissance-ocr-asynchrone" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrRecognition(image: string) : object
+</code></pre>
+<p>L'OCR est une opération longue : <strong>liaison asynchrone</strong>, retour via une Promise.</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>image : image, encodée en base64</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;result&quot;: {
+        &quot;code&quot;: 100,
+        &quot;data&quot;: [
+            {
+                &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+                &quot;score&quot;: 0.9605724896703448,
+                &quot;text&quot;: &quot;有发热症状患者&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>result : résultat de la reconnaissance</p>
+<ul>
+<li>
+<p>code : code, fixé à 100</p>
+</li>
+<li>
+<p>data : ensemble des résultats</p>
+<ul>
+<li>
+<p>box : position du texte (coordonnées des 4 coins)</p>
+</li>
+<li>
+<p>text : texte reconnu</p>
+</li>
+<li>
+<p>score : score de reconnaissance</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-chiffrement-et-déchiffrement" tabindex="-1">9. Chiffrement et déchiffrement <a class="doc-anchor" href="#9-chiffrement-et-déchiffrement" aria-hidden="true">#</a></h2>
+<h3 id="1-chiffrer-des-données" tabindex="-1">1. Chiffrer des données <a class="doc-anchor" href="#1-chiffrer-des-données" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.encrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>target : données à chiffrer</p>
+<ul>
+<li>
+<p>si type=&quot;text&quot; : chaîne de texte</p>
+</li>
+<li>
+<p>si type=&quot;data&quot; : données binaires encodées en Base64</p>
+</li>
+<li>
+<p>si type=&quot;hex&quot; : chaîne hexadécimale</p>
+</li>
+<li>
+<p>si type=&quot;file&quot; : chemin de fichier</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm : algorithme de chiffrement</p>
+<ul>
+<li>
+<p>chiffrement symétrique : &quot;aes-128-cbc&quot;, &quot;aes-192-cbc&quot;, &quot;aes-256-cbc&quot;, &quot;aes-128-ecb&quot;, &quot;aes-256-ecb&quot;, &quot;aes-128-ctr&quot;, &quot;aes-256-ctr&quot;, &quot;des-cbc&quot;, &quot;des-ecb&quot;, &quot;des-ede3-cbc&quot; (3DES), &quot;des-ede3-ecb&quot;, &quot;rc4&quot;, &quot;bf-ecb&quot; (Blowfish), &quot;rc2-cbc&quot;, &quot;sm4-cbc&quot;, &quot;sm4-ecb&quot;, &quot;sm4-ctr&quot;</p>
+</li>
+<li>
+<p>chiffrement asymétrique : &quot;rsa-pkcs1&quot;, &quot;rsa-oaep&quot; (RSA, chiffrement par clé publique, déchiffrement par clé privée), &quot;sm2&quot; (courbe elliptique nationales sm2p256v1, chiffrement par clé publique, déchiffrement par clé privée ; traite des données de longueur quelconque en une seule passe, sans découpage)</p>
+</li>
+<li>
+<p>key/iv en Base64 ; convertis en interne en hexadécimal puis transmis sous la forme <code>enc -K &lt;hex&gt; -iv &lt;hex&gt;</code>, la longueur de clé doit correspondre exactement à l'algorithme</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type : type d'entrée (par défaut &quot;text&quot;)</p>
+<ul>
+<li>
+<p>&quot;text&quot; : données textuelles</p>
+</li>
+<li>
+<p>&quot;data&quot; : données binaires encodées en Base64</p>
+</li>
+<li>
+<p>&quot;hex&quot; : chaîne hexadécimale</p>
+</li>
+<li>
+<p>&quot;file&quot; : chemin de fichier</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key : pour le symétrique, clé encodée en Base64 ; pour l'asymétrique (rsa-*, sm2), texte PEM (clé publique pour chiffrer, clé privée pour déchiffrer ; transmise telle quelle, sans décodage Base64)</p>
+</li>
+<li>
+<p>iv : vecteur d'initialisation encodé en Base64 (optionnel, requis par certains algorithmes ; ignoré en asymétrique)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的加密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;text&quot;,
+  &quot;inputSize&quot;: 1024,
+  &quot;outputSize&quot;: 1040
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-déchiffrer-des-données" tabindex="-1">2. Déchiffrer des données <a class="doc-anchor" href="#2-déchiffrer-des-données" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.decrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>target : données à déchiffrer</p>
+<ul>
+<li>
+<p>si type=&quot;data&quot; : texte chiffré encodé en Base64</p>
+</li>
+<li>
+<p>si type=&quot;file&quot; : chemin du fichier chiffré</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm : algorithme de chiffrement (identique à encrypt)</p>
+</li>
+<li>
+<p>type : type d'entrée (par défaut &quot;data&quot;)</p>
+<ul>
+<li>
+<p>&quot;data&quot; : texte chiffré encodé en Base64</p>
+</li>
+<li>
+<p>&quot;file&quot; : chemin du fichier chiffré</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key : pour le symétrique, clé encodée en Base64 ; pour l'asymétrique (rsa-*, sm2), texte PEM (clé publique pour chiffrer, clé privée pour déchiffrer ; transmise telle quelle, sans décodage Base64)</p>
+</li>
+<li>
+<p>iv : vecteur d'initialisation encodé en Base64 (optionnel ; ignoré en asymétrique)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的解密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;data&quot;,
+  &quot;inputSize&quot;: 1040,
+  &quot;outputSize&quot;: 1024
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-générer-une-clé" tabindex="-1">3. Générer une clé <a class="doc-anchor" href="#3-générer-une-clé" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateKey(algorithm: string, bits: string = '') : object
+</code></pre>
+<p>Point d'entrée unifié de génération de clés (générées par le openssl.exe intégré, le front-end n'a pas besoin de dépendre du WebCrypto du navigateur).</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>algorithm : nom de l'algorithme</p>
+<ul>
+<li>
+<p>symétrique : aes-128-cbc / aes-256-cbc / des-cbc / des-ede3-cbc / sm4-cbc / sm4-ecb / sm4-ctr / rc2-cbc / rc4 / bf-ecb, etc. (longueur de clé déduite du nom de l'algorithme)</p>
+</li>
+<li>
+<p>asymétrique : &quot;rsa&quot; (bits est effectif) / &quot;sm2&quot; (courbe fixe sm2p256v1)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>bits : taille de la clé RSA (&quot;2048&quot;/&quot;4096&quot;, 2048 par défaut) ; ignorée pour les algorithmes symétriques et SM2</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">// 对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;key&quot;: &quot;Base64编码的密钥&quot; }
+// 非对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;sm2&quot;, &quot;publicKey&quot;: &quot;-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n&quot;, &quot;privateKey&quot;: &quot;-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n&quot; }
+</code></pre>
+</li>
+</ul>
+<h3 id="4-générer-un-iv" tabindex="-1">4. Générer un IV <a class="doc-anchor" href="#4-générer-un-iv" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateIv(algorithm: string) : object
+</code></pre>
+<p>Génère un IV aléatoire selon la taille de bloc de l'algorithme symétrique (généré par le openssl.exe intégré).</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>algorithm : nom de l'algorithme symétrique (même liste que les algorithmes symétriques de encrypt)</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;iv&quot;: &quot;Base64编码的IV&quot; }
+</code></pre>
+<p>Remarque : taille de bloc AES/SM4 : 16 octets ; DES/3DES/RC2 : 8 octets ; le mode ECB et les chiffrements de flux (rc4) n'ont pas besoin d'IV, <code>iv</code> retourne une chaîne vide.</p>
+</li>
+</ul>
+<h3 id="5-calculer-un-hash" tabindex="-1">5. Calculer un hash <a class="doc-anchor" href="#5-calculer-un-hash" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.calcHash(target: string, algorithm: string, type?: string, key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>target : cible du calcul, dont le sens varie selon type</p>
+<ul>
+<li>
+<p>si type=&quot;file&quot; : chemin de fichier</p>
+</li>
+<li>
+<p>si type=&quot;text&quot; : chaîne de texte (empreinte calculée en UTF-8)</p>
+</li>
+<li>
+<p>si type=&quot;data&quot; : données binaires encodées en Base64</p>
+</li>
+<li>
+<p>si type=&quot;hex&quot; : chaîne hexadécimale</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm : algorithme de hachage</p>
+<ul>
+<li>
+<p>&quot;md5&quot;</p>
+</li>
+<li>
+<p>&quot;sha1&quot;</p>
+</li>
+<li>
+<p>&quot;sha224&quot;</p>
+</li>
+<li>
+<p>&quot;sha256&quot;</p>
+</li>
+<li>
+<p>&quot;sha384&quot;</p>
+</li>
+<li>
+<p>&quot;sha512&quot;</p>
+</li>
+<li>
+<p>&quot;ripemd160&quot;</p>
+</li>
+<li>
+<p>&quot;sm3&quot; (empreinte SM3 nationales, 256 bits / 64 chiffres hexadécimaux)</p>
+</li>
+<li>
+<p>&quot;sha3-224&quot; / &quot;sha3-256&quot; / &quot;sha3-384&quot; / &quot;sha3-512&quot; (SHA-3 / Keccak, NIST FIPS 202)</p>
+</li>
+<li>
+<p>&quot;blake2b512&quot; / &quot;blake2s256&quot; (BLAKE2, empreintes modernes haute performance)</p>
+</li>
+<li>
+<p>&quot;crc32&quot; (somme de contrôle CRC32, 8 chiffres hexadécimaux)</p>
+</li>
+<li>
+<p>&quot;crc16&quot; (somme de contrôle CRC16, 4 chiffres hexadécimaux)</p>
+</li>
+<li>
+<p>&quot;checksum&quot; (somme cumulée des octets, 8 chiffres hexadécimaux)</p>
+</li>
+<li>
+<p>&quot;hmac-md5&quot; / &quot;hmac-sha1&quot; / &quot;hmac-sha256&quot; / &quot;hmac-sha512&quot; / &quot;hmac-sm3&quot; / &quot;hmac-sha3-256&quot; / &quot;hmac-sha3-512&quot; (HMAC ; le 4e paramètre key est la clé, sortie MAC en hexadécimal)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type : type d'entrée (optionnel, &quot;file&quot; par défaut)</p>
+<ul>
+<li>
+<p>&quot;file&quot; : calculer le hash d'un fichier</p>
+</li>
+<li>
+<p>&quot;text&quot; : calculer le hash d'un texte</p>
+</li>
+<li>
+<p>&quot;data&quot; : calculer le hash de données binaires (target doit être une chaîne Base64)</p>
+</li>
+<li>
+<p>&quot;hex&quot; : calculer le hash d'une chaîne hexadécimale (target est une chaîne hexadécimale, décodée puis calculée par octets)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;hash&quot;: &quot;D41D8CD98F00B204E9800998ECF8427E&quot;,
+  &quot;algorithm&quot;: &quot;md5&quot;,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="10-historique-du-presse-papiers" tabindex="-1">10. Historique du presse-papiers <a class="doc-anchor" href="#10-historique-du-presse-papiers" aria-hidden="true">#</a></h2>
+<h3 id="1-rechercher-dans-le-presse-papiers" tabindex="-1">1. Rechercher dans le presse-papiers <a class="doc-anchor" href="#1-rechercher-dans-le-presse-papiers" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchClip(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>keyword : mot-clé de recherche</p>
+</li>
+<li>
+<p>maxResults : nombre maximal d'enregistrements</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;clips&quot;: [
+    {
+      &quot;id&quot;: &quot;1235642340977&quot;,
+      &quot;name&quot;: &quot;Weixin.exe&quot;,
+      &quot;text&quot;: &quot;文本内容&quot;,
+      &quot;ocrJson&quot;: &quot;{\&quot;code\&quot;:100,\&quot;data\&quot;:[...]}&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:29&quot;,
+      &quot;image&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0
+    },
+    {
+      &quot;id&quot;: &quot;235634234232&quot;,
+      &quot;name&quot;: &quot;MarkText.exe&quot;,
+      &quot;text&quot;: &quot;function&quot;,
+      &quot;ocrJson&quot;: &quot;&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:21&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;score&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>clips : liste de l'historique du presse-papiers</p>
+<ul>
+<li>
+<p>id : id de l'enregistrement, identifiant unique</p>
+</li>
+<li>
+<p>name : nom du processus source de la copie</p>
+</li>
+<li>
+<p>text : contenu textuel (si image n'est pas vide, texte OCR de l'image)</p>
+</li>
+<li>
+<p>image : contenu de l'image, format base64</p>
+</li>
+<li>
+<p>dateCreated : date de création</p>
+</li>
+<li>
+<p>ocrJson : contenu formaté de la sortie OCR de l'image</p>
+<ul>
+<li>
+<p>box : position du texte (coordonnées des 4 coins)</p>
+</li>
+<li>
+<p>text : texte reconnu</p>
+</li>
+<li>
+<p>score : score de reconnaissance</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;code&quot;: 100,
+    &quot;data&quot;: [
+        {
+            &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+            &quot;score&quot;: 0.9605724896703448,
+            &quot;text&quot;: &quot;有发热症状患者&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-supprimer-un-enregistrement" tabindex="-1">2. Supprimer un enregistrement <a class="doc-anchor" href="#2-supprimer-un-enregistrement" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deleteClip(id: string) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>id : id de l'enregistrement</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-vider-les-enregistrements" tabindex="-1">3. Vider les enregistrements <a class="doc-anchor" href="#3-vider-les-enregistrements" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.clearClip() : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées : aucune</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="11-favoris" tabindex="-1">11. Favoris <a class="doc-anchor" href="#11-favoris" aria-hidden="true">#</a></h2>
+<h3 id="1-rechercher-des-favoris" tabindex="-1">1. Rechercher des favoris <a class="doc-anchor" href="#1-rechercher-des-favoris" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchBookmark(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>keyword : mot-clé de recherche</p>
+</li>
+<li>
+<p>maxResults : nombre maximal d'enregistrements</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;bookmarks&quot;: [
+        {
+            &quot;id&quot;: &quot;13568723452&quot;,
+            &quot;name&quot;: &quot;DeepSeek | 深度求索&quot;,
+            &quot;url&quot;: &quot;https://www.deepseek.com/&quot;,
+            &quot;dateAdded&quot;: &quot;2018-12-19 21:20:48&quot;,
+            &quot;dateLastUsed&quot;: &quot;2025-05-21 15:04:06&quot;,
+            &quot;visitCount&quot;: 37,
+            &quot;score&quot;: 80
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>bookmarks : liste des favoris</p>
+<ul>
+<li>
+<p>id : ID unique</p>
+</li>
+<li>
+<p>name : nom</p>
+</li>
+<li>
+<p>url : lien</p>
+</li>
+<li>
+<p>dateAdded : date d'ajout</p>
+</li>
+<li>
+<p>dateLastUsed : date de dernière utilisation</p>
+</li>
+<li>
+<p>visitCount : nombre d'utilisations</p>
+</li>
+<li>
+<p>score : score de recherche</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-ouvrir-un-favori" tabindex="-1">2. Ouvrir un favori <a class="doc-anchor" href="#2-ouvrir-un-favori" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openBookmark(id: string, privacyMode: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>id : id</p>
+</li>
+<li>
+<p>privacyMode : mode privé</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="12-exécution-de-commandes" tabindex="-1">12. Exécution de commandes <a class="doc-anchor" href="#12-exécution-de-commandes" aria-hidden="true">#</a></h2>
+<h3 id="1-exécuter-une-ligne-de-commande" tabindex="-1">1. Exécuter une ligne de commande <a class="doc-anchor" href="#1-exécuter-une-ligne-de-commande" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runCmd(cmd: string, admin : bool) : object
+</code></pre>
+<p>Ouvre une fenêtre de ligne de commande visible via <code>cmd.exe /k &lt;cmd&gt;</code> et y exécute la commande (la fenêtre reste ouverte).</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>cmd : commande</p>
+</li>
+<li>
+<p>admin : exécuter en tant qu'administrateur ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-exécuter-un-programme-quelconque" tabindex="-1">2. Exécuter un programme quelconque <a class="doc-anchor" href="#2-exécuter-un-programme-quelconque" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runAny(cmdExe: string, cmdArgs: string, admin : bool) : object
+</code></pre>
+<p>Lance directement n'importe quel exécutable ou URL (les URLs sont ouvertes par l'application par défaut du système, par ex. le navigateur).</p>
+<ul>
+<li>
+<p>Entrées</p>
+<ul>
+<li>
+<p>cmdExe : chemin de la commande ou URL</p>
+</li>
+<li>
+<p>cmdArgs : arguments de la commande</p>
+</li>
+<li>
+<p>admin : exécuter en tant qu'administrateur ou non</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="13-mise-à-jour" tabindex="-1">13. Mise à jour <a class="doc-anchor" href="#13-mise-à-jour" aria-hidden="true">#</a></h2>
+<p>La mise à jour est assurée par un processus distinct, <code>yyzUpdater.exe</code> ; le processus principal se contente de le lancer et de sonder son état.</p>
+<h3 id="1-vérifier-les-mises-à-jour" tabindex="-1">1. Vérifier les mises à jour <a class="doc-anchor" href="#1-vérifier-les-mises-à-jour" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.checkUpdate() : object
+</code></pre>
+<p>Lance <code>yyzUpdater.exe --check-and-apply</code> (détection + téléchargement + application, tout en un).</p>
+<ul>
+<li>
+<p>Entrées : aucune</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+<p>Remarque : <code>error:0</code> signifie seulement que le programme de mise à jour a été lancé avec succès, <strong>pas le résultat de la mise à jour</strong>. L'état de progression/de disponibilité s'interroge via <code>getUpdateState</code>.</p>
+</li>
+</ul>
+<h3 id="2-obtenir-létat-de-la-mise-à-jour" tabindex="-1">2. Obtenir l'état de la mise à jour <a class="doc-anchor" href="#2-obtenir-létat-de-la-mise-à-jour" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getUpdateState() : object
+</code></pre>
+<p>Sonde en temps réel l'état de la mise à jour (pour l'interrogation par la zone de notification) :</p>
+<ul>
+<li>
+<p>l'updater s'exécute-t-il → mutex à instance unique <code>Local\yyzUpdater_SingleInstance</code></p>
+</li>
+<li>
+<p>un téléchargement est-il prêt à être appliqué → existence de <code>%APPDATA%\yyzTools\Update\update.ready</code> (si présent, analyse de la version du paquet main qu'il contient)</p>
+</li>
+<li>
+<p>une vérification manuelle est-elle terminée sans mise à jour → marqueur <code>%APPDATA%\yyzTools\Update\update.result</code> (<strong>lu puis supprimé</strong>)</p>
+</li>
+<li>
+<p>Entrées : aucune</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
+</code></pre>
+<ul>
+<li>
+<p>status : <code>idle</code> (aucune activité de mise à jour) / <code>checking</code> (programme de mise à jour en cours) / <code>ready</code> (téléchargement terminé, mise à niveau possible)</p>
+</li>
+<li>
+<p>version : renseigné uniquement en état <code>ready</code>, numéro de la nouvelle version à appliquer (paquet main) ; chaîne vide sinon</p>
+</li>
+<li>
+<p>lastResult : renseigné uniquement en état <code>idle</code>, résultat de la dernière vérification <strong>manuelle</strong> (<code>--check-and-apply</code>) : <code>uptodate</code> (déjà à jour) / <code>error</code> (échec de la vérification) ; chaîne vide sans marqueur. Ce marqueur est écrit par l'updater et supprimé immédiatement après lecture par cette interface : il n'est donc <strong>retourné qu'une seule fois</strong>, pour qu'un seul Toast côté front ; le <code>--check</code> silencieux n'écrit pas de marqueur et ne produit aucune notification.</p>
+</li>
+<li>
+<p>Priorité des états : <code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-appliquer-une-mise-à-jour-déjà-téléchargée" tabindex="-1">3. Appliquer une mise à jour déjà téléchargée <a class="doc-anchor" href="#3-appliquer-une-mise-à-jour-déjà-téléchargée" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.applyUpdate() : object
+</code></pre>
+<p>Lance <code>yyzUpdater.exe --apply</code> : lecture de <code>update.ready</code> → attente de la sortie du processus principal → remplacement des fichiers → redémarrage du processus principal. À appeler uniquement quand <code>getUpdateState</code> retourne <code>ready</code>.</p>
+<ul>
+<li>
+<p>Entrées : aucune</p>
+</li>
+<li>
+<p>Sorties</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h2 id="consignes-de-sécurité" tabindex="-1">⚠️ Consignes de sécurité <a class="doc-anchor" href="#consignes-de-sécurité" aria-hidden="true">#</a></h2>
+<p>L'API native expose aux développeurs de modules l'intégralité, <strong>sans restriction</strong>, des capacités système du processus hôte, y compris des opérations <strong>à haut risque</strong> telles que la lecture/écriture et la suppression de fichiers, la création et l'arrêt de processus, le contrôle de fenêtres, la lecture/écriture du presse-papiers, la modification du registre et des réglages système, le téléchargement réseau et l'exécution de commandes.</p>
+<p>Ces interfaces <strong>n'ont pas de boîte de dialogue de permissions, pas d'isolation en bac à sable (sandbox), pas de mécanisme d'annulation</strong> — un appel prend effet immédiatement avec les droits de l'utilisateur courant ; un usage erroné peut entraîner une perte de données définitive ou un dysfonctionnement du système.</p>
+<p>Par conséquent, veillez impérativement à :</p>
+<ul>
+<li><strong>Évaluer vous-même la sécurité</strong> : avant d'appeler une interface, assurez-vous que les paramètres (notamment les chemins, les noms de processus, les lignes de commande) proviennent de sources fiables et sont suffisamment validés ; pour les opérations irréversibles telles que la suppression, l'écrasement ou l'arrêt d'un processus, une sauvegarde préalable ou une confirmation auprès de l'utilisateur est recommandée.</li>
+<li><strong>Se méfier des entrées non fiables</strong> : n'injectez jamais directement, sans validation, des entrées utilisateur, des réponses réseau ou des données tierces dans les paramètres d'interface ; méfiez-vous du path traversal et de l'injection de commandes.</li>
+<li><strong>Principe du moindre privilège</strong> : ne demandez que les capacités réellement nécessaires à votre activité, évitez par facilité des interfaces au périmètre d'impact plus large.</li>
+<li><strong>Responsabilité personnelle</strong> : le développeur assume l'entière responsabilité de toutes les conséquences résultant de l'utilisation de cette API, y compris mais sans s'y limiter : perte de données, dommages système et risques de sécurité.</li>
+</ul>
+</blockquote>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="Ressources associées">
+    <a class="sdk-link" href="/fr/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Démarrage rapide</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Télécharger le projet d’exemple</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/fr/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Boîte à outils de productivité pour le bureau Windows : priorité au local, gratuit à vie.</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Produit</h3>
+            <a href="/fr/features.html">Fonctions</a>
+            <a href="/fr/download.html">Télécharger</a>
+            <a href="/fr/changelog.html">Nouveautés</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Ressources</h3>
+            <a href="/fr/sdk.html">Développeurs</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Signaler un problème</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Mentions légales</h3>
+            <a href="/fr/agreement.html">Conditions d’utilisation</a>
+            <a href="/fr/privacy.html">Politique de confidentialité</a>
+            
+            <a class="js-email" href="#">Adresse e-mail</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · Tous droits réservés</p>
+        <p class="footer-fine">Windows est une marque déposée de Microsoft Corporation. Ce site n’est pas affilié à Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

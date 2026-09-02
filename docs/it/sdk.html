@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creare un modulo yyzTools — guida introduttiva</title>
+<meta name="description" content="Crea da zero una web app che gira dentro yyzTools: struttura della pagina, host della finestra, i18n, API native asincrone e persistenza della configurazione. Senza build.">
+
+<meta property="og:title" content="Creare un modulo yyzTools — guida introduttiva">
+<meta property="og:description" content="Crea da zero una web app che gira dentro yyzTools: struttura della pagina, host della finestra, i18n, API native asincrone e persistenza della configurazione. Senza build.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/it/sdk.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="it">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creare un modulo yyzTools — guida introduttiva">
+<meta name="twitter:description" content="Crea da zero una web app che gira dentro yyzTools: struttura della pagina, host della finestra, i18n, API native asincrone e persistenza della configurazione. Senza build.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/it/sdk.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/it/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/it/" >Home</a>
+            <a href="/it/features.html" >Funzioni</a>
+            <a href="/it/download.html" >Download</a>
+            <a href="/it/changelog.html" >Novità</a>
+            
+            <a href="/it/sdk.html" class=&#34;on&#34;>Sviluppatori</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Feedback</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="Lingua">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">Italiano</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/sdk.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk.html" hreflang="it"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/it/download.html">Download gratuito</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Sviluppatori","item":"https://yyztools.com/it/sdk.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Guida introduttiva","description":"Crea da zero una web app che gira dentro yyzTools: struttura della pagina, host della finestra, i18n, API native asincrone e persistenza della configurazione. Senza build.","inLanguage":"it","url":"https://yyztools.com/it/sdk.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Beginner"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> In questa pagina</summary>
+            <nav aria-label="In questa pagina">
+                <ol>
+                    
+                    <li>
+                        <a href="#1-struttura-della-directory-campione-e-modalità-di-distribuzione">1. Struttura della directory campione e modalità di distribuzione</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-panoramica-dellarchitettura-come-viene-eseguita-unapp-web">2. Panoramica dell&#39;architettura: come viene eseguita un&#39;app Web</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-struttura-della-pagina-js-nativo-quattro-file">3. Struttura della pagina (JS nativo, quattro file)</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#indexhtml">index.html</a></li>
+                            
+                            <li><a href="#filefinderjs-logica-principale">filefinder.js (logica principale)</a></li>
+                            
+                            <li><a href="#struttura-di-ritorno-di-searchfile-error-files">Struttura di ritorno di searchFile (`{ error, files[] }`)</a></li>
+                            
+                            <li><a href="#riepilogo-delle-interfacce-richiamate-in-questo-esempio">Riepilogo delle interfacce richiamate in questo esempio</a></li>
+                            
+                            <li><a href="#regole-di-chiamata-quattro-regole-ferree">Regole di chiamata (quattro regole ferree)</a></li>
+                            
+                            <li><a href="#riferimento-rapido-alle-interfacce-comuni-ulteriori-capacità-oltre-allesempio">Riferimento rapido alle interfacce comuni (ulteriori capacità oltre all&#39;esempio)</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-creare-il-file-di-modulo-zenmod-finestra-host">4. Creare il file di modulo .zenmod (finestra host)</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-testi-multilingua-approccio-a-dizionario">5. Testi multilingua (approccio a dizionario)</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-debug-e-integrazione">6. Debug e integrazione</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-riepilogo-dellesempio-minimo-completo">7. Riepilogo dell&#39;esempio minimo completo</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-note-sulla-sicurezza">8. Note sulla sicurezza</a>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>Guida introduttiva</h1>
+            <p class="doc-meta">Crea il tuo primo modulo senza strumenti di build</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="Risorse correlate">
+    <a class="sdk-link" href="/it/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Riferimento API</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Scarica il progetto di esempio</span>
+    </a>
+</nav>
+
+
+            <p>Questo documento è rivolto agli sviluppatori di moduli e mostra come creare da zero un'app Web in esecuzione all'interno del processo principale di yyzTools (prendendo come esempio il progetto campione dell'SDK <code>SDK_Sample</code> — un velocissimo motore di ricerca file). Copre: la struttura delle directory della pagina, la finestra host, l'i18n, le Native API asincrone (ricerca file su tutto il disco), l'apertura dei file, la persistenza della configurazione e il modello per aggiungere nuovi metodi nativi quando serve estendere le capacità C++.</p>
+<p>L'esempio è <strong>JS nativo puro, zero dipendenze di terze parti, senza build</strong>: non servono Vite / Alpine / FontAwesome; basta copiare le due directory <code>Web</code> e <code>Modules</code> nella directory di yyzTools.exe per eseguirlo.</p>
+<h2 id="1-struttura-della-directory-campione-e-modalità-di-distribuzione" tabindex="-1">1. Struttura della directory campione e modalità di distribuzione <a class="doc-anchor" href="#1-struttura-della-directory-campione-e-modalità-di-distribuzione" aria-hidden="true">#</a></h2>
+<pre><code>sdk/sample/
+  Web/                        ← copiare in &lt;directory di yyzTools.exe&gt;\Web\        (fusione con la directory Web esistente)
+    SDK_Sample/               ← directory autonoma dell'esempio, l'intera cartella è un modulo completo
+      index.html              # struttura della pagina (DOM nativo, posizioni dei testi marcate con data-i18n)
+      filefinder.js           # tutta la logica: ricerca / apertura / cronologia / Esc
+      filefinder.css          # stili della pagina (esclusivamente variabili --zen-*, adattamento automatico a tema chiaro/scuro)
+      i18n.js                 # dizionario dei testi (zh_cn / en)
+      lib/
+        zen_api.js            # classe wrapper ZenAPI (wrapper JS delle Native API, unica dipendenza di lib)
+        window_controls.css   # variabili del tema (--zen-*) + stili della barra di controllo finestra
+  Modules/                   ← copiare in &lt;directory di yyzTools.exe&gt;\Modules\    (fusione con la directory Modules esistente)
+    SDK_Sample.zenmod         # dichiarazione del modulo type:&quot;web&quot;, ModuleManager crea automaticamente la finestra host
+</code></pre>
+<p>Distribuzione:</p>
+<pre><code class="language-text">Copiare/fondere sdk/sample/Web     in  bin64\Web\
+Copiare/fondere sdk/sample/Modules in  bin64\Modules\
+Riavviare yyzTools.exe, cercare &quot;SDK样例工程&quot; nel pannello comandi per avviarlo
+</code></pre>
+<p>Convenzioni sui percorsi letti dal programma principale:</p>
+<table>
+<thead>
+<tr>
+<th>Risorsa</th>
+<th>Posizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pagina</td>
+<td><code>&lt;dir exe&gt;\Web\{page}\index.html</code></td>
+</tr>
+<tr>
+<td>Modulo</td>
+<td><code>&lt;dir exe&gt;\Modules\&lt;categoria&gt;\*.zenmod</code> (scansione limitata a un livello di sottodirectory)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-panoramica-dellarchitettura-come-viene-eseguita-unapp-web" tabindex="-1">2. Panoramica dell'architettura: come viene eseguita un'app Web <a class="doc-anchor" href="#2-panoramica-dellarchitettura-come-viene-eseguita-unapp-web" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">Modules/SDK_Sample.zenmod   ← file di dichiarazione del modulo type:&quot;web&quot; (data-driven, senza scrivere C++)
+        │  il programma principale esegue la scansione dei .zenmod all'avvio
+        ▼
+Finestra host WebModule (finestra nativa + WebView2)
+        │  carica Web\SDK_Sample\index.html
+        ▼
+Web/SDK_Sample/             ← tutto il codice front-end (JS nativo, zero dipendenze)
+        │  window.Zen.xxx(...)  ←→  interfacce native registrate dal programma principale
+        ▼
+Manager C++ (file/processi/finestre/appunti/OCR...)
+</code></pre>
+<p>Conclusioni chiave:</p>
+<ul>
+<li>
+<p><strong>Non è necessario scrivere alcun codice C++</strong>. Un <code>.zenmod</code> con <code>type: &quot;web&quot;</code> viene trasformato automaticamente dal programma principale in una finestra host WebModule; dimensione della finestra, icona e nome multilingua sono tutti dichiarati nel file del modulo.</p>
+</li>
+<li>
+<p>Il modulo ottiene automaticamente: la ricerca nel pannello comandi (con indice pinyin), il binding dei tasti di scelta rapidi globali, il montaggio nel dock e la registrazione nella tabella dei nomi di <code>windowControl</code>.</p>
+</li>
+<li>
+<p>L'unico canale tra front-end e C++ è <code>window.Zen</code>; si raccomanda di chiamarlo sempre tramite la classe wrapper <code>ZenAPI</code> (l'esempio include già <code>lib/zen_api.js</code>).</p>
+</li>
+<li>
+<p>Le pagine senza build sono direttamente file statici: dopo le modifiche basta aggiornare la finestra (con <code>windowControl('sdk_sample','hide')</code> seguito da show, oppure riavviando l'exe), senza alcun passaggio di compilazione.</p>
+</li>
+</ul>
+<h2 id="3-struttura-della-pagina-js-nativo-quattro-file" tabindex="-1">3. Struttura della pagina (JS nativo, quattro file) <a class="doc-anchor" href="#3-struttura-della-pagina-js-nativo-quattro-file" aria-hidden="true">#</a></h2>
+<h3 id="indexhtml" tabindex="-1">index.html <a class="doc-anchor" href="#indexhtml" aria-hidden="true">#</a></h3>
+<p>Non include alcuna libreria di terze parti; i tre pulsanti della barra di controllo finestra usano caratteri Unicode come icone (− / □ / ×) e lo stile è fornito da <code>lib/window_controls.css</code>. Le posizioni dei testi sono marcate con <code>data-i18n</code> / <code>data-i18n-ph</code> e riempite in modo uniforme all'inizializzazione del JS. La struttura si divide in quattro blocchi: barra di ricerca, chip della cronologia di ricerca, barra di stato (numero di risultati + suggerimento sintassi), elenco dei risultati:</p>
+<pre><code class="language-html">&lt;div class=&quot;search-bar&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;searchInput&quot; class=&quot;search-input&quot; data-i18n-ph=&quot;inputPlaceholder&quot;
+           spellcheck=&quot;false&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;button class=&quot;search-btn&quot; id=&quot;btnSearch&quot; data-i18n=&quot;search&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;history-chips&quot; id=&quot;historyChips&quot;&gt; ... &lt;/div&gt;
+&lt;div class=&quot;status-bar&quot;&gt;
+    &lt;span id=&quot;statusText&quot; data-i18n=&quot;empty&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;syntax-hint&quot; data-i18n=&quot;syntaxHint&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;result-list&quot; id=&quot;resultList&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="filefinderjs-logica-principale" tabindex="-1">filefinder.js (logica principale) <a class="doc-anchor" href="#filefinderjs-logica-principale" aria-hidden="true">#</a></h3>
+<p>Cinque responsabilità, basta copiarle così come sono dall'esempio:</p>
+<ol>
+<li><strong>Controllo finestra</strong>: <code>ZenAPI.windowControl('sdk_sample', 'min'|'max'|'close'|'drag')</code>; il trascinamento della barra del titolo si attiva solo quando lo spostamento supera 5px; tasto Esc — se l'input ha il focus prima viene tolto il focus (blur), altrimenti si chiude la finestra.</li>
+<li><strong>Tema</strong>: registrare <code>window.__applyTheme</code> per ricevere le notifiche push dal C++ (il <code>data-theme</code> della prima schermata è iniettato dal C++, nessuna gestione JS necessaria).</li>
+<li><strong>i18n</strong>: leggere <code>getConfig().language</code>, prendere i testi dal dizionario e riempire gli elementi <code>data-i18n</code>; le frasi con segnaposto <code>{{count}}</code> vengono espanse con una funzione di interpolazione.</li>
+<li><strong>Ricerca</strong>: <code>searchFile(keyword, maxResults)</code> è un'interfaccia con <strong>binding asincrono</strong> (eseguita su un thread in background, non blocca la UI); Invio ricerca immediata, input con debounce di 300ms per la ricerca automatica; si usa un numero progressivo per scartare le risposte fuori ordine — il lato nativo ha un meccanismo a slot di ricerca (una nuova richiesta rimpiazzta direttamente la vecchia non ancora completata, e il vecchio Promise riceve un risultato vuoto); il numero progressivo del front-end impedisce che questo &quot;risultato vuoto in ritardo&quot; sovrascriva il rendering del nuovo risultato: i due meccanismi cooperano.</li>
+<li><strong>Operazioni sui risultati</strong>: <code>openFile(fullPath, false)</code> apre il file (idem con doppio clic; il secondo parametro indica &quot;con privilegi di amministratore&quot;); <code>openFileLocation(fullPath)</code> apre la directory che lo contiene; il percorso completo è composto da <code>path + '\\' + name</code>; l'icona usa direttamente il campo <code>icon</code> già presente nel risultato (base64); la dimensione del file viene formattata dal campo numerico <code>size</code>.</li>
+</ol>
+<h3 id="struttura-di-ritorno-di-searchfile-error-files" tabindex="-1">Struttura di ritorno di searchFile (<code>{ error, files[] }</code>) <a class="doc-anchor" href="#struttura-di-ritorno-di-searchfile-error-files" aria-hidden="true">#</a></h3>
+<p>Campi di ogni elemento di <code>files[]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> / <code>path</code></td>
+<td>stringa</td>
+<td>Nome del file / directory che lo contiene. Percorso completo = <code>path + '\\' + name</code></td>
+</tr>
+<tr>
+<td><code>dateModified</code></td>
+<td>stringa</td>
+<td>Data di modifica (testo in formato localizzato)</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>numero</td>
+<td>Dimensione del file in byte, <strong>numero nativo, usabile direttamente</strong></td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>stringa</td>
+<td>Icona base64, utilizzabile direttamente in <code>&lt;img src&gt;</code>, senza bisogno di richiamare <code>getFileIcon</code></td>
+</tr>
+<tr>
+<td><code>score</code></td>
+<td>numero</td>
+<td>Punteggio di pertinenza (il nativo ordina già per punteggio)</td>
+</tr>
+<tr>
+<td><code>isDir</code></td>
+<td>numero</td>
+<td><strong>1/0 numerico e non booleano nativo</strong> (percorso JSON costruito a mano), verificare con truthy o <code>=== 1</code>, non <code>=== true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="riepilogo-delle-interfacce-richiamate-in-questo-esempio" tabindex="-1">Riepilogo delle interfacce richiamate in questo esempio <a class="doc-anchor" href="#riepilogo-delle-interfacce-richiamate-in-questo-esempio" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Interfaccia</th>
+<th>Binding</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>searchFile(keyword, maxResults)</code></td>
+<td>asincrono</td>
+<td>Ricerca sull'indice MFT di tutto il disco, supporta la sintassi Everything (<code>size:&gt;100MB</code>, <code>ext:mp4</code>, <code>!ext:tmp</code>)</td>
+</tr>
+<tr>
+<td><code>openFile(path, admin)</code></td>
+<td>sincrono</td>
+<td>Apre file/directory (comportamento predefinito della shell), con <code>admin=true</code> con privilegi di amministratore</td>
+</tr>
+<tr>
+<td><code>openFileLocation(path)</code></td>
+<td>sincrono</td>
+<td>Individua il file in Esplora risorse</td>
+</tr>
+<tr>
+<td><code>getConfig(key?)</code></td>
+<td>sincrono</td>
+<td>Legge la configurazione: senza parametri restituisce tutto, con una key solo quella chiave (supporta percorsi con punto <code>a.b</code>)</td>
+</tr>
+<tr>
+<td><code>setConfig(patch, replace?)</code></td>
+<td>sincrono</td>
+<td>Scrittura a <strong>granularità ristretta</strong> della cronologia di ricerca: <code>setConfig({ sdk_sample: { history } })</code>; <code>replace=true</code> sostituzione totale (solo per import di backup)</td>
+</tr>
+<tr>
+<td><code>log(message)</code></td>
+<td>sincrono</td>
+<td>Log del front-end, scritto nel log del processo principale, utile per il debug</td>
+</tr>
+<tr>
+<td><code>windowControl(name, action)</code></td>
+<td>sincrono</td>
+<td>Riduzione a icona / massimizzazione / chiusura / trascinamento della finestra</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regole-di-chiamata-quattro-regole-ferree" tabindex="-1">Regole di chiamata (quattro regole ferree) <a class="doc-anchor" href="#regole-di-chiamata-quattro-regole-ferree" aria-hidden="true">#</a></h3>
+<pre><code class="language-js">import ZenAPI from './lib/zen_api.js';
+
+// 1. Per il controllo errori usare isOk() (error è sempre un numero: 0 successo, -1 indica un'eccezione di chiamata)
+const res = await ZenAPI.searchFile('yyztools', 200);
+if (!ZenAPI.isOk(res)) { ... }
+
+// 2. I campi booleani restituiti dalle interfacce sono booleani nativi, verificabili direttamente
+//    (eccezione uno: i valori di config hanno il tipo deciso dalla scrittura del front-end, in genere stringhe, fare attenzione alla normalizzazione nei confronti)
+//    (eccezione due: isDir del risultato di searchFile è 1/0 numerico — percorso JSON costruito a mano, usare truthy o === 1)
+const ex = await ZenAPI.exists(path);
+if (ex.exists === true) { ... }
+
+// 3. La scrittura della configurazione deve essere a granularità ristretta, vietata la riscrittura integrale
+await ZenAPI.setConfig({ sdk_sample: { history } });   // scrive solo la propria chiave
+
+// 4. Per le info app in batch per id usare getAppInfo, vietato ciclare su searchApp
+const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
+</code></pre>
+<p>Le interfacce asincrone (<code>getAppInfo</code> / <code>searchFile</code> / la cinquina media / <code>ocrRecognition</code>) vengono eseguite su thread in background; si noti che in un dato istante è in esecuzione un solo sottoprocesso media; per i task di lunga durata va fornito un punto di annullamento <code>cancelRun()</code>.</p>
+<h3 id="riferimento-rapido-alle-interfacce-comuni-ulteriori-capacità-oltre-allesempio" tabindex="-1">Riferimento rapido alle interfacce comuni (ulteriori capacità oltre all'esempio) <a class="doc-anchor" href="#riferimento-rapido-alle-interfacce-comuni-ulteriori-capacità-oltre-allesempio" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Interfaccia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leggere/scrivere la propria configurazione</td>
+<td><code>getConfig</code> / <code>setConfig</code> (patch a granularità ristretta) / <code>addConfig</code> (aggiunta a un elenco)</td>
+</tr>
+<tr>
+<td>Aprire/salvare file</td>
+<td><code>browseFile</code> / <code>browseDir</code> / <code>writeFile</code> / <code>readFile</code> (oltre 50MB usare <code>readFileChunk</code>)</td>
+</tr>
+<tr>
+<td>Ottenere directory di sistema</td>
+<td><code>getKnownDir('download')</code> ecc.</td>
+</tr>
+<tr>
+<td>Aprire pagine web/programmi esterni</td>
+<td><code>runAny('https://...', '')</code></td>
+</tr>
+<tr>
+<td>Copiare negli appunti</td>
+<td><code>navigator.clipboard</code> del front-end (per il testo non serve il nativo)</td>
+</tr>
+<tr>
+<td>Screenshot/OCR</td>
+<td><code>screenCap('fast', ...)</code> → <code>ocrRecognition(base64)</code> (entrambi asincroni)</td>
+</tr>
+<tr>
+<td>Richiamare la finestra di un altro modulo</td>
+<td><code>windowControl('translate', 'show')</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-creare-il-file-di-modulo-zenmod-finestra-host" tabindex="-1">4. Creare il file di modulo .zenmod (finestra host) <a class="doc-anchor" href="#4-creare-il-file-di-modulo-zenmod-finestra-host" aria-hidden="true">#</a></h2>
+<p>Creare un nuovo <code>.zenmod</code> in <code>Modules/&lt;categoria&gt;/</code> (file di esempio: <code>sdk/sample/Modules/SDK_Sample.zenmod</code>):</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;sdk_sample&quot;,
+    &quot;type&quot;: &quot;web&quot;,
+    &quot;name&quot;: { &quot;zh_cn&quot;: &quot;SDK样例工程&quot;, &quot;en&quot;: &quot;SDK Sample Project&quot;, &quot;...&quot;: &quot;共 12 门语言&quot; },
+    &quot;desc&quot;: { &quot;zh_cn&quot;: &quot;基于 MFT 索引的全盘急速文件搜索，支持 Everything 语法&quot;, &quot;en&quot;: &quot;...&quot; },
+    &quot;icon&quot;: &quot;fas fa-search&quot;,
+    &quot;winClassName&quot;: &quot;yyzTools::SdkSampleWindowClass&quot;,
+    &quot;width&quot;: 760,
+    &quot;height&quot;: 540,
+    &quot;layoutType&quot;: 34,
+    &quot;url&quot;: &quot;SDK_Sample/index.html&quot;,
+    &quot;preCreate&quot;: 0
+}
+</code></pre>
+<p>Descrizione dei campi (tutti i campi letti dal programma principale con <code>type:&quot;web&quot;</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Obbligatorio</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>sì</td>
+<td>Unico a livello globale. È anche il nome finestra per <code>windowControl</code>/<code>windowState</code>, l'<code>appId</code> dei tasti di scelta rapidi, l'id di montaggio nel dock</td>
+</tr>
+<tr>
+<td>type</td>
+<td>sì</td>
+<td>Fisso <code>web</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>sì</td>
+<td>Oggetto a 12 lingue; è ammesso anche il formato stringa pura (consigliato solo per test interni); ordine di risoluzione: lingua corrente → en → stringa pura</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>no</td>
+<td>Idem</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>no</td>
+<td>Classe FontAwesome (come sopra) o immagine base64</td>
+</tr>
+<tr>
+<td>winClassName</td>
+<td>no</td>
+<td>Nome della classe finestra Win32, basta che sia unico a livello globale</td>
+</tr>
+<tr>
+<td>width / height</td>
+<td>no</td>
+<td>Dimensione iniziale della finestra, predefinita 800x600</td>
+</tr>
+<tr>
+<td>layoutType</td>
+<td>no</td>
+<td>Maschera di bit del layout di posizione iniziale, 34 = centrato orizzontale + centrato verticale</td>
+</tr>
+<tr>
+<td>url</td>
+<td>sì</td>
+<td>Percorso della pagina relativo alla radice Web (<code>SDK_Sample/index.html</code>); supporta anche indirizzi online che iniziano con <code>http(s)</code></td>
+</tr>
+<tr>
+<td>preCreate</td>
+<td>no</td>
+<td>1 = pre-crea la finestra all'avvio (accelera la prima apertura), predefinito 0 creazione on-demand</td>
+</tr>
+<tr>
+<td>canSuspend</td>
+<td>no</td>
+<td>1 = consente di sospendere la WebView quando la finestra è nascosta per risparmiare risorse (predefinito 1)</td>
+</tr>
+</tbody>
+</table>
+<p>Verifica dopo le modifiche: JSON interpretabile, UTF-8 senza BOM, id unico a livello globale, tutte le 12 lingue non vuote.</p>
+<p><strong>A questo punto l'app è completa</strong> — copiando le due directory come indicato nella sezione 1, è sufficiente cercare &quot;SDK样例工程&quot; oppure &quot;sdk&quot; nel pannello comandi per avviarla (l'indice pinyin viene generato automaticamente); è possibile richiamarla anche con <code>windowControl('sdk_sample', 'show')</code>.</p>
+<h2 id="5-testi-multilingua-approccio-a-dizionario" tabindex="-1">5. Testi multilingua (approccio a dizionario) <a class="doc-anchor" href="#5-testi-multilingua-approccio-a-dizionario" aria-hidden="true">#</a></h2>
+<p>La soluzione senza build può usare un normale dizionario come ES module (<code>i18n.js</code>):</p>
+<pre><code class="language-js">const messages = {
+    zh_cn: { title: 'SDK样例工程', results: '{{count}} 个结果，耗时 {{ms}} ms', ... },
+    en:    { title: 'SDK Sample Project', results: '{{count}} results in {{ms}} ms', ... }
+};
+export function getMessages(lang) { return messages[lang] || messages.en; }
+export function interpolate(dict) {
+    return (key, params) =&gt; { /* {{count}} → params.count */ };
+}
+</code></pre>
+<p>All'inizializzazione si legge <code>getConfig().language</code> per scegliere la lingua, con fallback a <code>en</code> in caso di mancata corrispondenza; le frasi con segnaposto vengono espanse con <code>tf('results', { count, ms })</code>.</p>
+<p>Attenzione:</p>
+<ul>
+<li>
+<p>I codici lingua usano lo stile minuscolo con underscore (<code>zh_cn</code>), coerente con <code>.zenmod</code>, non BCP47.</p>
+</li>
+<li>
+<p><strong>Il</strong> <strong><code>name</code>/<code>desc</code></strong> <strong>del</strong> <strong><code>.zenmod</code></strong> <strong>deve essere completo in tutte le 12 lingue</strong>; per i testi all'interno della pagina non ci sono obblighi, l'esempio fornisce solo zh_cn/en, da estendere secondo necessità.</p>
+</li>
+<li>
+<p>Per i moduli che devono seguire immediatamente la lingua dell'interfaccia, si può trasformare il dizionario in file multilingua caricati lazy con <code>import()</code> on-demand, con lo stesso meccanismo di questo documento.</p>
+</li>
+</ul>
+<h2 id="6-debug-e-integrazione" tabindex="-1">6. Debug e integrazione <a class="doc-anchor" href="#6-debug-e-integrazione" aria-hidden="true">#</a></h2>
+<pre><code class="language-text">1. Esecuzione diretta senza build (partenza consigliata):
+   copiare sdk/sample/Web, sdk/sample/Modules in bin64\ (directory dell'exe Release), riavviare l'exe.
+   Dopo aver modificato il front-end, windowControl('sdk_sample','close') e riaprire, oppure riavviare l'exe perché abbia effetto.
+
+2. Esaminare la struttura nel browser:
+   fare doppio clic su Web/SDK_Sample/index.html per aprirlo con il browser.
+   Nel browser non esiste window.Zen, ZenAPI.call segue il percorso di eccezione restituendo error: -1,
+   struttura della pagina / stili / debounce dell'input / logica di rendering sono tutti debuggabili normalmente (tranne le interfacce native).
+</code></pre>
+<p>Suggerimento sulle prestazioni di ricerca: <code>searchFile</code> si appoggia all'indice MFT su tutto il disco lato C++ e in genere restituisce in pochi millisecondi; il nativo ha un meccanismo a slot di ricerca — una nuova richiesta rimpiazza la vecchia non ancora completata (la vecchia restituisce un risultato vuoto); il front-end combina un debounce di 300ms + un numero progressivo per scartare le risposte fuori ordine, così nemmeno la digitazione continua intasa il thread in background o fa sfarfallare risultati vecchi. Le icone dei risultati (base64) sono riportate direttamente da <code>searchFile</code>, senza bisogno di richiamare <code>getFileIcon</code> separatamente.</p>
+<p>Se le capacità delle interfacce non bastano (ad esempio serve una nuova funzionalità C++), è possibile inoltrare la richiesta tramite i canali di feedback del sito ufficiale; le interfacce verranno estese dal programma principale nelle versioni successive.</p>
+<h2 id="7-riepilogo-dellesempio-minimo-completo" tabindex="-1">7. Riepilogo dell'esempio minimo completo <a class="doc-anchor" href="#7-riepilogo-dellesempio-minimo-completo" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Modifica</th>
+<th>File</th>
+<th>Obbligatoria?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nuova pagina</td>
+<td><code>Web/SDK_Sample/</code> (index.html / filefinder.js / filefinder.css / i18n.js)</td>
+<td>sì</td>
+</tr>
+<tr>
+<td>Dipendenze comuni</td>
+<td><code>Web/SDK_Sample/lib/</code> (zen_api.js / window_controls.css, inclusi nell'esempio)</td>
+<td>sì</td>
+</tr>
+<tr>
+<td>Nuovo modulo</td>
+<td><code>Modules/SDK_Sample.zenmod</code></td>
+<td>sì</td>
+</tr>
+<tr>
+<td>Modifiche C++</td>
+<td>nessuna</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Passaggi di build</td>
+<td>nessuno (senza build, copia e usa)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-note-sulla-sicurezza" tabindex="-1">8. Note sulla sicurezza <a class="doc-anchor" href="#8-note-sulla-sicurezza" aria-hidden="true">#</a></h2>
+<p>Le Native API offrono agli sviluppatori di moduli <strong>accesso completo</strong> alle capacità di sistema del processo host, inclusi <strong>operazioni ad alto rischio</strong> come lettura/scrittura ed eliminazione di file, creazione e terminazione di processi, controllo delle finestre, lettura/scrittura degli appunti, modifica delle impostazioni di sistema, esecuzione di comandi da riga di comando, e <strong>senza finestre di dialogo per i permessi, senza isolamento sandbox, senza meccanismi di annullamento</strong>.</p>
+<p>Prima di ogni chiamata valutare autonomamente la sicurezza di ciascuna operazione: validare ogni input esterno, eseguire un backup o chiedere conferma all'utente prima di operazioni irreversibili, e usare solo le capacità davvero necessarie alla funzione. Qualsiasi conseguenza derivante dall'uso è a esclusivo carico dello sviluppatore.</p>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="Risorse correlate">
+    <a class="sdk-link" href="/it/sdk-api.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Riferimento API</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>Scarica il progetto di esempio</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/it/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Raccolta di strumenti di produttività per il desktop Windows: prima il locale, gratuita per sempre.</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Prodotto</h3>
+            <a href="/it/features.html">Funzioni</a>
+            <a href="/it/download.html">Download</a>
+            <a href="/it/changelog.html">Novità</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Risorse</h3>
+            <a href="/it/sdk.html">Sviluppatori</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Segnala un problema</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Note legali</h3>
+            <a href="/it/agreement.html">Accordo con l’utente</a>
+            <a href="/it/privacy.html">Informativa sulla privacy</a>
+            
+            <a class="js-email" href="#">Indirizzo e-mail</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · Tutti i diritti riservati</p>
+        <p class="footer-fine">Windows è un marchio registrato di Microsoft Corporation. Questo sito non è affiliato a Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

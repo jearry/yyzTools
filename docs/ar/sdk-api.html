@@ -1,0 +1,3108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مرجع واجهات Native API في yyzTools</title>
+<meta name="description" content="مرجع كامل لواجهات Native API في yyzTools: النوافذ، التطبيقات، العمليات، الملفات، الوسائط، التعرّف الضوئي، التشفير، الحافظة، الإشارات المرجعية، الأوامر والتحديثات.">
+
+<meta property="og:title" content="مرجع واجهات Native API في yyzTools">
+<meta property="og:description" content="مرجع كامل لواجهات Native API في yyzTools: النوافذ، التطبيقات، العمليات، الملفات، الوسائط، التعرّف الضوئي، التشفير، الحافظة، الإشارات المرجعية، الأوامر والتحديثات.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ar/sdk-api.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ar">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="مرجع واجهات Native API في yyzTools">
+<meta name="twitter:description" content="مرجع كامل لواجهات Native API في yyzTools: النوافذ، التطبيقات، العمليات، الملفات، الوسائط، التعرّف الضوئي، التشفير، الحافظة، الإشارات المرجعية، الأوامر والتحديثات.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ar/sdk-api.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sdk-api.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sdk-api.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sdk-api.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sdk-api.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sdk-api.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sdk-api.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sdk-api.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sdk-api.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sdk-api.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk-api.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ar/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ar/" >الرئيسية</a>
+            <a href="/ar/features.html" >المزايا</a>
+            <a href="/ar/download.html" >التنزيل</a>
+            <a href="/ar/changelog.html" >سجل التغييرات</a>
+            
+            <a href="/ar/sdk.html" class=&#34;on&#34;>المطوّرون</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">الملاحظات</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="اختيار اللغة">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">العربية</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/sdk-api.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/sdk-api.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/sdk-api.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/sdk-api.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/sdk-api.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/sdk-api.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/sdk-api.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/sdk-api.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/sdk-api.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/sdk-api.html" hreflang="ar"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>العربية</a>
+                    
+                    <a href="/pt/sdk-api.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/sdk-api.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/ar/download.html">تنزيل مجاني</a>
+            <button class="nav-toggle" id="navToggle" aria-label="القائمة" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"المطوّرون","item":"https://yyztools.com/ar/sdk.html"},{"@type":"ListItem","position":3,"name":"مرجع الواجهات","item":"https://yyztools.com/ar/sdk-api.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"مرجع الواجهات","description":"مرجع كامل لواجهات Native API في yyzTools: النوافذ، التطبيقات، العمليات، الملفات، الوسائط، التعرّف الضوئي، التشفير، الحافظة، الإشارات المرجعية، الأوامر والتحديثات.","inLanguage":"ar","url":"https://yyztools.com/ar/sdk-api.html","author":{"@type":"Organization","name":"yyzTools"},"proficiencyLevel":"Expert"}</script>
+
+
+
+
+<section class="section">
+    <div class="wrap sdk-layout">
+
+        
+        <details class="sdk-toc" open>
+            <summary><i class="fa-solid fa-list-ul"></i> محتويات الصفحة</summary>
+            <nav aria-label="محتويات الصفحة">
+                <ol>
+                    
+                    <li>
+                        <a href="#سجل-الإصدارات">سجل الإصدارات</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#1-الاصطلاحات-العامة">1. الاصطلاحات العامة</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#طريقة-الاستدعاء">طريقة الاستدعاء</a></li>
+                            
+                            <li><a href="#طريقة-كشف-الأخطاء">طريقة كشف الأخطاء</a></li>
+                            
+                            <li><a href="#الربط-المتزامن-غير-المتزامن">الربط المتزامن / غير المتزامن</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#2-الواجهات-المشتركة">2. الواجهات المشتركة</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-الحصول-على-إصدار-العميل">1. الحصول على إصدار العميل</a></li>
+                            
+                            <li><a href="#2-قراءة-الإعدادات">2. قراءة الإعدادات</a></li>
+                            
+                            <li><a href="#3-تعديل-الإعدادات">3. تعديل الإعدادات</a></li>
+                            
+                            <li><a href="#4-إضافة-إعداد">4. إضافة إعداد</a></li>
+                            
+                            <li><a href="#5-الحصول-على-قائمة">5. الحصول على قائمة</a></li>
+                            
+                            <li><a href="#6-كتابة-سجل-الواجهة-الأمامية">6. كتابة سجل الواجهة الأمامية</a></li>
+                            
+                            <li><a href="#7-كتابة-ذاكرة-التخزين-المؤقت-للعد-التنازلي">7. كتابة ذاكرة التخزين المؤقت للعدّ التنازلي</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#3-التحكم-بالنوافذ">3. التحكم بالنوافذ</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-البحث-عن-نافذة">1. البحث عن نافذة</a></li>
+                            
+                            <li><a href="#2-التحكم-بالنافذة">2. التحكم بالنافذة</a></li>
+                            
+                            <li><a href="#3-الحصول-على-حالة-النافذة">3. الحصول على حالة النافذة</a></li>
+                            
+                            <li><a href="#4-فتح-لوحة-الأوامر-وتنفيذ-بحث">4. فتح لوحة الأوامر وتنفيذ بحث</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#4-إدارة-التطبيقات">4. إدارة التطبيقات</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-البحث-عن-تطبيق">1. البحث عن تطبيق</a></li>
+                            
+                            <li><a href="#2-الحصول-على-معلومات-تطبيقات-على-دفعة-حسب-id-غير-متزامن">2. الحصول على معلومات تطبيقات على دفعة حسب id (غير متزامن)</a></li>
+                            
+                            <li><a href="#3-تشغيل-تطبيق">3. تشغيل تطبيق</a></li>
+                            
+                            <li><a href="#4-الحصول-على-إحصاءات-الاستخدام">4. الحصول على إحصاءات الاستخدام</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#5-إدارة-العمليات">5. إدارة العمليات</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-البحث-عن-عملية">1. البحث عن عملية</a></li>
+                            
+                            <li><a href="#2-التحكم-بالعملية">2. التحكم بالعملية</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#6-عمليات-الملفات">6. عمليات الملفات</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-البحث-عن-ملف-غير-متزامن">1. البحث عن ملف (غير متزامن)</a></li>
+                            
+                            <li><a href="#2-فتح-ملف">2. فتح ملف</a></li>
+                            
+                            <li><a href="#3-فتح-موقع-الملف">3. فتح موقع الملف</a></li>
+                            
+                            <li><a href="#4-فتح-معاينة-الملف">4. فتح معاينة الملف</a></li>
+                            
+                            <li><a href="#5-نسخقص-الملفات-إلى-الحافظة">5. نسخ/قص الملفات إلى الحافظة</a></li>
+                            
+                            <li><a href="#6-استعراض-الملفات">6. استعراض الملفات</a></li>
+                            
+                            <li><a href="#7-استعراض-المجلدات">7. استعراض المجلدات</a></li>
+                            
+                            <li><a href="#8-الحصول-على-مجلد-محدد">8. الحصول على مجلد محدد</a></li>
+                            
+                            <li><a href="#9-حفظ-ملف">9. حفظ ملف</a></li>
+                            
+                            <li><a href="#10-الحصول-على-أيقونة-الملف">10. الحصول على أيقونة الملف</a></li>
+                            
+                            <li><a href="#11-قراءة-ملف">11. قراءة ملف</a></li>
+                            
+                            <li><a href="#12-قراءة-ملف-كبير-على-أجزاء">12. قراءة ملف كبير على أجزاء</a></li>
+                            
+                            <li><a href="#13-كتابة-ملف">13. كتابة ملف</a></li>
+                            
+                            <li><a href="#14-الإلحاق-بكتابة-ملف">14. الإلحاق بكتابة ملف</a></li>
+                            
+                            <li><a href="#15-إعادة-تسميةنقل">15. إعادة تسمية/نقل</a></li>
+                            
+                            <li><a href="#16-نسخ-ملف">16. نسخ ملف</a></li>
+                            
+                            <li><a href="#17-حذف-ملف-أو-مجلد">17. حذف ملف أو مجلد</a></li>
+                            
+                            <li><a href="#18-إنشاء-مجلد">18. إنشاء مجلد</a></li>
+                            
+                            <li><a href="#19-قراءة-مجلد">19. قراءة مجلد</a></li>
+                            
+                            <li><a href="#20-التحقق-من-وجود-مسار">20. التحقق من وجود مسار</a></li>
+                            
+                            <li><a href="#21-الحصول-على-معلومات-الملف">21. الحصول على معلومات الملف</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#7-معالجة-الوسائط">7. معالجة الوسائط</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-تنفيذ-أمر-magick-غير-متزامن">1. تنفيذ أمر magick (غير متزامن)</a></li>
+                            
+                            <li><a href="#2-تنفيذ-أمر-ffmpeg-غير-متزامن">2. تنفيذ أمر ffmpeg (غير متزامن)</a></li>
+                            
+                            <li><a href="#3-تنفيذ-أمر-ffprobe-استقصاء-البيانات-الوصفية-متزامن">3. تنفيذ أمر ffprobe (استقصاء البيانات الوصفية، متزامن)</a></li>
+                            
+                            <li><a href="#4-تنفيذ-أمر-pdfcpu-غير-متزامن">4. تنفيذ أمر pdfcpu (غير متزامن)</a></li>
+                            
+                            <li><a href="#5-تنفيذ-أمر-ghostscript-غير-متزامن">5. تنفيذ أمر Ghostscript (غير متزامن)</a></li>
+                            
+                            <li><a href="#6-إلغاء-عملية-الوسائط-الفرعية-الحالية">6. إلغاء عملية الوسائط الفرعية الحالية</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#8-لقطة-الشاشة-و-ocr">8. لقطة الشاشة و OCR</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-لقطة-شاشةتثبيتها-على-سطح-المكتب">1. لقطة شاشة/تثبيتها على سطح المكتب</a></li>
+                            
+                            <li><a href="#2-تهيئة-ocr">2. تهيئة OCR</a></li>
+                            
+                            <li><a href="#3-التعرف-الضوئي-ocr-غير-متزامن">3. التعرف الضوئي OCR (غير متزامن)</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#9-التشفير-وفك-التشفير">9. التشفير وفك التشفير</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-تشفير-البيانات">1. تشفير البيانات</a></li>
+                            
+                            <li><a href="#2-فك-تشفير-البيانات">2. فك تشفير البيانات</a></li>
+                            
+                            <li><a href="#3-توليد-مفتاح">3. توليد مفتاح</a></li>
+                            
+                            <li><a href="#4-توليد-iv">4. توليد IV</a></li>
+                            
+                            <li><a href="#5-حساب-التجزئة">5. حساب التجزئة</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#10-تاريخ-الحافظة">10. تاريخ الحافظة</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-البحث-في-الحافظة">1. البحث في الحافظة</a></li>
+                            
+                            <li><a href="#2-حذف-سجل-واحد">2. حذف سجل واحد</a></li>
+                            
+                            <li><a href="#3-تفريغ-السجلات">3. تفريغ السجلات</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#11-الإشارات-المرجعية">11. الإشارات المرجعية</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-البحث-في-الإشارات-المرجعية">1. البحث في الإشارات المرجعية</a></li>
+                            
+                            <li><a href="#2-فتح-إشارة-مرجعية">2. فتح إشارة مرجعية</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#12-تنفيذ-الأوامر">12. تنفيذ الأوامر</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-تشغيل-سطر-أوامر">1. تشغيل سطر أوامر</a></li>
+                            
+                            <li><a href="#2-تشغيل-أي-برنامج">2. تشغيل أي برنامج</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="#13-التحديث">13. التحديث</a>
+                        
+                        <ol>
+                            
+                            <li><a href="#1-التحقق-من-التحديثات">1. التحقق من التحديثات</a></li>
+                            
+                            <li><a href="#2-الحصول-على-حالة-التحديث">2. الحصول على حالة التحديث</a></li>
+                            
+                            <li><a href="#3-تطبيق-التحديث-الذي-اكتمل-تنزيله">3. تطبيق التحديث الذي اكتمل تنزيله</a></li>
+                            
+                        </ol>
+                        
+                    </li>
+                    
+                </ol>
+            </nav>
+        </details>
+
+        <article class="doc doc-md">
+            <h1>مرجع الواجهات</h1>
+            <p class="doc-meta">التعريف المعتمد لجميع واجهات Native API</p>
+
+            
+            
+
+            
+<nav class="sdk-links sdk-links-top" aria-label="موارد ذات صلة">
+    <a class="sdk-link" href="/ar/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>البدء السريع</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>تنزيل المشروع النموذجي</span>
+    </a>
+</nav>
+
+
+            <h2 id="سجل-الإصدارات" tabindex="-1">سجل الإصدارات <a class="doc-anchor" href="#سجل-الإصدارات" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>الإصدار</th>
+<th>المحرّر</th>
+<th>وقت التعديل</th>
+<th>وصف التعديل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>yyzTools</td>
+<td>2026-09-01</td>
+<td>الإصدار الأولي</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-الاصطلاحات-العامة" tabindex="-1">1. الاصطلاحات العامة <a class="doc-anchor" href="#1-الاصطلاحات-العامة" aria-hidden="true">#</a></h2>
+<p>يحدد هذا المستند جميع الواجهات المتعلقة بالتفاعل مع Native، ويقتصر على الواجهات المسجلة لدى <strong>العملية الرئيسية yyzTools.exe</strong> (<code>SetupBindings()</code> في <code>src/yyztools/NativeApi.cpp</code>).</p>
+<h3 id="طريقة-الاستدعاء" tabindex="-1">طريقة الاستدعاء <a class="doc-anchor" href="#طريقة-الاستدعاء" aria-hidden="true">#</a></h3>
+<ul>
+<li>
+<p>تستدعي الواجهة الأمامية دوال الواجهات عبر الكائن <code>window.Zen</code>، ويُنصح بالاستدعاء الموحّد عبر فئة التغليف <code>ZenAPI</code>: <code>web/lib/zen_api.js</code>، ولا تستدعِ <code>window.Zen</code> مباشرة في شيفرة العمل، لتسهيل التعامل معها كطبقة توافق للواجهات عند الترقية والتعديل.</p>
+</li>
+<li>
+<p>المدخلات: تُمرَّر بأسلوب المعاملات الموضعية؛ راجع عدد المعاملات وأنواعها في كل واجهة بعينها</p>
+</li>
+<li>
+<p>المخرجات: تُمرَّر عبر القيمة المُرجعة، وهي كائن json يتضمن ما يلي</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    ...
+}
+</code></pre>
+<ul>
+<li>
+<p>error: 0 يعني النجاح، وغير 0 يعني الخطأ</p>
+</li>
+<li>
+<p>errorMsg (اختياري): رسالة الخطأ</p>
+</li>
+<li>
+<p>غير ذلك (اختياري): راجع كل واجهة بعينها</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="طريقة-كشف-الأخطاء" tabindex="-1">طريقة كشف الأخطاء <a class="doc-anchor" href="#طريقة-كشف-الأخطاء" aria-hidden="true">#</a></h3>
+<p><code>error</code> دائمًا <strong>رقم</strong>: 0 يعني النجاح، وغير 0 يعني الخطأ (وفي حالة استثناء الاستدعاء تكون -1).</p>
+<h3 id="الربط-المتزامن-غير-المتزامن" tabindex="-1">الربط المتزامن / غير المتزامن <a class="doc-anchor" href="#الربط-المتزامن-غير-المتزامن" aria-hidden="true">#</a></h3>
+<p>الغالبية العظمى من الواجهات ربط متزامن (<code>BindSync</code>)، تعيد النتيجة فور الاستدعاء. الواجهات السبع التالية ربط غير متزامن (<code>BindAsync</code>)، تعمل في خيط خلفي وتعيد النتيجة عبر Promise دون حجب خيط الواجهة:</p>
+<p><code>getAppInfo</code>、<code>searchFile</code>、<code>imageRun</code>、<code>ffmpegRun</code>、<code>pdfRun</code>、<code>gsRun</code>、<code>ocrRecognition</code></p>
+<p>لمعرفة قيود سلوك الواجهات غير المتزامنة في نفس اللحظة راجع البنود المعنية (مثلًا حزمة الوسائط الخمسة تعمل تسلسليًا وتتشارك <code>cancelRun</code> للإلغاء).</p>
+<h2 id="2-الواجهات-المشتركة" tabindex="-1">2. الواجهات المشتركة <a class="doc-anchor" href="#2-الواجهات-المشتركة" aria-hidden="true">#</a></h2>
+<h3 id="1-الحصول-على-إصدار-العميل" tabindex="-1">1. الحصول على إصدار العميل <a class="doc-anchor" href="#1-الحصول-على-إصدار-العميل" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getVersion() : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات: لا شيء</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apiVersion&quot;: &quot;1.0.1&quot;,
+    &quot;appVersion&quot;: &quot;1.0.1&quot;,
+    &quot;usageTime&quot;: 90,
+    &quot;usageTimes&quot;: 3602,
+    &quot;firstUseTime&quot;: &quot;20250910&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>apiVersion: معلومات إصدار واجهة API للعميل. في كل تحديث يشمل الواجهات يزداد رقم الإصدار 1؛ الرقم من 0 إلى 9، وبعد 9 يعود من 0، مثل 1.0.0، 1.0.1، 1.0.2... 1.0.9، 1.1.0 وهكذا</p>
+</li>
+<li>
+<p>appVersion: معلومات إصدار العميل</p>
+</li>
+<li>
+<p>usageTime: مدة الاستخدام (الوحدة: ثانية)</p>
+</li>
+<li>
+<p>usageTimes: عدد مرات التفعيل</p>
+</li>
+<li>
+<p>firstUseTime: وقت أول استخدام، بالصيغة: yyyymmdd</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-قراءة-الإعدادات" tabindex="-1">2. قراءة الإعدادات <a class="doc-anchor" href="#2-قراءة-الإعدادات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getConfig(key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>key (اختياري): يقرأ هذا المفتاح فقط، ويدعم المسار النقطي <code>a.b</code>. عند الإغفال يعيد الإعدادات كاملة.</p>
+<ul>
+<li>
+<p>عند الإصابة: يعيد <code>{&quot;error&quot;:0, &quot;&lt;key&gt;&quot;: &lt;值&gt;}</code>، مثل <code>getConfig(&quot;language&quot;)</code> → <code>{&quot;error&quot;:0,&quot;language&quot;:&quot;zh_cn&quot;}</code>؛ و<code>getConfig(&quot;dock.categories&quot;)</code> → <code>{&quot;error&quot;:0,&quot;dock&quot;:{&quot;categories&quot;:[...]}}</code></p>
+</li>
+<li>
+<p>عند عدم الإصابة: يعيد <code>{&quot;error&quot;:0}</code> (دون إخطار خطأ، وعلى القارئ التعامل مع ذلك بنفسه)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات (مثال، والحقول وفق الإعدادات الفعلية)</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;logLevel&quot;: &quot;1&quot;,
+    &quot;wallpaperEnabled&quot;: &quot;1&quot;,
+    &quot;overlayEnabled&quot;: &quot;0&quot;,
+    &quot;gameMode&quot;: &quot;0&quot;,
+    &quot;clipboardHistoryMaxCount&quot;: &quot;500&quot;,
+    &quot;autoStart&quot;: &quot;1&quot;,
+    &quot;shortcutKeys&quot;: {
+        &quot;main&quot;: {
+            &quot;doubleCtrlEnabled&quot;: &quot;1&quot;,
+            &quot;doubleAltEnabled&quot;: &quot;1&quot;,
+            &quot;modifier&quot;: 1,
+            &quot;virtualCode&quot;: 32
+        },
+        &quot;apps&quot;: [
+            {
+                &quot;appId&quot;: &quot;translate&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 49
+            },
+            {
+                &quot;appId&quot;: &quot;ocr&quot;,
+                &quot;modifier&quot;: 1,
+                &quot;virtualCode&quot;: 50
+            }
+        ]
+    },
+    &quot;quickOpen&quot;: [
+        {
+            &quot;name&quot;: &quot;谷歌搜索&quot;,
+            &quot;type&quot;: &quot;normal&quot;,
+            &quot;index&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;https://www.google.com/search?q={query}&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ],
+    &quot;customApps&quot;: [
+        {
+            &quot;filePath&quot;: &quot;d:\test\test1.exe&quot;,
+            &quot;enabled&quot;: &quot;1&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>logLevel: مستوى السجل (0: Trace / 1: Debug / 2: Info / 3: Warning / 4: Error / 5: Fatal)</p>
+</li>
+<li>
+<p>wallpaperEnabled: تفعيل الخلفية الحيوية</p>
+</li>
+<li>
+<p>overlayEnabled: تفعيل مؤثرات سطح المكتب</p>
+</li>
+<li>
+<p>gameMode: وضع الألعاب</p>
+</li>
+<li>
+<p>clipboardHistoryMaxCount: العدد الأقصى لسجلات تاريخ الحافظة</p>
+</li>
+<li>
+<p>autoStart: التشغيل التلقائي عند إقلاع النظام</p>
+</li>
+<li>
+<p>shortcutKeys: الاختصارات العامة</p>
+<ul>
+<li>
+<p>main: الواجهة الرئيسية</p>
+<ul>
+<li>
+<p>doubleCtrlEnabled: الاستدعاء بنقرة Ctrl مزدوجة</p>
+</li>
+<li>
+<p>doubleAltEnabled: الاستدعاء بنقرة Alt مزدوجة</p>
+</li>
+<li>
+<p>modifier: مفتاح التعديل</p>
+</li>
+<li>
+<p>virtualCode: المفتاح الرئيسي</p>
+</li>
+</ul>
+</li>
+<li>
+<p>apps: التطبيقات</p>
+<ul>
+<li>
+<p>appId: معرّف التطبيق</p>
+</li>
+<li>
+<p>modifier: مفتاح التعديل</p>
+</li>
+<li>
+<p>virtualCode: المفتاح الرئيسي</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>quickOpen: الفتح السريع</p>
+<ul>
+<li>
+<p>name: الاسم</p>
+</li>
+<li>
+<p>type: النوع (normal: بحث عام / spec: بحث رأسي)</p>
+</li>
+<li>
+<p>index: الرقم التسلسلي</p>
+</li>
+<li>
+<p>url: قالب url</p>
+</li>
+<li>
+<p>enabled: هل هو مفعّل</p>
+</li>
+</ul>
+</li>
+<li>
+<p>customApps: تطبيقات app مخصصة</p>
+<ul>
+<li>
+<p>filePath: مسار exe الخاص بالتطبيق</p>
+</li>
+<li>
+<p>enabled: هل هو مفعّل</p>
+</li>
+</ul>
+</li>
+<li>
+<p>dock: شريط التطبيقات (الفئات + المحتويات)</p>
+<ul>
+<li>
+<p><strong>الاصطلاح العام: غياب</strong> <strong><code>name</code>/<code>icon</code></strong> <strong>يعني &quot;استخدام القيم المدمجة الافتراضية&quot; (تُشتق وقت التشغيل من i18n أو من</strong> <strong><code>.zenmod</code></strong> <strong>المقابل لـ</strong> <strong><code>appId</code></strong> <strong>، وتتغير مع لغة الواجهة)؛ وجود الحقل يعني أن المستخدم خصّصه، فيُعرض كما هو دون ترجمة.</strong></p>
+</li>
+<li>
+<p>categories: الفئات</p>
+<ul>
+<li>
+<p>id: الفئات المدمجة معرّفاتها دلالية (<code>folder</code>/<code>tools</code>/<code>ai</code>/<code>game</code>/<code>system</code>)، وما ينشئه المستخدم يكون <code>category_&lt;时间戳&gt;</code></p>
+</li>
+<li>
+<p>name: اختياري، يوجد فقط بعد إعادة تسمية من المستخدم</p>
+</li>
+<li>
+<p>icon: FontAwesome class</p>
+</li>
+<li>
+<p>color: لون الثيم</p>
+</li>
+<li>
+<p>order: رقم الترتيب</p>
+</li>
+</ul>
+</li>
+<li>
+<p>contents: عناصر المحتوى</p>
+<ul>
+<li>
+<p>id: عناصر المجلدات المدمجة معرّفاتها دلالية (<code>desktop</code>/<code>documents</code>/<code>downloads</code>/<code>music</code>/<code>videos</code>)، والبقية <code>content_&lt;时间戳&gt;</code></p>
+</li>
+<li>
+<p>categoryId: معرّف الفئة التابع لها</p>
+</li>
+<li>
+<p>type: <code>app</code> | <code>folder</code> | <code>url</code></p>
+</li>
+<li>
+<p>appId: إلزامي عند <code>type=app</code>، ويقابل id في <code>.zenmod</code>؛ الاسم والأيقونة كلاهما مشتق منه، <strong>لا يُحفظ على القرص</strong></p>
+</li>
+<li>
+<p>folderPath: إلزامي عند <code>type=folder</code>، ويدعم متغيرات البيئة مثل <code>%USERPROFILE%</code></p>
+</li>
+<li>
+<p>url: إلزامي عند <code>type=url</code>، والعنوان الكامل بعد التطبيع (تُضاف <code>https://</code> تلقائيًا إذا غاب البروتوكول)؛ النقر يفتحه بالمتصفح الافتراضي للنظام. الاسم يملؤه المستخدم، والأيقونة تُجلب وقت التشغيل من favicon للموقع (وعند الفشل تُستخدم <code>fas fa-globe</code> احتياطًا)، <strong>لا تُحفظ على القرص</strong></p>
+</li>
+<li>
+<p>name / icon: اختياريان، بنفس الدلالة أعلاه (إلزاميان للمجلدات التي يختارها المستخدم عند <code>type=folder</code>)</p>
+</li>
+<li>
+<p>color: تلوين الأيقونة</p>
+</li>
+<li>
+<p>order: رقم الترتيب داخل الفئة الواحدة</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-تعديل-الإعدادات" tabindex="-1">3. تعديل الإعدادات <a class="doc-anchor" href="#3-تعديل-الإعدادات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setConfig(config: json_obj, replace?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>config: بنفس بنية getConfig</p>
+<ul>
+<li>
+<p>مرّر ما تريد تعديله فقط، دون حاجة لتمرير كل المحتوى</p>
+</li>
+<li>
+<p>المحتوى تحت نفس المفتاح يجب تمريره كاملًا</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;logLevel&quot;: &quot;1&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>replace (اختياري، الافتراضي false): false = دمج تزايدي مع الإعدادات الحالية، true = استبدال كامل (لاستيراد نسخة احتياطية، ويمحو عناصر القوائم المحذوفة). مرّر السلسلة <code>&quot;true&quot;</code> أو <code>&quot;false&quot;</code>، والإغفال يعادل <code>&quot;false&quot;</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ملاحظة: <strong>لا تقم بـ &quot;قراءة كل الإعدادات عبر getConfig ثم إعادة كتابتها كاملة عبر setConfig&quot;</strong> — القيمة المرجعة من <code>getConfig</code> تتضمن حقل <code>error</code>، وإعادة كتابتها كاملة ستحفظه في ملف الإعدادات. اكتب دائمًا بدقة ناعمة (granular)، مثل <code>setConfig({ dock: { categories } })</code>.</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-إضافة-إعداد" tabindex="-1">4. إضافة إعداد <a class="doc-anchor" href="#4-إضافة-إعداد" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.addConfig(key: string, value: json_obj) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>key: يجب أن يكون نوع قيمته StringList أو StringMapList</p>
+</li>
+<li>
+<p>value</p>
+<ul>
+<li>
+<p>عندما يكون نوع قيمة key هو StringList، مرّر string</p>
+</li>
+<li>
+<p>عندما يكون نوع قيمة key هو StringMapList، مرّر json_obj</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-الحصول-على-قائمة" tabindex="-1">5. الحصول على قائمة <a class="doc-anchor" href="#5-الحصول-على-قائمة" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getList(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>type: نوع القائمة</p>
+<ul>
+<li>font: قائمة خطوط النظام (تقرأ السجل <code>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts</code>، لاختيار الخط في سيناريوهات مثل العلامة المائية)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;list&quot;: [
+        {
+            &quot;name&quot;: &quot;Arial&quot;,
+            &quot;file&quot;: &quot;arial.ttf&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>list: قائمة الخطوط</p>
+<ul>
+<li>
+<p>name: اسم الخط (بعد إزالة اللاحقة &quot; (TrueType)&quot; / &quot; (OpenType)&quot;)</p>
+</li>
+<li>
+<p>file: اسم ملف الخط</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-كتابة-سجل-الواجهة-الأمامية" tabindex="-1">6. كتابة سجل الواجهة الأمامية <a class="doc-anchor" href="#6-كتابة-سجل-الواجهة-الأمامية" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.log(msg: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>msg: محتوى السجل، يُكتب في سجل العملية الرئيسية (InfoMsg)</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="7-كتابة-ذاكرة-التخزين-المؤقت-للعد-التنازلي" tabindex="-1">7. كتابة ذاكرة التخزين المؤقت للعدّ التنازلي <a class="doc-anchor" href="#7-كتابة-ذاكرة-التخزين-المؤقت-للعد-التنازلي" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
+</code></pre>
+<p>بيانات التخزين المؤقت لتذكيرات العدّ التنازلي، تُكتب في ذاكرة مشتركة بين العملية الرئيسية وعملية الخلفية الحيوية، مع إخطار عملية الخلفية الحيوية فورًا بإعادة القراءة (وإلا تنتظر الخلفية الحيوية جولتها الدورية 30s ليدأ المفعول). مخصصة لتناغم reminder / wallpaper، ولا يعتمد عليها العمل العادي.</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>data: سلسلة JSON للعدّ التنازلي (payload كما تعرّفه وحدة reminder)</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="3-التحكم-بالنوافذ" tabindex="-1">3. التحكم بالنوافذ <a class="doc-anchor" href="#3-التحكم-بالنوافذ" aria-hidden="true">#</a></h2>
+<h3 id="1-البحث-عن-نافذة" tabindex="-1">1. البحث عن نافذة <a class="doc-anchor" href="#1-البحث-عن-نافذة" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchWindow(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>keyword: كلمة البحث المفتاحية</p>
+</li>
+<li>
+<p>maxResults: العدد الأقصى للسجلات</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;windows&quot;: [
+        {
+            &quot;hwnd&quot;: 18811010,
+            &quot;processId&quot;: 20708,
+            &quot;visible&quot;: 1,
+            &quot;topmost&quot;: 0,
+            &quot;name&quot;: &quot;Native API接口.md - MarkText&quot;,
+            &quot;className&quot;: &quot;Chrome_WidgetWin_1&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files\\MarkText\\MarkText.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\Program Files\\MarkText\\MarkText.exe\&quot; \&quot;D:\\doc\\a.md\&quot;&quot;,
+            &quot;desc&quot;: &quot;MarkText&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 180
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>windows: قائمة النوافذ</p>
+<ul>
+<li>
+<p>hwnd: مقبض النافذة</p>
+</li>
+<li>
+<p>processId: معرّف العملية التابعة لها النافذة</p>
+</li>
+<li>
+<p>visible: هل هي مرئية</p>
+</li>
+<li>
+<p>topmost: هل هي مثبتة في الأعلى</p>
+</li>
+<li>
+<p>name: اسم النافذة</p>
+</li>
+<li>
+<p>className: اسم فئة النافذة</p>
+</li>
+<li>
+<p>path: المسار الكامل للملف التنفيذي للعملية</p>
+</li>
+<li>
+<p>cmdArgs: سطر أوامر تشغيل العملية</p>
+</li>
+<li>
+<p>desc: الوصف</p>
+</li>
+<li>
+<p>icon: أيقونة النافذة، بصيغة base64</p>
+</li>
+<li>
+<p>score: درجة البحث</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-التحكم-بالنافذة" tabindex="-1">2. التحكم بالنافذة <a class="doc-anchor" href="#2-التحكم-بالنافذة" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowControl(window: string, action: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>window: الـ Name أو الـ HWND بصيغة string</p>
+<ul>
+<li>
+<p>cmdPlate: لوحة المشغّل</p>
+</li>
+<li>
+<p>translate: الترجمة الفائقة</p>
+</li>
+<li>
+<p>download: التنزيل الفائق</p>
+</li>
+<li>
+<p>calculator: الحاسبة الفائقة</p>
+</li>
+<li>
+<p>filePreview: معاين الملفات</p>
+</li>
+<li>
+<p>ocr: OCR</p>
+</li>
+<li>
+<p>quickocr: نافذة OCR السريع الملتصقة للترجمة</p>
+</li>
+<li>
+<p>calendar: التقويم الدائم</p>
+</li>
+<li>
+<p>appUsage: إحصاءات استخدام التطبيقات</p>
+</li>
+<li>
+<p>tray: قائمة علبة النظام</p>
+</li>
+<li>
+<p>overlay: مؤثرات سطح المكتب</p>
+</li>
+<li>
+<p>setting: الإعدادات</p>
+</li>
+<li>
+<p>main: النافذة الرئيسية (تعادل cmdPlate)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>action</p>
+<ul>
+<li>
+<p>show: إظهار وتفعيل</p>
+</li>
+<li>
+<p>showNoActivate: إظهار دون تفعيل</p>
+</li>
+<li>
+<p>min: تصغير</p>
+</li>
+<li>
+<p>max: تكبير</p>
+</li>
+<li>
+<p>restore: استعادة</p>
+</li>
+<li>
+<p>hide: إخفاء</p>
+</li>
+<li>
+<p>close: إغلاق</p>
+</li>
+<li>
+<p>darg: سحب</p>
+</li>
+<li>
+<p>topmost: تثبيت في الأعلى</p>
+</li>
+<li>
+<p>noTopmost: إلغاء التثبيت في الأعلى</p>
+</li>
+<li>
+<p>quit: الخروج من التطبيق</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-الحصول-على-حالة-النافذة" tabindex="-1">3. الحصول على حالة النافذة <a class="doc-anchor" href="#3-الحصول-على-حالة-النافذة" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>window: الـ Name أو الـ HWND بصيغة string، راجع التحكم بالنافذة</p>
+</li>
+<li>
+<p>can_suspend (اختياري): هل يُسمح بتعليق WebView الخاص بهذه النافذة (مفتاح توفير الموارد، الافتراضي false)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>وصف: هذه الواجهة ذات أثر جانبي — بعد الاستعلام عن الحالة، إذا كانت النافذة في حالة show/max تُستأنف معالجة WebView، وإلا يُعلَّق WebView لتوفير الموارد (لا يُسمح بالتعليق إلا إذا كان can_suspend يساوي true). مرّر true عندما تُسوِّح صفحة دائمة في الواجهة الأمامية عن حالتها، وfalse للاستعلام العادي.</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;state&quot;: &quot;show&quot;,
+    &quot;topmost&quot;: &quot;0&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>state: الحالة (show: عرض طبيعي / min: مصغّرة / max: مكبّرة / close: مغلقة)</p>
+</li>
+<li>
+<p>topmost: هل هي مثبتة في الأعلى</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-فتح-لوحة-الأوامر-وتنفيذ-بحث" tabindex="-1">4. فتح لوحة الأوامر وتنفيذ بحث <a class="doc-anchor" href="#4-فتح-لوحة-الأوامر-وتنفيذ-بحث" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>command: أمر البحث، مثال: <code>f path:C:\Users\Documents</code> (بحث في وحدة الملفات داخل مجلد محدد)</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>الوصف</p>
+<ul>
+<li>
+<p>تُستخدم هذه الواجهة لفتح نافذة لوحة الأوامر وتنفيذ أمر البحث تلقائيًا</p>
+</li>
+<li>
+<p>تُستخدم عادة للوصول السريع إلى البحث عن الملفات من وحدات مثل شريط التطبيقات</p>
+</li>
+<li>
+<p>صيغة الأمر تدعم كل صيغ البحث التي يدعمها cmdplate</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-إدارة-التطبيقات" tabindex="-1">4. إدارة التطبيقات <a class="doc-anchor" href="#4-إدارة-التطبيقات" aria-hidden="true">#</a></h2>
+<h3 id="1-البحث-عن-تطبيق" tabindex="-1">1. البحث عن تطبيق <a class="doc-anchor" href="#1-البحث-عن-تطبيق" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchApp(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>keyword: كلمة البحث المفتاحية</p>
+</li>
+<li>
+<p>maxResults: العدد الأقصى للسجلات</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;Microsoft.WindowsCamera&quot;,
+            &quot;name&quot;: &quot;相机&quot;,
+            &quot;path&quot;: &quot;C:\Program Files\WindowsApps\Microsoft.WindowsCamera&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 1,
+            &quot;score&quot;: 90
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>apps: قائمة التطبيقات</p>
+<ul>
+<li>
+<p>id: المعرّف الفريد للتطبيق، ويُستخدم عند التشغيل</p>
+</li>
+<li>
+<p>name: الاسم</p>
+</li>
+<li>
+<p>desc: الوصف</p>
+</li>
+<li>
+<p>icon: أيقونة base64</p>
+</li>
+<li>
+<p>appType: نوع التطبيق (0: تطبيق win32 / 1: تطبيق uwp / 2: أمر نظام / 3: إعداد نظام / 4: وحدة مدمجة)</p>
+</li>
+<li>
+<p>score: درجة نتيجة البحث</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-الحصول-على-معلومات-تطبيقات-على-دفعة-حسب-id-غير-متزامن" tabindex="-1">2. الحصول على معلومات تطبيقات على دفعة حسب id (غير متزامن) <a class="doc-anchor" href="#2-الحصول-على-معلومات-تطبيقات-على-دفعة-حسب-id-غير-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppInfo(appIds: string[]) : object
+</code></pre>
+<p>الإعدادات تحفظ <code>appId</code> فقط، والاسم والأيقونة كلاهما مشتق وقت التشغيل (<code>name</code> في <code>.zenmod</code> متعدد اللغات، وحفظ لقطة منه في الإعدادات سيصبح قديمًا بعد تغيير اللغة). هذه الواجهة موجودة خصيصًا لهذا السيناريو.</p>
+<p>⚠️ <strong>لا تستخدم حلقة من</strong> <strong><code>searchApp(appId, 1)</code></strong> <strong>بديلًا عنها</strong>: <code>searchApp</code> في كل مرة تجري مسحًا كاملًا لفهرس التطبيقات بالكامل + مطابقة بينيين + ترتيبًا حسب الدرجات، كما تطلق خيطين بالتوازي وتعيد نتائج متعددة تحمل أيقونات base64. شريط التطبيقات مع الاختصارات يضم عشرات من appId، والاستعلام عنها واحدًا تلو الآخر سيبطئ الإقلاع بوضوح. هذه الواجهة تجمعها كلها مرة واحدة، والجانب الأصلي يصل عبر <code>map::find</code> بدقة.</p>
+<p>تنتظر داخليًا جهوزية فهرس التطبيقات (يُنشأ الفهرس في خيط خلفي)، لذا فهي <strong>ربط غير متزامن</strong>، والاستدعاء المبكر عند الإقلاع البارد لن يعيد نتيجة فارغة.</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>appIds: مصفوفة من appId، مثل <code>[&quot;calculator&quot;, &quot;Microsoft.WindowsCamera&quot;]</code></li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<p>الصيغة مطابقة تمامًا لـ <code>searchApp</code> (نفس <code>BuildAppResult</code>)، لكن:</p>
+<ul>
+<li>
+<p>تعيد العناصر المطابَقة بدقة فقط، <strong>والمعرفات غير الموجودة تُتخطى بصمت</strong>، لذا قد يكون <code>apps.length</code> أصغر من طول المعامل الممرر (يُستخدم ذلك لكشف appId المتعطل في الإعدادات)</p>
+</li>
+<li>
+<p>الترتيب وفق ترتيب المعامل الممرر، و<code>score</code> دائمًا 0 (لم تشارك في الترتيب)</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;apps&quot;: [
+        {
+            &quot;id&quot;: &quot;calculator&quot;,
+            &quot;name&quot;: &quot;超级计算器&quot;,
+            &quot;path&quot;: &quot;calculator&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;appType&quot;: 4,
+            &quot;score&quot;: 0
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-تشغيل-تطبيق" tabindex="-1">3. تشغيل تطبيق <a class="doc-anchor" href="#3-تشغيل-تطبيق" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.launchApp(id: string, admin : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>id: معرّف التطبيق (من حقل <code>id</code> المعاد من <code>searchApp</code> / <code>getAppInfo</code>)</p>
+</li>
+<li>
+<p>admin: التشغيل بصلاحيات المدير</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-الحصول-على-إحصاءات-الاستخدام" tabindex="-1">4. الحصول على إحصاءات الاستخدام <a class="doc-anchor" href="#4-الحصول-على-إحصاءات-الاستخدام" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getAppUsage(mode: string, startTime: string, stopTime: string, forceSync : bool) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>mode: نوع الإحصاء، day، week، month، year</p>
+</li>
+<li>
+<p>startTime: وقت البدء، بالصيغة: yyyymmddhh، مثال: 2025110300</p>
+</li>
+<li>
+<p>stopTime: وقت الانتهاء، بالصيغة: yyyymmddhh، مثال: 2025110300</p>
+</li>
+<li>
+<p>forceSync: هل يُفرض التحديث</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;usages&quot;: [
+        {
+            &quot;time&quot;: &quot;20251104&quot;,
+            &quot;name&quot;: &quot;yyzTools.exe&quot;,
+            &quot;logo&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;usageTimes&quot;: 2,
+            &quot;usageTime&quot;: 4.172,
+            &quot;clickTimes&quot;: 4,
+            &quot;moveDistance&quot;: 105.572357,
+            &quot;pressTimes&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>usages: إحصاءات الاستخدام</p>
+<ul>
+<li>
+<p>time: الوقت، day: yyyymmdd، week: yyyyww، month: yyyymm، year: yyyy</p>
+</li>
+<li>
+<p>name: اسم التطبيق</p>
+</li>
+<li>
+<p>logo: أيقونة التطبيق</p>
+</li>
+<li>
+<p>usageTimes: عدد مرات الاستخدام</p>
+</li>
+<li>
+<p>usageTime: مدة الاستخدام (الوحدة: ثانية)</p>
+</li>
+<li>
+<p>clickTimes: عدد نقرات الفأرة</p>
+</li>
+<li>
+<p>moveDistance: مسافة حركة الفأرة (الوحدة: سم)</p>
+</li>
+<li>
+<p>pressTimes: عدد ضغطات لوحة المفاتيح</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-إدارة-العمليات" tabindex="-1">5. إدارة العمليات <a class="doc-anchor" href="#5-إدارة-العمليات" aria-hidden="true">#</a></h2>
+<h3 id="1-البحث-عن-عملية" tabindex="-1">1. البحث عن عملية <a class="doc-anchor" href="#1-البحث-عن-عملية" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchProcess(keyword: string, maxResults: number) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>keyword: كلمة البحث المفتاحية</p>
+</li>
+<li>
+<p>maxResults: العدد الأقصى للسجلات</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;processes&quot;: [
+        {
+            &quot;id&quot;: 1228,
+            &quot;name&quot;: &quot;msedge.exe&quot;,
+            &quot;path&quot;: &quot;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&quot;,
+            &quot;cmdArgs&quot;: &quot;\&quot;C:\\...\\msedge.exe\&quot; --type=renderer&quot;,
+            &quot;suspend&quot;: 0,
+            &quot;desc&quot;: &quot;Microsoft Edge&quot;,
+            &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+            &quot;score&quot;: 60
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>processes: قائمة العمليات</p>
+<ul>
+<li>
+<p>id: معرّف العملية</p>
+</li>
+<li>
+<p>name: اسم العملية</p>
+</li>
+<li>
+<p>path: المسار الكامل للملف التنفيذي للعملية</p>
+</li>
+<li>
+<p>cmdArgs: سطر أوامر تشغيل العملية</p>
+</li>
+<li>
+<p>suspend: هل هي معلّقة</p>
+</li>
+<li>
+<p>desc: الوصف</p>
+</li>
+<li>
+<p>icon: أيقونة العملية، بصيغة base64</p>
+</li>
+<li>
+<p>score: درجة البحث</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-التحكم-بالعملية" tabindex="-1">2. التحكم بالعملية <a class="doc-anchor" href="#2-التحكم-بالعملية" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.processControl(processId: number, action: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>processId: معرّف العملية</p>
+</li>
+<li>
+<p>action: الإجراء</p>
+<ul>
+<li>
+<p>terminate: إنهاء</p>
+</li>
+<li>
+<p>suspend: تعليق</p>
+</li>
+<li>
+<p>resume: استئناف</p>
+</li>
+<li>
+<p>restart: إعادة تشغيل</p>
+</li>
+</ul>
+</li>
+<li>
+<p>admin: هل تُشغَّل العملية الجديدة بصلاحيات المدير (يسري عند restart)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="6-عمليات-الملفات" tabindex="-1">6. عمليات الملفات <a class="doc-anchor" href="#6-عمليات-الملفات" aria-hidden="true">#</a></h2>
+<h3 id="1-البحث-عن-ملف-غير-متزامن" tabindex="-1">1. البحث عن ملف (غير متزامن) <a class="doc-anchor" href="#1-البحث-عن-ملف-غير-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchFile(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>وصف: ينفَّذ البحث بواسطة خدمة yyzFileSearch المطوَّرة ذاتيًا (فهرس MFT + اتصال IPC عبر أنبوب مسمّى)، وتدعم صياغة استعلام بأسلوب Everything (مثل <code>size:&gt;100MB</code>、<code>!ext:mp4</code>)، وتُرتَّب النتائج حسب الصلة. يُنفَّذ البحث في خيط خلفي، فهو <strong>ربط غير متزامن</strong>.</p>
+</li>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>keyword: كلمة البحث المفتاحية</p>
+</li>
+<li>
+<p>maxResults: العدد الأقصى للسجلات</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;WinMain.cpp&quot;,
+      &quot;path&quot;: &quot;D:\\WorkCodeup\\yyztools\\src\\yyztools&quot;,
+      &quot;dateModified&quot;: &quot;2025/10/18 14:05:00&quot;,
+      &quot;icon&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0,
+      &quot;isDir&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>files: قائمة الملفات</p>
+<ul>
+<li>
+<p>name: اسم الملف</p>
+</li>
+<li>
+<p>path: المجلد الحاوي للملف (دون اسم الملف)، والمسار الكامل = path + &quot;\&quot; + name</p>
+</li>
+<li>
+<p>dateModified: وقت التعديل</p>
+</li>
+<li>
+<p>icon: أيقونة الملف، بصيغة base64</p>
+</li>
+<li>
+<p>score: درجة البحث</p>
+</li>
+<li>
+<p>isDir: 1 يعني مجلدًا، 0 يعني ملفًا</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-فتح-ملف" tabindex="-1">2. فتح ملف <a class="doc-anchor" href="#2-فتح-ملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFile(path: string, admin: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>path: مسار الملف</p>
+</li>
+<li>
+<p>admin: الفتح بصلاحيات المدير</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-فتح-موقع-الملف" tabindex="-1">3. فتح موقع الملف <a class="doc-anchor" href="#3-فتح-موقع-الملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFileLocation(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>path: مسار الملف</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="4-فتح-معاينة-الملف" tabindex="-1">4. فتح معاينة الملف <a class="doc-anchor" href="#4-فتح-معاينة-الملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openFilePreview(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>path: مسار الملف</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="5-نسخقص-الملفات-إلى-الحافظة" tabindex="-1">5. نسخ/قص الملفات إلى الحافظة <a class="doc-anchor" href="#5-نسخقص-الملفات-إلى-الحافظة" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFilesToClipboard(paths: string[], operation: string) : object
+</code></pre>
+<p>نسخ/قص الملفات نفسها إلى الحافظة (CF_HDROP)، ويمكن لصقها في مستكشف الملفات عبر Ctrl+V.</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>paths: مصفوفة مسارات الملفات</p>
+</li>
+<li>
+<p>operation: <code>copy</code> | <code>move</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="6-استعراض-الملفات" tabindex="-1">6. استعراض الملفات <a class="doc-anchor" href="#6-استعراض-الملفات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseFile(filterName: string,
+                        filter: string, initDir: string, supportMulti: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>filterName: اسم المرشّح</p>
+</li>
+<li>
+<p>filter: المرشّح، '<em>.html;</em>.htm'</p>
+</li>
+<li>
+<p>initDir: مسار الاستعراض الابتدائي</p>
+</li>
+<li>
+<p>supportMulti: هل يُسمح بالتحديد المتعدد</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;paths&quot;: [&quot;d:\test\1.txt&quot;, &quot;d:\test\2.txt&quot;]
+}
+</code></pre>
+<ul>
+<li>paths: قائمة المسارات الكاملة للملفات المختارة بالاستعراض؛ وعند إلغاء المستخدم تكون <code>error</code> هي <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="7-استعراض-المجلدات" tabindex="-1">7. استعراض المجلدات <a class="doc-anchor" href="#7-استعراض-المجلدات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.browseDir(initDir: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>initDir: مسار الاستعراض الابتدائي</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;d:\test&quot;
+}
+</code></pre>
+<ul>
+<li>path: المسار الكامل للمجلد المختار بالاستعراض؛ وعند إلغاء المستخدم تكون <code>error</code> هي <code>cancel</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="8-الحصول-على-مجلد-محدد" tabindex="-1">8. الحصول على مجلد محدد <a class="doc-anchor" href="#8-الحصول-على-مجلد-محدد" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getKnownDir(type: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>type: النوع</p>
+<ul>
+<li>
+<p>download: التنزيلات</p>
+</li>
+<li>
+<p>video: الفيديو</p>
+</li>
+<li>
+<p>music: الموسيقى</p>
+</li>
+<li>
+<p>picture: الصور</p>
+</li>
+<li>
+<p>document: المستندات</p>
+</li>
+<li>
+<p>appDataRoaming: AppData/Roaming</p>
+</li>
+<li>
+<p>appDataLocal: AppData/Local</p>
+</li>
+<li>
+<p>appDir: مجلد البرنامج</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;D:\Downloads&quot;
+}
+</code></pre>
+<ul>
+<li>path: المسار الكامل لمجلد النوع المحدد</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-حفظ-ملف" tabindex="-1">9. حفظ ملف <a class="doc-anchor" href="#9-حفظ-ملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.saveFile(filePath: string, data: string, binaryFile: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>filePath: مسار الملف</p>
+</li>
+<li>
+<p>data: محتوى الملف</p>
+<ul>
+<li>
+<p>ملف نصي: المحتوى</p>
+</li>
+<li>
+<p>ملف ثنائي (binary): ترميز base64 للمحتوى</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binaryFile: هل هو ملف ثنائي</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="10-الحصول-على-أيقونة-الملف" tabindex="-1">10. الحصول على أيقونة الملف <a class="doc-anchor" href="#10-الحصول-على-أيقونة-الملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileIcon(filePath: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>filePath: مسار الملف</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;icon&quot;: &quot;data:image/png;base64,&quot;
+}
+</code></pre>
+<ul>
+<li>icon: أيقونة الملف، بترميز base64</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-قراءة-ملف" tabindex="-1">11. قراءة ملف <a class="doc-anchor" href="#11-قراءة-ملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFile(path: string, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>path: مسار الملف</p>
+</li>
+<li>
+<p>encoding: طريقة الترميز</p>
+<ul>
+<li>
+<p>&quot;utf8&quot;: النمط النصي (الافتراضي)</p>
+</li>
+<li>
+<p>&quot;base64&quot; أو &quot;binary&quot;: النمط الثنائي</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<p>عند النجاح:</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;文件内容&quot;,
+  &quot;encoding&quot;: &quot;utf8&quot;,
+  &quot;size&quot;: 1024
+}
+</code></pre>
+<p>عندما يكون الملف كبيرًا (&gt;50MB):</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 3,
+  &quot;errorMsg&quot;: &quot;file too large, use readFileChunk instead&quot;,
+  &quot;fileSize&quot;: 52428800,
+  &quot;chunkSize&quot;: 1048576
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="12-قراءة-ملف-كبير-على-أجزاء" tabindex="-1">12. قراءة ملف كبير على أجزاء <a class="doc-anchor" href="#12-قراءة-ملف-كبير-على-أجزاء" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readFileChunk(path: string, offset: number, length: number, encoding: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>path: مسار الملف</p>
+</li>
+<li>
+<p>offset: الإزاحة الابتدائية (بالبايت)</p>
+</li>
+<li>
+<p>length: طول القراءة (بالبايت، 1MB كحد أقصى)</p>
+</li>
+<li>
+<p>encoding: طريقة الترميز (ثابتة على &quot;base64&quot;)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;data&quot;: &quot;base64编码的数据&quot;,
+  &quot;offset&quot;: 0,
+  &quot;length&quot;: 1048576,
+  &quot;encoding&quot;: &quot;base64&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="13-كتابة-ملف" tabindex="-1">13. كتابة ملف <a class="doc-anchor" href="#13-كتابة-ملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.writeFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>path: مسار الملف</p>
+</li>
+<li>
+<p>data: محتوى الملف</p>
+<ul>
+<li>
+<p>ملف نصي: المحتوى النصي</p>
+</li>
+<li>
+<p>ملف ثنائي: المحتوى بترميز base64</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary: هل هو النمط الثنائي</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="14-الإلحاق-بكتابة-ملف" tabindex="-1">14. الإلحاق بكتابة ملف <a class="doc-anchor" href="#14-الإلحاق-بكتابة-ملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.appendFile(path: string, data: string, binary: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>path: مسار الملف</p>
+</li>
+<li>
+<p>data: المحتوى المُلحق</p>
+<ul>
+<li>
+<p>ملف نصي: المحتوى النصي</p>
+</li>
+<li>
+<p>ملف ثنائي: المحتوى بترميز base64</p>
+</li>
+</ul>
+</li>
+<li>
+<p>binary: هل هو النمط الثنائي</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="15-إعادة-تسميةنقل" tabindex="-1">15. إعادة تسمية/نقل <a class="doc-anchor" href="#15-إعادة-تسميةنقل" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.rename(oldPath: string, newPath: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>oldPath: المسار الأصلي</p>
+</li>
+<li>
+<p>newPath: المسار الجديد</p>
+</li>
+<li>
+<p>overwrite: هل تُستبدل الملفات الموجودة مسبقًا</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="16-نسخ-ملف" tabindex="-1">16. نسخ ملف <a class="doc-anchor" href="#16-نسخ-ملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.copyFile(source: string, destination: string, overwrite: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>source: مسار الملف المصدر</p>
+</li>
+<li>
+<p>destination: مسار الملف الهدف</p>
+</li>
+<li>
+<p>overwrite: هل تُستبدل الملفات الموجودة مسبقًا</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="17-حذف-ملف-أو-مجلد" tabindex="-1">17. حذف ملف أو مجلد <a class="doc-anchor" href="#17-حذف-ملف-أو-مجلد" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deletePath(path: string, useRecycleBin: boolean) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>path: مسار الملف أو المجلد</p>
+</li>
+<li>
+<p>useRecycleBin: هل يُنقل إلى سلة المحذوفات (عند false يُحذف مباشرة، <strong>بلا استرجاع</strong>)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>وصف: تُحذف المجلدات دائمًا بشكل تكراري (بما فيها كل محتوياتها الفرعية).</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="18-إنشاء-مجلد" tabindex="-1">18. إنشاء مجلد <a class="doc-anchor" href="#18-إنشاء-مجلد" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.mkdir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>path: مسار المجلد</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="19-قراءة-مجلد" tabindex="-1">19. قراءة مجلد <a class="doc-anchor" href="#19-قراءة-مجلد" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.readDir(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>path: مسار المجلد</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;files&quot;: [&quot;file1.txt&quot;, &quot;file2.jpg&quot;],
+  &quot;directories&quot;: [&quot;subdir1&quot;, &quot;subdir2&quot;]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="20-التحقق-من-وجود-مسار" tabindex="-1">20. التحقق من وجود مسار <a class="doc-anchor" href="#20-التحقق-من-وجود-مسار" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.exists(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>path: مسار ملف أو مجلد</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;exists&quot;: true
+}
+</code></pre>
+<ul>
+<li>exists: قيمة منطقية أصلية</li>
+</ul>
+</li>
+</ul>
+<h3 id="21-الحصول-على-معلومات-الملف" tabindex="-1">21. الحصول على معلومات الملف <a class="doc-anchor" href="#21-الحصول-على-معلومات-الملف" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getFileInfo(path: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>path: مسار ملف أو مجلد</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;path&quot;: &quot;D:\\test\\file.txt&quot;,
+  &quot;name&quot;: &quot;file.txt&quot;,
+  &quot;isDirectory&quot;: false,
+  &quot;size&quot;: 1024,
+  &quot;readonly&quot;: false,
+  &quot;hidden&quot;: false,
+  &quot;system&quot;: false,
+  &quot;modifiedTime&quot;: &quot;2025-10-19 18:48:29&quot;,
+  &quot;createdTime&quot;: &quot;2025-10-15 10:30:00&quot;,
+  &quot;extension&quot;: &quot;.txt&quot;
+}
+</code></pre>
+<ul>
+<li>isDirectory / readonly / hidden / system: قيم منطقية أصلية</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-معالجة-الوسائط" tabindex="-1">7. معالجة الوسائط <a class="doc-anchor" href="#7-معالجة-الوسائط" aria-hidden="true">#</a></h2>
+<p>تستدعي حزمة الوسائط الخمسة من الجانب C++ أدوات سطر أوامر طرف ثالث تحت <code>bin64\Platform\</code>. جميعها <strong>ربط غير متزامن</strong> ما عدا <code>ffprobeRun</code> (تُنفَّذ في خيط خلفي دون حجب خيط الواجهة)؛ والمعالجة الدفعية تسلسلية، وفي نفس اللحظة عملية وسيط فرعية واحدة فقط تعمل، ويمكن استخدام <code>Zen.cancelRun()</code> لإنهاء التنفيذ الحالي (وتعيد عند الإلغاء <code>errorMsg: &quot;cancelled&quot;</code>).</p>
+<h3 id="1-تنفيذ-أمر-magick-غير-متزامن" tabindex="-1">1. تنفيذ أمر magick (غير متزامن) <a class="doc-anchor" href="#1-تنفيذ-أمر-magick-غير-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.imageRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>args: معاملات سطر أوامر magick الكاملة (دون magick.exe نفسه)، تُركَّب من الواجهة الأمامية. أضف علامات التنصيص المزدوجة حول المسارات بنفسك، مثل <code>&quot;D:\\in.jpg&quot; -resize 800x600 &quot;D:\\out.jpg&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+<ul>
+<li>ملاحظة: لا يركّب الجانب C++ المعاملات، بل ينفّذ <code>magick.exe &lt;args&gt;</code> فقط ويلتقط النتيجة. عندما يكون error غير 0 تُمرَّر رسالة magick stderr كما هي في errorMsg؛ وstdout هو المخرجات القياسية لـ magick (نتائج أوامر مثل identify)</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-تنفيذ-أمر-ffmpeg-غير-متزامن" tabindex="-1">2. تنفيذ أمر ffmpeg (غير متزامن) <a class="doc-anchor" href="#2-تنفيذ-أمر-ffmpeg-غير-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffmpegRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>args: معاملات سطر أوامر ffmpeg الكاملة (دون ffmpeg.exe نفسه)، تُركَّب من الواجهة الأمامية. أضف علامات التنصيص المزدوجة حول المسارات بنفسك، مثل <code>-i &quot;D:\in.mp4&quot; -vf &quot;scale=1280:720&quot; -c:v libx264 -crf 23 &quot;D:\out.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+<ul>
+<li>ملاحظة: لا يركّب الجانب C++ المعاملات، بل ينفّذ <code>ffmpeg.exe &lt;args&gt;</code> فقط ويلتقط النتيجة. عندما يكون error غير 0 تُمرَّر رسالة ffmpeg stderr كما هي في errorMsg؛ وstdout هو المخرجات القياسية لـ ffmpeg. معالجة الفيديو تستغرق وقتًا طويلًا، والمهلة الافتراضية في C++ هي 1800s</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-تنفيذ-أمر-ffprobe-استقصاء-البيانات-الوصفية-متزامن" tabindex="-1">3. تنفيذ أمر ffprobe (استقصاء البيانات الوصفية، متزامن) <a class="doc-anchor" href="#3-تنفيذ-أمر-ffprobe-استقصاء-البيانات-الوصفية-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ffprobeRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>args: معاملات سطر أوامر ffprobe الكاملة (دون ffprobe.exe نفسه). الشائع استخدام <code>-v quiet -print_format json -show_format -show_streams &quot;D:\in.mp4&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;{ ...json... }&quot;
+}
+</code></pre>
+<ul>
+<li>ملاحظة: ينفّذ الجانب C++ <code>ffprobe.exe &lt;args&gt;</code> فقط ويعيد النتيجة. stdout يكون عادة JSON ويحلّله الواجهة الأمامية بنفسه. الاستقصاء سريع جدًا، فبقي ربطًا متزامنًا، والمهلة الافتراضية 30s</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-تنفيذ-أمر-pdfcpu-غير-متزامن" tabindex="-1">4. تنفيذ أمر pdfcpu (غير متزامن) <a class="doc-anchor" href="#4-تنفيذ-أمر-pdfcpu-غير-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pdfRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>args: معاملات سطر أوامر pdfcpu الكاملة (دون pdfcpu.exe نفسه)، تُركَّب من الواجهة الأمامية. أضف علامات التنصيص المزدوجة حول المسارات بنفسك، مثل <code>merge &quot;D:\out.pdf&quot; &quot;D:\in1.pdf&quot; &quot;D:\in2.pdf&quot; --force</code></li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+<ul>
+<li>ملاحظة: لا يركّب الجانب C++ المعاملات، بل ينفّذ <code>pdfcpu.exe &lt;args&gt;</code> فقط ويلتقط النتيجة. عندما يكون error غير 0 تُمرَّر رسالة pdfcpu stderr كما هي في errorMsg؛ وstdout هو المخرجات القياسية لـ pdfcpu (نتائج أوامر مثل <code>info -j</code>). المهلة الافتراضية في C++ هي 1800s</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-تنفيذ-أمر-ghostscript-غير-متزامن" tabindex="-1">5. تنفيذ أمر Ghostscript (غير متزامن) <a class="doc-anchor" href="#5-تنفيذ-أمر-ghostscript-غير-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.gsRun(args: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>args: معاملات سطر أوامر Ghostscript الكاملة (دون gswin64c.exe نفسه)، تُركَّب من الواجهة الأمامية. أضف علامات التنصيص المزدوجة حول المسارات بنفسك، مثل <code>-sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=150 -sOutputFile=&quot;D:\out.pdf&quot; &quot;D:\in.pdf&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;stdout&quot;: &quot;...&quot;
+}
+</code></pre>
+<ul>
+<li>ملاحظة: لا يركّب الجانب C++ المعاملات، بل ينفّذ <code>Platform\Ghostscript\gswin64c.exe &lt;args&gt;</code> فقط ويلتقط النتيجة. عندما يكون error غير 0 تُمرَّر رسالة Ghostscript stderr كما هي في errorMsg. المهلة الافتراضية في C++ هي 1800s. يُستخدم حاليًا لخطوة الضغط (optimize) في أدوات PDF، وبقية عمليات PDF لا تزال عبر <code>pdfRun</code> (pdfcpu)</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-إلغاء-عملية-الوسائط-الفرعية-الحالية" tabindex="-1">6. إلغاء عملية الوسائط الفرعية الحالية <a class="doc-anchor" href="#6-إلغاء-عملية-الوسائط-الفرعية-الحالية" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.cancelRun() : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات: لا شيء</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0
+}
+</code></pre>
+<ul>
+<li>ملاحظة: يطلق إشارة الإلغاء وينهي العملية الوسيطة الفرعية الجارية حاليًا عبر <code>imageRun</code>/<code>ffmpegRun</code>/<code>pdfRun</code>/<code>gsRun</code> (<code>TerminateProcess</code>). الاستدعاء الملغى يعيد <code>{error:2, errorMsg:&quot;cancelled&quot;}</code>. المعالجة الدفعية تسلسلية، وفي نفس اللحظة عملية فرعية واحدة فقط تعمل.</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-لقطة-الشاشة-و-ocr" tabindex="-1">8. لقطة الشاشة و OCR <a class="doc-anchor" href="#8-لقطة-الشاشة-و-ocr" aria-hidden="true">#</a></h2>
+<h3 id="1-لقطة-شاشةتثبيتها-على-سطح-المكتب" tabindex="-1">1. لقطة شاشة/تثبيتها على سطح المكتب <a class="doc-anchor" href="#1-لقطة-شاشةتثبيتها-على-سطح-المكتب" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.screenCap(mode:string, wait:bool, file: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>mode: النمط</p>
+<ul>
+<li>
+<p>normal: عادي</p>
+</li>
+<li>
+<p>long: لقطة طويلة</p>
+</li>
+<li>
+<p>fast: لقطة سريعة إلى الحافظة (دون تعليقات توضيحية، مناسبة لـ ocr)</p>
+</li>
+<li>
+<p>quickocr: بعد سحب تحديد منطقة يُنفَّذ فورًا OCR + ترجمة، وتُعرض الترجمة الملتصقة بسطح المكتب في موضع النص الأصلي للمنطقة (ترجمة OCR سريعة)</p>
+</li>
+<li>
+<p>pinClipboard: تثبيت صورة الحافظة على سطح المكتب</p>
+</li>
+<li>
+<p>pinFile: تثبيت صورة من ملف صورة على سطح المكتب</p>
+</li>
+<li>
+<p>pinArea: التقاط منطقة الشاشة المحددة وتثبيتها في مكانها على سطح المكتب (param يأخذ &quot;x,y,w,h&quot; بالبكسل الفعلي)</p>
+</li>
+<li>
+<p>pinWin: التقاط منطقة العميل للنافذة المحددة وتثبيتها في مكانها على سطح المكتب (param يأخذ HWND عشري)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>wait: هل يُنتظر اكتمال اللقطة</p>
+</li>
+<li>
+<p>param: مسار الملف (pinFile)؛ سلسلة المنطقة &quot;x,y,w,h&quot; (pinArea)؛ HWND عشري (pinWin)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-تهيئة-ocr" tabindex="-1">2. تهيئة OCR <a class="doc-anchor" href="#2-تهيئة-ocr" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrInit(lang: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>lang: اللغة</p>
+<ul>
+<li>
+<p>zh-CN: الصينية المبسطة</p>
+</li>
+<li>
+<p>zh-TW: الصينية التقليدية</p>
+</li>
+<li>
+<p>en-US: الإنجليزية</p>
+</li>
+<li>
+<p>ja-JP: اليابانية</p>
+</li>
+<li>
+<p>ko-KR: الكورية</p>
+</li>
+<li>
+<p>ru-RU: الروسية</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-التعرف-الضوئي-ocr-غير-متزامن" tabindex="-1">3. التعرف الضوئي OCR (غير متزامن) <a class="doc-anchor" href="#3-التعرف-الضوئي-ocr-غير-متزامن" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.ocrRecognition(image: string) : object
+</code></pre>
+<p>التعرف الضوئي OCR عملية تستهلك وقتًا، فهو <strong>ربط غير متزامن</strong> ويعيد النتيجة عبر Promise.</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>image: الصورة، بترميز base64</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;,
+    &quot;result&quot;: {
+        &quot;code&quot;: 100,
+        &quot;data&quot;: [
+            {
+                &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+                &quot;score&quot;: 0.9605724896703448,
+                &quot;text&quot;: &quot;有发热症状患者&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>result: نتيجة التعرف</p>
+<ul>
+<li>
+<p>code: الترميز، ثابت على 100</p>
+</li>
+<li>
+<p>data: مجموعة النتائج</p>
+<ul>
+<li>
+<p>box: موضع النص (إحداثيات الزوايا الأربع)</p>
+</li>
+<li>
+<p>text: النص بعد التعرف</p>
+</li>
+<li>
+<p>score: درجة التعرف</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-التشفير-وفك-التشفير" tabindex="-1">9. التشفير وفك التشفير <a class="doc-anchor" href="#9-التشفير-وفك-التشفير" aria-hidden="true">#</a></h2>
+<h3 id="1-تشفير-البيانات" tabindex="-1">1. تشفير البيانات <a class="doc-anchor" href="#1-تشفير-البيانات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.encrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>target: البيانات المراد تشفيرها</p>
+<ul>
+<li>
+<p>عندما type=&quot;text&quot; تكون سلسلة نصية</p>
+</li>
+<li>
+<p>عندما type=&quot;data&quot; تكون بيانات ثنائية بترميز Base64</p>
+</li>
+<li>
+<p>عندما type=&quot;hex&quot; تكون سلسلة سداسية عشرية</p>
+</li>
+<li>
+<p>عندما type=&quot;file&quot; تكون مسار ملف</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm: خوارزمية التشفير</p>
+<ul>
+<li>
+<p>التشفير المتماثل: &quot;aes-128-cbc&quot;, &quot;aes-192-cbc&quot;, &quot;aes-256-cbc&quot;, &quot;aes-128-ecb&quot;, &quot;aes-256-ecb&quot;, &quot;aes-128-ctr&quot;, &quot;aes-256-ctr&quot;, &quot;des-cbc&quot;, &quot;des-ecb&quot;, &quot;des-ede3-cbc&quot; (3DES), &quot;des-ede3-ecb&quot;, &quot;rc4&quot;, &quot;bf-ecb&quot; (Blowfish), &quot;rc2-cbc&quot;, &quot;sm4-cbc&quot;, &quot;sm4-ecb&quot;, &quot;sm4-ctr&quot;</p>
+</li>
+<li>
+<p>التشفير غير المتماثل: &quot;rsa-pkcs1&quot;, &quot;rsa-oaep&quot; (RSA، التشفير بالمفتاح العام وفك التشفير بالمفتاح الخاص)، و&quot;sm2&quot; (المنحنى الإهليلجي الوطني الصيني sm2p256v1، التشفير بالمفتاح العام وفك التشفير بالمفتاح الخاص؛ يعالج في مرة واحدة أي طول دون حاجة للتقسيم إلى أجزاء)</p>
+</li>
+<li>
+<p>key/iv بصيغة Base64؛ تُحوَّل داخليًا إلى سداسي عشري وتُمرَّر بصيغة <code>enc -K &lt;hex&gt; -iv &lt;hex&gt;</code>، ويجب أن يطابق طول المفتاح الخوارزمية بدقة</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type: نوع المدخلات (الافتراضي &quot;text&quot;)</p>
+<ul>
+<li>
+<p>&quot;text&quot;: بيانات نصية</p>
+</li>
+<li>
+<p>&quot;data&quot;: بيانات ثنائية بترميز Base64</p>
+</li>
+<li>
+<p>&quot;hex&quot;: سلسلة سداسية عشرية</p>
+</li>
+<li>
+<p>&quot;file&quot;: مسار ملف</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key: في المتماثل يكون المفتاح بترميز Base64؛ وفي غير المتماثل (rsa-*、sm2) يكون نص PEM (مرّر المفتاح العام للتشفير والخاص لفك التشفير، ويُمرَّر كما هو دون فك ترميز Base64)</p>
+</li>
+<li>
+<p>iv: متجه التهيئة بترميز Base64 (اختياري، تحتاجه بعض الخوارزميات؛ يُتجاهل في غير المتماثل)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的加密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;text&quot;,
+  &quot;inputSize&quot;: 1024,
+  &quot;outputSize&quot;: 1040
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-فك-تشفير-البيانات" tabindex="-1">2. فك تشفير البيانات <a class="doc-anchor" href="#2-فك-تشفير-البيانات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.decrypt(target: string, algorithm: string, type: string, key: string, iv: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>target: البيانات المراد فك تشفيرها</p>
+<ul>
+<li>
+<p>عندما type=&quot;data&quot; تكون النص المشفّر بترميز Base64</p>
+</li>
+<li>
+<p>عندما type=&quot;file&quot; تكون مسار ملف النص المشفّر</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm: خوارزمية التشفير (كما في encrypt)</p>
+</li>
+<li>
+<p>type: نوع المدخلات (الافتراضي &quot;data&quot;)</p>
+<ul>
+<li>
+<p>&quot;data&quot;: النص المشفّر بترميز Base64</p>
+</li>
+<li>
+<p>&quot;file&quot;: مسار ملف النص المشفّر</p>
+</li>
+</ul>
+</li>
+<li>
+<p>key: في المتماثل يكون المفتاح بترميز Base64؛ وفي غير المتماثل (rsa-*、sm2) يكون نص PEM (مرّر المفتاح العام للتشفير والخاص لفك التشفير، ويُمرَّر كما هو دون فك ترميز Base64)</p>
+</li>
+<li>
+<p>iv: متجه التهيئة بترميز Base64 (اختياري؛ يُتجاهل في غير المتماثل)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;result&quot;: &quot;Base64编码的解密数据&quot;,
+  &quot;algorithm&quot;: &quot;aes-256-cbc&quot;,
+  &quot;type&quot;: &quot;data&quot;,
+  &quot;inputSize&quot;: 1040,
+  &quot;outputSize&quot;: 1024
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-توليد-مفتاح" tabindex="-1">3. توليد مفتاح <a class="doc-anchor" href="#3-توليد-مفتاح" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateKey(algorithm: string, bits: string = '') : object
+</code></pre>
+<p>مدخل موحّد لتوليد المفاتيح (يُولَّد بواسطة openssl.exe المدمج، فلا تحتاج الواجهة الأمامية إلى الاعتماد على WebCrypto في المتصفح).</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>algorithm: اسم الخوارزمية</p>
+<ul>
+<li>
+<p>متماثل: aes-128-cbc / aes-256-cbc / des-cbc / des-ede3-cbc / sm4-cbc / sm4-ecb / sm4-ctr / rc2-cbc / rc4 / bf-ecb إلخ (يُستنتج طول المفتاح من اسم الخوارزمية)</p>
+</li>
+<li>
+<p>غير متماثل: &quot;rsa&quot; (يسري bits) / &quot;sm2&quot; (منحنى ثابت sm2p256v1)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>bits: عدد بتات مفتاح RSA (&quot;2048&quot;/&quot;4096&quot;، الافتراضي 2048)؛ تُتجاهل في الخوارزميات المتماثلة وSM2</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">// 对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;key&quot;: &quot;Base64编码的密钥&quot; }
+// 非对称算法
+{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;sm2&quot;, &quot;publicKey&quot;: &quot;-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n&quot;, &quot;privateKey&quot;: &quot;-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n&quot; }
+</code></pre>
+</li>
+</ul>
+<h3 id="4-توليد-iv" tabindex="-1">4. توليد IV <a class="doc-anchor" href="#4-توليد-iv" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.generateIv(algorithm: string) : object
+</code></pre>
+<p>يولّد IV عشوائيًا حسب حجم كتلة الخوارزمية المتماثلة (يُولَّد بواسطة openssl.exe المدمج).</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>algorithm: اسم الخوارزمية المتماثلة (قائمة الخوارزميات المتماثلة نفسها في encrypt)</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;algorithm&quot;: &quot;aes-256-cbc&quot;, &quot;iv&quot;: &quot;Base64编码的IV&quot; }
+</code></pre>
+<p>ملاحظة: حجم كتلة AES/SM4 هو 16 بايت؛ وDES/3DES/RC2 هو 8 بايتات؛ ونمط ECB وشيفرات التدفق (rc4) لا تحتاج IV، ويعيد <code>iv</code> سلسلة فارغة.</p>
+</li>
+</ul>
+<h3 id="5-حساب-التجزئة" tabindex="-1">5. حساب التجزئة <a class="doc-anchor" href="#5-حساب-التجزئة" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.calcHash(target: string, algorithm: string, type?: string, key?: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>target: هدف الحساب، ويتغير معناه حسب type</p>
+<ul>
+<li>
+<p>عندما type=&quot;file&quot; يكون مسار ملف</p>
+</li>
+<li>
+<p>عندما type=&quot;text&quot; يكون سلسلة نصية (يُحسب الملخّص بترميز UTF-8)</p>
+</li>
+<li>
+<p>عندما type=&quot;data&quot; تكون بيانات ثنائية بترميز Base64</p>
+</li>
+<li>
+<p>عندما type=&quot;hex&quot; تكون سلسلة سداسية عشرية</p>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm: خوارزمية التجزئة</p>
+<ul>
+<li>
+<p>&quot;md5&quot;</p>
+</li>
+<li>
+<p>&quot;sha1&quot;</p>
+</li>
+<li>
+<p>&quot;sha224&quot;</p>
+</li>
+<li>
+<p>&quot;sha256&quot;</p>
+</li>
+<li>
+<p>&quot;sha384&quot;</p>
+</li>
+<li>
+<p>&quot;sha512&quot;</p>
+</li>
+<li>
+<p>&quot;ripemd160&quot;</p>
+</li>
+<li>
+<p>&quot;sm3&quot; (ملخّص SM3 الوطني الصيني، 256 بت / 64 خانة سداسية عشرية)</p>
+</li>
+<li>
+<p>&quot;sha3-224&quot; / &quot;sha3-256&quot; / &quot;sha3-384&quot; / &quot;sha3-512&quot; (SHA-3 / Keccak، NIST FIPS 202)</p>
+</li>
+<li>
+<p>&quot;blake2b512&quot; / &quot;blake2s256&quot; (BLAKE2، ملخّصات حديثة عالية الأداء)</p>
+</li>
+<li>
+<p>&quot;crc32&quot; (مجموع تحقق CRC32، 8 خانات سداسية عشرية)</p>
+</li>
+<li>
+<p>&quot;crc16&quot; (مجموع تحقق CRC16، 4 خانات سداسية عشرية)</p>
+</li>
+<li>
+<p>&quot;checksum&quot; (مجموع تراكمي للبايتات، 8 خانات سداسية عشرية)</p>
+</li>
+<li>
+<p>&quot;hmac-md5&quot; / &quot;hmac-sha1&quot; / &quot;hmac-sha256&quot; / &quot;hmac-sha512&quot; / &quot;hmac-sm3&quot; / &quot;hmac-sha3-256&quot; / &quot;hmac-sha3-512&quot; (HMAC، المعامل الرابع key هو المفتاح، والناتج MAC سداسي عشري)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>type: نوع المدخلات (اختياري، الافتراضي &quot;file&quot;)</p>
+<ul>
+<li>
+<p>&quot;file&quot;: حساب تجزئة ملف</p>
+</li>
+<li>
+<p>&quot;text&quot;: حساب تجزئة نص</p>
+</li>
+<li>
+<p>&quot;data&quot;: حساب تجزئة بيانات ثنائية (يجب أن يكون target سلسلة Base64)</p>
+</li>
+<li>
+<p>&quot;hex&quot;: حساب تجزئة سلسلة سداسية عشرية (target سلسلة hex، تُفكّ ثم يُحسب بالبايتات)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;hash&quot;: &quot;D41D8CD98F00B204E9800998ECF8427E&quot;,
+  &quot;algorithm&quot;: &quot;md5&quot;,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="10-تاريخ-الحافظة" tabindex="-1">10. تاريخ الحافظة <a class="doc-anchor" href="#10-تاريخ-الحافظة" aria-hidden="true">#</a></h2>
+<h3 id="1-البحث-في-الحافظة" tabindex="-1">1. البحث في الحافظة <a class="doc-anchor" href="#1-البحث-في-الحافظة" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchClip(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>keyword: كلمة البحث المفتاحية</p>
+</li>
+<li>
+<p>maxResults: العدد الأقصى للسجلات</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: 0,
+  &quot;clips&quot;: [
+    {
+      &quot;id&quot;: &quot;1235642340977&quot;,
+      &quot;name&quot;: &quot;Weixin.exe&quot;,
+      &quot;text&quot;: &quot;文本内容&quot;,
+      &quot;ocrJson&quot;: &quot;{\&quot;code\&quot;:100,\&quot;data\&quot;:[...]}&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:29&quot;,
+      &quot;image&quot;: &quot;data:image/png;base64,&quot;,
+      &quot;score&quot;: 0
+    },
+    {
+      &quot;id&quot;: &quot;235634234232&quot;,
+      &quot;name&quot;: &quot;MarkText.exe&quot;,
+      &quot;text&quot;: &quot;function&quot;,
+      &quot;ocrJson&quot;: &quot;&quot;,
+      &quot;dateCreated&quot;: &quot;2025-10-19 18:48:21&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;score&quot;: 0
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>clips: قائمة محتويات تاريخ الحافظة</p>
+<ul>
+<li>
+<p>id: معرّف السجل، وهو المعرّف الفريد</p>
+</li>
+<li>
+<p>name: اسم العملية المصدر التي نُسخ منها المحتوى</p>
+</li>
+<li>
+<p>text: المحتوى النصي (عندما تكون image غير فارغة، فهو النص الناتج عن OCR للصورة)</p>
+</li>
+<li>
+<p>image: محتوى الصورة، بصيغة base64</p>
+</li>
+<li>
+<p>dateCreated: تاريخ الإنشاء</p>
+</li>
+<li>
+<p>ocrJson: المحتوى المنسّق لناتج OCR للصورة</p>
+<ul>
+<li>
+<p>box: موضع النص (إحداثيات الزوايا الأربع)</p>
+</li>
+<li>
+<p>text: النص بعد التعرف</p>
+</li>
+<li>
+<p>score: درجة التعرف</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;code&quot;: 100,
+    &quot;data&quot;: [
+        {
+            &quot;box&quot;: [[38, 33], [281, 26], [282, 71], [40, 78]],
+            &quot;score&quot;: 0.9605724896703448,
+            &quot;text&quot;: &quot;有发热症状患者&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-حذف-سجل-واحد" tabindex="-1">2. حذف سجل واحد <a class="doc-anchor" href="#2-حذف-سجل-واحد" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.deleteClip(id: string) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>id: معرّف السجل</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="3-تفريغ-السجلات" tabindex="-1">3. تفريغ السجلات <a class="doc-anchor" href="#3-تفريغ-السجلات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.clearClip() : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات: لا شيء</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="11-الإشارات-المرجعية" tabindex="-1">11. الإشارات المرجعية <a class="doc-anchor" href="#11-الإشارات-المرجعية" aria-hidden="true">#</a></h2>
+<h3 id="1-البحث-في-الإشارات-المرجعية" tabindex="-1">1. البحث في الإشارات المرجعية <a class="doc-anchor" href="#1-البحث-في-الإشارات-المرجعية" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.searchBookmark(keyword: string, maxResults : number) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>keyword: كلمة البحث المفتاحية</p>
+</li>
+<li>
+<p>maxResults: العدد الأقصى للسجلات</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;bookmarks&quot;: [
+        {
+            &quot;id&quot;: &quot;13568723452&quot;,
+            &quot;name&quot;: &quot;DeepSeek | 深度求索&quot;,
+            &quot;url&quot;: &quot;https://www.deepseek.com/&quot;,
+            &quot;dateAdded&quot;: &quot;2018-12-19 21:20:48&quot;,
+            &quot;dateLastUsed&quot;: &quot;2025-05-21 15:04:06&quot;,
+            &quot;visitCount&quot;: 37,
+            &quot;score&quot;: 80
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>
+<p>bookmarks: قائمة الإشارات المرجعية</p>
+<ul>
+<li>
+<p>id: المعرّف الفريد ID</p>
+</li>
+<li>
+<p>name: الاسم</p>
+</li>
+<li>
+<p>url: الرابط</p>
+</li>
+<li>
+<p>dateAdded: وقت الإضافة</p>
+</li>
+<li>
+<p>dateLastUsed: وقت الاستخدام</p>
+</li>
+<li>
+<p>visitCount: عدد مرات الاستخدام</p>
+</li>
+<li>
+<p>score: درجة البحث</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-فتح-إشارة-مرجعية" tabindex="-1">2. فتح إشارة مرجعية <a class="doc-anchor" href="#2-فتح-إشارة-مرجعية" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.openBookmark(id: string, privacyMode: bool) : object
+</code></pre>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>id: المعرّف</p>
+</li>
+<li>
+<p>privacyMode: وضع التصفح الخاص</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="12-تنفيذ-الأوامر" tabindex="-1">12. تنفيذ الأوامر <a class="doc-anchor" href="#12-تنفيذ-الأوامر" aria-hidden="true">#</a></h2>
+<h3 id="1-تشغيل-سطر-أوامر" tabindex="-1">1. تشغيل سطر أوامر <a class="doc-anchor" href="#1-تشغيل-سطر-أوامر" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runCmd(cmd: string, admin : bool) : object
+</code></pre>
+<p>يفتح نافذة سطر أوامر مرئية عبر <code>cmd.exe /k &lt;cmd&gt;</code> وينفّذ الأمر (تبقى النافذة مفتوحة).</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>cmd: الأمر</p>
+</li>
+<li>
+<p>admin: هل يُشغَّل بصلاحيات المدير</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="2-تشغيل-أي-برنامج" tabindex="-1">2. تشغيل أي برنامج <a class="doc-anchor" href="#2-تشغيل-أي-برنامج" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.runAny(cmdExe: string, cmdArgs: string, admin : bool) : object
+</code></pre>
+<p>يشغّل مباشرة أي ملف تنفيذي أو عنوان URL (تُفتح الـ URL بالتطبيق المرتبط الافتراضي بالنظام، مثل المتصفح).</p>
+<ul>
+<li>
+<p>المدخلات</p>
+<ul>
+<li>
+<p>cmdExe: مسار الأمر أو عنوان URL</p>
+</li>
+<li>
+<p>cmdArgs: معاملات الأمر</p>
+</li>
+<li>
+<p>admin: هل يُشغَّل بصلاحيات المدير</p>
+</li>
+</ul>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="13-التحديث" tabindex="-1">13. التحديث <a class="doc-anchor" href="#13-التحديث" aria-hidden="true">#</a></h2>
+<p>ينجز التحديث عملية مستقلة هي <code>yyzUpdater.exe</code>، والعملية الرئيسية مسؤولة فقط عن إطلاقه واستقصاء حالته.</p>
+<h3 id="1-التحقق-من-التحديثات" tabindex="-1">1. التحقق من التحديثات <a class="doc-anchor" href="#1-التحقق-من-التحديثات" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.checkUpdate() : object
+</code></pre>
+<p>يطلق <code>yyzUpdater.exe --check-and-apply</code> (فحص + تنزيل + تطبيق في خطوة واحدة).</p>
+<ul>
+<li>
+<p>المدخلات: لا شيء</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+<ul>
+<li>ملاحظة: <code>error:0</code> يعني فقط إطلاق المحدّث بنجاح، <strong>ولا يعني نتيجة التحديث</strong>. استعلم عن حالة سير التحديث/جاهزيته عبر <code>getUpdateState</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-الحصول-على-حالة-التحديث" tabindex="-1">2. الحصول على حالة التحديث <a class="doc-anchor" href="#2-الحصول-على-حالة-التحديث" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.getUpdateState() : object
+</code></pre>
+<p>يستقصي حالة التحديث في الزمن الحقيقي (للتسويق الدوري من علبة النظام):</p>
+<ul>
+<li>
+<p>هل يعمل المحدّث → عبر كائن الحصر المفرد <code>Local\yyzUpdater_SingleInstance</code></p>
+</li>
+<li>
+<p>هل دُنّز التحديث بانتظار التطبيق → هل يوجد <code>%APPDATA%\yyzTools\Update\update.ready</code> (وإن وُجد يُحلَّل فيه إصدار حزمة main)</p>
+</li>
+<li>
+<p>ما إذا كان الفحص اليدوي قد انتهى دون تحديث → علامة <code>%APPDATA%\yyzTools\Update\update.result</code> (<strong>تُحذف فور قراءتها</strong>)</p>
+</li>
+<li>
+<p>المدخلات: لا شيء</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
+</code></pre>
+<ul>
+<li>
+<p>status: <code>idle</code> (لا نشاط تحديث) / <code>checking</code> (المحدّث قيد التشغيل) / <code>ready</code> (اكتمل التنزيل ويمكن الترقية)</p>
+</li>
+<li>
+<p>version: له قيمة فقط في حالة <code>ready</code>، وهو رقم الإصدار الجديد بانتظار التطبيق (من حزمة main)، وفي غير ذلك سلسلة فارغة</p>
+</li>
+<li>
+<p>lastResult: قد تكون له قيمة فقط في حالة <code>idle</code>، وهي نتيجة آخر فحص <strong>يدوي</strong> (<code>--check-and-apply</code>): <code>uptodate</code> (أنت على أحدث إصدار) / <code>error</code> (فشل الفحص)، وسلسلة فارغة عند غياب العلامة. يكتب المحدّث هذه العلامة وتحذفها هذه الواجهة فور قراءتها، لذا <strong>تُعاد مرة واحدة فقط</strong>، لتُظهر الواجهة الأمامية Toast مرة واحدة؛ أما الفحص الصامت <code>--check</code> فلا يكتب علامة ولا يسبب إزعاجًا.</p>
+</li>
+<li>
+<p>أولوية الحالة: <code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-تطبيق-التحديث-الذي-اكتمل-تنزيله" tabindex="-1">3. تطبيق التحديث الذي اكتمل تنزيله <a class="doc-anchor" href="#3-تطبيق-التحديث-الذي-اكتمل-تنزيله" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.applyUpdate() : object
+</code></pre>
+<p>يطلق <code>yyzUpdater.exe --apply</code>: يقرأ <code>update.ready</code> → ينتظر خروج العملية الرئيسية → يستبدل الملفات → يعيد تشغيل العملية الرئيسية. استدعِها فقط عندما يعيد <code>getUpdateState</code> الحالة <code>ready</code>.</p>
+<ul>
+<li>
+<p>المدخلات: لا شيء</p>
+</li>
+<li>
+<p>المخرجات</p>
+<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
+</code></pre>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h2 id="إرشادات-الأمان" tabindex="-1">⚠️ إرشادات الأمان <a class="doc-anchor" href="#إرشادات-الأمان" aria-hidden="true">#</a></h2>
+<p>تمنح واجهة Native API مطوّري الوحدات وصولًا <strong>كاملًا ومفتوحًا</strong> لقدرات النظام في العملية المضيفة، بما في ذلك قراءة الملفات وكتابتها وحذفها، إنشاء العمليات وإنهاؤها، التحكم بالنوافذ، قراءة الحافظة وكتابتها، تعديل السجل (Registry) وإعدادات النظام، التنزيل عبر الشبكة وتنفيذ أسطر الأوامر وغيرها من <strong>العمليات عالية الخطورة</strong>.</p>
+<p>هذه الواجهات <strong>بدون نوافذ أذونات، وبدون عزل في صندوق حماية (sandbox)، وبدون آلية تراجع</strong> — الاستدعاء يسري فورًا بصلاحيات المستخدم الحالي، وسوء الاستخدام قد يؤدي إلى فقدان دائم للبيانات أو خلل في النظام.</p>
+<p>لذا يرجى الانتباه حتمًا إلى ما يلي:</p>
+<ul>
+<li><strong>قيّم الأمان بنفسك</strong>: قبل استدعاء أي واجهة، تأكد أولًا أن مصدر المعاملات (خاصة المسارات وأسماء العمليات وأسطر الأوامر) موثوق ومتحقق منه إроверًا كافية؛ بالنسبة للعمليات غير القابلة للتراجع مثل الحذف والاستبدال وإنهاء العمليات، يُنصح بأخذ نسخة احتياطية أو طلب تأكيد ثانٍ من المستخدم.</li>
+<li><strong>احذر المدخلات غير الموثوقة</strong>: لا تدمج أبدًا مدخلات المستخدم أو استجابات الشبكة أو بيانات الأطراف الثالثة في معاملات الواجهات دون تحقق؛ احذر من تجاوز المسار (path traversal) وحقن الأوامر.</li>
+<li><strong>مبدأ أقل الصلاحيات</strong>: لا تطلب إلا القدرات التي يحتاجها التطبيق فعلًا، وتجنب استخدام واجهات ذات نطاق تأثير أوسع طلبًا للراحة.</li>
+<li><strong>المسؤولية على عاتق المطوّر</strong>: يتحمل المطوّر بنفسه كل العواقب المترتبة عن استخدام هذه الواجهة البرمجية، بما في ذلك على سبيل المثال لا الحصر فقدان البيانات وتلف النظام والمخاطر الأمنية.</li>
+</ul>
+</blockquote>
+
+
+            
+<nav class="sdk-links sdk-links-bottom" aria-label="موارد ذات صلة">
+    <a class="sdk-link" href="/ar/sdk.html">
+        <i class="fa-solid fa-book"></i>
+        <span>البدء السريع</span>
+    </a>
+    
+    <a class="sdk-link" href="/yyzTools-SDK-Sample-1.0.0.zip" download>
+        <i class="fa-solid fa-file-zipper"></i>
+        <span>تنزيل المشروع النموذجي</span>
+    </a>
+</nav>
+
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ar/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">مجموعة أدوات إنتاجية لسطح مكتب Windows، تعالج بياناتك محليًا أولًا، ومجانية للأبد.</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>المنتج</h3>
+            <a href="/ar/features.html">المزايا</a>
+            <a href="/ar/download.html">التنزيل</a>
+            <a href="/ar/changelog.html">سجل التغييرات</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>المصادر</h3>
+            <a href="/ar/sdk.html">المطوّرون</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">الملاحظات</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>الشؤون القانونية</h3>
+            <a href="/ar/agreement.html">اتفاقية المستخدم</a>
+            <a href="/ar/privacy.html">سياسة الخصوصية</a>
+            
+            <a class="js-email" href="#">بريد التواصل</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · جميع الحقوق محفوظة</p>
+        <p class="footer-fine">Windows علامة تجارية مسجّلة لشركة Microsoft Corporation. ولا توجد أي علاقة تبعية بين هذا الموقع و Microsoft&amp;rlm;.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

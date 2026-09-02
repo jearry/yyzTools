@@ -25,22 +25,22 @@
         })();
     </script>
     <style>
-        /* 配色对齐 cmdplate 的 --yz-* 色板（window_controls.css），嵌入后融为一体 */
+        /* 配色对齐 cmdplate 的 --zen-* 色板（window_controls.css），嵌入后融为一体 */
         :root {
-            --bg: #ffffff; /* = --yz-card-bg（浅色） */
+            --bg: #ffffff; /* = --zen-card-bg（浅色） */
             --text: #333333;
             --text-sub: #6c757d;
             --border: #e9ecef;
-            --accent: #0078d4; /* = --yz-primary */
+            --accent: #0078d4; /* = --zen-primary */
             --accent-soft: rgba(0, 120, 212, 0.08);
             --brand-glow: rgba(0, 120, 212, 0.10);
         }
         html[data-theme="dark"] {
-            --bg: #2a2a2a; /* = --yz-card-bg（深色） */
+            --bg: #2a2a2a; /* = --zen-card-bg（深色） */
             --text: #e6e6e6;
             --text-sub: #9aa0a6;
             --border: #3a3a3a;
-            --accent: #4db8ff; /* = --yz-primary（深色） */
+            --accent: #4db8ff; /* = --zen-primary（深色） */
             --accent-soft: rgba(77, 184, 255, 0.12);
             --brand-glow: rgba(77, 184, 255, 0.14);
         }
@@ -302,7 +302,7 @@
                 <div class="slide-icon"><i class="fa-solid fa-camera" aria-hidden="true"></i></div>
                 <div class="slide-body">
                     <h2 class="slide-title">螢幕截圖</h2>
-                    <p class="slide-desc">區域截圖、滾動長截圖與貼圖釘屏</p>
+                    <p class="slide-desc">區域截圖、滾動截圖與貼圖釘屏</p>
                 </div>
             </article>
             
@@ -354,7 +354,7 @@
         </section>
 
         <footer class="panel-foot">
-            <span class="ver">v1.0.4.1400</span>
+            <span class="ver">v1.0.5.1500</span>
         </footer>
     </main>
 
@@ -405,6 +405,6 @@
             carousel.addEventListener('mouseleave', play);
             play();
         })();
-    </script>
+    </script>
 </body>
 </html>
