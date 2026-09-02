@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <strong>Português</strong> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.4.1400-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.5.1500-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-Grátis-red">
@@ -59,7 +59,7 @@ O frontend chama os vários Managers do C++ através da ponte `window.Zen`, devo
 
 ## Transferência e Instalação
 
-- **Instalador** (recomendado): `yyzTools-setup-1.0.4.1400.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Instalador** (recomendado): `yyzTools-setup-1.0.5.1500.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Se o acesso estiver lento a partir da China, utilize um espelho: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/) (adicione o prefixo correspondente antes do link de descarga)
 - Também disponível na [página de transferências oficial](https://yyztools.com/pt/download.html).
 

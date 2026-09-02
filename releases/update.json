@@ -1,67 +1,76 @@
 {
   "packages": {
     "web": {
-      "version": "1.0.4.1400",
-      "url": "v1.0.4.1400/web-1.0.4.1400.7z",
-      "sha256": "c3a76302dd24167ff134258e97263fd08b05bdaf30527503c9cea6ef2559770d",
+      "version": "1.0.5.1500",
+      "url": "v1.0.5.1500/web-1.0.5.1500.7z",
+      "sha256": "c1008ba31d972df6aa5c093d269a799dc81bb3862173a7663d9971bb56c0e48c",
       "killProcesses": ["yyzWallpaper.exe"],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     },
     "modules": {
-      "version": "1.0.4.1400",
-      "url": "v1.0.4.1400/modules-1.0.4.1400.7z",
-      "sha256": "8a3eaa52916912a0b047cdde0f12c80131a903a9cb94c540d65182829e184d9a",
+      "version": "1.0.5.1500",
+      "url": "v1.0.5.1500/modules-1.0.5.1500.7z",
+      "sha256": "8479b642951546db0669ec7a818ceb90a74a42074051b44f7434cb57922a456c",
       "killProcesses": [],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     },
     "wallpaper": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/wallpaper-1.0.0.1000.7z",
       "sha256": "e2cc2d4d6e80ecc1e263f1707213ae82b5f7414db1a3eadcd0bffffcb4bc96f3",
       "killProcesses": ["yyzWallpaper.exe"],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     },
     "yyztools": {
-      "version": "1.0.4.1400",
-      "url": "v1.0.4.1400/yyztools-1.0.4.1400.7z",
-      "sha256": "04f1cc40bc6458223553f0cda4000b51eda4bda535fd548b944064dedebea5b7",
+      "version": "1.0.5.1500",
+      "url": "v1.0.5.1500/yyztools-1.0.5.1500.7z",
+      "sha256": "8601e53ca7174da0bef6b01f5026f2df239e2727d627820f9cbdfcf163b2568e",
       "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe", "yyzScreenRec.exe"],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     },
     "tools": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/tools-1.0.0.1000.7z",
       "sha256": "93716e32ecc516feb3ef8fe2ad69e296a61def66c8a7505c660c8f55d725e603",
       "killProcesses": ["aria2c.exe", "7z.exe", "openssl.exe", "pdfcpu.exe", "magick.exe", "gswin64c.exe"],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     },
-    "everything": {
-      "version": "1.0.0.1000",
-      "url": "v1.0.0.1000/everything-1.0.0.1000.7z",
-      "sha256": "388c9ed3e6ed1fcad81819f6925e4fe06485ca9dc03417115114ba002b554661",
-      "killProcesses": [],
-      "killProcessesAdmin": ["Everything.exe"]
+    "yyzfilesearch": {
+      "version": "1.0.5.1500",
+      "url": "v1.0.5.1500/yyzfilesearch-1.0.5.1500.7z",
+      "sha256": "264541db6086043923db8a533afaf264a079f0855248cdb70c8f22b1289b0b59",
+      "killProcesses": ["yyzFileSearch.exe"],
+      "killProcessesAdmin": [],
+      "stopService": ["yyzFileSearchSvc"]
     },
     "rapidocr": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/rapidocr-1.0.0.1000.7z",
       "sha256": "58f8f129980bbfd091b74879d81940f0a1b2834d9d614e46d1c710e3e7897fcf",
       "killProcesses": ["RapidOCR-json.exe"],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     },
     "ffmpeg": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/ffmpeg-1.0.0.1000.7z",
       "sha256": "b5e98be121dd275b5bf37b3a7f9cd9593d00a3867f96df81791118220e002c50",
       "killProcesses": ["ffmpeg.exe", "ffprobe.exe"],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     },
     "main": {
-      "version": "1.0.4.1400",
-      "url": "v1.0.4.1400/main-1.0.4.1400.7z",
-      "sha256": "d6686e9806dc25b1c693af6ed75c45dd85bd2d79b11225820e99aee87754a6b5",
+      "version": "1.0.5.1500",
+      "url": "v1.0.5.1500/main-1.0.5.1500.7z",
+      "sha256": "699d2bb8bb13871893b89908244bf15f4400b7b9e8ddeac04915df278bf8b320",
       "killProcesses": ["yyzWallpaper.exe", "yyzBrowser.exe"],
-      "killProcessesAdmin": []
+      "killProcessesAdmin": [],
+      "stopService": []
     }
   },
   "home": {
