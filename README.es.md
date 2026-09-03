@@ -54,6 +54,7 @@ Híbrida: un **host C++ (Win32 + WebView2)** que alberga un **front end (Alpine.
 | `yyzInputHint.exe` | Indicación en tiempo real de teclas de teclado / ratón (RawInput) |
 | `yyzMouseFinder.exe` | Localización rápida del cursor del ratón |
 | `yyzUpdater.exe` | Actualizador automático incremental (ver `src/updater/`) |
+| `yyzFileSearch.exe` | Motor de búsqueda de archivos propio — lectura directa de la MFT + índice incremental USN |
 
 El front end llama a cada Manager de C++ a través del puente `window.Zen`; todos responden con el contrato `{ error, ... }`.
 

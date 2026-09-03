@@ -54,6 +54,7 @@ Architettura ibrida: un **host C++ (Win32 + WebView2)** che ospita il **frontend
 | `yyzInputHint.exe` | Visualizzazione in tempo reale dei tasti premuti (RawInput) |
 | `yyzMouseFinder.exe` | Individuazione rapida del cursore del mouse |
 | `yyzUpdater.exe` | Aggiornatore automatico incrementale (vedi `src/updater/`) |
+| `yyzFileSearch.exe` | Motore di ricerca file interno — lettura diretta della MFT + indice incrementale USN |
 
 Il frontend richiama i vari Manager del C++ tramite il bridge `window.Zen`, restituendo sempre il contratto unificato `{ error, ... }`.
 

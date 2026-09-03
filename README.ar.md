@@ -54,6 +54,7 @@
 | `yyzInputHint.exe` | إظهار مفاتيح لوحة المفاتيح / الفأرة لحظيًا (RawInput) |
 | `yyzMouseFinder.exe` | تحديد موقع مؤشر الفأرة بسرعة |
 | `yyzUpdater.exe` | محدّث تلقائي تزايدي (انظر `src/updater/`) |
+| `yyzFileSearch.exe` | محرك بحث ملفات ذاتي التطوير — قراءة MFT مباشرة + فهرس تزايدي USN |
 
 تستدعي الواجهةُ الأمامية كل Manager في C++\u200E عبر جسر `window.Zen`، وجميعها تعيد نتائج وفق عقد موحّد `{ error, ... }`.
 

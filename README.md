@@ -54,6 +54,7 @@ Hybrid: a **C++ (Win32 + WebView2) host** carrying a **front end (Alpine.js + va
 | `yyzInputHint.exe`   | Live keyboard / mouse key overlay (RawInput)                                                       |
 | `yyzMouseFinder.exe` | Quickly locate the mouse cursor                                                                    |
 | `yyzUpdater.exe`     | Incremental auto-updater (see `src/updater/`)                                                      |
+| `yyzFileSearch.exe`  | Self-developed full-volume file search engine — direct MFT read + USN incremental index                        |
 
 The front end calls each C++ Manager through the `window.Zen` bridge, all returning an `{ error, ... }` contract.
 

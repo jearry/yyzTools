@@ -54,6 +54,7 @@
 | `yyzInputHint.exe` | キー / マウスボタンのリアルタイム表示（RawInput） |
 | `yyzMouseFinder.exe` | マウスカーソルの高速検出 |
 | `yyzUpdater.exe` | 差分自動アップデーター（`src/updater/` 参照） |
+| `yyzFileSearch.exe` | 自作の全ボリュームファイル検索エンジン — MFT 直接読み取り + USN 差分インデックス |
 
 フロントエンドは `window.Zen` ブリッジを介して C++ の各 Manager を呼び出し、すべて `{ error, ... }` 契約で統一された結果を返します。
 

@@ -54,6 +54,7 @@
 | `yyzInputHint.exe` | 鍵盤 / 滑鼠按鍵即時提示（RawInput） |
 | `yyzMouseFinder.exe` | 快速定位滑鼠游標 |
 | `yyzUpdater.exe` | 增量自動更新器（見 `src/updater/`） |
+| `yyzFileSearch.exe` | 自研全碟檔案搜尋引擎——MFT 直讀 + USN 增量索引 |
 
 前端透過 `window.Zen` 橋接呼叫 C++ 各 Manager，統一回傳 `{ error, ... }` 契約。
 

@@ -54,6 +54,7 @@ Architecture hybride : un **hôte C++ (Win32 + WebView2)** embarquant un **front
 | `yyzInputHint.exe` | Affichage en temps réel des touches clavier / souris (RawInput) |
 | `yyzMouseFinder.exe` | Localisation rapide du curseur de la souris |
 | `yyzUpdater.exe` | Metteur à jour automatique incrémental (voir `src/updater/`) |
+| `yyzFileSearch.exe` | Moteur de recherche de fichiers interne — lecture directe de la MFT + index incrémental USN |
 
 Le front end appelle les Manager C++ via le pont `window.Zen`, tous répondant selon le contrat `{ error, ... }`.
 

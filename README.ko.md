@@ -54,6 +54,7 @@
 | `yyzInputHint.exe` | 키보드 / 마우스 버튼 실시간 표시 (RawInput) |
 | `yyzMouseFinder.exe` | 마우스 커서 빠르게 찾기 |
 | `yyzUpdater.exe` | 증분 자동 업데이터 (`src/updater/` 참조) |
+| `yyzFileSearch.exe` | 자체 개발 전체 볼륨 파일 검색 엔진 — MFT 직접 읽기 + USN 증분 인덱스 |
 
 프런트엔드는 `window.Zen` 브리지를 통해 C++의 각 Manager를 호출하며, 모두 `{ error, ... }` 계약으로 통일된 결과를 반환합니다.
 

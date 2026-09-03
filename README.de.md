@@ -54,6 +54,7 @@ Hybrid: Ein **C++-Host (Win32 + WebView2)** trägt ein **Frontend (Alpine.js + V
 | `yyzInputHint.exe` | Echtzeit-Anzeige von Tastatur- / Maustasten (RawInput) |
 | `yyzMouseFinder.exe` | Mauszeiger schnell lokalisieren |
 | `yyzUpdater.exe` | Inkrementeller Auto-Updater (siehe `src/updater/`) |
+| `yyzFileSearch.exe` | Eigenentwickelte Vollvolume-Dateisuche — direktes MFT-Lesen + inkrementeller USN-Index |
 
 Das Frontend ruft die C++-Manager über die `window.Zen`-Brücke auf; alle antworten nach dem einheitlichen `{ error, ... }`-Vertrag.
 
