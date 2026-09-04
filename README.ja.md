@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <strong>日本語</strong> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.5.1500-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.6.1600-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-無料-red">
@@ -60,7 +60,7 @@
 
 ## ダウンロード
 
-- **インストーラー**（推奨）：`yyzTools-setup-1.0.5.1500.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **インストーラー**（推奨）：`yyzTools-setup-1.0.6.1600.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - 中国本土からアクセスが遅い場合はミラーをご利用ください：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（インストーラーのダウンロード URL の先頭に対応するプレフィックスを付ける）
 - [公式ダウンロードページ](https://yyztools.com/ja/download.html)からも取得できます。
 
