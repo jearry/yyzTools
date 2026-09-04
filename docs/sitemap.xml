@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yyztools.com/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ar/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ar/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ar/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -70,8 +70,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/ar/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/ar/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -88,7 +105,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ar/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -105,7 +122,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ar/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -122,7 +139,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ar/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -139,7 +156,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ar/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -156,7 +173,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/baidu_verify_codeva-kn67AXwk3x.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/baidu_verify_codeva-kn67AXwk3x.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/baidu_verify_codeva-kn67AXwk3x.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/baidu_verify_codeva-kn67AXwk3x.html"/>
@@ -173,7 +190,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -190,7 +207,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/de/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -207,7 +224,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/de/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -224,7 +241,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/de/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -240,8 +257,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/de/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/de/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -258,7 +292,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/de/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -275,7 +309,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/de/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -292,7 +326,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/de/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -309,7 +343,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/de/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -326,7 +360,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -343,7 +377,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/es/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -360,7 +394,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/es/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -377,7 +411,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/es/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -393,8 +427,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/es/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/es/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -411,7 +462,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/es/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -428,7 +479,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/es/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -445,7 +496,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/es/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -462,7 +513,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/es/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -478,8 +529,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/sdk.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -496,7 +564,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/fr/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -513,7 +581,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/fr/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -530,7 +598,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/fr/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -546,8 +614,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/fr/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/fr/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -564,7 +649,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/fr/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -581,7 +666,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/fr/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -598,7 +683,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/fr/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -615,7 +700,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/fr/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -632,7 +717,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/googlee401b99bc6eaad02.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/googlee401b99bc6eaad02.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/googlee401b99bc6eaad02.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/googlee401b99bc6eaad02.html"/>
@@ -649,7 +734,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -666,7 +751,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/it/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -683,7 +768,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/it/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -700,7 +785,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/it/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -716,8 +801,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/it/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/it/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -734,7 +836,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/it/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -751,7 +853,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/it/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -768,7 +870,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/it/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -785,7 +887,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/it/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -802,7 +904,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ja/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -819,7 +921,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ja/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -836,7 +938,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ja/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -852,8 +954,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/ja/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/ja/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -870,7 +989,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ja/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -887,7 +1006,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ja/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -904,7 +1023,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ja/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -921,7 +1040,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ja/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -938,7 +1057,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ko/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -955,7 +1074,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ko/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -972,7 +1091,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ko/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -988,8 +1107,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/ko/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/ko/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -1006,7 +1142,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ko/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -1023,7 +1159,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ko/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -1040,7 +1176,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ko/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -1057,7 +1193,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ko/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -1074,7 +1210,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -1091,7 +1227,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/pt/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -1108,7 +1244,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/pt/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -1125,7 +1261,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/pt/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -1141,8 +1277,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/pt/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/pt/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -1159,7 +1312,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/pt/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -1176,7 +1329,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/pt/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -1193,7 +1346,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/pt/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -1210,7 +1363,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/pt/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -1227,7 +1380,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ru/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -1244,7 +1397,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ru/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -1261,7 +1414,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ru/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -1277,8 +1430,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/ru/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/ru/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -1295,7 +1465,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ru/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -1312,7 +1482,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ru/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -1329,7 +1499,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ru/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -1346,7 +1516,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/ru/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -1363,7 +1533,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -1380,7 +1550,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -1397,7 +1567,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-CN/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -1414,7 +1584,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-CN/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -1431,7 +1601,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-CN/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -1447,8 +1617,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/zh-CN/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/zh-CN/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -1465,7 +1652,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-CN/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -1482,7 +1669,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-CN/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -1499,7 +1686,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-CN/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -1516,7 +1703,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-CN/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>
@@ -1533,7 +1720,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-TW/agreement.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/agreement.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/agreement.html"/>
@@ -1550,7 +1737,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-TW/changelog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/changelog.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/changelog.html"/>
@@ -1567,7 +1754,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-TW/download.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/download.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/download.html"/>
@@ -1583,8 +1770,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/download.html"/>
   </url>
   <url>
+    <loc>https://yyztools.com/zh-TW/everything-alternative.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html"/>
+  </url>
+  <url>
     <loc>https://yyztools.com/zh-TW/features.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/features.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/features.html"/>
@@ -1601,7 +1805,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-TW/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/"/>
@@ -1618,7 +1822,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-TW/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/privacy.html"/>
@@ -1635,7 +1839,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-TW/sdk-api.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk-api.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk-api.html"/>
@@ -1652,7 +1856,7 @@
   </url>
   <url>
     <loc>https://yyztools.com/zh-TW/sdk.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://yyztools.com/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sdk.html"/>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sdk.html"/>

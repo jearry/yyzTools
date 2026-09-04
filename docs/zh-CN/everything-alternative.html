@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windows 上的 Everything 替代品 — yyzTools 自研文件搜索引擎</title>
+<meta name="description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻仅几 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
+
+<meta property="og:title" content="Windows 上的 Everything 替代品 — yyzTools 自研文件搜索引擎">
+<meta property="og:description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻仅几 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-CN/everything-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_CN">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Windows 上的 Everything 替代品 — yyzTools 自研文件搜索引擎">
+<meta name="twitter:description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻仅几 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-CN/everything-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+<link rel="dns-prefetch" href="https://ghfast.top">
+<link rel="dns-prefetch" href="https://ghproxy.com">
+<link rel="dns-prefetch" href="https://gh-proxy.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-CN/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-CN/" >首页</a>
+            <a href="/zh-CN/features.html" >功能</a>
+            <a href="/zh-CN/download.html" >下载</a>
+            <a href="/zh-CN/changelog.html" >更新日志</a>
+            
+            <a href="/zh-CN/sdk.html" >开发者</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">交流反馈</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="选择语言">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">简体中文</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/everything-alternative.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/everything-alternative.html" hreflang="zh-CN"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>简体中文</a>
+                    
+                    <a href="/zh-TW/everything-alternative.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/everything-alternative.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/everything-alternative.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/everything-alternative.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/everything-alternative.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/everything-alternative.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/everything-alternative.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/everything-alternative.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/everything-alternative.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/everything-alternative.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/zh-CN/download.html">免费下载</a>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 的文件搜索是套壳 Everything 吗？","acceptedAnswer":{"@type":"Answer","text":"不是。从 1.0.5 起，文件搜索改为完全自研的引擎（直读 NTFS $MFT + USN Journal 实时增量），Everything 依赖已从安装包中移除，索引内存占用从数百 MB 降到几 MB。"}},{"@type":"Question","name":"查询语法和 Everything 兼容吗？","acceptedAnswer":{"@type":"Answer","text":"常用语法兼容：path:、ext:、size:、datemodified:、通配符以及 AND / OR / NOT 组合都可以直接用。暂不支持 regex: 正则，这是与 Everything 的主要语法差距。"}},{"@type":"Question","name":"可以和 Everything 同时安装吗？","acceptedAnswer":{"@type":"Answer","text":"可以，两者互不冲突。不过如果 yyzTools 的文件搜索已经满足需要，只保留一个会更省资源。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"在找 Everything 替代品？","item":"https://yyztools.com/zh-CN/everything-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">在找 Everything 替代品？</h1>
+        <p class="hero-lead">yyzTools 内置与 Everything 同路线的自研全盘文件搜索引擎——直读 NTFS $MFT 建索引、监听 USN Journal 实时更新，查询语法也兼容。不同之处在于：它还把启动器、翻译、OCR、批量处理等 40+ 工具装进了同一个安装包。</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+                <i class="fa-solid fa-download"></i>免费下载 yyzTools
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#ev-compare">
+                yyzTools vs Everything<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="ev-compare">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs Everything</h2>
+            <p>两者走的是同一条技术路线，差异在产品定位：Everything 是专注文件名搜索的独立工具，yyzTools 把文件搜索做进了一体化效率工具箱。</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">Everything</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">技术路线</th>
+                        <td class="col-self">直读 NTFS $MFT + USN 实时增量</td>
+                        <td>直读 NTFS $MFT + USN 实时增量</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">查询语法</th>
+                        <td class="col-self">path: / ext: / size: / datemodified: 等兼容语法</td>
+                        <td>path: / ext: / size: / datemodified: / regex: 等</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">全盘索引常驻内存</th>
+                        <td class="col-self">几 MB</td>
+                        <td>视文件数量而定</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">正则搜索（regex:）</th>
+                        <td class="col-self">❌ 暂不支持</td>
+                        <td>✅</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">启动器一体化</th>
+                        <td class="col-self">✅ 应用 / 进程 / 窗口 / 书签 / 剪贴板同框搜索</td>
+                        <td>❌ 专注文件名搜索</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">搜到即处理</th>
+                        <td class="col-self">✅ 预览 / 打开位置 / 移入回收站 / 批量复制</td>
+                        <td>✅ 打开 / 打开路径 / 重命名</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">翻译 / OCR / 批量工具等 40+ 模块</th>
+                        <td class="col-self">✅ 全部内置</td>
+                        <td>❌</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">免费</th>
+                        <td class="col-self">✅ 永久免费</td>
+                        <td>✅</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">界面语言</th>
+                        <td class="col-self">12 种</td>
+                        <td>多语言</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>什么时候 Everything 仍是好选择</h3>
+                <p>如果你只需要极致的文件名搜索——比如正则表达式查询、HTTP 服务器分享、通过 SDK 做二次集成，或者要索引非 NTFS 与可移动磁盘——Everything 依然是成熟可靠的专业工具。yyzTools 的自研引擎目前只索引固定 NTFS 磁盘，也不支持 regex:，不打算在每个细分场景都替代它。</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>什么时候选 yyzTools</h3>
+                <p>如果你想用一个工具替代「启动器 + 文件搜索」的组合——比如 PowerToys Run 管启动、Everything 管文件的双工具搭配——yyzTools 一次装齐：Alt+空格 同一个输入框里搜应用、文件、进程、窗口、书签、剪贴板，搜到即可预览、定位、删除，背后还有翻译、OCR、剪贴板历史、批量处理等 40+ 模块随取随用。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>常见疑问</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools 的文件搜索是套壳 Everything 吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>不是。从 1.0.5 起，文件搜索改为完全自研的引擎（直读 NTFS $MFT + USN Journal 实时增量），Everything 依赖已从安装包中移除，索引内存占用从数百 MB 降到几 MB。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>查询语法和 Everything 兼容吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>常用语法兼容：path:、ext:、size:、datemodified:、通配符以及 AND / OR / NOT 组合都可以直接用。暂不支持 regex: 正则，这是与 Everything 的主要语法差距。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>可以和 Everything 同时安装吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>可以，两者互不冲突。不过如果 yyzTools 的文件搜索已经满足需要，只保留一个会更省资源。</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>装一次，全都齐了</h2>
+        <p>免费下载，装完按 Alt+空格，输入 f 加空格，试试直接搜全盘文件。</p>
+        <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+            <i class="fa-solid fa-download"></i>免费下载 yyzTools
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-CN/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>产品</h3>
+            <a href="/zh-CN/features.html">功能</a>
+            <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/changelog.html">更新日志</a>
+            
+            <a href="/zh-CN/everything-alternative.html">与 Everything 详细对比</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>资源</h3>
+            <a href="/zh-CN/sdk.html">开发者</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">问题反馈</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-CN/agreement.html">用户协议</a>
+            <a href="/zh-CN/privacy.html">隐私政策</a>
+            
+            <a class="js-email" href="#">联系邮箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留所有权利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

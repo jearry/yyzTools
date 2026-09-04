@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Una alternativa a Everything para Windows — el motor de búsqueda propio de yyzTools</title>
+<meta name="description" content="¿Busca una alternativa a Everything? Desde la v1.0.5, yyzTools incorpora su propio motor de búsqueda de todo el disco: lecturas directas de la $MFT de NTFS con actualizaciones del diario USN, sintaxis compatible path: / ext: / size: y un índice residente de solo unos pocos MB — integrado con un lanzador, la traducción, el OCR y más de 40 herramientas.">
+
+<meta property="og:title" content="Una alternativa a Everything para Windows — el motor de búsqueda propio de yyzTools">
+<meta property="og:description" content="¿Busca una alternativa a Everything? Desde la v1.0.5, yyzTools incorpora su propio motor de búsqueda de todo el disco: lecturas directas de la $MFT de NTFS con actualizaciones del diario USN, sintaxis compatible path: / ext: / size: y un índice residente de solo unos pocos MB — integrado con un lanzador, la traducción, el OCR y más de 40 herramientas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/es/everything-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="es">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Una alternativa a Everything para Windows — el motor de búsqueda propio de yyzTools">
+<meta name="twitter:description" content="¿Busca una alternativa a Everything? Desde la v1.0.5, yyzTools incorpora su propio motor de búsqueda de todo el disco: lecturas directas de la $MFT de NTFS con actualizaciones del diario USN, sintaxis compatible path: / ext: / size: y un índice residente de solo unos pocos MB — integrado con un lanzador, la traducción, el OCR y más de 40 herramientas.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/es/everything-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/everything-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/everything-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/everything-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/everything-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/everything-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/everything-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/everything-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/everything-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/everything-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/everything-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/everything-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/everything-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/everything-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/es/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/es/" >Inicio</a>
+            <a href="/es/features.html" >Funciones</a>
+            <a href="/es/download.html" >Descargar</a>
+            <a href="/es/changelog.html" >Novedades</a>
+            
+            <a href="/es/sdk.html" >Desarrolladores</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Comentarios</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="Idioma">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">Español</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/everything-alternative.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/everything-alternative.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/everything-alternative.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/everything-alternative.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/everything-alternative.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/everything-alternative.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/everything-alternative.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/everything-alternative.html" hreflang="es"
+                       class=&#34;on&#34; aria-current=&#34;true&#34;>Español</a>
+                    
+                    <a href="/ru/everything-alternative.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/everything-alternative.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/everything-alternative.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/everything-alternative.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            <a class="btn btn-sm btn-primary nav-cta" href="/es/download.html">Descarga gratuita</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿La búsqueda de archivos de yyzTools es un envoltorio de Everything?","acceptedAnswer":{"@type":"Answer","text":"No. Desde la v1.0.5, la búsqueda de archivos funciona sobre un motor completamente propio (lecturas directas de la $MFT de NTFS + actualizaciones del diario USN). La dependencia de Everything se ha eliminado del instalador, y el uso de memoria del índice bajó de cientos de MB a unos pocos MB."}},{"@type":"Question","name":"¿La sintaxis de consulta es compatible con Everything?","acceptedAnswer":{"@type":"Answer","text":"La sintaxis común es compatible: path:, ext:, size:, datemodified:, los comodines y las combinaciones AND / OR / NOT funcionan directamente. Las expresiones regulares (regex:) aún no están admitidas: es la principal brecha de sintaxis frente a Everything."}},{"@type":"Question","name":"¿Puedo mantener Everything instalado junto a yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Sí, no entran en conflicto. Dicho esto, si la búsqueda de archivos de yyzTools cubre sus necesidades, conservar solo uno ahorra recursos."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"¿Busca una alternativa a Everything?","item":"https://yyztools.com/es/everything-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">¿Busca una alternativa a Everything?</h1>
+        <p class="hero-lead">yyzTools incorpora su propio motor de búsqueda de todo el disco, construido como Everything — índice mediante lecturas directas de la $MFT de NTFS, actualizaciones en vivo por el diario USN y sintaxis de consulta compatible. Lo que lo distingue: el mismo instalador también trae un lanzador, traducción, OCR, herramientas por lotes y más de 40 módulos.</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/es/download.html">
+                <i class="fa-solid fa-download"></i>Descargar yyzTools gratis
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#ev-compare">
+                yyzTools vs Everything<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="ev-compare">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs Everything</h2>
+            <p>Ambos siguen la misma ruta técnica; la diferencia está en el enfoque. Everything es una herramienta independiente dedicada a la búsqueda de archivos por nombre. yyzTools integra la búsqueda de archivos en una caja de herramientas de productividad completa.</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">Everything</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">Enfoque técnico</th>
+                        <td class="col-self">Lecturas directas de la $MFT de NTFS + actualizaciones USN en vivo</td>
+                        <td>Lecturas directas de la $MFT de NTFS + actualizaciones USN en vivo</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Sintaxis de consulta</th>
+                        <td class="col-self">path: / ext: / size: / datemodified: y más, compatibles</td>
+                        <td>path: / ext: / size: / datemodified: / regex: y más</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Memoria del índice residente</th>
+                        <td class="col-self">Unos pocos MB</td>
+                        <td>Según la cantidad de archivos</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Búsqueda por regex (regex:)</th>
+                        <td class="col-self">❌ Todavía no</td>
+                        <td>✅</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Lanzador integrado</th>
+                        <td class="col-self">✅ Aplicaciones / procesos / ventanas / marcadores / portapapeles en un solo cuadro</td>
+                        <td>❌ Solo búsqueda de archivos</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Actuar sobre los resultados</th>
+                        <td class="col-self">✅ Vista previa / revelar / papelera / copia múltiple</td>
+                        <td>✅ Abrir / abrir la ruta / renombrar</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Traducción / OCR / herramientas por lotes, más de 40 módulos</th>
+                        <td class="col-self">✅ Todo integrado</td>
+                        <td>❌</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Gratis</th>
+                        <td class="col-self">✅ Gratis para siempre</td>
+                        <td>✅</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Idiomas de la interfaz</th>
+                        <td class="col-self">12</td>
+                        <td>Multi</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>Cuándo Everything sigue siendo la opción correcta</h3>
+                <p>Si lo único que necesita es la búsqueda de nombres de archivos definitiva — consultas regex, un servidor HTTP para compartir los resultados, integración de terceros mediante su SDK o indexar discos que no son NTFS o son extraíbles —, Everything sigue siendo un especialista maduro y fiable. El motor de yyzTools por ahora solo indexa volúmenes NTFS fijos y aún no admite regex:, por lo que no pretende reemplazar Everything en cada nicho.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>Cuándo yyzTools encaja mejor</h3>
+                <p>Si prefiere sustituir por una sola aplicación una combinación de dos herramientas — por ejemplo, PowerToys Run para lanzar y Everything para archivos —, yyzTools lo consigue en una única instalación: un solo cuadro Alt+Space busca a la vez aplicaciones, archivos, procesos, ventanas, marcadores y portapapeles, con vista previa, revelado en carpeta y acciones de papelera sobre los resultados, respaldado por más de 40 módulos como la traducción, el OCR, el historial del portapapeles y el procesamiento por lotes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>Preguntas frecuentes</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>¿La búsqueda de archivos de yyzTools es un envoltorio de Everything?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>No. Desde la v1.0.5, la búsqueda de archivos funciona sobre un motor completamente propio (lecturas directas de la $MFT de NTFS + actualizaciones del diario USN). La dependencia de Everything se ha eliminado del instalador, y el uso de memoria del índice bajó de cientos de MB a unos pocos MB.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>¿La sintaxis de consulta es compatible con Everything?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>La sintaxis común es compatible: path:, ext:, size:, datemodified:, los comodines y las combinaciones AND / OR / NOT funcionan directamente. Las expresiones regulares (regex:) aún no están admitidas: es la principal brecha de sintaxis frente a Everything.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>¿Puedo mantener Everything instalado junto a yyzTools?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Sí, no entran en conflicto. Dicho esto, si la búsqueda de archivos de yyzTools cubre sus necesidades, conservar solo uno ahorra recursos.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>Una instalación y lo tiene todo</h2>
+        <p>Descárguela gratis, pulse Alt+Space, escriba f y un espacio, y busque en todo su disco.</p>
+        <a class="btn btn-primary btn-lg" href="/es/download.html">
+            <i class="fa-solid fa-download"></i>Descargar yyzTools gratis
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/es/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Conjunto de herramientas de productividad para Windows, con prioridad local y gratis para siempre.</p>
+            <p class="footer-ver">v1.0.5.1500</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Producto</h3>
+            <a href="/es/features.html">Funciones</a>
+            <a href="/es/download.html">Descargar</a>
+            <a href="/es/changelog.html">Novedades</a>
+            
+            <a href="/es/everything-alternative.html">Comparación detallada con Everything</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Recursos</h3>
+            <a href="/es/sdk.html">Desarrolladores</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Incidencias</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="/es/agreement.html">Acuerdo de Usuario</a>
+            <a href="/es/privacy.html">Política de privacidad</a>
+            
+            <a class="js-email" href="#">Correo de contacto</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · Todos los derechos reservados</p>
+        <p class="footer-fine">Windows es una marca registrada de Microsoft Corporation. Este sitio no está afiliado a Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
