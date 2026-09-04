@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{C9D20844-3D42-43C6-8C81-671CB66B210B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{E219F6F2-85D8-4793-9219-E2B57770709F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="String &amp; Text">
+      <UniqueIdentifier>{88E0ED4F-436D-43DA-A9F6-14C6B79ABAD5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File &amp; IO">
+      <UniqueIdentifier>{4EF905E2-AAEF-4B86-8087-A3C803972CEA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Process">
+      <UniqueIdentifier>{BE63177D-AD8B-49B3-88D2-238DBDF02A35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading &amp; IPC">
+      <UniqueIdentifier>{6C20A5A6-326F-4820-8751-00450B41DA02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{7A671C18-73B2-432E-8C36-4641C2079C4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config &amp; Log">
+      <UniqueIdentifier>{D8B18675-177D-4375-AB8A-12E1F8A129D4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonUtilTest.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtilTest.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoUtilTest.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DateTimeUtilTest.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="StringUtilTest.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="TextTest.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="EncodingUtilTest.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="PinyinTest.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtilTest.cpp">
+      <Filter>File &amp; IO</Filter>
+    </ClCompile>
+    <ClCompile Include="HashUtilTest.cpp">
+      <Filter>File &amp; IO</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildProcessTest.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="IoProcessTest.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="ExecCaptureTest.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessUtilTest.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="NativeProcessTest.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="InitHelperTest.cpp">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorHelperTest.cpp">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedMemTest.cpp">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="WinUtilTest.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="WmiQueryTest.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="RawInputListenerTest.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigMgrTest.cpp">
+      <Filter>Config &amp; Log</Filter>
+    </ClCompile>
+    <ClCompile Include="PtreeUtilTest.cpp">
+      <Filter>Config &amp; Log</Filter>
+    </ClCompile>
+    <ClCompile Include="RunLogTest.cpp">
+      <Filter>Config &amp; Log</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

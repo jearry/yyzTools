@@ -8,7 +8,7 @@
   />
   <description>yyzUpdater Auto Updater</description>
 
-  <!-- 兼容性设置 -->
+  <!-- Compatibility settings -->
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- Windows 10/11 -->
@@ -22,7 +22,7 @@
     </application>
   </compatibility>
 
-  <!-- 依赖项 -->
+  <!-- Dependencies -->
   <dependency>
     <dependentAssembly>
       <assemblyIdentity

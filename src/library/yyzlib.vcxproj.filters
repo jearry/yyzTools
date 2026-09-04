@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{C9D20844-3D42-43C6-8C81-671CB66B210B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{E219F6F2-85D8-4793-9219-E2B57770709F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="String &amp; Text">
+      <UniqueIdentifier>{88E0ED4F-436D-43DA-A9F6-14C6B79ABAD5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File &amp; IO">
+      <UniqueIdentifier>{4EF905E2-AAEF-4B86-8087-A3C803972CEA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Process">
+      <UniqueIdentifier>{BE63177D-AD8B-49B3-88D2-238DBDF02A35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading &amp; IPC">
+      <UniqueIdentifier>{6C20A5A6-326F-4820-8751-00450B41DA02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{7A671C18-73B2-432E-8C36-4641C2079C4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config &amp; Log">
+      <UniqueIdentifier>{D8B18675-177D-4375-AB8A-12E1F8A129D4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\stdinc.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yyzlib.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TypeDefs.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CommonUtil.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MathUtil.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AlgoUtil.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DateTimeUtil.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StringUtil.h">
+      <Filter>String &amp; Text</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Text.h">
+      <Filter>String &amp; Text</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EncodingUtil.h">
+      <Filter>String &amp; Text</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pinyin.h">
+      <Filter>String &amp; Text</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FileUtil.h">
+      <Filter>File &amp; IO</Filter>
+    </ClInclude>
+    <ClInclude Include="include\HashUtil.h">
+      <Filter>File &amp; IO</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ChildProcess.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IoProcess.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ExecCapture.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ProcessUtil.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NativeProcess.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AppGuard.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\InitHelper.h">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MonitorHelper.h">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SharedMem.h">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WinUtil.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WmiQuery.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RawInputListener.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ConfigDef.h">
+      <Filter>Config &amp; Log</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ConfigMgr.h">
+      <Filter>Config &amp; Log</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Ptree.h">
+      <Filter>Config &amp; Log</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PtreeUtil.h">
+      <Filter>Config &amp; Log</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RunLog.h">
+      <Filter>Config &amp; Log</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\stdinc.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CommonUtil.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MathUtil.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DateTimeUtil.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StringUtil.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Text.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EncodingUtil.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pinyin.cpp">
+      <Filter>String &amp; Text</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileUtil.cpp">
+      <Filter>File &amp; IO</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HashUtil.cpp">
+      <Filter>File &amp; IO</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChildProcess.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IoProcess.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ExecCapture.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProcessUtil.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NativeProcess.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InitHelper.cpp">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MonitorHelper.cpp">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SharedMem.cpp">
+      <Filter>Threading &amp; IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WinUtil.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WmiQuery.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RawInputListener.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfigMgr.cpp">
+      <Filter>Config &amp; Log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PtreeUtil.cpp">
+      <Filter>Config &amp; Log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RunLog.cpp">
+      <Filter>Config &amp; Log</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,6 +1,11 @@
-/*****************************************************************************
-*  资源定义 - yyzUpdater
-*  Copyright (C) 2026 广州云蜗智能科技有限公司
+﻿/*****************************************************************************
+*  Resource definitions - yyzUpdater
+*  Copyright (c) 2026 yyzTools
+*  SPDX-License-Identifier: MIT
+*
+*  @author   Jearry.Zhou
+*  @version  1.0.0
+*  @date     2026-09-03
 *****************************************************************************/
 
 #ifndef __DLLVERSION_H_VERSION__
@@ -10,17 +15,17 @@
 #pragma once
 #endif
 
-#include "buildnumber.h"
+#include "..\public\buildnumber.h"
 
-#define PRD_MAJVER             1
-#define PRD_MINVER             0
-#define PRD_SMALL              0
-#define PRD_BUILD              0
-#define FILE_MAJVER            1
-#define FILE_MINVER            0
-#define FILE_SMALL             0
-#define FILE_BUILD             _FILE_VERSION_BUILD
-#define DRV_YEAR               2026
+#define PRD_MAJVER             _VERSION_MAJ
+#define PRD_MINVER             _VERSION_MIN
+#define PRD_SMALL              _VERSION_SMALL
+#define PRD_BUILD              _VERSION_BUILD
+#define FILE_MAJVER            _VERSION_MAJ
+#define FILE_MINVER            _VERSION_MIN
+#define FILE_SMALL             _VERSION_SMALL
+#define FILE_BUILD             _VERSION_BUILD
+#define DRV_YEAR               _VERSION_YEAR
 #define TEXT_WEBSITE           www.yyztools.com
 #define TEXT_PRODUCTNAME       yyzUpdater
 #define TEXT_FILEDESC          yyzTools yyzUpdater

@@ -67,3 +67,10 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+.workbuddy
+.trae
+.vs
+obj
+Debug
+Release
+pch

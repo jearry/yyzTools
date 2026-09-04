@@ -1,29 +1,18 @@
-// MIT License
-//
-// Copyright (c) 2026 yyzTools
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+﻿/*****************************************************************************
+*  HTTP download wrapper (Platform/Aria2, multi-source)
+*  Copyright (c) 2026 yyzTools
+*  SPDX-License-Identifier: MIT
+*
+*  @author   Jearry.Zhou
+*  @version  1.0.0
+*  @date     2026-09-03
+*****************************************************************************/
 
 #include "pch.h"
 #include "http_client.h"
 #include "updater.h"
-#include "logger.h"
+
+using namespace yyzlib;
 
 namespace updater {
 
@@ -31,7 +20,7 @@ static std::wstring Quote(const std::wstring& s) {
     return L"\"" + s + L"\"";
 }
 
-// 取文件大小（字节）；不存在或不可访问返回 0。
+// Returns the file size in bytes; 0 when it does not exist or cannot be accessed.
 static unsigned long long FileSizeBytes(const std::wstring& path) {
     WIN32_FILE_ATTRIBUTE_DATA ad;
     if (!GetFileAttributesExW(path.c_str(), GetFileExInfoStandard, &ad)) return 0;
@@ -39,12 +28,12 @@ static unsigned long long FileSizeBytes(const std::wstring& path) {
 }
 
 // Spawn aria2c.exe to download urls (multi-source) into dir\out. Returns exit code (0 = ok).
-// 多个 url 指向同一文件，aria2 并行从多源拉取合并，某源失败自动用其他源续传。
+// Several urls point at the same file; aria2 pulls from all sources in parallel and merges them, continuing on another source when one fails.
 static int RunAria2(const std::vector<std::wstring>& urls, const std::wstring& dir,
                     const std::wstring& out, DWORD timeoutMs) {
     std::wstring exe = GetInstallDir() + L"\\Platform\\Aria2\\aria2c.exe";
     if (!PathFileExistsW(exe.c_str())) {
-        LogFmt("aria2c.exe not found: %ls", exe.c_str());
+        InfoMsg("aria2c.exe not found: %ls", exe.c_str());
         return -1;
     }
 
@@ -63,7 +52,7 @@ static int RunAria2(const std::vector<std::wstring>& urls, const std::wstring& d
     std::wstring mutableArgs = args;
     if (!CreateProcessW(exe.c_str(), mutableArgs.data(), nullptr, nullptr, FALSE,
                         CREATE_NO_WINDOW, nullptr, nullptr, &si, &pi)) {
-        LogFmt("CreateProcess aria2 failed: %lu", GetLastError());
+        InfoMsg("CreateProcess aria2 failed: %lu", GetLastError());
         return -1;
     }
 
@@ -71,7 +60,7 @@ static int RunAria2(const std::vector<std::wstring>& urls, const std::wstring& d
     WaitForSingleObject(pi.hProcess, timeoutMs);
     GetExitCodeProcess(pi.hProcess, &code);
     if (code == STILL_ACTIVE) {
-        Log("aria2 timed out, killing");
+        InfoMsg("%s", "aria2 timed out, killing");
         TerminateProcess(pi.hProcess, 1);
         WaitForSingleObject(pi.hProcess, 3000);
         GetExitCodeProcess(pi.hProcess, &code);
@@ -83,22 +72,22 @@ static int RunAria2(const std::vector<std::wstring>& urls, const std::wstring& d
 
 std::string DownloadText(const std::vector<std::wstring>& urls) {
     if (urls.empty()) return {};
-    std::wstring dir = GetUpdateDir();  // update.json 存入 Update 根
+    std::wstring dir = GetUpdateDir();  // update.json is stored in the Update root
     std::wstring out = L"update.json";
     std::wstring path = dir + L"\\" + out;
-    // 不预删：aria2 --allow-overwrite 会覆盖旧 update.json
+    // Deliberately not deleted up front: aria2 --allow-overwrite replaces the old update.json
 
-    LogFmt("aria2 GET %zu urls", urls.size());
+    InfoMsg("aria2 GET %zu urls", urls.size());
 
-    //最长30秒
+    // 30 seconds at most
     int code = RunAria2(urls, dir, out, 30 * 1000);
     if (code != 0) {
-        LogFmt("aria2 download text failed: %d", code);
+        InfoMsg("aria2 download text failed: %d", code);
         return {};
     }
 
     std::ifstream f(path, std::ios::binary);
-    if (!f) { Log("read downloaded json failed"); return {}; }
+    if (!f) { InfoMsg("%s", "read downloaded json failed"); return {}; }
     std::stringstream ss;
     ss << f.rdbuf();
     return ss.str();
@@ -114,17 +103,17 @@ bool DownloadFile(const std::vector<std::wstring>& urls, const std::wstring& sav
     std::wstring dir = savePath.substr(0, slash);
     std::wstring out = savePath.substr(slash + 1);
     CreateDirectoryW(dir.c_str(), nullptr);
-    // 不预删已存在文件：让 aria2 基于 .aria2 控制文件断点续传，避免重复下载
+    // Deliberately not deleting an existing file: it lets aria2 resume through the .aria2 control file instead of downloading everything again
 
-    LogFmt("aria2 download %zu urls -> %ls", urls.size(), savePath.c_str());
+    InfoMsg("aria2 download %zu urls -> %ls", urls.size(), savePath.c_str());
 
-    //5分钟没下载完成，等下次再下
+    // if the download has not finished within 5 minutes, wait for the next round
     int code = RunAria2(urls, dir, out, 300 * 1000);
     if (code != 0) {
-        LogFmt("aria2 download file failed: %d (partial kept for resume)", code);
+        InfoMsg("aria2 download file failed: %d (partial kept for resume)", code);
         return false;
     }
-    LogFmt("aria2 download ok: %llu bytes -> %ls", FileSizeBytes(savePath), savePath.c_str());
+    InfoMsg("aria2 download ok: %llu bytes -> %ls", FileSizeBytes(savePath), savePath.c_str());
     return true;
 }
 

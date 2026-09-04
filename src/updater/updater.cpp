@@ -1,24 +1,12 @@
-// MIT License
-//
-// Copyright (c) 2026 yyzTools
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+﻿/*****************************************************************************
+*  Update flow: version check, download, verification, staging
+*  Copyright (c) 2026 yyzTools
+*  SPDX-License-Identifier: MIT
+*
+*  @author   Jearry.Zhou
+*  @version  1.0.0
+*  @date     2026-09-03
+*****************************************************************************/
 
 #include "pch.h"
 #include "updater.h"
@@ -26,68 +14,71 @@
 #include "hasher.h"
 #include "zip_extract.h"
 #include "applying.h"
-#include "logger.h"
-#include "json.h"
+
 #include "version.h"
 
-#include <algorithm>
-#include <map>
+
 
 namespace updater {
 
-// %APPDATA%\yyzTools 根：安装目标、Config、Update 等所有持久数据均在此之下
+// Data root / install target = the directory that holds the updater exe itself (the data follows the exe: whatever it was installed or extracted into is what gets updated,
+// so it does not depend on an externally supplied appDir - that argument does not exist yet during the --check stage)
 static std::wstring GetAppDataRoot() {
-    wchar_t buf[MAX_PATH];
-    SHGetFolderPathW(nullptr, CSIDL_APPDATA, nullptr, 0, buf);
-    return std::wstring(buf) + L"\\yyzTools";
+    wchar_t self[MAX_PATH] = {};
+    GetModuleFileNameW(nullptr, self, MAX_PATH);
+    std::wstring path(self);
+    size_t pos = path.find_last_of(L"\\/");
+    if (pos == std::wstring::npos) return std::wstring();
+    return path.substr(0, pos);
 }
 
-// 确保目录存在后返回（CreateDirectoryW 不级联创建，要求父目录已存在）
+// Ensures the directory exists and returns it (created level by level, so the Update subtree is built even when it is missing under the exe directory)
 static std::wstring EnsureDir(const std::wstring& dir) {
-    CreateDirectoryW(dir.c_str(), nullptr);
+    EnsureDirTree(dir);
     return dir;
 }
 
-// 更新目标 / 主程序启动目录：%APPDATA%\yyzTools\。同时是 Platform\7z、aria2c 等工具的定位基准
+// Update target / launch directory of the main program: the directory that holds the updater exe. Also the base used to locate tools such as Platform\7z and aria2c
 std::wstring GetInstallDir() {
     return EnsureDir(GetAppDataRoot());
 }
 
-// 更新工作区根：update.ready、update.json 都落在此
+// Root of the update workspace: both update.ready and update.json land here
 std::wstring GetUpdateDir() {
     return EnsureDir(GetAppDataRoot() + L"\\Update");
 }
 
-// 下载包持久缓存：跨进程保留，配合 sha256 复用避免重复下载
+// Persistent cache of downloaded packages: kept across processes and reused through sha256 so nothing is downloaded twice
 std::wstring GetDownloadDir() {
     return EnsureDir(GetUpdateDir() + L"\\downloads");
 }
 
-// 解压暂存根：每个包解压到 staging\<name>，应用完即删
+// Staging root for extraction: every package is extracted to staging\<name> and deleted once it has been applied
 std::wstring GetStagingDir() {
     return EnsureDir(GetUpdateDir() + L"\\staging");
 }
 
-// 解压工具副本：7z.exe/7z.dll 从 appDir 复制到此运行，避免自更新时源文件被覆盖锁住
+// Working copy of the extraction tools: 7z.exe/7z.dll are copied here from appDir and run from here, so the sources are not locked while being overwritten by a self-update
 std::wstring GetToolsDir() {
     return EnsureDir(GetUpdateDir() + L"\\tools");
 }
 
-// update.json 源的兜底 base（Update.json 丢失时用，GitHub 官方源）。镜像源由 update_config.json 配置。
+// Fallback base for the update.json source (used when Update.json is missing; the official GitHub source). Mirrors are configured through update_config.json.
 static const wchar_t* FALLBACK_UPDATE_JSON_BASE = L"https://raw.githubusercontent.com/jearry/yyzTools/main";
-// release 资产的 GitHub base（update.json 的 url 只放后缀 v<ver>/<file>，C++ 拼 base + 后缀 + 镜像）
+// GitHub base of the release assets (update.json only stores the suffix v<ver>/<file>; C++ composes base + suffix + mirror)
 static const wchar_t* RELEASE_BASE = L"https://github.com/jearry/yyzTools/releases/download";
 
-// 包应用顺序：资源类先，platform 子包居中，main（含 yyzTools.exe / yyzUpdater.exe 自更新）最后
-static const char* APPLY_ORDER[] = { "web", "modules", "wallpaper", "yyztools", "tools", "everything", "rapidocr", "ffmpeg", "main" };
+// Package apply order: resources first, the platform sub-packages in the middle, and main (which contains the yyzTools.exe / yyzUpdater.exe self-update) last
+static const char* APPLY_ORDER[] = { "web", "modules", "wallpaper", "yyztools", "tools", "yyzfilesearch", "rapidocr", "ffmpeg", "main" };
 
 struct PendingPackage {
     std::string name;
     std::string version;
     std::wstring zipPath;
     std::string sha256;
-    std::vector<std::wstring> killProcesses;       // 该包应用前要普通杀的进程
-    std::vector<std::wstring> killProcessesAdmin;  // 该包应用前要管理员杀的进程（如 Everything）
+    std::vector<std::wstring> killProcesses;       // processes to kill with normal rights before this package is applied
+    std::vector<std::wstring> killProcessesAdmin;  // processes to kill with administrator rights before this package is applied
+    std::vector<std::wstring> stopServices;        // services to stop before this package is applied (all restarted once every package is applied, e.g. yyzFileSearchSvc)
 };
 
 struct UpdatePlan {
@@ -110,15 +101,35 @@ static std::wstring Utf8ToWide(const std::string& s) {
     return w;
 }
 
-// 转义 JSON 字符串值：路径含反斜杠必须转义，否则 json.h 解析会丢字符
-static std::string JsonEscape(const std::string& s) {
-    std::string out;
-    out.reserve(s.size() + 4);
-    for (char c : s) {
-        if (c == '\\') out += "\\\\";
-        else if (c == '"') out += "\\\"";
-        else out += c;
-    }
+// ---- JSON read/write helpers (nlohmann; serialization escapes automatically, so backslashes in paths need no manual handling) ----
+
+// Parses JSON text; returns a default-constructed value on failure or when the root is not an object, check with is_object()
+static nlohmann::ordered_json ParseJsonObject(const std::string& text) {
+    auto root = nlohmann::ordered_json::parse(text, nullptr, false);
+    return (root.is_discarded() || !root.is_object()) ? nlohmann::ordered_json() : root;
+}
+
+// Reads a string field of an object; returns nullopt when it is missing or of the wrong type
+static std::optional<std::string> JsonStr(const nlohmann::ordered_json& obj, const char* key) {
+    auto it = obj.find(key);
+    if (it == obj.end() || !it->is_string()) return std::nullopt;
+    return it->get<std::string>();
+}
+
+// Reads a string array field of an object; returns an empty array when it is missing or of the wrong type
+static std::vector<std::wstring> JsonStrArray(const nlohmann::ordered_json& obj, const char* key) {
+    std::vector<std::wstring> out;
+    auto it = obj.find(key);
+    if (it != obj.end() && it->is_array())
+        for (auto& e : *it)
+            if (e.is_string()) out.push_back(Utf8ToWide(e.get<std::string>()));
+    return out;
+}
+
+// Converts a string array to a JSON array
+static nlohmann::ordered_json ToJsonArray(const std::vector<std::wstring>& arr) {
+    auto out = nlohmann::ordered_json::array();
+    for (auto& s : arr) out.push_back(WideToUtf8(s));
     return out;
 }
 
@@ -134,44 +145,41 @@ static std::string ReadTextFile(const std::wstring& path) {
     return text;
 }
 
-// 取文件大小（字节）；不存在或不可访问返回 0。
+// Returns the file size in bytes; 0 when it does not exist or cannot be accessed.
 static unsigned long long FileSizeBytes(const std::wstring& path) {
     WIN32_FILE_ATTRIBUTE_DATA ad;
     if (!GetFileAttributesExW(path.c_str(), GetFileExInfoStandard, &ad)) return 0;
     return ((unsigned long long)ad.nFileSizeHigh << 32) | (unsigned long long)ad.nFileSizeLow;
 }
 
-// ---- 客户端镜像配置（%APPDATA%\yyzTools\Config\Update.json）----
+// ---- Client mirror configuration (<exe directory>\Config\Update.json) ----
 
-// client_update.json 镜像配置路径（与 client_versions.json 同放 Update 目录）
+// Path of the client_update.json mirror configuration (stored in the Update directory alongside client_versions.json)
 static std::wstring GetConfigPath() {
     return GetUpdateDir() + L"\\client_update.json";
 }
 
 struct MirrorConfig {
-    std::vector<std::wstring> updateJsonBases;   // update.json 源 base（main 前），拼 /releases/update.json
-    std::vector<std::wstring> releaseMirrors;    // release 资产镜像前缀，拼 <前缀>/真实URL
+    std::vector<std::wstring> updateJsonBases;   // update.json source bases (before main), suffixed with /releases/update.json
+    std::vector<std::wstring> releaseMirrors;    // mirror prefixes of the release assets, composed as <prefix>/realURL
 };
 
-// 读镜像配置。配置文件不存在则用默认并写入文件（让用户可编辑）。
-// updateJsonBases: update.json 下载源（拼 /releases/update.json）
-// releaseMirrors: release 资产镜像前缀（拼 <前缀>/真实URL）
+// Reads the mirror configuration. When the configuration file does not exist the defaults are used and written out (so the user can edit it).
+// updateJsonBases: download sources of update.json (suffixed with /releases/update.json)
+// releaseMirrors: mirror prefixes of the release assets (composed as <prefix>/realURL)
 static MirrorConfig ReadMirrorConfig() {
     MirrorConfig cfg;
     std::wstring path = GetConfigPath();
     std::string text = ReadTextFile(path);
     if (!text.empty()) {
-        JsonParser parser(text);
-        auto root = parser.Parse();
-        if (root && root->type == JsonValue::Obj) {
-            auto* b = root->Find("updateJsonBases");
-            if (b && b->type == JsonValue::Arr) for (auto& v : b->arr) if (v && v->type == JsonValue::Str) cfg.updateJsonBases.push_back(Utf8ToWide(v->str));
-            auto* m = root->Find("releaseMirrors");
-            if (m && m->type == JsonValue::Arr) for (auto& v : m->arr) if (v && v->type == JsonValue::Str) cfg.releaseMirrors.push_back(Utf8ToWide(v->str));
+        auto root = ParseJsonObject(text);
+        if (root.is_object()) {
+            cfg.updateJsonBases = JsonStrArray(root, "updateJsonBases");
+            cfg.releaseMirrors = JsonStrArray(root, "releaseMirrors");
         }
     }
     if (cfg.updateJsonBases.empty() && cfg.releaseMirrors.empty()) {
-        // Update.json 丢失：用 GitHub 官方源兜底，写入文件让用户可编辑
+        // Update.json missing: fall back to the official GitHub source and write it out so the user can edit it
         cfg.updateJsonBases.push_back(FALLBACK_UPDATE_JSON_BASE);
         std::ofstream f(path);
         if (f) {
@@ -181,7 +189,7 @@ static MirrorConfig ReadMirrorConfig() {
     return cfg;
 }
 
-// 真实 URL + 镜像前缀拼多源：[realUrl, mirror1/realUrl, mirror2/realUrl, ...]
+// Composes the multi-source list from the real URL plus the mirror prefixes: [realUrl, mirror1/realUrl, mirror2/realUrl, ...]
 static std::vector<std::wstring> BuildMultiSourceUrls(const std::wstring& realUrl, const std::vector<std::wstring>& mirrors) {
     std::vector<std::wstring> urls;
     urls.reserve(mirrors.size() + 1);
@@ -190,33 +198,24 @@ static std::vector<std::wstring> BuildMultiSourceUrls(const std::wstring& realUr
     return urls;
 }
 
-// ---- 本地版本文件 versions.json（{app}\update\versions.json，不再读 exe）----
+// ---- Local version file versions.json ({app}\update\versions.json; the exe is no longer read) ----
 
 static std::map<std::string, std::string> ReadLocalVersions() {
     std::map<std::string, std::string> versions;
     std::string text = ReadTextFile(GetUpdateDir() + L"\\client_versions.json");
     if (text.empty()) return versions;
-    JsonParser parser(text);
-    auto root = parser.Parse();
-    if (!root || root->type != JsonValue::Obj) return versions;
-    for (auto& kv : root->obj) {
-        if (kv.second && kv.second->type == JsonValue::Str)
-            versions[kv.first] = kv.second->str;
-    }
+    auto root = ParseJsonObject(text);
+    for (auto it = root.begin(); it != root.end(); ++it)
+        if (it.value().is_string()) versions[it.key()] = it.value().get<std::string>();
     return versions;
 }
 
 static bool SaveVersions(const std::map<std::string, std::string>& versions) {
     std::ofstream f(GetUpdateDir() + L"\\client_versions.json");
     if (!f) return false;
-    f << "{\n";
-    bool first = true;
-    for (auto& kv : versions) {
-        if (!first) f << ",\n";
-        f << "  \"" << kv.first << "\": \"" << kv.second << "\"";
-        first = false;
-    }
-    f << "\n}\n";
+    nlohmann::ordered_json root = nlohmann::ordered_json::object();
+    for (auto& kv : versions) root[kv.first] = kv.second;
+    f << root.dump(2) << "\n";
     return true;
 }
 
@@ -226,43 +225,32 @@ static bool UpdateLocalVersion(const std::string& pkgName, const std::string& ve
     return SaveVersions(versions);
 }
 
-// ---- update.ready（多包 JSON）----
-
-// 写一个 JSON 字符串数组字段："field": ["a", "b"]
-static void WriteStringArray(std::ofstream& f, const char* field, const std::vector<std::wstring>& arr) {
-    f << "\"" << field << "\": [";
-    for (size_t i = 0; i < arr.size(); i++) {
-        if (i) f << ", ";
-        f << "\"" << JsonEscape(WideToUtf8(arr[i])) << "\"";
-    }
-    f << "]";
-}
+// ---- update.ready (multi-package JSON) ----
 
 static bool WriteUpdateReady(const UpdatePlan& plan) {
-    std::ofstream f(GetUpdateDir() + L"\\update.ready");
-    if (!f) return false;
-    f << "{\n";
-    f << "  \"packages\": [\n";
-    for (size_t i = 0; i < plan.packages.size(); i++) {
-        const auto& p = plan.packages[i];
-        f << "    {\"name\": \"" << p.name
-          << "\", \"version\": \"" << p.version
-          << "\", \"zipPath\": \"" << JsonEscape(WideToUtf8(p.zipPath))
-          << "\", \"sha256\": \"" << p.sha256 << "\", ";
-        WriteStringArray(f, "killProcesses", p.killProcesses);
-        f << ", ";
-        WriteStringArray(f, "killProcessesAdmin", p.killProcessesAdmin);
-        f << "}";
-        if (i + 1 < plan.packages.size()) f << ",";
-        f << "\n";
+    auto packages = nlohmann::ordered_json::array();
+    for (auto& p : plan.packages) {
+        packages.push_back({
+            {"name", p.name},
+            {"version", p.version},
+            {"zipPath", WideToUtf8(p.zipPath)},
+            {"sha256", p.sha256},
+            {"killProcesses", ToJsonArray(p.killProcesses)},
+            {"killProcessesAdmin", ToJsonArray(p.killProcessesAdmin)},
+            {"stopService", ToJsonArray(p.stopServices)},
+        });
     }
-    f << "  ]\n}\n";
+    nlohmann::ordered_json root;
+    root["packages"] = std::move(packages);
+    std::ofstream f(GetUpdateDir() + L"\\update.ready", std::ios::binary | std::ios::trunc);
+    if (!f) return false;
+    f << root.dump(2) << "\n";
     return true;
 }
 
-// ---- update.result（手动检查的一次性结果标记）----
-// 只有手动触发（--check-and-apply）才写，供托盘读一次即删（NativeApi::GetUpdateState）。
-// 静默 --check 不写，否则用户下次打开托盘会莫名弹出「已是最新版本」。
+// ---- update.result (one-shot result marker of a manual check) ----
+// Only a manual run (--check-and-apply) writes it; the tray reads it once and deletes it (NativeApi::GetUpdateState).
+// A silent --check does not write it, otherwise the tray would unexpectedly pop up "already up to date" the next time the user opens it.
 static void WriteCheckResultMark(const char* result) {
     std::ofstream f(GetUpdateDir() + L"\\update.result", std::ios::binary | std::ios::trunc);
     if (f) f << result;
@@ -275,223 +263,256 @@ static void ClearCheckResultMark() {
 static bool ReadUpdateReady(UpdatePlan& plan) {
     std::string text = ReadTextFile(GetUpdateDir() + L"\\update.ready");
     if (text.empty()) return false;
-    JsonParser parser(text);
-    auto root = parser.Parse();
-    if (!root || root->type != JsonValue::Obj) return false;
+    auto root = ParseJsonObject(text);
 
-    auto* arr = root->Find("packages");
-    if (!arr || arr->type != JsonValue::Arr) return false;
-    for (auto& item : arr->arr) {
-        if (!item || item->type != JsonValue::Obj) continue;
-        auto* n = item->Find("name");
-        auto* v = item->Find("version");
-        auto* z = item->Find("zipPath");
-        if (!n || n->type != JsonValue::Str) continue;
-        if (!v || v->type != JsonValue::Str) continue;
-        if (!z || z->type != JsonValue::Str) continue;
+    auto arr = root.find("packages");
+    if (arr == root.end() || !arr->is_array()) return false;
+    for (auto& item : *arr) {
+        if (!item.is_object()) continue;
+        auto n = JsonStr(item, "name");
+        auto v = JsonStr(item, "version");
+        auto z = JsonStr(item, "zipPath");
+        if (!n || !v || !z) continue;
         PendingPackage p;
-        p.name = n->str;
-        p.version = v->str;
-        p.zipPath = Utf8ToWide(z->str);
-        auto* s = item->Find("sha256");
-        if (s && s->type == JsonValue::Str) p.sha256 = s->str;
-        auto* kp = item->Find("killProcesses");
-        if (kp && kp->type == JsonValue::Arr) {
-            for (auto& ke : kp->arr) if (ke && ke->type == JsonValue::Str) p.killProcesses.push_back(Utf8ToWide(ke->str));
-        }
-        auto* kpa = item->Find("killProcessesAdmin");
-        if (kpa && kpa->type == JsonValue::Arr) {
-            for (auto& ke : kpa->arr) if (ke && ke->type == JsonValue::Str) p.killProcessesAdmin.push_back(Utf8ToWide(ke->str));
-        }
-        plan.packages.push_back(p);
+        p.name = *n;
+        p.version = *v;
+        p.zipPath = Utf8ToWide(*z);
+        if (auto s = JsonStr(item, "sha256")) p.sha256 = *s;
+        p.killProcesses = JsonStrArray(item, "killProcesses");
+        p.killProcessesAdmin = JsonStrArray(item, "killProcessesAdmin");
+        p.stopServices = JsonStrArray(item, "stopService");
+        plan.packages.push_back(std::move(p));
     }
     return !plan.packages.empty();
 }
 
 enum CheckResult { kUpToDate, kReady, kError };
 
+// Cleans up orphaned downloads in the downloads directory: keeps the files of the current plan (including the aria2 resume control files) and deletes everything else.
+// Package file names carry the version (<package>-<version>.7z), so once the remote version jumps (e.g. 1.0.5 is published right after 1.0.4 failed),
+// the older file is never referenced by any plan again - the DeleteFileW of a successful apply only knows its own exact path and cannot remove them.
+// Therefore each check does one whitelist sweep once the plan is settled; with no updates the whitelist is empty, which clears the whole directory.
+//
+// Resuming is unaffected: a download failure takes the failed branch of DoCheck, which returns directly without calling this function,
+// leaving the partial .7z and its .aria2 for aria2 to resume on the next round.
+static void CleanStaleDownloads(const std::vector<PendingPackage>& keep) {
+    std::wstring dir = GetDownloadDir();
+    std::set<std::wstring> keepNames;
+    for (auto& p : keep) {
+        size_t pos = p.zipPath.find_last_of(L"\\/");
+        std::wstring file = (pos == std::wstring::npos) ? p.zipPath : p.zipPath.substr(pos + 1);
+        keepNames.insert(file);
+        keepNames.insert(file + L".aria2");  // the resume control file is kept along with the package itself
+    }
+
+    WIN32_FIND_DATAW fd;
+    HANDLE hFind = FindFirstFileW((dir + L"\\*").c_str(), &fd);
+    if (hFind == INVALID_HANDLE_VALUE) return;
+    size_t removed = 0;
+    do {
+        if (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) continue;
+        if (keepNames.count(fd.cFileName)) continue;
+        std::wstring full = dir + L"\\" + fd.cFileName;
+        if (DeleteFileW(full.c_str())) {
+            removed++;
+            InfoMsg("removed stale download: %ls", fd.cFileName);
+        } else {
+            InfoMsg("remove stale download failed (err=%lu): %ls", GetLastError(), fd.cFileName);
+        }
+    } while (FindNextFileW(hFind, &fd));
+    FindClose(hFind);
+    if (removed) InfoMsg("cleaned %zu stale download(s)", removed);
+}
+
 static int ApplyOrderIndex(const std::string& name) {
-    for (int i = 0; i < 9; i++)
-        if (APPLY_ORDER[i] == name) return i;
+    for (size_t i = 0; i < std::size(APPLY_ORDER); i++)
+        if (APPLY_ORDER[i] == name) return (int)i;
     return 99;
 }
 
-static CheckResult DoCheck(const std::wstring& appDir) {
-    (void)appDir;
+static CheckResult DoCheck() {
     auto cfg = ReadMirrorConfig();
-    LogFmt("mirror config: %zu updateJsonBases, %zu releaseMirrors",
+    InfoMsg("mirror config: %zu updateJsonBases, %zu releaseMirrors",
            cfg.updateJsonBases.size(), cfg.releaseMirrors.size());
     for (size_t i = 0; i < cfg.updateJsonBases.size(); i++)
-        LogFmt("  updateJsonBase[%zu] = %ls", i, cfg.updateJsonBases[i].c_str());
+        InfoMsg("  updateJsonBase[%zu] = %ls", i, cfg.updateJsonBases[i].c_str());
     for (size_t i = 0; i < cfg.releaseMirrors.size(); i++)
-        LogFmt("  releaseMirror[%zu] = %ls", i, cfg.releaseMirrors[i].c_str());
+        InfoMsg("  releaseMirror[%zu] = %ls", i, cfg.releaseMirrors[i].c_str());
 
     auto localVersions = ReadLocalVersions();
-    LogFmt("local versions: %zu packages", localVersions.size());
+    InfoMsg("local versions: %zu packages", localVersions.size());
 
     std::vector<std::wstring> jsonUrls;
     for (auto& base : cfg.updateJsonBases) jsonUrls.push_back(base + L"/releases/update.json");
     std::string jsonText = DownloadText(jsonUrls);
     if (jsonText.empty()) {
-        Log("fetch update.json failed");
+        InfoMsg("%s", "fetch update.json failed");
         return kError;
     }
-    LogFmt("update.json fetched: %zu bytes", jsonText.size());
+    InfoMsg("update.json fetched: %zu bytes", jsonText.size());
 
-    // 缓存 update.json 原文到 Update 目录，供主进程读取非更新字段（如 home 广告位配置）。
-    // 仅作缓存，写盘失败不影响后续更新流程。
+    // Cache the raw update.json in the Update directory so the main process can read the non-update fields from it (such as the home ad slot configuration).
+    // Cache only: failing to write it does not affect the rest of the update flow.
     {
         std::ofstream f(GetUpdateDir() + L"\\update.json", std::ios::binary | std::ios::trunc);
         if (f) f << jsonText;
     }
 
-    JsonParser parser(jsonText);
-    auto root = parser.Parse();
-    if (!root || root->type != JsonValue::Obj) {
-        Log("parse update.json failed");
+    auto root = ParseJsonObject(jsonText);
+    if (!root.is_object()) {
+        InfoMsg("%s", "parse update.json failed");
         return kError;
     }
 
-    auto* pkgs = root->Find("packages");
-    if (!pkgs || pkgs->type != JsonValue::Obj) { Log("no packages"); return kError; }
-    LogFmt("update.json has %zu packages", pkgs->obj.size());
+    auto pkgs = root.find("packages");
+    if (pkgs == root.end() || !pkgs->is_object()) { InfoMsg("%s", "no packages"); return kError; }
+    InfoMsg("update.json has %zu packages", pkgs->size());
 
     UpdatePlan plan;
 
     std::vector<PendingPackage> pending;
     bool failed = false;
-    const size_t pkgTotal = pkgs->obj.size();
+    const size_t pkgTotal = pkgs->size();
     size_t pkgIdx = 0;
-    for (auto& kv : pkgs->obj) {
-        const std::string& name = kv.first;
-        LogFmt("check pkg %zu/%zu: %s", ++pkgIdx, pkgTotal, name.c_str());
-        JsonValue* pkgVal = kv.second.get();
-        if (!pkgVal || pkgVal->type != JsonValue::Obj) continue;
-        auto* verV = pkgVal->Find("version");
-        auto* urlV = pkgVal->Find("url");
-        auto* shaV = pkgVal->Find("sha256");
-        if (!verV || verV->type != JsonValue::Str) { LogFmt("pkg %s missing version", name.c_str()); continue; }
-        if (!urlV || !shaV || shaV->type != JsonValue::Str) {
-            LogFmt("pkg %s missing url/sha256", name.c_str()); continue;
+    for (auto pkgIt = pkgs->begin(); pkgIt != pkgs->end(); ++pkgIt) {
+        const std::string& name = pkgIt.key();
+        InfoMsg("check pkg %zu/%zu: %s", ++pkgIdx, pkgTotal, name.c_str());
+        const auto& pkgVal = pkgIt.value();
+        if (!pkgVal.is_object()) continue;
+        auto verV = JsonStr(pkgVal, "version");
+        if (!verV) { InfoMsg("pkg %s missing version", name.c_str()); continue; }
+        auto shaV = JsonStr(pkgVal, "sha256");
+        if (!shaV) {
+            InfoMsg("pkg %s missing url/sha256", name.c_str()); continue;
         }
-        // url 只放真实 URL（字符串）；镜像由客户端配置拼。兼容数组格式（直接用）。
+        // url holds only the real URL (a string); the mirrors are composed from the client configuration. The array form is also accepted (used as-is).
         std::vector<std::wstring> urls;
-        if (urlV->type == JsonValue::Str) {
-            // url 只放后缀（v<ver>/<file>），拼 RELEASE_BASE；兼容完整 URL（https:// 开头）
-            std::wstring suffix = Utf8ToWide(urlV->str);
+        auto urlIt = pkgVal.find("url");
+        if (urlIt != pkgVal.end() && urlIt->is_string()) {
+            // url holds only the suffix (v<ver>/<file>), which is appended to RELEASE_BASE; a full URL (starting with https://) is also accepted
+            std::wstring suffix = Utf8ToWide(urlIt->get<std::string>());
             std::wstring realUrl = (suffix.find(L"https://") == 0 || suffix.find(L"http://") == 0)
                 ? suffix : (std::wstring(RELEASE_BASE) + L"/" + suffix);
             urls = BuildMultiSourceUrls(realUrl, cfg.releaseMirrors);
-        } else if (urlV->type == JsonValue::Arr) {
-            for (auto& u : urlV->arr) if (u && u->type == JsonValue::Str) urls.push_back(Utf8ToWide(u->str));
+        } else if (urlIt != pkgVal.end() && urlIt->is_array()) {
+            for (auto& u : *urlIt) if (u.is_string()) urls.push_back(Utf8ToWide(u.get<std::string>()));
         }
-        if (urls.empty()) { LogFmt("pkg %s empty url", name.c_str()); continue; }
+        if (urls.empty()) { InfoMsg("pkg %s empty url", name.c_str()); continue; }
 
-        const std::string& remoteVer = verV->str;
-        auto it = localVersions.find(name);
-        const std::string localVer = (it != localVersions.end()) ? it->second : std::string();
+        const std::string& remoteVer = *verV;
+        auto lit = localVersions.find(name);
+        const std::string localVer = (lit != localVersions.end()) ? lit->second : std::string();
 
         if (CompareVersion(remoteVer, localVer) <= 0) {
-            LogFmt("pkg %s up-to-date: local=%s remote=%s", name.c_str(), localVer.c_str(), remoteVer.c_str());
+            InfoMsg("pkg %s up-to-date: local=%s remote=%s", name.c_str(), localVer.c_str(), remoteVer.c_str());
             continue;
         }
-        LogFmt("pkg %s has update: local=%s remote=%s", name.c_str(), localVer.c_str(), remoteVer.c_str());
+        InfoMsg("pkg %s has update: local=%s remote=%s", name.c_str(), localVer.c_str(), remoteVer.c_str());
 
         std::wstring zipPath = GetDownloadDir() + L"\\" + Utf8ToWide(name) + L"-" + Utf8ToWide(remoteVer) + L".7z";
 
-        // 优先复用已缓存且校验通过的包，避免重复下载（上次 extract/apply 失败会保留包在此）
+        // Prefer reusing a cached package that passes verification, to avoid downloading it twice (a failed extract/apply leaves the package here)
         bool reused = false;
         if (PathFileExistsW(zipPath.c_str())) {
             std::string cached = Sha256File(zipPath);
-            if (!cached.empty() && _stricmp(cached.c_str(), shaV->str.c_str()) == 0) {
+            if (!cached.empty() && _stricmp(cached.c_str(), shaV->c_str()) == 0) {
                 reused = true;
-                LogFmt("pkg %s reuse cached package (%llu bytes), skip download", name.c_str(), FileSizeBytes(zipPath));
+                InfoMsg("pkg %s reuse cached package (%llu bytes), skip download", name.c_str(), FileSizeBytes(zipPath));
             } else {
-                LogFmt("pkg %s cached package invalid, redownload", name.c_str());
+                InfoMsg("pkg %s cached package invalid, redownload", name.c_str());
             }
         }
         if (!reused) {
-            LogFmt("downloading %s package: %zu urls", name.c_str(), urls.size());
+            InfoMsg("downloading %s package: %zu urls", name.c_str(), urls.size());
             if (!DownloadFile(urls, zipPath, nullptr)) {
-                LogFmt("download %s failed, package kept for resume", name.c_str());
+                InfoMsg("download %s failed, package kept for resume", name.c_str());
                 failed = true;
                 break;
             }
-            LogFmt("downloaded %s: %llu bytes", name.c_str(), FileSizeBytes(zipPath));
+            InfoMsg("downloaded %s: %llu bytes", name.c_str(), FileSizeBytes(zipPath));
 
             std::string actual = Sha256File(zipPath);
-            if (_stricmp(actual.c_str(), shaV->str.c_str()) != 0) {
-                LogFmt("sha256 mismatch for %s: expected=%s actual=%s", name.c_str(), shaV->str.c_str(), actual.c_str());
-                failed = true;  // 保留文件，下次 aria2 覆盖重下（断点续传机制自动处理）
+            if (_stricmp(actual.c_str(), shaV->c_str()) != 0) {
+                InfoMsg("sha256 mismatch for %s: expected=%s actual=%s", name.c_str(), shaV->c_str(), actual.c_str());
+                failed = true;  // the file is kept, aria2 overwrites and re-downloads it next time (handled automatically by the resume mechanism)
                 break;
             }
-            LogFmt("sha256 ok for %s", name.c_str());
+            InfoMsg("sha256 ok for %s", name.c_str());
         }
 
         PendingPackage p;
         p.name = name;
         p.version = remoteVer;
         p.zipPath = zipPath;
-        p.sha256 = shaV->str;
-        auto* kp = pkgVal->Find("killProcesses");
-        if (kp && kp->type == JsonValue::Arr) {
-            for (auto& ke : kp->arr) if (ke && ke->type == JsonValue::Str) p.killProcesses.push_back(Utf8ToWide(ke->str));
-        }
-        auto* kpa = pkgVal->Find("killProcessesAdmin");
-        if (kpa && kpa->type == JsonValue::Arr) {
-            for (auto& ke : kpa->arr) if (ke && ke->type == JsonValue::Str) p.killProcessesAdmin.push_back(Utf8ToWide(ke->str));
-        }
+        p.sha256 = *shaV;
+        p.killProcesses = JsonStrArray(pkgVal, "killProcesses");
+        p.killProcessesAdmin = JsonStrArray(pkgVal, "killProcessesAdmin");
+        p.stopServices = JsonStrArray(pkgVal, "stopService");
         pending.push_back(p);
     }
 
     if (failed) {
-        // 保留已下载的包（位于 Update 目录），下次复用，避免重复下载
-        LogFmt("check aborted, %zu packages kept for retry", pending.size());
+        // Keep the packages that were already downloaded (they live in the Update directory) so they can be reused next time instead of being downloaded again.
+        // Orphans are deliberately not cleaned here: the pending list we broke out of only covers up to the failing package, the ones after it were never checked,
+        // and using it as a whitelist would delete caches that should have been reused. Defer the cleanup to the next successful check.
+        InfoMsg("check aborted, %zu packages kept for retry", pending.size());
         return kError;
     }
 
     if (pending.empty()) {
-        Log("already up-to-date");
+        CleanStaleDownloads(pending);  // no updates -> the whitelist is empty -> the directory is supposed to be empty anyway, clear it all
+        InfoMsg("%s", "already up-to-date");
         return kUpToDate;
     }
 
-    // 按应用顺序排序（web -> modules -> wallpaper -> platform -> main）
+    // Sort into apply order (web -> modules -> wallpaper -> platform -> main)
     std::sort(pending.begin(), pending.end(), [](const PendingPackage& a, const PendingPackage& b) {
         return ApplyOrderIndex(a.name) < ApplyOrderIndex(b.name);
     });
 
+    CleanStaleDownloads(pending);  // the plan is settled, remove the leftovers that do not belong to this round
+
     plan.packages = std::move(pending);
-    WriteUpdateReady(plan);
-    LogFmt("update.ready written, %zu packages", plan.packages.size());
+    if (!WriteUpdateReady(plan)) {
+        InfoMsg("write update.ready failed, %zu packages kept for retry", plan.packages.size());
+        return kError;
+    }
+    InfoMsg("update.ready written, %zu packages", plan.packages.size());
     return kReady;
 }
 
-int RunCheck(const std::wstring& appDir) {
-    Log("--check start");
-    return DoCheck(appDir) == kError ? 1 : 0;
+int RunCheck() {
+    InfoMsg("%s", "--check start");
+    return DoCheck() == kError ? 1 : 0;
 }
 
-int RunApply(const std::wstring& appDir, bool forceKillMain) {
-    Log("--apply start");
+int RunApply(const std::wstring& appDir) {
+    InfoMsg("%s", "--apply start");
     UpdatePlan plan;
-    if (!ReadUpdateReady(plan)) { Log("no update.ready"); return 1; }
-    LogFmt("apply %zu packages", plan.packages.size());
+    if (!ReadUpdateReady(plan)) { InfoMsg("%s", "no update.ready"); return 1; }
+    InfoMsg("apply %zu packages", plan.packages.size());
 
     KillChildProcesses();
+
+    // Record the services actually stopped in this round and restart them all once every package has been applied
+    std::set<std::wstring> stoppedServices;
 
     const size_t pkgTotal = plan.packages.size();
     size_t pkgIdx = 0;
     for (auto& p : plan.packages) {
-        LogFmt("apply pkg %zu/%zu: %s version=%s", ++pkgIdx, pkgTotal, p.name.c_str(), p.version.c_str());
+        InfoMsg("apply pkg %zu/%zu: %s version=%s", ++pkgIdx, pkgTotal, p.name.c_str(), p.version.c_str());
         KillPackageProcesses(p.killProcesses, p.killProcessesAdmin);
+        for (auto& s : p.stopServices) {
+            if (StopServiceByName(s)) stoppedServices.insert(s);
+        }
         if (!PathFileExistsW(p.zipPath.c_str()))
-            LogFmt("warning: zip missing before extract: %ls", p.zipPath.c_str());
+            InfoMsg("warning: zip missing before extract: %ls", p.zipPath.c_str());
         else
-            LogFmt("zip ready: %ls (%llu bytes)", p.zipPath.c_str(), FileSizeBytes(p.zipPath));
+            InfoMsg("zip ready: %ls (%llu bytes)", p.zipPath.c_str(), FileSizeBytes(p.zipPath));
         std::wstring staging = GetStagingDir() + L"\\" + Utf8ToWide(p.name);
         RemoveDirRecursive(staging);
         if (!ExtractArchive(p.zipPath, staging)) {
-            LogFmt("extract %s failed, package kept for retry", p.name.c_str());
+            InfoMsg("extract %s failed, package kept for retry", p.name.c_str());
             RemoveDirRecursive(staging);
             continue;
         }
@@ -499,39 +520,44 @@ int RunApply(const std::wstring& appDir, bool forceKillMain) {
         RemoveDirRecursive(staging);
         if (ok) {
             UpdateLocalVersion(p.name, p.version);
-            DeleteFileW(p.zipPath.c_str());  // 仅成功才清除下载包
-            LogFmt("pkg %s applied, version updated, package cleaned", p.name.c_str());
+            DeleteFileW(p.zipPath.c_str());  // the downloaded package is removed only on success
+            InfoMsg("pkg %s applied, version updated, package cleaned", p.name.c_str());
         } else {
-            LogFmt("pkg %s apply had failures (partial), version not updated, package kept for retry", p.name.c_str());
+            InfoMsg("pkg %s apply had failures (partial), version not updated, package kept for retry", p.name.c_str());
         }
     }
 
-    // 先删 update.ready 再 LaunchMain：避免新主进程 PreRun 检测到 ready 再次拉起 --apply
+    // Restart the services that were stopped, now that everything has been applied
+    for (auto& s : stoppedServices) {
+        StartServiceByName(s);
+    }
+
+    // Delete update.ready before LaunchMain: this stops the new main process from detecting ready in PreRun and launching --apply a second time
     DeleteFileW((GetUpdateDir() + L"\\update.ready").c_str());
 
     LaunchMain(appDir);
 
-    Log("--apply done");
+    InfoMsg("%s", "--apply done");
     return 0;
 }
 
 int RunCheckAndApply(const std::wstring& appDir) {
-    Log("--check-and-apply start");
+    InfoMsg("%s", "--check-and-apply start");
 
-    // 本轮检查开始，先清掉上一轮的结果标记，避免托盘读到过期结果
+    // A round starts by clearing the result marker of the previous round, so the tray cannot read a stale result
     ClearCheckResultMark();
 
     UpdatePlan plan;
     if (ReadUpdateReady(plan)) {
-        Log("found existing update.ready, apply directly");
-        return RunApply(appDir, true);
+        InfoMsg("%s", "found existing update.ready, apply directly");
+        return RunApply(appDir);
     }
 
-    CheckResult cr = DoCheck(appDir);
+    CheckResult cr = DoCheck();
     if (cr == kReady) {
-        return RunApply(appDir, true);
+        return RunApply(appDir);
     }
-    // 无更新 / 检查失败都要留痕：托盘轮询回到 idle 时才能给出对应提示
+    // Both "no updates" and "check failed" have to leave a trace: the tray poll only returns to idle then, which is when the matching message can be shown
     WriteCheckResultMark(cr == kUpToDate ? "uptodate" : "error");
     return cr == kError ? 1 : 0;
 }

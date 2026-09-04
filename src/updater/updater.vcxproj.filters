@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{C9D20844-3D42-43C6-8C81-671CB66B210B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Update Core">
+      <UniqueIdentifier>{D60281BF-A2CC-40A0-A170-8BAE16B0225D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{8AE4C6A8-6CEE-4AE6-B7AA-E2C50E71EA8F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hash &amp; Extract">
+      <UniqueIdentifier>{546CF423-8532-4B84-84B8-4ED3EBEFD9E2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Version &amp; Resource">
+      <UniqueIdentifier>{ACAA18CF-9A72-448D-BCF9-8146EDD46B16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Headers">
+      <UniqueIdentifier>{1EE46262-43DE-479D-B5E3-03AC59C10866}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="updater.h">
+      <Filter>Update Core</Filter>
+    </ClInclude>
+    <ClInclude Include="applying.h">
+      <Filter>Update Core</Filter>
+    </ClInclude>
+    <ClInclude Include="http_client.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="hasher.h">
+      <Filter>Hash &amp; Extract</Filter>
+    </ClInclude>
+    <ClInclude Include="zip_extract.h">
+      <Filter>Hash &amp; Extract</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>Version &amp; Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Version &amp; Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="dllversion.h">
+      <Filter>Version &amp; Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="dllcommon.h">
+      <Filter>Version &amp; Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\buildnumber.h">
+      <Filter>Public Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\PubDefWin.h">
+      <Filter>Public Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="updater.cpp">
+      <Filter>Update Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Update Core</Filter>
+    </ClCompile>
+    <ClCompile Include="applying.cpp">
+      <Filter>Update Core</Filter>
+    </ClCompile>
+    <ClCompile Include="http_client.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="hasher.cpp">
+      <Filter>Hash &amp; Extract</Filter>
+    </ClCompile>
+    <ClCompile Include="zip_extract.cpp">
+      <Filter>Hash &amp; Extract</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version_no.rc2">
+      <Filter>Version &amp; Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource_exe.rc">
+      <Filter>Version &amp; Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\yyzUpdater.ico">
+      <Filter>Version &amp; Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest">
+      <Filter>Version &amp; Resource</Filter>
+    </Manifest>
+  </ItemGroup>
+</Project>

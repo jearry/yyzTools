@@ -75,31 +75,33 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)\..\bin\</OutDir>
-    <IncludePath>$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <IntDir>$(SolutionDir)\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <OutDir>$(MSBuildThisFileDirectory)..\..\bin\</OutDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\public;$(ProjectDir)..\library\include;$(ProjectDir)..\library\3rd\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IntDir>$(MSBuildThisFileDirectory)..\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <LibraryPath>$(ProjectDir)..\library\3rd\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <IntDir>$(SolutionDir)\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\public;$(ProjectDir)..\library\include;$(ProjectDir)..\library\3rd\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IntDir>$(MSBuildThisFileDirectory)..\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <LibraryPath>$(ProjectDir)..\library\3rd\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)\..\bin64\</OutDir>
+    <OutDir>$(MSBuildThisFileDirectory)..\..\bin64\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)\..\bin\</OutDir>
-    <IncludePath>$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <IntDir>$(SolutionDir)\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <OutDir>$(MSBuildThisFileDirectory)..\..\bin\</OutDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\public;$(ProjectDir)..\library\include;$(ProjectDir)..\library\3rd\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IntDir>$(MSBuildThisFileDirectory)..\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <LibraryPath>$(ProjectDir)..\library\3rd\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <IntDir>$(SolutionDir)\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\public;$(ProjectDir)..\library\include;$(ProjectDir)..\library\3rd\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IntDir>$(MSBuildThisFileDirectory)..\..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <LibraryPath>$(ProjectDir)..\library\3rd\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)\..\bin64\</OutDir>
+    <OutDir>$(MSBuildThisFileDirectory)..\..\bin64\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -111,8 +113,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(SolutionDir)\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderOutputFile>$(MSBuildThisFileDirectory)..\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/utf-8 /FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,8 +132,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(SolutionDir)\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderOutputFile>$(MSBuildThisFileDirectory)..\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/utf-8 /FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,8 +153,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(SolutionDir)\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderOutputFile>$(MSBuildThisFileDirectory)..\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/utf-8 /FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -175,8 +177,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(SolutionDir)\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderOutputFile>$(MSBuildThisFileDirectory)..\..\pch\$(ProjectName)\$(Platform)\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/utf-8 /FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -188,20 +190,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <!-- Precompiled Header -->
     <ClInclude Include="pch.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="version.h" />
-    <ClInclude Include="logger.h" />
+    <!-- Update Core -->
+    <ClInclude Include="updater.h" />
+    <ClInclude Include="applying.h" />
+    <!-- Network -->
     <ClInclude Include="http_client.h" />
+    <!-- Hash &amp; Extract -->
     <ClInclude Include="hasher.h" />
     <ClInclude Include="zip_extract.h" />
-    <ClInclude Include="applying.h" />
-    <ClInclude Include="updater.h" />
+    <!-- Version &amp; Resource -->
+    <ClInclude Include="version.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="dllversion.h" />
     <ClInclude Include="dllcommon.h" />
-    <ClInclude Include="buildnumber.h" />
+    <!-- Public Headers -->
+    <ClInclude Include="..\public\buildnumber.h" />
+    <ClInclude Include="..\public\PubDefWin.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -210,13 +218,15 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="logger.cpp" />
+    <!-- Update Core -->
+    <ClCompile Include="updater.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="applying.cpp" />
+    <!-- Network -->
     <ClCompile Include="http_client.cpp" />
+    <!-- Hash &amp; Extract -->
     <ClCompile Include="hasher.cpp" />
     <ClCompile Include="zip_extract.cpp" />
-    <ClCompile Include="applying.cpp" />
-    <ClCompile Include="updater.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="version_no.rc2" />
@@ -229,6 +239,11 @@
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\library\yyzlib.vcxproj">
+      <Project>{3f7a1c52-9d4e-4b8a-b6c1-2e8d5f0a9c33}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
