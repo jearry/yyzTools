@@ -1,17 +1,17 @@
 {
   "packages": {
     "web": {
-      "version": "1.0.5.1500",
-      "url": "v1.0.5.1500/web-1.0.5.1500.7z",
-      "sha256": "c1008ba31d972df6aa5c093d269a799dc81bb3862173a7663d9971bb56c0e48c",
+      "version": "1.0.6.1600",
+      "url": "v1.0.6.1600/web-1.0.6.1600.7z",
+      "sha256": "D2F23C75B337001A590B8FED3BE92925D210F4489F446CCAC1384F4684F28746",
       "killProcesses": ["yyzWallpaper.exe"],
       "killProcessesAdmin": [],
       "stopService": []
     },
     "modules": {
-      "version": "1.0.5.1500",
-      "url": "v1.0.5.1500/modules-1.0.5.1500.7z",
-      "sha256": "8479b642951546db0669ec7a818ceb90a74a42074051b44f7434cb57922a456c",
+      "version": "1.0.6.1600",
+      "url": "v1.0.6.1600/modules-1.0.6.1600.7z",
+      "sha256": "D488F696EBE2F909854CF51A0877EA33BC9D3884D68ABBD50F14F817ED53D2B1",
       "killProcesses": [],
       "killProcessesAdmin": [],
       "stopService": []
@@ -19,15 +19,15 @@
     "wallpaper": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/wallpaper-1.0.0.1000.7z",
-      "sha256": "e2cc2d4d6e80ecc1e263f1707213ae82b5f7414db1a3eadcd0bffffcb4bc96f3",
+      "sha256": "E2CC2D4D6E80ECC1E263F1707213AE82B5F7414DB1A3EADCD0BFFFFCB4BC96F3",
       "killProcesses": ["yyzWallpaper.exe"],
       "killProcessesAdmin": [],
       "stopService": []
     },
     "yyztools": {
-      "version": "1.0.5.1500",
-      "url": "v1.0.5.1500/yyztools-1.0.5.1500.7z",
-      "sha256": "8601e53ca7174da0bef6b01f5026f2df239e2727d627820f9cbdfcf163b2568e",
+      "version": "1.0.6.1600",
+      "url": "v1.0.6.1600/yyztools-1.0.6.1600.7z",
+      "sha256": "9AF27E63D9241D374DA72BA2AC65D368D258B1F45601E0FF0CD9513E73FB18F4",
       "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe", "yyzScreenRec.exe"],
       "killProcessesAdmin": [],
       "stopService": []
@@ -35,15 +35,15 @@
     "tools": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/tools-1.0.0.1000.7z",
-      "sha256": "93716e32ecc516feb3ef8fe2ad69e296a61def66c8a7505c660c8f55d725e603",
+      "sha256": "93716E32ECC516FEB3EF8FE2AD69E296A61DEF66C8A7505C660C8F55D725E603",
       "killProcesses": ["aria2c.exe", "7z.exe", "openssl.exe", "pdfcpu.exe", "magick.exe", "gswin64c.exe"],
       "killProcessesAdmin": [],
       "stopService": []
     },
     "yyzfilesearch": {
-      "version": "1.0.5.1500",
-      "url": "v1.0.5.1500/yyzfilesearch-1.0.5.1500.7z",
-      "sha256": "264541db6086043923db8a533afaf264a079f0855248cdb70c8f22b1289b0b59",
+      "version": "1.0.6.1600",
+      "url": "v1.0.6.1600/yyzfilesearch-1.0.6.1600.7z",
+      "sha256": "EEEB18C9F713C2A252C3D25BF9849D698819F7375195E4F154CA8BEE0582F639",
       "killProcesses": ["yyzFileSearch.exe"],
       "killProcessesAdmin": [],
       "stopService": ["yyzFileSearchSvc"]
@@ -51,7 +51,7 @@
     "rapidocr": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/rapidocr-1.0.0.1000.7z",
-      "sha256": "58f8f129980bbfd091b74879d81940f0a1b2834d9d614e46d1c710e3e7897fcf",
+      "sha256": "58F8F129980BBFD091B74879D81940F0A1B2834D9D614E46D1C710E3E7897FCF",
       "killProcesses": ["RapidOCR-json.exe"],
       "killProcessesAdmin": [],
       "stopService": []
@@ -59,15 +59,15 @@
     "ffmpeg": {
       "version": "1.0.0.1000",
       "url": "v1.0.0.1000/ffmpeg-1.0.0.1000.7z",
-      "sha256": "b5e98be121dd275b5bf37b3a7f9cd9593d00a3867f96df81791118220e002c50",
+      "sha256": "B5E98BE121DD275B5BF37B3A7F9CD9593D00A3867F96DF81791118220E002C50",
       "killProcesses": ["ffmpeg.exe", "ffprobe.exe"],
       "killProcessesAdmin": [],
       "stopService": []
     },
     "main": {
-      "version": "1.0.5.1500",
-      "url": "v1.0.5.1500/main-1.0.5.1500.7z",
-      "sha256": "699d2bb8bb13871893b89908244bf15f4400b7b9e8ddeac04915df278bf8b320",
+      "version": "1.0.6.1600",
+      "url": "v1.0.6.1600/main-1.0.6.1600.7z",
+      "sha256": "122CAA652DA00B869F00D6FC09E21021B3A87E7962CEA325F3DB7837843FD635",
       "killProcesses": ["yyzWallpaper.exe", "yyzBrowser.exe"],
       "killProcessesAdmin": [],
       "stopService": []
