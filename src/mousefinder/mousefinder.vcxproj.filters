@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{4397703C-7088-5410-A696-B02B6211FDBF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{BFB252BB-0959-5AC6-908E-14725A16541A}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{691E4724-172B-58D2-B3B7-3B8253B841EF}</UniqueIdentifier>
+      <Extensions>h;rc2;config</Extensions>
+    </Filter>
+    <Filter Include="Precompiled Headers">
+      <UniqueIdentifier>{F7EC2BD4-EBA5-5F1D-BA9E-D1EA3366A61E}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MouseFinder.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buildnumber.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="dllcommon.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="dllversion.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseFinder.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version_no.rc2">
+      <Filter>Generated</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource_exe.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

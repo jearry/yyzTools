@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{9D45062A-8005-5B4A-8187-594B25463A85}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{B3FCDA00-34C3-54C3-8007-A1D7B435E1B8}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{2BDB42BD-D9EB-5ECF-A5CC-55E88C7812E7}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{06740E0E-6BDA-5398-8FA5-C952E67910BD}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{3232E21F-DE0F-51AF-9E88-5AC16336334D}</UniqueIdentifier>
+      <Extensions>h;rc2;config</Extensions>
+    </Filter>
+    <Filter Include="Precompiled Headers">
+      <UniqueIdentifier>{F62502CF-3C05-5CB6-A325-84C83EC9FDB9}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboadHintWindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Theme.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardInput.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseHighlighter.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseInput.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="PubDefInput.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="buildnumber.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="dllcommon.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="dllversion.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboadHintWindow.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Theme.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardInput.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseHighlighter.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseInput.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PubDefInput.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version_no.rc2">
+      <Filter>Generated</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource_exe.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

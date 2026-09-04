@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{7664E33B-4480-56CC-ADF1-ED8CCD5A3850}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Commands">
+      <UniqueIdentifier>{5D456EF8-87AE-5E8F-9E59-A6050EE7D741}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{62F61F2A-951A-5E1B-B8A0-CD229A5501B4}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{D2456C4A-C795-55B0-A50A-4ED52839AD66}</UniqueIdentifier>
+      <Extensions>h;rc2;config</Extensions>
+    </Filter>
+    <Filter Include="Precompiled Headers">
+      <UniqueIdentifier>{D3ED16E9-A87E-5F0E-9D69-564323F44EB5}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandDispatch.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Power.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Monitor.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="ShellCmd.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Volume.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Theme.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="UsbEject.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Headers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buildnumber.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="dllcommon.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="dllversion.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandDispatch.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version_no.rc2">
+      <Filter>Generated</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource_exe.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\yyzcmd.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
