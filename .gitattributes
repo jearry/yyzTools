@@ -1,7 +1,4 @@
-# Web 静态资源统一 LF：跨平台一致、体积更小，并消除 core.autocrlf=true 下 LF↔CRLF 转换的 warning
 * text=auto eol=lf
-
-# 二进制资源（禁止任何换行或内容转换）
 *.png binary
 *.jpg binary
 *.jpeg binary
