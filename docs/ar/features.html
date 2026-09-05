@@ -104,9 +104,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <script type="module" crossorigin src="/assets/main-C36KNBaN.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CujodHUE.css">
 </head>
 <body>
 
@@ -119,7 +119,7 @@
 
         <nav class="nav" id="nav">
             <a href="/ar/" >الرئيسية</a>
-            <a href="/ar/features.html" class=&#34;on&#34;>المزايا</a>
+            <a href="/ar/features.html" class="on">المزايا</a>
             <a href="/ar/download.html" >التنزيل</a>
             <a href="/ar/changelog.html" >سجل التغييرات</a>
             
@@ -166,7 +166,7 @@
                        >Русский</a>
                     
                     <a href="/ar/features.html" hreflang="ar"
-                       class=&#34;on&#34; aria-current=&#34;true&#34;>العربية</a>
+                       class="on" aria-current="true">العربية</a>
                     
                     <a href="/pt/features.html" hreflang="pt"
                        >Português</a>
@@ -220,6 +220,8 @@
 </nav>
 
 
+
+
 <section class="section " id="cmdplate">
     <div class="wrap">
         <div class="cat-head">
@@ -229,9 +231,10 @@
                 <p>نقطة دخول موحّدة تظهر بالضغط على Alt+Space: حقل بحث واحد يشمل جهازك بأكمله.</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     البحث في التطبيقات
                     <kbd class="feat-key">default</kbd>
@@ -239,7 +242,20 @@
                 <p>ابحث عن تطبيقات Win32 / UWP وأوامر النظام وإعداداته وشغّلها، مع دعم التشغيل كمسؤول وتحديد موقع الملف.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-app.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-app.webp"
+                         alt="البحث في التطبيقات" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     البحث في الملفات
                     <kbd class="feat-key">f␣</kbd>
@@ -247,7 +263,20 @@
                 <p>بحث فوري في كل الأقراص عبر محرك فهرسة ذاتي التطوير بأدنى استهلاك للذاكرة، مع إمكانية الفتح أو المعاينة أو تحديد الموقع أو النقل إلى سلة المحذوفات مباشرةً.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-file.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-file.webp"
+                         alt="البحث في الملفات" width="800" height="600"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     إدارة العمليات
                     <kbd class="feat-key">p␣</kbd>
@@ -255,7 +284,20 @@
                 <p>ابحث عن العمليات وشغّلها أو أوقفها مؤقتًا أو أنهها أو أعد تشغيلها، دون فتح مدير المهام.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-process.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-process.webp"
+                         alt="إدارة العمليات" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     إدارة النوافذ
                     <kbd class="feat-key">w␣</kbd>
@@ -263,7 +305,20 @@
                 <p>ابحث عن النوافذ وأظهرها أو أخفها أو ثبّتها في المقدمة أو أزل التثبيت أو أغلقها.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-window.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-window.webp"
+                         alt="إدارة النوافذ" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     البحث في الإشارات المرجعية
                     <kbd class="feat-key">b␣</kbd>
@@ -271,7 +326,20 @@
                 <p>ابحث في إشارات المتصفح المرجعية وافتحها في وضع عادي أو وضع التصفح الخاص.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-bookmark.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-bookmark.webp"
+                         alt="البحث في الإشارات المرجعية" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     سجل الحافظة
                     <kbd class="feat-key">c␣</kbd>
@@ -279,7 +347,20 @@
                 <p>استعرض سجل النصوص والصور السابقة، وانقر على العنصر لإعادة لصقه فورًا.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-clipboard.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-clipboard.webp"
+                         alt="سجل الحافظة" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
                 <h3>
                     سطر الأوامر
                     <kbd class="feat-key">&gt;␣</kbd>
@@ -287,7 +368,20 @@
                 <p>نفّذ الأوامر مباشرةً، مع دعم التشغيل بصلاحيات المسؤول.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-cmd.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-cmd.webp"
+                         alt="سطر الأوامر" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
                 <h3>
                     الحساب الفوري
                     <kbd class="feat-key">=␣</kbd>
@@ -295,7 +389,17 @@
                 <p>الناتج يظهر أثناء الكتابة، مع عرض المعادلة والنتيجة بشكل مُنسَّق، واضغط Enter للنسخ.</p>
             </div>
             
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-calc.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-calc.webp"
+                         alt="الحساب الفوري" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
         </div>
+        
     </div>
 </section>
 
@@ -308,17 +412,31 @@
                 <p>اختصر الإجراءات المتكررة إلى ضغطة اختصار واحدة.</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     الرصيف
                     
                 </h3>
-                <p>شريط تشغيل عائم للتطبيقات والمواقع الأكثر استخدامًا، بإدارة مجموعات وفي متناول اليد دائمًا.</p>
+                <p>شريط تشغيل عائم يلتصق بالحافة العلوية للشاشة: ينزلق تلقائيًا عندما يصل مؤشر الفأرة إلى أعلى الشاشة، مع إدارة التطبيقات والمواقع الأكثر استخدامًا في مجموعات وفي متناول اليد دائمًا.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/dock.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/dock.webp"
+                         alt="الرصيف" width="940" height="815"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     سجل الحافظة
                     
@@ -326,7 +444,20 @@
                 <p>يسجّل النصوص والصور في الخلفية، ويدعم تثبيت الصور لتطفو فوق سطح المكتب.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-clipboard.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-clipboard.webp"
+                         alt="سجل الحافظة" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     إحصاءات التطبيقات
                     
@@ -334,7 +465,20 @@
                 <p>يسجّل مدة استخدام كل تطبيق وعدد مرات تنشيطه، مع رسوم بيانية توضّح إلى أين يذهب وقتك.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/appusage.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/appusage.webp"
+                         alt="إحصاءات التطبيقات" width="1100" height="700"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     التقاط الشاشة
                     
@@ -342,7 +486,20 @@
                 <p>التقاط منطقة، والتقاط طويل بخياطة أثناء التمرير، وتثبيت الصورة على الشاشة، في عمليات مستقلة لا تُثقل بعضها.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/screencap.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/screencap.webp"
+                         alt="التقاط الشاشة" width="1278" height="869"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     تسجيل الشاشة
                     
@@ -350,7 +507,20 @@
                 <p>سجّل الشاشة والصوت مع منطقة كاميرا تختارها بنفسك. تتبع الكاميرا المؤشر مع تقريب تلقائي، وتظهر تلميحات النقر والمفاتيح، ويُصدَّر المقطع الجاهز بنقرة واحدة.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/screenrec.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/screenrec.webp"
+                         alt="تسجيل الشاشة" width="1041" height="668"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     مساعد التذكيرات
                     
@@ -358,7 +528,20 @@
                 <p>تذكيرات لمرة واحدة أو يومية أو أسبوعية أو شهرية، مع إشعار على سطح المكتب في الوقت المحدد.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/reminder.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/reminder.webp"
+                         alt="مساعد التذكيرات" width="1196" height="927"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
                 <h3>
                     التقويم الدائم
                     
@@ -366,23 +549,38 @@
                 <p>مقارنة التقويم الميلادي بالصيني، والفصول الفلكية والأعياد، وسنوات الجذوع والفروع ومعلومات اختيار المواعيد.</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    تلميحات المفاتيح
-                    
-                </h3>
-                <p>عرض مفاتيح لوحة المفاتيح والفأرة لحظيًا عبر RawInput، ليراها المشاهدون بوضوح في تسجيلات الشاشة.</p>
-            </div>
-            
-            <div class="feat reveal">
-                <h3>
-                    تحديد موقع الفأرة
-                    
-                </h3>
-                <p>إبراز موضع المؤشر الحالي بنقرة واحدة، فلن تبحث عن الفأرة بعد اليوم مع تعدد الشاشات.</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/calendar.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/calendar.webp"
+                         alt="التقويم الدائم" width="1200" height="700"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
         </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
+                <h3>
+                    إجراءات سريعة للنظام
+                    
+                </h3>
+                <p>التحكم في الصوت، وإيقاف التشغيل وإعادة التشغيل، والقفل، وإخراج USB، وإفراغ سلة المحذوفات — إجراءات نظام متكررة بأمر واحد.</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/sysquick.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/sysquick.webp"
+                         alt="إجراءات سريعة للنظام" width="551" height="625"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
     </div>
 </section>
 
@@ -395,9 +593,10 @@
                 <p>أكثر الخطوات شيوعًا في مسار معالجة النصوص، في تثبيت واحد.</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     الترجمة الفائقة
                     
@@ -405,7 +604,20 @@
                 <p>ترجمة الكلمات المحدَّدة والمقاطع الكاملة بمحرّكات متعددة، مع إمكانية اختيار الخدمة واللغة الهدف.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/translate.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/translate.webp"
+                         alt="الترجمة الفائقة" width="1125" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     التعرّف على النصوص OCR
                     
@@ -413,7 +625,41 @@
                 <p>التعرّف بمجرد التقاط الصورة، بمحرك RapidOCR المحلي دون اتصال، بدقة عالية في الخلط بين الصينية والإنجليزية، مع ترجمة سريعة عبر OCR.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/ocr.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/ocr.webp"
+                         alt="التعرّف على النصوص OCR" width="1150" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
+                <h3>
+                    OCR سريع
+                    
+                </h3>
+                <p>دون النافذة الرئيسية: مفتاح اختصار واحد من لقطة الشاشة إلى النص المُتعرف عليه أو الترجمة.</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/quickocr.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/quickocr.webp"
+                         alt="OCR سريع" width="852" height="667"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     التعابير النمطية
                     
@@ -421,7 +667,20 @@
                 <p>إبراز المطابقات لحظيًا، واستعراض المجموعات، ومرجع سريع للتعابير الشائعة.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/regex.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/regex.webp"
+                         alt="التعابير النمطية" width="900" height="760"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     الترميز وفك الترميز
                     
@@ -429,7 +688,20 @@
                 <p>تحويل متبادل بين الترميزات الشائعة: Base64 و URL و HTML و Unicode والأنظمة العددية وغيرها.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/codec.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/codec.webp"
+                         alt="الترميز وفك الترميز" width="900" height="640"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     حساب التجزئة
                     
@@ -437,7 +709,20 @@
                 <p>بصمات MD5 وعائلة SHA، مع دعم التحقق من النصوص والملفات.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/hash.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/hash.webp"
+                         alt="حساب التجزئة" width="800" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
                 <h3>
                     التشفير وفك التشفير
                     
@@ -445,7 +730,20 @@
                 <p>تشفير وفك تشفير متماثل وغير متماثل وتوليد المفاتيح، بالاعتماد على OpenSSL.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/encryption.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/encryption.webp"
+                         alt="التشفير وفك التشفير" width="1125" height="1062"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
                 <h3>
                     تحويل البيانات
                     
@@ -453,7 +751,20 @@
                 <p>تحويل وتنسيق متبادل للبيانات المهيكلة بين JSON و YAML و XML و TOML و CSV.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/convert.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/convert.webp"
+                         alt="تحويل البيانات" width="880" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">09</span>
                 <h3>
                     توليد البيانات
                     
@@ -461,7 +772,17 @@
                 <p>توليد دفعي لمعرّفات UUID / GUID و ULID والسلاسل العشوائية وبيانات الاختبار.</p>
             </div>
             
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/datagen.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/datagen.webp"
+                         alt="توليد البيانات" width="880" height="850"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
         </div>
+        
     </div>
 </section>
 
@@ -474,9 +795,10 @@
                 <p>اترك المعالجة الدفعية للأداة، وليس عليك إلا اختيار الملفات.</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     معاينة الملفات
                     
@@ -484,7 +806,20 @@
                 <p>معاينة صيغ Word و Excel و PPT و PDF والصور والفيديو والأكواد والملفات المضغوطة وغيرها مباشرةً، دون تثبيت Office.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/cmdplate-preview.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/cmdplate-preview.webp"
+                         alt="معاينة الملفات" width="1026" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     إعادة التسمية دفعةً
                     
@@ -492,7 +827,20 @@
                 <p>مزج قواعد الترقيم والاستبدال والتعابير النمطية وحالة الأحرف وتاريخ EXIF وغيرها، مع معاينة قبل التنفيذ.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/rename.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/rename.webp"
+                         alt="إعادة التسمية دفعةً" width="1125" height="1000"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     المعالجة الدفعية للصور
                     
@@ -500,7 +848,20 @@
                 <p>تحجيم وتقصيص وتحويل صيغ ووضع علامات مائية وضغط، بالاعتماد على ImageMagick.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/imagemagick.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/imagemagick.webp"
+                         alt="المعالجة الدفعية للصور" width="900" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     المعالجة الدفعية للفيديو
                     
@@ -508,7 +869,20 @@
                 <p>تحويل ترميز وتقطيع واستخراج إطارات وضغط واستخراج الصوت، بالاعتماد على FFmpeg.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/ffmpeg.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/ffmpeg.webp"
+                         alt="المعالجة الدفعية للفيديو" width="960" height="820"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     المعالجة الدفعية لملفات PDF
                     
@@ -516,7 +890,20 @@
                 <p>دمج وتقسيم وإضافة علامة مائية وضغط وتشفير وفك تشفير، بالاعتماد على pdfcpu و Ghostscript.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/pdf.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/pdf.webp"
+                         alt="المعالجة الدفعية لملفات PDF" width="960" height="820"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     تنزيل الملفات
                     
@@ -524,7 +911,17 @@
                 <p>تنزيل متعدد المسارات بالاعتماد على Aria2، مع استكمال التنزيل المتوقف وإدارة قائمة الانتظار.</p>
             </div>
             
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/download.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/download.webp"
+                         alt="تنزيل الملفات" width="1013" height="883"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
         </div>
+        
     </div>
 </section>
 
@@ -537,9 +934,10 @@
                 <p>منظومة وحدات أوامر مفتوحة: أضف ملف JSON واحدًا فتحصل على أمر جديد.</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     مسودة الحساب
                     
@@ -547,7 +945,20 @@
                 <p>حساب متصل على أسطر متعددة، مع دعم المتغيرات وتحويل الوحدات والدوال، وعرض المعادلات بتنسيق مُنسَّق.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/calc.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/calc.webp"
+                         alt="مسودة الحساب" width="1115" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     رمز QR
                     
@@ -555,15 +966,41 @@
                 <p>توليد رموز QR من النصوص والروابط، والتعرّف عليها كذلك من لقطات الشاشة أو ملفات الصور.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/qrcode.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/qrcode.webp"
+                         alt="رمز QR" width="1203" height="834"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
-                    وحدات الأوامر
+                    SDK مفتوح
                     
                 </h3>
-                <p>379 وحدة أوامر مدمجة بامتداد .zenmod تغطي خمس فئات: الذكاء الاصطناعي والتطبيقات والألعاب والنظام والمواقع، وتُستدعى مباشرةً من لوحة الأوامر.</p>
+                <p>يأتي مع 379 وحدة أوامر ‎.zenmod‎ (ذكاء اصطناعي، تطبيقات، ألعاب، نظام، ويب)؛ ضع ملف JSON في مجلد Modules لإضافة أمر دون تجميع. وثائق SDK ومشروع نموذجي متاحان للتنزيل.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/sdk.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/sdk.webp"
+                         alt="SDK مفتوح" width="950" height="675"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     المتصفح المدمج
                     
@@ -571,15 +1008,17 @@
                 <p>متصفح خفيف بلا إطار، يُستخدم عند فتح وحدات الأوامر للروابط، فلا يزعج متصفحك الرئيسي.</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    الإضافات المخصّصة
-                    
-                </h3>
-                <p>ضع ملف JSON بامتداد .zenmod في مجلد Modules ليُضاف أمر جديد، دون حاجة إلى ترجمة أي كود.</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/browser.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/browser.webp"
+                         alt="المتصفح المدمج" width="1269" height="893"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
         </div>
+        
     </div>
 </section>
 
@@ -592,9 +1031,10 @@
                 <p>سطح المكتب هو الواجهة التي تنظر إليها أطول وقت كل يوم، فيستحق أن يكون أجمل.</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     الخلفيات الديناميكية
                     
@@ -602,7 +1042,20 @@
                 <p>عرض صفحات الويب والفيديو أسفل طبقة أيقونات سطح المكتب عبر Windows Composition API، دون أن يعيق تعاملك مع الجهاز.</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/wallpaper.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/wallpaper.webp"
+                         alt="الخلفيات الديناميكية" width="1134" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     مؤثرات سطح المكتب
                     
@@ -610,15 +1063,20 @@
                 <p>مؤثرات أجواء كتساقط الثلج، تسمح بنفاذ الفأرة فلا تعترض النقر.</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    وضع اللعب
-                    
-                </h3>
-                <p>إيقاف الخلفيات والمؤثرات مؤقتًا بنقرة واحدة، لتذهب كل الموارد إلى اللعبة.</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/overlay.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/overlay.webp"
+                         alt="مؤثرات سطح المكتب" width="1051" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
-            <div class="feat reveal">
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     صفحة التنقل
                     
@@ -626,15 +1084,17 @@
                 <p>تنقل عبر تصنيفات قابلة للتخصيص، بديلًا عن صفحة التبويب الجديد في المتصفح.</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    الدفاع عن الأرض
-                    
-                </h3>
-                <p>لعبة صغيرة مدمجة لاستراحة ثلاث دقائق.</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/navpage.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/navpage.webp"
+                         alt="صفحة التنقل" width="940" height="815"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
         </div>
+        
     </div>
 </section>
 
@@ -1506,7 +1966,7 @@
                     <tr>
                         <th scope="row">منظومة الإضافات</th>
                         
-                        <td class="col-self">مدمج</td>
+                        <td class="col-self">SDK</td>
                         
                         <td class="">رسمي</td>
                         

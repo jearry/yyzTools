@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Windows 上的 Everything 替代品 — yyzTools 自研文件搜索引擎</title>
-<meta name="description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻仅几 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
+<meta name="description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻内存约 5~30 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
 
 <meta property="og:title" content="Windows 上的 Everything 替代品 — yyzTools 自研文件搜索引擎">
-<meta property="og:description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻仅几 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
+<meta property="og:description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻内存约 5~30 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yyztools.com/zh-CN/everything-alternative.html">
 <meta property="og:site_name" content="yyzTools">
@@ -42,7 +42,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Windows 上的 Everything 替代品 — yyzTools 自研文件搜索引擎">
-<meta name="twitter:description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻仅几 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
+<meta name="twitter:description" content="找 Everything 替代品？yyzTools 1.0.5 起内置自研全盘文件搜索引擎：直读 NTFS MFT 加 USN 实时增量，语法兼容 path: / ext: / size:，索引常驻内存约 5~30 MB，还与启动器、翻译、OCR 等 40+ 功能集成一体。">
 <meta name="twitter:image" content="https://yyztools.com/og-image.png">
 <meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
 
@@ -108,9 +108,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <script type="module" crossorigin src="/assets/main-C36KNBaN.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CujodHUE.css">
 </head>
 <body>
 
@@ -146,7 +146,7 @@
                        >English</a>
                     
                     <a href="/zh-CN/everything-alternative.html" hreflang="zh-CN"
-                       class=&#34;on&#34; aria-current=&#34;true&#34;>简体中文</a>
+                       class="on" aria-current="true">简体中文</a>
                     
                     <a href="/zh-TW/everything-alternative.html" hreflang="zh-TW"
                        >繁體中文</a>
@@ -193,7 +193,7 @@
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 的文件搜索是套壳 Everything 吗？","acceptedAnswer":{"@type":"Answer","text":"不是。从 1.0.5 起，文件搜索改为完全自研的引擎（直读 NTFS $MFT + USN Journal 实时增量），Everything 依赖已从安装包中移除，索引内存占用从数百 MB 降到几 MB。"}},{"@type":"Question","name":"查询语法和 Everything 兼容吗？","acceptedAnswer":{"@type":"Answer","text":"常用语法兼容：path:、ext:、size:、datemodified:、通配符以及 AND / OR / NOT 组合都可以直接用。暂不支持 regex: 正则，这是与 Everything 的主要语法差距。"}},{"@type":"Question","name":"可以和 Everything 同时安装吗？","acceptedAnswer":{"@type":"Answer","text":"可以，两者互不冲突。不过如果 yyzTools 的文件搜索已经满足需要，只保留一个会更省资源。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 的文件搜索是套壳 Everything 吗？","acceptedAnswer":{"@type":"Answer","text":"不是。从 1.0.5 起，文件搜索改为完全自研的引擎（直读 NTFS $MFT + USN Journal 实时增量），Everything 依赖已从安装包中移除，索引内存占用从数百 MB 降到 5~30 MB 左右。"}},{"@type":"Question","name":"查询语法和 Everything 兼容吗？","acceptedAnswer":{"@type":"Answer","text":"常用语法兼容：path:、ext:、size:、datemodified:、通配符以及 AND / OR / NOT 组合都可以直接用。暂不支持 regex: 正则，这是与 Everything 的主要语法差距。"}},{"@type":"Question","name":"可以和 Everything 同时安装吗？","acceptedAnswer":{"@type":"Answer","text":"可以，两者互不冲突。不过如果 yyzTools 的文件搜索已经满足需要，只保留一个会更省资源。"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"在找 Everything 替代品？","item":"https://yyztools.com/zh-CN/everything-alternative.html"}]}</script>
 
 <section class="hero">
@@ -247,8 +247,8 @@
                     
                     <tr>
                         <th scope="row">全盘索引常驻内存</th>
-                        <td class="col-self">几 MB</td>
-                        <td>视文件数量而定</td>
+                        <td class="col-self">5~30 MB 左右</td>
+                        <td>100~300 MB 左右</td>
                     </tr>
                     
                     <tr>
@@ -323,7 +323,7 @@
                     <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools 的文件搜索是套壳 Everything 吗？</span></span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
-                <p>不是。从 1.0.5 起，文件搜索改为完全自研的引擎（直读 NTFS $MFT + USN Journal 实时增量），Everything 依赖已从安装包中移除，索引内存占用从数百 MB 降到几 MB。</p>
+                <p>不是。从 1.0.5 起，文件搜索改为完全自研的引擎（直读 NTFS $MFT + USN Journal 实时增量），Everything 依赖已从安装包中移除，索引内存占用从数百 MB 降到 5~30 MB 左右。</p>
             </details>
             
             <details class="faq-item reveal" >

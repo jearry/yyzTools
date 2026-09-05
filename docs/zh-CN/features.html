@@ -108,9 +108,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-DgbdC59A.js"></script>
+  <script type="module" crossorigin src="/assets/main-C36KNBaN.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-B9l7hNnp.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CujodHUE.css">
 </head>
 <body>
 
@@ -123,7 +123,7 @@
 
         <nav class="nav" id="nav">
             <a href="/zh-CN/" >首页</a>
-            <a href="/zh-CN/features.html" class=&#34;on&#34;>功能</a>
+            <a href="/zh-CN/features.html" class="on">功能</a>
             <a href="/zh-CN/download.html" >下载</a>
             <a href="/zh-CN/changelog.html" >更新日志</a>
             
@@ -146,7 +146,7 @@
                        >English</a>
                     
                     <a href="/zh-CN/features.html" hreflang="zh-CN"
-                       class=&#34;on&#34; aria-current=&#34;true&#34;>简体中文</a>
+                       class="on" aria-current="true">简体中文</a>
                     
                     <a href="/zh-TW/features.html" hreflang="zh-TW"
                        >繁體中文</a>
@@ -224,6 +224,8 @@
 </nav>
 
 
+
+
 <section class="section " id="cmdplate">
     <div class="wrap">
         <div class="cat-head">
@@ -233,9 +235,10 @@
                 <p>按 Alt+空格 唤起的统一入口，一个搜索框贯穿整台电脑。</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     应用搜索
                     <kbd class="feat-key">默认</kbd>
@@ -243,7 +246,20 @@
                 <p>搜索并启动 Win32 / UWP 应用、系统命令、系统设置，支持管理员身份运行与定位文件位置。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-app.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-app.webp"
+                         alt="应用搜索" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     文件搜索
                     <kbd class="feat-key">f␣</kbd>
@@ -251,7 +267,20 @@
                 <p>自研索引引擎秒级全盘检索，内存占用极低，可直接打开、预览、定位或删除到回收站。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-file.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-file.webp"
+                         alt="文件搜索" width="800" height="600"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     进程管理
                     <kbd class="feat-key">p␣</kbd>
@@ -259,7 +288,20 @@
                 <p>搜索进程并运行 / 挂起、终止、重启，无需再开任务管理器。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-process.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-process.webp"
+                         alt="进程管理" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     窗口管理
                     <kbd class="feat-key">w␣</kbd>
@@ -267,7 +309,20 @@
                 <p>搜索窗口并显示 / 隐藏、置顶 / 取消置顶、关闭。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-window.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-window.webp"
+                         alt="窗口管理" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     书签搜索
                     <kbd class="feat-key">b␣</kbd>
@@ -275,7 +330,20 @@
                 <p>检索浏览器书签，普通或隐私模式打开。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-bookmark.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-bookmark.webp"
+                         alt="书签搜索" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     剪贴板历史
                     <kbd class="feat-key">c␣</kbd>
@@ -283,7 +351,20 @@
                 <p>回溯文本与图片历史记录，点选即回填。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-clipboard.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-clipboard.webp"
+                         alt="剪贴板历史" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
                 <h3>
                     命令行
                     <kbd class="feat-key">&gt;␣</kbd>
@@ -291,7 +372,20 @@
                 <p>直接执行命令，支持以管理员身份运行。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-cmd.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-cmd.webp"
+                         alt="命令行" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
                 <h3>
                     即时计算
                     <kbd class="feat-key">=␣</kbd>
@@ -299,7 +393,17 @@
                 <p>边输入边出结果，公式与结果图形化呈现，回车复制。</p>
             </div>
             
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-calc.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-calc.webp"
+                         alt="即时计算" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
         </div>
+        
     </div>
 </section>
 
@@ -312,17 +416,31 @@
                 <p>把重复动作压缩成一次快捷键。</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     程序坞
                     
                 </h3>
-                <p>常用应用与网址的悬浮启动条，分组管理，随手可及。</p>
+                <p>常驻屏幕顶缘的悬浮启动条，鼠标移到顶部即自动滑出；应用与网址分组管理，常用入口随手可及。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/dock.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/dock.webp"
+                         alt="程序坞" width="940" height="815"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     剪贴板历史
                     
@@ -330,7 +448,20 @@
                 <p>后台记录文本与图片，支持钉住图片悬浮于桌面之上。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-clipboard.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-clipboard.webp"
+                         alt="剪贴板历史" width="1000" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     应用统计
                     
@@ -338,7 +469,20 @@
                 <p>记录各应用的使用时长与激活次数，用图表看清时间去了哪里。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/appusage.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/appusage.webp"
+                         alt="应用统计" width="1100" height="700"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     屏幕截图
                     
@@ -346,7 +490,20 @@
                 <p>区域截图、滚动截图（自动拼接）、贴图钉屏，独立进程互不拖累。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/screencap.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/screencap.webp"
+                         alt="屏幕截图" width="1278" height="869"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     屏幕录制
                     
@@ -354,7 +511,20 @@
                 <p>录制屏幕与音频、自选摄像头区域，镜头自动跟随鼠标并缩放，带点击与按键提示，一键导出成片。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/screenrec.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/screenrec.webp"
+                         alt="屏幕录制" width="1041" height="668"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     提醒助手
                     
@@ -362,7 +532,20 @@
                 <p>单次 / 每日 / 每周 / 每月提醒，到点桌面通知。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/reminder.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/reminder.webp"
+                         alt="提醒助手" width="1196" height="927"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
                 <h3>
                     万年历
                     
@@ -370,23 +553,38 @@
                 <p>公历农历对照、节气节假日、干支纪年与择日信息。</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    按键提示
-                    
-                </h3>
-                <p>基于 RawInput 实时显示键盘鼠标按键，录屏演示时观众看得清。</p>
-            </div>
-            
-            <div class="feat reveal">
-                <h3>
-                    鼠标定位
-                    
-                </h3>
-                <p>一键高亮当前光标位置，多显示器下再也不用找鼠标。</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/calendar.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/calendar.webp"
+                         alt="万年历" width="1200" height="700"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
         </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
+                <h3>
+                    系统快捷操作
+                    
+                </h3>
+                <p>音量调节、关机重启、锁屏、弹出U盘、清空回收站等高频系统动作，一句命令直达。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/sysquick.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/sysquick.webp"
+                         alt="系统快捷操作" width="551" height="625"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
     </div>
 </section>
 
@@ -399,9 +597,10 @@
                 <p>文本处理链路上的常用工序，一次装齐。</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     超级翻译
                     
@@ -409,7 +608,20 @@
                 <p>多引擎划词与整段翻译，可自选服务与目标语言。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/translate.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/translate.webp"
+                         alt="超级翻译" width="1125" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     文字识别 OCR
                     
@@ -417,7 +629,41 @@
                 <p>截图即识别，本地 RapidOCR 引擎离线运行，中英混排准确，并支持快捷 OCR 翻译。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/ocr.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/ocr.webp"
+                         alt="文字识别 OCR" width="1150" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
+                <h3>
+                    快捷 OCR
+                    
+                </h3>
+                <p>免开主窗口，快捷键一步完成截图识别与翻译。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/quickocr.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/quickocr.webp"
+                         alt="快捷 OCR" width="852" height="667"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     正则表达式
                     
@@ -425,7 +671,20 @@
                 <p>实时匹配高亮、分组查看、常用表达式速查。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/regex.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/regex.webp"
+                         alt="正则表达式" width="900" height="760"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     编码解码
                     
@@ -433,7 +692,20 @@
                 <p>Base64 / URL / HTML / Unicode / 进制等常见编码互转。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/codec.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/codec.webp"
+                         alt="编码解码" width="900" height="640"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     哈希计算
                     
@@ -441,7 +713,20 @@
                 <p>MD5 / SHA 系列摘要，支持文本与文件校验。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/hash.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/hash.webp"
+                         alt="哈希计算" width="800" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
                 <h3>
                     加密解密
                     
@@ -449,7 +734,20 @@
                 <p>基于 OpenSSL 的对称与非对称加解密、密钥生成。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/encryption.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/encryption.webp"
+                         alt="加密解密" width="1125" height="1062"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
                 <h3>
                     数据转换
                     
@@ -457,7 +755,20 @@
                 <p>JSON / YAML / XML / TOML / CSV 结构化数据互转与格式化。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/convert.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/convert.webp"
+                         alt="数据转换" width="880" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">09</span>
                 <h3>
                     数据生成
                     
@@ -465,7 +776,17 @@
                 <p>UUID / GUID、ULID、随机字符串与测试数据批量生成。</p>
             </div>
             
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/datagen.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/datagen.webp"
+                         alt="数据生成" width="880" height="850"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
         </div>
+        
     </div>
 </section>
 
@@ -478,9 +799,10 @@
                 <p>批量处理交给工具，你只管选文件。</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     文件预览
                     
@@ -488,7 +810,20 @@
                 <p>免装 Office 直接预览 Word / Excel / PPT / PDF / 图片 / 视频 / 代码 / 压缩包等格式。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/cmdplate-preview.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/cmdplate-preview.webp"
+                         alt="文件预览" width="1026" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     批量重命名
                     
@@ -496,7 +831,20 @@
                 <p>序号、替换、正则、大小写、EXIF 时间等规则组合，改前先预览。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/rename.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/rename.webp"
+                         alt="批量重命名" width="1125" height="1000"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     图片批量处理
                     
@@ -504,7 +852,20 @@
                 <p>基于 ImageMagick 的缩放、裁剪、格式转换、水印、压缩。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/imagemagick.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/imagemagick.webp"
+                         alt="图片批量处理" width="900" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     视频批量处理
                     
@@ -512,7 +873,20 @@
                 <p>基于 FFmpeg 的转码、截取、抽帧、压缩、音频提取。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/ffmpeg.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/ffmpeg.webp"
+                         alt="视频批量处理" width="960" height="820"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
                 <h3>
                     PDF 批量处理
                     
@@ -520,7 +894,20 @@
                 <p>基于 pdfcpu 与 Ghostscript 的合并、拆分、加水印、压缩、加解密。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/pdf.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/pdf.webp"
+                         alt="PDF 批量处理" width="960" height="820"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
                 <h3>
                     文件下载
                     
@@ -528,7 +915,17 @@
                 <p>基于 Aria2 的多线程下载，断点续传与队列管理。</p>
             </div>
             
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/download.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/download.webp"
+                         alt="文件下载" width="1013" height="883"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
         </div>
+        
     </div>
 </section>
 
@@ -541,9 +938,10 @@
                 <p>开放的命令模块体系，加个 JSON 就多一条命令。</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     计算稿纸
                     
@@ -551,7 +949,20 @@
                 <p>多行连续计算，支持变量、单位换算与函数，公式排版化显示。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/calc.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/calc.webp"
+                         alt="计算稿纸" width="1115" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     二维码
                     
@@ -559,15 +970,41 @@
                 <p>文本与网址生成二维码，也可从截图或图片中识别。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/qrcode.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/qrcode.webp"
+                         alt="二维码" width="1203" height="834"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
-                    命令模块
+                    开放 SDK
                     
                 </h3>
-                <p>内置 379 个 .zenmod 命令模块，涵盖 AI、应用、游戏、系统、网站五大类，命令面板中直接唤起。</p>
+                <p>内置 379 个 .zenmod 命令模块，涵盖 AI、应用、游戏、系统、网站五大类；往 Modules 目录放一个 JSON 即新增一条命令，无需编译，配套 SDK 与样例工程开放下载。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/sdk.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/sdk.webp"
+                         alt="开放 SDK" width="950" height="675"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
                 <h3>
                     内置浏览器
                     
@@ -575,15 +1012,17 @@
                 <p>无边框轻量浏览器，命令模块打开网址时使用，不惊动主浏览器。</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    自定义扩展
-                    
-                </h3>
-                <p>往 Modules 目录放一个 .zenmod JSON 即新增一条命令，无需编译。</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/browser.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/browser.webp"
+                         alt="内置浏览器" width="1269" height="893"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
         </div>
+        
     </div>
 </section>
 
@@ -596,9 +1035,10 @@
                 <p>桌面是你每天看最久的界面，值得好看一点。</p>
             </div>
         </div>
-        <div class="grid grid-2">
-            
-            <div class="feat reveal">
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
                 <h3>
                     动态壁纸
                     
@@ -606,7 +1046,20 @@
                 <p>用 Windows Composition API 把网页与视频贴到桌面图标层下方，不遮挡操作。</p>
             </div>
             
-            <div class="feat reveal">
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/wallpaper.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/wallpaper.webp"
+                         alt="动态壁纸" width="1134" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
                 <h3>
                     桌面特效
                     
@@ -614,15 +1067,20 @@
                 <p>雪花飘落等氛围特效，鼠标穿透不干扰点击。</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    游戏模式
-                    
-                </h3>
-                <p>一键暂停壁纸与特效，把资源全让给游戏。</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/overlay.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/overlay.webp"
+                         alt="桌面特效" width="1051" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
-            <div class="feat reveal">
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
                 <h3>
                     导航页
                     
@@ -630,15 +1088,17 @@
                 <p>可自定义分组的标签导航，替代浏览器新标签页。</p>
             </div>
             
-            <div class="feat reveal">
-                <h3>
-                    地球保卫战
-                    
-                </h3>
-                <p>内置的小游戏，摸鱼三分钟。</p>
-            </div>
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/zh-dark/navpage.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/zh-light/navpage.webp"
+                         alt="导航页" width="940" height="815"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
             
         </div>
+        
     </div>
 </section>
 
@@ -1510,7 +1970,7 @@
                     <tr>
                         <th scope="row">插件生态</th>
                         
-                        <td class="col-self">内置模块</td>
+                        <td class="col-self">SDK</td>
                         
                         <td class="">官方模块</td>
                         
