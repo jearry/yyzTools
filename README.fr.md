@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <strong>Français</strong> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.6.1600-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.6.1650-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-gratuit-red">
@@ -60,7 +60,7 @@ Le front end appelle les Manager C++ via le pont `window.Zen`, tous répondant s
 
 ## Téléchargement
 
-- **Installateur** (recommandé) : `yyzTools-setup-1.0.6.1600.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installateur** (recommandé) : `yyzTools-setup-1.0.6.1650.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Connexion lente depuis la Chine ? Préfixez l'URL de l'installateur par un miroir : [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Vous pouvez aussi le récupérer sur la [page de téléchargement officielle](https://yyztools.com/fr/download.html).
 
