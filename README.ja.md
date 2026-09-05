@@ -18,6 +18,14 @@
 </p>
 
 ---
+## スクリーンショット
+
+<p align="center">
+  <img src="screenshots/en/01-cmd-plate-home.png" alt="コマンドパレット">
+  <img src="screenshots/en/05-dock-overview.png" alt="ドック">
+</p>
+
+---
 
 ## 概要
 

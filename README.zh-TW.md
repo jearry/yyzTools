@@ -18,6 +18,14 @@
 </p>
 
 ---
+## 介面截圖
+
+<p align="center">
+  <img src="screenshots/zh/01-cmd-plate-home.png" alt="命令面板">
+  <img src="screenshots/zh/05-dock-overview.png" alt="程序塢">
+</p>
+
+---
 
 ## 簡介
 

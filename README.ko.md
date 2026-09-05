@@ -18,6 +18,14 @@
 </p>
 
 ---
+## 스크린샷
+
+<p align="center">
+  <img src="screenshots/en/01-cmd-plate-home.png" alt="명령 팔레트">
+  <img src="screenshots/en/05-dock-overview.png" alt="독">
+</p>
+
+---
 
 ## 소개
 

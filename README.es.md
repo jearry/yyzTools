@@ -18,6 +18,14 @@
 </p>
 
 ---
+## Capturas de pantalla
+
+<p align="center">
+  <img src="screenshots/en/01-cmd-plate-home.png" alt="Paleta de comandos">
+  <img src="screenshots/en/05-dock-overview.png" alt="Dock">
+</p>
+
+---
 
 ## Introducción
 

@@ -18,6 +18,14 @@
 </p>
 
 ---
+## لقطات الشاشة
+
+<p align="center">
+  <img src="screenshots/en/01-cmd-plate-home.png" alt="لوحة الأوامر">
+  <img src="screenshots/en/05-dock-overview.png" alt="Dock">
+</p>
+
+---
 
 ## مقدمة
 

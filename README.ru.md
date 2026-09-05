@@ -18,6 +18,14 @@
 </p>
 
 ---
+## Скриншоты
+
+<p align="center">
+  <img src="screenshots/en/01-cmd-plate-home.png" alt="Палитра команд">
+  <img src="screenshots/en/05-dock-overview.png" alt="Док">
+</p>
+
+---
 
 ## Введение
 
