@@ -22,7 +22,18 @@ SOFTWARE.
 
 ---
 
-**Note:** The MIT License above applies only to the open-source components in this repository (specifically the auto-update component in `src/updater/`). The main yyzTools application remains proprietary software.
+**Note:** The MIT License above applies only to the open-source components in
+this repository — specifically the source code under:
+
+- `src/library/` — yyzlib, the shared utility library
+- `src/updater/` — the auto-update component
+- `src/yyzcmd/` — the command-line system command executor
+- `src/inputhint/` — keyboard & mouse input visualizer
+- `src/mousefinder/` — mouse pointer locator
+
+The main yyzTools application — including the command palette, the module
+system, the file indexing engine and all built-in tool pages — remains
+proprietary software and is not covered by this license.
 
 ---
 

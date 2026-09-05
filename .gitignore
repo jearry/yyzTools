@@ -75,3 +75,30 @@ Debug
 Release
 pch
 packages
+
+# Visual Studio user-specific / machine-local files
+*.user
+*.vcxproj.user
+*.vcxproj.filters.user
+*.suo
+*.userosscache
+*.userprefs
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.VC.opendb
+*.opendb
+*.opensdf
+*.sdf
+*.aps
+*.ncb
+*.cachefile
+*.psess
+*.vsp
+*.vspx
+*.sap
+ipch/
+
+# NOTE: src/library/local_dir.props is intentionally tracked — it is a
+# placeholder (empty DIRECTX_DIR) that external contributors fill in locally.
+# Do NOT add *.props here.
