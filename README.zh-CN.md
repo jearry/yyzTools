@@ -11,13 +11,14 @@
 <p align="center"><a href="README.md">English</a> · <strong>简体中文</strong> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.6.1650-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.7.1700-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-免费-red">
 </p>
 
 ---
+
 ## 界面截图
 
 <p align="center">
@@ -40,35 +41,35 @@
 
 ## 功能总览
 
-| | |
-|---|---|
-| **命令面板** | 应用搜索 · 文件搜索 · 进程管理 · 窗口管理 · 书签搜索 · 剪贴板历史 · 命令行 · 即时计算 |
+|           |                                                             |
+| --------- | ----------------------------------------------------------- |
+| **命令面板**  | 应用搜索 · 文件搜索 · 进程管理 · 窗口管理 · 书签搜索 · 剪贴板历史 · 命令行 · 即时计算       |
 | **启动与效率** | 程序坞 · 剪贴板历史 · 应用统计 · 屏幕截图 · 屏幕录制 · 提醒助手 · 万年历 · 按键提示 · 鼠标定位 |
-| **文本与语言** | 超级翻译 · 文字识别 OCR · 正则表达式 · 编码解码 · 哈希计算 · 加密解密 · 数据转换 · 数据生成 |
-| **文件与媒体** | 文件预览 · 批量重命名 · 图片批量处理 · 视频批量处理 · PDF 批量处理 · 文件下载 |
-| **计算与拓展** | 计算稿纸 · 二维码 · 命令模块 · 内置浏览器 · 自定义扩展 |
-| **个性化** | 动态壁纸 · 桌面特效 · 游戏模式 · 导航页 · 地球保卫战 |
+| **文本与语言** | 超级翻译 · 文字识别 OCR · 正则表达式 · 编码解码 · 哈希计算 · 加密解密 · 数据转换 · 数据生成  |
+| **文件与媒体** | 文件预览 · 批量重命名 · 图片批量处理 · 视频批量处理 · PDF 批量处理 · 文件下载            |
+| **计算与拓展** | 计算稿纸 · 二维码 · 命令模块 · 内置浏览器 · 自定义扩展                           |
+| **个性化**   | 动态壁纸 · 桌面特效 · 游戏模式 · 导航页 · 地球保卫战                            |
 
 ## 架构
 
 混合架构：**C++（Win32 + WebView2）宿主** 承载 **前端（Alpine.js + 原生 JS + Vite）**，多进程隔离。
 
-| 进程 | 职责 |
-|------|------|
-| `yyzTools.exe` | 主进程，承载命令面板 / 翻译 / OCR 等绝大多数功能 |
-| `yyzWallpaper.exe` | 动态壁纸，用 Windows Composition API 贴到桌面图标层下方 |
-| `yyzBrowser.exe` | 内置无边框浏览器，供命令模块打开网址 |
-| `yyzCmd.exe` | 纯 Win32 命令执行器（关机 / 重启 / 音量 / 显示器 / 回收站等） |
-| `yyzInputHint.exe` | 键盘 / 鼠标按键实时提示（RawInput） |
-| `yyzMouseFinder.exe` | 快速定位鼠标光标 |
-| `yyzUpdater.exe` | 增量自动更新器（见 `src/updater/`） |
-| `yyzFileSearch.exe` | 自研全盘文件搜索引擎——MFT 直读 + USN 增量索引 |
+| 进程                   | 职责                                       |
+| -------------------- | ---------------------------------------- |
+| `yyzTools.exe`       | 主进程，承载命令面板 / 翻译 / OCR 等绝大多数功能            |
+| `yyzWallpaper.exe`   | 动态壁纸，用 Windows Composition API 贴到桌面图标层下方 |
+| `yyzBrowser.exe`     | 内置无边框浏览器，供命令模块打开网址                       |
+| `yyzCmd.exe`         | 纯 Win32 命令执行器（关机 / 重启 / 音量 / 显示器 / 回收站等） |
+| `yyzInputHint.exe`   | 键盘 / 鼠标按键实时提示（RawInput）                  |
+| `yyzMouseFinder.exe` | 快速定位鼠标光标                                 |
+| `yyzUpdater.exe`     | 增量自动更新器（见 `src/updater/`）                |
+| `yyzFileSearch.exe`  | 自研全盘文件搜索引擎——MFT 直读 + USN 增量索引            |
 
 前端通过 `window.Zen` 桥接调用 C++ 各 Manager，统一返回 `{ error, ... }` 契约。
 
 ## 下载安装
 
-- **安装包**（推荐）：`yyzTools-setup-1.0.6.1650.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **安装包**（推荐）：`yyzTools-setup-1.0.7.1700.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - 国内访问慢可走镜像：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（在安装包下载链接前加对应前缀）
 - 也可从 [官网下载页](https://yyztools.com/zh-CN/download.html) 获取。
 
