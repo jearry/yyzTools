@@ -259,9 +259,11 @@
                             
                             <li><a href="#2窗口控制">2、窗口控制</a></li>
                             
-                            <li><a href="#3窗口状态获取">3、窗口状态获取</a></li>
+                            <li><a href="#3弹出通用右键菜单">3、弹出通用右键菜单</a></li>
                             
-                            <li><a href="#4打开命令面板并执行搜索">4、打开命令面板并执行搜索</a></li>
+                            <li><a href="#4窗口状态获取">4、窗口状态获取</a></li>
+                            
+                            <li><a href="#5打开命令面板并执行搜索">5、打开命令面板并执行搜索</a></li>
                             
                         </ol>
                         
@@ -1128,7 +1130,41 @@
 </code></pre>
 </li>
 </ul>
-<h3 id="3窗口状态获取" tabindex="-1">3、窗口状态获取 <a class="doc-anchor" href="#3窗口状态获取" aria-hidden="true">#</a></h3>
+<h3 id="3弹出通用右键菜单" tabindex="-1">3、弹出通用右键菜单 <a class="doc-anchor" href="#3弹出通用右键菜单" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.showContextMenu(items: object[], x: number, y: number, window: string, width: number, height: number) : Promise&lt;object&gt;
+</code></pre>
+<ul>
+<li>
+<p>输入</p>
+<ul>
+<li>
+<p>items：菜单项数组，每项 <code>{ &quot;id&quot;: &quot;delete&quot;, &quot;label&quot;: &quot;删除&quot;, &quot;icon&quot;: &quot;fas fa-trash&quot; }</code>（icon 为 Font Awesome 类名）</p>
+</li>
+<li>
+<p>x / y：锚点坐标（当前页面内 CSS 像素，一般传 <code>event.clientX/clientY</code>）</p>
+</li>
+<li>
+<p>window：调用方窗口名（参见窗口控制），用于坐标换算</p>
+</li>
+<li>
+<p>width / height：菜单窗口尺寸（CSS 像素，由调用方按菜单项数与最长文案精确计算，菜单页不滚动）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>说明：菜单在独立原生窗口（WinMenu）中弹出，脱离页面边界限制，屏幕边缘自动翻转，点击外部/失焦/Esc 自动关闭。Promise 在菜单关闭时 resolve。</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;id&quot;: &quot;delete&quot;
+}
+</code></pre>
+<p>id 为选中项的 id；取消（点击外部/失焦/Esc）时为空串。</p>
+</li>
+</ul>
+<h3 id="4窗口状态获取" tabindex="-1">4、窗口状态获取 <a class="doc-anchor" href="#4窗口状态获取" aria-hidden="true">#</a></h3>
 <pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
 </code></pre>
 <ul>
@@ -1165,7 +1201,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="4打开命令面板并执行搜索" tabindex="-1">4、打开命令面板并执行搜索 <a class="doc-anchor" href="#4打开命令面板并执行搜索" aria-hidden="true">#</a></h3>
+<h3 id="5打开命令面板并执行搜索" tabindex="-1">5、打开命令面板并执行搜索 <a class="doc-anchor" href="#5打开命令面板并执行搜索" aria-hidden="true">#</a></h3>
 <pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
 </code></pre>
 <ul>
@@ -3081,7 +3117,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
-            <p class="footer-ver">v1.0.6.1650</p>
+            <p class="footer-ver">v1.0.7.1700</p>
         </div>
 
         <div class="footer-col">

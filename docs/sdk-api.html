@@ -255,9 +255,11 @@
                             
                             <li><a href="#32-window-control">3.2 Window control</a></li>
                             
-                            <li><a href="#33-get-window-state">3.3 Get window state</a></li>
+                            <li><a href="#33-show-a-context-menu">3.3 Show a context menu</a></li>
                             
-                            <li><a href="#34-open-the-command-palette-and-run-a-search">3.4 Open the command palette and run a search</a></li>
+                            <li><a href="#34-get-window-state">3.4 Get window state</a></li>
+                            
+                            <li><a href="#35-open-the-command-palette-and-run-a-search">3.5 Open the command palette and run a search</a></li>
                             
                         </ol>
                         
@@ -1124,7 +1126,41 @@
 </code></pre>
 </li>
 </ul>
-<h3 id="33-get-window-state" tabindex="-1">3.3 Get window state <a class="doc-anchor" href="#33-get-window-state" aria-hidden="true">#</a></h3>
+<h3 id="33-show-a-context-menu" tabindex="-1">3.3 Show a context menu <a class="doc-anchor" href="#33-show-a-context-menu" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.showContextMenu(items: object[], x: number, y: number, window: string, width: number, height: number) : Promise&lt;object&gt;
+</code></pre>
+<ul>
+<li>
+<p>Input</p>
+<ul>
+<li>
+<p>items: menu item array, each <code>{ &quot;id&quot;: &quot;delete&quot;, &quot;label&quot;: &quot;Delete&quot;, &quot;icon&quot;: &quot;fas fa-trash&quot; }</code> (icon is a Font Awesome class name)</p>
+</li>
+<li>
+<p>x / y: anchor coordinates (CSS pixels inside the calling page, usually <code>event.clientX/clientY</code>)</p>
+</li>
+<li>
+<p>window: calling window name (see Window control), used for coordinate conversion</p>
+</li>
+<li>
+<p>width / height: menu window size (CSS pixels, computed exactly by the caller from item count and longest label; the menu page does not scroll)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Notes: the menu opens in a standalone native window (WinMenu), free from page bounds, flips automatically at screen edges, and closes automatically on focus loss / outside click / Esc. The Promise resolves when the menu closes.</p>
+</li>
+<li>
+<p>Output</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;id&quot;: &quot;delete&quot;
+}
+</code></pre>
+<p>id is the selected item id; an empty string when cancelled (outside click / focus loss / Esc).</p>
+</li>
+</ul>
+<h3 id="34-get-window-state" tabindex="-1">3.4 Get window state <a class="doc-anchor" href="#34-get-window-state" aria-hidden="true">#</a></h3>
 <pre><code class="language-ts">function Zen.windowState(window: string, can_suspend?: boolean) : object
 </code></pre>
 <ul>
@@ -1161,7 +1197,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="34-open-the-command-palette-and-run-a-search" tabindex="-1">3.4 Open the command palette and run a search <a class="doc-anchor" href="#34-open-the-command-palette-and-run-a-search" aria-hidden="true">#</a></h3>
+<h3 id="35-open-the-command-palette-and-run-a-search" tabindex="-1">3.5 Open the command palette and run a search <a class="doc-anchor" href="#35-open-the-command-palette-and-run-a-search" aria-hidden="true">#</a></h3>
 <pre><code class="language-ts">function Zen.openCmdPlateWithSearch(command: string) : object
 </code></pre>
 <ul>
@@ -3077,7 +3113,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">A local-first Windows productivity toolkit. Free forever.</p>
-            <p class="footer-ver">v1.0.6.1650</p>
+            <p class="footer-ver">v1.0.7.1700</p>
         </div>
 
         <div class="footer-col">
