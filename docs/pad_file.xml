@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- yyzTools PAD file (PAD 3.01 spec).
-     !!!! BEFORE DEPLOYING: replace the two EMAIL-PLACEHOLDER values below
-     !!!! (Author_Email / Contact_Email / Support_Info emails) with the real
-     !!!! contact address. Hosted at https://yyztools.com/pad_file.xml
-     !!!! On each release bump: Program_Version, Program_Release_*,
-     !!!! Program_Change_Info, File_Size_*, download URLs. -->
+<!-- yyzTools PAD file (PAD 3.01 spec). Hosted at https://yyztools.com/pad_file.xml
+     On each release bump: Program_Version, Program_Release_*,
+     Program_Change_Info, File_Size_*, download URLs. -->
 <XML_DIZ_INFO>
 
     <MASTER_PAD_VERSION_INFO>
@@ -24,16 +21,16 @@
         <Company_WebSite_URL>https://yyztools.com/</Company_WebSite_URL>
         <Contact_Info>
             <Author_First_Name>jearry</Author_First_Name>
-            <Author_Last_Name/>
-            <Author_Email>EMAIL-PLACEHOLDER</Author_Email>
+            <Author_Last_Name>zhou</Author_Last_Name>
+            <Author_Email>jearry.zhou@gmail.com</Author_Email>
             <Contact_First_Name>jearry</Contact_First_Name>
-            <Contact_Last_Name/>
-            <Contact_Email>EMAIL-PLACEHOLDER</Contact_Email>
+            <Contact_Last_Name>zhou</Contact_Last_Name>
+            <Contact_Email>jearry.zhou@gmail.com</Contact_Email>
         </Contact_Info>
         <Support_Info>
-            <Sales_Email>EMAIL-PLACEHOLDER</Sales_Email>
-            <Support_Email>EMAIL-PLACEHOLDER</Support_Email>
-            <General_Email>EMAIL-PLACEHOLDER</General_Email>
+            <Sales_Email>jearry.zhou@gmail.com</Sales_Email>
+            <Support_Email>jearry.zhou@gmail.com</Support_Email>
+            <General_Email>jearry.zhou@gmail.com</General_Email>
             <Sales_Phone/>
             <Support_Phone/>
             <General_Phone/>
