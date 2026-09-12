@@ -416,6 +416,8 @@
                             
                             <li><a href="#3清空记录">3、清空记录</a></li>
                             
+                            <li><a href="#4填写到原输入框">4、填写到原输入框</a></li>
+                            
                         </ol>
                         
                     </li>
@@ -2860,6 +2862,26 @@
     &quot;errorMsg&quot;: &quot;&quot;
 }
 </code></pre>
+</li>
+</ul>
+<h3 id="4填写到原输入框" tabindex="-1">4、填写到原输入框 <a class="doc-anchor" href="#4填写到原输入框" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pasteToPrevWindow() : object
+</code></pre>
+<p>把当前系统剪贴板内的内容粘贴到「唤起命令面板之前的前台窗口」的输入框：激活该窗口并模拟一次 Ctrl+V。调用前请先把要粘贴的内容写入系统剪贴板（文本或图片均可）。</p>
+<ul>
+<li>
+<p>输入：无</p>
+</li>
+<li>
+<p>输出</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+<ul>
+<li>error 非 0 的常见原因：无有效目标窗口（no target window）、目标窗口激活失败（activate failed）、按键注入失败（sendinput failed）</li>
+</ul>
 </li>
 </ul>
 <h2 id="十一书签" tabindex="-1">十一、书签 <a class="doc-anchor" href="#十一书签" aria-hidden="true">#</a></h2>

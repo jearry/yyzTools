@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- yyzTools PAD file (PAD 3.01 spec).
+     !!!! BEFORE DEPLOYING: replace the two EMAIL-PLACEHOLDER values below
+     !!!! (Author_Email / Contact_Email / Support_Info emails) with the real
+     !!!! contact address. Hosted at https://yyztools.com/pad_file.xml
+     !!!! On each release bump: Program_Version, Program_Release_*,
+     !!!! Program_Change_Info, File_Size_*, download URLs. -->
+<XML_DIZ_INFO>
+
+    <MASTER_PAD_VERSION_INFO>
+        <MASTER_PAD_VERSION>3.01</MASTER_PAD_VERSION>
+        <MASTER_PAD_EDITOR>Manual PAD authoring (PAD 3.01 spec)</MASTER_PAD_EDITOR>
+        <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+    </MASTER_PAD_VERSION_INFO>
+
+    <Company_Info>
+        <Company_Name>yyzTools</Company_Name>
+        <Address_1/>
+        <Address_2/>
+        <City_Town/>
+        <State_Province/>
+        <Zip_Postal_Code/>
+        <Country>China</Country>
+        <Company_WebSite_URL>https://yyztools.com/</Company_WebSite_URL>
+        <Contact_Info>
+            <Author_First_Name>jearry</Author_First_Name>
+            <Author_Last_Name/>
+            <Author_Email>EMAIL-PLACEHOLDER</Author_Email>
+            <Contact_First_Name>jearry</Contact_First_Name>
+            <Contact_Last_Name/>
+            <Contact_Email>EMAIL-PLACEHOLDER</Contact_Email>
+        </Contact_Info>
+        <Support_Info>
+            <Sales_Email>EMAIL-PLACEHOLDER</Sales_Email>
+            <Support_Email>EMAIL-PLACEHOLDER</Support_Email>
+            <General_Email>EMAIL-PLACEHOLDER</General_Email>
+            <Sales_Phone/>
+            <Support_Phone/>
+            <General_Phone/>
+            <Fax_Phone/>
+        </Support_Info>
+    </Company_Info>
+
+    <Program_Info>
+        <Program_Name>yyzTools</Program_Name>
+        <Program_Version>1.0.7.1700</Program_Version>
+        <Program_Release_Month>09</Program_Release_Month>
+        <Program_Release_Day>08</Program_Release_Day>
+        <Program_Release_Year>2026</Program_Release_Year>
+        <Program_Cost_Dollars>0</Program_Cost_Dollars>
+        <Program_Cost_Other_Code/>
+        <Program_Cost_Other/>
+        <Program_Type>Freeware</Program_Type>
+        <Program_Release_Status>New Release</Program_Release_Status>
+        <Program_Install_Support>Install and Uninstall</Program_Install_Support>
+        <Program_OS_Support>Windows 10 64-bit,Windows 11</Program_OS_Support>
+        <Program_Language>English,ChineseSimplified,ChineseTraditional,Japanese,Korean,French,German,Spanish,Russian,Arabic,Portuguese,Italian</Program_Language>
+        <Program_Change_Info>1.0.7.1700: Shortcut keys can now be assigned to sub-modules inside the command palette; dock categories and contents support drag-and-drop of folders and files plus drag-to-delete; PDF/image/video batch processing, batch rename, hash calculator and encryption/decryption accept direct file and folder drag-and-drop; context menus refined and no longer confined to the window.</Program_Change_Info>
+        <Program_Specific_Category>Utilities</Program_Specific_Category>
+        <Program_Category_Class>System Utilities::Other</Program_Category_Class>
+        <Program_System_Requirements>Microsoft Edge WebView2 Runtime (preinstalled on Windows 11; on Windows 10 the installer guides the setup). 64-bit system.</Program_System_Requirements>
+        <File_Info>
+            <File_Size_Bytes>182123318</File_Size_Bytes>
+            <File_Size_K>177854</File_Size_K>
+            <File_Size_MB>173.69</File_Size_MB>
+        </File_Info>
+        <Expire_Info>
+            <Has_Expire_Info>N</Has_Expire_Info>
+            <Expire_Count/>
+            <Expire_Based_On/>
+            <Expire_Other_Info/>
+            <Expire_Month/>
+            <Expire_Day/>
+            <Expire_Year/>
+        </Expire_Info>
+    </Program_Info>
+
+    <Program_Descriptions>
+        <English>
+            <Keywords>yyzTools, command palette, launcher, productivity, OCR, translation, file search, clipboard history, batch rename, screen recorder, live wallpaper, PowerToys alternative, Windows 10, Windows 11</Keywords>
+            <Char_Desc_45>Free Windows toolkit: 40+ tools, one install.</Char_Desc_45>
+            <Char_Desc_80>Free Windows productivity toolkit: command palette, OCR, file search.</Char_Desc_80>
+            <Char_Desc_250>yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search and preview, clipboard history, batch processing, live wallpaper and 40+ more. Local-first, free forever, no sign-up.</Char_Desc_250>
+            <Char_Desc_450>yyzTools is a free Windows desktop productivity toolkit that bundles 40+ tools into one installer: command palette (Alt+Space), offline OCR, multi-engine translation, full-disk file search, clipboard history, batch image/video/PDF processing, live wallpaper and desktop effects. Local-first: clipboard, search and OCR run and stay on your machine. No sign-up, free forever, available in 12 languages.</Char_Desc_450>
+            <Char_Desc_2000>yyzTools is a free Windows desktop productivity toolkit that bundles 40+ everyday tools into one installer: command palette, translation, OCR, file search and preview, clipboard history, batch processing, screen capture and recording, live wallpaper and more. It is local-first and free forever.
+
+CmdPlate is the hub: press Alt+Space to open one input over apps, files, processes, windows, bookmarks and clipboard history. Type a prefix to switch domains (f files, p processes, w windows, b bookmarks, c clipboard, &gt; commands, = instant calculation). File search runs on an in-house full-disk indexing engine with a small memory footprint.
+
+Built-in tools cover text and language (multi-engine translation, offline OCR via the local RapidOCR engine, regex tester, encode/decode, MD5/SHA hashes, encryption, JSON/YAML/XML/TOML/CSV conversion), files and media (preview Office documents, PDF, images, video and archives without Office; batch rename; batch image, video and PDF processing via ImageMagick, FFmpeg, pdfcpu and Ghostscript; multi-threaded downloads), efficiency (edge dock, usage charts, screen recorder with camera auto-zoom, reminders, calendar, system quick actions) and personalisation (live web/video wallpaper beneath the desktop icon layer, desktop effects, a customisable new-tab page).
+
+Extensibility: 379 built-in .zenmod command modules across AI, apps, games, system and web; drop a JSON file into the Modules folder to add your own command, no build step required. SDK documentation and a sample project are free.
+
+Privacy: clipboard history, file search, usage stats and OCR are processed and stored locally. No sign-up, no collection of personal data; online features run only when invoked. Open-source components are MIT licensed. Available in 12 languages, including English, Chinese, Japanese, Korean, French, German, Spanish, Russian, Arabic and Portuguese.</Char_Desc_2000>
+        </English>
+    </Program_Descriptions>
+
+    <Web_Info>
+        <Application_URLs>
+            <Application_Info_URL>https://yyztools.com/</Application_Info_URL>
+            <Application_Order_URL>https://yyztools.com/download</Application_Order_URL>
+            <Application_Screenshot_URL>https://yyztools.com/carousel/en-light/01.webp</Application_Screenshot_URL>
+            <Application_Icon_URL>https://yyztools.com/logo.png</Application_Icon_URL>
+            <Application_XML_File_URL>https://yyztools.com/pad_file.xml</Application_XML_File_URL>
+        </Application_URLs>
+        <Download_URLs>
+            <Primary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe</Primary_Download_URL>
+            <Secondary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-v1.0.7.1700-portable.7z</Secondary_Download_URL>
+            <Additional_Download_URL_1>https://yyztools.com/download</Additional_Download_URL_1>
+        </Download_URLs>
+    </Web_Info>
+
+    <Permissions>
+        <Distribution_Permissions>This software is freeware and may be freely distributed on download sites, software collections and cover discs, provided the original installer is distributed unmodified. Resale is not permitted.</Distribution_Permissions>
+        <EULA>Freeware for personal and commercial use, provided as is with no warranty. The license agreement is available at https://yyztools.com/agreement</EULA>
+    </Permissions>
+
+</XML_DIZ_INFO>

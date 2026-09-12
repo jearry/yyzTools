@@ -412,6 +412,8 @@
                             
                             <li><a href="#103-clear-all-records">10.3 Clear all records</a></li>
                             
+                            <li><a href="#104-paste-to-previous-input-field">10.4 Paste to previous input field</a></li>
+                            
                         </ol>
                         
                     </li>
@@ -2856,6 +2858,26 @@
     &quot;errorMsg&quot;: &quot;&quot;
 }
 </code></pre>
+</li>
+</ul>
+<h3 id="104-paste-to-previous-input-field" tabindex="-1">10.4 Paste to previous input field <a class="doc-anchor" href="#104-paste-to-previous-input-field" aria-hidden="true">#</a></h3>
+<pre><code class="language-ts">function Zen.pasteToPrevWindow() : object
+</code></pre>
+<p>Pastes the current system clipboard content into the input field of the window that was in the foreground before the command plate was invoked: it activates that window and simulates a Ctrl+V. Write the content (text or image) to the system clipboard before calling this.</p>
+<ul>
+<li>
+<p>Input: none</p>
+</li>
+<li>
+<p>Output</p>
+<pre><code class="language-json">{
+    &quot;error&quot;: 0,
+    &quot;errorMsg&quot;: &quot;&quot;
+}
+</code></pre>
+<ul>
+<li>Common non-zero error causes: no valid target window (no target window), failed to activate the target window (activate failed), key injection failed (sendinput failed)</li>
+</ul>
 </li>
 </ul>
 <h2 id="11-bookmarks" tabindex="-1">11. Bookmarks <a class="doc-anchor" href="#11-bookmarks" aria-hidden="true">#</a></h2>
