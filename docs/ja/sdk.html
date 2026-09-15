@@ -605,6 +605,11 @@ const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
 <td>いいえ</td>
 <td>1 = ウィンドウ非表示時に WebView のサスペンドを許可しリソースを節約（デフォルト 1）</td>
 </tr>
+<tr>
+<td>acceptFileDrop</td>
+<td>いいえ</td>
+<td>1 = ウィンドウ外からドラッグしたファイルを受け取り、ページは registerDropFiles で絶対パスを取得（デフォルト 0）</td>
+</tr>
 </tbody>
 </table>
 <p>編集後の自己チェック：JSON がパース可能、UTF-8 BOM なし、id がグローバルで一意、12 言語すべて空でない。</p>

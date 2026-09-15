@@ -605,6 +605,11 @@ const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
 <td>否</td>
 <td>1 = 允許視窗隱藏時掛起 WebView 省資源（預設 1）</td>
 </tr>
+<tr>
+<td>acceptFileDrop</td>
+<td>否</td>
+<td>1 = 接收外部拖入的檔案，頁面經 registerDropFiles 取絕對路徑（預設 0）</td>
+</tr>
 </tbody>
 </table>
 <p>改完自查：JSON 可解析、UTF-8 無 BOM、id 全域唯一、12 門語言均非空。</p>

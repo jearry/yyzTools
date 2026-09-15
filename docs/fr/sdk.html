@@ -605,6 +605,11 @@ const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
 <td>non</td>
 <td>1 = autoriser la suspension du WebView quand la fenêtre est cachée pour économiser des ressources (1 par défaut)</td>
 </tr>
+<tr>
+<td>acceptFileDrop</td>
+<td>non</td>
+<td>1 = accepter les fichiers glissés depuis l'extérieur ; la page reçoit les chemins absolus via registerDropFiles (0 par défaut)</td>
+</tr>
 </tbody>
 </table>
 <p>Auto-vérification après modification : JSON analysable, UTF-8 sans BOM, id globalement unique, les 12 langues non vides.</p>

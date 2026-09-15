@@ -605,6 +605,11 @@ const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
 <td>아니요</td>
 <td>1 = 윈도우 숨김 시 WebView 일시중단 허용으로 리소스 절약(기본값 1)</td>
 </tr>
+<tr>
+<td>acceptFileDrop</td>
+<td>아니요</td>
+<td>1 = 창 외부에서 끌어온 파일을 받고 페이지는 registerDropFiles 로 절대 경로 획득(기본값 0)</td>
+</tr>
 </tbody>
 </table>
 <p>수정 후 자체 점검: JSON 파싱 가능, UTF-8 무 BOM, id 전역 고유, 12 언어 모두 비어 있지 않음.</p>

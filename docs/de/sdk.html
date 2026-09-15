@@ -605,6 +605,11 @@ const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
 <td>Nein</td>
 <td>1 = WebView darf beim Verstecken des Fensters suspendiert werden, um Ressourcen zu sparen (Standard 1)</td>
 </tr>
+<tr>
+<td>acceptFileDrop</td>
+<td>Nein</td>
+<td>1 = Dateien von außerhalb des Fensters annehmen; die Seite erhält absolute Pfade über registerDropFiles (Standard 0)</td>
+</tr>
 </tbody>
 </table>
 <p>Selbstprüfung nach Änderungen: JSON ist parsbar, UTF-8 ohne BOM, id global eindeutig, alle 12 Sprachen nicht leer.</p>

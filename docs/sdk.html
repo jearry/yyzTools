@@ -607,6 +607,11 @@ const infos = await ZenAPI.getAppInfo(['calculator', 'ocr']);
 <td>No</td>
 <td>1 = allow the WebView to suspend while the window is hidden to save resources (defaults to 1)</td>
 </tr>
+<tr>
+<td>acceptFileDrop</td>
+<td>No</td>
+<td>1 = accept files dragged from outside the window; the page gets absolute paths via registerDropFiles (defaults to 0)</td>
+</tr>
 </tbody>
 </table>
 <p>Check your work: the JSON parses, the file is UTF-8 without BOM, the id is globally unique, and all 12 languages are non-empty.</p>
