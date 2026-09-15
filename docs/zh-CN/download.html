@@ -91,7 +91,7 @@
 <link rel="dns-prefetch" href="https://ghfast.top">
 <link rel="dns-prefetch" href="https://ghproxy.com">
 <link rel="dns-prefetch" href="https://gh-proxy.com">
-
+
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
@@ -108,9 +108,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-C36KNBaN.js"></script>
+  <script type="module" crossorigin src="/assets/main-z91twtFV.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-CujodHUE.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-C1ixNZas.css">
 </head>
 <body>
 
@@ -125,6 +125,7 @@
             <a href="/zh-CN/" >首页</a>
             <a href="/zh-CN/features.html" >功能</a>
             <a href="/zh-CN/download.html" class="on">下载</a>
+            <a href="/zh-CN/getting-started.html" >快速上手</a>
             <a href="/zh-CN/changelog.html" >更新日志</a>
             
             <a href="/zh-CN/sdk.html" >开发者</a>
@@ -194,7 +195,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"下载","item":"https://yyztools.com/zh-CN/download.html"}]}</script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 完全免费吗？","acceptedAnswer":{"@type":"Answer","text":"是。所有功能永久免费——没有付费解锁、没有会员体系、也没有试用倒计时。"}},{"@type":"Question","name":"会收集我的数据吗？","acceptedAnswer":{"@type":"Answer","text":"不会。yyzTools 无需账号，剪贴板历史、文件搜索、OCR 都在本机处理。只有你主动使用翻译等联网功能时，输入内容才会发送给你选择的第三方服务。"}},{"@type":"Question","name":"需要联网吗？","acceptedAnswer":{"@type":"Answer","text":"只有下载、检查更新和翻译等联网功能需要网络。命令面板、文件搜索、OCR、剪贴板历史、批量处理等全部可以完全离线使用。"}},{"@type":"Question","name":"系统要求是什么？","acceptedAnswer":{"@type":"Answer","text":"64 位 Windows 10（1809 及以上）或 Windows 11，约 600 MB 磁盘空间，需要 Microsoft Edge WebView2 运行时——Win11 已预装，Win10 缺失时安装程序会引导安装。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 完全免费吗？","acceptedAnswer":{"@type":"Answer","text":"是。所有功能永久免费——没有付费解锁、没有会员体系、也没有试用倒计时。"}},{"@type":"Question","name":"会收集我的数据吗？","acceptedAnswer":{"@type":"Answer","text":"不会。yyzTools 无需账号，剪贴板历史、文件搜索、OCR 都在本机处理。只有你主动使用翻译等联网功能时，输入内容才会发送给你选择的第三方服务。"}},{"@type":"Question","name":"需要联网吗？","acceptedAnswer":{"@type":"Answer","text":"只有下载、检查更新和翻译等联网功能需要网络。命令面板、文件搜索、OCR、剪贴板历史、批量处理等全部可以完全离线使用。"}},{"@type":"Question","name":"系统要求是什么？","acceptedAnswer":{"@type":"Answer","text":"64 位 Windows 10（1809 及以上）或 Windows 11，约 600 MB 磁盘空间，需要 Microsoft Edge WebView2 运行时——Win11 已预装，Win10 缺失时安装程序会引导安装。"}},{"@type":"Question","name":"运行安装包时 Windows 提示「Windows 已保护你的电脑」怎么办？","acceptedAnswer":{"@type":"Answer","text":"这是 Microsoft Defender SmartScreen 对未经代码签名程序的通用提醒，首次运行时可能出现。点击「更多信息」→「仍要运行」即可继续安装；你也可以先用页面上的 SHA-256 校验值核对文件完整性。"}},{"@type":"Question","name":"安装包会捆绑其他软件或修改浏览器设置吗？","acceptedAnswer":{"@type":"Answer","text":"不会。安装包只包含 yyzTools 本体与其运行所需的内置组件（FFmpeg、OCR 模型等，均为本地功能的依赖），不捆绑任何第三方软件、不设浏览器主页劫持、无开机自启之外的驻留进程。用页面上的 SHA-256 校验值可核对文件完整性。"}},{"@type":"Question","name":"如何彻底卸载 yyzTools？","acceptedAnswer":{"@type":"Answer","text":"在系统「设置 → 应用」或安装目录中运行卸载程序即可。卸载时可选择是否一并删除用户数据（配置、剪贴板历史、使用统计等都在你的用户目录下，不进注册表深处的散落项）；默认安装到用户目录，卸载后无残留服务与开机自启项。"}}]}</script>
 
 
 
@@ -240,14 +241,37 @@
                 <p>GitHub Releases 原始下载地址，速度取决于你的网络环境。</p>
                 <ul class="dl-chips">
                     <li><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i><span>yyzTools-setup-1.0.7.1700.exe</span></li>
+                    <li><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i><span>173.7 MB</span></li>
                     <li><i class="fa-brands fa-windows" aria-hidden="true"></i><span>Windows 10 / 11 · 64-bit</span></li>
                     <li><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub Releases</span></li>
                 </ul>
+                
+                <div class="dl-sha">
+                    <span class="dl-sha-label"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i>SHA-256</span>
+                    <code class="dl-sha-val">853110db13eb55c9245b58f2623d36f72e0edf56b99fcb0d89dded69c3cceef8</code>
+                </div>
+                
             </div>
             <div class="dl-hero-act">
                 <a class="btn btn-primary btn-lg dl-btn" href="https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe">
                     <i class="fa-solid fa-download"></i>下载安装包
                 </a>
+                
+                
+                <div class="dl-mirrors">
+                    <span>镜像下载：</span>
+                    
+                    <a href="https://ghfast.top/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe" title="yyzTools-setup-1.0.7.1700.exe">ghfast.top</a>
+                    <span aria-hidden="true">·</span>
+                    
+                    <a href="https://gh-proxy.com/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe" title="yyzTools-setup-1.0.7.1700.exe">gh-proxy.com</a>
+                    <span aria-hidden="true">·</span>
+                    
+                    <a href="https://ghproxy.com/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe" title="yyzTools-setup-1.0.7.1700.exe">ghproxy.com</a>
+                    
+                    
+                </div>
+                
                 <a class="dl-alt" href="https://github.com/jearry/yyzTools/releases" target="_blank" rel="noopener noreferrer">也可前往 GitHub Releases 页面手动选择文件</a>
             </div>
         </div>
@@ -263,44 +287,38 @@
                 <p>免安装。解压到任意可写目录后直接运行 yyzTools.exe，所有数据都保留在该目录内，同样支持在线更新。</p>
                 <ul class="dl-chips">
                     <li><i class="fa-solid fa-file-zipper" aria-hidden="true"></i><span>yyzTools-v1.0.7.1700-portable.7z</span></li>
+                    <li><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i><span>165.6 MB</span></li>
                     <li><i class="fa-solid fa-box-open" aria-hidden="true"></i><span>7z</span></li>
                 </ul>
+                
+                <div class="dl-sha">
+                    <span class="dl-sha-label"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i>SHA-256</span>
+                    <code class="dl-sha-val">e580ce8bfcf2b88b0476a0b8baf2ca01c9147175245b3bdcb5b0d5128b3ab2c6</code>
+                </div>
+                
             </div>
             <div class="dl-hero-act">
                 <a class="btn btn-ghost btn-lg" href="https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-v1.0.7.1700-portable.7z">
                     <i class="fa-solid fa-download"></i>下载便携包
                 </a>
-            </div>
-        </div>
-        </div>
-
-        
-        <div class="block">
-            <h2>国内加速镜像</h2>
-            <p class="block-desc">如果官方源较慢，可任选一个镜像。它们只是 GitHub 的代理，文件内容完全一致。</p>
-            <div class="grid grid-3">
                 
-                <a class="mirror reveal" href="https://ghfast.top/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe">
-                    <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                    <span class="mirror-host">ghfast.top</span>
-                    <span class="mirror-btn">镜像下载<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-                </a>
-                
-                <a class="mirror reveal" href="https://gh-proxy.com/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe">
-                    <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                    <span class="mirror-host">gh-proxy.com</span>
-                    <span class="mirror-btn">镜像下载<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-                </a>
-                
-                <a class="mirror reveal" href="https://ghproxy.com/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe">
-                    <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                    <span class="mirror-host">ghproxy.com</span>
-                    <span class="mirror-btn">镜像下载<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-                </a>
+                <div class="dl-mirrors">
+                    <span>镜像下载：</span>
+                    
+                    <a href="https://ghfast.top/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-v1.0.7.1700-portable.7z" title="yyzTools-v1.0.7.1700-portable.7z">ghfast.top</a>
+                    <span aria-hidden="true">·</span>
+                    
+                    <a href="https://gh-proxy.com/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-v1.0.7.1700-portable.7z" title="yyzTools-v1.0.7.1700-portable.7z">gh-proxy.com</a>
+                    <span aria-hidden="true">·</span>
+                    
+                    <a href="https://ghproxy.com/https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-v1.0.7.1700-portable.7z" title="yyzTools-v1.0.7.1700-portable.7z">ghproxy.com</a>
+                    
+                    
+                </div>
                 
             </div>
         </div>
-        
+        </div>
 
         <div class="block">
             <h2>系统要求</h2>
@@ -382,7 +400,7 @@
                 
                 <div class="pkg lift reveal">
                     <dt><code>modules</code></dt>
-                    <dd>379 个 .zenmod 命令模块</dd>
+                    <dd>388 个 .zenmod 命令模块</dd>
                 </div>
                 
                 <div class="pkg lift reveal">
@@ -461,6 +479,39 @@
                     <p>64 位 Windows 10（1809 及以上）或 Windows 11，约 600 MB 磁盘空间，需要 Microsoft Edge WebView2 运行时——Win11 已预装，Win10 缺失时安装程序会引导安装。</p>
                 </details>
                 
+                <details class="faq-item reveal">
+                    <summary>
+                        <span class="faq-q">
+                            <span class="faq-idx" aria-hidden="true">Q05</span>
+                            <span>运行安装包时 Windows 提示「Windows 已保护你的电脑」怎么办？</span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <p>这是 Microsoft Defender SmartScreen 对未经代码签名程序的通用提醒，首次运行时可能出现。点击「更多信息」→「仍要运行」即可继续安装；你也可以先用页面上的 SHA-256 校验值核对文件完整性。</p>
+                </details>
+                
+                <details class="faq-item reveal">
+                    <summary>
+                        <span class="faq-q">
+                            <span class="faq-idx" aria-hidden="true">Q06</span>
+                            <span>安装包会捆绑其他软件或修改浏览器设置吗？</span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <p>不会。安装包只包含 yyzTools 本体与其运行所需的内置组件（FFmpeg、OCR 模型等，均为本地功能的依赖），不捆绑任何第三方软件、不设浏览器主页劫持、无开机自启之外的驻留进程。用页面上的 SHA-256 校验值可核对文件完整性。</p>
+                </details>
+                
+                <details class="faq-item reveal">
+                    <summary>
+                        <span class="faq-q">
+                            <span class="faq-idx" aria-hidden="true">Q07</span>
+                            <span>如何彻底卸载 yyzTools？</span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <p>在系统「设置 → 应用」或安装目录中运行卸载程序即可。卸载时可选择是否一并删除用户数据（配置、剪贴板历史、使用统计等都在你的用户目录下，不进注册表深处的散落项）；默认安装到用户目录，卸载后无残留服务与开机自启项。</p>
+                </details>
+                
             </div>
         </div>
     </div>
@@ -485,6 +536,7 @@
             <h3>产品</h3>
             <a href="/zh-CN/features.html">功能</a>
             <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/getting-started.html">快速上手</a>
             <a href="/zh-CN/changelog.html">更新日志</a>
             
             <a href="/zh-CN/everything-alternative.html">与 Everything 详细对比</a>
@@ -511,7 +563,7 @@
         <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
     </div>
 </footer>
-
+
 </body>
 </html>
 
