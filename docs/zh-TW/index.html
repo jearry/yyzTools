@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>yyzTools — Windows 桌面效率工具集，永久免費</title>
-<meta name="description" content="yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 40+ 功能一次裝齊，本機優先，永久免費。">
+<meta name="description" content="yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 388 個功能一次裝齊，本機優先，永久免費。">
 
 <meta property="og:title" content="yyzTools — Windows 桌面效率工具集，永久免費">
-<meta property="og:description" content="yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 40+ 功能一次裝齊，本機優先，永久免費。">
+<meta property="og:description" content="yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 388 個功能一次裝齊，本機優先，永久免費。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yyztools.com/zh-TW/">
 <meta property="og:site_name" content="yyzTools">
@@ -42,7 +42,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="yyzTools — Windows 桌面效率工具集，永久免費">
-<meta name="twitter:description" content="yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 40+ 功能一次裝齊，本機優先，永久免費。">
+<meta name="twitter:description" content="yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 388 個功能一次裝齊，本機優先，永久免費。">
 <meta name="twitter:image" content="https://yyztools.com/og-image.png">
 <meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
 
@@ -94,6 +94,15 @@
 
 <script>document.documentElement.classList.add('js');</script>
 
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
 
 
 <script type="text/javascript">
@@ -104,9 +113,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-z91twtFV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DDlnQ26P.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-C1ixNZas.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CnRUax--.css">
 </head>
 <body>
 
@@ -125,11 +134,29 @@
             <a href="/zh-TW/changelog.html" >更新紀錄</a>
             
             <a href="/zh-TW/sdk.html" >開發者</a>
-            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">交流回饋</a>
-            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">交流回饋</a>
         </nav>
 
         <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="主題">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="跟隨系統" aria-label="跟隨系統">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="淺色" aria-label="淺色">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="深色" aria-label="深色">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
             
             <details class="lang-pick" id="langPick">
                 <summary aria-label="選擇語言">
@@ -177,7 +204,7 @@
                     
                 </div>
             </details>
-            <a class="btn btn-sm btn-primary nav-cta" href="/zh-TW/download.html">免費下載</a>
+            
             <button class="nav-toggle" id="navToggle" aria-label="選單" aria-expanded="false">
                 
                 <span class="nav-toggle-bars"></span>
@@ -189,27 +216,306 @@
 <main>
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 40+ 功能一次裝齊，本機優先，永久免費。","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"真的永久免費嗎？以後會不會收費？","acceptedAnswer":{"@type":"Answer","text":"真的免費。不設付費解鎖、不設會員制，也不會把核心能力刻意削減成付費項目。我們希望 yyzTools 是你願意長期留在桌面上的工具，而不是又一筆訂閱。"}},{"@type":"Question","name":"我的資料會被上傳嗎？","acceptedAnswer":{"@type":"Answer","text":"不會。剪貼簿歷史、檔案搜尋、應用程式統計、OCR 等都在本機處理與儲存。只有你主動使用翻譯這類連網功能時，才會把你輸入的內容依你選擇的服務傳給對應的第三方。"}},{"@type":"Question","name":"需要註冊帳號嗎？","acceptedAnswer":{"@type":"Answer","text":"不需要。軟體不要求註冊，也不主動蒐集你的身分資訊。"}},{"@type":"Question","name":"支援哪些系統？","acceptedAnswer":{"@type":"Answer","text":"Windows 10 與 Windows 11 的 64 位元版本。需要 Microsoft Edge WebView2 執行階段，Win11 已內建，Win10 若缺少，安裝程式會引導你裝上。"}},{"@type":"Question","name":"會佔用很多資源嗎？","acceptedAnswer":{"@type":"Answer","text":"主程序常駐很輕量，桌布、截圖、按鍵提示等做成了獨立處理程序，用不到就不啟動。開遊戲時可以一鍵進入遊戲模式，暫停桌布與特效。"}},{"@type":"Question","name":"yyzTools 和 PowerToys 有什麼區別？","acceptedAnswer":{"@type":"Answer","text":"PowerToys 是微軟的模組化工具集，面向進階使用者，需要自行啟用各個元件。yyzTools 是一體化套件：命令面板、翻譯、OCR、剪貼簿歷史、檔案/圖片/影片/PDF 批次處理在同一個安裝檔裡開箱即用，介面支援 12 種語言。兩者都免費，很多人會同時保留。"}},{"@type":"Question","name":"和 Flow Launcher、Raycast 比呢？","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher 是優秀的開源啟動器，強在搜尋與外掛；Raycast 來自 macOS，Windows 版仍在公測，完整體驗需 Pro 訂閱。yyzTools 的差異是「裝完即全」：翻譯、OCR、剪貼簿歷史、批次處理、動態桌布全部內建，不必裝外掛，也不必訂閱。"}},{"@type":"Question","name":"和 Everything、Listary 比呢？","acceptedAnswer":{"@type":"Answer","text":"Everything 是出色的專用檔名搜尋工具，Listary 則兼有啟動器與檔案總管增強。yyzTools 的檔案搜尋從 1.0.5 起換成自研引擎：同樣是 NTFS MFT 直讀加 USN 即時增量，支援 path: / ext: / size: 等相容語法，全盤索引常駐記憶體約 5~30 MB。區別在於 Alt+空白鍵 一個輸入框裡，檔案與應用程式、處理程序、視窗、書籤、剪貼簿一起搜，搜到即可預覽、定位或刪除。如果只追求極致的檔名搜尋，Everything 依然是好選擇。"}},{"@type":"Question","name":"已經在用 PowerToys，還能裝 yyzTools 嗎？","acceptedAnswer":{"@type":"Answer","text":"可以，互不衝突。yyzTools 主程序常駐很輕，桌布、截圖等按需啟動，快捷鍵也都能自訂。常見組合：PowerToys 管視窗分割與鍵盤重映射，yyzTools 管啟動、翻譯、OCR 與批次處理。"}},{"@type":"Question","name":"和 uTools、Wox、ZTools 比呢？","acceptedAnswer":{"@type":"Answer","text":"uTools 是外掛平台，主體免費但不少熱門外掛要開會員；Wox 是專注搜尋的開源啟動器。ZTools 是開源的 uTools 平替，功能靠外掛市集拼裝。yyzTools 把 40+ 模組直接打包進安裝檔，沒有會員也沒有付費解鎖，剪貼簿、搜尋、OCR 資料都留在本機。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools 是一款 Windows 桌面效率工具集：命令面板、超級翻譯、OCR、檔案搜尋與預覽、剪貼簿歷史、批次處理、動態桌布等 388 個功能一次裝齊，本機優先，永久免費。","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","downloadUrl":"https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe","inLanguage":["en","zh-CN","zh-TW","ja","ko","fr","de","es","ru","ar","pt","it"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"真的永久免費嗎？以後會不會收費？","acceptedAnswer":{"@type":"Answer","text":"真的免費。不設付費解鎖、不設會員制，也不會把核心能力刻意削減成付費項目。我們希望 yyzTools 是你願意長期留在桌面上的工具，而不是又一筆訂閱。"}},{"@type":"Question","name":"我的資料會被上傳嗎？","acceptedAnswer":{"@type":"Answer","text":"不會。剪貼簿歷史、檔案搜尋、應用程式統計、OCR 等都在本機處理與儲存。只有你主動使用翻譯這類連網功能時，才會把你輸入的內容依你選擇的服務傳給對應的第三方。"}},{"@type":"Question","name":"需要註冊帳號嗎？","acceptedAnswer":{"@type":"Answer","text":"不需要。軟體不要求註冊，也不主動蒐集你的身分資訊。"}},{"@type":"Question","name":"支援哪些系統？","acceptedAnswer":{"@type":"Answer","text":"Windows 10 與 Windows 11 的 64 位元版本。需要 Microsoft Edge WebView2 執行階段，Win11 已內建，Win10 若缺少，安裝程式會引導你裝上。"}},{"@type":"Question","name":"會佔用很多資源嗎？","acceptedAnswer":{"@type":"Answer","text":"主程序常駐很輕量，桌布、截圖、按鍵提示等做成了獨立處理程序，用不到就不啟動。開遊戲時可以一鍵進入遊戲模式，暫停桌布與特效。"}},{"@type":"Question","name":"yyzTools 和 PowerToys 有什麼區別？","acceptedAnswer":{"@type":"Answer","text":"PowerToys 是微軟的模組化工具集，面向進階使用者，需要自行啟用各個元件。yyzTools 是一體化套件：命令面板、翻譯、OCR、剪貼簿歷史、檔案/圖片/影片/PDF 批次處理在同一個安裝檔裡開箱即用，介面支援 12 種語言。兩者都免費，很多人會同時保留。"}},{"@type":"Question","name":"和 Flow Launcher、Raycast 比呢？","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher 是優秀的開源啟動器，強在搜尋與外掛；Raycast 來自 macOS，Windows 版仍在公測，完整體驗需 Pro 訂閱。yyzTools 的差異是「裝完即全」：翻譯、OCR、剪貼簿歷史、批次處理、動態桌布全部內建，不必裝外掛，也不必訂閱。"}},{"@type":"Question","name":"和 Everything、Listary 比呢？","acceptedAnswer":{"@type":"Answer","text":"Everything 是出色的專用檔名搜尋工具，Listary 則兼有啟動器與檔案總管增強。yyzTools 的檔案搜尋從 1.0.5 起換成自研引擎：同樣是 NTFS MFT 直讀加 USN 即時增量，支援 path: / ext: / size: 等相容語法，全盤索引常駐記憶體約 5~30 MB。區別在於 Alt+空白鍵 一個輸入框裡，檔案與應用程式、處理程序、視窗、書籤、剪貼簿一起搜，搜到即可預覽、定位或刪除。如果只追求極致的檔名搜尋，Everything 依然是好選擇。"}},{"@type":"Question","name":"已經在用 PowerToys，還能裝 yyzTools 嗎？","acceptedAnswer":{"@type":"Answer","text":"可以，互不衝突。yyzTools 主程序常駐很輕，桌布、截圖等按需啟動，快捷鍵也都能自訂。常見組合：PowerToys 管視窗分割與鍵盤重映射，yyzTools 管啟動、翻譯、OCR 與批次處理。"}},{"@type":"Question","name":"和 uTools、Wox、ZTools 比呢？","acceptedAnswer":{"@type":"Answer","text":"uTools 是外掛平台，主體免費但不少熱門外掛要開會員；Wox 是專注搜尋的開源啟動器。ZTools 是開源的 uTools 平替，功能靠外掛市集拼裝。yyzTools 把 388 個模組直接打包進安裝檔，沒有會員也沒有付費解鎖，剪貼簿、搜尋、OCR 資料都留在本機。"}}]}</script>
 
 <section class="hero">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap hero-inner">
-        <a class="badge" href="/zh-TW/changelog.html">
-            <span class="badge-dot"></span>最新版本 v1.0.7.1700
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <h1 class="hero-title">一個工具箱，<br>裝下你桌面上的所有瑣碎</h1>
-        <p class="hero-lead">搜尋、翻譯、辨識、預覽、批次處理、截圖、桌布——日常辦公與開發時那些高頻又瑣碎的需求，不必再去搜尋和為工具付費。裝一次 yyzTools，需要什麼隨手就有。</p>
-        <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="/zh-TW/download.html">
-                <i class="fa-solid fa-download"></i>免費下載
-            </a>
-            <a class="btn btn-ghost btn-lg" href="/zh-TW/features.html">
-                看看有哪些功能<i class="fa-solid fa-arrow-right"></i>
-            </a>
+        <div class="hero-copy">
+            <h1 class="hero-title">一個工具箱，裝下你桌面上的所有瑣碎</h1>
+            <p class="hero-lead">搜尋、翻譯、辨識、預覽、批次處理、截圖、桌布——日常辦公與開發時那些高頻又瑣碎的需求，不必再去搜尋和為工具付費。裝一次 yyzTools，需要什麼隨手就有。</p>
+            <div class="hero-cta">
+                <a class="btn btn-primary btn-lg" href="/zh-TW/download.html">
+                    <i class="fa-solid fa-download"></i>免費下載
+                </a>
+                <a class="btn btn-ghost btn-lg" href="/zh-TW/features.html">
+                    看看有哪些功能<i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="hero-meta">
+                <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64 位元 · 免註冊</p>
+                <a class="badge" href="/zh-TW/changelog.html">
+                    <span class="badge-dot"></span>最新版本 v1.0.7.1700
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-        <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64 位元 · 免註冊</p>
+
+        
+        <div class="hero-demo">
+            <div class="pal" role="img" aria-label="按 Alt+空白鍵，然後就什麼都能找到 — 命令面板是 yyzTools 的中樞：應用程式、檔案、處理程序、視窗、書籤、剪貼簿都在同一個輸入框裡。加個前綴就能切換搜尋範圍，不用記住工具叫什麼名字。">
+                <div class="pal-search">
+                    <i class="fa-solid fa-magnifying-glass pal-search-icon" aria-hidden="true"></i>
+                    <span class="pal-field" id="palField" data-placeholder="搜尋應用程式、檔案、書籤、剪貼簿…"><span class="ph">搜尋應用程式、檔案、書籤、剪貼簿…</span><span class="pal-caret" aria-hidden="true"></span></span>
+                    <i class="fa-solid fa-gear pal-gear" aria-hidden="true"></i>
+                </div>
+                <div class="pal-results">
+                    
+                    <div class="pal-scene" data-i="0" data-input="vs" data-prefix="">
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Code</span>
+                                    <span class="pal-desc">C:\Users\you\AppData\Local\Programs\Microsoft VS Code\Code.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">應用程式</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-cube" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio 2022</span>
+                                    <span class="pal-desc">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">應用程式</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Installer</span>
+                                    <span class="pal-desc">C:\Program Files (x86)\Microsoft Visual Studio\Installer</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">應用程式</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-language" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Translate</span>
+                                    <span class="pal-desc">Alt+Shift+T</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">快開</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-google" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Google Search</span>
+                                    <span class="pal-desc">https://www.google.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">快開</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="1" data-input="ds" data-prefix="" hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-display" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Display Settings</span>
+                                    <span class="pal-desc">ms-settings:display</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">應用程式</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Sound Settings</span>
+                                    <span class="pal-desc">ms-settings:sound</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">應用程式</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-qrcode" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">QR Code</span>
+                                    <span class="pal-desc">Alt+Shift+Q</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">快開</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">GitHub Search</span>
+                                    <span class="pal-desc">https://github.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">快開</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="2" data-input="f report" data-prefix="f " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-word" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">quarterly-report.docx</span>
+                                    <span class="pal-desc">24 KB · D:\Docs\2026</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">檔案</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-final.pdf</span>
+                                    <span class="pal-desc">1.2 MB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">檔案</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-review.pptx</span>
+                                    <span class="pal-desc">480 KB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">檔案</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-excel" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">annual-report-2025.xlsx</span>
+                                    <span class="pal-desc">340 KB · OneDrive</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">檔案</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="3" data-input="=sqrt(16) + sin(pi/2)" data-prefix="=" hidden>
+                        
+                        <div class="pal-row pal-row-calc">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-formula">√16 + sin(π/2)</span>
+                                    <span class="pal-result">= 5</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">計算</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="4" data-input="c yyzTools" data-prefix="c " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-clipboard" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">yyzTools — one toolbox for your desktop</span>
+                                    <span class="pal-desc">Text · 09:12</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">剪貼簿</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">https://yyztools.com/download.html</span>
+                                    <span class="pal-desc">Text · 18:24</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">剪貼簿</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-clipimg">
+                            
+                            
+                            <span class="pal-thumb"><img src="/carousel/en-light/command-palette.webp" alt="" width="56" height="36" loading="lazy" decoding="async"></span>
+                            <span class="pal-main">
+                                <span class="pal-ocr-label">OCR</span>
+                                <span class="pal-ocr-text">yyzTools — Command Palette · Alt+Space</span>
+                            </span>
+                            
+                            <span class="pal-type">剪貼簿</span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="pal-foot">
+                    <span>Enter 開啟 · Shift+Enter 以管理員身分 · 按右鍵更多操作</span>
+                    <kbd>按 Alt+空白鍵</kbd>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -225,11 +531,12 @@
              aria-label="Yes Your Zen Tools">
             <div class="swiper-wrapper">
                 
+                
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/01.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/01.webp"
-                             alt="命令面板" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/command-palette.webp"
+                             alt="命令面板" width="1280" height="963"
                              loading=&#34;eager&#34; fetchpriority=&#34;high&#34;
                              decoding="async">
                     </picture>
@@ -237,9 +544,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/02.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/02.webp"
-                             alt="應用程式搜尋" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/tabdock.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/tabdock.webp"
+                             alt="程式啟動列" width="1280" height="1084"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -247,9 +554,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/03.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/03.webp"
-                             alt="檔案搜尋" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/wallpaper.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/wallpaper.webp"
+                             alt="動態桌布" width="1280" height="980"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -257,9 +564,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/04.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/04.webp"
-                             alt="檔案預覽" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/file-preview.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/file-preview.webp"
+                             alt="檔案預覽" width="1280" height="1092"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -267,9 +574,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/05.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/05.webp"
-                             alt="程式啟動列" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/translate.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/translate.webp"
+                             alt="超級翻譯" width="1280" height="853"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -277,9 +584,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/06.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/06.webp"
-                             alt="動態桌布" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/quick-ocr.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/quick-ocr.webp"
+                             alt="快捷 OCR" width="1280" height="995"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -287,9 +594,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/07.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/07.webp"
-                             alt="螢幕截圖" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/image-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/image-tools.webp"
+                             alt="圖片批次處理" width="1280" height="1036"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -297,9 +604,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/08.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/08.webp"
-                             alt="螢幕錄製" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/pdf-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/pdf-tools.webp"
+                             alt="PDF 批次處理" width="1280" height="904"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -307,9 +614,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/09.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/09.webp"
-                             alt="超級翻譯" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/video-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/video-tools.webp"
+                             alt="影片批次處理" width="1280" height="1045"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -317,9 +624,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/10.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/10.webp"
-                             alt="文字辨識 OCR" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/batch-rename.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/batch-rename.webp"
+                             alt="批次重新命名" width="1280" height="1041"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -327,9 +634,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/11.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/11.webp"
-                             alt="檔案下載" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/calculator.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/calculator.webp"
+                             alt="計算稿紙" width="1280" height="966"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -337,9 +644,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/12.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/12.webp"
-                             alt="計算稿紙" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/calendar.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/calendar.webp"
+                             alt="萬年曆" width="1280" height="747"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -347,9 +654,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/13.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/13.webp"
-                             alt="萬年曆" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/hash.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/hash.webp"
+                             alt="雜湊計算" width="1280" height="1073"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -357,129 +664,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/zh-dark/14.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/14.webp"
-                             alt="QR Code" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/15.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/15.webp"
-                             alt="提醒助理" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/16.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/16.webp"
-                             alt="應用程式統計" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/17.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/17.webp"
-                             alt="PDF 批次處理" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/18.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/18.webp"
-                             alt="圖片批次處理" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/19.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/19.webp"
-                             alt="影片批次處理" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/20.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/20.webp"
-                             alt="批次重新命名" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/21.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/21.webp"
-                             alt="雜湊計算" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/22.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/22.webp"
-                             alt="加密解密" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/23.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/23.webp"
-                             alt="資料轉換" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/24.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/24.webp"
-                             alt="編碼解碼" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/25.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/25.webp"
-                             alt="資料產生" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/zh-dark/26.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/zh-light/26.webp"
-                             alt="正規表示式" width="1280" height="800"
+                        <source srcset="/carousel/zh-dark/regex.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/zh-light/regex.webp"
+                             alt="正規表示式" width="1280" height="1062"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -502,11 +689,11 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="1" role="tab"
-                    aria-selected="false">應用程式搜尋</button>
+                    aria-selected="false">程式啟動列</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="2" role="tab"
-                    aria-selected="false">檔案搜尋</button>
+                    aria-selected="false">動態桌布</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="3" role="tab"
@@ -514,93 +701,46 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="4" role="tab"
-                    aria-selected="false">程式啟動列</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="5" role="tab"
-                    aria-selected="false">動態桌布</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="6" role="tab"
-                    aria-selected="false">螢幕截圖</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="7" role="tab"
-                    aria-selected="false">螢幕錄製</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="8" role="tab"
                     aria-selected="false">超級翻譯</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="9" role="tab"
-                    aria-selected="false">文字辨識 OCR</button>
+                    data-i="5" role="tab"
+                    aria-selected="false">快捷 OCR</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="10" role="tab"
-                    aria-selected="false">檔案下載</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="11" role="tab"
-                    aria-selected="false">計算稿紙</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="12" role="tab"
-                    aria-selected="false">萬年曆</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="13" role="tab"
-                    aria-selected="false">QR Code</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="14" role="tab"
-                    aria-selected="false">提醒助理</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="15" role="tab"
-                    aria-selected="false">應用程式統計</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="16" role="tab"
-                    aria-selected="false">PDF 批次處理</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="17" role="tab"
+                    data-i="6" role="tab"
                     aria-selected="false">圖片批次處理</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="18" role="tab"
+                    data-i="7" role="tab"
+                    aria-selected="false">PDF 批次處理</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="8" role="tab"
                     aria-selected="false">影片批次處理</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="19" role="tab"
+                    data-i="9" role="tab"
                     aria-selected="false">批次重新命名</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="20" role="tab"
+                    data-i="10" role="tab"
+                    aria-selected="false">計算稿紙</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="11" role="tab"
+                    aria-selected="false">萬年曆</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="12" role="tab"
                     aria-selected="false">雜湊計算</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="21" role="tab"
-                    aria-selected="false">加密解密</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="22" role="tab"
-                    aria-selected="false">資料轉換</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="23" role="tab"
-                    aria-selected="false">編碼解碼</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="24" role="tab"
-                    aria-selected="false">資料產生</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="25" role="tab"
+                    data-i="13" role="tab"
                     aria-selected="false">正規表示式</button>
             
         </div>
+        
     </div>
 </section>
 
@@ -623,13 +763,13 @@
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
                 <h3>一次安裝</h3>
-                <p>40+ 功能模組開箱即用，省掉逐個搜尋、比較、下載、試用、移除的那一圈折騰。</p>
+                <p>388 個功能模組開箱即用，省掉逐個搜尋、比較、下載、試用、移除的那一圈折騰。</p>
             </div>
             
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
                 <h3>388 個命令模組</h3>
-                <p>AI、應用程式、遊戲、系統、網站五大類命令隨取隨用，加一個 JSON 檔案就能自己擴充。</p>
+                <p>AI、應用程式、遊戲、系統、網站五大類命令隨取隨用。</p>
             </div>
             
         </div>
@@ -661,12 +801,13 @@
         </div>
 
         
+        
         <div class="mock reveal">
             <picture>
-                <source srcset="/carousel/zh-dark/01.webp" media="(prefers-color-scheme: dark)">
-                <img src="/carousel/zh-light/01.webp"
+                <source srcset="/carousel/zh-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                <img src="/carousel/zh-light/command-palette.webp"
                      alt="按 Alt+空白鍵，然後就什麼都能找到"
-                     width="797" height="599"
+                     width="1280" height="963"
                      loading="lazy" decoding="async">
             </picture>
         </div>
@@ -676,7 +817,7 @@
 <section class="section">
     <div class="wrap">
         <div class="section-head">
-            <h2>六類能力，四十餘個模組</h2>
+            <h2>六類能力，388 個模組</h2>
             <p>每一類都涵蓋了日常最常用的那幾件事，點進去看完整清單。</p>
         </div>
         <div class="grid grid-3">
@@ -764,7 +905,7 @@
             <a class="card card-link reveal" href="/zh-TW/features.html#extend">
                 <div class="card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
                 <h3>計算與擴充</h3>
-                <p>開放的命令模組體系，加個 JSON 就多一條命令。</p>
+                <p>開放的命令模組體系，支援自訂擴充。</p>
                 <ul class="card-tags">
                     
                     <li>計算稿紙</li>
@@ -888,7 +1029,7 @@
                     <span class="faq-q"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i><span>和 uTools、Wox、ZTools 比呢？</span></span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
-                <p>uTools 是外掛平台，主體免費但不少熱門外掛要開會員；Wox 是專注搜尋的開源啟動器。ZTools 是開源的 uTools 平替，功能靠外掛市集拼裝。yyzTools 把 40+ 模組直接打包進安裝檔，沒有會員也沒有付費解鎖，剪貼簿、搜尋、OCR 資料都留在本機。</p>
+                <p>uTools 是外掛平台，主體免費但不少熱門外掛要開會員；Wox 是專注搜尋的開源啟動器。ZTools 是開源的 uTools 平替，功能靠外掛市集拼裝。yyzTools 把 388 個模組直接打包進安裝檔，沒有會員也沒有付費解鎖，剪貼簿、搜尋、OCR 資料都留在本機。</p>
             </details>
             
         </div>
@@ -933,8 +1074,10 @@
         <div class="footer-col">
             <h3>資源</h3>
             <a href="/zh-TW/sdk.html">開發者</a>
-            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">社區討論</a>
             <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">問題回報</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
         <div class="footer-col">

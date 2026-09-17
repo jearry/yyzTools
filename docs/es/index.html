@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>yyzTools — Conjunto de herramientas de productividad para Windows, gratis para siempre</title>
-<meta name="description" content="yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y más de 40 funciones en una sola instalación. Prioridad local y gratis para siempre.">
+<meta name="description" content="yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y 388 funciones en una sola instalación. Prioridad local y gratis para siempre.">
 
 <meta property="og:title" content="yyzTools — Conjunto de herramientas de productividad para Windows, gratis para siempre">
-<meta property="og:description" content="yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y más de 40 funciones en una sola instalación. Prioridad local y gratis para siempre.">
+<meta property="og:description" content="yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y 388 funciones en una sola instalación. Prioridad local y gratis para siempre.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yyztools.com/es/">
 <meta property="og:site_name" content="yyzTools">
@@ -42,7 +42,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="yyzTools — Conjunto de herramientas de productividad para Windows, gratis para siempre">
-<meta name="twitter:description" content="yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y más de 40 funciones en una sola instalación. Prioridad local y gratis para siempre.">
+<meta name="twitter:description" content="yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y 388 funciones en una sola instalación. Prioridad local y gratis para siempre.">
 <meta name="twitter:image" content="https://yyztools.com/og-image.png">
 <meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
 
@@ -94,6 +94,15 @@
 
 <script>document.documentElement.classList.add('js');</script>
 
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
 
 
 <script type="text/javascript">
@@ -104,9 +113,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-z91twtFV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DDlnQ26P.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-C1ixNZas.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CnRUax--.css">
 </head>
 <body>
 
@@ -125,11 +134,29 @@
             <a href="/es/changelog.html" >Novedades</a>
             
             <a href="/es/sdk.html" >Desarrolladores</a>
-            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Comentarios</a>
-            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Comentarios</a>
         </nav>
 
         <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="Tema">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="Sistema" aria-label="Sistema">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="Claro" aria-label="Claro">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="Oscuro" aria-label="Oscuro">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
             
             <details class="lang-pick" id="langPick">
                 <summary aria-label="Idioma">
@@ -177,7 +204,7 @@
                     
                 </div>
             </details>
-            <a class="btn btn-sm btn-primary nav-cta" href="/es/download.html">Descarga gratuita</a>
+            
             <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
                 
                 <span class="nav-toggle-bars"></span>
@@ -189,27 +216,306 @@
 <main>
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y más de 40 funciones en una sola instalación. Prioridad local y gratis para siempre.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿De verdad es gratis para siempre? ¿Empezarán a cobrar?","acceptedAnswer":{"@type":"Answer","text":"Es realmente gratis. Sin desbloqueos de pago, sin niveles de suscripción y sin dejar las funciones esenciales detrás de un muro de pago. Queremos que yyzTools sea una herramienta que le guste conservar en su escritorio a largo plazo, no otra suscripción más."}},{"@type":"Question","name":"¿Se envían mis datos a algún servidor?","acceptedAnswer":{"@type":"Answer","text":"No. El historial del portapapeles, la búsqueda de archivos, las estadísticas de uso y el OCR se procesan y guardan en su equipo. Solo cuando usa activamente una función en línea, como la traducción, el contenido que introduce se envía al servicio de terceros que haya elegido. Además, el programa comprueba periódicamente si hay actualizaciones: esa petición solo transmite números de versión."}},{"@type":"Question","name":"¿Hace falta crear una cuenta?","acceptedAnswer":{"@type":"Answer","text":"No. El programa no exige registro ni recopila su información de identidad."}},{"@type":"Question","name":"¿Qué sistemas son compatibles?","acceptedAnswer":{"@type":"Answer","text":"Windows 10 y Windows 11 en su versión de 64 bits. Se necesita el entorno de ejecución Microsoft Edge WebView2: Windows 11 ya lo incluye y, en Windows 10, el instalador le guiará para añadirlo si falta."}},{"@type":"Question","name":"¿Consume muchos recursos?","acceptedAnswer":{"@type":"Answer","text":"El proceso principal residente es muy ligero, y el fondo de pantalla, las capturas y las indicaciones de teclado se ejecutan como procesos independientes que solo arrancan cuando se usan. El modo juego pausa el fondo dinámico y los efectos con un solo clic."}},{"@type":"Question","name":"¿En qué se diferencia yyzTools de PowerToys?","acceptedAnswer":{"@type":"Answer","text":"PowerToys es el conjunto modular de utilidades de Microsoft para usuarios avanzados: usted activa las piezas que quiere. yyzTools es una suite integrada: la paleta de comandos, la traducción, el OCR, el historial del portapapeles y el procesamiento por lotes de archivos, imágenes, vídeo y PDF vienen preconfigurados en un solo instalador, con interfaz en 12 idiomas. Ambos son gratuitos, así que mucha gente conserva los dos."}},{"@type":"Question","name":"¿Y en comparación con Flow Launcher o Raycast?","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher es un excelente lanzador de código abierto que destaca en búsqueda y plugins. Raycast viene de macOS; su versión para Windows sigue en beta y la experiencia completa requiere una suscripción Pro. yyzTools es «completo al instalar»: traducción, OCR, historial del portapapeles, procesamiento por lotes y fondo dinámico están integrados — sin buscar complementos ni pagar suscripciones."}},{"@type":"Question","name":"¿Y en comparación con Everything o Listary?","acceptedAnswer":{"@type":"Answer","text":"Everything es una excelente herramienta especializada en la búsqueda de archivos por nombre; Listary añade un lanzador e integración con el Explorador. Desde la v1.0.5, yyzTools emplea su propio motor: lecturas directas de la $MFT con actualizaciones del diario USN, sintaxis al estilo de Everything (path: / ext: / size:) y un índice residente de unos 5–30 MB. La diferencia: un único cuadro Alt+Space busca archivos junto con aplicaciones, procesos, ventanas, marcadores y portapapeles, con vista previa, revelado en carpeta y acciones de papelera integradas. Si solo busca la búsqueda de nombres de archivos más rápida, Everything sigue siendo una gran opción."}},{"@type":"Question","name":"Ya uso PowerToys, ¿puedo instalar yyzTools igualmente?","acceptedAnswer":{"@type":"Answer","text":"Sí, conviven sin problemas. El proceso residente de yyzTools es ligero, el fondo y las capturas se inician bajo demanda, y todos los atajos son personalizables. Una combinación habitual: PowerToys para el ajuste de ventanas y el remapeo del teclado, yyzTools para el lanzamiento, la traducción, el OCR y el procesamiento por lotes."}},{"@type":"Question","name":"¿Y frente a uTools, Wox o ZTools?","acceptedAnswer":{"@type":"Answer","text":"uTools es una plataforma de plugins: la base es gratuita, pero muchos plugins populares requieren una suscripción de pago. Wox es un lanzador de código abierto centrado en la búsqueda. ZTools es una alternativa open source a uTools, montada a partir de un mercado de plugins. yyzTools reúne más de 40 módulos en un solo instalador, sin suscripciones ni desbloqueos de pago, y mantiene los datos del portapapeles, la búsqueda y el OCR en su equipo."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools es un conjunto de herramientas de productividad para Windows: paleta de comandos, traducción avanzada, OCR, búsqueda y vista previa de archivos, historial del portapapeles, procesamiento por lotes, fondos de pantalla dinámicos y 388 funciones en una sola instalación. Prioridad local y gratis para siempre.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","downloadUrl":"https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe","inLanguage":["en","zh-CN","zh-TW","ja","ko","fr","de","es","ru","ar","pt","it"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿De verdad es gratis para siempre? ¿Empezarán a cobrar?","acceptedAnswer":{"@type":"Answer","text":"Es realmente gratis. Sin desbloqueos de pago, sin niveles de suscripción y sin dejar las funciones esenciales detrás de un muro de pago. Queremos que yyzTools sea una herramienta que le guste conservar en su escritorio a largo plazo, no otra suscripción más."}},{"@type":"Question","name":"¿Se envían mis datos a algún servidor?","acceptedAnswer":{"@type":"Answer","text":"No. El historial del portapapeles, la búsqueda de archivos, las estadísticas de uso y el OCR se procesan y guardan en su equipo. Solo cuando usa activamente una función en línea, como la traducción, el contenido que introduce se envía al servicio de terceros que haya elegido. Además, el programa comprueba periódicamente si hay actualizaciones: esa petición solo transmite números de versión."}},{"@type":"Question","name":"¿Hace falta crear una cuenta?","acceptedAnswer":{"@type":"Answer","text":"No. El programa no exige registro ni recopila su información de identidad."}},{"@type":"Question","name":"¿Qué sistemas son compatibles?","acceptedAnswer":{"@type":"Answer","text":"Windows 10 y Windows 11 en su versión de 64 bits. Se necesita el entorno de ejecución Microsoft Edge WebView2: Windows 11 ya lo incluye y, en Windows 10, el instalador le guiará para añadirlo si falta."}},{"@type":"Question","name":"¿Consume muchos recursos?","acceptedAnswer":{"@type":"Answer","text":"El proceso principal residente es muy ligero, y el fondo de pantalla, las capturas y las indicaciones de teclado se ejecutan como procesos independientes que solo arrancan cuando se usan. El modo juego pausa el fondo dinámico y los efectos con un solo clic."}},{"@type":"Question","name":"¿En qué se diferencia yyzTools de PowerToys?","acceptedAnswer":{"@type":"Answer","text":"PowerToys es el conjunto modular de utilidades de Microsoft para usuarios avanzados: usted activa las piezas que quiere. yyzTools es una suite integrada: la paleta de comandos, la traducción, el OCR, el historial del portapapeles y el procesamiento por lotes de archivos, imágenes, vídeo y PDF vienen preconfigurados en un solo instalador, con interfaz en 12 idiomas. Ambos son gratuitos, así que mucha gente conserva los dos."}},{"@type":"Question","name":"¿Y en comparación con Flow Launcher o Raycast?","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher es un excelente lanzador de código abierto que destaca en búsqueda y plugins. Raycast viene de macOS; su versión para Windows sigue en beta y la experiencia completa requiere una suscripción Pro. yyzTools es «completo al instalar»: traducción, OCR, historial del portapapeles, procesamiento por lotes y fondo dinámico están integrados — sin buscar complementos ni pagar suscripciones."}},{"@type":"Question","name":"¿Y en comparación con Everything o Listary?","acceptedAnswer":{"@type":"Answer","text":"Everything es una excelente herramienta especializada en la búsqueda de archivos por nombre; Listary añade un lanzador e integración con el Explorador. Desde la v1.0.5, yyzTools emplea su propio motor: lecturas directas de la $MFT con actualizaciones del diario USN, sintaxis al estilo de Everything (path: / ext: / size:) y un índice residente de unos 5–30 MB. La diferencia: un único cuadro Alt+Space busca archivos junto con aplicaciones, procesos, ventanas, marcadores y portapapeles, con vista previa, revelado en carpeta y acciones de papelera integradas. Si solo busca la búsqueda de nombres de archivos más rápida, Everything sigue siendo una gran opción."}},{"@type":"Question","name":"Ya uso PowerToys, ¿puedo instalar yyzTools igualmente?","acceptedAnswer":{"@type":"Answer","text":"Sí, conviven sin problemas. El proceso residente de yyzTools es ligero, el fondo y las capturas se inician bajo demanda, y todos los atajos son personalizables. Una combinación habitual: PowerToys para el ajuste de ventanas y el remapeo del teclado, yyzTools para el lanzamiento, la traducción, el OCR y el procesamiento por lotes."}},{"@type":"Question","name":"¿Y frente a uTools, Wox o ZTools?","acceptedAnswer":{"@type":"Answer","text":"uTools es una plataforma de plugins: la base es gratuita, pero muchos plugins populares requieren una suscripción de pago. Wox es un lanzador de código abierto centrado en la búsqueda. ZTools es una alternativa open source a uTools, montada a partir de un mercado de plugins. yyzTools reúne 388 módulos en un solo instalador, sin suscripciones ni desbloqueos de pago, y mantiene los datos del portapapeles, la búsqueda y el OCR en su equipo."}}]}</script>
 
 <section class="hero">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap hero-inner">
-        <a class="badge" href="/es/changelog.html">
-            <span class="badge-dot"></span>Última versión v1.0.7.1700
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <h1 class="hero-title">Una sola caja de herramientas<br>para todos los pendientes de su escritorio</h1>
-        <p class="hero-lead">Buscar, traducir, reconocer, previsualizar, procesar por lotes, capturar pantalla, personalizar el fondo: todas esas tareas frecuentes y menudas del trabajo diario y del desarrollo, sin tener que buscar ni pagar una herramienta distinta para cada una. Instale yyzTools una vez y tendrá a mano lo que necesite.</p>
-        <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="/es/download.html">
-                <i class="fa-solid fa-download"></i>Descarga gratuita
-            </a>
-            <a class="btn btn-ghost btn-lg" href="/es/features.html">
-                Vea todo lo que hace<i class="fa-solid fa-arrow-right"></i>
-            </a>
+        <div class="hero-copy">
+            <h1 class="hero-title">Una sola caja de herramientas para todos los pendientes de su escritorio</h1>
+            <p class="hero-lead">Buscar, traducir, reconocer, previsualizar, procesar por lotes, capturar pantalla, personalizar el fondo: todas esas tareas frecuentes y menudas del trabajo diario y del desarrollo, sin tener que buscar ni pagar una herramienta distinta para cada una. Instale yyzTools una vez y tendrá a mano lo que necesite.</p>
+            <div class="hero-cta">
+                <a class="btn btn-primary btn-lg" href="/es/download.html">
+                    <i class="fa-solid fa-download"></i>Descarga gratuita
+                </a>
+                <a class="btn btn-ghost btn-lg" href="/es/features.html">
+                    Vea todo lo que hace<i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="hero-meta">
+                <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64 bits · Sin registro</p>
+                <a class="badge" href="/es/changelog.html">
+                    <span class="badge-dot"></span>Última versión v1.0.7.1700
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-        <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64 bits · Sin registro</p>
+
+        
+        <div class="hero-demo">
+            <div class="pal" role="img" aria-label="Pulse Alt+Space y encuentre cualquier cosa — CmdPlate es el centro de yyzTools: aplicaciones, archivos, procesos, ventanas, marcadores y portapapeles viven detrás de un único campo de texto. Escriba un prefijo para cambiar de ámbito de búsqueda, sin memorizar el nombre de ninguna herramienta.">
+                <div class="pal-search">
+                    <i class="fa-solid fa-magnifying-glass pal-search-icon" aria-hidden="true"></i>
+                    <span class="pal-field" id="palField" data-placeholder="Buscar aplicaciones, archivos, marcadores, portapapeles…"><span class="ph">Buscar aplicaciones, archivos, marcadores, portapapeles…</span><span class="pal-caret" aria-hidden="true"></span></span>
+                    <i class="fa-solid fa-gear pal-gear" aria-hidden="true"></i>
+                </div>
+                <div class="pal-results">
+                    
+                    <div class="pal-scene" data-i="0" data-input="vs" data-prefix="">
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Code</span>
+                                    <span class="pal-desc">C:\Users\you\AppData\Local\Programs\Microsoft VS Code\Code.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-cube" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio 2022</span>
+                                    <span class="pal-desc">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Installer</span>
+                                    <span class="pal-desc">C:\Program Files (x86)\Microsoft Visual Studio\Installer</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-language" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Translate</span>
+                                    <span class="pal-desc">Alt+Shift+T</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Rápido</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-google" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Google Search</span>
+                                    <span class="pal-desc">https://www.google.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Rápido</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="1" data-input="ds" data-prefix="" hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-display" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Display Settings</span>
+                                    <span class="pal-desc">ms-settings:display</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Sound Settings</span>
+                                    <span class="pal-desc">ms-settings:sound</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-qrcode" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">QR Code</span>
+                                    <span class="pal-desc">Alt+Shift+Q</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Rápido</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">GitHub Search</span>
+                                    <span class="pal-desc">https://github.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Rápido</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="2" data-input="f report" data-prefix="f " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-word" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">quarterly-report.docx</span>
+                                    <span class="pal-desc">24 KB · D:\Docs\2026</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Archivo</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-final.pdf</span>
+                                    <span class="pal-desc">1.2 MB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Archivo</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-review.pptx</span>
+                                    <span class="pal-desc">480 KB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Archivo</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-excel" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">annual-report-2025.xlsx</span>
+                                    <span class="pal-desc">340 KB · OneDrive</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Archivo</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="3" data-input="=sqrt(16) + sin(pi/2)" data-prefix="=" hidden>
+                        
+                        <div class="pal-row pal-row-calc">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-formula">√16 + sin(π/2)</span>
+                                    <span class="pal-result">= 5</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Calculadora</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="4" data-input="c yyzTools" data-prefix="c " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-clipboard" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">yyzTools — one toolbox for your desktop</span>
+                                    <span class="pal-desc">Text · 09:12</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Portapapeles</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">https://yyztools.com/download.html</span>
+                                    <span class="pal-desc">Text · 18:24</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Portapapeles</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-clipimg">
+                            
+                            
+                            <span class="pal-thumb"><img src="/carousel/en-light/command-palette.webp" alt="" width="56" height="36" loading="lazy" decoding="async"></span>
+                            <span class="pal-main">
+                                <span class="pal-ocr-label">OCR</span>
+                                <span class="pal-ocr-text">yyzTools — Command Palette · Alt+Space</span>
+                            </span>
+                            
+                            <span class="pal-type">Portapapeles</span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="pal-foot">
+                    <span>Enter para abrir · Shift+Enter como administrador · Clic derecho para más opciones</span>
+                    <kbd>Alt+Space</kbd>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -225,11 +531,12 @@
              aria-label="Yes Your Zen Tools">
             <div class="swiper-wrapper">
                 
+                
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/01.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/01.webp"
-                             alt="Paleta de comandos" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/command-palette.webp"
+                             alt="Paleta de comandos" width="1280" height="958"
                              loading=&#34;eager&#34; fetchpriority=&#34;high&#34;
                              decoding="async">
                     </picture>
@@ -237,9 +544,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/02.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/02.webp"
-                             alt="Búsqueda de aplicaciones" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/tabdock.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/tabdock.webp"
+                             alt="Dock" width="1280" height="1106"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -247,9 +554,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/03.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/03.webp"
-                             alt="Búsqueda de archivos" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/wallpaper.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/wallpaper.webp"
+                             alt="Fondo de pantalla dinámico" width="1280" height="903"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -257,9 +564,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/04.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/04.webp"
-                             alt="Vista previa de archivos" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/file-preview.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/file-preview.webp"
+                             alt="Vista previa de archivos" width="1280" height="965"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -267,9 +574,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/05.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/05.webp"
-                             alt="Dock" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/translate.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/translate.webp"
+                             alt="Traducción avanzada" width="1280" height="853"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -277,9 +584,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/06.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/06.webp"
-                             alt="Fondo de pantalla dinámico" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/quick-ocr.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/quick-ocr.webp"
+                             alt="OCR rápido" width="1280" height="841"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -287,9 +594,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/07.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/07.webp"
-                             alt="Captura de pantalla" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/image-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/image-tools.webp"
+                             alt="Procesamiento por lotes de imágenes" width="1280" height="1014"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -297,9 +604,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/08.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/08.webp"
-                             alt="Grabación de pantalla" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/pdf-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/pdf-tools.webp"
+                             alt="Procesamiento por lotes de PDF" width="1280" height="1093"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -307,9 +614,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/09.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/09.webp"
-                             alt="Traducción avanzada" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/video-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/video-tools.webp"
+                             alt="Procesamiento por lotes de vídeo" width="1280" height="1093"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -317,9 +624,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/10.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/10.webp"
-                             alt="Reconocimiento de texto OCR" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/batch-rename.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/batch-rename.webp"
+                             alt="Renombrado por lotes" width="1280" height="1138"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -327,9 +634,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/11.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/11.webp"
-                             alt="Descarga de archivos" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/calculator.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/calculator.webp"
+                             alt="Hoja de cálculo libre" width="1280" height="1097"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -337,9 +644,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/12.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/12.webp"
-                             alt="Hoja de cálculo libre" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/calendar.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/calendar.webp"
+                             alt="Calendario perpetuo" width="1280" height="747"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -347,9 +654,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/13.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/13.webp"
-                             alt="Calendario perpetuo" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/hash.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/hash.webp"
+                             alt="Cálculo de hash" width="1280" height="1280"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -357,129 +664,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/14.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/14.webp"
-                             alt="Códigos QR" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/15.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/15.webp"
-                             alt="Asistente de recordatorios" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/16.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/16.webp"
-                             alt="Estadísticas de uso" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/17.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/17.webp"
-                             alt="Procesamiento por lotes de PDF" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/18.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/18.webp"
-                             alt="Procesamiento por lotes de imágenes" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/19.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/19.webp"
-                             alt="Procesamiento por lotes de vídeo" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/20.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/20.webp"
-                             alt="Renombrado por lotes" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/21.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/21.webp"
-                             alt="Cálculo de hash" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/22.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/22.webp"
-                             alt="Cifrado y descifrado" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/23.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/23.webp"
-                             alt="Conversión de datos" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/24.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/24.webp"
-                             alt="Codificar y decodificar" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/25.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/25.webp"
-                             alt="Generación de datos" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/26.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/26.webp"
-                             alt="Expresiones regulares" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/regex.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/regex.webp"
+                             alt="Expresiones regulares" width="1280" height="1081"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -502,11 +689,11 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="1" role="tab"
-                    aria-selected="false">Búsqueda de aplicaciones</button>
+                    aria-selected="false">Dock</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="2" role="tab"
-                    aria-selected="false">Búsqueda de archivos</button>
+                    aria-selected="false">Fondo de pantalla dinámico</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="3" role="tab"
@@ -514,93 +701,46 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="4" role="tab"
-                    aria-selected="false">Dock</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="5" role="tab"
-                    aria-selected="false">Fondo de pantalla dinámico</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="6" role="tab"
-                    aria-selected="false">Captura de pantalla</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="7" role="tab"
-                    aria-selected="false">Grabación de pantalla</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="8" role="tab"
                     aria-selected="false">Traducción avanzada</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="9" role="tab"
-                    aria-selected="false">Reconocimiento de texto OCR</button>
+                    data-i="5" role="tab"
+                    aria-selected="false">OCR rápido</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="10" role="tab"
-                    aria-selected="false">Descarga de archivos</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="11" role="tab"
-                    aria-selected="false">Hoja de cálculo libre</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="12" role="tab"
-                    aria-selected="false">Calendario perpetuo</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="13" role="tab"
-                    aria-selected="false">Códigos QR</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="14" role="tab"
-                    aria-selected="false">Asistente de recordatorios</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="15" role="tab"
-                    aria-selected="false">Estadísticas de uso</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="16" role="tab"
-                    aria-selected="false">Procesamiento por lotes de PDF</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="17" role="tab"
+                    data-i="6" role="tab"
                     aria-selected="false">Procesamiento por lotes de imágenes</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="18" role="tab"
+                    data-i="7" role="tab"
+                    aria-selected="false">Procesamiento por lotes de PDF</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="8" role="tab"
                     aria-selected="false">Procesamiento por lotes de vídeo</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="19" role="tab"
+                    data-i="9" role="tab"
                     aria-selected="false">Renombrado por lotes</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="20" role="tab"
+                    data-i="10" role="tab"
+                    aria-selected="false">Hoja de cálculo libre</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="11" role="tab"
+                    aria-selected="false">Calendario perpetuo</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="12" role="tab"
                     aria-selected="false">Cálculo de hash</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="21" role="tab"
-                    aria-selected="false">Cifrado y descifrado</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="22" role="tab"
-                    aria-selected="false">Conversión de datos</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="23" role="tab"
-                    aria-selected="false">Codificar y decodificar</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="24" role="tab"
-                    aria-selected="false">Generación de datos</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="25" role="tab"
+                    data-i="13" role="tab"
                     aria-selected="false">Expresiones regulares</button>
             
         </div>
+        
     </div>
 </section>
 
@@ -623,13 +763,13 @@
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
                 <h3>Una sola instalación</h3>
-                <p>Más de 40 módulos listos para usar, sin el habitual ciclo de buscar, comparar, descargar, probar y desinstalar.</p>
+                <p>388 módulos listos para usar, sin el habitual ciclo de buscar, comparar, descargar, probar y desinstalar.</p>
             </div>
             
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
                 <h3>388 módulos de comandos</h3>
-                <p>Comandos de IA, aplicaciones, juegos, sistema y sitios web siempre a mano, y basta un archivo JSON para añadir los suyos.</p>
+                <p>Comandos de IA, aplicaciones, juegos, sistema y sitios web siempre a mano.</p>
             </div>
             
         </div>
@@ -661,12 +801,13 @@
         </div>
 
         
+        
         <div class="mock reveal">
             <picture>
-                <source srcset="/carousel/en-dark/01.webp" media="(prefers-color-scheme: dark)">
-                <img src="/carousel/en-light/01.webp"
+                <source srcset="/carousel/en-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                <img src="/carousel/en-light/command-palette.webp"
                      alt="Pulse Alt+Space y encuentre cualquier cosa"
-                     width="797" height="599"
+                     width="1280" height="958"
                      loading="lazy" decoding="async">
             </picture>
         </div>
@@ -676,7 +817,7 @@
 <section class="section">
     <div class="wrap">
         <div class="section-head">
-            <h2>Seis categorías, más de cuarenta módulos</h2>
+            <h2>Seis categorías, 388 módulos</h2>
             <p>Cada categoría cubre lo que realmente hace a diario. Entre para ver la lista completa.</p>
         </div>
         <div class="grid grid-3">
@@ -764,7 +905,7 @@
             <a class="card card-link reveal" href="/es/features.html#extend">
                 <div class="card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
                 <h3>Cálculo y extensiones</h3>
-                <p>Un sistema abierto de módulos de comandos: añada un JSON y tendrá un comando más.</p>
+                <p>Un sistema abierto y ampliable de módulos de comandos.</p>
                 <ul class="card-tags">
                     
                     <li>Hoja de cálculo libre</li>
@@ -888,7 +1029,7 @@
                     <span class="faq-q"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i><span>¿Y frente a uTools, Wox o ZTools?</span></span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
-                <p>uTools es una plataforma de plugins: la base es gratuita, pero muchos plugins populares requieren una suscripción de pago. Wox es un lanzador de código abierto centrado en la búsqueda. ZTools es una alternativa open source a uTools, montada a partir de un mercado de plugins. yyzTools reúne más de 40 módulos en un solo instalador, sin suscripciones ni desbloqueos de pago, y mantiene los datos del portapapeles, la búsqueda y el OCR en su equipo.</p>
+                <p>uTools es una plataforma de plugins: la base es gratuita, pero muchos plugins populares requieren una suscripción de pago. Wox es un lanzador de código abierto centrado en la búsqueda. ZTools es una alternativa open source a uTools, montada a partir de un mercado de plugins. yyzTools reúne 388 módulos en un solo instalador, sin suscripciones ni desbloqueos de pago, y mantiene los datos del portapapeles, la búsqueda y el OCR en su equipo.</p>
             </details>
             
         </div>
@@ -933,8 +1074,10 @@
         <div class="footer-col">
             <h3>Recursos</h3>
             <a href="/es/sdk.html">Desarrolladores</a>
-            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Debates</a>
             <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Incidencias</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
         <div class="footer-col">

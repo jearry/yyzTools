@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>yyzTools — A free Windows productivity toolkit</title>
-<meta name="description" content="yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search &amp; preview, clipboard history, batch processing, live wallpaper and 40+ more. Local-first, free forever.">
+<meta name="description" content="yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search &amp; preview, clipboard history, batch processing, live wallpaper and 388 more. Local-first, free forever.">
 
 <meta property="og:title" content="yyzTools — A free Windows productivity toolkit">
-<meta property="og:description" content="yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search &amp; preview, clipboard history, batch processing, live wallpaper and 40+ more. Local-first, free forever.">
+<meta property="og:description" content="yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search &amp; preview, clipboard history, batch processing, live wallpaper and 388 more. Local-first, free forever.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yyztools.com/">
 <meta property="og:site_name" content="yyzTools">
@@ -42,7 +42,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="yyzTools — A free Windows productivity toolkit">
-<meta name="twitter:description" content="yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search &amp; preview, clipboard history, batch processing, live wallpaper and 40+ more. Local-first, free forever.">
+<meta name="twitter:description" content="yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search &amp; preview, clipboard history, batch processing, live wallpaper and 388 more. Local-first, free forever.">
 <meta name="twitter:image" content="https://yyztools.com/og-image.png">
 <meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
 
@@ -94,6 +94,15 @@
 
 <script>document.documentElement.classList.add('js');</script>
 
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
 
 <script>
 (function () {
@@ -129,9 +138,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-z91twtFV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DDlnQ26P.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-C1ixNZas.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CnRUax--.css">
 </head>
 <body>
 
@@ -150,11 +159,29 @@
             <a href="/changelog.html" >Changelog</a>
             
             <a href="/sdk.html" >Developers</a>
-            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Feedback</a>
-            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Feedback</a>
         </nav>
 
         <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="Theme">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="System" aria-label="System">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="Light" aria-label="Light">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="Dark" aria-label="Dark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
             
             <details class="lang-pick" id="langPick">
                 <summary aria-label="Language">
@@ -202,7 +229,7 @@
                     
                 </div>
             </details>
-            <a class="btn btn-sm btn-primary nav-cta" href="/download.html">Free download</a>
+            
             <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
                 
                 <span class="nav-toggle-bars"></span>
@@ -214,27 +241,306 @@
 <main>
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search & preview, clipboard history, batch processing, live wallpaper and 40+ more. Local-first, free forever.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it really free forever? Will you start charging?","acceptedAnswer":{"@type":"Answer","text":"Genuinely free. No paid unlocks, no membership tiers, and no holding core features back behind a paywall. We want yyzTools to be a tool you are happy to keep on your desktop long-term, not another subscription."}},{"@type":"Question","name":"Is my data uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Clipboard history, file search, app usage, and OCR are processed and stored locally. Only when you actively use an online feature such as translation does your input go to the third-party service you selected."}},{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. There is no sign-up, and the software does not collect identifying information."}},{"@type":"Question","name":"Which systems are supported?","acceptedAnswer":{"@type":"Answer","text":"64-bit Windows 10 and Windows 11. The Microsoft Edge WebView2 runtime is required; Windows 11 ships with it, and on Windows 10 the installer will guide you through adding it."}},{"@type":"Question","name":"Is it heavy on resources?","acceptedAnswer":{"@type":"Answer","text":"The resident main process is light, and wallpaper, capture, and input hints run as separate processes that only start when used. Game mode pauses wallpaper and effects in a single click."}},{"@type":"Question","name":"How does yyzTools differ from PowerToys?","acceptedAnswer":{"@type":"Answer","text":"PowerToys is Microsoft’s modular utility set for power users - you enable the pieces you want. yyzTools is an integrated suite: command palette, translation, OCR, clipboard history, and batch file / image / video / PDF tools come preconfigured in one installer, with a 12-language interface. Both are free, so many people simply keep both."}},{"@type":"Question","name":"How does it compare with Flow Launcher or Raycast?","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher is an excellent open-source launcher that shines at search and plugins. Raycast comes from macOS; its Windows version is still in beta and the full experience needs a Pro subscription. yyzTools is complete out of the box: translation, OCR, clipboard history, batch processing, and live wallpaper are all built in — no plugin hunting, no subscription."}},{"@type":"Question","name":"How does it compare with Everything or Listary?","acceptedAnswer":{"@type":"Answer","text":"Everything is an excellent dedicated filename-search tool; Listary adds a launcher and Explorer integration. Since v1.0.5, yyzTools runs its own in-house engine: direct $MFT reads with USN journal updates, Everything-style syntax (path: / ext: / size:), and a resident index of around 5–30 MB. The difference: one Alt+Space box searches files alongside apps, processes, windows, bookmarks, and clipboard, with preview, reveal, and recycle-bin actions built in. If all you want is the fastest filename search, Everything remains a great pick."}},{"@type":"Question","name":"I already use PowerToys — can I still install yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Yes, they coexist fine. The resident yyzTools process is light, wallpaper and capture start on demand, and every hotkey is customisable. A common setup: PowerToys for window snapping and key remapping, yyzTools for launching, translation, OCR, and batch processing."}},{"@type":"Question","name":"What about uTools, Wox, or ZTools?","acceptedAnswer":{"@type":"Answer","text":"uTools is a plugin platform - the shell is free, but popular plugins sit behind a paid membership. Wox is an open-source launcher focused on search. ZTools is an open-source uTools alternative assembled from a plugin market. yyzTools bundles 40+ modules into one installer with no membership and no paid unlocks, and keeps clipboard, search, and OCR data on your machine."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search & preview, clipboard history, batch processing, live wallpaper and 388 more. Local-first, free forever.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","downloadUrl":"https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe","inLanguage":["en","zh-CN","zh-TW","ja","ko","fr","de","es","ru","ar","pt","it"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it really free forever? Will you start charging?","acceptedAnswer":{"@type":"Answer","text":"Genuinely free. No paid unlocks, no membership tiers, and no holding core features back behind a paywall. We want yyzTools to be a tool you are happy to keep on your desktop long-term, not another subscription."}},{"@type":"Question","name":"Is my data uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Clipboard history, file search, app usage, and OCR are processed and stored locally. Only when you actively use an online feature such as translation does your input go to the third-party service you selected."}},{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. There is no sign-up, and the software does not collect identifying information."}},{"@type":"Question","name":"Which systems are supported?","acceptedAnswer":{"@type":"Answer","text":"64-bit Windows 10 and Windows 11. The Microsoft Edge WebView2 runtime is required; Windows 11 ships with it, and on Windows 10 the installer will guide you through adding it."}},{"@type":"Question","name":"Is it heavy on resources?","acceptedAnswer":{"@type":"Answer","text":"The resident main process is light, and wallpaper, capture, and input hints run as separate processes that only start when used. Game mode pauses wallpaper and effects in a single click."}},{"@type":"Question","name":"How does yyzTools differ from PowerToys?","acceptedAnswer":{"@type":"Answer","text":"PowerToys is Microsoft’s modular utility set for power users - you enable the pieces you want. yyzTools is an integrated suite: command palette, translation, OCR, clipboard history, and batch file / image / video / PDF tools come preconfigured in one installer, with a 12-language interface. Both are free, so many people simply keep both."}},{"@type":"Question","name":"How does it compare with Flow Launcher or Raycast?","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher is an excellent open-source launcher that shines at search and plugins. Raycast comes from macOS; its Windows version is still in beta and the full experience needs a Pro subscription. yyzTools is complete out of the box: translation, OCR, clipboard history, batch processing, and live wallpaper are all built in — no plugin hunting, no subscription."}},{"@type":"Question","name":"How does it compare with Everything or Listary?","acceptedAnswer":{"@type":"Answer","text":"Everything is an excellent dedicated filename-search tool; Listary adds a launcher and Explorer integration. Since v1.0.5, yyzTools runs its own in-house engine: direct $MFT reads with USN journal updates, Everything-style syntax (path: / ext: / size:), and a resident index of around 5–30 MB. The difference: one Alt+Space box searches files alongside apps, processes, windows, bookmarks, and clipboard, with preview, reveal, and recycle-bin actions built in. If all you want is the fastest filename search, Everything remains a great pick."}},{"@type":"Question","name":"I already use PowerToys — can I still install yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Yes, they coexist fine. The resident yyzTools process is light, wallpaper and capture start on demand, and every hotkey is customisable. A common setup: PowerToys for window snapping and key remapping, yyzTools for launching, translation, OCR, and batch processing."}},{"@type":"Question","name":"What about uTools, Wox, or ZTools?","acceptedAnswer":{"@type":"Answer","text":"uTools is a plugin platform - the shell is free, but popular plugins sit behind a paid membership. Wox is an open-source launcher focused on search. ZTools is an open-source uTools alternative assembled from a plugin market. yyzTools bundles 388 modules into one installer with no membership and no paid unlocks, and keeps clipboard, search, and OCR data on your machine."}}]}</script>
 
 <section class="hero">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap hero-inner">
-        <a class="badge" href="/changelog.html">
-            <span class="badge-dot"></span>Latest v1.0.7.1700
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <h1 class="hero-title">One toolbox for<br>every small thing on your desktop</h1>
-        <p class="hero-lead">Search, translate, recognise, preview, batch-process, capture, decorate — the frequent little jobs of everyday work and development, without hunting down or paying for a separate tool for each one. Install yyzTools once and whatever you need is already there.</p>
-        <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="/download.html">
-                <i class="fa-solid fa-download"></i>Download free
-            </a>
-            <a class="btn btn-ghost btn-lg" href="/features.html">
-                See what it does<i class="fa-solid fa-arrow-right"></i>
-            </a>
+        <div class="hero-copy">
+            <h1 class="hero-title">One toolbox for every small thing on your desktop</h1>
+            <p class="hero-lead">Search, translate, recognise, preview, batch-process, capture, decorate — the frequent little jobs of everyday work and development, without hunting down or paying for a separate tool for each one. Install yyzTools once and whatever you need is already there.</p>
+            <div class="hero-cta">
+                <a class="btn btn-primary btn-lg" href="/download.html">
+                    <i class="fa-solid fa-download"></i>Download free
+                </a>
+                <a class="btn btn-ghost btn-lg" href="/features.html">
+                    See what it does<i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="hero-meta">
+                <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64-bit · No sign-up</p>
+                <a class="badge" href="/changelog.html">
+                    <span class="badge-dot"></span>Latest v1.0.7.1700
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-        <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64-bit · No sign-up</p>
+
+        
+        <div class="hero-demo">
+            <div class="pal" role="img" aria-label="Press Alt+Space, then find anything — CmdPlate is the hub of yyzTools: apps, files, processes, windows, bookmarks, and clipboard all live behind one input. Type a prefix to switch search domains — no need to remember what any tool is called.">
+                <div class="pal-search">
+                    <i class="fa-solid fa-magnifying-glass pal-search-icon" aria-hidden="true"></i>
+                    <span class="pal-field" id="palField" data-placeholder="Search apps, files, bookmarks, clipboard…"><span class="ph">Search apps, files, bookmarks, clipboard…</span><span class="pal-caret" aria-hidden="true"></span></span>
+                    <i class="fa-solid fa-gear pal-gear" aria-hidden="true"></i>
+                </div>
+                <div class="pal-results">
+                    
+                    <div class="pal-scene" data-i="0" data-input="vs" data-prefix="">
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Code</span>
+                                    <span class="pal-desc">C:\Users\you\AppData\Local\Programs\Microsoft VS Code\Code.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-cube" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio 2022</span>
+                                    <span class="pal-desc">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Installer</span>
+                                    <span class="pal-desc">C:\Program Files (x86)\Microsoft Visual Studio\Installer</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-language" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Translate</span>
+                                    <span class="pal-desc">Alt+Shift+T</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Quick</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-google" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Google Search</span>
+                                    <span class="pal-desc">https://www.google.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Quick</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="1" data-input="ds" data-prefix="" hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-display" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Display Settings</span>
+                                    <span class="pal-desc">ms-settings:display</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Sound Settings</span>
+                                    <span class="pal-desc">ms-settings:sound</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">App</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-qrcode" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">QR Code</span>
+                                    <span class="pal-desc">Alt+Shift+Q</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Quick</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">GitHub Search</span>
+                                    <span class="pal-desc">https://github.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Quick</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="2" data-input="f report" data-prefix="f " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-word" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">quarterly-report.docx</span>
+                                    <span class="pal-desc">24 KB · D:\Docs\2026</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">File</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-final.pdf</span>
+                                    <span class="pal-desc">1.2 MB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">File</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-review.pptx</span>
+                                    <span class="pal-desc">480 KB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">File</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-excel" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">annual-report-2025.xlsx</span>
+                                    <span class="pal-desc">340 KB · OneDrive</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">File</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="3" data-input="=sqrt(16) + sin(pi/2)" data-prefix="=" hidden>
+                        
+                        <div class="pal-row pal-row-calc">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-formula">√16 + sin(π/2)</span>
+                                    <span class="pal-result">= 5</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Calc</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="4" data-input="c yyzTools" data-prefix="c " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-clipboard" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">yyzTools — one toolbox for your desktop</span>
+                                    <span class="pal-desc">Text · 09:12</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Clipboard</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">https://yyztools.com/download.html</span>
+                                    <span class="pal-desc">Text · 18:24</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Clipboard</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-clipimg">
+                            
+                            
+                            <span class="pal-thumb"><img src="/carousel/en-light/command-palette.webp" alt="" width="56" height="36" loading="lazy" decoding="async"></span>
+                            <span class="pal-main">
+                                <span class="pal-ocr-label">OCR</span>
+                                <span class="pal-ocr-text">yyzTools — Command Palette · Alt+Space</span>
+                            </span>
+                            
+                            <span class="pal-type">Clipboard</span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="pal-foot">
+                    <span>Enter to open · Shift+Enter as admin · Right-click for more</span>
+                    <kbd>Alt+Space</kbd>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -250,11 +556,12 @@
              aria-label="Yes Your Zen Tools">
             <div class="swiper-wrapper">
                 
+                
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/01.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/01.webp"
-                             alt="CmdPlate" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/command-palette.webp"
+                             alt="CmdPlate" width="1280" height="958"
                              loading=&#34;eager&#34; fetchpriority=&#34;high&#34;
                              decoding="async">
                     </picture>
@@ -262,9 +569,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/02.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/02.webp"
-                             alt="App search" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/tabdock.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/tabdock.webp"
+                             alt="Dock" width="1280" height="1106"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -272,9 +579,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/03.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/03.webp"
-                             alt="File search" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/wallpaper.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/wallpaper.webp"
+                             alt="Live wallpaper" width="1280" height="903"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -282,9 +589,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/04.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/04.webp"
-                             alt="File preview" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/file-preview.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/file-preview.webp"
+                             alt="File preview" width="1280" height="965"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -292,9 +599,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/05.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/05.webp"
-                             alt="Dock" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/translate.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/translate.webp"
+                             alt="Super translate" width="1280" height="853"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -302,9 +609,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/06.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/06.webp"
-                             alt="Live wallpaper" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/quick-ocr.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/quick-ocr.webp"
+                             alt="Quick OCR" width="1280" height="841"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -312,9 +619,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/07.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/07.webp"
-                             alt="Screen capture" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/image-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/image-tools.webp"
+                             alt="Batch image tool" width="1280" height="1014"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -322,9 +629,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/08.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/08.webp"
-                             alt="Screen recorder" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/pdf-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/pdf-tools.webp"
+                             alt="Batch PDF tool" width="1280" height="1093"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -332,9 +639,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/09.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/09.webp"
-                             alt="Super translate" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/video-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/video-tools.webp"
+                             alt="Batch video tool" width="1280" height="1093"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -342,9 +649,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/10.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/10.webp"
-                             alt="OCR" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/batch-rename.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/batch-rename.webp"
+                             alt="Batch rename" width="1280" height="1138"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -352,9 +659,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/11.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/11.webp"
-                             alt="Downloader" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/calculator.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/calculator.webp"
+                             alt="Calculator pad" width="1280" height="1097"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -362,9 +669,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/12.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/12.webp"
-                             alt="Calculator pad" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/calendar.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/calendar.webp"
+                             alt="Calendar" width="1280" height="747"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -372,9 +679,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/13.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/13.webp"
-                             alt="Calendar" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/hash.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/hash.webp"
+                             alt="Hash calculator" width="1280" height="1280"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -382,129 +689,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/14.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/14.webp"
-                             alt="QR codes" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/15.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/15.webp"
-                             alt="Reminders" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/16.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/16.webp"
-                             alt="App usage" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/17.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/17.webp"
-                             alt="Batch PDF tool" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/18.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/18.webp"
-                             alt="Batch image tool" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/19.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/19.webp"
-                             alt="Batch video tool" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/20.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/20.webp"
-                             alt="Batch rename" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/21.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/21.webp"
-                             alt="Hash calculator" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/22.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/22.webp"
-                             alt="Encryption" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/23.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/23.webp"
-                             alt="Data conversion" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/24.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/24.webp"
-                             alt="Encode / decode" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/25.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/25.webp"
-                             alt="Data generator" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/26.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/26.webp"
-                             alt="Regex tester" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/regex.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/regex.webp"
+                             alt="Regex tester" width="1280" height="1081"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -527,11 +714,11 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="1" role="tab"
-                    aria-selected="false">App search</button>
+                    aria-selected="false">Dock</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="2" role="tab"
-                    aria-selected="false">File search</button>
+                    aria-selected="false">Live wallpaper</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="3" role="tab"
@@ -539,93 +726,46 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="4" role="tab"
-                    aria-selected="false">Dock</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="5" role="tab"
-                    aria-selected="false">Live wallpaper</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="6" role="tab"
-                    aria-selected="false">Screen capture</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="7" role="tab"
-                    aria-selected="false">Screen recorder</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="8" role="tab"
                     aria-selected="false">Super translate</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="9" role="tab"
-                    aria-selected="false">OCR</button>
+                    data-i="5" role="tab"
+                    aria-selected="false">Quick OCR</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="10" role="tab"
-                    aria-selected="false">Downloader</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="11" role="tab"
-                    aria-selected="false">Calculator pad</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="12" role="tab"
-                    aria-selected="false">Calendar</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="13" role="tab"
-                    aria-selected="false">QR codes</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="14" role="tab"
-                    aria-selected="false">Reminders</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="15" role="tab"
-                    aria-selected="false">App usage</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="16" role="tab"
-                    aria-selected="false">Batch PDF tool</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="17" role="tab"
+                    data-i="6" role="tab"
                     aria-selected="false">Batch image tool</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="18" role="tab"
+                    data-i="7" role="tab"
+                    aria-selected="false">Batch PDF tool</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="8" role="tab"
                     aria-selected="false">Batch video tool</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="19" role="tab"
+                    data-i="9" role="tab"
                     aria-selected="false">Batch rename</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="20" role="tab"
+                    data-i="10" role="tab"
+                    aria-selected="false">Calculator pad</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="11" role="tab"
+                    aria-selected="false">Calendar</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="12" role="tab"
                     aria-selected="false">Hash calculator</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="21" role="tab"
-                    aria-selected="false">Encryption</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="22" role="tab"
-                    aria-selected="false">Data conversion</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="23" role="tab"
-                    aria-selected="false">Encode / decode</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="24" role="tab"
-                    aria-selected="false">Data generator</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="25" role="tab"
+                    data-i="13" role="tab"
                     aria-selected="false">Regex tester</button>
             
         </div>
+        
     </div>
 </section>
 
@@ -648,13 +788,13 @@
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
                 <h3>Install once</h3>
-                <p>40+ modules ready out of the box — skipping the whole cycle of searching, comparing, downloading, trialling, and uninstalling.</p>
+                <p>388 modules ready out of the box — skipping the whole cycle of searching, comparing, downloading, trialling, and uninstalling.</p>
             </div>
             
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
                 <h3>388 command modules</h3>
-                <p>AI, apps, games, system, and web commands on tap — and one JSON file is all it takes to add your own.</p>
+                <p>AI, apps, games, system, and web commands on tap.</p>
             </div>
             
         </div>
@@ -686,12 +826,13 @@
         </div>
 
         
+        
         <div class="mock reveal">
             <picture>
-                <source srcset="/carousel/en-dark/01.webp" media="(prefers-color-scheme: dark)">
-                <img src="/carousel/en-light/01.webp"
+                <source srcset="/carousel/en-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                <img src="/carousel/en-light/command-palette.webp"
                      alt="Press Alt+Space, then find anything"
-                     width="797" height="599"
+                     width="1280" height="958"
                      loading="lazy" decoding="async">
             </picture>
         </div>
@@ -701,7 +842,7 @@
 <section class="section">
     <div class="wrap">
         <div class="section-head">
-            <h2>Six categories, forty-odd modules</h2>
+            <h2>Six categories, 388 modules</h2>
             <p>Each category covers the handful of things you actually do every day. Open it for the full list.</p>
         </div>
         <div class="grid grid-3">
@@ -789,7 +930,7 @@
             <a class="card card-link reveal" href="/features.html#extend">
                 <div class="card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
                 <h3>Compute &amp; extend</h3>
-                <p>An open command-module system — drop in a JSON file, get a new command.</p>
+                <p>An open, extensible command-module system.</p>
                 <ul class="card-tags">
                     
                     <li>Calculator pad</li>
@@ -913,7 +1054,7 @@
                     <span class="faq-q"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i><span>What about uTools, Wox, or ZTools?</span></span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
-                <p>uTools is a plugin platform - the shell is free, but popular plugins sit behind a paid membership. Wox is an open-source launcher focused on search. ZTools is an open-source uTools alternative assembled from a plugin market. yyzTools bundles 40+ modules into one installer with no membership and no paid unlocks, and keeps clipboard, search, and OCR data on your machine.</p>
+                <p>uTools is a plugin platform - the shell is free, but popular plugins sit behind a paid membership. Wox is an open-source launcher focused on search. ZTools is an open-source uTools alternative assembled from a plugin market. yyzTools bundles 388 modules into one installer with no membership and no paid unlocks, and keeps clipboard, search, and OCR data on your machine.</p>
             </details>
             
         </div>
@@ -958,8 +1099,10 @@
         <div class="footer-col">
             <h3>Resources</h3>
             <a href="/sdk.html">Developers</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Report an issue</a>
             <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Feedback</a>
         </div>
 
         <div class="footer-col">

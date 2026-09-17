@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>yyzTools — бесплатный набор инструментов для рабочего стола Windows</title>
-<meta name="description" content="yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои и ещё более 40 функций. Локальная обработка, бесплатно навсегда.">
+<meta name="description" content="yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои 388 функций. Локальная обработка, бесплатно навсегда.">
 
 <meta property="og:title" content="yyzTools — бесплатный набор инструментов для рабочего стола Windows">
-<meta property="og:description" content="yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои и ещё более 40 функций. Локальная обработка, бесплатно навсегда.">
+<meta property="og:description" content="yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои 388 функций. Локальная обработка, бесплатно навсегда.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yyztools.com/ru/">
 <meta property="og:site_name" content="yyzTools">
@@ -42,7 +42,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="yyzTools — бесплатный набор инструментов для рабочего стола Windows">
-<meta name="twitter:description" content="yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои и ещё более 40 функций. Локальная обработка, бесплатно навсегда.">
+<meta name="twitter:description" content="yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои 388 функций. Локальная обработка, бесплатно навсегда.">
 <meta name="twitter:image" content="https://yyztools.com/og-image.png">
 <meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
 
@@ -94,6 +94,15 @@
 
 <script>document.documentElement.classList.add('js');</script>
 
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
 
 
 <script type="text/javascript">
@@ -104,9 +113,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-z91twtFV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DDlnQ26P.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-C1ixNZas.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CnRUax--.css">
 </head>
 <body>
 
@@ -125,11 +134,29 @@
             <a href="/ru/changelog.html" >Обновления</a>
             
             <a href="/ru/sdk.html" >Разработчикам</a>
-            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Обратная связь</a>
-            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Обратная связь</a>
         </nav>
 
         <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="Тема">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="Системная" aria-label="Системная">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="Светлая" aria-label="Светлая">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="Тёмная" aria-label="Тёмная">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
             
             <details class="lang-pick" id="langPick">
                 <summary aria-label="Язык">
@@ -177,7 +204,7 @@
                     
                 </div>
             </details>
-            <a class="btn btn-sm btn-primary nav-cta" href="/ru/download.html">Скачать</a>
+            
             <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
                 
                 <span class="nav-toggle-bars"></span>
@@ -189,27 +216,306 @@
 <main>
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои и ещё более 40 функций. Локальная обработка, бесплатно навсегда.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Программа действительно бесплатна навсегда? Не появится ли плата позже?","acceptedAnswer":{"@type":"Answer","text":"Действительно бесплатна. Ни платной разблокировки, ни уровней подписки, и ключевые возможности не переносятся за платный барьер. Мы хотим, чтобы yyzTools был инструментом, который вы надолго оставите на рабочем столе, а не очередной подпиской."}},{"@type":"Question","name":"Отправляются ли мои данные куда-либо?","acceptedAnswer":{"@type":"Answer","text":"Нет. История буфера обмена, поиск файлов, статистика приложений и OCR обрабатываются и хранятся локально. Только когда вы сами используете сетевую функцию вроде перевода, введённый текст уходит выбранному вами сторонному сервису. Кроме того, программа периодически проверяет обновления — в этом запросе передаётся только номер версии."}},{"@type":"Question","name":"Нужна ли учётная запись?","acceptedAnswer":{"@type":"Answer","text":"Нет. Регистрация не требуется, и программа не собирает данные о вашей личности."}},{"@type":"Question","name":"Какие системы поддерживаются?","acceptedAnswer":{"@type":"Answer","text":"64-битные Windows 10 и Windows 11. Требуется среда выполнения Microsoft Edge WebView2: в Windows 11 она встроена, а в Windows 10 установщик поможет её добавить, если она отсутствует."}},{"@type":"Question","name":"Много ли расходуется ресурсов?","acceptedAnswer":{"@type":"Answer","text":"Постоянно работающий основной процесс очень лёгкий, а обои, скриншоты и подсказки клавиш вынесены в отдельные процессы и запускаются только по необходимости. Перед игрой можно одним нажатием включить игровой режим и приостановить обои и эффекты."}},{"@type":"Question","name":"Чем yyzTools отличается от PowerToys?","acceptedAnswer":{"@type":"Answer","text":"PowerToys - модульный набор утилит Microsoft для опытных пользователей: нужные компоненты включаются вручную. yyzTools - интегрированный пакет: командная панель, перевод, OCR, история буфера обмена и пакетная обработка файлов, изображений, видео и PDF уже настроены и готовы к работе в одном установщике, интерфейс переведён на 12 языков. Оба бесплатны, поэтому многие держат оба."}},{"@type":"Question","name":"Как насчёт Flow Launcher или Raycast?","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher - отличный открытый лаунчер, силён в поиске и плагинах. Raycast родом из macOS: версия для Windows ещё в бете, а полный опыт требует подписки Pro. yyzTools «полон сразу после установки»: перевод, OCR, история буфера обмена, пакетная обработка и живые обои встроены - не нужно искать плагины и оформлять подписку."}},{"@type":"Question","name":"Как насчёт Everything или Listary?","acceptedAnswer":{"@type":"Answer","text":"Everything - отличный специализированный инструмент поиска файлов по имени; Listary добавляет лаунчер и интеграцию с Проводником. Начиная с v1.0.5, yyzTools работает на собственном движке: прямое чтение $MFT с обновлениями через журнал USN, синтаксис в стиле Everything (path: / ext: / size:) и резидентный индекс около 5–30 МБ. Разница в том, что в одном поле Alt+Space файлы ищутся вместе с приложениями, процессами, окнами, закладками и буфером обмена, причём предпросмотр, показ в папке и удаление в корзину уже встроены. Если вам нужен только самый быстрый поиск файлов по имени, Everything остаётся отличным выбором."}},{"@type":"Question","name":"Я уже пользуюсь PowerToys - можно поставить и yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Да, они отлично уживаются. Резидентный процесс yyzTools лёгкий, обои и скриншоты запускаются по требованию, а горячие клавиши полностью настраиваются. Типичная связка: PowerToys - за прилипание окон и переназначение клавиш, yyzTools - за запуск, перевод, OCR и пакетную обработку."}},{"@type":"Question","name":"А как насчёт uTools, Wox или ZTools?","acceptedAnswer":{"@type":"Answer","text":"uTools - платформа с плагинами: сама оболочка бесплатна, но многие популярные плагины требуют платной подписки. Wox - лаунчер с открытым кодом, ориентированный на поиск. ZTools - открытая альтернатива uTools, собирающая функции из магазина плагинов. yyzTools объединяет более 40 модулей в одном установщике - без подписки и платных разблокировок, - а данные буфера обмена, поиска и OCR остаются на вашем компьютере."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools — набор инструментов производительности для Windows: командная панель, суперперевод, OCR, поиск и предпросмотр файлов, история буфера обмена, пакетная обработка, динамические обои 388 функций. Локальная обработка, бесплатно навсегда.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.7.1700","downloadUrl":"https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe","inLanguage":["en","zh-CN","zh-TW","ja","ko","fr","de","es","ru","ar","pt","it"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Программа действительно бесплатна навсегда? Не появится ли плата позже?","acceptedAnswer":{"@type":"Answer","text":"Действительно бесплатна. Ни платной разблокировки, ни уровней подписки, и ключевые возможности не переносятся за платный барьер. Мы хотим, чтобы yyzTools был инструментом, который вы надолго оставите на рабочем столе, а не очередной подпиской."}},{"@type":"Question","name":"Отправляются ли мои данные куда-либо?","acceptedAnswer":{"@type":"Answer","text":"Нет. История буфера обмена, поиск файлов, статистика приложений и OCR обрабатываются и хранятся локально. Только когда вы сами используете сетевую функцию вроде перевода, введённый текст уходит выбранному вами сторонному сервису. Кроме того, программа периодически проверяет обновления — в этом запросе передаётся только номер версии."}},{"@type":"Question","name":"Нужна ли учётная запись?","acceptedAnswer":{"@type":"Answer","text":"Нет. Регистрация не требуется, и программа не собирает данные о вашей личности."}},{"@type":"Question","name":"Какие системы поддерживаются?","acceptedAnswer":{"@type":"Answer","text":"64-битные Windows 10 и Windows 11. Требуется среда выполнения Microsoft Edge WebView2: в Windows 11 она встроена, а в Windows 10 установщик поможет её добавить, если она отсутствует."}},{"@type":"Question","name":"Много ли расходуется ресурсов?","acceptedAnswer":{"@type":"Answer","text":"Постоянно работающий основной процесс очень лёгкий, а обои, скриншоты и подсказки клавиш вынесены в отдельные процессы и запускаются только по необходимости. Перед игрой можно одним нажатием включить игровой режим и приостановить обои и эффекты."}},{"@type":"Question","name":"Чем yyzTools отличается от PowerToys?","acceptedAnswer":{"@type":"Answer","text":"PowerToys - модульный набор утилит Microsoft для опытных пользователей: нужные компоненты включаются вручную. yyzTools - интегрированный пакет: командная панель, перевод, OCR, история буфера обмена и пакетная обработка файлов, изображений, видео и PDF уже настроены и готовы к работе в одном установщике, интерфейс переведён на 12 языков. Оба бесплатны, поэтому многие держат оба."}},{"@type":"Question","name":"Как насчёт Flow Launcher или Raycast?","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher - отличный открытый лаунчер, силён в поиске и плагинах. Raycast родом из macOS: версия для Windows ещё в бете, а полный опыт требует подписки Pro. yyzTools «полон сразу после установки»: перевод, OCR, история буфера обмена, пакетная обработка и живые обои встроены - не нужно искать плагины и оформлять подписку."}},{"@type":"Question","name":"Как насчёт Everything или Listary?","acceptedAnswer":{"@type":"Answer","text":"Everything - отличный специализированный инструмент поиска файлов по имени; Listary добавляет лаунчер и интеграцию с Проводником. Начиная с v1.0.5, yyzTools работает на собственном движке: прямое чтение $MFT с обновлениями через журнал USN, синтаксис в стиле Everything (path: / ext: / size:) и резидентный индекс около 5–30 МБ. Разница в том, что в одном поле Alt+Space файлы ищутся вместе с приложениями, процессами, окнами, закладками и буфером обмена, причём предпросмотр, показ в папке и удаление в корзину уже встроены. Если вам нужен только самый быстрый поиск файлов по имени, Everything остаётся отличным выбором."}},{"@type":"Question","name":"Я уже пользуюсь PowerToys - можно поставить и yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Да, они отлично уживаются. Резидентный процесс yyzTools лёгкий, обои и скриншоты запускаются по требованию, а горячие клавиши полностью настраиваются. Типичная связка: PowerToys - за прилипание окон и переназначение клавиш, yyzTools - за запуск, перевод, OCR и пакетную обработку."}},{"@type":"Question","name":"А как насчёт uTools, Wox или ZTools?","acceptedAnswer":{"@type":"Answer","text":"uTools - платформа с плагинами: сама оболочка бесплатна, но многие популярные плагины требуют платной подписки. Wox - лаунчер с открытым кодом, ориентированный на поиск. ZTools - открытая альтернатива uTools, собирающая функции из магазина плагинов. yyzTools объединяет 388 модулей в одном установщике - без подписки и платных разблокировок, - а данные буфера обмена, поиска и OCR остаются на вашем компьютере."}}]}</script>
 
 <section class="hero">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap hero-inner">
-        <a class="badge" href="/ru/changelog.html">
-            <span class="badge-dot"></span>Последняя версия v1.0.7.1700
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <h1 class="hero-title">Один набор инструментов<br>для всех мелочей на вашем рабочем столе</h1>
-        <p class="hero-lead">Поиск, перевод, распознавание, предпросмотр, пакетная обработка, скриншоты, обои — частые и мелкие задачи повседневной работы и разработки, ради которых больше не нужно искать и оплачивать отдельные программы. Установите yyzTools один раз — и всё нужное окажется под рукой.</p>
-        <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="/ru/download.html">
-                <i class="fa-solid fa-download"></i>Скачать
-            </a>
-            <a class="btn btn-ghost btn-lg" href="/ru/features.html">
-                Все функции<i class="fa-solid fa-arrow-right"></i>
-            </a>
+        <div class="hero-copy">
+            <h1 class="hero-title">Один набор инструментов для всех мелочей на вашем рабочем столе</h1>
+            <p class="hero-lead">Поиск, перевод, распознавание, предпросмотр, пакетная обработка, скриншоты, обои — частые и мелкие задачи повседневной работы и разработки, ради которых больше не нужно искать и оплачивать отдельные программы. Установите yyzTools один раз — и всё нужное окажется под рукой.</p>
+            <div class="hero-cta">
+                <a class="btn btn-primary btn-lg" href="/ru/download.html">
+                    <i class="fa-solid fa-download"></i>Скачать
+                </a>
+                <a class="btn btn-ghost btn-lg" href="/ru/features.html">
+                    Все функции<i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="hero-meta">
+                <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64 бита · без регистрации</p>
+                <a class="badge" href="/ru/changelog.html">
+                    <span class="badge-dot"></span>Последняя версия v1.0.7.1700
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-        <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64 бита · без регистрации</p>
+
+        
+        <div class="hero-demo">
+            <div class="pal" role="img" aria-label="Нажмите Alt+Space — и вы найдёте всё — Командная панель — центр yyzTools: приложения, файлы, процессы, окна, закладки и буфер обмена в одном поле ввода. Префикс переключает область поиска, и не нужно помнить, как называется тот или иной инструмент.">
+                <div class="pal-search">
+                    <i class="fa-solid fa-magnifying-glass pal-search-icon" aria-hidden="true"></i>
+                    <span class="pal-field" id="palField" data-placeholder="Поиск приложений, файлов, закладок, буфера обмена…"><span class="ph">Поиск приложений, файлов, закладок, буфера обмена…</span><span class="pal-caret" aria-hidden="true"></span></span>
+                    <i class="fa-solid fa-gear pal-gear" aria-hidden="true"></i>
+                </div>
+                <div class="pal-results">
+                    
+                    <div class="pal-scene" data-i="0" data-input="vs" data-prefix="">
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Code</span>
+                                    <span class="pal-desc">C:\Users\you\AppData\Local\Programs\Microsoft VS Code\Code.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Приложение</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-cube" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio 2022</span>
+                                    <span class="pal-desc">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Приложение</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Visual Studio Installer</span>
+                                    <span class="pal-desc">C:\Program Files (x86)\Microsoft Visual Studio\Installer</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Приложение</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-language" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Translate</span>
+                                    <span class="pal-desc">Alt+Shift+T</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Быстрый</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-google" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Google Search</span>
+                                    <span class="pal-desc">https://www.google.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Быстрый</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="1" data-input="ds" data-prefix="" hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-display" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Display Settings</span>
+                                    <span class="pal-desc">ms-settings:display</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Приложение</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">Sound Settings</span>
+                                    <span class="pal-desc">ms-settings:sound</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Приложение</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-builtin">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-qrcode" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">QR Code</span>
+                                    <span class="pal-desc">Alt+Shift+Q</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Быстрый</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-qo pal-row-qo-custom">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">GitHub Search</span>
+                                    <span class="pal-desc">https://github.com/search?q=</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Быстрый</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="2" data-input="f report" data-prefix="f " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-word" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">quarterly-report.docx</span>
+                                    <span class="pal-desc">24 KB · D:\Docs\2026</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Файл</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-final.pdf</span>
+                                    <span class="pal-desc">1.2 MB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Файл</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">report-review.pptx</span>
+                                    <span class="pal-desc">480 KB · D:\Reports</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Файл</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-file-excel" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">annual-report-2025.xlsx</span>
+                                    <span class="pal-desc">340 KB · OneDrive</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Файл</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="3" data-input="=sqrt(16) + sin(pi/2)" data-prefix="=" hidden>
+                        
+                        <div class="pal-row pal-row-calc">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-formula">√16 + sin(π/2)</span>
+                                    <span class="pal-result">= 5</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Калькулятор</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="pal-scene" data-i="4" data-input="c yyzTools" data-prefix="c " hidden>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-clipboard" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">yyzTools — one toolbox for your desktop</span>
+                                    <span class="pal-desc">Text · 09:12</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Буфер обмена</span>
+                        </div>
+                        
+                        <div class="pal-row">
+                            
+                            
+                            <span class="pal-ico"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
+                            <span class="pal-main">
+                                
+                                    <span class="pal-name">https://yyztools.com/download.html</span>
+                                    <span class="pal-desc">Text · 18:24</span>
+                                
+                            </span>
+                            
+                            <span class="pal-type">Буфер обмена</span>
+                        </div>
+                        
+                        <div class="pal-row pal-row-clipimg">
+                            
+                            
+                            <span class="pal-thumb"><img src="/carousel/en-light/command-palette.webp" alt="" width="56" height="36" loading="lazy" decoding="async"></span>
+                            <span class="pal-main">
+                                <span class="pal-ocr-label">OCR</span>
+                                <span class="pal-ocr-text">yyzTools — Command Palette · Alt+Space</span>
+                            </span>
+                            
+                            <span class="pal-type">Буфер обмена</span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="pal-foot">
+                    <span>Enter — открыть · Shift+Enter — от имени администратора · правый клик — ещё действия</span>
+                    <kbd>Alt+Space</kbd>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -225,11 +531,12 @@
              aria-label="Yes Your Zen Tools">
             <div class="swiper-wrapper">
                 
+                
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/01.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/01.webp"
-                             alt="Командная панель" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/command-palette.webp"
+                             alt="Командная панель" width="1280" height="958"
                              loading=&#34;eager&#34; fetchpriority=&#34;high&#34;
                              decoding="async">
                     </picture>
@@ -237,9 +544,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/02.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/02.webp"
-                             alt="Поиск приложений" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/tabdock.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/tabdock.webp"
+                             alt="Док" width="1280" height="1106"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -247,9 +554,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/03.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/03.webp"
-                             alt="Поиск файлов" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/wallpaper.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/wallpaper.webp"
+                             alt="Динамические обои" width="1280" height="903"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -257,9 +564,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/04.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/04.webp"
-                             alt="Предпросмотр файлов" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/file-preview.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/file-preview.webp"
+                             alt="Предпросмотр файлов" width="1280" height="965"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -267,9 +574,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/05.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/05.webp"
-                             alt="Док" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/translate.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/translate.webp"
+                             alt="Суперперевод" width="1280" height="853"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -277,9 +584,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/06.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/06.webp"
-                             alt="Динамические обои" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/quick-ocr.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/quick-ocr.webp"
+                             alt="Быстрое OCR" width="1280" height="841"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -287,9 +594,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/07.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/07.webp"
-                             alt="Снимок экрана" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/image-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/image-tools.webp"
+                             alt="Пакетная обработка изображений" width="1280" height="1014"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -297,9 +604,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/08.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/08.webp"
-                             alt="Запись экрана" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/pdf-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/pdf-tools.webp"
+                             alt="Пакетная обработка PDF" width="1280" height="1093"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -307,9 +614,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/09.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/09.webp"
-                             alt="Суперперевод" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/video-tools.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/video-tools.webp"
+                             alt="Пакетная обработка видео" width="1280" height="1093"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -317,9 +624,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/10.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/10.webp"
-                             alt="Распознавание текста OCR" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/batch-rename.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/batch-rename.webp"
+                             alt="Пакетное переименование" width="1280" height="1138"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -327,9 +634,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/11.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/11.webp"
-                             alt="Загрузка файлов" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/calculator.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/calculator.webp"
+                             alt="Черновик вычислений" width="1280" height="1097"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -337,9 +644,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/12.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/12.webp"
-                             alt="Черновик вычислений" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/calendar.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/calendar.webp"
+                             alt="Вечный календарь" width="1280" height="747"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -347,9 +654,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/13.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/13.webp"
-                             alt="Вечный календарь" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/hash.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/hash.webp"
+                             alt="Расчёт хешей" width="1280" height="1280"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -357,129 +664,9 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
-                        <source srcset="/carousel/en-dark/14.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/14.webp"
-                             alt="QR-код" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/15.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/15.webp"
-                             alt="Помощник напоминаний" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/16.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/16.webp"
-                             alt="Статистика приложений" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/17.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/17.webp"
-                             alt="Пакетная обработка PDF" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/18.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/18.webp"
-                             alt="Пакетная обработка изображений" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/19.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/19.webp"
-                             alt="Пакетная обработка видео" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/20.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/20.webp"
-                             alt="Пакетное переименование" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/21.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/21.webp"
-                             alt="Расчёт хешей" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/22.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/22.webp"
-                             alt="Шифрование и расшифровка" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/23.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/23.webp"
-                             alt="Преобразование данных" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/24.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/24.webp"
-                             alt="Кодирование и декодирование" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/25.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/25.webp"
-                             alt="Генерация данных" width="1280" height="800"
-                             loading=&#34;lazy&#34;
-                             decoding="async">
-                    </picture>
-                </div>
-                
-                <div class="swiper-slide showcase-slide">
-                    <picture>
-                        <source srcset="/carousel/en-dark/26.webp" media="(prefers-color-scheme: dark)">
-                        <img src="/carousel/en-light/26.webp"
-                             alt="Регулярные выражения" width="1280" height="800"
+                        <source srcset="/carousel/en-dark/regex.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/regex.webp"
+                             alt="Регулярные выражения" width="1280" height="1081"
                              loading=&#34;lazy&#34;
                              decoding="async">
                     </picture>
@@ -502,11 +689,11 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="1" role="tab"
-                    aria-selected="false">Поиск приложений</button>
+                    aria-selected="false">Док</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="2" role="tab"
-                    aria-selected="false">Поиск файлов</button>
+                    aria-selected="false">Динамические обои</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="3" role="tab"
@@ -514,93 +701,46 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="4" role="tab"
-                    aria-selected="false">Док</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="5" role="tab"
-                    aria-selected="false">Динамические обои</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="6" role="tab"
-                    aria-selected="false">Снимок экрана</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="7" role="tab"
-                    aria-selected="false">Запись экрана</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="8" role="tab"
                     aria-selected="false">Суперперевод</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="9" role="tab"
-                    aria-selected="false">Распознавание текста OCR</button>
+                    data-i="5" role="tab"
+                    aria-selected="false">Быстрое OCR</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="10" role="tab"
-                    aria-selected="false">Загрузка файлов</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="11" role="tab"
-                    aria-selected="false">Черновик вычислений</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="12" role="tab"
-                    aria-selected="false">Вечный календарь</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="13" role="tab"
-                    aria-selected="false">QR-код</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="14" role="tab"
-                    aria-selected="false">Помощник напоминаний</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="15" role="tab"
-                    aria-selected="false">Статистика приложений</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="16" role="tab"
-                    aria-selected="false">Пакетная обработка PDF</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="17" role="tab"
+                    data-i="6" role="tab"
                     aria-selected="false">Пакетная обработка изображений</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="18" role="tab"
+                    data-i="7" role="tab"
+                    aria-selected="false">Пакетная обработка PDF</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="8" role="tab"
                     aria-selected="false">Пакетная обработка видео</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="19" role="tab"
+                    data-i="9" role="tab"
                     aria-selected="false">Пакетное переименование</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="20" role="tab"
+                    data-i="10" role="tab"
+                    aria-selected="false">Черновик вычислений</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="11" role="tab"
+                    aria-selected="false">Вечный календарь</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="12" role="tab"
                     aria-selected="false">Расчёт хешей</button>
             
             <button type="button" class="showcase-thumb"
-                    data-i="21" role="tab"
-                    aria-selected="false">Шифрование и расшифровка</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="22" role="tab"
-                    aria-selected="false">Преобразование данных</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="23" role="tab"
-                    aria-selected="false">Кодирование и декодирование</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="24" role="tab"
-                    aria-selected="false">Генерация данных</button>
-            
-            <button type="button" class="showcase-thumb"
-                    data-i="25" role="tab"
+                    data-i="13" role="tab"
                     aria-selected="false">Регулярные выражения</button>
             
         </div>
+        
     </div>
 </section>
 
@@ -623,13 +763,13 @@
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
                 <h3>Одна установка</h3>
-                <p>Более 40 модулей готовы к работе сразу — без круга поисков, сравнений, загрузок, пробных версий и удалений.</p>
+                <p>388 модулей готовы к работе сразу — без круга поисков, сравнений, загрузок, пробных версий и удалений.</p>
             </div>
             
             <div class="card hl reveal">
                 <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
                 <h3>388 командных модулей</h3>
-                <p>Команды пяти категорий: ИИ, приложения, игры, система и веб-сайты. Чтобы добавить свою, достаточно одного файла JSON.</p>
+                <p>Команды пяти категорий: ИИ, приложения, игры, система и веб-сайты.</p>
             </div>
             
         </div>
@@ -661,12 +801,13 @@
         </div>
 
         
+        
         <div class="mock reveal">
             <picture>
-                <source srcset="/carousel/en-dark/01.webp" media="(prefers-color-scheme: dark)">
-                <img src="/carousel/en-light/01.webp"
+                <source srcset="/carousel/en-dark/command-palette.webp" media="(prefers-color-scheme: dark)">
+                <img src="/carousel/en-light/command-palette.webp"
                      alt="Нажмите Alt+Space — и вы найдёте всё"
-                     width="797" height="599"
+                     width="1280" height="958"
                      loading="lazy" decoding="async">
             </picture>
         </div>
@@ -764,7 +905,7 @@
             <a class="card card-link reveal" href="/ru/features.html#extend">
                 <div class="card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
                 <h3>Вычисления и расширения</h3>
-                <p>Открытая система командных модулей: добавили JSON — получили новую команду.</p>
+                <p>Открытая расширяемая система командных модулей.</p>
                 <ul class="card-tags">
                     
                     <li>Черновик вычислений</li>
@@ -888,7 +1029,7 @@
                     <span class="faq-q"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i><span>А как насчёт uTools, Wox или ZTools?</span></span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
-                <p>uTools - платформа с плагинами: сама оболочка бесплатна, но многие популярные плагины требуют платной подписки. Wox - лаунчер с открытым кодом, ориентированный на поиск. ZTools - открытая альтернатива uTools, собирающая функции из магазина плагинов. yyzTools объединяет более 40 модулей в одном установщике - без подписки и платных разблокировок, - а данные буфера обмена, поиска и OCR остаются на вашем компьютере.</p>
+                <p>uTools - платформа с плагинами: сама оболочка бесплатна, но многие популярные плагины требуют платной подписки. Wox - лаунчер с открытым кодом, ориентированный на поиск. ZTools - открытая альтернатива uTools, собирающая функции из магазина плагинов. yyzTools объединяет 388 модулей в одном установщике - без подписки и платных разблокировок, - а данные буфера обмена, поиска и OCR остаются на вашем компьютере.</p>
             </details>
             
         </div>
@@ -933,8 +1074,10 @@
         <div class="footer-col">
             <h3>Ресурсы</h3>
             <a href="/ru/sdk.html">Разработчикам</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Обсуждения</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Сообщить о проблеме</a>
             <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Обратная связь</a>
         </div>
 
         <div class="footer-col">
