@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <strong>Français</strong> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.7.1700-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.8.1800-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-gratuit-red">
@@ -36,14 +36,14 @@ Rechercher, traduire, reconnaître, prévisualiser, traiter par lots, capturer, 
 - **Gratuit à vie** — Toutes les fonctions sont ouvertes : aucun déblocage payant, aucun abonnement, et jamais de version bridée destinée à vous faire payer les fonctions essentielles.
 - **Priorité au local** — Presse-papiers, recherche de fichiers, statistiques d’usage, OCR : tout est traité et conservé sur votre propre ordinateur, rien n’est envoyé de lui-même.
 - **Une seule installation** — Plus de 40 modules prêts à l’emploi, ce qui vous épargne le cycle habituel : chercher, comparer, télécharger, essayer, désinstaller.
-- **379 modules de commandes** — Cinq catégories — IA, applications, jeux, système, sites web — disponibles immédiatement, et un simple fichier JSON suffit pour en ajouter.
+- **388 modules de commandes** — Cinq catégories — IA, applications, jeux, système, sites web — disponibles immédiatement, et un simple fichier JSON suffit pour en ajouter.
 
 ## Fonctions
 
 | | |
 |---|---|
 | **Palette de commandes** | Recherche d’applications · Recherche de fichiers · Gestion des processus · Gestion des fenêtres · Recherche de favoris · Historique du presse-papiers · Ligne de commande · Calcul instantané |
-| **Lancement et productivité** | Dock · Historique du presse-papiers · Statistiques d’applications · Capture d’écran · Enregistrement d’écran · Assistant de rappels · Calendrier perpétuel · Indication des touches · Localisation de la souris |
+| **Lancement et productivité** | Dock · Historique du presse-papiers · Statistiques d’applications · Capture d’écran · Enregistrement d’écran · Assistant de rappels · Calendrier perpétuel · Indication des touches · Localisation de la souris · Analyse et nettoyage de fichiers éclair · Analyse de l'espace disque éclair · Nettoyage de mémoire éclair · Optimiseur système éclair |
 | **Texte et langues** | Traduction avancée · Reconnaissance de texte OCR · Expressions régulières · Encodage et décodage · Calcul de hachage · Chiffrement et déchiffrement · Conversion de données · Génération de données |
 | **Fichiers et médias** | Aperçu de fichiers · Renommage par lots · Traitement d’images par lots · Traitement vidéo par lots · Traitement PDF par lots · Téléchargement de fichiers |
 | **Calcul et extensions** | Bloc de calcul · QR code · Modules de commandes · Navigateur intégré · Extensions personnalisées |
@@ -68,7 +68,7 @@ Le front end appelle les Manager C++ via le pont `window.Zen`, tous répondant s
 
 ## Téléchargement
 
-- **Installateur** (recommandé) : `yyzTools-setup-1.0.7.1700.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installateur** (recommandé) : `yyzTools-setup-1.0.8.1800.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Connexion lente depuis la Chine ? Préfixez l'URL de l'installateur par un miroir : [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Vous pouvez aussi le récupérer sur la [page de téléchargement officielle](https://yyztools.com/fr/download.html).
 

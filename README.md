@@ -11,7 +11,7 @@
 <p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.7.1700-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.8.1800-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-Free-red">
@@ -37,14 +37,14 @@ Search, translate, recognise, preview, batch-process, capture, decorate — the 
 - **Free forever** — Every feature is open. No paid unlocks, no membership tiers, and no crippling the core to sell it back to you.
 - **Local-first** — Clipboard, file search, usage stats, and OCR are all processed and stored on your own machine. Nothing is uploaded on its own.
 - **Install once** — 40+ modules ready out of the box — skipping the whole cycle of searching, comparing, downloading, trialling, and uninstalling.
-- **379 command modules** — AI, apps, games, system, and web commands on tap — and one JSON file is all it takes to add your own.
+- **388 command modules** — AI, apps, games, system, and web commands on tap — and one JSON file is all it takes to add your own.
 
 ## Features
 
 |                        |                                                                                                                                       |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | **CmdPlate**           | App search · File search · Process manager · Window manager · Bookmark search · Clipboard history · Command line · Instant calculator |
-| **Speed & efficiency** | Dock · Clipboard history · App usage · Screen capture · Screen recorder · Reminders · Calendar · Input hints · Mouse finder           |
+| **Speed & efficiency** | Dock · Clipboard history · App usage · Screen capture · Screen recorder · Reminders · Calendar · Input hints · Mouse finder · Lightning File Scan & Clean · Lightning Disk Space Analyzer · Lightning Memory Cleaner · Lightning System Optimizer |
 | **Text & language**    | Super translate · OCR · Regex tester · Encode / decode · Hash calculator · Encryption · Data conversion · Data generator              |
 | **Files & media**      | File preview · Batch rename · Batch image tool · Batch video tool · Batch PDF tool · Downloader                                       |
 | **Compute & extend**   | Calculator pad · QR codes · Command modules · Built-in browser · Custom extensions                                                    |
@@ -69,7 +69,7 @@ The front end calls each C++ Manager through the `window.Zen` bridge, all return
 
 ## Download
 
-- **Installer** (recommended): `yyzTools-setup-1.0.7.1700.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installer** (recommended): `yyzTools-setup-1.0.8.1800.exe` — [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Slow from China? Prefix the installer URL with a mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Or grab it from the [official download page](https://yyztools.com/download.html).
 

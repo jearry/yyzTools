@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <strong>繁體中文</strong> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.7.1700-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.8.1800-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-免費-red">
@@ -36,14 +36,14 @@
 - **永久免費** — 全部功能開放，不設付費解鎖，不設會員制，也不會用刻意削減核心能力的方式變相收費。
 - **本機優先** — 剪貼簿、檔案搜尋、使用統計、OCR 等資料都在你自己的電腦上處理與儲存，不會被主動上傳。
 - **一次安裝** — 40+ 功能模組開箱即用，省掉逐個搜尋、比較、下載、試用、移除的那一圈折騰。
-- **379 個命令模組** — AI、應用程式、遊戲、系統、網站五大類命令隨取隨用，加一個 JSON 檔案就能自己擴充。
+- **388 個命令模組** — AI、應用程式、遊戲、系統、網站五大類命令隨取隨用，加一個 JSON 檔案就能自己擴充。
 
 ## 功能總覽
 
 | | |
 |---|---|
 | **命令面板** | 應用程式搜尋 · 檔案搜尋 · 處理程序管理 · 視窗管理 · 書籤搜尋 · 剪貼簿歷史 · 命令列 · 即時計算 |
-| **啟動與效率** | 程式啟動列 · 剪貼簿歷史 · 應用程式統計 · 螢幕截圖 · 螢幕錄製 · 提醒助理 · 萬年曆 · 按鍵提示 · 滑鼠定位 |
+| **啟動與效率** | 程式啟動列 · 剪貼簿歷史 · 應用程式統計 · 螢幕截圖 · 螢幕錄製 · 提醒助理 · 萬年曆 · 按鍵提示 · 滑鼠定位 · 極速檔案掃描清理 · 極速磁碟空間分析 · 極速記憶體清理 · 極速系統最佳化 |
 | **文字與語言** | 超級翻譯 · 文字辨識 OCR · 正規表示式 · 編碼解碼 · 雜湊計算 · 加密解密 · 資料轉換 · 資料產生 |
 | **檔案與媒體** | 檔案預覽 · 批次重新命名 · 圖片批次處理 · 影片批次處理 · PDF 批次處理 · 檔案下載 |
 | **計算與擴充** | 計算稿紙 · QR Code · 命令模組 · 內建瀏覽器 · 自訂擴充 |
@@ -68,7 +68,7 @@
 
 ## 下載安裝
 
-- **安裝包**（推薦）：`yyzTools-setup-1.0.7.1700.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **安裝包**（推薦）：`yyzTools-setup-1.0.8.1800.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - 國內存取慢可走鏡像：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（在安裝包下載連結前加對應前綴）
 - 也可從[官網下載頁](https://yyztools.com/zh-TW/download.html)取得。
 

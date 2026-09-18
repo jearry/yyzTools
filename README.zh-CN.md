@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <strong>简体中文</strong> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.7.1700-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.0.8.1800-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-免费-red">
@@ -37,14 +37,14 @@
 - **永久免费** — 全部功能开放，不设付费解锁，不设会员体系，也不会用阉割核心能力的方式变相收费。
 - **本地优先** — 剪贴板、文件搜索、使用统计、OCR 等数据都在你自己的电脑上处理和保存，不会被主动上传。
 - **一次安装** — 40+ 功能模块开箱即用，省掉逐个搜索、比较、下载、试用、卸载的那一圈折腾。
-- **379 个命令模块** — AI、应用、游戏、系统、网站五大类命令随取随用，加一个 JSON 文件就能自己扩展。
+- **388 个命令模块** — AI、应用、游戏、系统、网站五大类命令随取随用，加一个 JSON 文件就能自己扩展。
 
 ## 功能总览
 
 |           |                                                             |
 | --------- | ----------------------------------------------------------- |
 | **命令面板**  | 应用搜索 · 文件搜索 · 进程管理 · 窗口管理 · 书签搜索 · 剪贴板历史 · 命令行 · 即时计算       |
-| **启动与效率** | 程序坞 · 剪贴板历史 · 应用统计 · 屏幕截图 · 屏幕录制 · 提醒助手 · 万年历 · 按键提示 · 鼠标定位 |
+| **启动与效率** | 程序坞 · 剪贴板历史 · 应用统计 · 屏幕截图 · 屏幕录制 · 提醒助手 · 万年历 · 按键提示 · 鼠标定位 · 极速文件扫描清理 · 极速磁盘空间分析 · 极速内存清理 · 极速系统优化 |
 | **文本与语言** | 超级翻译 · 文字识别 OCR · 正则表达式 · 编码解码 · 哈希计算 · 加密解密 · 数据转换 · 数据生成  |
 | **文件与媒体** | 文件预览 · 批量重命名 · 图片批量处理 · 视频批量处理 · PDF 批量处理 · 文件下载            |
 | **计算与拓展** | 计算稿纸 · 二维码 · 命令模块 · 内置浏览器 · 自定义扩展                           |
@@ -69,7 +69,7 @@
 
 ## 下载安装
 
-- **安装包**（推荐）：`yyzTools-setup-1.0.7.1700.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **安装包**（推荐）：`yyzTools-setup-1.0.8.1800.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - 国内访问慢可走镜像：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（在安装包下载链接前加对应前缀）
 - 也可从 [官网下载页](https://yyztools.com/zh-CN/download.html) 获取。
 
