@@ -40,9 +40,9 @@
 
     <Program_Info>
         <Program_Name>yyzTools</Program_Name>
-        <Program_Version>1.0.7.1700</Program_Version>
+        <Program_Version>1.0.8.1800</Program_Version>
         <Program_Release_Month>09</Program_Release_Month>
-        <Program_Release_Day>08</Program_Release_Day>
+        <Program_Release_Day>18</Program_Release_Day>
         <Program_Release_Year>2026</Program_Release_Year>
         <Program_Cost_Dollars>0</Program_Cost_Dollars>
         <Program_Cost_Other_Code/>
@@ -52,14 +52,14 @@
         <Program_Install_Support>Install and Uninstall</Program_Install_Support>
         <Program_OS_Support>Windows 10 64-bit,Windows 11</Program_OS_Support>
         <Program_Language>English,ChineseSimplified,ChineseTraditional,Japanese,Korean,French,German,Spanish,Russian,Arabic,Portuguese,Italian</Program_Language>
-        <Program_Change_Info>1.0.7.1700: Shortcut keys can now be assigned to sub-modules inside the command palette; dock categories and contents support drag-and-drop of folders and files plus drag-to-delete; PDF/image/video batch processing, batch rename, hash calculator and encryption/decryption accept direct file and folder drag-and-drop; context menus refined and no longer confined to the window.</Program_Change_Info>
+        <Program_Change_Info>1.0.8.1800: Four new "Lightning" system-care modules — File Scan &amp; Clean, Disk Space Analyzer, Memory Cleaner and System Optimizer; Lightning File Search rebuilt on a native ImGui interface with theme support; the auto-update process gains a UI, also built on ImGui; clipboard history in the command palette can now fill an entry straight into the focused input (single click fills by default).</Program_Change_Info>
         <Program_Specific_Category>Utilities</Program_Specific_Category>
         <Program_Category_Class>System Utilities::Other</Program_Category_Class>
         <Program_System_Requirements>Microsoft Edge WebView2 Runtime (preinstalled on Windows 11; on Windows 10 the installer guides the setup). 64-bit system.</Program_System_Requirements>
         <File_Info>
-            <File_Size_Bytes>182123318</File_Size_Bytes>
-            <File_Size_K>177854</File_Size_K>
-            <File_Size_MB>173.69</File_Size_MB>
+            <File_Size_Bytes>183382164</File_Size_Bytes>
+            <File_Size_K>179084</File_Size_K>
+            <File_Size_MB>174.89</File_Size_MB>
         </File_Info>
         <Expire_Info>
             <Has_Expire_Info>N</Has_Expire_Info>
@@ -85,7 +85,7 @@ CmdPlate is the hub: press Alt+Space to open one input over apps, files, process
 
 Built-in tools cover text and language (multi-engine translation, offline OCR via the local RapidOCR engine, regex tester, encode/decode, MD5/SHA hashes, encryption, JSON/YAML/XML/TOML/CSV conversion), files and media (preview Office documents, PDF, images, video and archives without Office; batch rename; batch image, video and PDF processing via ImageMagick, FFmpeg, pdfcpu and Ghostscript; multi-threaded downloads), efficiency (edge dock, usage charts, screen recorder with camera auto-zoom, reminders, calendar, system quick actions) and personalisation (live web/video wallpaper beneath the desktop icon layer, desktop effects, a customisable new-tab page).
 
-Extensibility: 379 built-in .zenmod command modules across AI, apps, games, system and web; drop a JSON file into the Modules folder to add your own command, no build step required. SDK documentation and a sample project are free.
+Extensibility: 388 built-in .zenmod command modules across AI, apps, games, system and web; drop a JSON file into the Modules folder to add your own command, no build step required. SDK documentation and a sample project are free.
 
 Privacy: clipboard history, file search, usage stats and OCR are processed and stored locally. No sign-up, no collection of personal data; online features run only when invoked. Open-source components are MIT licensed. Available in 12 languages, including English, Chinese, Japanese, Korean, French, German, Spanish, Russian, Arabic and Portuguese.</Char_Desc_2000>
         </English>
@@ -100,8 +100,8 @@ Privacy: clipboard history, file search, usage stats and OCR are processed and s
             <Application_XML_File_URL>https://yyztools.com/pad_file.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-setup-1.0.7.1700.exe</Primary_Download_URL>
-            <Secondary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.7.1700/yyzTools-v1.0.7.1700-portable.7z</Secondary_Download_URL>
+            <Primary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.8.1800/yyzTools-setup-1.0.8.1800.exe</Primary_Download_URL>
+            <Secondary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.8.1800/yyzTools-v1.0.8.1800-portable.7z</Secondary_Download_URL>
             <Additional_Download_URL_1>https://yyztools.com/download</Additional_Download_URL_1>
         </Download_URLs>
     </Web_Info>
