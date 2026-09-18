@@ -90,13 +90,18 @@ This repo (`jearry/yyzTools`) hosts releases and the official website:
 
 - [`releases/`](releases/) — versioned installers and `.7z` packages, plus the `update.json` manifest
 - [`docs/`](docs/) — static site for <https://yyztools.com> (GitHub Pages)
-- [`src/updater/`](src/updater/) — auto-updater source
+- Open-source components (see [LICENSE](LICENSE) for licenses):
+  - [`src/library/`](src/library/) — shared utility library (yyzlib)
+  - [`src/updater/`](src/updater/) — auto-updater
+  - [`src/yyzcmd/`](src/yyzcmd/) — system command runner
+  - [`src/inputhint/`](src/inputhint/) — keyboard & mouse input hints
+  - [`src/mousefinder/`](src/mousefinder/) — mouse pointer locator
 
 For feature issues, please use [Issues](https://github.com/jearry/yyzTools/issues).
 
 ## License & Acknowledgments
 
-yyzTools is proprietary software, free to use. Only the auto-updater is currently open source, under the **MIT License**. Whether other parts or the whole application will be open-sourced will be decided in due course.
+yyzTools is proprietary software, free to use. Only some components are currently open source, under the **MIT License**. Whether other parts or the whole application will be open-sourced will be decided in due course.
 
 The software incorporates several open-source libraries and tools. See [LICENSE](LICENSE) for the full list of third-party components and their respective licenses.
 

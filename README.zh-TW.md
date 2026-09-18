@@ -89,13 +89,18 @@
 
 - [`releases/`](releases/) —— 版本化安裝包與分卷壓縮包（`.7z`），以及自動更新清單 `update.json`
 - [`docs/`](docs/) —— 官網 <https://yyztools.com> 的靜態網站（經 GitHub Pages 託管）
-- [`src/updater/`](src/updater/) —— 自動更新器原始碼
+- 開源元件（許可證詳見 [LICENSE](LICENSE)）：
+  - [`src/library/`](src/library/) —— 共享基礎庫 yyzlib
+  - [`src/updater/`](src/updater/) —— 自動更新器
+  - [`src/yyzcmd/`](src/yyzcmd/) —— 系統命令執行器
+  - [`src/inputhint/`](src/inputhint/) —— 鍵盘/滑鼠按鍵提示
+  - [`src/mousefinder/`](src/mousefinder/) —— 滑鼠游標定位
 
 如需回報功能問題，請至 [Issues](https://github.com/jearry/yyzTools/issues)。
 
 ## 授權條款與致謝
 
-yyzTools 是專有軟體，可免費使用。目前僅開源了自動更新部分，該開源元件遵循 **MIT 協議**。後續是否開源其他部分和全部開源，將根據情況決定。
+yyzTools 是專有軟體，可免費使用。目前僅開源了部分元件，這些開源元件遵循 **MIT 協議**。後續是否開源其他部分和全部開源，將根據情況決定。
 
 本軟體使用了多個開源庫與工具，完整的第三方元件清單及其許可證請參見 [LICENSE](LICENSE)。
 

@@ -89,13 +89,18 @@
 
 - [`releases/`](releases/) —— 버전 관리된 설치 패키지와 분할 압축 파일(`.7z`), 자동 업데이트 매니페스트 `update.json`
 - [`docs/`](docs/) —— 공식 웹사이트 <https://yyztools.com>의 정적 사이트 (GitHub Pages로 호스팅)
-- [`src/updater/`](src/updater/) —— 자동 업데이터 소스 코드
+- 오픈소스 컴포넌트(라이선스는 [LICENSE](LICENSE) 참조):
+  - [`src/library/`](src/library/) —— 공용 유틸리티 라이브러리 yyzlib
+  - [`src/updater/`](src/updater/) —— 자동 업데이터
+  - [`src/yyzcmd/`](src/yyzcmd/) —— 시스템 명령 실행기
+  - [`src/inputhint/`](src/inputhint/) —— 키 입력 표시
+  - [`src/mousefinder/`](src/mousefinder/) —— 마우스 찾기
 
 기능 관련 문제는 [Issues](https://github.com/jearry/yyzTools/issues)를 이용해 주세요.
 
 ## 라이선스 및 감사
 
-yyzTools는 독점 소프트웨어이며 무료로 사용할 수 있습니다. 현재 자동 업데이트 모듈만 오픈소스로 공개되어 있으며, 해당 오픈소스 컴포넌트는 **MIT 라이선스**를 따릅니다. 향후 다른 부분 또는 전체를 오픈소스로 공개할지는 상황에 따라 결정됩니다.
+yyzTools는 독점 소프트웨어이며 무료로 사용할 수 있습니다. 현재 일부 컴포넌트만 오픈소스로 공개되어 있으며, 해당 오픈소스 컴포넌트는 **MIT 라이선스**를 따릅니다. 향후 다른 부분 또는 전체를 오픈소스로 공개할지는 상황에 따라 결정됩니다.
 
 본 소프트웨어는 여러 오픈소스 라이브러리와 도구를 사용합니다. 서드파티 컴포넌트의 전체 목록과 각 라이선스는 [LICENSE](LICENSE)를 참조하십시오.
 

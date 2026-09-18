@@ -89,13 +89,18 @@ Este repositório (`jearry/yyzTools`) é o **repositório de publicação e de a
 
 - [`releases/`](releases/) —— Instaladores versionados e arquivos divididos (`.7z`), além do manifesto de atualização automática `update.json`
 - [`docs/`](docs/) —— Site estático de <https://yyztools.com> (alojado no GitHub Pages)
-- [`src/updater/`](src/updater/) —— Código-fonte do atualizador automático
+- Componentes open source (licenças em [LICENSE](LICENSE)):
+  - [`src/library/`](src/library/) —— biblioteca de utilitários partilhada (yyzlib)
+  - [`src/updater/`](src/updater/) —— atualizador automático
+  - [`src/yyzcmd/`](src/yyzcmd/) —— executor de comandos do sistema
+  - [`src/inputhint/`](src/inputhint/) —— indicação de teclas
+  - [`src/mousefinder/`](src/mousefinder/) —— localização do rato
 
 Para reportar problemas de funcionalidades, utilize [Issues](https://github.com/jearry/yyzTools/issues).
 
 ## Licença e Agradecimentos
 
-O yyzTools é software proprietário, de utilização gratuita. Atualmente apenas o componente de atualização automática é open source, licenciado nos termos da **Licença MIT**. A decisão de abrir o código de outras partes ou da totalidade da aplicação será tomada conforme as circunstâncias.
+O yyzTools é software proprietário, de utilização gratuita. Atualmente apenas alguns componentes são open source, licenciados nos termos da **Licença MIT**. A decisão de abrir o código de outras partes ou da totalidade da aplicação será tomada conforme as circunstâncias.
 
 Este software utiliza várias bibliotecas e ferramentas open source; a lista completa de componentes de terceiros e respetivas licenças está em [LICENSE](LICENSE).
 
