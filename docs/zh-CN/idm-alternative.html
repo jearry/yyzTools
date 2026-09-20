@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools — Internet Download Manager（IDM）的免费替代品，内置下载管理器</title>
+<meta name="description" content="在找 IDM 或 Motrix 的替代品？yyzTools 把基于 aria2 的下载管理器做进同一个免费的 Alt+空格 工具箱：多线程分块下载、断点续传，还和文件搜索、预览、批量处理在一起。个人与商用都免费，12 种语言，仅 Windows。">
+
+<meta property="og:title" content="yyzTools — Internet Download Manager（IDM）的免费替代品，内置下载管理器">
+<meta property="og:description" content="在找 IDM 或 Motrix 的替代品？yyzTools 把基于 aria2 的下载管理器做进同一个免费的 Alt+空格 工具箱：多线程分块下载、断点续传，还和文件搜索、预览、批量处理在一起。个人与商用都免费，12 种语言，仅 Windows。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-CN/idm-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_CN">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools — Internet Download Manager（IDM）的免费替代品，内置下载管理器">
+<meta name="twitter:description" content="在找 IDM 或 Motrix 的替代品？yyzTools 把基于 aria2 的下载管理器做进同一个免费的 Alt+空格 工具箱：多线程分块下载、断点续传，还和文件搜索、预览、批量处理在一起。个人与商用都免费，12 种语言，仅 Windows。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-CN/idm-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/idm-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/idm-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/idm-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/idm-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/idm-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/idm-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/idm-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/idm-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/idm-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/idm-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/idm-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/idm-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/idm-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+<link rel="dns-prefetch" href="https://ghfast.top">
+<link rel="dns-prefetch" href="https://ghproxy.com">
+<link rel="dns-prefetch" href="https://gh-proxy.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-CN/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-CN/" >首页</a>
+            <a href="/zh-CN/features.html" >功能</a>
+            <a href="/zh-CN/download.html" >下载</a>
+            <a href="/zh-CN/getting-started.html" >快速上手</a>
+            <a href="/zh-CN/changelog.html" >更新日志</a>
+            
+            <a href="/zh-CN/sdk.html" >开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">交流反馈</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="主题">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="跟随系统" aria-label="跟随系统">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="浅色" aria-label="浅色">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="深色" aria-label="深色">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="选择语言">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">简体中文</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/idm-alternative.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/idm-alternative.html" hreflang="zh-CN"
+                       class="on" aria-current="true">简体中文</a>
+                    
+                    <a href="/zh-TW/idm-alternative.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/idm-alternative.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/idm-alternative.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/idm-alternative.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/idm-alternative.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/idm-alternative.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/idm-alternative.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/idm-alternative.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/idm-alternative.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/idm-alternative.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 下载和 IDM 一样快吗？","acceptedAnswer":{"@type":"Answer","text":"两者都靠分块多线程加速、支持断点续传。IDM 更久经验证，更重要的是它有 yyzTools 下载器没有的浏览器自动捕获与网页视频嗅探。yyzTools 的卖点是另一个维度：一个扎实、且个人商用都免费的下载器，已经和你的其他工具装在一个包里。"}},{"@type":"Question","name":"我已经在用 Motrix，为什么还要 yyzTools？","acceptedAnswer":{"@type":"Answer","text":"Motrix 是一款优秀的免费、开源、跨平台下载器，只想下载的话留着它更好（它还能跑 macOS 与 Linux，yyzTools 不行）。当你想把下载并入那个已经在做启动、文件搜索、OCR、预览、批量重命名的 Alt+空格 应用时（且你在 Windows），yyzTools 才划算。"}},{"@type":"Question","name":"下载器真的商用免费？","acceptedAnswer":{"@type":"Answer","text":"是。它和 yyzTools 里的每个功能同属一个免费版本，个人与商用均免费——而 IDM 需要按年付费授权。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"免费的 IDM 替代品——已内置一个下载管理器（顺带说说 Motrix）","item":"https://yyztools.com/zh-CN/idm-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">免费的 IDM 替代品——已内置一个下载管理器（顺带说说 Motrix）</h1>
+        <p class="hero-lead">Internet Download Manager 是付费的下载加速与浏览器抓取标杆，Motrix 是免费开源、跨平台的同好。yyzTools 走第三条路：一个基于 aria2 的下载管理器，和启动器、全盘文件搜索、预览、批量工具住在同一个免费工具箱里——多线程、可断点续传、商用也免费。你没有 IDM 的浏览器视频嗅探，但少装一个软件。</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+                <i class="fa-solid fa-download"></i>免费下载 yyzTools
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs IDM vs Motrix<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs IDM vs Motrix</h2>
+            <p>IDM 是付费专家，Motrix 是免费开源专家，二者都是独立的下载软件。yyzTools 是一个&#34;顺带能下载&#34;的通用工具箱——取舍是广度与零额外安装，而非浏览器级的下载捕获。</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">IDM</th>
+                        
+                        <th scope="col" class="">Motrix</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">产品定位</th>
+                        <td class="col-self">工具箱里的下载管理（基于 aria2）</td>
+                        <td>独立的付费下载加速器</td>
+                        <td>独立的免费开源下载器</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">价格与授权</th>
+                        <td class="col-self">免费，个人与商用均可</td>
+                        <td>按年付费授权；30 天试用</td>
+                        <td>完全免费开源</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">下载加速</th>
+                        <td class="col-self">多线程分块下载、断点续传</td>
+                        <td>分段加速 + 断点续传，久经验证</td>
+                        <td>aria2 多源分块下载</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">浏览器 / 视频抓取</th>
+                        <td class="col-self">覆盖常见链接与磁力，无浏览器视频嗅探</td>
+                        <td>浏览器插件自动捕获 + 网页视频嗅探（其王牌）</td>
+                        <td>浏览器插件 + 磁力/种子；视频靠浏览器抓取</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">与应用联动</th>
+                        <td class="col-self">与文件搜索、预览、批量重命名同在一个应用</td>
+                        <td>独立下载器</td>
+                        <td>独立下载器</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">平台</th>
+                        <td class="col-self">仅 Windows</td>
+                        <td>仅 Windows</td>
+                        <td>跨平台（Windows / macOS / Linux）</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">开源</th>
+                        <td class="col-self">免费，源码暂未开放</td>
+                        <td>闭源</td>
+                        <td>开源（MIT）</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">界面语言</th>
+                        <td class="col-self">12 种</td>
+                        <td>多种</td>
+                        <td>多种</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/zh-dark/download.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/zh-light/download.webp" alt="yyzTools 下载管理器，分块多线程下载" width="1013" height="883" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>基于 aria2 的下载器，个人商用都免费，就住在同一个 Alt+空格 工具箱里——没有浏览器视频嗅探，但少装一个软件。</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>什么时候 IDM / Motrix 更合适</h3>
+                <p>如果下载就是你全部的需求，专职工具会更强：IDM 的浏览器集成与网页视频嗅探是业界最成熟的（按年付费），而 Motrix 是一款真正好用、免费、开源、跨平台的下载器，还带种子与磁力。若你只需要下载，选它们之一就好——想要免费开源，尤其推荐 Motrix。</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>什么时候选 yyzTools</h3>
+                <p>如果你不想再装一个独立软件，yyzTools 的 aria2 下载器已经住在同一个免费 Alt+空格 工具箱里，和启动器、全盘文件搜索、预览、批量重命名共享一处——商用也免费。它讲的是&#34;少装一个程序&#34;，而不是&#34;提供浏览器级视频嗅探&#34;。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>常见疑问</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools 下载和 IDM 一样快吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>两者都靠分块多线程加速、支持断点续传。IDM 更久经验证，更重要的是它有 yyzTools 下载器没有的浏览器自动捕获与网页视频嗅探。yyzTools 的卖点是另一个维度：一个扎实、且个人商用都免费的下载器，已经和你的其他工具装在一个包里。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>我已经在用 Motrix，为什么还要 yyzTools？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Motrix 是一款优秀的免费、开源、跨平台下载器，只想下载的话留着它更好（它还能跑 macOS 与 Linux，yyzTools 不行）。当你想把下载并入那个已经在做启动、文件搜索、OCR、预览、批量重命名的 Alt+空格 应用时（且你在 Windows），yyzTools 才划算。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>下载器真的商用免费？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>是。它和 yyzTools 里的每个功能同属一个免费版本，个人与商用均免费——而 IDM 需要按年付费授权。</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>少装一个软件，下载一样快</h2>
+        <p>免费下载。从 Alt+空格 打开下载管理器，粘贴一个链接或磁力，同时让文件搜索、预览、重命名一键可达。</p>
+        <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+            <i class="fa-solid fa-download"></i>免费下载 yyzTools
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-CN/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>产品</h3>
+            <a href="/zh-CN/features.html">功能</a>
+            <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/getting-started.html">快速上手</a>
+            <a href="/zh-CN/changelog.html">更新日志</a>
+            
+            <a href="/zh-CN/alternatives.html">替代品与对比</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>资源</h3>
+            <a href="/zh-CN/sdk.html">开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">社区讨论</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">问题反馈</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-CN/agreement.html">用户协议</a>
+            <a href="/zh-CN/privacy.html">隐私政策</a>
+            
+            <a class="js-email" href="#">联系邮箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留所有权利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

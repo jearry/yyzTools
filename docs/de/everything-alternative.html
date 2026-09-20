@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
@@ -113,9 +114,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-CyLyXlR_.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-CYr1kL9x.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
 </head>
 <body>
 
@@ -217,6 +218,7 @@
 
 
 
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ist die Dateisuche von yyzTools nur eine Hülle um Everything?","acceptedAnswer":{"@type":"Answer","text":"Nein. Seit v1.0.5 läuft die Dateisuche auf einer vollständig eigenentwickelten Engine (direkte NTFS-$MFT-Lesezugriffe + USN-Journal-Updates). Die Everything-Abhängigkeit wurde aus dem Installationspaket entfernt, und der Speicherverbrauch des Index sank von mehreren hundert MB auf ca. 5–30 MB."}},{"@type":"Question","name":"Ist die Abfragesyntax mit Everything kompatibel?","acceptedAnswer":{"@type":"Answer","text":"Die gängige Syntax ist kompatibel: path:, ext:, size:, datemodified:, Platzhalter und AND / OR / NOT-Kombinationen funktionieren direkt. Regex (regex:) wird noch nicht unterstützt — die größte Syntaxlücke gegenüber Everything."}},{"@type":"Question","name":"Kann Everything parallel zu yyzTools installiert bleiben?","acceptedAnswer":{"@type":"Answer","text":"Ja, beide stören sich nicht. Wenn die Dateisuche von yyzTools Ihre Anforderungen aber bereits abdeckt, spart ein einzelnes Tool Ressourcen."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Suchen Sie eine Everything-Alternative?","item":"https://yyztools.com/de/everything-alternative.html"}]}</script>
 
@@ -229,7 +231,7 @@
             <a class="btn btn-primary btn-lg" href="/de/download.html">
                 <i class="fa-solid fa-download"></i>yyzTools kostenlos herunterladen
             </a>
-            <a class="btn btn-ghost btn-lg" href="#ev-compare">
+            <a class="btn btn-ghost btn-lg" href="#cmp">
                 yyzTools vs Everything<i class="fa-solid fa-arrow-down"></i>
             </a>
         </div>
@@ -237,7 +239,7 @@
 </section>
 
 
-<section class="section section-alt" id="ev-compare">
+<section class="section section-alt" id="cmp">
     <div class="wrap">
         <div class="section-head">
             <h2>yyzTools vs Everything</h2>
@@ -261,54 +263,63 @@
                         <th scope="row">Technischer Ansatz</th>
                         <td class="col-self">Direkte NTFS-$MFT-Lesezugriffe + Live-USN-Updates</td>
                         <td>Direkte NTFS-$MFT-Lesezugriffe + Live-USN-Updates</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Abfragesyntax</th>
                         <td class="col-self">path: / ext: / size: / datemodified: und mehr, kompatibel</td>
                         <td>path: / ext: / size: / datemodified: / regex: und mehr</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Speicher für den residenten Index</th>
                         <td class="col-self">ca. 5–30 MB</td>
                         <td>ca. 100–300 MB</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Regex-Suche (regex:)</th>
                         <td class="col-self">❌ Noch nicht</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Launcher integriert</th>
                         <td class="col-self">✅ Apps / Prozesse / Fenster / Lesezeichen / Zwischenablage in einem Feld</td>
                         <td>❌ Nur Dateinamensuche</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Mit Ergebnissen arbeiten</th>
                         <td class="col-self">✅ Vorschau / Speicherort anzeigen / Papierkorb / Mehrfachkopie</td>
                         <td>✅ Öffnen / Pfad öffnen / Umbenennen</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Übersetzung / OCR / Stapelwerkzeuge, 388 Module</th>
                         <td class="col-self">✅ Alle integriert</td>
                         <td>❌</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Kostenlos</th>
                         <td class="col-self">✅ Dauerhaft kostenlos</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Oberflächensprachen</th>
                         <td class="col-self">12</td>
                         <td>Multi</td>
+                        
                     </tr>
                     
                 </tbody>
@@ -316,6 +327,24 @@
         </div>
     </div>
 </section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/cmdplate-file.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/cmdplate-file.webp" alt="yyzTools-Ergebnisse der Festplattensuche in der Befehlspalette" width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Durchsuchen Sie in der Befehlspalette die ganze Festplatte und öffnen, enthüllen oder löschen Sie Treffer direkt — ohne das Feld zu verlassen.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
 
 
 <section class="section">
@@ -392,7 +421,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">Produktivitätswerkzeuge für den Windows-Desktop. Lokal zuerst, dauerhaft kostenlos.</p>
-            <p class="footer-ver">v1.0.8.1800</p>
+            <p class="footer-ver">v1.0.9.1900</p>
         </div>
 
         <div class="footer-col">
@@ -402,7 +431,7 @@
             <a href="/de/getting-started.html">Schnellstart</a>
             <a href="/de/changelog.html">Änderungen</a>
             
-            <a href="/de/everything-alternative.html">Ausführlicher Everything-Vergleich</a>
+            <a href="/de/alternatives.html">Alternativen &amp; Vergleiche</a>
         </div>
 
         <div class="footer-col">
@@ -431,4 +460,5 @@
 
 </body>
 </html>
+
 

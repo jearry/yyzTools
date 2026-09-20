@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une alternative à QuickLook — l&#39;Office sans MS Office, plus la 3D et le CAO</title>
+<meta name="description" content="À la recherche d&#39;une alternative à QuickLook ? yyzTools ouvre l&#39;aperçu d&#39;un appui sur Espace dans l&#39;Explorateur, affiche les Office modernes (docx/xlsx/pptx) SANS MS Office installé, et prévisualise des modèles 3D interactifs et de la CAO que QuickLook n&#39;a pas — le tout dans une boîte à outils Alt+Espace gratuite. Pour le nombre brut de formats, QuickLook reste devant. Gratuit, 12 langues, Windows uniquement.">
+
+<meta property="og:title" content="Une alternative à QuickLook — l&#39;Office sans MS Office, plus la 3D et le CAO">
+<meta property="og:description" content="À la recherche d&#39;une alternative à QuickLook ? yyzTools ouvre l&#39;aperçu d&#39;un appui sur Espace dans l&#39;Explorateur, affiche les Office modernes (docx/xlsx/pptx) SANS MS Office installé, et prévisualise des modèles 3D interactifs et de la CAO que QuickLook n&#39;a pas — le tout dans une boîte à outils Alt+Espace gratuite. Pour le nombre brut de formats, QuickLook reste devant. Gratuit, 12 langues, Windows uniquement.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/fr/quicklook-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="fr">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Une alternative à QuickLook — l&#39;Office sans MS Office, plus la 3D et le CAO">
+<meta name="twitter:description" content="À la recherche d&#39;une alternative à QuickLook ? yyzTools ouvre l&#39;aperçu d&#39;un appui sur Espace dans l&#39;Explorateur, affiche les Office modernes (docx/xlsx/pptx) SANS MS Office installé, et prévisualise des modèles 3D interactifs et de la CAO que QuickLook n&#39;a pas — le tout dans une boîte à outils Alt+Espace gratuite. Pour le nombre brut de formats, QuickLook reste devant. Gratuit, 12 langues, Windows uniquement.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/fr/quicklook-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/quicklook-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/quicklook-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/fr/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/fr/" >Accueil</a>
+            <a href="/fr/features.html" >Fonctions</a>
+            <a href="/fr/download.html" >Télécharger</a>
+            <a href="/fr/getting-started.html" >Démarrage rapide</a>
+            <a href="/fr/changelog.html" >Nouveautés</a>
+            
+            <a href="/fr/sdk.html" >Développeurs</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Commentaires</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="Thème">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="Système" aria-label="Système">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="Clair" aria-label="Clair">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="Sombre" aria-label="Sombre">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="Langue">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">Français</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/quicklook-alternative.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/quicklook-alternative.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/quicklook-alternative.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/quicklook-alternative.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/quicklook-alternative.html" hreflang="ko"
+                       >한국어</a>
+                    
+                    <a href="/fr/quicklook-alternative.html" hreflang="fr"
+                       class="on" aria-current="true">Français</a>
+                    
+                    <a href="/de/quicklook-alternative.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/quicklook-alternative.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/quicklook-alternative.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/quicklook-alternative.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/quicklook-alternative.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/quicklook-alternative.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"QuickLook peut-il prévisualiser Office sans Microsoft Office ?","acceptedAnswer":{"@type":"Answer","text":"Non. Le support Word/Excel/PowerPoint d'QuickLook héberge le gestionnaire d'aperçu intégré de Windows (le même mécanisme que le volet de prévisualisation de l'Explorateur), il faut donc un MS Office compatible installé — sinon .doc/.ppt ne s'affichent pas. yyzTools analyse lui-même les Office modernes (docx/xlsx/pptx) et les affiche sans MS Office (les .doc/.ppt anciens retombent en vue binaire)."}},{"@type":"Question","name":"Que prévisualise yyzTools que QuickLook ne peut pas ?","acceptedAnswer":{"@type":"Answer","text":"Des modèles 3D interactifs — glTF, GLB, OBJ, FBX, STL, PLY, DAE — et de la CAO DXF. QuickLook n'a aucune prévisualisation 3D/CAO. yyzTools affiche aussi les fichiers inconnus en hexadécimal plutôt qu'une zone vide."}},{"@type":"Question","name":"Alors où QuickLook est-il plus fort ?","acceptedAnswer":{"@type":"Answer","text":"Le nombre brut de formats : 200+ types de code/texte, 100+ images dont RAW/PSD/HEIC, plus archives, polices et e-mail — bien plus de catégories que yyzTools. Si votre but est le plus large possible et qu'Office est déjà installé, QuickLook gagne cet axe."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Une alternative à QuickLook — l'aperçu par Espace sans MS Office","item":"https://yyztools.com/fr/quicklook-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">Une alternative à QuickLook — l&#39;aperçu par Espace sans MS Office</h1>
+        <p class="hero-lead">QuickLook apporte à Windows l&#39;aperçu par barre d&#39;Espace à la macOS et couvre beaucoup de formats. Un piège côté Office : l&#39;aperçu Word/Excel/PowerPoint de QuickLook héberge le gestionnaire d&#39;aperçu intégré de Windows (IPreviewHandler), il faut donc Microsoft Office installé — sinon .doc/.ppt ne s&#39;affichent pas non plus. yyzTools analyse lui-même les Office modernes (docx/xlsx/pptx) dans un frontend WebView2 — sans Office — et ajoute la 3D interactive (glTF/OBJ/FBX/STL…) et la CAO DXF que QuickLook n&#39;a pas, dans une seule boîte Alt+Espace gratuite.</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/fr/download.html">
+                <i class="fa-solid fa-download"></i>Télécharger yyzTools gratuitement
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs QuickLook<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs QuickLook</h2>
+            <p>QuickLook est un aperçu dédié open source à la liste brute la plus longue. yyzTools est une boîte à outils générale dont l&#39;aperçu gagne sur deux points que QuickLook ne réunit pas : voir Office sans MS Office, et la 3D/CAO interactive — au prix de la largeur de formats de QuickLook.</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">QuickLook</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">Positionnement</th>
+                        <td class="col-self">Fonction d&#39;aperçu dans la boîte à outils, aperçu par Espace dans l&#39;Explorateur</td>
+                        <td>Un outil d&#39;aperçu par Espace dédié</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Aperçu par Espace dans l&#39;Explorateur</th>
+                        <td class="col-self">✅ Choisir un fichier, appuyer sur Espace</td>
+                        <td>✅ Sa marque de fabrique</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Documents Office</th>
+                        <td class="col-self">Affiche les docx / xlsx / pptx modernes sans MS Office</td>
+                        <td>Repose sur le gestionnaire d&#39;aperçu système — MS Office requis (avec lui, les .doc/.ppt/.odt anciens aussi)</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Modèles 3D &amp; CAO</th>
+                        <td class="col-self">✅ glTF / OBJ / FBX / STL interactifs et DXF</td>
+                        <td>❌ Non pris en charge</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Largeur de formats (le reste)</th>
+                        <td class="col-self">Environ 86 extensions / 12 catégories ; repli en hexadécimal binaire</td>
+                        <td>Bien plus large : 200+ code, 100+ images dont RAW/PSD, archives, polices, e-mail, design</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Après l&#39;aperçu</th>
+                        <td class="col-self">La même app Alt+Espace fait aussi recherche, OCR, nettoyage et renommage par lots</td>
+                        <td>Aperçu seul ; autres outils à part</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Prix et licence</th>
+                        <td class="col-self">Gratuit en personnel et commercial</td>
+                        <td>Gratuit et open source</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Open source</th>
+                        <td class="col-self">Gratuit, code source non publié</td>
+                        <td>Open source, maintenu par la communauté</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Langues</th>
+                        <td class="col-self">12</td>
+                        <td>Plusieurs</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/cmdplate-preview.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/cmdplate-preview.webp" alt="Fenêtre d&#39;aperçu yyzTools affichant un document" width="1026" height="875" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Le même aperçu par Espace que QuickLook, regroupé avec recherche de fichiers, OCR et nettoyage dans une seule app gratuite — QuickLook ne fait que l&#39;aperçu.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>Quand QuickLook est le meilleur choix</h3>
+                <p>Si votre but est avant tout la plus longue liste brute de formats — tous les langages de code, images RAW/PSD, archives, polices, e-mail — et que vous avez déjà MS Office installé pour qu&#39;QuickLook affiche Word/Excel/PowerPoint, alors QuickLook est l&#39;aperçu dédié le plus complet, et open source. En pur nombre de types de formats, il gagne clairement.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>Quand yyzTools convient mieux</h3>
+                <p>Si vous voulez l&#39;aperçu par Espace sans une app de plus — les documents Office affichés même sans MS Office, la 3D interactive et la CAO que QuickLook ne peut pas, et un repli en vue binaire plutôt qu&#39;une zone vide — yyzTools met tout cela dans la boîte Alt+Espace gratuite que vous utilisez déjà.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>Questions fréquentes</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>QuickLook peut-il prévisualiser Office sans Microsoft Office ?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Non. Le support Word/Excel/PowerPoint d&#39;QuickLook héberge le gestionnaire d&#39;aperçu intégré de Windows (le même mécanisme que le volet de prévisualisation de l&#39;Explorateur), il faut donc un MS Office compatible installé — sinon .doc/.ppt ne s&#39;affichent pas. yyzTools analyse lui-même les Office modernes (docx/xlsx/pptx) et les affiche sans MS Office (les .doc/.ppt anciens retombent en vue binaire).</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Que prévisualise yyzTools que QuickLook ne peut pas ?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Des modèles 3D interactifs — glTF, GLB, OBJ, FBX, STL, PLY, DAE — et de la CAO DXF. QuickLook n&#39;a aucune prévisualisation 3D/CAO. yyzTools affiche aussi les fichiers inconnus en hexadécimal plutôt qu&#39;une zone vide.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Alors où QuickLook est-il plus fort ?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Le nombre brut de formats : 200+ types de code/texte, 100+ images dont RAW/PSD/HEIC, plus archives, polices et e-mail — bien plus de catégories que yyzTools. Si votre but est le plus large possible et qu&#39;Office est déjà installé, QuickLook gagne cet axe.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>Voir plus, installer moins</h2>
+        <p>Téléchargement gratuit. Dans l&#39;Explorateur, choisissez un fichier et appuyez sur Espace — Office sans MS Office, plus la 3D et la CAO — avec recherche, OCR et nettoyage à une touche.</p>
+        <a class="btn btn-primary btn-lg" href="/fr/download.html">
+            <i class="fa-solid fa-download"></i>Télécharger yyzTools gratuitement
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/fr/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Boîte à outils de productivité pour le bureau Windows : priorité au local, gratuit à vie.</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Produit</h3>
+            <a href="/fr/features.html">Fonctions</a>
+            <a href="/fr/download.html">Télécharger</a>
+            <a href="/fr/getting-started.html">Démarrage rapide</a>
+            <a href="/fr/changelog.html">Nouveautés</a>
+            
+            <a href="/fr/alternatives.html">Alternatives et comparatifs</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Ressources</h3>
+            <a href="/fr/sdk.html">Développeurs</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Signaler un problème</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Mentions légales</h3>
+            <a href="/fr/agreement.html">Conditions d’utilisation</a>
+            <a href="/fr/privacy.html">Politique de confidentialité</a>
+            
+            <a class="js-email" href="#">Adresse e-mail</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · Tous droits réservés</p>
+        <p class="footer-fine">Windows est une marque déposée de Microsoft Corporation. Ce site n’est pas affilié à Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

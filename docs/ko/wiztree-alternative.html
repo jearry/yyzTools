@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WizTree 대안 — 디스크 공간을 분석하고 그 자리에서 정리</title>
+<meta name="description" content="WizTree(또는 WinDirStat / TreeSize) 대안을 검색 중이신가요? yyzTools의 디스크 공간 분석기는 NTFS $MFT를 직접 읽어 용량을 차지하는 폴더를 트리맵으로 시각화합니다. 같은 툴박스 안에 있어서 그 자리에서 열기·미리보기·휴지통 이동·검색·정리까지, 두 번째 설치 없이 끝납니다. 영구 무료, 12개 언어.">
+
+<meta property="og:title" content="WizTree 대안 — 디스크 공간을 분석하고 그 자리에서 정리">
+<meta property="og:description" content="WizTree(또는 WinDirStat / TreeSize) 대안을 검색 중이신가요? yyzTools의 디스크 공간 분석기는 NTFS $MFT를 직접 읽어 용량을 차지하는 폴더를 트리맵으로 시각화합니다. 같은 툴박스 안에 있어서 그 자리에서 열기·미리보기·휴지통 이동·검색·정리까지, 두 번째 설치 없이 끝납니다. 영구 무료, 12개 언어.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ko/wiztree-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ko">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WizTree 대안 — 디스크 공간을 분석하고 그 자리에서 정리">
+<meta name="twitter:description" content="WizTree(또는 WinDirStat / TreeSize) 대안을 검색 중이신가요? yyzTools의 디스크 공간 분석기는 NTFS $MFT를 직접 읽어 용량을 차지하는 폴더를 트리맵으로 시각화합니다. 같은 툴박스 안에 있어서 그 자리에서 열기·미리보기·휴지통 이동·검색·정리까지, 두 번째 설치 없이 끝납니다. 영구 무료, 12개 언어.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ko/wiztree-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/wiztree-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/wiztree-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ko/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ko/" >홈</a>
+            <a href="/ko/features.html" >기능</a>
+            <a href="/ko/download.html" >다운로드</a>
+            <a href="/ko/getting-started.html" >빠른 시작</a>
+            <a href="/ko/changelog.html" >변경 내역</a>
+            
+            <a href="/ko/sdk.html" >개발자</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">피드백</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="테마">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="시스템 설정" aria-label="시스템 설정">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="라이트" aria-label="라이트">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="다크" aria-label="다크">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="언어 선택">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">한국어</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/wiztree-alternative.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/wiztree-alternative.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/wiztree-alternative.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/wiztree-alternative.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/wiztree-alternative.html" hreflang="ko"
+                       class="on" aria-current="true">한국어</a>
+                    
+                    <a href="/fr/wiztree-alternative.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/wiztree-alternative.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/wiztree-alternative.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/wiztree-alternative.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/wiztree-alternative.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/wiztree-alternative.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/wiztree-alternative.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="메뉴" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 분석기가 WizTree보다 빠른가요?","acceptedAnswer":{"@type":"Answer","text":"둘 다 NTFS $MFT를 직접 읽으므로 대용량 디스크도 몇 초 안에 끝납니다. WizTree는 이것만 만드는 도구라 극한 스캔·재스캔에서는 더 빠르고 성숙할 수 있습니다. yyzTools 강점은 스캔 '이후' 무엇을 할 수 있느냐고, 0.01초를 줄이는 데 있지 않습니다."}},{"@type":"Question","name":"이미 WizTree / WinDirStat가 있는데 필요한가요?","acceptedAnswer":{"@type":"Answer","text":"단순히 용량만 보려면 그대로 두세요, 훌륭한 도구입니다. 보기 앱, 청소 앱, 찾기 앱을 여러 개 넣는 게 지겨워지면 하나로 합치는 수단으로 yyzTools를 택하세요."}},{"@type":"Question","name":"네트워크 드라이브나 USB도 되나요?","acceptedAnswer":{"@type":"Answer","text":"로컬 고정 NTFS 볼륨 중심이며, 네트워크 공유와 비 NTFS/이동식 매체는 현재 지원이 제한적입니다 — WizTree·TreeSize와의 실제 격차 중 하나."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"내 디스크를 채운 범인은 — 그리고 정리 방법","item":"https://yyztools.com/ko/wiztree-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">내 디스크를 채운 범인은 — 그리고 정리 방법</h1>
+        <p class="hero-lead">yyzTools 디스크 공간 분석기는 드라이브를 스캔해 크기순 폴더를 색상 트리맵으로 그립니다. WizTree·WinDirStat과 같은 방식이라 백만 개 넘는 파일도 빠릅니다. 차이는 단일 도구가 아니라는 점 — 용량을 차지하는 파일에서 바로 열기·미리보기·휴지통 이동으로 넘어가고, 이어서 파일 검색과 정리로 곧장 들어갈 수 있습니다.</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/ko/download.html">
+                <i class="fa-solid fa-download"></i>yyzTools 무료 다운로드
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs WizTree<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs WizTree</h2>
+            <p>전용 분석기는 한 가지를 극한까지 파고듭니다. yyzTools는 디스크 분석을 효율 툴박스에 넣어 &#39;뭔가 큰지 보기&#39;와 &#39;그 파일 처리하기&#39;를 같은 창에서 끝냅니다.</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">WizTree</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">제품 포지션</th>
+                        <td class="col-self">효율 툴박스 안의 디스크 분석기</td>
+                        <td>디스크 용량 분석 전용 도구</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">스캔 엔진</th>
+                        <td class="col-self">NTFS $MFT 직접 읽기, 백만 개 파일도 빠른 스캔</td>
+                        <td>NTFS $MFT 직접 읽기, 최고 속도급 분석기</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">트리맵 보기</th>
+                        <td class="col-self">크기별 색상 트리맵(533 GB, 1,108,909개 파일 실측)</td>
+                        <td>크기별 색상 트리맵</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">결과 처리</th>
+                        <td class="col-self">열기 / 미리보기 / 휴지통 이동, 같은 파일을 검색·정리</td>
+                        <td>우클릭 메뉴로 열기 / 복사 / 삭제</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">정리 연동</th>
+                        <td class="col-self">내장 파일 클리너(152 규칙)와 같은 설치</td>
+                        <td>정리 없음, 별도 도구 필요</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">가격 / 라이선스</th>
+                        <td class="col-self">개인·상용 모두 무료</td>
+                        <td>개인 무료, 상용 라이선스 유료</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">리포트 내보내기</th>
+                        <td class="col-self">독립 리포트 내보내기 미지원</td>
+                        <td>리포트 인쇄·내보내기 지원</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">네트워크 / 비 NTFS</th>
+                        <td class="col-self">로컬 고정 NTFS 중심, 네트워크·이동식 매체는 제한적</td>
+                        <td>네트워크 공유 및 더 많은 볼륨 형식 스캔 가능</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">UI 언어</th>
+                        <td class="col-self">12개</td>
+                        <td>다수, 영어 중심</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/diskspace.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/diskspace.webp" alt="yyzTools 디스크 공간 분석기의 트리맵 보기" width="1040" height="680" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>533 GB · 1,108,909개 파일 실측: 크기별 색상으로 공간을 차지하는 범인이 한눈에 보입니다.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>그래도 WizTree / TreeSize가 나은 경우</h3>
+                <p>용량 분석만 전문적으로 파는 최고 수준을 원한다면 — 극한의 재스캔, 리포트 인쇄·내보내기, 네트워크 공유와 비 NTFS/이동식 볼륨 스캔 — WizTree와 TreeSize가 그 한 가지에 더 성숙하고 풍부합니다. yyzTools는 가장 깊은 단독 분석기를 노리지 않습니다.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>yyzTools가 더 맞는 경우</h3>
+                <p>실제 질문이 &#34;C 드라이브가 왜 가득 찼고, 앱 하나 더 안 넣고 해결&#34;이라면 yyzTools가 한 번에 답합니다. 트리맵으로 스캔하고, 해당 파일을 그 자리에서 처리 — 열기·휴지통·검색·파일 클리너 — 이미 런처·OCR·번역을 갖춘 같은 무료 툴박스 안에서.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>자주 묻는 질문</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools 분석기가 WizTree보다 빠른가요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>둘 다 NTFS $MFT를 직접 읽으므로 대용량 디스크도 몇 초 안에 끝납니다. WizTree는 이것만 만드는 도구라 극한 스캔·재스캔에서는 더 빠르고 성숙할 수 있습니다. yyzTools 강점은 스캔 &#39;이후&#39; 무엇을 할 수 있느냐고, 0.01초를 줄이는 데 있지 않습니다.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>이미 WizTree / WinDirStat가 있는데 필요한가요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>단순히 용량만 보려면 그대로 두세요, 훌륭한 도구입니다. 보기 앱, 청소 앱, 찾기 앱을 여러 개 넣는 게 지겨워지면 하나로 합치는 수단으로 yyzTools를 택하세요.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>네트워크 드라이브나 USB도 되나요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>로컬 고정 NTFS 볼륨 중심이며, 네트워크 공유와 비 NTFS/이동식 매체는 현재 지원이 제한적입니다 — WizTree·TreeSize와의 실제 격차 중 하나.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>용량 범인을 찾아 그 자리에서 정리</h2>
+        <p>무료 다운로드. 디스크 공간 분석기를 열고 큰 드라이브가 트리맵으로 바뀌면 가장 큰 폴더를 우클릭해 휴지통으로.</p>
+        <a class="btn btn-primary btn-lg" href="/ko/download.html">
+            <i class="fa-solid fa-download"></i>yyzTools 무료 다운로드
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ko/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 데스크톱 생산성 도구 모음. 로컬 우선, 평생 무료.</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>제품</h3>
+            <a href="/ko/features.html">기능</a>
+            <a href="/ko/download.html">다운로드</a>
+            <a href="/ko/getting-started.html">빠른 시작</a>
+            <a href="/ko/changelog.html">변경 내역</a>
+            
+            <a href="/ko/alternatives.html">대체 프로그램 비교</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>자료</h3>
+            <a href="/ko/sdk.html">개발자</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">토론</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">문제 신고</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>법적 고지</h3>
+            <a href="/ko/agreement.html">이용약관</a>
+            <a href="/ko/privacy.html">개인정보 처리방침</a>
+            
+            <a class="js-email" href="#">문의 이메일</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　모든 권리 보유</p>
+        <p class="footer-fine">Windows는 Microsoft Corporation의 등록 상표입니다. 본 사이트는 Microsoft와 아무런 제휴 관계가 없습니다.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

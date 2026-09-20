@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -113,9 +114,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-CyLyXlR_.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-CYr1kL9x.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
 </head>
 <body>
 
@@ -217,6 +218,7 @@
 
 
 
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is yyzTools’ file search a wrapper around Everything?","acceptedAnswer":{"@type":"Answer","text":"No. Since v1.0.5, file search runs on a fully in-house engine (direct NTFS $MFT reads + USN journal updates). The Everything dependency has been removed from the installer, and index memory usage dropped from hundreds of MB to around 5–30 MB."}},{"@type":"Question","name":"Is the query syntax compatible with Everything?","acceptedAnswer":{"@type":"Answer","text":"Common syntax is compatible: path:, ext:, size:, datemodified:, wildcards, and AND / OR / NOT combinations all work. Regex (regex:) is not supported yet — the main syntax gap versus Everything."}},{"@type":"Question","name":"Can I keep Everything installed alongside yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Yes, they don’t conflict. That said, if yyzTools’ file search covers your needs, keeping just one saves resources."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Looking for an Everything alternative?","item":"https://yyztools.com/everything-alternative.html"}]}</script>
 
@@ -229,7 +231,7 @@
             <a class="btn btn-primary btn-lg" href="/download.html">
                 <i class="fa-solid fa-download"></i>Download yyzTools free
             </a>
-            <a class="btn btn-ghost btn-lg" href="#ev-compare">
+            <a class="btn btn-ghost btn-lg" href="#cmp">
                 yyzTools vs Everything<i class="fa-solid fa-arrow-down"></i>
             </a>
         </div>
@@ -237,7 +239,7 @@
 </section>
 
 
-<section class="section section-alt" id="ev-compare">
+<section class="section section-alt" id="cmp">
     <div class="wrap">
         <div class="section-head">
             <h2>yyzTools vs Everything</h2>
@@ -261,54 +263,63 @@
                         <th scope="row">Technical approach</th>
                         <td class="col-self">Direct NTFS $MFT reads + live USN updates</td>
                         <td>Direct NTFS $MFT reads + live USN updates</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Query syntax</th>
                         <td class="col-self">path: / ext: / size: / datemodified: and more, compatible</td>
                         <td>path: / ext: / size: / datemodified: / regex: and more</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Resident index memory</th>
                         <td class="col-self">≈ 5–30 MB</td>
                         <td>≈ 100–300 MB</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Regex search (regex:)</th>
                         <td class="col-self">❌ Not yet</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Launcher built in</th>
                         <td class="col-self">✅ Apps / processes / windows / bookmarks / clipboard in one box</td>
                         <td>❌ Filename search only</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Act on results</th>
                         <td class="col-self">✅ Preview / reveal / recycle bin / multi-copy</td>
                         <td>✅ Open / open path / rename</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Translation / OCR / batch tools, 388 modules</th>
                         <td class="col-self">✅ All built in</td>
                         <td>❌</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Free</th>
                         <td class="col-self">✅ Free forever</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">UI languages</th>
                         <td class="col-self">12</td>
                         <td>Multi</td>
+                        
                     </tr>
                     
                 </tbody>
@@ -316,6 +327,24 @@
         </div>
     </div>
 </section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/cmdplate-file.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/cmdplate-file.webp" alt="yyzTools file search results in the command palette" width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Search your whole disk from the launcher, then preview, reveal or delete a hit without leaving the box.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
 
 
 <section class="section">
@@ -392,7 +421,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">A local-first Windows productivity toolkit. Free forever.</p>
-            <p class="footer-ver">v1.0.8.1800</p>
+            <p class="footer-ver">v1.0.9.1900</p>
         </div>
 
         <div class="footer-col">
@@ -402,7 +431,7 @@
             <a href="/getting-started.html">Quick start</a>
             <a href="/changelog.html">Changelog</a>
             
-            <a href="/everything-alternative.html">In-depth Everything comparison</a>
+            <a href="/alternatives.html">Alternatives &amp; comparisons</a>
         </div>
 
         <div class="footer-col">
@@ -431,4 +460,5 @@
 
 </body>
 </html>
+
 

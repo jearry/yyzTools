@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
 <head>
@@ -113,9 +114,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-CyLyXlR_.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-CYr1kL9x.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
 </head>
 <body>
 
@@ -217,6 +218,7 @@
 
 
 
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools의 파일 검색은 Everything을 감싼 것인가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 1.0.5부터 파일 검색은 완전 자체 개발 엔진（NTFS $MFT 직접 읽기 + USN Journal 실시간 갱신）으로 바뀌었고, Everything 의존성은 설치 파일에서 제거되었습니다. 인덱스 메모리 사용량은 수백 MB에서 약 5~30MB로 줄었습니다."}},{"@type":"Question","name":"쿼리 구문은 Everything과 호환되나요?","acceptedAnswer":{"@type":"Answer","text":"자주 쓰는 구문은 호환됩니다. path:, ext:, size:, datemodified:, 와일드카드, AND / OR / NOT 조합을 그대로 쓸 수 있습니다. regex: 정규식만 미지원이며, 이것이 Everything과의 주요 구문 차이입니다."}},{"@type":"Question","name":"Everything과 함께 설치할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 서로 충돌하지 않습니다. 다만 yyzTools의 파일 검색으로 충분하다면 하나만 남겨두는 쪽이 자원을 아낍니다."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Everything 대체제를 찾고 계신가요?","item":"https://yyztools.com/ko/everything-alternative.html"}]}</script>
 
@@ -229,7 +231,7 @@
             <a class="btn btn-primary btn-lg" href="/ko/download.html">
                 <i class="fa-solid fa-download"></i>yyzTools 무료 다운로드
             </a>
-            <a class="btn btn-ghost btn-lg" href="#ev-compare">
+            <a class="btn btn-ghost btn-lg" href="#cmp">
                 yyzTools vs Everything<i class="fa-solid fa-arrow-down"></i>
             </a>
         </div>
@@ -237,7 +239,7 @@
 </section>
 
 
-<section class="section section-alt" id="ev-compare">
+<section class="section section-alt" id="cmp">
     <div class="wrap">
         <div class="section-head">
             <h2>yyzTools vs Everything</h2>
@@ -261,54 +263,63 @@
                         <th scope="row">기술 방식</th>
                         <td class="col-self">NTFS $MFT 직접 읽기 + USN 실시간 갱신</td>
                         <td>NTFS $MFT 직접 읽기 + USN 실시간 갱신</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">쿼리 구문</th>
                         <td class="col-self">path: / ext: / size: / datemodified: 등 호환 구문</td>
                         <td>path: / ext: / size: / datemodified: / regex: 등</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">전체 디스크 인덱스 상주 메모리</th>
                         <td class="col-self">약 5~30MB</td>
                         <td>약 100~300MB</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">정규식 검색（regex:）</th>
                         <td class="col-self">❌ 미지원</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">런처 통합</th>
                         <td class="col-self">✅ 앱 / 프로세스 / 창 / 북마크 / 클립보드를 한 입력창에서 검색</td>
                         <td>❌ 파일 이름 검색 전용</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">검색 결과 처리</th>
                         <td class="col-self">✅ 미리보기 / 위치 열기 / 휴지통으로 / 일괄 복사</td>
                         <td>✅ 열기 / 경로 열기 / 이름 바꾸기</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">번역 / OCR / 일괄 처리 등 388개 모듈</th>
                         <td class="col-self">✅ 모두 내장</td>
                         <td>❌</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">무료</th>
                         <td class="col-self">✅ 평생 무료</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">인터페이스 언어</th>
                         <td class="col-self">12개 언어</td>
                         <td>다국어</td>
+                        
                     </tr>
                     
                 </tbody>
@@ -316,6 +327,24 @@
         </div>
     </div>
 </section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/cmdplate-file.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/cmdplate-file.webp" alt="yyzTools 명령 팔레트의 전체 디스크 파일 검색 결과" width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>명령 팔레트에서 전체 디스크를 검색하고, 결과에서 미리보기·위치 열기·삭제까지 한 번에 할 수 있습니다.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
 
 
 <section class="section">
@@ -392,7 +421,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">Windows 데스크톱 생산성 도구 모음. 로컬 우선, 평생 무료.</p>
-            <p class="footer-ver">v1.0.8.1800</p>
+            <p class="footer-ver">v1.0.9.1900</p>
         </div>
 
         <div class="footer-col">
@@ -402,7 +431,7 @@
             <a href="/ko/getting-started.html">빠른 시작</a>
             <a href="/ko/changelog.html">변경 내역</a>
             
-            <a href="/ko/everything-alternative.html">Everything 상세 비교</a>
+            <a href="/ko/alternatives.html">대체 프로그램 비교</a>
         </div>
 
         <div class="footer-col">
@@ -431,4 +460,5 @@
 
 </body>
 </html>
+
 

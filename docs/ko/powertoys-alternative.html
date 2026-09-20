@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerToys 대안을 찾나요 — 런처·OCR·번역·파일 검색을 하나로</title>
+<meta name="description" content="PowerToys 대안을 검색 중이신가요? yyzTools는 런처, 전체 디스크 파일 검색, 복사한 이미지의 문자까지 검색 가능한 OCR 클립보드, 번역, 이미지/동영상/PDF 일괄 처리 등 388개 데스크톱 기능을 하나의 가벼운 설치에 담았습니다. 영구 무료, 12개 언어 지원.">
+
+<meta property="og:title" content="PowerToys 대안을 찾나요 — 런처·OCR·번역·파일 검색을 하나로">
+<meta property="og:description" content="PowerToys 대안을 검색 중이신가요? yyzTools는 런처, 전체 디스크 파일 검색, 복사한 이미지의 문자까지 검색 가능한 OCR 클립보드, 번역, 이미지/동영상/PDF 일괄 처리 등 388개 데스크톱 기능을 하나의 가벼운 설치에 담았습니다. 영구 무료, 12개 언어 지원.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ko/powertoys-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ko">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PowerToys 대안을 찾나요 — 런처·OCR·번역·파일 검색을 하나로">
+<meta name="twitter:description" content="PowerToys 대안을 검색 중이신가요? yyzTools는 런처, 전체 디스크 파일 검색, 복사한 이미지의 문자까지 검색 가능한 OCR 클립보드, 번역, 이미지/동영상/PDF 일괄 처리 등 388개 데스크톱 기능을 하나의 가벼운 설치에 담았습니다. 영구 무료, 12개 언어 지원.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ko/powertoys-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/powertoys-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/powertoys-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ko/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ko/" >홈</a>
+            <a href="/ko/features.html" >기능</a>
+            <a href="/ko/download.html" >다운로드</a>
+            <a href="/ko/getting-started.html" >빠른 시작</a>
+            <a href="/ko/changelog.html" >변경 내역</a>
+            
+            <a href="/ko/sdk.html" >개발자</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">피드백</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="theme-switch" role="group" aria-label="테마">
+                <button type="button" data-theme-value="system" aria-pressed="false" title="시스템 설정" aria-label="시스템 설정">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="light" aria-pressed="false" title="라이트" aria-label="라이트">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                    </svg>
+                </button>
+                <button type="button" data-theme-value="dark" aria-pressed="false" title="다크" aria-label="다크">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <details class="lang-pick" id="langPick">
+                <summary aria-label="언어 선택">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-cur">한국어</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </summary>
+                <div class="lang-menu">
+                    
+                    <a href="/powertoys-alternative.html" hreflang="en"
+                       >English</a>
+                    
+                    <a href="/zh-CN/powertoys-alternative.html" hreflang="zh-CN"
+                       >简体中文</a>
+                    
+                    <a href="/zh-TW/powertoys-alternative.html" hreflang="zh-TW"
+                       >繁體中文</a>
+                    
+                    <a href="/ja/powertoys-alternative.html" hreflang="ja"
+                       >日本語</a>
+                    
+                    <a href="/ko/powertoys-alternative.html" hreflang="ko"
+                       class="on" aria-current="true">한국어</a>
+                    
+                    <a href="/fr/powertoys-alternative.html" hreflang="fr"
+                       >Français</a>
+                    
+                    <a href="/de/powertoys-alternative.html" hreflang="de"
+                       >Deutsch</a>
+                    
+                    <a href="/es/powertoys-alternative.html" hreflang="es"
+                       >Español</a>
+                    
+                    <a href="/ru/powertoys-alternative.html" hreflang="ru"
+                       >Русский</a>
+                    
+                    <a href="/ar/powertoys-alternative.html" hreflang="ar"
+                       >العربية</a>
+                    
+                    <a href="/pt/powertoys-alternative.html" hreflang="pt"
+                       >Português</a>
+                    
+                    <a href="/it/powertoys-alternative.html" hreflang="it"
+                       >Italiano</a>
+                    
+                </div>
+            </details>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="메뉴" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools가 PowerToys를 완전히 대체하나요?","acceptedAnswer":{"@type":"Answer","text":"런처와 도구 상자의 겹치는 부분에서는 대체로 가능합니다. PowerToys에는 yyzTools가 아직 없는 시스템 도구(주로 FancyZones, Keyboard Manager)가 있고, 반대로 yyzTools에는 PowerToys에 없는 내장 기능 — 실질 번역, 자체 전체 디스크 검색, 검색 가능한 OCR 클립보드, 동영상·PDF 일괄, 라이브 배경 — 이 있습니다. 실제로 쓰는 범위로 선택하세요."}},{"@type":"Question","name":"둘 다 설치할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 충돌하지 않습니다. 다만 전역 단축키(둘 다 기본 Alt+Space)를 한쪽에서 바꿔 주세요."}},{"@type":"Question","name":"OCR 클립보드로 무엇을 할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"문자가 있는 이미지를 복사하면 yyzTools가 OCR을 실행해 텍스트를 클립보드 기록에 저장합니다. 그 이미지에만 나타나는 단어로 검색할 수 있고, 추출한 텍스트만 복사할 수도 있습니다. Win+V는 이미지는 저장하지만 읽지 않고, Text Extractor는 기록을 남기지 않습니다."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"PowerToys 대안을 찾고 계신가요?","item":"https://yyztools.com/ko/powertoys-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">PowerToys 대안을 찾고 계신가요?</h1>
+        <p class="hero-lead">PowerToys는 훌륭한 시스템 유틸리티 모음입니다. yyzTools는 &#39;런처 + 도구 상자&#39; 영역에서 겹치되 PowerToys가 멈추는 지점까지 나아갑니다. 자체 전체 디스크 검색, 실질적인 번역, 복사한 이미지를 OCR해 문자까지 검색하는 클립보드를 제공하고, 총 388개 기능을 키보드 중심의 한 앱에 담습니다.</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/ko/download.html">
+                <i class="fa-solid fa-download"></i>yyzTools 무료 다운로드
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs PowerToys<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs PowerToys</h2>
+            <p>둘 다 올인원이지만 관점이 다릅니다. PowerToys는 Windows 자체를 강화합니다(창 배치, 키 재지정, 시스템 조정). yyzTools는 매일 쓰는 도구—검색, OCR, 번역, 클립보드, 일괄, 배경—를 하나의 가벼운 설치에 묶습니다.</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">PowerToys</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">제품 포지션</th>
+                        <td class="col-self">데스크톱 효율 통합 툴박스, 388개 모듈 내장</td>
+                        <td>Windows 시스템 강화 구성요소 모음</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">런처(Alt+Space)</th>
+                        <td class="col-self">앱/파일/프로세스/창/북마크/클립보드를 한 입력창에서 검색</td>
+                        <td>PowerToys Run: 앱, 계산, 창 전환 등(플러그인)</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">클립보드 기록 + 검색 가능한 OCR</th>
+                        <td class="col-self">복사한 이미지를 OCR해 이미지 속 문자를 검색·복사 가능</td>
+                        <td>기록은 Win+V 의존, 이미지는 저장하나 검색·판독 불가</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">화면 OCR</th>
+                        <td class="col-self">내장, 결과가 검색 가능한 클립보드에 축적</td>
+                        <td>Text Extractor(Win+Shift+T), 1회 추출 후 미저장</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">번역</th>
+                        <td class="col-self">내장: 단어 및 스크린샷 번역</td>
+                        <td>미탑재</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">전체 디스크 검색</th>
+                        <td class="col-self">자체 엔진: NTFS $MFT 직접 읽기, 상주 인덱스 약 5~30MB</td>
+                        <td>PowerToys Run 파일 플러그인, Everything급 아님</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">일괄 처리</th>
+                        <td class="col-self">이름 변경 + 이미지/동영상/PDF 일괄</td>
+                        <td>PowerRename과 Image Resizer, 동영상·PDF 일괄 없음</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">라이브 배경 / 데스크톱 효과</th>
+                        <td class="col-self">내장</td>
+                        <td>미탑재</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">창 분할 / 키 재지정</th>
+                        <td class="col-self">미제공</td>
+                        <td>FancyZones와 Keyboard Manager</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">오픈소스</th>
+                        <td class="col-self">무료, 소스는 아직 비공개</td>
+                        <td>MIT 오픈소스, Microsoft 유지보수</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/cmdplate-clipboard.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/cmdplate-clipboard.webp" alt="yyzTools 클립보드 기록 — 이미지가 OCR되어 검색 가능" width="1000" height="750" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>글자가 있는 이미지를 복사하면 자동 OCR. 나중에 이미지에만 있는 단어로 검색하고 텍스트만 복사할 수 있습니다.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-clipboard"></i></div>
+            <h3>클립보드가 이미지를 읽습니다</h3>
+            <p>문자가 있는 이미지(스크린샷 또는 이미지 파일)를 복사하면 yyzTools가 백그라운드에서 OCR을 실행해 문자를 이미지와 함께 기록에 저장합니다. 나중에 이미지에만 존재하는 단어로 검색하고, 인식된 텍스트만 골라 복사할 수도 있습니다. Win+V는 이미지만 저장하고 읽지 않으며, Text Extractor는 한 번 읽고 지나갑니다 — 둘 다 검색 가능한 문자 기록이 되지는 않습니다.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>그래도 PowerToys가 나은 경우</h3>
+                <p>Windows 자체를 다루고 싶다면 — FancyZones 창 분할, Keyboard Manager 키 재지정, 폭넓은 심층 시스템 도구, 그것도 전면 오픈소스에 Microsoft 지원 — PowerToys가 더 전문적이고 강력하며, 필요한 모듈만 켤 수 있습니다. yyzTools는 현재 창 분할과 키 재지정을 제공하지 않습니다.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>yyzTools가 더 맞는 경우</h3>
+                <p>PowerToys Run + 파일 검색 + 클립보드 관리 + 화면 OCR + 번역을 묶음 설치 대신 한 앱으로 합치고 싶고, 복사한 이미지가 검색 가능한 문자가 되길 원하며, 여기에 이미지/동영상/PDF 일괄, 라이브 배경, 다운로드 관리까지 원한다면 — yyzTools는 하나의 가벼운 설치로 키보드 중심, 12개 언어로 담습니다.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>자주 묻는 질문</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools가 PowerToys를 완전히 대체하나요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>런처와 도구 상자의 겹치는 부분에서는 대체로 가능합니다. PowerToys에는 yyzTools가 아직 없는 시스템 도구(주로 FancyZones, Keyboard Manager)가 있고, 반대로 yyzTools에는 PowerToys에 없는 내장 기능 — 실질 번역, 자체 전체 디스크 검색, 검색 가능한 OCR 클립보드, 동영상·PDF 일괄, 라이브 배경 — 이 있습니다. 실제로 쓰는 범위로 선택하세요.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>둘 다 설치할 수 있나요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>네, 충돌하지 않습니다. 다만 전역 단축키(둘 다 기본 Alt+Space)를 한쪽에서 바꿔 주세요.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>OCR 클립보드로 무엇을 할 수 있나요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>문자가 있는 이미지를 복사하면 yyzTools가 OCR을 실행해 텍스트를 클립보드 기록에 저장합니다. 그 이미지에만 나타나는 단어로 검색할 수 있고, 추출한 텍스트만 복사할 수도 있습니다. Win+V는 이미지는 저장하지만 읽지 않고, Text Extractor는 기록을 남기지 않습니다.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>한 번 설치로 묶음을 대체</h2>
+        <p>무료 다운로드. Alt+Space 후 글자가 있는 이미지를 복사하고, 나중에 이미지에만 있는 단어로 클립보드를 검색해 보세요.</p>
+        <a class="btn btn-primary btn-lg" href="/ko/download.html">
+            <i class="fa-solid fa-download"></i>yyzTools 무료 다운로드
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ko/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 데스크톱 생산성 도구 모음. 로컬 우선, 평생 무료.</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>제품</h3>
+            <a href="/ko/features.html">기능</a>
+            <a href="/ko/download.html">다운로드</a>
+            <a href="/ko/getting-started.html">빠른 시작</a>
+            <a href="/ko/changelog.html">변경 내역</a>
+            
+            <a href="/ko/alternatives.html">대체 프로그램 비교</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>자료</h3>
+            <a href="/ko/sdk.html">개발자</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">토론</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">문제 신고</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>법적 고지</h3>
+            <a href="/ko/agreement.html">이용약관</a>
+            <a href="/ko/privacy.html">개인정보 처리방침</a>
+            
+            <a class="js-email" href="#">문의 이메일</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　모든 권리 보유</p>
+        <p class="footer-fine">Windows는 Microsoft Corporation의 등록 상표입니다. 본 사이트는 Microsoft와 아무런 제휴 관계가 없습니다.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

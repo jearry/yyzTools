@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head>
@@ -113,9 +114,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-CyLyXlR_.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-CYr1kL9x.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
 </head>
 <body>
 
@@ -217,6 +218,7 @@
 
 
 
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools のファイル検索は Everything のラッパーですか。","acceptedAnswer":{"@type":"Answer","text":"いいえ。1.0.5 からファイル検索は完全自社開発のエンジン（NTFS $MFT 直接読み取り + USN Journal リアルタイム更新）に切り替わり、Everything への依存はインストーラーから取り除かれました。インデックスのメモリ使用量は数百 MB から約 5～30 MB へ低下しています。"}},{"@type":"Question","name":"クエリ構文は Everything と互換性がありますか。","acceptedAnswer":{"@type":"Answer","text":"よく使う構文は互換です：path:、ext:、size:、datemodified:、ワイルドカード、AND / OR / NOT の組み合わせがそのまま使えます。regex: 正規表現のみ未対応で、これが Everything との主な構文上の差です。"}},{"@type":"Question","name":"Everything と同時にインストールできますか。","acceptedAnswer":{"@type":"Answer","text":"はい、衝突しません。ただし yyzTools のファイル検索で十分な場合は、どちらか一方だけにしたほうがリソースの節約になります。"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Everything の代替をお探しですか？","item":"https://yyztools.com/ja/everything-alternative.html"}]}</script>
 
@@ -229,7 +231,7 @@
             <a class="btn btn-primary btn-lg" href="/ja/download.html">
                 <i class="fa-solid fa-download"></i>yyzTools を無料ダウンロード
             </a>
-            <a class="btn btn-ghost btn-lg" href="#ev-compare">
+            <a class="btn btn-ghost btn-lg" href="#cmp">
                 yyzTools vs Everything<i class="fa-solid fa-arrow-down"></i>
             </a>
         </div>
@@ -237,7 +239,7 @@
 </section>
 
 
-<section class="section section-alt" id="ev-compare">
+<section class="section section-alt" id="cmp">
     <div class="wrap">
         <div class="section-head">
             <h2>yyzTools vs Everything</h2>
@@ -261,54 +263,63 @@
                         <th scope="row">技術方式</th>
                         <td class="col-self">NTFS $MFT 直接読み取り + USN リアルタイム更新</td>
                         <td>NTFS $MFT 直接読み取り + USN リアルタイム更新</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">クエリ構文</th>
                         <td class="col-self">path: / ext: / size: / datemodified: などの互換構文</td>
                         <td>path: / ext: / size: / datemodified: / regex: など</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">全ディスクインデックスの常駐メモリ</th>
                         <td class="col-self">約 5～30 MB</td>
                         <td>約 100～300 MB</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">正規表現検索（regex:）</th>
                         <td class="col-self">❌ 未対応</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">ランチャー一体化</th>
                         <td class="col-self">✅ アプリ / プロセス / ウィンドウ / ブックマーク / クリップボードを同じ枠で検索</td>
                         <td>❌ ファイル名検索に特化</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">検索後の操作</th>
                         <td class="col-self">✅ プレビュー / 場所を開く / ごみ箱へ / 一括コピー</td>
                         <td>✅ 開く / パスを開く / リネーム</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">翻訳 / OCR / 一括処理など 388 個のモジュール</th>
                         <td class="col-self">✅ すべて内蔵</td>
                         <td>❌</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">無料</th>
                         <td class="col-self">✅ 永久無料</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">UI 言語</th>
                         <td class="col-self">12 言語</td>
                         <td>多言語</td>
+                        
                     </tr>
                     
                 </tbody>
@@ -316,6 +327,24 @@
         </div>
     </div>
 </section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/cmdplate-file.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/cmdplate-file.webp" alt="yyzTools コマンドパレットでの全ディスク ファイル検索結果" width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>コマンドパレットから全ディスクを検索し、ヒットをそのままプレビュー・場所表示・削除まで一気に行えます。</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
 
 
 <section class="section">
@@ -392,7 +421,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">Windows デスクトップ効率化ツール集。ローカル優先、永久無料。</p>
-            <p class="footer-ver">v1.0.8.1800</p>
+            <p class="footer-ver">v1.0.9.1900</p>
         </div>
 
         <div class="footer-col">
@@ -402,7 +431,7 @@
             <a href="/ja/getting-started.html">クイックスタート</a>
             <a href="/ja/changelog.html">更新履歴</a>
             
-            <a href="/ja/everything-alternative.html">Everything との詳細比較</a>
+            <a href="/ja/alternatives.html">代替ソフトと比較</a>
         </div>
 
         <div class="footer-col">
@@ -431,4 +460,5 @@
 
 </body>
 </html>
+
 

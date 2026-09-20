@@ -40,9 +40,9 @@
 
     <Program_Info>
         <Program_Name>yyzTools</Program_Name>
-        <Program_Version>1.0.8.1800</Program_Version>
+        <Program_Version>1.0.9.1900</Program_Version>
         <Program_Release_Month>09</Program_Release_Month>
-        <Program_Release_Day>18</Program_Release_Day>
+        <Program_Release_Day>20</Program_Release_Day>
         <Program_Release_Year>2026</Program_Release_Year>
         <Program_Cost_Dollars>0</Program_Cost_Dollars>
         <Program_Cost_Other_Code/>
@@ -52,14 +52,14 @@
         <Program_Install_Support>Install and Uninstall</Program_Install_Support>
         <Program_OS_Support>Windows 10 64-bit,Windows 11</Program_OS_Support>
         <Program_Language>English,ChineseSimplified,ChineseTraditional,Japanese,Korean,French,German,Spanish,Russian,Arabic,Portuguese,Italian</Program_Language>
-        <Program_Change_Info>1.0.8.1800: Four new "Lightning" system-care modules — File Scan &amp; Clean, Disk Space Analyzer, Memory Cleaner and System Optimizer; Lightning File Search rebuilt on a native ImGui interface with theme support; the auto-update process gains a UI, also built on ImGui; clipboard history in the command palette can now fill an entry straight into the focused input (single click fills by default).</Program_Change_Info>
+        <Program_Change_Info>1.0.9.1900: File preview is now integrated into the system — select a file in File Explorer, Directory Opus and other file managers and press Space to preview it (on by default, can be turned off in Settings); Lightning File Search and Lightning Disk Space Analyzer gain file preview (Space or right-click menu); file preview in the command palette / file module now also opens with Space; Lightning File Scan &amp; Clean removes delete protection for temporary folders; Lightning Disk Space Analyzer supports common keyboard keys like Windows File Explorer; Lightning File Search fixes right-click menu lag.</Program_Change_Info>
         <Program_Specific_Category>Utilities</Program_Specific_Category>
         <Program_Category_Class>System Utilities::Other</Program_Category_Class>
         <Program_System_Requirements>Microsoft Edge WebView2 Runtime (preinstalled on Windows 11; on Windows 10 the installer guides the setup). 64-bit system.</Program_System_Requirements>
         <File_Info>
-            <File_Size_Bytes>183382164</File_Size_Bytes>
-            <File_Size_K>179084</File_Size_K>
-            <File_Size_MB>174.89</File_Size_MB>
+            <File_Size_Bytes>183465019</File_Size_Bytes>
+            <File_Size_K>179165</File_Size_K>
+            <File_Size_MB>174.97</File_Size_MB>
         </File_Info>
         <Expire_Info>
             <Has_Expire_Info>N</Has_Expire_Info>
@@ -100,8 +100,8 @@ Privacy: clipboard history, file search, usage stats and OCR are processed and s
             <Application_XML_File_URL>https://yyztools.com/pad_file.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.8.1800/yyzTools-setup-1.0.8.1800.exe</Primary_Download_URL>
-            <Secondary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.8.1800/yyzTools-v1.0.8.1800-portable.7z</Secondary_Download_URL>
+            <Primary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.9.1900/yyzTools-setup-1.0.9.1900.exe</Primary_Download_URL>
+            <Secondary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.0.9.1900/yyzTools-v1.0.9.1900-portable.7z</Secondary_Download_URL>
             <Additional_Download_URL_1>https://yyztools.com/download</Additional_Download_URL_1>
         </Download_URLs>
     </Web_Info>

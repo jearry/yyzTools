@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
 <head>
@@ -113,9 +114,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-CyLyXlR_.js"></script>
+  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-CYr1kL9x.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
 </head>
 <body>
 
@@ -217,6 +218,7 @@
 
 
 
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Поиск файлов в yyzTools — это оболочка над Everything?","acceptedAnswer":{"@type":"Answer","text":"Нет. С версии v1.0.5 поиск файлов работает на полностью собственном движке (прямое чтение NTFS $MFT + обновления журнала USN). Зависимость от Everything удалена из установщика, а потребление памяти индексом снизилось с сотен МБ до примерно 5–30 МБ."}},{"@type":"Question","name":"Совместим ли синтаксис запросов с Everything?","acceptedAnswer":{"@type":"Answer","text":"Основной синтаксис совместим: path:, ext:, size:, datemodified:, подстановочные знаки и комбинации AND / OR / NOT работают напрямую. Регулярные выражения (regex:) пока не поддерживаются — это главный синтаксический разрыв с Everything."}},{"@type":"Question","name":"Можно ли оставить Everything установленным вместе с yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Да, они не конфликтуют. Тем не менее, если поиска файлов в yyzTools достаточно, одна программа сэкономит ресурсы."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Ищете альтернативу Everything?","item":"https://yyztools.com/ru/everything-alternative.html"}]}</script>
 
@@ -229,7 +231,7 @@
             <a class="btn btn-primary btn-lg" href="/ru/download.html">
                 <i class="fa-solid fa-download"></i>Скачать yyzTools бесплатно
             </a>
-            <a class="btn btn-ghost btn-lg" href="#ev-compare">
+            <a class="btn btn-ghost btn-lg" href="#cmp">
                 yyzTools vs Everything<i class="fa-solid fa-arrow-down"></i>
             </a>
         </div>
@@ -237,7 +239,7 @@
 </section>
 
 
-<section class="section section-alt" id="ev-compare">
+<section class="section section-alt" id="cmp">
     <div class="wrap">
         <div class="section-head">
             <h2>yyzTools vs Everything</h2>
@@ -261,54 +263,63 @@
                         <th scope="row">Технический подход</th>
                         <td class="col-self">Прямое чтение NTFS $MFT + обновления USN в реальном времени</td>
                         <td>Прямое чтение NTFS $MFT + обновления USN в реальном времени</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Синтаксис запросов</th>
                         <td class="col-self">path: / ext: / size: / datemodified: и другие, совместимо</td>
                         <td>path: / ext: / size: / datemodified: / regex: и другие</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Резидентный индекс в памяти</th>
                         <td class="col-self">около 5–30 МБ</td>
                         <td>около 100–300 МБ</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Поиск по регулярным выражениям (regex:)</th>
                         <td class="col-self">❌ Пока не поддерживается</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Встроенный лаунчер</th>
                         <td class="col-self">✅ Приложения / процессы / окна / закладки / буфер обмена в одном поле</td>
                         <td>❌ Только поиск файлов по имени</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Действия с результатами</th>
                         <td class="col-self">✅ Предпросмотр / показать в папке / корзина / множественное копирование</td>
                         <td>✅ Открыть / открыть путь / переименовать</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Перевод / OCR / пакетные инструменты и ещё 388 модулей</th>
                         <td class="col-self">✅ Всё встроено</td>
                         <td>❌</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Бесплатно</th>
                         <td class="col-self">✅ Бесплатно навсегда</td>
                         <td>✅</td>
+                        
                     </tr>
                     
                     <tr>
                         <th scope="row">Языки интерфейса</th>
                         <td class="col-self">12</td>
                         <td>Много</td>
+                        
                     </tr>
                     
                 </tbody>
@@ -316,6 +327,24 @@
         </div>
     </div>
 </section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/cmdplate-file.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/cmdplate-file.webp" alt="Результаты поиска по диску yyzTools в палитре команд" width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Ищите по всему диску из палитры и сразу открывайте, показывайте или удаляйте найденное, не выходя из строки.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
 
 
 <section class="section">
@@ -392,7 +421,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">Набор инструментов производительности для Windows. Сначала локально, бесплатно навсегда.</p>
-            <p class="footer-ver">v1.0.8.1800</p>
+            <p class="footer-ver">v1.0.9.1900</p>
         </div>
 
         <div class="footer-col">
@@ -402,7 +431,7 @@
             <a href="/ru/getting-started.html">Быстрый старт</a>
             <a href="/ru/changelog.html">Обновления</a>
             
-            <a href="/ru/everything-alternative.html">Подробное сравнение с Everything</a>
+            <a href="/ru/alternatives.html">Альтернативы и сравнения</a>
         </div>
 
         <div class="footer-col">
@@ -431,4 +460,5 @@
 
 </body>
 </html>
+
 
