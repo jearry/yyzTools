@@ -3,7 +3,7 @@
     "web": {
       "version": "1.0.9.1900",
       "url": "v1.0.9.1900/web-1.0.9.1900.7z",
-      "sha256": "9CB905F17104DB3197F213FA2FCDB8A6D6383384461C82A8D69EA8C79EF0A934",
+      "sha256": "A7F90F18812B9B7DC5B09D1425BFA360C040082666BC832344890D5516B7C3A0",
       "killProcesses": ["yyzWallpaper.exe"],
       "killProcessesAdmin": [],
       "stopService": []
@@ -11,7 +11,7 @@
     "modules": {
       "version": "1.0.9.1900",
       "url": "v1.0.9.1900/modules-1.0.9.1900.7z",
-      "sha256": "E1B970BEB8DB82CE1ED12BE5B97CF25CED223FE84A62BD7D939063C01610564E",
+      "sha256": "068FA0817E1C9B8F8F0D8580510180212A162DD7BFE4451B30B21D130FE99F1E",
       "killProcesses": [],
       "killProcessesAdmin": [],
       "stopService": []
@@ -27,7 +27,7 @@
     "yyztools": {
       "version": "1.0.9.1900",
       "url": "v1.0.9.1900/yyztools-1.0.9.1900.7z",
-      "sha256": "80309B354CA055575F84EFBA20ACD82F88DDE08461B55EB53C9B65A8A1222A87",
+      "sha256": "826D10FC0101EAD845782502898167851306441E0FCBFD6396139A8171C8BACB",
       "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe", "yyzScreenRec.exe", "yyzFileClean.exe", "yyzDiskSpace.exe", "yyzMemClean.exe", "yyzWinOpt.exe"],
       "killProcessesAdmin": [],
       "stopService": []
@@ -43,7 +43,7 @@
     "yyzfilesearch": {
       "version": "1.0.9.1900",
       "url": "v1.0.9.1900/yyzfilesearch-1.0.9.1900.7z",
-      "sha256": "C3E1FBEDD455F7F3D03399765CB279B4A698F391481C28EB6D1CE19E9055628A",
+      "sha256": "14B1023356AC40FE12D08BF1B9AD19210213763C9BA2DF3E03CD0B6F0A21E19C",
       "killProcesses": ["yyzFileSearch.exe"],
       "killProcessesAdmin": [],
       "stopService": ["yyzFileSearchSvc"]
