@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools — Snipaste 的替代品：序号标注、截图 OCR 与滚动长截图</title>
+<meta name="description" content="在找 Snipaste 的替代品？yyzTools 截图同样支持区域截图与原地标注，并补上 Snipaste 没有的序号标注；截图工具条上直接 OCR / 翻译，滚动长截图拼接无漂移——387 个模块之一，商用也免费。">
+
+<meta property="og:title" content="yyzTools — Snipaste 的替代品：序号标注、截图 OCR 与滚动长截图">
+<meta property="og:description" content="在找 Snipaste 的替代品？yyzTools 截图同样支持区域截图与原地标注，并补上 Snipaste 没有的序号标注；截图工具条上直接 OCR / 翻译，滚动长截图拼接无漂移——387 个模块之一，商用也免费。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-CN/snipaste-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_CN">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools — Snipaste 的替代品：序号标注、截图 OCR 与滚动长截图">
+<meta name="twitter:description" content="在找 Snipaste 的替代品？yyzTools 截图同样支持区域截图与原地标注，并补上 Snipaste 没有的序号标注；截图工具条上直接 OCR / 翻译，滚动长截图拼接无漂移——387 个模块之一，商用也免费。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-CN/snipaste-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/snipaste-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/snipaste-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+<link rel="dns-prefetch" href="https://ghfast.top">
+<link rel="dns-prefetch" href="https://ghproxy.com">
+<link rel="dns-prefetch" href="https://gh-proxy.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-5pweLEg9.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-pR0vNK2W.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-CN/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-CN/" >首页</a>
+            <a href="/zh-CN/features.html" >功能</a>
+            <a href="/zh-CN/download.html" >下载</a>
+            <a href="/zh-CN/getting-started.html" >快速上手</a>
+            <a href="/zh-CN/changelog.html" >更新日志</a>
+            
+            <a href="/zh-CN/sdk.html" >开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">交流反馈</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="topbar-actions" role="group" aria-label="顶栏操作">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="喜欢它？去 GitHub 点个 Star" aria-label="喜欢它？去 GitHub 点个 Star">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="主题"
+                    data-name-system="跟随系统"
+                    data-name-light="浅色"
+                    data-name-dark="深色">
+                    <summary class="act act-theme tip-end"
+                        data-tip="主题"
+                        aria-label="主题"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>跟随系统</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>浅色</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>深色</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="选择语言 · 简体中文"
+                             aria-label="选择语言"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/snipaste-alternative.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/snipaste-alternative.html" hreflang="zh-CN" role="menuitem"
+                           class="on" aria-current="true">简体中文</a>
+                        
+                        <a href="/zh-TW/snipaste-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/snipaste-alternative.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/snipaste-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/snipaste-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/snipaste-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/snipaste-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/snipaste-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/snipaste-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/snipaste-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/snipaste-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 能替代 Snipaste 的贴图吗？","acceptedAnswer":{"@type":"Answer","text":"只能部分替代。截图工具条的一键钉图、剪贴板图片钉屏都内置，但 Snipaste 的贴图深得多——旋转、分组、单独调透明度、取色器、备份恢复。重度贴图用户建议留着 Snipaste，它也支持 macOS 和 Linux。"}},{"@type":"Question","name":"序号标注怎么用？","acceptedAnswer":{"@type":"Answer","text":"Ctrl+` 唤出截图，工具条选序号工具，点到步骤所在处：落下一个加粗圆形编号，计数自动递增。序号与其他图形一样是对象，画完还能选中、拖动、缩放、删除，撤销时计数器一并回退。"}},{"@type":"Question","name":"两个能共存吗？","acceptedAnswer":{"@type":"Answer","text":"可以，互不冲突。yyzTools 截图默认 Ctrl+`，Snipaste 默认 F1 / F3，几乎不撞键；真撞了，两边都能改键。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"在找 Snipaste 的替代品？","item":"https://yyztools.com/zh-CN/snipaste-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">在找 Snipaste 的替代品？</h1>
+        <p class="hero-lead">Snipaste 把「截图 + 贴图」两件事打磨到极致。yyzTools 的截图模块覆盖同样的日常主干——区域截图、原地标注、贴图钉屏——并在 Snipaste 止步的地方继续：写教程用的自动递增序号标注、截图工具条上的 OCR 与翻译、无漂移的滚动长截图，旁边还有录屏模块。</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+                <i class="fa-solid fa-download"></i>免费下载 yyzTools
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs Snipaste<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs Snipaste</h2>
+            <p>Snipaste 专注两件事、做得很深。yyzTools 的截图是工具箱的一个模块：刚截下来的图，在同一个窗口里就能标注、贴图、识别、翻译或拼接。</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">Snipaste</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">产品定位</th>
+                        <td class="col-self">387 个模块的效率工具箱中的截图模块</td>
+                        <td>专注截图与贴图的独立工具</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">序号标注</th>
+                        <td class="col-self">自动递增的步骤序号，写教程点出 ①②③</td>
+                        <td>无</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">其他标注工具</th>
+                        <td class="col-self">矩形 / 椭圆 / 箭头 / 直线 / 文本 / 马赛克 / 画笔 / 橡皮，图形画完仍可编辑</td>
+                        <td>矩形 / 椭圆 / 线条 / 箭头 / 铅笔 / 记号笔 / 文本 / 马赛克 / 高斯模糊 / 橡皮</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">OCR 与翻译</th>
+                        <td class="col-self">截图工具条内嵌按钮；另有独立「快速 OCR」模块（Alt+T）框选直达文字</td>
+                        <td>无内置</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">滚动长截图</th>
+                        <td class="col-self">逐帧配准拼接，无累积漂移</td>
+                        <td>无</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">贴图钉屏</th>
+                        <td class="col-self">截图工具条一键钉图，剪贴板图片也能钉屏</td>
+                        <td>同类最强：缩放 / 旋转 / 翻转 / 透明度 / 鼠标穿透 / 取色 / 分组 / 备份恢复</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">屏幕录制</th>
+                        <td class="col-self">独立模块：音频、镜头区域、光标跟随与点击按键高亮</td>
+                        <td>无</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">价格授权</th>
+                        <td class="col-self">个人与商用均免费</td>
+                        <td>个人免费；商用自 2.0 起需付费授权</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">支持平台</th>
+                        <td class="col-self">Windows</td>
+                        <td>Windows / macOS / Linux</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/zh-dark/screencap.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/zh-light/screencap.webp" alt="yyzTools 截图工具条与标注工具、序号徽标" width="1278" height="869" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>截图工具条：原地标注、点出自动递增的步骤序号，贴图、OCR、翻译不必离开这个窗口。</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-list-ol"></i></div>
+            <h3>Snipaste 没有的序号标注</h3>
+            <p>写操作教程时，在截图工具条上选序号工具，点到哪一步就在哪里落一个加粗圆形编号，计数自动递增，撤销时计数器同步回退。配上矩形和文本，「先点这里、再点那里」自己就长在图上。Snipaste 的标注集很出色——唯独没有步骤序号工具。</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>什么时候 Snipaste 仍是好选择</h3>
+                <p>如果贴图才是重点，Snipaste 的贴图无可匹敌：缩放、旋转、翻转、单独调透明度、鼠标穿透、缩略图模式、取色器、分组、自动备份恢复。如果你还要在 macOS / Linux 上使用，或者想要最轻量的专用工具，Snipaste 仍是专家之选——个人版永久免费。</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>什么时候选 yyzTools</h3>
+                <p>如果你的截图往往只是起点——要提取文字、翻译一句、把长页面整页截下、给操作步骤标上序号——yyzTools 在截图窗口里就把后半程做完，而同一个安装包里本就带着启动器、文件搜索、剪贴板历史，共 387 个模块。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>常见疑问</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools 能替代 Snipaste 的贴图吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>只能部分替代。截图工具条的一键钉图、剪贴板图片钉屏都内置，但 Snipaste 的贴图深得多——旋转、分组、单独调透明度、取色器、备份恢复。重度贴图用户建议留着 Snipaste，它也支持 macOS 和 Linux。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>序号标注怎么用？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Ctrl+` 唤出截图，工具条选序号工具，点到步骤所在处：落下一个加粗圆形编号，计数自动递增。序号与其他图形一样是对象，画完还能选中、拖动、缩放、删除，撤销时计数器一并回退。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>两个能共存吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>可以，互不冲突。yyzTools 截图默认 Ctrl+`，Snipaste 默认 F1 / F3，几乎不撞键；真撞了，两边都能改键。</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>截图、标号、读字，一气呵成</h2>
+        <p>免费下载。Ctrl+` 截图，用序号工具点出步骤编号，再按同一条工具条上的 OCR。</p>
+        <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+            <i class="fa-solid fa-download"></i>免费下载 yyzTools
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-CN/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>产品</h3>
+            <a href="/zh-CN/features.html">功能</a>
+            <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/getting-started.html">快速上手</a>
+            <a href="/zh-CN/changelog.html">更新日志</a>
+            
+            <a href="/zh-CN/alternatives.html">替代品与对比</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>资源</h3>
+            <a href="/zh-CN/sdk.html">开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">社区讨论</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">问题反馈</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-CN/agreement.html">用户协议</a>
+            <a href="/zh-CN/privacy.html">隐私政策</a>
+            
+            <a class="js-email" href="#">联系邮箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留所有权利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

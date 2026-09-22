@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools — ShareX 的替代品：截图工具条上的 OCR 与翻译</title>
+<meta name="description" content="在找 ShareX 的替代品？yyzTools 同样支持截图、标注、滚动长截图与贴图，并补上它没有的：安装包内置本地 OCR 引擎（不依赖系统语言包）、截图工具条一步翻译——就在这套免费的多模块工具箱里。">
+
+<meta property="og:title" content="yyzTools — ShareX 的替代品：截图工具条上的 OCR 与翻译">
+<meta property="og:description" content="在找 ShareX 的替代品？yyzTools 同样支持截图、标注、滚动长截图与贴图，并补上它没有的：安装包内置本地 OCR 引擎（不依赖系统语言包）、截图工具条一步翻译——就在这套免费的多模块工具箱里。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-CN/sharex-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_CN">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools — ShareX 的替代品：截图工具条上的 OCR 与翻译">
+<meta name="twitter:description" content="在找 ShareX 的替代品？yyzTools 同样支持截图、标注、滚动长截图与贴图，并补上它没有的：安装包内置本地 OCR 引擎（不依赖系统语言包）、截图工具条一步翻译——就在这套免费的多模块工具箱里。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-CN/sharex-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sharex-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sharex-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sharex-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sharex-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sharex-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sharex-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sharex-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sharex-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sharex-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+<link rel="dns-prefetch" href="https://ghfast.top">
+<link rel="dns-prefetch" href="https://ghproxy.com">
+<link rel="dns-prefetch" href="https://gh-proxy.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-5pweLEg9.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-pR0vNK2W.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-CN/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-CN/" >首页</a>
+            <a href="/zh-CN/features.html" >功能</a>
+            <a href="/zh-CN/download.html" >下载</a>
+            <a href="/zh-CN/getting-started.html" >快速上手</a>
+            <a href="/zh-CN/changelog.html" >更新日志</a>
+            
+            <a href="/zh-CN/sdk.html" >开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">交流反馈</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="topbar-actions" role="group" aria-label="顶栏操作">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="喜欢它？去 GitHub 点个 Star" aria-label="喜欢它？去 GitHub 点个 Star">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="主题"
+                    data-name-system="跟随系统"
+                    data-name-light="浅色"
+                    data-name-dark="深色">
+                    <summary class="act act-theme tip-end"
+                        data-tip="主题"
+                        aria-label="主题"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>跟随系统</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>浅色</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>深色</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="选择语言 · 简体中文"
+                             aria-label="选择语言"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/sharex-alternative.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/sharex-alternative.html" hreflang="zh-CN" role="menuitem"
+                           class="on" aria-current="true">简体中文</a>
+                        
+                        <a href="/zh-TW/sharex-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/sharex-alternative.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/sharex-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/sharex-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/sharex-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/sharex-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/sharex-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/sharex-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/sharex-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/sharex-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 能替代 ShareX 吗？","acceptedAnswer":{"@type":"Answer","text":"日常截图——区域、滚动、标注、贴图——基本能，还多了翻译和内置 OCR 引擎。但 ShareX 的主场——上传目标、自定义上传器、截图后自动化——这里没有对应物。重度分享流用户请留着 ShareX。"}},{"@type":"Question","name":"两边 OCR 引擎有什么差别？","acceptedAnswer":{"@type":"Answer","text":"yyzTools 把 RapidOCR 引擎和模型随安装包交付，装好即用、对混排文字优化。ShareX 调用 Windows 内置 OCR，语言跟随系统语言包——加一种语言要先去 Windows 语言设置里装。"}},{"@type":"Question","name":"两个能共存吗？","acceptedAnswer":{"@type":"Answer","text":"可以。若有热键相撞，在任一侧改键即可（yyzTools：托盘图标 → 设置 → 快捷键）。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"在找 ShareX 的替代品？","item":"https://yyztools.com/zh-CN/sharex-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">在找 ShareX 的替代品？</h1>
+        <p class="hero-lead">ShareX 是重度用户的截图瑞士军刀——可配置极深、开源、上传工作流无可匹敌。yyzTools 的截图模块覆盖同样的日常主干——区域、滚动长截图、标注、贴图钉屏——并在 ShareX 不去的地方继续：安装包自带的本地 OCR 引擎，和截图工具条上一步直达的翻译。</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+                <i class="fa-solid fa-download"></i>免费下载 yyzTools
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs ShareX<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs ShareX</h2>
+            <p>两者都免费、都仅支持 Windows。押注不同：ShareX 把可配置性和上传工作流做到极致；yyzTools 把「截图到可读、可翻译文字」的开箱路径做到极致。</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">ShareX</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">产品定位</th>
+                        <td class="col-self">387 个模块的效率工具箱中的截图模块</td>
+                        <td>专注截图、深度可配置的开源工具</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">截图模式</th>
+                        <td class="col-self">区域截图、滚动长截图（配准拼接）、贴图钉屏</td>
+                        <td>区域 / 窗口 / 全屏 / 滚动 / 自动捕获、贴图钉屏</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">标注</th>
+                        <td class="col-self">矩形 / 椭圆 / 箭头 / 序号 / 直线 / 文本 / 马赛克 / 画笔 / 橡皮，原地标注可再编辑</td>
+                        <td>独立图像编辑器 + 截图内标注（含模糊、像素化、Step 序号）</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">OCR 引擎</th>
+                        <td class="col-self">RapidOCR 随安装包内置——装好即用，混排文字优化</td>
+                        <td>Windows 内置 OCR——语言跟随已安装的系统语言包</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">翻译</th>
+                        <td class="col-self">截图工具条一步翻译；独立「快速 OCR」模块（Alt+T）框选直达文字与翻译</td>
+                        <td>无</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">录屏形态</th>
+                        <td class="col-self">镜头区域跟随光标自动变焦、点击与按键高亮、一键导出</td>
+                        <td>屏幕录制与 GIF 录制</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">上传与工作流</th>
+                        <td class="col-self">本地优先：本机保存与处理，无上传管线</td>
+                        <td>大量上传目标、自定义上传器、截图后任务链</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">套装集成</th>
+                        <td class="col-self">同一安装包含启动器、文件搜索、剪贴板历史、批量处理</td>
+                        <td>专注截图与录屏</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">开源</th>
+                        <td class="col-self">免费，源码未公开</td>
+                        <td>开源、免费、无需账号</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/zh-dark/screencap.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/zh-light/screencap.webp" alt="yyzTools 截图工具条上的 OCR 与翻译按钮" width="1278" height="869" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>截图工具条：OCR 与翻译就在保存、贴图旁边——一张截图变成可读、可翻译的文字，不需要第二个工具。</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+            <h3>装好就有的 OCR——旁边就是翻译</h3>
+            <p>ShareX 的 OCR 依托 Windows 内置引擎，加新语言要先装系统语言包。yyzTools 把 RapidOCR 引擎和模型打进安装包：装好即用、混排文字友好，截图工具条上的 OCR 与翻译按钮（或独立的快速 OCR，Alt+T）把一张截图直接变成翻译好的文字，全程不用离开截图流程。</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>什么时候 ShareX 仍是好选择</h3>
+                <p>如果你的截图是要「发出去」的——大量上传目标、自定义上传器、截图后任务链、自动捕获——或者你要的是每个旋钮都露在外面的开源免费无账号工具，ShareX 仍是重度用户之选，它的社区也是 Windows 免费软件里最大的之一。</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>什么时候选 yyzTools</h3>
+                <p>如果你的截图是用来读和回的——提取文字、翻译段落、整页截存——yyzTools 在截图窗口里就把事办完，同一个安装包里还有启动器、文件搜索、剪贴板历史、批量处理，共 387 个模块。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>常见疑问</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools 能替代 ShareX 吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>日常截图——区域、滚动、标注、贴图——基本能，还多了翻译和内置 OCR 引擎。但 ShareX 的主场——上传目标、自定义上传器、截图后自动化——这里没有对应物。重度分享流用户请留着 ShareX。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>两边 OCR 引擎有什么差别？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>yyzTools 把 RapidOCR 引擎和模型随安装包交付，装好即用、对混排文字优化。ShareX 调用 Windows 内置 OCR，语言跟随系统语言包——加一种语言要先去 Windows 语言设置里装。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>两个能共存吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>可以。若有热键相撞，在任一侧改键即可（yyzTools：托盘图标 → 设置 → 快捷键）。</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>截图、读字、翻译，一气呵成</h2>
+        <p>免费下载。截一张图，在同一条工具条上点 OCR 或翻译——不用装语言包，不用开第二个工具。</p>
+        <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+            <i class="fa-solid fa-download"></i>免费下载 yyzTools
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-CN/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>产品</h3>
+            <a href="/zh-CN/features.html">功能</a>
+            <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/getting-started.html">快速上手</a>
+            <a href="/zh-CN/changelog.html">更新日志</a>
+            
+            <a href="/zh-CN/alternatives.html">替代品与对比</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>资源</h3>
+            <a href="/zh-CN/sdk.html">开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">社区讨论</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">问题反馈</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-CN/agreement.html">用户协议</a>
+            <a href="/zh-CN/privacy.html">隐私政策</a>
+            
+            <a class="js-email" href="#">联系邮箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留所有权利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

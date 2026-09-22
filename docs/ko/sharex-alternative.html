@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools — ShareX 대안: 캡처 도구 모음 위의 OCR과 번역</title>
+<meta name="description" content="ShareX 대안을 찾고 계신가요? yyzTools는 스크린샷·주석·스크롤 캡처·고정을 같이 지원하고, 거기에 없는 것——설치 파일에 내장된 로컬 OCR 엔진(시스템 언어 팩 불필요)과 도구 모음에서 한 단계 번역——을 무료 도구 상자에 담았습니다.">
+
+<meta property="og:title" content="yyzTools — ShareX 대안: 캡처 도구 모음 위의 OCR과 번역">
+<meta property="og:description" content="ShareX 대안을 찾고 계신가요? yyzTools는 스크린샷·주석·스크롤 캡처·고정을 같이 지원하고, 거기에 없는 것——설치 파일에 내장된 로컬 OCR 엔진(시스템 언어 팩 불필요)과 도구 모음에서 한 단계 번역——을 무료 도구 상자에 담았습니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ko/sharex-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ko">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools — ShareX 대안: 캡처 도구 모음 위의 OCR과 번역">
+<meta name="twitter:description" content="ShareX 대안을 찾고 계신가요? yyzTools는 스크린샷·주석·스크롤 캡처·고정을 같이 지원하고, 거기에 없는 것——설치 파일에 내장된 로컬 OCR 엔진(시스템 언어 팩 불필요)과 도구 모음에서 한 단계 번역——을 무료 도구 상자에 담았습니다.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ko/sharex-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/sharex-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/sharex-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/sharex-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/sharex-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/sharex-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/sharex-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/sharex-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/sharex-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/sharex-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/sharex-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-5pweLEg9.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-pR0vNK2W.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ko/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ko/" >홈</a>
+            <a href="/ko/features.html" >기능</a>
+            <a href="/ko/download.html" >다운로드</a>
+            <a href="/ko/getting-started.html" >빠른 시작</a>
+            <a href="/ko/changelog.html" >변경 내역</a>
+            
+            <a href="/ko/sdk.html" >개발자</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">피드백</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="topbar-actions" role="group" aria-label="상단 바 작업">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="마음에 드나요? GitHub에서 스타를 눌러주세요" aria-label="마음에 드나요? GitHub에서 스타를 눌러주세요">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="테마"
+                    data-name-system="시스템 설정"
+                    data-name-light="라이트"
+                    data-name-dark="다크">
+                    <summary class="act act-theme tip-end"
+                        data-tip="테마"
+                        aria-label="테마"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>시스템 설정</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>라이트</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>다크</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="언어 선택 · 한국어"
+                             aria-label="언어 선택"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/sharex-alternative.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/sharex-alternative.html" hreflang="zh-CN" role="menuitem"
+                           >简体中文</a>
+                        
+                        <a href="/zh-TW/sharex-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/sharex-alternative.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/sharex-alternative.html" hreflang="ko" role="menuitem"
+                           class="on" aria-current="true">한국어</a>
+                        
+                        <a href="/fr/sharex-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/sharex-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/sharex-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/sharex-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/sharex-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/sharex-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/sharex-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="메뉴" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools가 ShareX를 대체하나요?","acceptedAnswer":{"@type":"Answer","text":"일상 캡처——영역, 스크롤, 주석, 고정——은 거의 되고, 번역과 내장 OCR 엔진이 더해집니다. 다만 ShareX의 본령——업로드 대상, 사용자 지정 업로더, 캡처 후 자동화——에 해당하는 것은 없습니다. 공유 중심 사용자는 ShareX를 유지하세요."}},{"@type":"Question","name":"OCR 엔진의 차이는?","acceptedAnswer":{"@type":"Answer","text":"yyzTools는 RapidOCR 엔진과 모델을 설치 파일 안에 넣어 설치 직후부터 쓸 수 있고 혼합 문자에 최적화되어 있습니다. ShareX는 Windows 내장 OCR을 호출하며 언어는 설치된 시스템 언어 팩을 따릅니다——추가하려면 Windows 언어 설정을 거쳐야 합니다."}},{"@type":"Question","name":"둘 다 설치해도 되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 단축키가 겹치면 어느 한쪽에서 바꾸세요(yyzTools: 트레이 아이콘 → 설정 → 단축키)."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"ShareX 대안을 찾고 계신가요?","item":"https://yyztools.com/ko/sharex-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">ShareX 대안을 찾고 계신가요?</h1>
+        <p class="hero-lead">ShareX는 파워 유저의 스위스 아미 나이프입니다——설정은 깊고, 오픈소스이며, 업로드 워크플로는 견줄 이가 없습니다. yyzTools의 캡처 모듈은 같은 일상을 덮으면서——영역, 스크롤 캡처, 주석, 화면 고정——ShareX가 가지 않는 곳으로 갑니다: 설치 파일에 내장된 로컬 OCR 엔진, 그리고 캡처 도구 모음에서 한 번의 번역.</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/ko/download.html">
+                <i class="fa-solid fa-download"></i>yyzTools 무료 다운로드
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs ShareX<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs ShareX</h2>
+            <p>둘 다 무료, 둘 다 Windows 전용. 걸고 있는 것은 다릅니다: ShareX는 설정 가능성과 업로드 워크플로를, yyzTools는 「캡처에서 읽히고 번역되는 글까지」의 개봉 경로를 극까지 밀어붙입니다.</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">ShareX</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">제품 위치</th>
+                        <td class="col-self">387개 모듈 도구 상자의 캡처 모듈</td>
+                        <td>캡처 전문, 깊이 설정 가능한 오픈소스 도구</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">캡처 모드</th>
+                        <td class="col-self">영역, 스크롤 캡처(정합 결합), 화면 고정</td>
+                        <td>영역 / 창 / 전체 화면 / 스크롤 / 자동 캡처, 화면 고정</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">주석</th>
+                        <td class="col-self">사각형 / 타원 / 화살표 / 단계 번호 / 직선 / 텍스트 / 모자이크 / 브러시 / 지우개, 그 자리에서 다시 편집</td>
+                        <td>독립 이미지 편집기 + 캡처 내 주석(흐림, 픽셀화, Step 번호 포함)</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">OCR 엔진</th>
+                        <td class="col-self">RapidOCR 설치 파일 내장——설치하면 바로, 혼합 문자에 강함</td>
+                        <td>Windows 내장 OCR——언어는 설치된 시스템 언어 팩을 따름</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">번역</th>
+                        <td class="col-self">캡처 도구 모음에서 한 번. 별도 「빠른 OCR」 모듈(Alt+T)은 영역 선택에서 글·번역으로 직행</td>
+                        <td>없음</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">녹화 형태</th>
+                        <td class="col-self">카메라 영역이 커서를 따라 자동 줌, 클릭·키 표시, 원클릭 내보내기</td>
+                        <td>화면 녹화와 GIF 녹화</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">업로드와 워크플로</th>
+                        <td class="col-self">로컬 우선: 내 컴퓨터에서 저장·처리, 업로드 파이프라인 없음</td>
+                        <td>다수의 업로드 대상, 사용자 지정 업로더, 캡처 후 작업 체인</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">번들</th>
+                        <td class="col-self">같은 설치 파일에 런처, 파일 검색, 클립보드 기록, 일괄 처리</td>
+                        <td>캡처와 녹화에 집중</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">오픈소스</th>
+                        <td class="col-self">무료, 소스 비공개</td>
+                        <td>오픈소스, 무료, 계정 불필요</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/screencap.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/screencap.webp" alt="yyzTools 캡처 도구 모음의 OCR과 번역 버튼" width="1278" height="869" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>캡처 도구 모음: OCR과 번역이 저장·고정 바로 옆에——캡처 한 장이 읽히고 번역되는 글이 되고, 두 번째 도구는 필요 없습니다.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+            <h3>설치하면 그대로 쓰는 OCR——옆에는 번역</h3>
+            <p>ShareX의 OCR은 Windows 내장 엔진에 얹혀 있어 새 언어는 먼저 시스템 언어 팩을 설치해야 합니다. yyzTools는 RapidOCR 엔진과 모델을 설치 파일에 넣었습니다: 설치한 순간 동작하고 혼합 문자를 다루며, 도구 모음의 OCR·번역 버튼(또는 독립 빠른 OCR, Alt+T)이 캡처 한 장을 번역된 글로 바꿉니다. 캡처 흐름을 벗어날 필요가 없습니다.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>ShareX가 여전히 나은 선택일 때</h3>
+                <p>캡처가 「어딘가로 보내지는」 것이라면——다수의 업로드 대상, 사용자 지정 업로더, 캡처 후 작업 체인, 자동 캡처——혹은 모든 손잡이가 밖으로 나온 오픈소스 무료·계정 없는 도구를 원한다면, ShareX는 여전히 파워 유저의 선택이고 그 커뮤니티는 Windows 무료 소프트웨어에서 가장 큰 축에 속합니다.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>yyzTools가 더 맞을 때</h3>
+                <p>캡처가 읽고 답하기 위한 것이라면——文字를 뽑아내고, 문단을 번역하고, 긴 페이지를 통째로 담고——yyzTools는 캡처 창 안에서 일을 끝내고, 같은 설치 파일에 런처, 파일 검색, 클립보드 기록, 일괄 처리 등 모두 387개 모듈이 들어 있습니다.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>자주 묻는 질문</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools가 ShareX를 대체하나요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>일상 캡처——영역, 스크롤, 주석, 고정——은 거의 되고, 번역과 내장 OCR 엔진이 더해집니다. 다만 ShareX의 본령——업로드 대상, 사용자 지정 업로더, 캡처 후 자동화——에 해당하는 것은 없습니다. 공유 중심 사용자는 ShareX를 유지하세요.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>OCR 엔진의 차이는?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>yyzTools는 RapidOCR 엔진과 모델을 설치 파일 안에 넣어 설치 직후부터 쓸 수 있고 혼합 문자에 최적화되어 있습니다. ShareX는 Windows 내장 OCR을 호출하며 언어는 설치된 시스템 언어 팩을 따릅니다——추가하려면 Windows 언어 설정을 거쳐야 합니다.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>둘 다 설치해도 되나요?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>네. 단축키가 겹치면 어느 한쪽에서 바꾸세요(yyzTools: 트레이 아이콘 → 설정 → 단축키).</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>찍고, 읽고, 번역하고</h2>
+        <p>무료 다운로드. 캡처한 뒤 같은 도구 모음에서 OCR이나 번역을 누르세요——언어 팩도, 두 번째 도구도 필요 없습니다.</p>
+        <a class="btn btn-primary btn-lg" href="/ko/download.html">
+            <i class="fa-solid fa-download"></i>yyzTools 무료 다운로드
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ko/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 데스크톱 생산성 도구 모음. 로컬 우선, 평생 무료.</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>제품</h3>
+            <a href="/ko/features.html">기능</a>
+            <a href="/ko/download.html">다운로드</a>
+            <a href="/ko/getting-started.html">빠른 시작</a>
+            <a href="/ko/changelog.html">변경 내역</a>
+            
+            <a href="/ko/alternatives.html">대체 프로그램 비교</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>자료</h3>
+            <a href="/ko/sdk.html">개발자</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">토론</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">문제 신고</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>법적 고지</h3>
+            <a href="/ko/agreement.html">이용약관</a>
+            <a href="/ko/privacy.html">개인정보 처리방침</a>
+            
+            <a class="js-email" href="#">문의 이메일</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　모든 권리 보유</p>
+        <p class="footer-fine">Windows는 Microsoft Corporation의 등록 상표입니다. 본 사이트는 Microsoft와 아무런 제휴 관계가 없습니다.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

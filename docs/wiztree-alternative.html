@@ -113,9 +113,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
+  <script type="module" crossorigin src="/assets/main-5pweLEg9.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-pR0vNK2W.css">
 </head>
 <body>
 
@@ -140,70 +140,95 @@
 
         <div class="topbar-right">
             
-            <div class="theme-switch" role="group" aria-label="Theme">
-                <button type="button" data-theme-value="system" aria-pressed="false" title="System" aria-label="System">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
-                    </svg>
-                </button>
-                <button type="button" data-theme-value="light" aria-pressed="false" title="Light" aria-label="Light">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-                    </svg>
-                </button>
-                <button type="button" data-theme-value="dark" aria-pressed="false" title="Dark" aria-label="Dark">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
-                    </svg>
-                </button>
+            <div class="topbar-actions" role="group" aria-label="Top bar actions">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="Like it? Star us on GitHub" aria-label="Like it? Star us on GitHub">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="Theme"
+                    data-name-system="System"
+                    data-name-light="Light"
+                    data-name-dark="Dark">
+                    <summary class="act act-theme tip-end"
+                        data-tip="Theme"
+                        aria-label="Theme"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>System</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>Light</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>Dark</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="Language · English"
+                             aria-label="Language"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/wiztree-alternative.html" hreflang="en" role="menuitem"
+                           class="on" aria-current="true">English</a>
+                        
+                        <a href="/zh-CN/wiztree-alternative.html" hreflang="zh-CN" role="menuitem"
+                           >简体中文</a>
+                        
+                        <a href="/zh-TW/wiztree-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/wiztree-alternative.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/wiztree-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/wiztree-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/wiztree-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/wiztree-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/wiztree-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/wiztree-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/wiztree-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/wiztree-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
             </div>
-            
-            <details class="lang-pick" id="langPick">
-                <summary aria-label="Language">
-                    <i class="fa-solid fa-globe"></i>
-                    <span class="lang-cur">English</span>
-                    <i class="fa-solid fa-chevron-down lang-caret"></i>
-                </summary>
-                <div class="lang-menu">
-                    
-                    <a href="/wiztree-alternative.html" hreflang="en"
-                       class="on" aria-current="true">English</a>
-                    
-                    <a href="/zh-CN/wiztree-alternative.html" hreflang="zh-CN"
-                       >简体中文</a>
-                    
-                    <a href="/zh-TW/wiztree-alternative.html" hreflang="zh-TW"
-                       >繁體中文</a>
-                    
-                    <a href="/ja/wiztree-alternative.html" hreflang="ja"
-                       >日本語</a>
-                    
-                    <a href="/ko/wiztree-alternative.html" hreflang="ko"
-                       >한국어</a>
-                    
-                    <a href="/fr/wiztree-alternative.html" hreflang="fr"
-                       >Français</a>
-                    
-                    <a href="/de/wiztree-alternative.html" hreflang="de"
-                       >Deutsch</a>
-                    
-                    <a href="/es/wiztree-alternative.html" hreflang="es"
-                       >Español</a>
-                    
-                    <a href="/ru/wiztree-alternative.html" hreflang="ru"
-                       >Русский</a>
-                    
-                    <a href="/ar/wiztree-alternative.html" hreflang="ar"
-                       >العربية</a>
-                    
-                    <a href="/pt/wiztree-alternative.html" hreflang="pt"
-                       >Português</a>
-                    
-                    <a href="/it/wiztree-alternative.html" hreflang="it"
-                       >Italiano</a>
-                    
-                </div>
-            </details>
             
             <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
                 
@@ -218,7 +243,7 @@
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is yyzTools' analyzer faster than WizTree?","acceptedAnswer":{"@type":"Answer","text":"Both read the NTFS $MFT, so scanning a large volume takes seconds, not minutes, either way. WizTree is built solely for this and can be faster and more mature on extreme scans and re-scans; yyzTools wins on what happens after the scan, not on shaving a fraction of a second off it."}},{"@type":"Question","name":"I already have WizTree or WinDirStat — do I need this?","acceptedAnswer":{"@type":"Answer","text":"If all you want is to see usage, keep them; they are excellent. Reach for yyzTools when you are tired of one app to see space, another to clean junk, another to find files — and would rather fold those into one."}},{"@type":"Question","name":"Can it scan network drives or USB sticks?","acceptedAnswer":{"@type":"Answer","text":"It focuses on fixed local NTFS volumes; network shares and non-NTFS or removable media have limited support today — a real gap versus WizTree and TreeSize."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is yyzTools' analyzer faster than WizTree?","acceptedAnswer":{"@type":"Answer","text":"Both read the NTFS $MFT, so scanning a large volume takes seconds, not minutes, either way. WizTree is built solely for this and can be faster and more mature on extreme scans and re-scans; yyzTools wins on what happens after the scan, not on shaving a fraction of a second off it."}},{"@type":"Question","name":"I already have WizTree or WinDirStat — do I need this?","acceptedAnswer":{"@type":"Answer","text":"If all you want is to see usage, keep them; they are excellent. Reach for yyzTools when you are tired of one app to see space, another to clean junk, another to find files — and would rather fold those into one."}},{"@type":"Question","name":"Can it scan network drives or USB sticks?","acceptedAnswer":{"@type":"Answer","text":"It focuses on fixed local NTFS volumes; network shares and non-NTFS or removable media have limited support today — a real gap versus WizTree and TreeSize."}},{"@type":"Question","name":"Can WinDirStat / WizTree preview file contents?","acceptedAnswer":{"@type":"Answer","text":"No. They show names, sizes, types and a treemap; to see content you open the file with another app — a small gamble when you don't recognize it. In yyzTools' analyzer, select a file and hit Space to preview it in place: Office docs without MS Office installed, plus 3D models and CAD."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Who's eating your disk — and how to clear it","item":"https://yyztools.com/wiztree-alternative.html"}]}</script>
 
 <section class="hero">
@@ -276,6 +301,13 @@
                         <th scope="row">Treemap view</th>
                         <td class="col-self">Colored treemap by folder size (tested on a 533 GB volume with 1,108,909 files)</td>
                         <td>Colored treemap by folder size</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">File preview</th>
+                        <td class="col-self">Select and hit Space to preview: Office docs (docx / xlsx / pptx) without MS Office, plus 3D models and CAD; unknown types fall back to a hex view</td>
+                        <td>No built-in preview — judge by the file name or open it with another app</td>
                         
                     </tr>
                     
@@ -344,6 +376,16 @@
 
 
 
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>See what&#39;s inside the 8 GB file before you delete it</h3>
+            <p>Select a suspicious large file on the treemap and hit Space to preview it in place — no app-switching, no risky double-click. Read docx / xlsx / pptx without MS Office installed, spin interactive 3D models (glTF / OBJ / FBX / STL…) and CAD drawings, and fall back to a hex view for unrecognized types instead of a blank window. WinDirStat and WizTree skip this step: all you get is a name and a size — what that data.pak actually is, you&#39;ll have to guess elsewhere.</p>
+        </div>
+    </div>
+</section>
+
 
 
 <section class="section">
@@ -392,6 +434,14 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
                 <p>It focuses on fixed local NTFS volumes; network shares and non-NTFS or removable media have limited support today — a real gap versus WizTree and TreeSize.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Can WinDirStat / WizTree preview file contents?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>No. They show names, sizes, types and a treemap; to see content you open the file with another app — a small gamble when you don&#39;t recognize it. In yyzTools&#39; analyzer, select a file and hit Space to preview it in place: Office docs without MS Office installed, plus 3D models and CAD.</p>
             </details>
             
         </div>

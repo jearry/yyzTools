@@ -113,9 +113,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
+  <script type="module" crossorigin src="/assets/main-5pweLEg9.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-pR0vNK2W.css">
 </head>
 <body>
 
@@ -140,70 +140,95 @@
 
         <div class="topbar-right">
             
-            <div class="theme-switch" role="group" aria-label="Tema">
-                <button type="button" data-theme-value="system" aria-pressed="false" title="Sistema" aria-label="Sistema">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
-                    </svg>
-                </button>
-                <button type="button" data-theme-value="light" aria-pressed="false" title="Claro" aria-label="Claro">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-                    </svg>
-                </button>
-                <button type="button" data-theme-value="dark" aria-pressed="false" title="Oscuro" aria-label="Oscuro">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
-                    </svg>
-                </button>
+            <div class="topbar-actions" role="group" aria-label="Acciones de la barra superior">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="¿Te gusta? Danos una estrella en GitHub" aria-label="¿Te gusta? Danos una estrella en GitHub">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="Tema"
+                    data-name-system="Sistema"
+                    data-name-light="Claro"
+                    data-name-dark="Oscuro">
+                    <summary class="act act-theme tip-end"
+                        data-tip="Tema"
+                        aria-label="Tema"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>Sistema</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>Claro</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>Oscuro</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="Idioma · Español"
+                             aria-label="Idioma"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/getting-started.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/getting-started.html" hreflang="zh-CN" role="menuitem"
+                           >简体中文</a>
+                        
+                        <a href="/zh-TW/getting-started.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/getting-started.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/getting-started.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/getting-started.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/getting-started.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/getting-started.html" hreflang="es" role="menuitem"
+                           class="on" aria-current="true">Español</a>
+                        
+                        <a href="/ru/getting-started.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/getting-started.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/getting-started.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/getting-started.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
             </div>
-            
-            <details class="lang-pick" id="langPick">
-                <summary aria-label="Idioma">
-                    <i class="fa-solid fa-globe"></i>
-                    <span class="lang-cur">Español</span>
-                    <i class="fa-solid fa-chevron-down lang-caret"></i>
-                </summary>
-                <div class="lang-menu">
-                    
-                    <a href="/getting-started.html" hreflang="en"
-                       >English</a>
-                    
-                    <a href="/zh-CN/getting-started.html" hreflang="zh-CN"
-                       >简体中文</a>
-                    
-                    <a href="/zh-TW/getting-started.html" hreflang="zh-TW"
-                       >繁體中文</a>
-                    
-                    <a href="/ja/getting-started.html" hreflang="ja"
-                       >日本語</a>
-                    
-                    <a href="/ko/getting-started.html" hreflang="ko"
-                       >한국어</a>
-                    
-                    <a href="/fr/getting-started.html" hreflang="fr"
-                       >Français</a>
-                    
-                    <a href="/de/getting-started.html" hreflang="de"
-                       >Deutsch</a>
-                    
-                    <a href="/es/getting-started.html" hreflang="es"
-                       class="on" aria-current="true">Español</a>
-                    
-                    <a href="/ru/getting-started.html" hreflang="ru"
-                       >Русский</a>
-                    
-                    <a href="/ar/getting-started.html" hreflang="ar"
-                       >العربية</a>
-                    
-                    <a href="/pt/getting-started.html" hreflang="pt"
-                       >Português</a>
-                    
-                    <a href="/it/getting-started.html" hreflang="it"
-                       >Italiano</a>
-                    
-                </div>
-            </details>
             
             <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
                 
@@ -217,7 +242,7 @@
 
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Empieza con yyzTools en 5 minutos","item":"https://yyztools.com/es/getting-started.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Empieza con yyzTools en 5 minutos","description":"Guía de inicio rápido de yyzTools: invoca la paleta de comandos, busca archivos y procesos con prefijos, arrastra tus favoritos al dock y personaliza los atajos — en 5 minutos.","totalTime":"PT5M","step":[{"@type":"HowToStep","position":1,"name":"Invoca la paleta de comandos","text":"Pulsa Alt+Espacio y un cuadro de búsqueda aparece en el centro de la pantalla. Es el centro de yyzTools: aplicaciones, archivos, procesos, ventanas, marcadores y portapapeles se buscan en ese único cuadro; los resultados aparecen al escribir y Enter los abre."},{"@type":"HowToStep","position":2,"name":"Aprende unos prefijos","text":"Escribe un prefijo y un espacio al inicio del cuadro para cambiar el dominio de búsqueda: f busca en todos los discos, p procesos, w ventanas, b marcadores del navegador, c el historial del portapapeles, > ejecuta comandos, = calcula al instante. No memorices nombres de funciones: solo las letras."},{"@type":"HowToStep","position":3,"name":"Arrastra tus favoritos al dock","text":"Lleva el ratón a la parte superior de la pantalla y el dock se desliza hacia fuera. Arrastra directamente las apps, archivos y carpetas que uses a menudo para añadirlos; arrástralos fuera para quitarlos. Tus entradas habituales dejan de requerir un paseo por el menú Inicio."},{"@type":"HowToStep","position":4,"name":"Ajusta los atajos a tus costumbres","text":"Clic derecho en el icono de la bandeja → Configuración → Atajos. La paleta, la captura, el OCR, la traducción y la calculadora se pueden reasignar a tus combinaciones preferidas; los submódulos de la paleta también admiten sus propios atajos."},{"@type":"HowToStep","position":5,"name":"Abre lo que necesites, cuando lo necesites","text":"Traducción, OCR, procesamiento por lotes: no tienes que buscarlos; escribe su nombre en la paleta para abrirlos. ¿Olvidaste un nombre? Echa un vistazo a la lista de funciones: los 388 módulos ya vienen en la caja, listos cuando los necesites."}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Empieza con yyzTools en 5 minutos","description":"Guía de inicio rápido de yyzTools: invoca la paleta de comandos, busca archivos y procesos con prefijos, arrastra tus favoritos al dock y personaliza los atajos — en 5 minutos.","totalTime":"PT5M","step":[{"@type":"HowToStep","position":1,"name":"Invoca la paleta de comandos","text":"Pulsa Alt+Espacio y un cuadro de búsqueda aparece en el centro de la pantalla. Es el centro de yyzTools: aplicaciones, archivos, procesos, ventanas, marcadores y portapapeles se buscan en ese único cuadro; los resultados aparecen al escribir y Enter los abre."},{"@type":"HowToStep","position":2,"name":"Aprende unos prefijos","text":"Escribe un prefijo y un espacio al inicio del cuadro para cambiar el dominio de búsqueda: f busca en todos los discos, p procesos, w ventanas, b marcadores del navegador, c el historial del portapapeles, > ejecuta comandos, = calcula al instante. No memorices nombres de funciones: solo las letras."},{"@type":"HowToStep","position":3,"name":"Arrastra tus favoritos al dock","text":"Lleva el ratón a la parte superior de la pantalla y el dock se desliza hacia fuera. Arrastra directamente las apps, archivos y carpetas que uses a menudo para añadirlos; arrástralos fuera para quitarlos. Tus entradas habituales dejan de requerir un paseo por el menú Inicio."},{"@type":"HowToStep","position":4,"name":"Ajusta los atajos a tus costumbres","text":"Clic derecho en el icono de la bandeja → Configuración → Atajos. La paleta, la captura, el OCR, la traducción y la calculadora se pueden reasignar a tus combinaciones preferidas; los submódulos de la paleta también admiten sus propios atajos."},{"@type":"HowToStep","position":5,"name":"Abre lo que necesites, cuando lo necesites","text":"Traducción, OCR, procesamiento por lotes: no tienes que buscarlos; escribe su nombre en la paleta para abrirlos. ¿Olvidaste un nombre? Echa un vistazo a la lista de funciones: los 387 módulos ya vienen en la caja, listos cuando los necesites."}]}</script>
 
 <section class="page-head">
     <div class="wrap">
@@ -309,7 +334,7 @@
                     <h2>Abre lo que necesites, cuando lo necesites</h2>
                     <span class="guide-time"><i class="fa-regular fa-clock" aria-hidden="true"></i>30 s</span>
                 </div>
-                <p>Traducción, OCR, procesamiento por lotes: no tienes que buscarlos; escribe su nombre en la paleta para abrirlos. ¿Olvidaste un nombre? Echa un vistazo a la lista de funciones: los 388 módulos ya vienen en la caja, listos cuando los necesites.</p>
+                <p>Traducción, OCR, procesamiento por lotes: no tienes que buscarlos; escribe su nombre en la paleta para abrirlos. ¿Olvidaste un nombre? Echa un vistazo a la lista de funciones: los 387 módulos ya vienen en la caja, listos cuando los necesites.</p>
                 
                 
             </div>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A WinDirStat alternative — disk treemap plus search and cleanup in one toolbox</title>
+<meta name="description" content="Looking for a WinDirStat alternative? yyzTools&#39; disk analyzer draws a treemap from a resident MFT index — drilling into folders answers instantly — and pairs it with file search and a 152-rule cleaner in the same free install. WinDirStat 2.x is fast and open source; this is for when analysis is the first step, not the last.">
+
+<meta property="og:title" content="A WinDirStat alternative — disk treemap plus search and cleanup in one toolbox">
+<meta property="og:description" content="Looking for a WinDirStat alternative? yyzTools&#39; disk analyzer draws a treemap from a resident MFT index — drilling into folders answers instantly — and pairs it with file search and a 152-rule cleaner in the same free install. WinDirStat 2.x is fast and open source; this is for when analysis is the first step, not the last.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/windirstat-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A WinDirStat alternative — disk treemap plus search and cleanup in one toolbox">
+<meta name="twitter:description" content="Looking for a WinDirStat alternative? yyzTools&#39; disk analyzer draws a treemap from a resident MFT index — drilling into folders answers instantly — and pairs it with file search and a 152-rule cleaner in the same free install. WinDirStat 2.x is fast and open source; this is for when analysis is the first step, not the last.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/windirstat-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/windirstat-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/windirstat-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-5pweLEg9.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-pR0vNK2W.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/" >Home</a>
+            <a href="/features.html" >Features</a>
+            <a href="/download.html" >Download</a>
+            <a href="/getting-started.html" >Quick start</a>
+            <a href="/changelog.html" >Changelog</a>
+            
+            <a href="/sdk.html" >Developers</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Feedback</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="topbar-actions" role="group" aria-label="Top bar actions">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="Like it? Star us on GitHub" aria-label="Like it? Star us on GitHub">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="Theme"
+                    data-name-system="System"
+                    data-name-light="Light"
+                    data-name-dark="Dark">
+                    <summary class="act act-theme tip-end"
+                        data-tip="Theme"
+                        aria-label="Theme"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>System</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>Light</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>Dark</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="Language · English"
+                             aria-label="Language"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/windirstat-alternative.html" hreflang="en" role="menuitem"
+                           class="on" aria-current="true">English</a>
+                        
+                        <a href="/zh-CN/windirstat-alternative.html" hreflang="zh-CN" role="menuitem"
+                           >简体中文</a>
+                        
+                        <a href="/zh-TW/windirstat-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/windirstat-alternative.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/windirstat-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/windirstat-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/windirstat-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/windirstat-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/windirstat-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/windirstat-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/windirstat-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/windirstat-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is yyzTools' analyzer faster than WinDirStat?","acceptedAnswer":{"@type":"Answer","text":"Not comparable as-is: WinDirStat 2.x scans with multithreaded direct NTFS reads and is fast for a one-shot scan. yyzTools doesn't scan on demand — a resident service maintains an MFT snapshot with USN increments, so browsing the treemap and drilling into folders reads prebuilt data. First answer is instant; the trade-off is a resident background service."}},{"@type":"Question","name":"I already use WinDirStat — why switch?","acceptedAnswer":{"@type":"Answer","text":"Keep it if it serves you well. yyzTools earns its place when analysis is step one: from the same window you can recycle the hogs, jump into full-disk file search, and run a 152-rule cleanup — and the analyzer ships inside the free toolbox with launcher, OCR and translation."}},{"@type":"Question","name":"Does the resident service slow my PC down?","acceptedAnswer":{"@type":"Answer","text":"It's the same indexing service that powers yyzTools' file search (f␣ in the launcher). The MFT snapshot is built once and maintained with low-cost USN journal increments; after that, analysis and search add no disk-wide rescans."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Who's eating your disk — and what to do next","item":"https://yyztools.com/windirstat-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">Who&#39;s eating your disk — and what to do next</h1>
+        <p class="hero-lead">WinDirStat 2.x is a revived, well-built classic: multithreaded NTFS scanning, treemap, duplicate finder, dark mode. yyzTools&#39; analyzer takes a different architecture — it reads from a resident indexing service (MFT snapshot + USN increments), so drilling into any folder answers instantly — and it doesn&#39;t stop at the picture: reveal, recycle, search the same files, and run a 152-rule cleanup, all in one install.</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/download.html">
+                <i class="fa-solid fa-download"></i>Download yyzTools free
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs WinDirStat<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs WinDirStat</h2>
+            <p>Both draw the size of your disk as an interactive treemap. The difference is what comes after: WinDirStat is a standalone analyzer; yyzTools folds analysis into a toolbox that can act on what the treemap shows.</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">WinDirStat</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">Positioning</th>
+                        <td class="col-self">A disk analyzer inside a 387-module toolbox</td>
+                        <td>A dedicated, open-source disk usage analyzer</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Scan technology</th>
+                        <td class="col-self">Reads from a resident service: MFT snapshot + USN increments, no rescan per drill-down</td>
+                        <td>Multithreaded, direct NTFS scanning on each run (2.x)</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Treemap</th>
+                        <td class="col-self">Squarified treemap, area = size, click to descend, hover for details</td>
+                        <td>Interactive treemap, area = size, color = file type</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Acting on results</th>
+                        <td class="col-self">Recycle bin or delete with confirmation, copy path, open in Explorer — then search or clean the same files</td>
+                        <td>Open, move, delete items from the analyzer</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Cleanup tie-in</th>
+                        <td class="col-self">Same install carries a file cleaner with 152 rules</td>
+                        <td>Analysis only; cleanup needs another tool</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">File search tie-in</th>
+                        <td class="col-self">Jump to the in-house full-disk search from any entry</td>
+                        <td>Filter within the finished scan only</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Extras</th>
+                        <td class="col-self">Keyboard-driven drill-down, 12 UI languages, dark mode</td>
+                        <td>Duplicate finder by content, extension stats, report export, Explorer integration</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Price / license</th>
+                        <td class="col-self">Free for personal and commercial use</td>
+                        <td>Free and open source (GPLv2)</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Maintenance</th>
+                        <td class="col-self">Actively developed (v1.0.9.1900)</td>
+                        <td>Revived: 2.x line shipping regularly through 2026</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/diskspace.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/diskspace.webp" alt="yyzTools disk space analyzer treemap view" width="1040" height="680" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Folders colored by size, drawn from the resident index — measured on a 533 GB volume with 1,108,909 files.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>The treemap that doesn&#39;t rescan</h3>
+            <p>yyzTools&#39; analyzer doesn&#39;t scan at all in the classic sense: a resident Windows service holds each volume&#39;s MFT snapshot and applies USN journal increments as the disk changes. Drilling from C: into a deep folder is one query against live index data — the picture is already there. That same service powers instant file search, so the folder you just analyzed is searchable by name in the next keystroke.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>When WinDirStat is still the right pick</h3>
+                <p>WinDirStat is free, open source (GPLv2), actively maintained again, and its 2.x line is genuinely good: fast direct NTFS scanning, duplicate detection by content, extension statistics, report export and Explorer integration. If you want a pure standalone analyzer — or the duplicate finder is the mission — it remains an excellent specialist.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>When yyzTools is the better fit</h3>
+                <p>If your real question is &#34;what&#39;s hogging the disk, and how do I clean it without installing another program,&#34; yyzTools answers both: a treemap that answers instantly from the resident index, then recycle, search and a 152-rule cleanup on the same files — inside the free toolbox that also carries the launcher, OCR and translation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>Common questions</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Is yyzTools&#39; analyzer faster than WinDirStat?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Not comparable as-is: WinDirStat 2.x scans with multithreaded direct NTFS reads and is fast for a one-shot scan. yyzTools doesn&#39;t scan on demand — a resident service maintains an MFT snapshot with USN increments, so browsing the treemap and drilling into folders reads prebuilt data. First answer is instant; the trade-off is a resident background service.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>I already use WinDirStat — why switch?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Keep it if it serves you well. yyzTools earns its place when analysis is step one: from the same window you can recycle the hogs, jump into full-disk file search, and run a 152-rule cleanup — and the analyzer ships inside the free toolbox with launcher, OCR and translation.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Does the resident service slow my PC down?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>It&#39;s the same indexing service that powers yyzTools&#39; file search (f␣ in the launcher). The MFT snapshot is built once and maintained with low-cost USN journal increments; after that, analysis and search add no disk-wide rescans.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>See it. Clear it. One install.</h2>
+        <p>Free download. Open Disk Space Analyzer, descend the treemap instantly, then recycle or clean what you found.</p>
+        <a class="btn btn-primary btn-lg" href="/download.html">
+            <i class="fa-solid fa-download"></i>Download yyzTools free
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">A local-first Windows productivity toolkit. Free forever.</p>
+            <p class="footer-ver">v1.0.9.1900</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Product</h3>
+            <a href="/features.html">Features</a>
+            <a href="/download.html">Download</a>
+            <a href="/getting-started.html">Quick start</a>
+            <a href="/changelog.html">Changelog</a>
+            
+            <a href="/alternatives.html">Alternatives &amp; comparisons</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <a href="/sdk.html">Developers</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Report an issue</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Legal</h3>
+            <a href="/agreement.html">User Agreement</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            
+            <a class="js-email" href="#">Email</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools ·All rights reserved</p>
+        <p class="footer-fine">Windows is a registered trademark of Microsoft Corporation. This site is not affiliated with Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

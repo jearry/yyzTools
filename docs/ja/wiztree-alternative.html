@@ -113,9 +113,9 @@
 })(window, document, "clarity", "script", "ydgpm1nvxt");
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-DLtyYK38.js"></script>
+  <script type="module" crossorigin src="/assets/main-5pweLEg9.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-DpwTs3gy.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-pR0vNK2W.css">
 </head>
 <body>
 
@@ -140,70 +140,95 @@
 
         <div class="topbar-right">
             
-            <div class="theme-switch" role="group" aria-label="テーマ">
-                <button type="button" data-theme-value="system" aria-pressed="false" title="システムに従う" aria-label="システムに従う">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
-                    </svg>
-                </button>
-                <button type="button" data-theme-value="light" aria-pressed="false" title="ライト" aria-label="ライト">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-                    </svg>
-                </button>
-                <button type="button" data-theme-value="dark" aria-pressed="false" title="ダーク" aria-label="ダーク">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
-                    </svg>
-                </button>
+            <div class="topbar-actions" role="group" aria-label="トップバー操作">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="気に入ったら GitHub でスターを" aria-label="気に入ったら GitHub でスターを">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="テーマ"
+                    data-name-system="システムに従う"
+                    data-name-light="ライト"
+                    data-name-dark="ダーク">
+                    <summary class="act act-theme tip-end"
+                        data-tip="テーマ"
+                        aria-label="テーマ"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>システムに従う</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>ライト</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>ダーク</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="言語を選択 · 日本語"
+                             aria-label="言語を選択"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/wiztree-alternative.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/wiztree-alternative.html" hreflang="zh-CN" role="menuitem"
+                           >简体中文</a>
+                        
+                        <a href="/zh-TW/wiztree-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/wiztree-alternative.html" hreflang="ja" role="menuitem"
+                           class="on" aria-current="true">日本語</a>
+                        
+                        <a href="/ko/wiztree-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/wiztree-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/wiztree-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/wiztree-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/wiztree-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/wiztree-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/wiztree-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/wiztree-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
             </div>
-            
-            <details class="lang-pick" id="langPick">
-                <summary aria-label="言語を選択">
-                    <i class="fa-solid fa-globe"></i>
-                    <span class="lang-cur">日本語</span>
-                    <i class="fa-solid fa-chevron-down lang-caret"></i>
-                </summary>
-                <div class="lang-menu">
-                    
-                    <a href="/wiztree-alternative.html" hreflang="en"
-                       >English</a>
-                    
-                    <a href="/zh-CN/wiztree-alternative.html" hreflang="zh-CN"
-                       >简体中文</a>
-                    
-                    <a href="/zh-TW/wiztree-alternative.html" hreflang="zh-TW"
-                       >繁體中文</a>
-                    
-                    <a href="/ja/wiztree-alternative.html" hreflang="ja"
-                       class="on" aria-current="true">日本語</a>
-                    
-                    <a href="/ko/wiztree-alternative.html" hreflang="ko"
-                       >한국어</a>
-                    
-                    <a href="/fr/wiztree-alternative.html" hreflang="fr"
-                       >Français</a>
-                    
-                    <a href="/de/wiztree-alternative.html" hreflang="de"
-                       >Deutsch</a>
-                    
-                    <a href="/es/wiztree-alternative.html" hreflang="es"
-                       >Español</a>
-                    
-                    <a href="/ru/wiztree-alternative.html" hreflang="ru"
-                       >Русский</a>
-                    
-                    <a href="/ar/wiztree-alternative.html" hreflang="ar"
-                       >العربية</a>
-                    
-                    <a href="/pt/wiztree-alternative.html" hreflang="pt"
-                       >Português</a>
-                    
-                    <a href="/it/wiztree-alternative.html" hreflang="it"
-                       >Italiano</a>
-                    
-                </div>
-            </details>
             
             <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
                 
@@ -218,7 +243,7 @@
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools の分析は WizTree より速いですか？","acceptedAnswer":{"@type":"Answer","text":"どちらも NTFS $MFT を直読みするので、大容量ドライブも数秒で完走します。WizTree はこれ専用に作られており、極限走査や再走査ではより速く成熟し得ます。yyzTools の強みは走査「後」に何ができるかで、数百分の一秒を縮めることにはありません。"}},{"@type":"Question","name":"既に WizTree / WinDirStat がありますが、必要ですか？","acceptedAnswer":{"@type":"Answer","text":"見るだけならそれで十分、優れたツールです。占用を見るアプリ、掃除するアプリ、探すアプリと幾つも入れるのに飽きたら、一つにまとめる手段として yyzTools をどうぞ。"}},{"@type":"Question","name":"ネットワークドライブや USB も走査できますか？","acceptedAnswer":{"@type":"Answer","text":"ローカルの固定 NTFS ボリューム中心で、ネットワーク共有や非 NTFS / リムーバブルは現状サポートが限定的です——WizTree / TreeSize との現実的な差の一つです。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools の分析は WizTree より速いですか？","acceptedAnswer":{"@type":"Answer","text":"どちらも NTFS $MFT を直読みするので、大容量ドライブも数秒で完走します。WizTree はこれ専用に作られており、極限走査や再走査ではより速く成熟し得ます。yyzTools の強みは走査「後」に何ができるかで、数百分の一秒を縮めることにはありません。"}},{"@type":"Question","name":"既に WizTree / WinDirStat がありますが、必要ですか？","acceptedAnswer":{"@type":"Answer","text":"見るだけならそれで十分、優れたツールです。占用を見るアプリ、掃除するアプリ、探すアプリと幾つも入れるのに飽きたら、一つにまとめる手段として yyzTools をどうぞ。"}},{"@type":"Question","name":"ネットワークドライブや USB も走査できますか？","acceptedAnswer":{"@type":"Answer","text":"ローカルの固定 NTFS ボリューム中心で、ネットワーク共有や非 NTFS / リムーバブルは現状サポートが限定的です——WizTree / TreeSize との現実的な差の一つです。"}},{"@type":"Question","name":"WinDirStat / WizTree はファイルの中身をプレビューできますか？","acceptedAnswer":{"@type":"Answer","text":"できません。表示されるのはファイル名・サイズ・種類とツリーマップだけで、中身を見るには関連アプリで別途開くしかありません — 見知らぬファイルは誤って開くリスクもあります。yyzTools のアナライザーならファイルを選んでスペースでその場プレビュー。MS Office なしで Office 文書を表示し、3D モデルや CAD も対応します。"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"ディスクを食い尽くしているのは誰か — そしてどう片付けるか","item":"https://yyztools.com/ja/wiztree-alternative.html"}]}</script>
 
 <section class="hero">
@@ -276,6 +301,13 @@
                         <th scope="row">ツリーマップ表示</th>
                         <td class="col-self">サイズ別の色付きツリーマップ（533 GB・1,108,909 ファイルで実測）</td>
                         <td>サイズ別の色付きツリーマップ</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">ファイルプレビュー</th>
+                        <td class="col-self">選んでスペースでその場プレビュー：MS Office なしで docx / xlsx / pptx を表示、対話型 3D モデルと CAD も対応、不明型は二進 hex 表示でフォールバック</td>
+                        <td>プレビュー非搭載 — ファイル名で推測するか、関連アプリで開くしかない</td>
                         
                     </tr>
                     
@@ -344,6 +376,16 @@
 
 
 
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>消す前に、その 8 GB の中身をのぞく</h3>
+            <p>ツリーマップ上で怪しい大ファイルを選んでスペースを押せば、その場でプレビュー——ウィンドウを切り替えず、危ないダブルクリックもしません。MS Office なしで docx / xlsx / pptx を表示し、対話型 3D モデル（glTF / OBJ / FBX / STL…）や CAD 図面は回して見られ、不明な形式は二進 hex 表示へフォールバックするので空白画面にはなりません。WinDirStat や WizTree にはこの一手がありません。もらえるのはファイル名とサイズだけで、あの data.pak の中身は名前をたよりに別の場所で推測するしかない。</p>
+        </div>
+    </div>
+</section>
+
 
 
 <section class="section">
@@ -392,6 +434,14 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
                 <p>ローカルの固定 NTFS ボリューム中心で、ネットワーク共有や非 NTFS / リムーバブルは現状サポートが限定的です——WizTree / TreeSize との現実的な差の一つです。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>WinDirStat / WizTree はファイルの中身をプレビューできますか？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>できません。表示されるのはファイル名・サイズ・種類とツリーマップだけで、中身を見るには関連アプリで別途開くしかありません — 見知らぬファイルは誤って開くリスクもあります。yyzTools のアナライザーならファイルを選んでスペースでその場プレビュー。MS Office なしで Office 文書を表示し、3D モデルや CAD も対応します。</p>
             </details>
             
         </div>
