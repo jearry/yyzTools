@@ -266,7 +266,7 @@
 <main>
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search & preview, clipboard history, batch processing, live wallpaper and 387 more. Local-first, free forever.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.0.9.1900","downloadUrl":"https://github.com/jearry/yyzTools/releases/download/v1.0.9.1900/yyzTools-setup-1.0.9.1900.exe","inLanguage":["en","zh-CN","zh-TW","ja","ko","fr","de","es","ru","ar","pt","it"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"yyzTools","description":"yyzTools is a Windows desktop productivity toolkit: command palette, translation, OCR, file search & preview, clipboard history, batch processing, live wallpaper and 387 more. Local-first, free forever.","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DesktopApplication","softwareVersion":"1.1.0.2000","downloadUrl":"https://github.com/jearry/yyzTools/releases/download/v1.1.0.2000/yyzTools-setup-1.1.0.2000.exe","inLanguage":["en","zh-CN","zh-TW","ja","ko","fr","de","es","ru","ar","pt","it"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it really free forever? Will you start charging?","acceptedAnswer":{"@type":"Answer","text":"Genuinely free. No paid unlocks, no membership tiers, and no holding core features back behind a paywall. We want yyzTools to be a tool you are happy to keep on your desktop long-term, not another subscription."}},{"@type":"Question","name":"Is my data uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Clipboard history, file search, app usage, and OCR are processed and stored locally. Only when you actively use an online feature such as translation does your input go to the third-party service you selected."}},{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. There is no sign-up, and the software does not collect identifying information."}},{"@type":"Question","name":"Which systems are supported?","acceptedAnswer":{"@type":"Answer","text":"64-bit Windows 10 and Windows 11. The Microsoft Edge WebView2 runtime is required; Windows 11 ships with it, and on Windows 10 the installer will guide you through adding it."}},{"@type":"Question","name":"Is it heavy on resources?","acceptedAnswer":{"@type":"Answer","text":"The resident main process is light, and wallpaper, capture, and input hints run as separate processes that only start when used. Game mode pauses wallpaper and effects in a single click."}},{"@type":"Question","name":"How does yyzTools differ from PowerToys?","acceptedAnswer":{"@type":"Answer","text":"PowerToys is Microsoft’s modular utility set for power users - you enable the pieces you want. yyzTools is an integrated suite: command palette, translation, OCR, clipboard history, and batch file / image / video / PDF tools come preconfigured in one installer, with a 12-language interface. Both are free, so many people simply keep both."}},{"@type":"Question","name":"How does it compare with Flow Launcher or Raycast?","acceptedAnswer":{"@type":"Answer","text":"Flow Launcher is an excellent open-source launcher that shines at search and plugins. Raycast comes from macOS; its Windows version is still in beta and the full experience needs a Pro subscription. yyzTools is complete out of the box: translation, OCR, clipboard history, batch processing, and live wallpaper are all built in — no plugin hunting, no subscription."}},{"@type":"Question","name":"How does it compare with Everything or Listary?","acceptedAnswer":{"@type":"Answer","text":"Everything is an excellent dedicated filename-search tool; Listary adds a launcher and Explorer integration. Since v1.0.5, yyzTools runs its own in-house engine: direct $MFT reads with USN journal updates, Everything-style syntax (path: / ext: / size:), and a resident index of around 5–30 MB. The difference: one Alt+Space box searches files alongside apps, processes, windows, bookmarks, and clipboard, with preview, reveal, and recycle-bin actions built in. If all you want is the fastest filename search, Everything remains a great pick."}},{"@type":"Question","name":"I already use PowerToys — can I still install yyzTools?","acceptedAnswer":{"@type":"Answer","text":"Yes, they coexist fine. The resident yyzTools process is light, wallpaper and capture start on demand, and every hotkey is customisable. A common setup: PowerToys for window snapping and key remapping, yyzTools for launching, translation, OCR, and batch processing."}},{"@type":"Question","name":"What about uTools, Wox, or ZTools?","acceptedAnswer":{"@type":"Answer","text":"uTools is a plugin platform - the shell is free, but popular plugins sit behind a paid membership. Wox is an open-source launcher focused on search. ZTools is an open-source uTools alternative assembled from a plugin market. yyzTools bundles 387 modules into one installer with no membership and no paid unlocks, and keeps clipboard, search, and OCR data on your machine."}}]}</script>
 
 <section class="hero">
@@ -287,7 +287,7 @@
             <div class="hero-meta">
                 <p class="hero-note"><i class="fa-brands fa-windows"></i> Windows 10 / 11 · 64-bit · No sign-up</p>
                 <a class="badge" href="/changelog.html">
-                    <span class="badge-dot"></span>Latest v1.0.9.1900
+                    <span class="badge-dot"></span>Latest v1.1.0.2000
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -604,6 +604,16 @@
                 
                 <div class="swiper-slide showcase-slide">
                     <picture>
+                        <source srcset="/carousel/en-dark/mouse-gestures.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/carousel/en-light/mouse-gestures.webp"
+                             alt="Mouse Gestures" width="1280" height="1009"
+                             loading=&#34;lazy&#34;
+                             decoding="async">
+                    </picture>
+                </div>
+                
+                <div class="swiper-slide showcase-slide">
+                    <picture>
                         <source srcset="/carousel/en-dark/file-clean.webp" media="(prefers-color-scheme: dark)">
                         <img src="/carousel/en-light/file-clean.webp"
                              alt="Lightning File Scan &amp; Clean" width="1280" height="845"
@@ -783,66 +793,70 @@
             
             <button type="button" class="showcase-thumb"
                     data-i="2" role="tab"
-                    aria-selected="false">Lightning File Scan &amp; Clean</button>
+                    aria-selected="false">Mouse Gestures</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="3" role="tab"
-                    aria-selected="false">Lightning Disk Space Analyzer</button>
+                    aria-selected="false">Lightning File Scan &amp; Clean</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="4" role="tab"
-                    aria-selected="false">Lightning Memory Cleaner</button>
+                    aria-selected="false">Lightning Disk Space Analyzer</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="5" role="tab"
-                    aria-selected="false">Lightning System Optimizer</button>
+                    aria-selected="false">Lightning Memory Cleaner</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="6" role="tab"
-                    aria-selected="false">Live wallpaper</button>
+                    aria-selected="false">Lightning System Optimizer</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="7" role="tab"
-                    aria-selected="false">File preview</button>
+                    aria-selected="false">Live wallpaper</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="8" role="tab"
-                    aria-selected="false">Super translate</button>
+                    aria-selected="false">File preview</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="9" role="tab"
-                    aria-selected="false">Quick OCR</button>
+                    aria-selected="false">Super translate</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="10" role="tab"
-                    aria-selected="false">Batch image tool</button>
+                    aria-selected="false">Quick OCR</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="11" role="tab"
-                    aria-selected="false">Batch PDF tool</button>
+                    aria-selected="false">Batch image tool</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="12" role="tab"
-                    aria-selected="false">Batch video tool</button>
+                    aria-selected="false">Batch PDF tool</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="13" role="tab"
-                    aria-selected="false">Batch rename</button>
+                    aria-selected="false">Batch video tool</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="14" role="tab"
-                    aria-selected="false">Calculator pad</button>
+                    aria-selected="false">Batch rename</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="15" role="tab"
-                    aria-selected="false">Calendar</button>
+                    aria-selected="false">Calculator pad</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="16" role="tab"
-                    aria-selected="false">Hash calculator</button>
+                    aria-selected="false">Calendar</button>
             
             <button type="button" class="showcase-thumb"
                     data-i="17" role="tab"
+                    aria-selected="false">Hash calculator</button>
+            
+            <button type="button" class="showcase-thumb"
+                    data-i="18" role="tab"
                     aria-selected="false">Regex tester</button>
             
         </div>
@@ -963,7 +977,7 @@
                     <li>Screen capture</li>
                     
                     
-                    <li class="more">+8</li>
+                    <li class="more">+9</li>
                     
                 </ul>
             </a>
@@ -1164,7 +1178,7 @@
             
             <p class="footer-tagline">Yes Your Zen Tools</p>
             <p class="footer-desc">A local-first Windows productivity toolkit. Free forever.</p>
-            <p class="footer-ver">v1.0.9.1900</p>
+            <p class="footer-ver">v1.1.0.2000</p>
         </div>
 
         <div class="footer-col">
