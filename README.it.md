@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <strong>Italiano</strong></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.9.1900-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.1.0.2000-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-Gratuito-red">
@@ -23,6 +23,7 @@
 <p align="center">
   <img src="screenshots/en/01-cmd-plate-home.png" alt="Palette dei comandi">
   <img src="screenshots/en/05-dock-overview.png" alt="Dock">
+  <img src="screenshots/en/26-settings.png" alt="Impostazioni">
 </p>
 
 ---
@@ -36,18 +37,18 @@ Cercare, tradurre, riconoscere testi, visualizzare in anteprima, elaborare in ba
 - **Gratuito per sempre** — Tutte le funzionalità sono aperte: nessuno sblocco a pagamento, nessun sistema a membri e nessun addebito mascherato tramite limitazioni delle capacità fondamentali.
 - **Locale prima di tutto** — Appunti, ricerca file, statistiche di utilizzo ed OCR vengono elaborati e salvati sul tuo computer, senza invii automatici.
 - **Una sola installazione** — Oltre 40 moduli pronti all'uso, risparmiando l'intero ciclo di ricerca, confronto, download, prova e disinstallazione.
-- **388 moduli di comandi** — Comandi in cinque categorie (IA, app, giochi, sistema e siti) sempre disponibili; basta un file JSON per aggiungere i tuoi.
+- **387 moduli di comandi** — Comandi in cinque categorie (IA, app, giochi, sistema e siti) sempre disponibili; basta un file JSON per aggiungere i tuoi.
 
 ## Panoramica delle Funzionalità
 
 | | |
 |---|---|
 | **Pannello dei comandi** | Ricerca app · Ricerca file · Gestione processi · Gestione finestre · Ricerca segnalibri · Cronologia appunti · Riga di comando · Calcolo immediato |
-| **Avvio e produttività** | Dock · Cronologia appunti · Statistiche app · Schermata · Registrazione schermo · Assistente promemoria · Calendario perpetuo · Suggerimento tasti · Individuazione mouse · Scansione e pulizia file fulminea · Analisi dello spazio su disco fulminea · Pulizia della memoria fulminea · Ottimizzatore di sistema fulmineo |
-| **Testo e lingue** | Super traduzione · Riconoscimento testi OCR · Espressioni regolari · Codifica/decodifica · Calcolo hash · Crittografia/decrittografia · Conversione dati · Generazione dati |
+| **Avvio e produttività** | Dock · Cronologia appunti · Statistiche app · Schermata · Registrazione schermo · Assistente promemoria · Calendario perpetuo · Azioni rapide di sistema · Gesti del mouse · Scansione e pulizia file fulminea · Analisi dello spazio su disco fulminea · Pulizia della memoria fulminea · Ottimizzatore di sistema fulmineo |
+| **Testo e lingue** | Super traduzione · Riconoscimento testi OCR · OCR rapido · Espressioni regolari · Codifica/decodifica · Calcolo hash · Crittografia/decrittografia · Conversione dati · Generazione dati |
 | **File e multimedialità** | Anteprima file · Rinomina in batch · Elaborazione immagini in batch · Elaborazione video in batch · Elaborazione PDF in batch · Download file |
-| **Calcolo ed estensioni** | Foglio di calcolo · Codice QR · Moduli di comandi · Browser integrato · Estensioni personalizzate |
-| **Personalizzazione** | Sfondi animati · Effetti desktop · Modalità gioco · Pagina di navigazione · Difesa della Terra |
+| **Calcolo ed estensioni** | Foglio di calcolo · Codice QR · SDK aperto · Browser integrato |
+| **Personalizzazione** | Sfondi animati · Effetti desktop · Pagina di navigazione |
 
 ## Architettura
 
@@ -61,6 +62,12 @@ Architettura ibrida: un **host C++ (Win32 + WebView2)** che ospita il **frontend
 | `yyzCmd.exe` | Esecutore di comandi in Win32 puro (spegnimento / riavvio / volume / monitor / cestino, ecc.) |
 | `yyzInputHint.exe` | Visualizzazione in tempo reale dei tasti premuti (RawInput) |
 | `yyzMouseFinder.exe` | Individuazione rapida del cursore del mouse |
+| `yyzScreenCap.exe`   | Cattura schermo — area, scorrimento e fissaggio a schermo |
+| `yyzScreenRec.exe`   | Registrazione schermo — fotocamera che segue il cursore, clic e tasti in evidenza |
+| `yyzFileClean.exe`   | Scansione e pulizia file fulminea (ImGui) |
+| `yyzDiskSpace.exe`   | Analisi dello spazio su disco fulminea (ImGui) |
+| `yyzMemClean.exe`    | Pulizia della memoria fulminea (ImGui) |
+| `yyzWinOpt.exe`      | Ottimizzatore di sistema fulmineo (ImGui) |
 | `yyzUpdater.exe` | Aggiornatore automatico incrementale (vedi `src/updater/`) |
 | `yyzFileSearch.exe` | Motore di ricerca file interno — lettura diretta della MFT + indice incrementale USN |
 
@@ -68,7 +75,7 @@ Il frontend richiama i vari Manager del C++ tramite il bridge `window.Zen`, rest
 
 ## Download e Installazione
 
-- **Installazione** (consigliata): `yyzTools-setup-1.0.9.1900.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installazione** (consigliata): `yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Se l'accesso dalla Cina è lento, usa un mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/) (aggiungi il prefisso corrispondente prima del link di download)
 - Disponibile anche dalla [pagina di download ufficiale](https://yyztools.com/it/download.html).
 

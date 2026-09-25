@@ -11,7 +11,7 @@
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.fr.md">Français</a> · <strong>Deutsch</strong> · <a href="README.es.md">Español</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.pt.md">Português</a> · <a href="README.it.md">Italiano</a></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.9.1900-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-1.1.0.2000-blue">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey">
   <img alt="languages" src="https://img.shields.io/badge/UI-12%20languages-green">
   <img alt="license" src="https://img.shields.io/badge/license-kostenlos-red">
@@ -23,6 +23,7 @@
 <p align="center">
   <img src="screenshots/en/01-cmd-plate-home.png" alt="Command-Palette">
   <img src="screenshots/en/05-dock-overview.png" alt="Dock">
+  <img src="screenshots/en/26-settings.png" alt="Einstellungen">
 </p>
 
 ---
@@ -36,18 +37,18 @@ Suchen, übersetzen, erkennen, vorschauen, stapelweise verarbeiten, aufnehmen, g
 - **Dauerhaft kostenlos** — Alle Funktionen sind offen. Keine kostenpflichtige Freischaltung, keine Mitgliedschaft und kein Beschneiden der Kernfunktionen, um sie Ihnen später zu verkaufen.
 - **Lokal zuerst** — Zwischenablage, Dateisuche, Nutzungsstatistiken und OCR werden ausschließlich auf Ihrem eigenen Rechner verarbeitet und gespeichert. Nichts wird von selbst hochgeladen.
 - **Einmal installieren** — Über 40 Module sofort einsatzbereit — der ganze Kreislauf aus Suchen, Vergleichen, Herunterladen, Testen und Deinstallieren entfällt.
-- **388 Kommandomodule** — Befehle für KI, Apps, Spiele, System und Web jederzeit abrufbar — eine einzige JSON-Datei genügt für eigene Erweiterungen.
+- **387 Kommandomodule** — Befehle für KI, Apps, Spiele, System und Web jederzeit abrufbar — eine einzige JSON-Datei genügt für eigene Erweiterungen.
 
 ## Funktionen
 
 | | |
 |---|---|
 | **Kommandoleiste** | App-Suche · Dateisuche · Prozessverwaltung · Fensterverwaltung · Lesezeichensuche · Zwischenablage-Verlauf · Kommandozeile · Sofortberechnung |
-| **Start und Effizienz** | Dock · Zwischenablage-Verlauf · App-Statistiken · Bildschirmaufnahme · Erinnerungsassistent · Ewiger Kalender · Tastenhinweise · Mauszeigersuche · Blitz-Dateiscan & Bereinigung · Blitz-Speicherplatzanalyse · Blitz-RAM-Bereinigung · Blitz-Systemoptimierer |
-| **Text und Sprache** | Super-Übersetzung · Texterkennung OCR · Reguläre Ausdrücke · Kodieren und Dekodieren · Hash-Berechnung · Ver- und Entschlüsselung · Datenkonvertierung · Datengenerierung |
+| **Start und Effizienz** | Dock · Zwischenablage-Verlauf · App-Statistiken · Bildschirmaufnahme · Bildschirm-Recorder · Erinnerungsassistent · Ewiger Kalender · Schnelle Systemaktionen · Mausgesten · Blitz-Dateiscan & Bereinigung · Blitz-Speicherplatzanalyse · Blitz-RAM-Bereinigung · Blitz-Systemoptimierer |
+| **Text und Sprache** | Super-Übersetzung · Texterkennung OCR · Schnell-OCR · Reguläre Ausdrücke · Kodieren und Dekodieren · Hash-Berechnung · Ver- und Entschlüsselung · Datenkonvertierung · Datengenerierung |
 | **Dateien und Medien** | Dateivorschau · Stapelumbenennung · Bild-Stapelverarbeitung · Video-Stapelverarbeitung · PDF-Stapelverarbeitung · Dateidownload |
-| **Rechnen und Erweitern** | Rechenblock · QR-Codes · Kommandomodule · Integrierter Browser · Eigene Erweiterungen |
-| **Personalisierung** | Dynamischer Hintergrund · Desktop-Effekte · Spielmodus · Navigationsseite · Erdverteidigung |
+| **Rechnen und Erweitern** | Rechenblock · QR-Codes · Offenes SDK · Integrierter Browser |
+| **Personalisierung** | Dynamischer Hintergrund · Desktop-Effekte · Navigationsseite |
 
 ## Architektur
 
@@ -61,6 +62,12 @@ Hybrid: Ein **C++-Host (Win32 + WebView2)** trägt ein **Frontend (Alpine.js + V
 | `yyzCmd.exe` | Reiner Win32-Befehlsausführer (Herunterfahren / Neustart / Lautstärke / Anzeige / Papierkorb usw.) |
 | `yyzInputHint.exe` | Echtzeit-Anzeige von Tastatur- / Maustasten (RawInput) |
 | `yyzMouseFinder.exe` | Mauszeiger schnell lokalisieren |
+| `yyzScreenCap.exe`   | Bildschirmaufnahme — Bereich, Scroll-Langaufnahme, Anheften |
+| `yyzScreenRec.exe`   | Bildschirm-Recorder — Kamera folgt dem Cursor, Klick- und Tastenhinweise |
+| `yyzFileClean.exe`   | Blitz-Dateiscan & Bereinigung (ImGui) |
+| `yyzDiskSpace.exe`   | Blitz-Speicherplatzanalyse (ImGui) |
+| `yyzMemClean.exe`    | Blitz-RAM-Bereinigung (ImGui) |
+| `yyzWinOpt.exe`      | Blitz-Systemoptimierer (ImGui) |
 | `yyzUpdater.exe` | Inkrementeller Auto-Updater (siehe `src/updater/`) |
 | `yyzFileSearch.exe` | Eigenentwickelte Vollvolume-Dateisuche — direktes MFT-Lesen + inkrementeller USN-Index |
 
@@ -68,7 +75,7 @@ Das Frontend ruft die C++-Manager über die `window.Zen`-Brücke auf; alle antwo
 
 ## Download
 
-- **Installer** (empfohlen): `yyzTools-setup-1.0.9.1900.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **Installer** (empfohlen): `yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
 - Aus China langsam? Stellen Sie einem Mirror den Installer-URL voran: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Alternativ über die [offizielle Download-Seite](https://yyztools.com/de/download.html).
 
