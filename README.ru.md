@@ -76,6 +76,7 @@
 ## Загрузка
 
 - **Установщик** (рекомендуется): `yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **winget**: установка в терминале командой `winget install yyztools`
 - Медленно из Китая? Добавьте префикс зеркала к URL установщика: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Или скачайте с [официальной страницы загрузки](https://yyztools.com/ru/download.html).
 

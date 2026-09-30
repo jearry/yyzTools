@@ -76,6 +76,7 @@ Das Frontend ruft die C++-Manager über die `window.Zen`-Brücke auf; alle antwo
 ## Download
 
 - **Installer** (empfohlen): `yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **winget**: Installation in einem Terminal mit `winget install yyztools`
 - Aus China langsam? Stellen Sie einem Mirror den Installer-URL voran: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - Alternativ über die [offizielle Download-Seite](https://yyztools.com/de/download.html).
 

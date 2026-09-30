@@ -76,6 +76,7 @@
 ## 下載安裝
 
 - **安裝包**（推薦）：`yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **winget**：在任意終端機執行 `winget install yyztools` 即可安裝
 - 國內存取慢可走鏡像：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（在安裝包下載連結前加對應前綴）
 - 也可從[官網下載頁](https://yyztools.com/zh-TW/download.html)取得。
 

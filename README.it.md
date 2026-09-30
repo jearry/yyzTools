@@ -76,6 +76,7 @@ Il frontend richiama i vari Manager del C++ tramite il bridge `window.Zen`, rest
 ## Download e Installazione
 
 - **Installazione** (consigliata): `yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **winget**: installazione da un terminale con `winget install yyztools`
 - Se l'accesso dalla Cina è lento, usa un mirror: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/) (aggiungi il prefisso corrispondente prima del link di download)
 - Disponibile anche dalla [pagina di download ufficiale](https://yyztools.com/it/download.html).
 

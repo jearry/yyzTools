@@ -76,6 +76,7 @@
 ## ダウンロード
 
 - **インストーラー**（推奨）：`yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **winget**：ターミナルで `winget install yyztools` を実行するだけでインストールできます
 - 中国本土からアクセスが遅い場合はミラーをご利用ください：[ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)（インストーラーのダウンロード URL の先頭に対応するプレフィックスを付ける）
 - [公式ダウンロードページ](https://yyztools.com/ja/download.html)からも取得できます。
 

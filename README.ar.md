@@ -76,6 +76,7 @@
 ## التنزيل
 
 - **حزمة التثبيت** (مستحسنة): `yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **winget**: التثبيت من أي طرفية بتنفيذ `winget install yyztools`
 - الاتصال بطيء من داخل الصين؟ أضف بادئة إحدى المرايا قبل رابط تنزيل حزمة التثبيت: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/)
 - يمكنك أيضًا الحصول عليها من [صفحة التنزيل الرسمية](https://yyztools.com/ar/download.html).
 

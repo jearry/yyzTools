@@ -76,6 +76,7 @@
 ## 다운로드
 
 - **설치 패키지**(권장): `yyzTools-setup-1.1.0.2000.exe` —— [GitHub Releases](https://github.com/jearry/yyzTools/releases)
+- **winget**: 터미널에서 `winget install yyztools`를 실행하면 설치됩니다
 - 중국 내부에서 접속이 느리면 미러를 이용하세요: [ghfast.top](https://ghfast.top/) · [ghproxy.com](https://ghproxy.com/) · [gh-proxy.com](https://gh-proxy.com/) (설치 패키지 다운로드 URL 앞에 해당 접두사를 붙이면 됩니다)
 - [공식 다운로드 페이지](https://yyztools.com/ko/download.html)에서도 받을 수 있습니다.
 
