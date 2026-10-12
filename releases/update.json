@@ -1,17 +1,17 @@
 {
   "packages": {
     "web": {
-      "version": "1.1.0.2000",
-      "url": "v1.1.0.2000/web-1.1.0.2000.7z",
-      "sha256": "DD9566BAE6DF25DFCF8B61B4B37F313D73288E397C1B410F98F3568A416D5BDC",
+      "version": "1.1.1.2100",
+      "url": "v1.1.1.2100/web-1.1.1.2100.7z",
+      "sha256": "798FCDB2B800C9209C36AF6BE9C7A8F43BB83FFB94E20C99966ECFE2E8202F36",
       "killProcesses": ["yyzWallpaper.exe"],
       "killProcessesAdmin": [],
       "stopService": []
     },
     "modules": {
-      "version": "1.1.0.2000",
-      "url": "v1.1.0.2000/modules-1.1.0.2000.7z",
-      "sha256": "A8842AF41ED3CD357F4CD839485760C591EA93C3CB928D3E20D6C3472CA1D104",
+      "version": "1.1.1.2100",
+      "url": "v1.1.1.2100/modules-1.1.1.2100.7z",
+      "sha256": "0F8420853369FF8292D17279AAA8E46B8AFFA78211FB41CF3D53B955C7F789A7",
       "killProcesses": [],
       "killProcessesAdmin": [],
       "stopService": []
@@ -25,9 +25,9 @@
       "stopService": []
     },
     "yyztools": {
-      "version": "1.1.0.2000",
-      "url": "v1.1.0.2000/yyztools-1.1.0.2000.7z",
-      "sha256": "BE19F0082DB523AE8341362DDFA74CF3EA0260B980CC30427889DA2718DB0ADA",
+      "version": "1.1.1.2100",
+      "url": "v1.1.1.2100/yyztools-1.1.1.2100.7z",
+      "sha256": "DAB443D78EC675BECD8DBBB5FA3870BA70ED69353D181A7C7BD9BB8F6722D2D4",
       "killProcesses": ["yyzWallpaper.exe", "yyzInputHint.exe", "yyzMouseFinder.exe", "yyzBrowser.exe", "yyzCmd.exe", "yyzScreenCap.exe", "yyzScreenRec.exe", "yyzFileClean.exe", "yyzDiskSpace.exe", "yyzMemClean.exe", "yyzWinOpt.exe"],
       "killProcessesAdmin": [],
       "stopService": []
@@ -65,9 +65,9 @@
       "stopService": []
     },
     "main": {
-      "version": "1.1.0.2000",
-      "url": "v1.1.0.2000/main-1.1.0.2000.7z",
-      "sha256": "7EBDDD228297613C3A0EFEE9CCBA24340DE6F435384DD86D9CC4ED2092A1B53D",
+      "version": "1.1.1.2100",
+      "url": "v1.1.1.2100/main-1.1.1.2100.7z",
+      "sha256": "75750021B7E6EFA3AA97E969CBEC7EA3C110C3EE8F4CA786F1652833FF6DFE50",
       "killProcesses": ["yyzWallpaper.exe", "yyzBrowser.exe"],
       "killProcessesAdmin": [],
       "stopService": []
