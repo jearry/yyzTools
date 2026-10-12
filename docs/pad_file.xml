@@ -40,9 +40,9 @@
 
     <Program_Info>
         <Program_Name>yyzTools</Program_Name>
-        <Program_Version>1.1.0.2000</Program_Version>
-        <Program_Release_Month>09</Program_Release_Month>
-        <Program_Release_Day>25</Program_Release_Day>
+        <Program_Version>1.1.1.2100</Program_Version>
+        <Program_Release_Month>10</Program_Release_Month>
+        <Program_Release_Day>12</Program_Release_Day>
         <Program_Release_Year>2026</Program_Release_Year>
         <Program_Cost_Dollars>0</Program_Cost_Dollars>
         <Program_Cost_Other_Code/>
@@ -52,14 +52,14 @@
         <Program_Install_Support>Install and Uninstall</Program_Install_Support>
         <Program_OS_Support>Windows 10 64-bit,Windows 11</Program_OS_Support>
         <Program_Language>English,ChineseSimplified,ChineseTraditional,Japanese,Korean,French,German,Spanish,Russian,Arabic,Portuguese,Italian</Program_Language>
-        <Program_Change_Info>1.1.0.2000: New mouse gestures feature — hold the trigger button and draw to run actions like simulated hotkeys, window control, volume, app launch, task switch and web search (on by default, can be turned off in Settings / Mouse Gestures); Dock gains a one-click desktop organize feature; App usage fixes incorrect LockApp.exe durations after sleep and hibernation; Quick OCR and Screen capture now handle regular hotkeys; Quick OCR supports copying partial text and dragging the window from blank areas; Super translate supports custom LLM engines; OCR and Quick OCR add a merge sentences option; Lightning System Optimizer rule handling refinements; Dock popup detail refinements and items can be dragged across categories.</Program_Change_Info>
+        <Program_Change_Info>1.1.1.2100: New WYSIWYG Markdown file editor powered by milkdown; added WebView2 runtime detection that guides the installation when the runtime is missing; other minor refinements.</Program_Change_Info>
         <Program_Specific_Category>Utilities</Program_Specific_Category>
         <Program_Category_Class>System Utilities::Other</Program_Category_Class>
-        <Program_System_Requirements>Microsoft Edge WebView2 Runtime (preinstalled on Windows 11; on Windows 10 the installer guides the setup). 64-bit system.</Program_System_Requirements>
+        <Program_System_Requirements>Microsoft Edge WebView2 Runtime (preinstalled on Windows 11; when missing, the app detects it and guides the setup). 64-bit system.</Program_System_Requirements>
         <File_Info>
-            <File_Size_Bytes>183433026</File_Size_Bytes>
-            <File_Size_K>179134</File_Size_K>
-            <File_Size_MB>174.94</File_Size_MB>
+            <File_Size_Bytes>185030379</File_Size_Bytes>
+            <File_Size_K>180694</File_Size_K>
+            <File_Size_MB>176.46</File_Size_MB>
         </File_Info>
         <Expire_Info>
             <Has_Expire_Info>N</Has_Expire_Info>
@@ -100,8 +100,8 @@ Privacy: clipboard history, file search, usage stats and OCR are processed and s
             <Application_XML_File_URL>https://yyztools.com/pad_file.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.1.0.2000/yyzTools-setup-1.1.0.2000.exe</Primary_Download_URL>
-            <Secondary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.1.0.2000/yyzTools-v1.1.0.2000-portable.7z</Secondary_Download_URL>
+            <Primary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.1.1.2100/yyzTools-setup-1.1.1.2100.exe</Primary_Download_URL>
+            <Secondary_Download_URL>https://github.com/jearry/yyzTools/releases/download/v1.1.1.2100/yyzTools-v1.1.1.2100-portable.7z</Secondary_Download_URL>
             <Additional_Download_URL_1>https://yyztools.com/download</Additional_Download_URL_1>
         </Download_URLs>
     </Web_Info>
