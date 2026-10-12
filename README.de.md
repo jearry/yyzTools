@@ -20,11 +20,25 @@
 ---
 ## Screenshots
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="Command-Palette">
-  <img src="screenshots/en/05-dock-overview.png" alt="Dock">
-  <img src="screenshots/en/26-settings.png" alt="Einstellungen">
-</p>
+| Helles Design | Dunkles Design |
+| :---: | :---: |
+| ![Kommandoleiste](screenshots/en-light/cmdplate-app.webp) | ![Kommandoleiste](screenshots/en-dark/cmdplate-app.webp) |
+| ![Kommandoleiste · Dateien](screenshots/en-light/cmdplate-file.webp) | ![Kommandoleiste · Dateien](screenshots/en-dark/cmdplate-file.webp) |
+| ![Kommandoleiste · Zwischenablage](screenshots/en-light/cmdplate-clipboard.webp) | ![Kommandoleiste · Zwischenablage](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![Dock](screenshots/en-light/dock.webp) | ![Dock](screenshots/en-dark/dock.webp) |
+| ![Super-Übersetzung](screenshots/en-light/translate.webp) | ![Super-Übersetzung](screenshots/en-dark/translate.webp) |
+| ![Schnell-OCR](screenshots/en-light/quickocr.webp) | ![Schnell-OCR](screenshots/en-dark/quickocr.webp) |
+| ![Rechenblock](screenshots/en-light/calc.webp) | ![Rechenblock](screenshots/en-dark/calc.webp) |
+| ![App-Statistiken](screenshots/en-light/appusage.webp) | ![App-Statistiken](screenshots/en-dark/appusage.webp) |
+| ![Blitz-RAM-Bereinigung](screenshots/en-light/memclean.webp) | ![Blitz-RAM-Bereinigung](screenshots/en-dark/memclean.webp) |
+| ![Blitz-Dateiscan & Bereinigung](screenshots/en-light/fileclean.webp) | ![Blitz-Dateiscan & Bereinigung](screenshots/en-dark/fileclean.webp) |
+| ![Blitz-Speicherplatzanalyse](screenshots/en-light/diskspace.webp) | ![Blitz-Speicherplatzanalyse](screenshots/en-dark/diskspace.webp) |
+| ![Markdown-Editor](screenshots/en-light/markdown.webp) | ![Markdown-Editor](screenshots/en-dark/markdown.webp) |
+| ![Bild-Stapelverarbeitung](screenshots/en-light/imagemagick.webp) | ![Bild-Stapelverarbeitung](screenshots/en-dark/imagemagick.webp) |
+| ![Video-Stapelverarbeitung](screenshots/en-light/ffmpeg.webp) | ![Video-Stapelverarbeitung](screenshots/en-dark/ffmpeg.webp) |
+| ![PDF-Stapelverarbeitung](screenshots/en-light/pdf.webp) | ![PDF-Stapelverarbeitung](screenshots/en-dark/pdf.webp) |
+| ![Stapelumbenennung](screenshots/en-light/rename.webp) | ![Stapelumbenennung](screenshots/en-dark/rename.webp) |
+| ![Einstellungen](screenshots/en-light/settings.webp) | ![Einstellungen](screenshots/en-dark/settings.webp) |
 
 ---
 

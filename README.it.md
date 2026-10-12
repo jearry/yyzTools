@@ -20,11 +20,25 @@
 ---
 ## Screenshot
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="Palette dei comandi">
-  <img src="screenshots/en/05-dock-overview.png" alt="Dock">
-  <img src="screenshots/en/26-settings.png" alt="Impostazioni">
-</p>
+| Tema chiaro | Tema scuro |
+| :---: | :---: |
+| ![Palette dei comandi](screenshots/en-light/cmdplate-app.webp) | ![Palette dei comandi](screenshots/en-dark/cmdplate-app.webp) |
+| ![Palette dei comandi · File](screenshots/en-light/cmdplate-file.webp) | ![Palette dei comandi · File](screenshots/en-dark/cmdplate-file.webp) |
+| ![Palette dei comandi · Appunti](screenshots/en-light/cmdplate-clipboard.webp) | ![Palette dei comandi · Appunti](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![Dock](screenshots/en-light/dock.webp) | ![Dock](screenshots/en-dark/dock.webp) |
+| ![Super traduzione](screenshots/en-light/translate.webp) | ![Super traduzione](screenshots/en-dark/translate.webp) |
+| ![OCR rapido](screenshots/en-light/quickocr.webp) | ![OCR rapido](screenshots/en-dark/quickocr.webp) |
+| ![Foglio di calcolo libero](screenshots/en-light/calc.webp) | ![Foglio di calcolo libero](screenshots/en-dark/calc.webp) |
+| ![Statistiche delle applicazioni](screenshots/en-light/appusage.webp) | ![Statistiche delle applicazioni](screenshots/en-dark/appusage.webp) |
+| ![Pulizia della memoria fulminea](screenshots/en-light/memclean.webp) | ![Pulizia della memoria fulminea](screenshots/en-dark/memclean.webp) |
+| ![Scansione e pulizia file fulminea](screenshots/en-light/fileclean.webp) | ![Scansione e pulizia file fulminea](screenshots/en-dark/fileclean.webp) |
+| ![Analisi dello spazio su disco fulminea](screenshots/en-light/diskspace.webp) | ![Analisi dello spazio su disco fulminea](screenshots/en-dark/diskspace.webp) |
+| ![Editor Markdown](screenshots/en-light/markdown.webp) | ![Editor Markdown](screenshots/en-dark/markdown.webp) |
+| ![Elaborazione immagini in blocco](screenshots/en-light/imagemagick.webp) | ![Elaborazione immagini in blocco](screenshots/en-dark/imagemagick.webp) |
+| ![Elaborazione video in blocco](screenshots/en-light/ffmpeg.webp) | ![Elaborazione video in blocco](screenshots/en-dark/ffmpeg.webp) |
+| ![Elaborazione PDF in blocco](screenshots/en-light/pdf.webp) | ![Elaborazione PDF in blocco](screenshots/en-dark/pdf.webp) |
+| ![Rinomina in blocco](screenshots/en-light/rename.webp) | ![Rinomina in blocco](screenshots/en-dark/rename.webp) |
+| ![Impostazioni](screenshots/en-light/settings.webp) | ![Impostazioni](screenshots/en-dark/settings.webp) |
 
 ---
 

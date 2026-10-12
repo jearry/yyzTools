@@ -20,11 +20,25 @@
 ---
 ## 스크린샷
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="명령 팔레트">
-  <img src="screenshots/en/05-dock-overview.png" alt="독">
-  <img src="screenshots/en/26-settings.png" alt="설정">
-</p>
+| 라이트 테마 | 다크 테마 |
+| :---: | :---: |
+| ![커맨드 팔레트](screenshots/en-light/cmdplate-app.webp) | ![커맨드 팔레트](screenshots/en-dark/cmdplate-app.webp) |
+| ![커맨드 팔레트 · 파일](screenshots/en-light/cmdplate-file.webp) | ![커맨드 팔레트 · 파일](screenshots/en-dark/cmdplate-file.webp) |
+| ![커맨드 팔레트 · 클립보드](screenshots/en-light/cmdplate-clipboard.webp) | ![커맨드 팔레트 · 클립보드](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![독](screenshots/en-light/dock.webp) | ![독](screenshots/en-dark/dock.webp) |
+| ![슈퍼 번역](screenshots/en-light/translate.webp) | ![슈퍼 번역](screenshots/en-dark/translate.webp) |
+| ![빠른 OCR](screenshots/en-light/quickocr.webp) | ![빠른 OCR](screenshots/en-dark/quickocr.webp) |
+| ![계산 노트](screenshots/en-light/calc.webp) | ![계산 노트](screenshots/en-dark/calc.webp) |
+| ![앱 사용 통계](screenshots/en-light/appusage.webp) | ![앱 사용 통계](screenshots/en-dark/appusage.webp) |
+| ![번개 메모리 정리](screenshots/en-light/memclean.webp) | ![번개 메모리 정리](screenshots/en-dark/memclean.webp) |
+| ![번개 파일 스캔 및 정리](screenshots/en-light/fileclean.webp) | ![번개 파일 스캔 및 정리](screenshots/en-dark/fileclean.webp) |
+| ![번개 디스크 공간 분석](screenshots/en-light/diskspace.webp) | ![번개 디스크 공간 분석](screenshots/en-dark/diskspace.webp) |
+| ![Markdown 편집기](screenshots/en-light/markdown.webp) | ![Markdown 편집기](screenshots/en-dark/markdown.webp) |
+| ![이미지 일괄 처리](screenshots/en-light/imagemagick.webp) | ![이미지 일괄 처리](screenshots/en-dark/imagemagick.webp) |
+| ![비디오 일괄 처리](screenshots/en-light/ffmpeg.webp) | ![비디오 일괄 처리](screenshots/en-dark/ffmpeg.webp) |
+| ![PDF 일괄 처리](screenshots/en-light/pdf.webp) | ![PDF 일괄 처리](screenshots/en-dark/pdf.webp) |
+| ![일괄 이름 변경](screenshots/en-light/rename.webp) | ![일괄 이름 변경](screenshots/en-dark/rename.webp) |
+| ![설정](screenshots/en-light/settings.webp) | ![설정](screenshots/en-dark/settings.webp) |
 
 ---
 

@@ -20,11 +20,25 @@
 ---
 ## スクリーンショット
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="コマンドパレット">
-  <img src="screenshots/en/05-dock-overview.png" alt="ドック">
-  <img src="screenshots/en/26-settings.png" alt="設定">
-</p>
+| ライトテーマ | ダークテーマ |
+| :---: | :---: |
+| ![コマンドパレット](screenshots/en-light/cmdplate-app.webp) | ![コマンドパレット](screenshots/en-dark/cmdplate-app.webp) |
+| ![コマンドパレット · ファイル](screenshots/en-light/cmdplate-file.webp) | ![コマンドパレット · ファイル](screenshots/en-dark/cmdplate-file.webp) |
+| ![コマンドパレット · クリップボード](screenshots/en-light/cmdplate-clipboard.webp) | ![コマンドパレット · クリップボード](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![ドック](screenshots/en-light/dock.webp) | ![ドック](screenshots/en-dark/dock.webp) |
+| ![スーパー翻訳](screenshots/en-light/translate.webp) | ![スーパー翻訳](screenshots/en-dark/translate.webp) |
+| ![クイック OCR](screenshots/en-light/quickocr.webp) | ![クイック OCR](screenshots/en-dark/quickocr.webp) |
+| ![計算用紙](screenshots/en-light/calc.webp) | ![計算用紙](screenshots/en-dark/calc.webp) |
+| ![アプリ使用統計](screenshots/en-light/appusage.webp) | ![アプリ使用統計](screenshots/en-dark/appusage.webp) |
+| ![瞬速メモリクリーナー](screenshots/en-light/memclean.webp) | ![瞬速メモリクリーナー](screenshots/en-dark/memclean.webp) |
+| ![瞬速ファイルスキャン＆クリーン](screenshots/en-light/fileclean.webp) | ![瞬速ファイルスキャン＆クリーン](screenshots/en-dark/fileclean.webp) |
+| ![瞬速ディスク容量分析](screenshots/en-light/diskspace.webp) | ![瞬速ディスク容量分析](screenshots/en-dark/diskspace.webp) |
+| ![Markdown エディター](screenshots/en-light/markdown.webp) | ![Markdown エディター](screenshots/en-dark/markdown.webp) |
+| ![画像の一括処理](screenshots/en-light/imagemagick.webp) | ![画像の一括処理](screenshots/en-dark/imagemagick.webp) |
+| ![動画の一括処理](screenshots/en-light/ffmpeg.webp) | ![動画の一括処理](screenshots/en-dark/ffmpeg.webp) |
+| ![PDF の一括処理](screenshots/en-light/pdf.webp) | ![PDF の一括処理](screenshots/en-dark/pdf.webp) |
+| ![一括リネーム](screenshots/en-light/rename.webp) | ![一括リネーム](screenshots/en-dark/rename.webp) |
+| ![設定](screenshots/en-light/settings.webp) | ![設定](screenshots/en-dark/settings.webp) |
 
 ---
 

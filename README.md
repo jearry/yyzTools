@@ -21,11 +21,25 @@
 
 ## Screenshots
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="Command palette">
-  <img src="screenshots/en/05-dock-overview.png" alt="Dock">
-  <img src="screenshots/en/26-settings.png" alt="Settings">
-</p>
+| Light theme | Dark theme |
+| :---: | :---: |
+| ![Command palette](screenshots/en-light/cmdplate-app.webp) | ![Command palette](screenshots/en-dark/cmdplate-app.webp) |
+| ![Command palette · Files](screenshots/en-light/cmdplate-file.webp) | ![Command palette · Files](screenshots/en-dark/cmdplate-file.webp) |
+| ![Command palette · Clipboard](screenshots/en-light/cmdplate-clipboard.webp) | ![Command palette · Clipboard](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![Dock](screenshots/en-light/dock.webp) | ![Dock](screenshots/en-dark/dock.webp) |
+| ![Super translate](screenshots/en-light/translate.webp) | ![Super translate](screenshots/en-dark/translate.webp) |
+| ![Quick OCR](screenshots/en-light/quickocr.webp) | ![Quick OCR](screenshots/en-dark/quickocr.webp) |
+| ![Calculator pad](screenshots/en-light/calc.webp) | ![Calculator pad](screenshots/en-dark/calc.webp) |
+| ![App usage](screenshots/en-light/appusage.webp) | ![App usage](screenshots/en-dark/appusage.webp) |
+| ![Lightning Memory Cleaner](screenshots/en-light/memclean.webp) | ![Lightning Memory Cleaner](screenshots/en-dark/memclean.webp) |
+| ![Lightning File Scan & Clean](screenshots/en-light/fileclean.webp) | ![Lightning File Scan & Clean](screenshots/en-dark/fileclean.webp) |
+| ![Lightning Disk Space Analyzer](screenshots/en-light/diskspace.webp) | ![Lightning Disk Space Analyzer](screenshots/en-dark/diskspace.webp) |
+| ![Markdown Editor](screenshots/en-light/markdown.webp) | ![Markdown Editor](screenshots/en-dark/markdown.webp) |
+| ![Batch image tool](screenshots/en-light/imagemagick.webp) | ![Batch image tool](screenshots/en-dark/imagemagick.webp) |
+| ![Batch video tool](screenshots/en-light/ffmpeg.webp) | ![Batch video tool](screenshots/en-dark/ffmpeg.webp) |
+| ![Batch PDF tool](screenshots/en-light/pdf.webp) | ![Batch PDF tool](screenshots/en-dark/pdf.webp) |
+| ![Batch rename](screenshots/en-light/rename.webp) | ![Batch rename](screenshots/en-dark/rename.webp) |
+| ![Settings](screenshots/en-light/settings.webp) | ![Settings](screenshots/en-dark/settings.webp) |
 
 ---
 

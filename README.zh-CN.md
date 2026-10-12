@@ -21,11 +21,25 @@
 
 ## 界面截图
 
-<p align="center">
-  <img src="screenshots/zh/01-cmd-plate-home.png" alt="命令面板">
-  <img src="screenshots/zh/05-dock-overview.png" alt="程序坞">
-  <img src="screenshots/zh/26-settings.png" alt="设置">
-</p>
+| 浅色主题 | 深色主题 |
+| :---: | :---: |
+| ![命令面板](screenshots/zh-light/cmdplate-app.webp) | ![命令面板](screenshots/zh-dark/cmdplate-app.webp) |
+| ![命令面板文件](screenshots/zh-light/cmdplate-file.webp) | ![命令面板文件](screenshots/zh-dark/cmdplate-file.webp) |
+| ![命令面板剪贴板](screenshots/zh-light/cmdplate-clipboard.webp) | ![命令面板剪贴板](screenshots/zh-dark/cmdplate-clipboard.webp) |
+| ![程序坞](screenshots/zh-light/dock.webp) | ![程序坞](screenshots/zh-dark/dock.webp) |
+| ![超级翻译](screenshots/zh-light/translate.webp) | ![超级翻译](screenshots/zh-dark/translate.webp) |
+| ![快捷 OCR](screenshots/zh-light/quickocr.webp) | ![快捷 OCR](screenshots/zh-dark/quickocr.webp) |
+| ![计算稿纸](screenshots/zh-light/calc.webp) | ![计算稿纸](screenshots/zh-dark/calc.webp) |
+| ![应用统计](screenshots/zh-light/appusage.webp) | ![应用统计](screenshots/zh-dark/appusage.webp) |
+| ![极速内存清理](screenshots/zh-light/memclean.webp) | ![极速内存清理](screenshots/zh-dark/memclean.webp) |
+| ![极速文件扫描清理](screenshots/zh-light/fileclean.webp) | ![极速文件扫描清理](screenshots/zh-dark/fileclean.webp) |
+| ![极速磁盘空间分析](screenshots/zh-light/diskspace.webp) | ![极速磁盘空间分析](screenshots/zh-dark/diskspace.webp) |
+| ![Markdown 编辑器](screenshots/zh-light/markdown.webp) | ![Markdown 编辑器](screenshots/zh-dark/markdown.webp) |
+| ![图片批量处理](screenshots/zh-light/imagemagick.webp) | ![图片批量处理](screenshots/zh-dark/imagemagick.webp) |
+| ![视频批量处理](screenshots/zh-light/ffmpeg.webp) | ![视频批量处理](screenshots/zh-dark/ffmpeg.webp) |
+| ![PDF 批量处理](screenshots/zh-light/pdf.webp) | ![PDF 批量处理](screenshots/zh-dark/pdf.webp) |
+| ![批量重命名](screenshots/zh-light/rename.webp) | ![批量重命名](screenshots/zh-dark/rename.webp) |
+| ![设置](screenshots/zh-light/settings.webp) | ![设置](screenshots/zh-dark/settings.webp) |
 
 ---
 

@@ -20,11 +20,25 @@
 ---
 ## Capturas de pantalla
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="Paleta de comandos">
-  <img src="screenshots/en/05-dock-overview.png" alt="Dock">
-  <img src="screenshots/en/26-settings.png" alt="Ajustes">
-</p>
+| Tema claro | Tema oscuro |
+| :---: | :---: |
+| ![Paleta de comandos](screenshots/en-light/cmdplate-app.webp) | ![Paleta de comandos](screenshots/en-dark/cmdplate-app.webp) |
+| ![Paleta de comandos · Archivos](screenshots/en-light/cmdplate-file.webp) | ![Paleta de comandos · Archivos](screenshots/en-dark/cmdplate-file.webp) |
+| ![Paleta de comandos · Portapapeles](screenshots/en-light/cmdplate-clipboard.webp) | ![Paleta de comandos · Portapapeles](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![Dock](screenshots/en-light/dock.webp) | ![Dock](screenshots/en-dark/dock.webp) |
+| ![Traducción avanzada](screenshots/en-light/translate.webp) | ![Traducción avanzada](screenshots/en-dark/translate.webp) |
+| ![OCR rápido](screenshots/en-light/quickocr.webp) | ![OCR rápido](screenshots/en-dark/quickocr.webp) |
+| ![Hoja de cálculo libre](screenshots/en-light/calc.webp) | ![Hoja de cálculo libre](screenshots/en-dark/calc.webp) |
+| ![Estadísticas de uso](screenshots/en-light/appusage.webp) | ![Estadísticas de uso](screenshots/en-dark/appusage.webp) |
+| ![Limpieza de memoria relámpago](screenshots/en-light/memclean.webp) | ![Limpieza de memoria relámpago](screenshots/en-dark/memclean.webp) |
+| ![Escaneo y limpieza de archivos relámpago](screenshots/en-light/fileclean.webp) | ![Escaneo y limpieza de archivos relámpago](screenshots/en-dark/fileclean.webp) |
+| ![Análisis de espacio en disco relámpago](screenshots/en-light/diskspace.webp) | ![Análisis de espacio en disco relámpago](screenshots/en-dark/diskspace.webp) |
+| ![Editor Markdown](screenshots/en-light/markdown.webp) | ![Editor Markdown](screenshots/en-dark/markdown.webp) |
+| ![Procesamiento por lotes de imágenes](screenshots/en-light/imagemagick.webp) | ![Procesamiento por lotes de imágenes](screenshots/en-dark/imagemagick.webp) |
+| ![Procesamiento por lotes de vídeo](screenshots/en-light/ffmpeg.webp) | ![Procesamiento por lotes de vídeo](screenshots/en-dark/ffmpeg.webp) |
+| ![Procesamiento por lotes de PDF](screenshots/en-light/pdf.webp) | ![Procesamiento por lotes de PDF](screenshots/en-dark/pdf.webp) |
+| ![Renombrado por lotes](screenshots/en-light/rename.webp) | ![Renombrado por lotes](screenshots/en-dark/rename.webp) |
+| ![Ajustes](screenshots/en-light/settings.webp) | ![Ajustes](screenshots/en-dark/settings.webp) |
 
 ---
 

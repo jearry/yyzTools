@@ -20,11 +20,25 @@
 ---
 ## لقطات الشاشة
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="لوحة الأوامر">
-  <img src="screenshots/en/05-dock-overview.png" alt="Dock">
-  <img src="screenshots/en/26-settings.png" alt="الإعدادات">
-</p>
+| المظهر الفاتح | المظهر الداكن |
+| :---: | :---: |
+| ![لوحة الأوامر](screenshots/en-light/cmdplate-app.webp) | ![لوحة الأوامر](screenshots/en-dark/cmdplate-app.webp) |
+| ![لوحة الأوامر · الملفات](screenshots/en-light/cmdplate-file.webp) | ![لوحة الأوامر · الملفات](screenshots/en-dark/cmdplate-file.webp) |
+| ![لوحة الأوامر · الحافظة](screenshots/en-light/cmdplate-clipboard.webp) | ![لوحة الأوامر · الحافظة](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![الرصيف](screenshots/en-light/dock.webp) | ![الرصيف](screenshots/en-dark/dock.webp) |
+| ![الترجمة الفائقة](screenshots/en-light/translate.webp) | ![الترجمة الفائقة](screenshots/en-dark/translate.webp) |
+| ![OCR سريع](screenshots/en-light/quickocr.webp) | ![OCR سريع](screenshots/en-dark/quickocr.webp) |
+| ![مسودة الحساب](screenshots/en-light/calc.webp) | ![مسودة الحساب](screenshots/en-dark/calc.webp) |
+| ![إحصاءات التطبيقات](screenshots/en-light/appusage.webp) | ![إحصاءات التطبيقات](screenshots/en-dark/appusage.webp) |
+| ![مُنظِّف الذاكرة الخاطف](screenshots/en-light/memclean.webp) | ![مُنظِّف الذاكرة الخاطف](screenshots/en-dark/memclean.webp) |
+| ![مسح وتنظيف الملفات الخاطف](screenshots/en-light/fileclean.webp) | ![مسح وتنظيف الملفات الخاطف](screenshots/en-dark/fileclean.webp) |
+| ![مُحلِّل مساحة القرص الخاطف](screenshots/en-light/diskspace.webp) | ![مُحلِّل مساحة القرص الخاطف](screenshots/en-dark/diskspace.webp) |
+| ![محرر Markdown](screenshots/en-light/markdown.webp) | ![محرر Markdown](screenshots/en-dark/markdown.webp) |
+| ![المعالجة الدفعية للصور](screenshots/en-light/imagemagick.webp) | ![المعالجة الدفعية للصور](screenshots/en-dark/imagemagick.webp) |
+| ![المعالجة الدفعية للفيديو](screenshots/en-light/ffmpeg.webp) | ![المعالجة الدفعية للفيديو](screenshots/en-dark/ffmpeg.webp) |
+| ![المعالجة الدفعية لملفات PDF](screenshots/en-light/pdf.webp) | ![المعالجة الدفعية لملفات PDF](screenshots/en-dark/pdf.webp) |
+| ![إعادة التسمية دفعةً](screenshots/en-light/rename.webp) | ![إعادة التسمية دفعةً](screenshots/en-dark/rename.webp) |
+| ![الإعدادات](screenshots/en-light/settings.webp) | ![الإعدادات](screenshots/en-dark/settings.webp) |
 
 ---
 

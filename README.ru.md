@@ -20,11 +20,25 @@
 ---
 ## Скриншоты
 
-<p align="center">
-  <img src="screenshots/en/01-cmd-plate-home.png" alt="Палитра команд">
-  <img src="screenshots/en/05-dock-overview.png" alt="Док">
-  <img src="screenshots/en/26-settings.png" alt="Настройки">
-</p>
+| Светлая тема | Тёмная тема |
+| :---: | :---: |
+| ![Командная панель](screenshots/en-light/cmdplate-app.webp) | ![Командная панель](screenshots/en-dark/cmdplate-app.webp) |
+| ![Командная панель · Файлы](screenshots/en-light/cmdplate-file.webp) | ![Командная панель · Файлы](screenshots/en-dark/cmdplate-file.webp) |
+| ![Командная панель · Буфер обмена](screenshots/en-light/cmdplate-clipboard.webp) | ![Командная панель · Буфер обмена](screenshots/en-dark/cmdplate-clipboard.webp) |
+| ![Док](screenshots/en-light/dock.webp) | ![Док](screenshots/en-dark/dock.webp) |
+| ![Суперперевод](screenshots/en-light/translate.webp) | ![Суперперевод](screenshots/en-dark/translate.webp) |
+| ![Быстрый OCR](screenshots/en-light/quickocr.webp) | ![Быстрый OCR](screenshots/en-dark/quickocr.webp) |
+| ![Черновик вычислений](screenshots/en-light/calc.webp) | ![Черновик вычислений](screenshots/en-dark/calc.webp) |
+| ![Статистика приложений](screenshots/en-light/appusage.webp) | ![Статистика приложений](screenshots/en-dark/appusage.webp) |
+| ![Молниеносная очистка памяти](screenshots/en-light/memclean.webp) | ![Молниеносная очистка памяти](screenshots/en-dark/memclean.webp) |
+| ![Молниеносное сканирование и очистка файлов](screenshots/en-light/fileclean.webp) | ![Молниеносное сканирование и очистка файлов](screenshots/en-dark/fileclean.webp) |
+| ![Молниеносный анализ дискового пространства](screenshots/en-light/diskspace.webp) | ![Молниеносный анализ дискового пространства](screenshots/en-dark/diskspace.webp) |
+| ![Редактор Markdown](screenshots/en-light/markdown.webp) | ![Редактор Markdown](screenshots/en-dark/markdown.webp) |
+| ![Пакетная обработка изображений](screenshots/en-light/imagemagick.webp) | ![Пакетная обработка изображений](screenshots/en-dark/imagemagick.webp) |
+| ![Пакетная обработка видео](screenshots/en-light/ffmpeg.webp) | ![Пакетная обработка видео](screenshots/en-dark/ffmpeg.webp) |
+| ![Пакетная обработка PDF](screenshots/en-light/pdf.webp) | ![Пакетная обработка PDF](screenshots/en-dark/pdf.webp) |
+| ![Пакетное переименование](screenshots/en-light/rename.webp) | ![Пакетное переименование](screenshots/en-dark/rename.webp) |
+| ![Настройки](screenshots/en-light/settings.webp) | ![Настройки](screenshots/en-dark/settings.webp) |
 
 ---
 
