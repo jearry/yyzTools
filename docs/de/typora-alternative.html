@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools — eine Typora-Alternative: ein kostenloser WYSIWYG-Markdown-Editor</title>
+<meta name="description" content="Auf der Suche nach einer Typora-Alternative? yyzTools bringt einen WYSIWYG-Markdown-Editor mit: GFM, KaTeX-Formeln, Mermaid-Diagramme, automatisch gespeicherte Bilder und Autosave — kostenlos, ohne Konto. Beim Export und bei der Plattform-Unterstützung bleibt Typora vorn.">
+
+<meta property="og:title" content="yyzTools — eine Typora-Alternative: ein kostenloser WYSIWYG-Markdown-Editor">
+<meta property="og:description" content="Auf der Suche nach einer Typora-Alternative? yyzTools bringt einen WYSIWYG-Markdown-Editor mit: GFM, KaTeX-Formeln, Mermaid-Diagramme, automatisch gespeicherte Bilder und Autosave — kostenlos, ohne Konto. Beim Export und bei der Plattform-Unterstützung bleibt Typora vorn.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/de/typora-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="de">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools — eine Typora-Alternative: ein kostenloser WYSIWYG-Markdown-Editor">
+<meta name="twitter:description" content="Auf der Suche nach einer Typora-Alternative? yyzTools bringt einen WYSIWYG-Markdown-Editor mit: GFM, KaTeX-Formeln, Mermaid-Diagramme, automatisch gespeicherte Bilder und Autosave — kostenlos, ohne Konto. Beim Export und bei der Plattform-Unterstützung bleibt Typora vorn.">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/de/typora-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/typora-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/typora-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/typora-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/typora-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/typora-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/typora-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/typora-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/typora-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/typora-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/typora-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/typora-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/typora-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/typora-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PLN4N1HHX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PLN4N1HHX');
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-cnM3_Pj-.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-BDvRgz_r.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/de/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/de/" >Start</a>
+            <a href="/de/features.html" >Funktionen</a>
+            <a href="/de/download.html" >Download</a>
+            <a href="/de/getting-started.html" >Schnellstart</a>
+            <a href="/de/changelog.html" >Änderungen</a>
+            
+            <a href="/de/sdk.html" >Entwickler</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Feedback</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="topbar-actions" role="group" aria-label="Aktionen der Kopfleiste">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="Heute ist die Stimmung super – yyzTools muss einfach einen Stern bekommen!" aria-label="Heute ist die Stimmung super – yyzTools muss einfach einen Stern bekommen!">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="Design"
+                    data-name-system="System"
+                    data-name-light="Hell"
+                    data-name-dark="Dunkel">
+                    <summary class="act act-theme tip-end"
+                        data-tip="Design"
+                        aria-label="Design"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>System</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>Hell</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>Dunkel</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="Sprache · Deutsch"
+                             aria-label="Sprache"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/typora-alternative.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/typora-alternative.html" hreflang="zh-CN" role="menuitem"
+                           >简体中文</a>
+                        
+                        <a href="/zh-TW/typora-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/typora-alternative.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/typora-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/typora-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/typora-alternative.html" hreflang="de" role="menuitem"
+                           class="on" aria-current="true">Deutsch</a>
+                        
+                        <a href="/es/typora-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/typora-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/typora-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/typora-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/typora-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kann yyzTools Typora ersetzen?","acceptedAnswer":{"@type":"Answer","text":"Fürs Kernschreiben ja: WYSIWYG, GFM, KaTeX-Formeln, Mermaid, Bilder per Einfügen und Autosave sind alle dabei. Aber Typoras Exportformate, Themen-Ökosystem, Gliederung und Dateibaum, Rechtschreibprüfung und macOS-/Linux-Support haben hier kein Äquivalent. Vielschreiber oder wer für die Abgabe exportiert, sollte Typora behalten — es ist ein Einmalkauf, der weiter funktioniert."}},{"@type":"Question","name":"Wie werden Bilder gespeichert?","acceptedAnswer":{"@type":"Answer","text":"Eingefügte, kopierte oder gezogene Bilder werden automatisch in einem Unterordner assets/ neben dem Dokument gespeichert und über relative Pfade referenziert — der ganze Dokumentordner lässt sich verschieben, zippen oder in Git legen, ohne Bilder zu verlieren. Beim Einfügen in ein ungespeichertes Dokument werden Sie zuerst zum Speichern aufgefordert."}},{"@type":"Question","name":"Unterstützt es Mathematik und Mermaid-Diagramme?","acceptedAnswer":{"@type":"Answer","text":"Ja. Inline-Mathematik nutzt $..$, Block-Mathematik $$..$$ (mit KaTeX gerendert), und Mermaid-Codeblöcke lassen sich auf Wunsch als SVG-Vorschau anzeigen. Beides wird bei Bedarf geladen und verlangsamt den ersten Bildschirm nicht."}},{"@type":"Question","name":"Und der Export nach PDF oder Word?","acceptedAnswer":{"@type":"Answer","text":"Der Export nach PDF und HTML ist integriert — zwei Einträge im Exportmenü, WYSIWYG (das PDF entsteht über die System-Druck-Engine). Word / EPUB und weitere Formate sind nicht enthalten; dafür bleibt Typora die flüssigere Wahl."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Auf der Suche nach einer Typora-Alternative?","item":"https://yyztools.com/de/typora-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">Auf der Suche nach einer Typora-Alternative?</h1>
+        <p class="hero-lead">Typora hat „What you see is what you get“-Markdown-Schreiben zum Maßstab gemacht — für 14,99 $ als Einmalkauf. yyzTools steckt einen milkdown-basierten WYSIWYG-Markdown-Editor in dasselbe kostenlose Installationspaket: Überschriften, Tabellen, Aufgabenlisten, Fußnoten, KaTeX-Formeln, Mermaid-Diagramme, per Einfügen gespeicherte Bilder und Autosave — neben OCR, Übersetzung und Dateisuche, eines von 388 Modulen.</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/de/download.html">
+                <i class="fa-solid fa-download"></i>yyzTools kostenlos herunterladen
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs Typora<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs Typora</h2>
+            <p>Beide sind WYSIWYG: keine geteilten Ansichten, das Getippte wird sofort gerendert. Typora ist eine eigenständige App fürs Schreiben; der Editor von yyzTools ist ein Modul in einer kostenlosen Werkzeugkiste.</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">Typora</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">Positionierung</th>
+                        <td class="col-self">Markdown-Editor in einer Werkzeugkiste mit 388 Modulen</td>
+                        <td>Eigenständiger Markdown-Editor fürs Schreiben</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">WYSIWYG-Bearbeitung</th>
+                        <td class="col-self">milkdown-Kern — Tippen rendert sofort, keine geteilten Ansichten</td>
+                        <td>Der Maßstab: Syntax ausgeblendet, Live-Rendering</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Preis</th>
+                        <td class="col-self">Kostenlos, privat und kommerziell</td>
+                        <td>14,99 $ Einmalkauf (ca. 110 ¥), eine Lizenz für 3 Geräte</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">GFM-Syntax</th>
+                        <td class="col-self">Überschriften / mehrstufige Listen / ausgerichtete Tabellen / Aufgabenlisten / Fußnoten / Codeblöcke</td>
+                        <td>GitHub Flavored Markdown, mit kleinen Abweichungen</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Mathematik</th>
+                        <td class="col-self">Inline $..$ und Block $$..$$ (KaTeX)</td>
+                        <td>TeX/LaTeX-Quelle live gerendert (MathJax)</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Diagramme</th>
+                        <td class="col-self">Mermaid-Codeblöcke als SVG-Vorschau</td>
+                        <td>Mermaid-Diagramme im Editor gerendert</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Bilder</th>
+                        <td class="col-self">Einfügen / Kopieren / Ziehen speichert in assets/ neben dem Dokument, relative Referenzen</td>
+                        <td>Automatisches Kopieren in einen lokalen Bildordner mit eigenen Regeln</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Autosave</th>
+                        <td class="col-self">Standard alle 5 Sekunden, einstellbar oder abschaltbar</td>
+                        <td>Unterstützt</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Export</th>
+                        <td class="col-self">Export nach PDF und HTML, WYSIWYG</td>
+                        <td>Word / EPUB / LaTeX und mehr</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Themen</th>
+                        <td class="col-self">Dunkel / Hell nach System</td>
+                        <td>Themen-Store + eigenes CSS</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Schreibhilfen</th>
+                        <td class="col-self">Zuletzt verwendete Dateien; erkennt externe Änderungen bei Fokus</td>
+                        <td>Gliederungs-Sidebar, Dateibaum, globale Suche, Rechtschreibprüfung</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Plattformen</th>
+                        <td class="col-self">Windows</td>
+                        <td>Windows / macOS / Linux</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/markdown.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/markdown.webp" alt="Die WYSIWYG-Schreibfläche des Markdown-Editors von yyzTools" width="1250" height="900" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>WYSIWYG auf milkdown-Basis: Tippen, und es rendert — inklusive GFM, KaTeX-Formeln und Mermaid-Diagrammen, kostenlos im selben Werkzeugkasten.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+            <h3>WYSIWYG ohne Preisschild</h3>
+            <p>Typoras Preisseite sagt 14,99 $. Der Markdown-Editor von yyzTools ist ein Teil eines kostenlosen Installationspakets: WYSIWYG auf milkdown-Basis, der komplette GFM-Umfang, KaTeX-Formeln und Mermaid-Diagramme, Bilder, die beim Einfügen sofort im Dokumentordner landen, Autosave alle 5 Sekunden standardmäßig — keine Anmeldung, kein Login, auch kommerziell kostenlos.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>Wann Typora weiterhin die richtige Wahl ist</h3>
+                <p>Typora hat jahrelang ein einziges Handwerk verfeinert: Multi-Format-Export, Themen-Store und eigenes CSS, Gliederungs-Sidebar und Dateibaum, globale Suche und Rechtschreibprüfung, durchgängig auf Windows, macOS und Linux — ein Einmalkauf, eine Lizenz für drei Geräte. Wer regelmäßig lange Texte schreibt, für die Abgabe exportiert oder auf Mac oder Linux schreibt, für den bleibt Typora der Maßstab.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>Wann yyzTools besser passt</h3>
+                <p>Wenn Sie gelegentlich Notizen, Dokumente und Blog-Entwürfe schreiben — WYSIWYG, Formeln, Diagramme, Bilder per Einfügen und Autosave wollen, aber für eine einzelne Aufgabe keine kostenpflichtige App mehr — ist der Editor bereits im yyzTools-Installationspaket, neben OCR, Übersetzung, Dateisuche und Zwischenablage-Verlauf: 388 Module, kostenlos für private und kommerzielle Nutzung.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>Häufige Fragen</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Kann yyzTools Typora ersetzen?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Fürs Kernschreiben ja: WYSIWYG, GFM, KaTeX-Formeln, Mermaid, Bilder per Einfügen und Autosave sind alle dabei. Aber Typoras Exportformate, Themen-Ökosystem, Gliederung und Dateibaum, Rechtschreibprüfung und macOS-/Linux-Support haben hier kein Äquivalent. Vielschreiber oder wer für die Abgabe exportiert, sollte Typora behalten — es ist ein Einmalkauf, der weiter funktioniert.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Wie werden Bilder gespeichert?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Eingefügte, kopierte oder gezogene Bilder werden automatisch in einem Unterordner assets/ neben dem Dokument gespeichert und über relative Pfade referenziert — der ganze Dokumentordner lässt sich verschieben, zippen oder in Git legen, ohne Bilder zu verlieren. Beim Einfügen in ein ungespeichertes Dokument werden Sie zuerst zum Speichern aufgefordert.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Unterstützt es Mathematik und Mermaid-Diagramme?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Ja. Inline-Mathematik nutzt $..$, Block-Mathematik $$..$$ (mit KaTeX gerendert), und Mermaid-Codeblöcke lassen sich auf Wunsch als SVG-Vorschau anzeigen. Beides wird bei Bedarf geladen und verlangsamt den ersten Bildschirm nicht.</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Und der Export nach PDF oder Word?</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>Der Export nach PDF und HTML ist integriert — zwei Einträge im Exportmenü, WYSIWYG (das PDF entsteht über die System-Druck-Engine). Word / EPUB und weitere Formate sind nicht enthalten; dafür bleibt Typora die flüssigere Wahl.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>Die Schreibhälfte, kostenlos</h2>
+        <p>Kostenlos herunterladen. Öffnen Sie den Markdown-Editor über Alt+Space — Formeln, Diagramme, Bilder und Autosave sind alle da, neben OCR, Übersetzung und Suche.</p>
+        <a class="btn btn-primary btn-lg" href="/de/download.html">
+            <i class="fa-solid fa-download"></i>yyzTools kostenlos herunterladen
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/de/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Produktivitätswerkzeuge für den Windows-Desktop. Lokal zuerst, dauerhaft kostenlos.</p>
+            <p class="footer-ver">v1.1.1.2110</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Produkt</h3>
+            <a href="/de/features.html">Funktionen</a>
+            <a href="/de/download.html">Download</a>
+            <a href="/de/getting-started.html">Schnellstart</a>
+            <a href="/de/changelog.html">Änderungen</a>
+            
+            <a href="/de/alternatives.html">Alternativen &amp; Vergleiche</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Ressourcen</h3>
+            <a href="/de/sdk.html">Entwickler</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">Diskussionen</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">Problem melden</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Rechtliches</h3>
+            <a href="/de/agreement.html">Nutzungsvereinbarung</a>
+            <a href="/de/privacy.html">Datenschutz</a>
+            
+            <a class="js-email" href="#">E-Mail</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools · Alle Rechte vorbehalten</p>
+        <p class="footer-fine">Windows ist eine eingetragene Marke der Microsoft Corporation. Diese Website steht in keiner Verbindung zu Microsoft.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

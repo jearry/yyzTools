@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools — Typora の代替：無料の WYSIWYG Markdown エディター</title>
+<meta name="description" content="Typora の代替をお探しですか？ yyzTools には WYSIWYG Markdown エディターが内蔵され、GFM・KaTeX 数式・Mermaid 図・画像の自動保存・自動保存機能を備え、無料・アカウント不要。書き出し形式とクロスプラットフォーム対応は Typora が優位です。">
+
+<meta property="og:title" content="yyzTools — Typora の代替：無料の WYSIWYG Markdown エディター">
+<meta property="og:description" content="Typora の代替をお探しですか？ yyzTools には WYSIWYG Markdown エディターが内蔵され、GFM・KaTeX 数式・Mermaid 図・画像の自動保存・自動保存機能を備え、無料・アカウント不要。書き出し形式とクロスプラットフォーム対応は Typora が優位です。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/ja/typora-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="ja">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools — Typora の代替：無料の WYSIWYG Markdown エディター">
+<meta name="twitter:description" content="Typora の代替をお探しですか？ yyzTools には WYSIWYG Markdown エディターが内蔵され、GFM・KaTeX 数式・Mermaid 図・画像の自動保存・自動保存機能を備え、無料・アカウント不要。書き出し形式とクロスプラットフォーム対応は Typora が優位です。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/ja/typora-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/typora-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/typora-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/typora-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/typora-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/typora-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/typora-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/typora-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/typora-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/typora-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/typora-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/typora-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/typora-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/typora-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PLN4N1HHX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PLN4N1HHX');
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-cnM3_Pj-.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-BDvRgz_r.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/ja/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/ja/" >ホーム</a>
+            <a href="/ja/features.html" >機能</a>
+            <a href="/ja/download.html" >ダウンロード</a>
+            <a href="/ja/getting-started.html" >クイックスタート</a>
+            <a href="/ja/changelog.html" >更新履歴</a>
+            
+            <a href="/ja/sdk.html" >開発者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">フィードバック</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="topbar-actions" role="group" aria-label="トップバー操作">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="今日は絶好調！yyzTools にスターを付けずにはいられない！" aria-label="今日は絶好調！yyzTools にスターを付けずにはいられない！">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="テーマ"
+                    data-name-system="システムに従う"
+                    data-name-light="ライト"
+                    data-name-dark="ダーク">
+                    <summary class="act act-theme tip-end"
+                        data-tip="テーマ"
+                        aria-label="テーマ"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>システムに従う</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>ライト</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>ダーク</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="言語を選択 · 日本語"
+                             aria-label="言語を選択"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/typora-alternative.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/typora-alternative.html" hreflang="zh-CN" role="menuitem"
+                           >简体中文</a>
+                        
+                        <a href="/zh-TW/typora-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/typora-alternative.html" hreflang="ja" role="menuitem"
+                           class="on" aria-current="true">日本語</a>
+                        
+                        <a href="/ko/typora-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/typora-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/typora-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/typora-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/typora-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/typora-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/typora-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/typora-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools は Typora の代わりになりますか？","acceptedAnswer":{"@type":"Answer","text":"コアな執筆ならなります：WYSIWYG、GFM、KaTeX 数式、Mermaid、画像の自動保存、自動保存をすべて備えています。ただし Typora の書き出し形式、テーマのエコシステム、アウトラインとファイルツリー、スペルチェック、macOS / Linux 対応に相当するものはありません。長文を書く方や書き出して納品する方は Typora を残しておくのがおすすめです——買い切りなので長く使えます。"}},{"@type":"Question","name":"画像はどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"貼り付け・コピー・ドラッグした画像は、文書と同じ場所の assets/ サブフォルダに自動保存され、相対パスで参照されます。文書フォルダごと移動・圧縮・Git 管理しても画像は失われません。未保存の文書に画像を挿入するときは、先に保存するよう案内されます。"}},{"@type":"Question","name":"数式と Mermaid 図に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"対応しています。インライン数式は $..$、ブロック数式は $$..$$（KaTeX で描画）、Mermaid コードブロックはワンクリックで SVG プレビューできます。どちらもオンデマンド読み込みなので初回表示は遅くなりません。"}},{"@type":"Question","name":"PDF や Word への書き出しはできますか？","acceptedAnswer":{"@type":"Answer","text":"PDF と HTML への書き出しはどちらも対応しています——書き出しメニューに 2 項目あり、WYSIWYG です（PDF はシステムの印刷エンジン経由で生成）。Word / EPUB などは内蔵されていません。それらが必要なら Typora のほうが手軽です。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"Typora の代替をお探しですか？","item":"https://yyztools.com/ja/typora-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">Typora の代替をお探しですか？</h1>
+        <p class="hero-lead">Typora は「見たまま」の Markdown 執筆を最高水準に磨き上げましたが、その代償は $14.99 の買い切り。yyzTools は同じ無料インストーラーに milkdown ベースの WYSIWYG Markdown エディターを内蔵しています。見出し・表・タスクリスト・脚注・KaTeX 数式・Mermaid 図・貼り付けで保存される画像・自動保存——隣には OCR・翻訳・ファイル検索もあり、全 388 モジュールのひとつです。</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/ja/download.html">
+                <i class="fa-solid fa-download"></i>yyzTools を無料ダウンロード
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs Typora<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs Typora</h2>
+            <p>どちらも WYSIWYG：左右分割なし、入力したものがそのまま描画されます。Typora は執筆に特化した独立アプリ、yyzTools のエディターは無料ツールボックスの 1 モジュールです。</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">Typora</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">製品の位置づけ</th>
+                        <td class="col-self">388 モジュールの効率ツールボックス内の Markdown エディター</td>
+                        <td>執筆に特化した独立の Markdown エディター</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">WYSIWYG 編集</th>
+                        <td class="col-self">milkdown ベース——入力即描画、左右分割なし</td>
+                        <td>マークダウン記法を隠してライブ描画する最高水準の実装</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">価格</th>
+                        <td class="col-self">無料（個人・商用とも）</td>
+                        <td>$14.99 の買い切り（約 ¥110）、1 ライセンスで 3 台まで</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">GFM 構文</th>
+                        <td class="col-self">見出し / 複数レベルリスト / 整列テーブル / タスクリスト / 脚注 / コードブロック</td>
+                        <td>GitHub Flavored Markdown（一部非互換あり）</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">数式</th>
+                        <td class="col-self">インライン $..$ とブロック $$..$$（KaTeX）</td>
+                        <td>TeX/LaTeX ソースをライブ描画（MathJax）</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">図表</th>
+                        <td class="col-self">Mermaid コードブロックを SVG プレビュー</td>
+                        <td>Mermaid 図をエディター内で描画</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">画像管理</th>
+                        <td class="col-self">貼り付け / コピー / ドラッグで文書フォルダの assets/ に自動保存、相対パスで参照</td>
+                        <td>ローカル画像フォルダへ自動コピー（ルールをカスタマイズ可）</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">自動保存</th>
+                        <td class="col-self">既定 5 秒ごと、変更・無効化も可</td>
+                        <td>対応</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">書き出し</th>
+                        <td class="col-self">PDF と HTML へ書き出し（WYSIWYG）</td>
+                        <td>Word / EPUB / LaTeX などより多くの形式</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">テーマ</th>
+                        <td class="col-self">システム連動のダーク / ライト</td>
+                        <td>テーマストア + カスタム CSS</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">執筆支援</th>
+                        <td class="col-self">最近のファイル一覧、フォーカス時に外部変更を検出</td>
+                        <td>アウトラインサイドバー、ファイルツリー、全体検索、スペルチェック</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">対応プラットフォーム</th>
+                        <td class="col-self">Windows</td>
+                        <td>Windows / macOS / Linux</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/en-dark/markdown.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/en-light/markdown.webp" alt="yyzTools Markdown エディターの WYSIWYG 編集画面" width="1250" height="900" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>milkdown の WYSIWYG：入力するとそのまま描画。GFM・KaTeX 数式・Mermaid 図も揃い、無料で同じツールボックス内に。</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+            <h3>無料で手に入る WYSIWYG</h3>
+            <p>Typora の価格ページには $14.99 とあります。yyzTools の Markdown エディターは無料インストーラーの一角：milkdown の WYSIWYG、GFM 一式、KaTeX 数式と Mermaid 図、貼り付けた画像は文書フォルダへ即保存、既定で 5 秒ごとの自動保存——登録もログインも不要で、商用も無料です。</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>Typora が依然として最適なとき</h3>
+                <p>Typora はひとつの技に長年磨きをかけてきました。複数形式の書き出し、テーマストアとカスタム CSS、アウトラインサイドバーとファイルツリー、全体検索とスペルチェック、Windows / macOS / Linux での一貫した体験——買い切り 1 回、1 ライセンスで 3 台。長文をよく書く人、書き出して納品する人、Mac や Linux で書く人には Typora が今も最高水準です。</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>yyzTools が適しているとき</h3>
+                <p>メモやドキュメント、ブログの下書きをたまに書く程度——WYSIWYG、数式、図表、画像の自動保存、自動保存が欲しくて、ひとつの作業のために有料アプリを増やしたくないなら、エディターはすでに yyzTools の中にあります。隣には OCR、翻訳、ファイル検索、クリップボード履歴——全 388 モジュール、個人も商用も無料です。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>よくある質問</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools は Typora の代わりになりますか？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>コアな執筆ならなります：WYSIWYG、GFM、KaTeX 数式、Mermaid、画像の自動保存、自動保存をすべて備えています。ただし Typora の書き出し形式、テーマのエコシステム、アウトラインとファイルツリー、スペルチェック、macOS / Linux 対応に相当するものはありません。長文を書く方や書き出して納品する方は Typora を残しておくのがおすすめです——買い切りなので長く使えます。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>画像はどこに保存されますか？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>貼り付け・コピー・ドラッグした画像は、文書と同じ場所の assets/ サブフォルダに自動保存され、相対パスで参照されます。文書フォルダごと移動・圧縮・Git 管理しても画像は失われません。未保存の文書に画像を挿入するときは、先に保存するよう案内されます。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>数式と Mermaid 図に対応していますか？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>対応しています。インライン数式は $..$、ブロック数式は $$..$$（KaTeX で描画）、Mermaid コードブロックはワンクリックで SVG プレビューできます。どちらもオンデマンド読み込みなので初回表示は遅くなりません。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>PDF や Word への書き出しはできますか？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>PDF と HTML への書き出しはどちらも対応しています——書き出しメニューに 2 項目あり、WYSIWYG です（PDF はシステムの印刷エンジン経由で生成）。Word / EPUB などは内蔵されていません。それらが必要なら Typora のほうが手軽です。</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>執筆の半分を、無料で</h2>
+        <p>無料ダウンロード。Alt+Space から Markdown エディターを開けば、数式・図表・画像・自動保存が揃っています——隣には OCR、翻訳、検索も。</p>
+        <a class="btn btn-primary btn-lg" href="/ja/download.html">
+            <i class="fa-solid fa-download"></i>yyzTools を無料ダウンロード
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/ja/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows デスクトップ効率化ツール集。ローカル優先、永久無料。</p>
+            <p class="footer-ver">v1.1.1.2110</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>製品</h3>
+            <a href="/ja/features.html">機能</a>
+            <a href="/ja/download.html">ダウンロード</a>
+            <a href="/ja/getting-started.html">クイックスタート</a>
+            <a href="/ja/changelog.html">更新履歴</a>
+            
+            <a href="/ja/alternatives.html">代替ソフトと比較</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>リソース</h3>
+            <a href="/ja/sdk.html">開発者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">ディスカッション</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">問題を報告</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法的情報</h3>
+            <a href="/ja/agreement.html">利用規約</a>
+            <a href="/ja/privacy.html">プライバシーポリシー</a>
+            
+            <a class="js-email" href="#">お問い合わせ</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　全著作権所有</p>
+        <p class="footer-fine">Windows は Microsoft Corporation の登録商標です。本サイトは Microsoft と提携関係にありません。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

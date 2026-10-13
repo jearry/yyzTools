@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yyzTools — Typora 的替代品：免费的所见即所得 Markdown 编辑器</title>
+<meta name="description" content="在找 Typora 的替代品？yyzTools 内置所见即所得 Markdown 编辑器——GFM、KaTeX 公式、Mermaid 图表、图片自动落盘与自动保存都有，且免费、无账号；只是导出格式与跨平台仍是 Typora 更强。">
+
+<meta property="og:title" content="yyzTools — Typora 的替代品：免费的所见即所得 Markdown 编辑器">
+<meta property="og:description" content="在找 Typora 的替代品？yyzTools 内置所见即所得 Markdown 编辑器——GFM、KaTeX 公式、Mermaid 图表、图片自动落盘与自动保存都有，且免费、无账号；只是导出格式与跨平台仍是 Typora 更强。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yyztools.com/zh-CN/typora-alternative.html">
+<meta property="og:site_name" content="yyzTools">
+<meta property="og:image" content="https://yyztools.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yyzTools — Yes Your Zen Tools">
+<meta property="og:locale" content="zh_CN">
+
+<meta property="og:locale:alternate" content="en">
+
+<meta property="og:locale:alternate" content="zh_TW">
+
+<meta property="og:locale:alternate" content="ja">
+
+<meta property="og:locale:alternate" content="ko">
+
+<meta property="og:locale:alternate" content="fr">
+
+<meta property="og:locale:alternate" content="de">
+
+<meta property="og:locale:alternate" content="es">
+
+<meta property="og:locale:alternate" content="ru">
+
+<meta property="og:locale:alternate" content="ar">
+
+<meta property="og:locale:alternate" content="pt">
+
+<meta property="og:locale:alternate" content="it">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="yyzTools — Typora 的替代品：免费的所见即所得 Markdown 编辑器">
+<meta name="twitter:description" content="在找 Typora 的替代品？yyzTools 内置所见即所得 Markdown 编辑器——GFM、KaTeX 公式、Mermaid 图表、图片自动落盘与自动保存都有，且免费、无账号；只是导出格式与跨平台仍是 Typora 更强。">
+<meta name="twitter:image" content="https://yyztools.com/og-image.png">
+<meta name="twitter:image:alt" content="yyzTools — Yes Your Zen Tools">
+
+
+
+<link rel="canonical" href="https://yyztools.com/zh-CN/typora-alternative.html">
+
+
+<link rel="alternate" hreflang="en" href="https://yyztools.com/typora-alternative.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://yyztools.com/zh-CN/typora-alternative.html">
+
+<link rel="alternate" hreflang="zh-TW" href="https://yyztools.com/zh-TW/typora-alternative.html">
+
+<link rel="alternate" hreflang="ja" href="https://yyztools.com/ja/typora-alternative.html">
+
+<link rel="alternate" hreflang="ko" href="https://yyztools.com/ko/typora-alternative.html">
+
+<link rel="alternate" hreflang="fr" href="https://yyztools.com/fr/typora-alternative.html">
+
+<link rel="alternate" hreflang="de" href="https://yyztools.com/de/typora-alternative.html">
+
+<link rel="alternate" hreflang="es" href="https://yyztools.com/es/typora-alternative.html">
+
+<link rel="alternate" hreflang="ru" href="https://yyztools.com/ru/typora-alternative.html">
+
+<link rel="alternate" hreflang="ar" href="https://yyztools.com/ar/typora-alternative.html">
+
+<link rel="alternate" hreflang="pt" href="https://yyztools.com/pt/typora-alternative.html">
+
+<link rel="alternate" hreflang="it" href="https://yyztools.com/it/typora-alternative.html">
+
+<link rel="alternate" hreflang="x-default" href="https://yyztools.com/typora-alternative.html">
+
+<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="application-name" content="yyzTools">
+
+<link rel="dns-prefetch" href="https://github.com">
+
+<link rel="dns-prefetch" href="https://ghfast.top">
+<link rel="dns-prefetch" href="https://ghproxy.com">
+<link rel="dns-prefetch" href="https://gh-proxy.com">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script>
+(function () {
+    try {
+        var t = localStorage.getItem('yyzTheme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ydgpm1nvxt");
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PLN4N1HHX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PLN4N1HHX');
+</script>
+  <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
+  <script type="module" crossorigin src="/assets/main-cnM3_Pj-.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-BDvRgz_r.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="/zh-CN/">
+            <img src="/logo.png" alt="" width="28" height="28">
+            <span class="brand-name">yyzTools</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="/zh-CN/" >首页</a>
+            <a href="/zh-CN/features.html" >功能</a>
+            <a href="/zh-CN/download.html" >下载</a>
+            <a href="/zh-CN/getting-started.html" >快速上手</a>
+            <a href="/zh-CN/changelog.html" >更新日志</a>
+            
+            <a href="/zh-CN/sdk.html" >开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">交流反馈</a>
+        </nav>
+
+        <div class="topbar-right">
+            
+            <div class="topbar-actions" role="group" aria-label="顶栏操作">
+                <a class="act act-star" href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer"
+                   data-tip="今天心情很好，非得赏yyzTools个赞不可！" aria-label="今天心情很好，非得赏yyzTools个赞不可！">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                </a>
+                <details class="menu-pick theme-pick" id="themePick"
+                    data-tip-label="主题"
+                    data-name-system="跟随系统"
+                    data-name-light="浅色"
+                    data-name-dark="深色">
+                    <summary class="act act-theme tip-end"
+                        data-tip="主题"
+                        aria-label="主题"
+                        aria-haspopup="menu">
+                        <svg class="ico ico-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>
+                        </svg>
+                        <svg class="ico ico-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                        </svg>
+                        <svg class="ico ico-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+                        </svg>
+                    </summary>
+                    
+                    <div class="theme-menu" role="menu">
+                        <button type="button" role="menuitemradio" data-theme-value="system">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                            <span>跟随系统</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="light">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                            <span>浅色</span>
+                        </button>
+                        <button type="button" role="menuitemradio" data-theme-value="dark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                            <span>深色</span>
+                        </button>
+                    </div>
+                </details>
+                
+                <details class="lang-pick" id="langPick">
+                    <summary class="act act-lang tip-end"
+                             data-tip="选择语言 · 简体中文"
+                             aria-label="选择语言"
+                             aria-haspopup="menu">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </summary>
+                    <div class="lang-menu" role="menu">
+                        
+                        <a href="/typora-alternative.html" hreflang="en" role="menuitem"
+                           >English</a>
+                        
+                        <a href="/zh-CN/typora-alternative.html" hreflang="zh-CN" role="menuitem"
+                           class="on" aria-current="true">简体中文</a>
+                        
+                        <a href="/zh-TW/typora-alternative.html" hreflang="zh-TW" role="menuitem"
+                           >繁體中文</a>
+                        
+                        <a href="/ja/typora-alternative.html" hreflang="ja" role="menuitem"
+                           >日本語</a>
+                        
+                        <a href="/ko/typora-alternative.html" hreflang="ko" role="menuitem"
+                           >한국어</a>
+                        
+                        <a href="/fr/typora-alternative.html" hreflang="fr" role="menuitem"
+                           >Français</a>
+                        
+                        <a href="/de/typora-alternative.html" hreflang="de" role="menuitem"
+                           >Deutsch</a>
+                        
+                        <a href="/es/typora-alternative.html" hreflang="es" role="menuitem"
+                           >Español</a>
+                        
+                        <a href="/ru/typora-alternative.html" hreflang="ru" role="menuitem"
+                           >Русский</a>
+                        
+                        <a href="/ar/typora-alternative.html" hreflang="ar" role="menuitem"
+                           >العربية</a>
+                        
+                        <a href="/pt/typora-alternative.html" hreflang="pt" role="menuitem"
+                           >Português</a>
+                        
+                        <a href="/it/typora-alternative.html" hreflang="it" role="menuitem"
+                           >Italiano</a>
+                        
+                    </div>
+                </details>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+                
+                <span class="nav-toggle-bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"yyzTools 能替代 Typora 吗？","acceptedAnswer":{"@type":"Answer","text":"核心写作可以：所见即所得、GFM、KaTeX 公式、Mermaid、图片自动落盘与自动保存都有。但 Typora 的导出格式、主题生态、大纲与文件树、拼写检查以及 macOS / Linux 支持，这里没有对应物。重度写作或需要导出交付的用户建议保留 Typora——它是买断制，一次付费长期可用。"}},{"@type":"Question","name":"图片是怎么存放的？","acceptedAnswer":{"@type":"Answer","text":"粘贴、复制或拖入的图片会自动保存到文档所在目录的 assets/ 子目录，文档里写入相对路径引用——整个文档目录可以整体移动、打包或放进 Git，图片不会丢。尚未另存为的文档插入图片时会先提示另存为。"}},{"@type":"Question","name":"支持数学公式和 Mermaid 图表吗？","acceptedAnswer":{"@type":"Answer","text":"支持。行内公式用 $..$，块级公式用 $$..$$（KaTeX 渲染）；Mermaid 代码块可点预览为 SVG，两者都是动态加载，不拖慢首屏。"}},{"@type":"Question","name":"需要导出 PDF 或 Word 吗？","acceptedAnswer":{"@type":"Answer","text":"可以导出 PDF 和 HTML——导出菜单里两项都有，所见即所得（PDF 经系统打印引擎生成）。Word / EPUB 等格式没有内置，需要这些的话，Typora 仍是更顺手的选择。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://yyztools.com/"},{"@type":"ListItem","position":2,"name":"在找 Typora 的替代品？","item":"https://yyztools.com/zh-CN/typora-alternative.html"}]}</script>
+
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <h1 class="hero-title">在找 Typora 的替代品？</h1>
+        <p class="hero-lead">Typora 把「所见即所得」的 Markdown 写作打磨到标杆水准，代价是 $14.99 一次性买断。yyzTools 在同一个免费安装包里内置了基于 milkdown 的所见即所得 Markdown 编辑器：标题、表格、任务列表、脚注、KaTeX 公式、Mermaid 图表、粘贴即存的图片与自动保存——旁边还有 OCR、翻译与文件搜索，共 388 个模块。</p>
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+                <i class="fa-solid fa-download"></i>免费下载 yyzTools
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#cmp">
+                yyzTools vs Typora<i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-alt" id="cmp">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>yyzTools vs Typora</h2>
+            <p>两者都是所见即所得：没有左右分屏，键入即渲染。Typora 是专注写作的独立软件；yyzTools 的编辑器是免费工具箱里的一个模块。</p>
+        </div>
+        <div class="table-wrap reveal">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        
+                        <th scope="col" class="col-self">yyzTools</th>
+                        
+                        <th scope="col" class="">Typora</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row">产品定位</th>
+                        <td class="col-self">388 个模块的效率工具箱中的 Markdown 编辑器</td>
+                        <td>专注写作的独立 Markdown 编辑器</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">所见即所得</th>
+                        <td class="col-self">milkdown 内核，键入即渲染，无左右分屏</td>
+                        <td>隐藏标记语法、实时渲染的标杆实现</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">价格</th>
+                        <td class="col-self">免费，个人与商用均免费</td>
+                        <td>$14.99 一次性买断（约 ¥110），单许可证 3 台设备</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">GFM 语法</th>
+                        <td class="col-self">标题 / 多级列表 / 对齐表格 / 任务列表 / 脚注 / 代码块</td>
+                        <td>GitHub Flavored Markdown，兼容性略有出入</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">数学公式</th>
+                        <td class="col-self">行内 $..$ 与块级 $$..$$（KaTeX）</td>
+                        <td>TeX/LaTeX 源码实时渲染（MathJax）</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">图表</th>
+                        <td class="col-self">Mermaid 代码块点预览 SVG</td>
+                        <td>Mermaid 图在编辑器中渲染</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">图片管理</th>
+                        <td class="col-self">粘贴 / 复制 / 拖入自动落盘到文档目录 assets/，相对路径引用</td>
+                        <td>自动复制到本地资源文件夹（可自定义规则）</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">自动保存</th>
+                        <td class="col-self">默认 5 秒自动保存，可关可调</td>
+                        <td>支持</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">导出</th>
+                        <td class="col-self">导出 PDF 与 HTML，所见即所得</td>
+                        <td>Word / EPUB / LaTeX 等更多格式</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">主题</th>
+                        <td class="col-self">跟随系统的深色 / 浅色</td>
+                        <td>主题商店 + 自定义 CSS</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">写作辅助</th>
+                        <td class="col-self">最近文件列表；窗口聚焦时检测外部改动</td>
+                        <td>大纲侧边栏、文件树、全局搜索、拼写检查</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">支持平台</th>
+                        <td class="col-self">Windows</td>
+                        <td>Windows / macOS / Linux</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <figure class="shot alt-shot">
+            <picture>
+                <source srcset="/screenshots/zh-dark/markdown.webp" media="(prefers-color-scheme: dark)">
+                <img src="/screenshots/zh-light/markdown.webp" alt="yyzTools Markdown 编辑器的所见即所得写作界面" width="1250" height="900" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>milkdown 内核的所见即所得：键入即渲染，GFM、KaTeX 公式与 Mermaid 图表都在——免费，就在同一个工具箱里。</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+            <h3>免费拿到的所见即所得</h3>
+            <p>Typora 定价页上写着 $14.99。yyzTools 的 Markdown 编辑器是免费安装包里开箱即用的一角：milkdown 内核的所见即所得，GFM 全套、KaTeX 公式与 Mermaid 图表齐备，图片粘贴即存到文档目录，默认 5 秒自动保存——不注册、不登录、个人商用都免费。</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>什么时候 Typora 仍是好选择</h3>
+                <p>Typora 在写作这件专事上打磨多年：多格式导出、主题商店与自定义 CSS、大纲侧边栏与文件树、全局搜索和拼写检查，Windows / macOS / Linux 三端一致，一次买断、一个许可证三台设备。如果你是重度的长文作者、需要导出交付，或者要在 Mac / Linux 上写作，Typora 依然是标杆。</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>什么时候选 yyzTools</h3>
+                <p>如果你只是偶尔写笔记、文档、博客草稿——要所见即所得、公式、图表、图片自动落盘和自动保存，不想为一件事多装一个付费软件——yyzTools 的编辑器就在安装包里，旁边还有 OCR、翻译、文件搜索、剪贴板历史，共 388 个模块，个人与商用均免费。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap wrap-narrow">
+        <div class="section-head">
+            <h2>常见疑问</h2>
+        </div>
+        <div class="faq">
+            
+            <details class="faq-item reveal" open>
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>yyzTools 能替代 Typora 吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>核心写作可以：所见即所得、GFM、KaTeX 公式、Mermaid、图片自动落盘与自动保存都有。但 Typora 的导出格式、主题生态、大纲与文件树、拼写检查以及 macOS / Linux 支持，这里没有对应物。重度写作或需要导出交付的用户建议保留 Typora——它是买断制，一次付费长期可用。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>图片是怎么存放的？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>粘贴、复制或拖入的图片会自动保存到文档所在目录的 assets/ 子目录，文档里写入相对路径引用——整个文档目录可以整体移动、打包或放进 Git，图片不会丢。尚未另存为的文档插入图片时会先提示另存为。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>支持数学公式和 Mermaid 图表吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>支持。行内公式用 $..$，块级公式用 $$..$$（KaTeX 渲染）；Mermaid 代码块可点预览为 SVG，两者都是动态加载，不拖慢首屏。</p>
+            </details>
+            
+            <details class="faq-item reveal" >
+                <summary>
+                    <span class="faq-q"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>需要导出 PDF 或 Word 吗？</span></span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <p>可以导出 PDF 和 HTML——导出菜单里两项都有，所见即所得（PDF 经系统打印引擎生成）。Word / EPUB 等格式没有内置，需要这些的话，Typora 仍是更顺手的选择。</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap final-inner">
+        <h2>写作的那一半，免费拿</h2>
+        <p>免费下载。Alt+Space 打开 Markdown 编辑器，公式、图表、图片与自动保存都在——旁边就是 OCR、翻译与搜索。</p>
+        <a class="btn btn-primary btn-lg" href="/zh-CN/download.html">
+            <i class="fa-solid fa-download"></i>免费下载 yyzTools
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div class="footer-brand">
+            <a class="brand" href="/zh-CN/">
+                <img src="/logo.png" alt="" width="28" height="28">
+                <span class="brand-name">yyzTools</span>
+            </a>
+            
+            <p class="footer-tagline">Yes Your Zen Tools</p>
+            <p class="footer-desc">Windows 桌面效率工具集，本地优先，永久免费。</p>
+            <p class="footer-ver">v1.1.1.2110</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>产品</h3>
+            <a href="/zh-CN/features.html">功能</a>
+            <a href="/zh-CN/download.html">下载</a>
+            <a href="/zh-CN/getting-started.html">快速上手</a>
+            <a href="/zh-CN/changelog.html">更新日志</a>
+            
+            <a href="/zh-CN/alternatives.html">替代品与对比</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>资源</h3>
+            <a href="/zh-CN/sdk.html">开发者</a>
+            
+            <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">社区讨论</a>
+            <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">问题反馈</a>
+            <a href="https://github.com/jearry/yyzTools" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>法律</h3>
+            <a href="/zh-CN/agreement.html">用户协议</a>
+            <a href="/zh-CN/privacy.html">隐私政策</a>
+            
+            <a class="js-email" href="#">联系邮箱</a>
+        </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+        <p>© 2025-2026 yyzTools　·　保留所有权利</p>
+        <p class="footer-fine">Windows 是 Microsoft Corporation 的注册商标。本站与 Microsoft 无隶属关系。</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
