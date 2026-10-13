@@ -100,7 +100,7 @@ The setup wizard supports 12 languages.
 ## System requirements
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (preinstalled on recent systems; the installer pulls it in if missing)
+- WebView2 Runtime (preinstalled on recent systems; the installer guides you to install it if missing)
 
 ## UI languages
 

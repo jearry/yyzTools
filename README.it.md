@@ -99,7 +99,7 @@ L'installazione guidata supporta 12 lingue: cinese semplificato e tradizionale, 
 ## Requisiti di Sistema
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (già incluso nei sistemi recenti; l'installer lo installa automaticamente se manca)
+- WebView2 Runtime (già incluso nei sistemi recenti; l'installer guida l'utente all'installazione se manca)
 
 ## Lingua dell'Interfaccia
 

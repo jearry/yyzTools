@@ -99,7 +99,7 @@ El asistente de instalación admite 12 idiomas: chino simplificado y tradicional
 ## Requisitos del sistema
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (preinstalado en sistemas recientes; el instalador lo incorpora si falta)
+- WebView2 Runtime (preinstalado en sistemas recientes; el instalador le guía para instalarlo si falta)
 
 ## Idiomas de la interfaz
 

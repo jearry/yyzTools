@@ -99,7 +99,7 @@ L'assistant d'installation prend en charge 12 langues : chinois simplifié et tr
 ## Configuration requise
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (préinstallé sur les systèmes récents ; l'installateur le récupère s'il manque)
+- WebView2 Runtime (préinstallé sur les systèmes récents ; l'installateur vous guide pour l'installer s'il manque)
 
 ## Langues de l'interface
 

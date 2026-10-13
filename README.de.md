@@ -99,7 +99,7 @@ Der Installationsassistent unterstützt 12 Sprachen: Chinesisch (vereinfacht und
 ## Systemvoraussetzungen
 
 - Windows 10 / 11 (x64)
-- WebView2 Runtime (auf neueren Systemen vorinstalliert; der Installer zieht sie bei Bedarf nach)
+- WebView2 Runtime (auf neueren Systemen vorinstalliert; der Installer führt Sie bei Bedarf zur Installation)
 
 ## Sprachen der Oberfläche
 
