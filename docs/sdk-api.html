@@ -86,8 +86,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="application-name" content="yyzTools">
 
-<link rel="dns-prefetch" href="https://github.com">
-
+<link rel="dns-prefetch" href="https://dl.yyztools.com">
+<link rel="dns-prefetch" href="https://github.com">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
@@ -121,9 +121,9 @@
     gtag('config', 'G-4PLN4N1HHX');
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-cnM3_Pj-.js"></script>
+  <script type="module" crossorigin src="/assets/main-Vl8rFo9L.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-BDvRgz_r.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-ReVfs69g.css">
 </head>
 <body>
 
@@ -300,8 +300,6 @@
                             <li><a href="#25-get-list">2.5 Get list</a></li>
                             
                             <li><a href="#26-write-a-front-end-log">2.6 Write a front-end log</a></li>
-                            
-                            <li><a href="#27-write-the-countdown-cache">2.7 Write the countdown cache</a></li>
                             
                         </ol>
                         
@@ -523,21 +521,6 @@
                         
                     </li>
                     
-                    <li>
-                        <a href="#13-updates">13. Updates</a>
-                        
-                        <ol>
-                            
-                            <li><a href="#131-check-for-updates">13.1 Check for updates</a></li>
-                            
-                            <li><a href="#132-get-the-update-status">13.2 Get the update status</a></li>
-                            
-                            <li><a href="#133-apply-a-downloaded-update">13.3 Apply a downloaded update</a></li>
-                            
-                        </ol>
-                        
-                    </li>
-                    
                 </ol>
             </nav>
         </details>
@@ -581,10 +564,16 @@
 <td>2026-09-01</td>
 <td>Initial version</td>
 </tr>
+<tr>
+<td>1.1.0</td>
+<td>yyzTools</td>
+<td>2026-10-14</td>
+<td>Removed non-public APIs: openSettingTab (wallpaper process), setCountdownCache (internal pipeline), the update trio (internal flow)</td>
+</tr>
 </tbody>
 </table>
 <h2 id="1-general-conventions" tabindex="-1">1. General conventions <a class="doc-anchor" href="#1-general-conventions" aria-hidden="true">#</a></h2>
-<p>This document defines all APIs related to interacting with the native layer. It covers only the APIs registered by the <strong>main process, yyzTools.exe</strong> (<code>SetupBindings()</code> in <code>src/yyztools/NativeApi.cpp</code>).</p>
+<p>This document defines all APIs related to interacting with the native layer. It covers only the APIs registered by the <strong>main process, yyzTools.exe</strong> (<code>SetupBindings()</code> in <code>src/yyztools/NativeApi.cpp</code>) that are reasonably useful to third-party module developers. Bindings dedicated to helper processes (e.g. <code>yyzWallpaper.exe</code>) and internal pipelines of the main process are <strong>not public</strong> and do not appear in this manual.</p>
 <h3 id="calling-convention" tabindex="-1">Calling convention <a class="doc-anchor" href="#calling-convention" aria-hidden="true">#</a></h3>
 <ul>
 <li>
@@ -998,26 +987,6 @@
 <p>Input</p>
 <ul>
 <li>msg: log content, written to the main process log (InfoMsg)</li>
-</ul>
-</li>
-<li>
-<p>Output</p>
-<pre><code class="language-json">{
-    &quot;error&quot;: 0,
-    &quot;errorMsg&quot;: &quot;&quot;
-}
-</code></pre>
-</li>
-</ul>
-<h3 id="27-write-the-countdown-cache" tabindex="-1">2.7 Write the countdown cache <a class="doc-anchor" href="#27-write-the-countdown-cache" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
-</code></pre>
-<p>Writes the countdown reminder's cached data into memory shared between the main process and the wallpaper process, and immediately notifies the wallpaper process to re-read it (otherwise the wallpaper would not pick it up until its own 30s poll). Intended for reminder / wallpaper integration; ordinary features should not depend on it.</p>
-<ul>
-<li>
-<p>Input</p>
-<ul>
-<li>data: the countdown JSON string (the payload defined by the reminder module)</li>
 </ul>
 </li>
 <li>
@@ -3388,74 +3357,6 @@ if (ZenAPI.isOk(r)) await ZenAPI.writeFile(r.path, content, { binary: false })
     &quot;error&quot;: 0,
     &quot;errorMsg&quot;: &quot;&quot;
 }
-</code></pre>
-</li>
-</ul>
-<h2 id="13-updates" tabindex="-1">13. Updates <a class="doc-anchor" href="#13-updates" aria-hidden="true">#</a></h2>
-<p>Updates are performed by a separate process, <code>yyzUpdater.exe</code>; the main process is only responsible for launching it and probing its status.</p>
-<h3 id="131-check-for-updates" tabindex="-1">13.1 Check for updates <a class="doc-anchor" href="#131-check-for-updates" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.checkUpdate() : object
-</code></pre>
-<p>Launches <code>yyzUpdater.exe --check-and-apply</code> (check, download, and apply in one go).</p>
-<ul>
-<li>
-<p>Input: none</p>
-</li>
-<li>
-<p>Output</p>
-<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
-</code></pre>
-<p>Note: <code>error:0</code> only means the updater was launched successfully; it <strong>does not indicate the result of the update</strong>. Use <code>getUpdateState</code> to query whether an update is in progress or ready.</p>
-</li>
-</ul>
-<h3 id="132-get-the-update-status" tabindex="-1">13.2 Get the update status <a class="doc-anchor" href="#132-get-the-update-status" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.getUpdateState() : object
-</code></pre>
-<p>Probes the update status in real time (for tray polling):</p>
-<ul>
-<li>
-<p>Whether the updater is running → the single-instance mutex <code>Local\yyzUpdater_SingleInstance</code></p>
-</li>
-<li>
-<p>Whether an update has been downloaded and is pending application → whether <code>%APPDATA%\yyzTools\Update\update.ready</code> exists (if so, the main package version is parsed from it)</p>
-</li>
-<li>
-<p>Whether a manual check has finished with no update available → the <code>%APPDATA%\yyzTools\Update\update.result</code> marker (<strong>deleted as soon as it is read</strong>)</p>
-</li>
-<li>
-<p>Input: none</p>
-</li>
-<li>
-<p>Output</p>
-<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
-</code></pre>
-<ul>
-<li>
-<p>status: <code>idle</code> (no update activity) / <code>checking</code> (the updater is running) / <code>ready</code> (downloaded and ready to upgrade)</p>
-</li>
-<li>
-<p>version: only set in the <code>ready</code> state, containing the new version number pending application (taken from the main package); an empty string otherwise</p>
-</li>
-<li>
-<p>lastResult: only possibly set in the <code>idle</code> state, containing the result of the last <strong>manual</strong> check (<code>--check-and-apply</code>): <code>uptodate</code> (already up to date) / <code>error</code> (the check failed); an empty string when no marker is present. The marker is written by the updater and deleted immediately after this API reads it, so it is <strong>returned only once</strong>, allowing the front end to show a single toast. A silent <code>--check</code> does not write the marker and therefore causes no interruption.</p>
-</li>
-<li>
-<p>Status priority: <code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="133-apply-a-downloaded-update" tabindex="-1">13.3 Apply a downloaded update <a class="doc-anchor" href="#133-apply-a-downloaded-update" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.applyUpdate() : object
-</code></pre>
-<p>Launches <code>yyzUpdater.exe --apply</code>: read <code>update.ready</code> → wait for the main process to exit → replace the files → restart the main process. Only call this when <code>getUpdateState</code> returns <code>ready</code>.</p>
-<ul>
-<li>
-<p>Input: none</p>
-</li>
-<li>
-<p>Output</p>
-<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
 </code></pre>
 </li>
 </ul>

@@ -86,12 +86,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="application-name" content="yyzTools">
 
-<link rel="dns-prefetch" href="https://github.com">
-
-<link rel="dns-prefetch" href="https://ghfast.top">
-<link rel="dns-prefetch" href="https://ghproxy.com">
-<link rel="dns-prefetch" href="https://gh-proxy.com">
-
+<link rel="dns-prefetch" href="https://dl.yyztools.com">
+<link rel="dns-prefetch" href="https://github.com">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"yyzTools","url":"https://yyztools.com"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"yyzTools","alternateName":"Yes Your Zen Tools","url":"https://yyztools.com","logo":"https://yyztools.com/logo.png","sameAs":["https://github.com/jearry/yyzTools"]}</script>
@@ -125,9 +121,9 @@
     gtag('config', 'G-4PLN4N1HHX');
 </script>
   <script type="module" crossorigin src="/assets/all.min-BK7WQFEN.js"></script>
-  <script type="module" crossorigin src="/assets/main-cnM3_Pj-.js"></script>
+  <script type="module" crossorigin src="/assets/main-Vl8rFo9L.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/all-B-uwp65A.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-BDvRgz_r.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-ReVfs69g.css">
 </head>
 <body>
 
@@ -304,8 +300,6 @@
                             <li><a href="#5获取列表">5、获取列表</a></li>
                             
                             <li><a href="#6写前端日志">6、写前端日志</a></li>
-                            
-                            <li><a href="#7写倒计时缓存">7、写倒计时缓存</a></li>
                             
                         </ol>
                         
@@ -527,21 +521,6 @@
                         
                     </li>
                     
-                    <li>
-                        <a href="#十三更新">十三、更新</a>
-                        
-                        <ol>
-                            
-                            <li><a href="#1检查更新">1、检查更新</a></li>
-                            
-                            <li><a href="#2获取更新状态">2、获取更新状态</a></li>
-                            
-                            <li><a href="#3应用已下载完毕的更新">3、应用已下载完毕的更新</a></li>
-                            
-                        </ol>
-                        
-                    </li>
-                    
                 </ol>
             </nav>
         </details>
@@ -585,10 +564,16 @@
 <td>2026-09-01</td>
 <td>初始版本</td>
 </tr>
+<tr>
+<td>1.1.0</td>
+<td>yyzTools</td>
+<td>2026-10-14</td>
+<td>移除非对外接口：openSettingTab（壁纸端）、setCountdownCache（内部管道）、更新三件套（内部流程）</td>
+</tr>
 </tbody>
 </table>
 <h2 id="一通用约定" tabindex="-1">一、通用约定 <a class="doc-anchor" href="#一通用约定" aria-hidden="true">#</a></h2>
-<p>本文档定义所有和 Native 交互相关的接口，仅覆盖<strong>主进程 yyzTools.exe</strong> 注册的接口（<code>src/yyztools/NativeApi.cpp</code> 的 <code>SetupBindings()</code>）。</p>
+<p>本文档定义所有和 Native 交互相关的接口，仅覆盖<strong>主进程 yyzTools.exe</strong> 注册、且面向第三方模块开发者有合理使用场景的接口（<code>src/yyztools/NativeApi.cpp</code> 的 <code>SetupBindings()</code>）。辅助进程（如 <code>yyzWallpaper.exe</code>）的专用绑定与主进程的内部管道<strong>不对外公开、不出现在本手册</strong>。</p>
 <h3 id="调用方式" tabindex="-1">调用方式 <a class="doc-anchor" href="#调用方式" aria-hidden="true">#</a></h3>
 <ul>
 <li>
@@ -1002,26 +987,6 @@
 <p>输入</p>
 <ul>
 <li>msg：日志内容，写入主进程日志（InfoMsg）</li>
-</ul>
-</li>
-<li>
-<p>输出</p>
-<pre><code class="language-json">{
-    &quot;error&quot;: 0,
-    &quot;errorMsg&quot;: &quot;&quot;
-}
-</code></pre>
-</li>
-</ul>
-<h3 id="7写倒计时缓存" tabindex="-1">7、写倒计时缓存 <a class="doc-anchor" href="#7写倒计时缓存" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.setCountdownCache(data: string) : object
-</code></pre>
-<p>倒计时提醒的缓存数据，写入主进程与壁纸进程共享的内存，并立即通知壁纸进程重读（否则壁纸要等自身 30s 轮询才生效）。供 reminder / wallpaper 联动使用，一般业务勿依赖。</p>
-<ul>
-<li>
-<p>输入</p>
-<ul>
-<li>data：倒计时 JSON 字符串（reminder 模块定义的 payload）</li>
 </ul>
 </li>
 <li>
@@ -3392,74 +3357,6 @@ if (ZenAPI.isOk(r)) await ZenAPI.writeFile(r.path, content, { binary: false })
     &quot;error&quot;: 0,
     &quot;errorMsg&quot;: &quot;&quot;
 }
-</code></pre>
-</li>
-</ul>
-<h2 id="十三更新" tabindex="-1">十三、更新 <a class="doc-anchor" href="#十三更新" aria-hidden="true">#</a></h2>
-<p>更新由独立进程 <code>yyzUpdater.exe</code> 完成，主进程仅负责拉起与状态探测。</p>
-<h3 id="1检查更新" tabindex="-1">1、检查更新 <a class="doc-anchor" href="#1检查更新" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.checkUpdate() : object
-</code></pre>
-<p>拉起 <code>yyzUpdater.exe --check-and-apply</code>（检测 + 下载 + 应用一条龙）。</p>
-<ul>
-<li>
-<p>输入：无</p>
-</li>
-<li>
-<p>输出</p>
-<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
-</code></pre>
-<p>注：<code>error:0</code> 仅表示成功拉起更新器，<strong>不代表更新结果</strong>。更新进行中/已就绪的状态用 <code>getUpdateState</code> 查询。</p>
-</li>
-</ul>
-<h3 id="2获取更新状态" tabindex="-1">2、获取更新状态 <a class="doc-anchor" href="#2获取更新状态" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.getUpdateState() : object
-</code></pre>
-<p>实时探测更新状态（供托盘轮询）：</p>
-<ul>
-<li>
-<p>updater 是否在运行 → 单例互斥体 <code>Local\yyzUpdater_SingleInstance</code></p>
-</li>
-<li>
-<p>是否已下载待应用 → <code>%APPDATA%\yyzTools\Update\update.ready</code> 是否存在（存在则解析其中 main 包 version）</p>
-</li>
-<li>
-<p>手动检查是否已结束且无更新 → <code>%APPDATA%\yyzTools\Update\update.result</code> 标记（<strong>读到即删</strong>）</p>
-</li>
-<li>
-<p>输入：无</p>
-</li>
-<li>
-<p>输出</p>
-<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;status&quot;: &quot;idle&quot;, &quot;version&quot;: &quot;&quot;, &quot;lastResult&quot;: &quot;&quot; }
-</code></pre>
-<ul>
-<li>
-<p>status：<code>idle</code>（无更新活动）/ <code>checking</code>（更新器运行中）/ <code>ready</code>（已下载完毕可升级）</p>
-</li>
-<li>
-<p>version：仅 <code>ready</code> 态有值，为待应用的新版本号（取 main 包），其余为空串</p>
-</li>
-<li>
-<p>lastResult：仅 <code>idle</code> 态可能有值，为上一次<strong>手动</strong>检查（<code>--check-and-apply</code>）的结果：<code>uptodate</code>（已是最新）/ <code>error</code>（检查失败），无标记时为空串。该标记由 updater 写入、本接口读取后立即删除，因此<strong>只会返回一次</strong>，供前端弹一次 Toast；静默的 <code>--check</code> 不写标记，不会产生打扰。</p>
-</li>
-<li>
-<p>状态优先级：<code>checking</code> &gt; <code>ready</code> &gt; <code>idle</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3应用已下载完毕的更新" tabindex="-1">3、应用已下载完毕的更新 <a class="doc-anchor" href="#3应用已下载完毕的更新" aria-hidden="true">#</a></h3>
-<pre><code class="language-ts">function Zen.applyUpdate() : object
-</code></pre>
-<p>拉起 <code>yyzUpdater.exe --apply</code>：读 <code>update.ready</code> → 等主进程退出 → 替换文件 → 重启主进程。仅在 <code>getUpdateState</code> 返回 <code>ready</code> 时调用。</p>
-<ul>
-<li>
-<p>输入：无</p>
-</li>
-<li>
-<p>输出</p>
-<pre><code class="language-json">{ &quot;error&quot;: 0, &quot;errorMsg&quot;: &quot;success&quot; }
 </code></pre>
 </li>
 </ul>
