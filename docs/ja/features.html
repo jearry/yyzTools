@@ -141,7 +141,7 @@
             <a href="/ja/getting-started.html" >クイックスタート</a>
             <a href="/ja/changelog.html" >更新履歴</a>
             
-            <a href="/ja/sdk.html" >開発者</a>
+            <a href="/ja/developers.html" >開発者</a>
             
             <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">フィードバック</a>
         </nav>
@@ -256,24 +256,55 @@
         <h1>機能一覧</h1>
         <p>利用シーンごとに 6 つに分類しています。すべての機能が同じインストーラーに含まれており、追加購入は一切ありません。</p>
         
-        <p>yyzTools（正式名称は Yes Your Zen Tools）は無料・ローカル優先の Windows デスクトップ効率化ツールセットです。コマンドパレット、ドック、クリップボード履歴、スーパー翻訳、OCR、ファイルプレビュー、一括リネーム、画像・動画・PDF の一括処理、ライブ壁紙、デスクトップエフェクトなど 388 個のモジュールを内蔵。インストーラー 1 つ、UI は 12 言語、アカウント不要、永久無料です。</p>
+        <p>yyzTools（正式名称は Yes Your Zen Tools）は無料・ローカル優先の Windows デスクトップ効率化ツールセットです。コマンドパレット、ドック、クリップボード履歴、スーパー翻訳、OCR、ファイルプレビュー、一括リネーム、画像・動画・PDF の一括処理、ライブ壁紙、デスクトップエフェクトなど 388 個のモジュールを内蔵（うち約 368 個はシステム設定やアプリ・サイトへのショートカット）。インストーラー 1 つ、UI は 12 言語、アカウント不要、永久無料です。</p>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <h2>どこから始める？まずはこの3つ</h2>
+            <p>インストール後すぐに使える既定のショートカット。設定は不要です。</p>
+        </div>
+        <div class="grid grid-3">
+            
+            <div class="card hl reveal">
+                <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Alt+Space でアプリ検索</h3>
+                <p>名前を入力して Enter で起動。右クリックでその他の操作、管理者として実行も。</p>
+            </div>
+            
+            <div class="card hl reveal">
+                <div class="card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Alt+F でファイル検索</h3>
+                <p>全ディスクを瞬時に検索。結果からそのままプレビュー・場所を開く・削除も。</p>
+            </div>
+            
+            <div class="card hl reveal">
+                <div class="card-icon"><i class="fa-solid fa-clipboard"></i></div>
+                <h3>Alt+C でクリップボード履歴</h3>
+                <p>コピーした文字と画像を呼び出し、クリックで貼り付け。画像内の文字も検索可。</p>
+            </div>
+            
+        </div>
     </div>
 </section>
 
 <nav class="cat-nav">
     <div class="wrap cat-nav-inner">
         
-        <a href="#cmdplate"><i class="fa-solid fa-bolt"></i>コマンドパレット</a>
+        <a href="#cmdplate"><i class="fa-solid fa-bolt"></i>検索</a>
         
-        <a href="#efficiency"><i class="fa-solid fa-gauge-high"></i>ランチャーと効率化</a>
+        <a href="#file"><i class="fa-solid fa-folder-open"></i>ファイルと画像</a>
         
-        <a href="#text"><i class="fa-solid fa-language"></i>テキストと言語</a>
+        <a href="#system"><i class="fa-solid fa-broom"></i>システム</a>
         
-        <a href="#file"><i class="fa-solid fa-folder-open"></i>ファイルとメディア</a>
+        <a href="#desktop"><i class="fa-solid fa-display"></i>デスクトップ</a>
         
-        <a href="#extend"><i class="fa-solid fa-puzzle-piece"></i>計算と拡張</a>
+        <a href="#text"><i class="fa-solid fa-code"></i>テキストとデータ</a>
         
-        <a href="#personal"><i class="fa-solid fa-wand-magic-sparkles"></i>パーソナライズ</a>
+        <a href="#extend"><i class="fa-solid fa-puzzle-piece"></i>AI と拡張</a>
         
         
         <a href="#compare"><i class="fa-solid fa-scale-balanced"></i>比較</a>
@@ -288,8 +319,8 @@
         <div class="cat-head">
             <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
             <div>
-                <h2>コマンドパレット</h2>
-                <p>Alt+Space で呼び出す統合入口。ひとつの検索欄がパソコン全体を貫きます。</p>
+                <h2>検索</h2>
+                <p>Alt+Space で開く 1 つの入力欄で、アプリ・ファイル・プロセス・ウィンドウ・ブックマーク・クリップボードをまとめて検索。コマンドと数式もその場で実行できます。</p>
             </div>
         </div>
         
@@ -464,480 +495,13 @@
     </div>
 </section>
 
-<section class="section section-alt" id="efficiency">
-    <div class="wrap">
-        <div class="cat-head">
-            <div class="card-icon"><i class="fa-solid fa-gauge-high"></i></div>
-            <div>
-                <h2>ランチャーと効率化</h2>
-                <p>繰り返しの操作を、ひとつのショートカットに凝縮します。</p>
-            </div>
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">01</span>
-                <h3>
-                    ドック
-                    
-                </h3>
-                <p>画面上端に常駐するフローティングランチャー。マウスを上部に動かすと自動でスライド表示され、グループ分けしたアプリと URL にいつでも素早くアクセスできます。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/dock.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/dock.webp"
-                         alt="ドック" width="940" height="815"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">02</span>
-                <h3>
-                    アプリ使用統計
-                    
-                </h3>
-                <p>各アプリの使用時間とアクティブ化回数を記録し、グラフで時間の使い道を可視化します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/appusage.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/appusage.webp"
-                         alt="アプリ使用統計" width="1100" height="700"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">03</span>
-                <h3>
-                    スクリーンショット
-                    
-                </h3>
-                <p>範囲キャプチャー、長尺キャプチャー（スクロール結合）、画面へのピン留め。独立プロセスなので互いに足を引っ張りません。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/screencap.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/screencap.webp"
-                         alt="スクリーンショット" width="1278" height="869"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">04</span>
-                <h3>
-                    画面録画
-                    
-                </h3>
-                <p>画面と音声の録画、カメラ領域の自由な選択に対応。カメラはカーソルを自動追従してズームし、クリック・キー入力のヒントを表示、ワンクリックで仕上げ映像を出力します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/screenrec.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/screenrec.webp"
-                         alt="画面録画" width="1041" height="668"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">05</span>
-                <h3>
-                    リマインダー
-                    
-                </h3>
-                <p>1 回 / 毎日 / 毎週 / 毎月のリマインダー。時刻になるとデスクトップに通知します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/reminder.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/reminder.webp"
-                         alt="リマインダー" width="1196" height="927"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">06</span>
-                <h3>
-                    万年暦
-                    
-                </h3>
-                <p>新暦と旧暦の対照、二十四節気と祝日、干支や吉日の情報。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/calendar.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/calendar.webp"
-                         alt="万年暦" width="1200" height="700"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">07</span>
-                <h3>
-                    システムクイック操作
-                    
-                </h3>
-                <p>音量調整・シャットダウン・再起動・ロック・USB取り出し・ごみ箱を空にするなど、よく使うシステム操作をコマンド一つで実行。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/sysquick.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/sysquick.webp"
-                         alt="システムクイック操作" width="551" height="625"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">08</span>
-                <h3>
-                    瞬速ファイルスキャン＆クリーン
-                    
-                </h3>
-                <p>インデックスで即スキャンして大ファイルも即特定。150+ のクリーンアップルールで、AI ツールのキャッシュまで掃除します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/fileclean.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/fileclean.webp"
-                         alt="瞬速ファイルスキャン＆クリーン" width="1000" height="660"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">09</span>
-                <h3>
-                    瞬速ディスク容量分析
-                    
-                </h3>
-                <p>MFT インデックスを直接読み取りするのでスキャン不要。百万ファイルも一瞬で表示し、ツリーマップで容量の肥大化元を即特定します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/diskspace.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/diskspace.webp"
-                         alt="瞬速ディスク容量分析" width="1040" height="680"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">10</span>
-                <h3>
-                    瞬速メモリクリーナー
-                    
-                </h3>
-                <p>7 つのメモリ領域をネイティブ API でワンクリック解放、ドライバ不要。使用率超過で自動クリーンアップし、よく使うキャッシュは保持します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/memclean.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/memclean.webp"
-                         alt="瞬速メモリクリーナー" width="640" height="520"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">11</span>
-                <h3>
-                    瞬速システム最適化
-                    
-                </h3>
-                <p>100 以上の項目を秒で診断してワンクリック修復。すべての変更はスナップショットで復元可能だから、安心して高速化できます。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/winopt.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/winopt.webp"
-                         alt="瞬速システム最適化" width="1060" height="700"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">12</span>
-                <h3>
-                    マウスジェスチャー
-                    
-                </h3>
-                <p>トリガーボタンを押したままジェスチャーを描くとアクションを実行：キー入力のシミュレート、ウィンドウ操作、音量調整、アプリ起動、タスク切り替え、Web 検索など。システム全体で動作し、デフォルトで有効です。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/gestures.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/gestures.webp"
-                         alt="マウスジェスチャー" width="998" height="780"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-    </div>
-</section>
-
-<section class="section " id="text">
-    <div class="wrap">
-        <div class="cat-head">
-            <div class="card-icon"><i class="fa-solid fa-language"></i></div>
-            <div>
-                <h2>テキストと言語</h2>
-                <p>テキスト処理でよく使う工程を、まとめて導入。</p>
-            </div>
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">01</span>
-                <h3>
-                    スーパー翻訳
-                    
-                </h3>
-                <p>選択範囲も全文も翻訳。翻訳先の言語を自分で選べます。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/translate.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/translate.webp"
-                         alt="スーパー翻訳" width="1125" height="750"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">02</span>
-                <h3>
-                    文字認識 OCR
-                    
-                </h3>
-                <p>スクリーンショットからそのまま認識。ローカルの RapidOCR エンジンでオフライン動作し、日本語と英語が混在した文章も正確。クイック OCR 翻訳にも対応します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/ocr.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/ocr.webp"
-                         alt="文字認識 OCR" width="1150" height="875"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">03</span>
-                <h3>
-                    クイック OCR
-                    
-                </h3>
-                <p>メインウィンドウを開かず、ホットキー一つでスクリーンショットの認識と翻訳まで完了。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/quickocr.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/quickocr.webp"
-                         alt="クイック OCR" width="852" height="667"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">04</span>
-                <h3>
-                    正規表現
-                    
-                </h3>
-                <p>リアルタイムのマッチ強調表示、キャプチャグループの確認、よく使う表現の早見表。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/regex.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/regex.webp"
-                         alt="正規表現" width="900" height="760"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">05</span>
-                <h3>
-                    エンコード・デコード
-                    
-                </h3>
-                <p>Base64 / URL / HTML / Unicode / 進数など、一般的なエンコード方式を相互変換します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/codec.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/codec.webp"
-                         alt="エンコード・デコード" width="900" height="640"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">06</span>
-                <h3>
-                    ハッシュ計算
-                    
-                </h3>
-                <p>MD5 / SHA 系のダイジェスト。テキストとファイルの検証に対応します。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/hash.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/hash.webp"
-                         alt="ハッシュ計算" width="800" height="800"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">07</span>
-                <h3>
-                    暗号化・復号
-                    
-                </h3>
-                <p>OpenSSL を基盤とした共通鍵・公開鍵方式の暗号化と復号、鍵の生成。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/encryption.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/encryption.webp"
-                         alt="暗号化・復号" width="1125" height="1062"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal rev ">
-            <div class="feat-text">
-                <span class="feat-num">08</span>
-                <h3>
-                    データ変換
-                    
-                </h3>
-                <p>JSON / YAML / XML / TOML / CSV の構造化データの相互変換と整形。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/convert.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/convert.webp"
-                         alt="データ変換" width="880" height="800"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-        <div class="feat-row reveal  ">
-            <div class="feat-text">
-                <span class="feat-num">09</span>
-                <h3>
-                    データ生成
-                    
-                </h3>
-                <p>UUID / GUID、ULID、ランダム文字列、テストデータの一括生成。</p>
-            </div>
-            
-            <figure class="shot">
-                <picture>
-                    <source srcset="/screenshots/en-dark/datagen.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/datagen.webp"
-                         alt="データ生成" width="880" height="850"
-                         loading="lazy" decoding="async">
-                </picture>
-            </figure>
-            
-        </div>
-        
-    </div>
-</section>
-
 <section class="section section-alt" id="file">
     <div class="wrap">
         <div class="cat-head">
             <div class="card-icon"><i class="fa-solid fa-folder-open"></i></div>
             <div>
-                <h2>ファイルとメディア</h2>
-                <p>一括処理はツールに任せて、あなたはファイルを選ぶだけ。</p>
+                <h2>ファイルと画像</h2>
+                <p>プレビュー、一括リネーム、画像 / 動画 / PDF の一括処理とダウンロード。スクリーンショット、画面録画、画面からの文字認識もここ。</p>
             </div>
         </div>
         
@@ -1071,17 +635,80 @@
             <div class="feat-text">
                 <span class="feat-num">07</span>
                 <h3>
-                    Markdown エディター
+                    スクリーンショット
                     
                 </h3>
-                <p>milkdown ベースの WYSIWYG Markdown ファイルエディター。</p>
+                <p>範囲キャプチャー、長尺キャプチャー（スクロール結合）、画面へのピン留め。独立プロセスなので互いに足を引っ張りません。</p>
             </div>
             
             <figure class="shot">
                 <picture>
-                    <source srcset="/screenshots/en-dark/markdown.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/markdown.webp"
-                         alt="Markdown エディター" width="1250" height="900"
+                    <source srcset="/screenshots/en-dark/screencap.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/screencap.webp"
+                         alt="スクリーンショット" width="1278" height="869"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
+                <h3>
+                    画面録画
+                    
+                </h3>
+                <p>画面と音声の録画、カメラ領域の自由な選択に対応。カメラはカーソルを自動追従してズームし、クリック・キー入力のヒントを表示、ワンクリックで仕上げ映像を出力します。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/screenrec.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/screenrec.webp"
+                         alt="画面録画" width="1041" height="668"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">09</span>
+                <h3>
+                    文字認識 OCR
+                    
+                </h3>
+                <p>スクリーンショットからそのまま認識。ローカルの RapidOCR エンジンでオフライン動作し、日本語と英語が混在した文章も正確。クイック OCR 翻訳にも対応します。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/ocr.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/ocr.webp"
+                         alt="文字認識 OCR" width="1150" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">10</span>
+                <h3>
+                    クイック OCR
+                    
+                </h3>
+                <p>メインウィンドウを開かず、ホットキー一つでスクリーンショットの認識と翻訳まで完了。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/quickocr.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/quickocr.webp"
+                         alt="クイック OCR" width="852" height="667"
                          loading="lazy" decoding="async">
                 </picture>
             </figure>
@@ -1091,13 +718,13 @@
     </div>
 </section>
 
-<section class="section " id="extend">
+<section class="section " id="system">
     <div class="wrap">
         <div class="cat-head">
-            <div class="card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <div class="card-icon"><i class="fa-solid fa-broom"></i></div>
             <div>
-                <h2>計算と拡張</h2>
-                <p>開かれた、拡張可能なコマンドモジュール方式。</p>
+                <h2>システム</h2>
+                <p>ファイルスキャン清理、ディスク容量分析、メモリ清理、システム最適化の 4 つの「極速」ツール。結果は数秒、変更はすべて元に戻せます。</p>
             </div>
         </div>
         
@@ -1105,17 +732,17 @@
             <div class="feat-text">
                 <span class="feat-num">01</span>
                 <h3>
-                    計算用紙
+                    瞬速ファイルスキャン＆クリーン
                     
                 </h3>
-                <p>複数行の連続計算に対応し、変数、単位換算、関数も利用できます。数式は組版のように整えて表示します。</p>
+                <p>インデックスで即スキャンして大ファイルも即特定。150+ のクリーンアップルールで、AI ツールのキャッシュまで掃除します。</p>
             </div>
             
             <figure class="shot">
                 <picture>
-                    <source srcset="/screenshots/en-dark/calc.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/calc.webp"
-                         alt="計算用紙" width="1115" height="875"
+                    <source srcset="/screenshots/en-dark/fileclean.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/fileclean.webp"
+                         alt="瞬速ファイルスキャン＆クリーン" width="1000" height="660"
                          loading="lazy" decoding="async">
                 </picture>
             </figure>
@@ -1126,17 +753,17 @@
             <div class="feat-text">
                 <span class="feat-num">02</span>
                 <h3>
-                    QR コード
+                    瞬速ディスク容量分析
                     
                 </h3>
-                <p>テキストや URL から QR コードを生成し、スクリーンショットや画像から読み取ることもできます。</p>
+                <p>MFT インデックスを直接読み取りするのでスキャン不要。百万ファイルも一瞬で表示し、ツリーマップで容量の肥大化元を即特定します。</p>
             </div>
             
             <figure class="shot">
                 <picture>
-                    <source srcset="/screenshots/en-dark/qrcode.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/qrcode.webp"
-                         alt="QR コード" width="1203" height="834"
+                    <source srcset="/screenshots/en-dark/diskspace.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/diskspace.webp"
+                         alt="瞬速ディスク容量分析" width="1040" height="680"
                          loading="lazy" decoding="async">
                 </picture>
             </figure>
@@ -1147,17 +774,17 @@
             <div class="feat-text">
                 <span class="feat-num">03</span>
                 <h3>
-                    オープンSDK
+                    瞬速メモリクリーナー
                     
                 </h3>
-                <p>388 個の .zenmod コマンドモジュールを内蔵（AI・アプリ・ゲーム・システム・Web の5分類）。SDK ドキュメントとサンプルプロジェクトも公開中。</p>
+                <p>7 つのメモリ領域をネイティブ API でワンクリック解放、ドライバ不要。使用率超過で自動クリーンアップし、よく使うキャッシュは保持します。</p>
             </div>
             
             <figure class="shot">
                 <picture>
-                    <source srcset="/screenshots/en-dark/sdk.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/sdk.webp"
-                         alt="オープンSDK" width="950" height="675"
+                    <source srcset="/screenshots/en-dark/memclean.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/memclean.webp"
+                         alt="瞬速メモリクリーナー" width="640" height="520"
                          loading="lazy" decoding="async">
                 </picture>
             </figure>
@@ -1168,17 +795,17 @@
             <div class="feat-text">
                 <span class="feat-num">04</span>
                 <h3>
-                    内蔵ブラウザー
+                    瞬速システム最適化
                     
                 </h3>
-                <p>枠なしの軽量ブラウザー。コマンドモジュールが URL を開くときに使われるため、普段のブラウザーを邪魔しません。</p>
+                <p>100 以上の項目を秒で診断してワンクリック修復。すべての変更はスナップショットで復元可能だから、安心して高速化できます。</p>
             </div>
             
             <figure class="shot">
                 <picture>
-                    <source srcset="/screenshots/en-dark/browser.webp" media="(prefers-color-scheme: dark)">
-                    <img src="/screenshots/en-light/browser.webp"
-                         alt="内蔵ブラウザー" width="1269" height="893"
+                    <source srcset="/screenshots/en-dark/winopt.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/winopt.webp"
+                         alt="瞬速システム最適化" width="1060" height="700"
                          loading="lazy" decoding="async">
                 </picture>
             </figure>
@@ -1188,19 +815,145 @@
     </div>
 </section>
 
-<section class="section section-alt" id="personal">
+<section class="section section-alt" id="desktop">
     <div class="wrap">
         <div class="cat-head">
-            <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="card-icon"><i class="fa-solid fa-display"></i></div>
             <div>
-                <h2>パーソナライズ</h2>
-                <p>デスクトップは毎日いちばん長く見る画面。少しきれいにする価値があります。</p>
+                <h2>デスクトップ</h2>
+                <p>ドック、マウスジェスチャ、システムクイックアクションで繰り返し操作を一手に。アプリ使用統計、リマインダー、カレンダーで時間を把握し、壁紙・エフェクト・ナビページで見た目を整えます。</p>
             </div>
         </div>
         
         <div class="feat-row reveal  ">
             <div class="feat-text">
                 <span class="feat-num">01</span>
+                <h3>
+                    ドック
+                    
+                </h3>
+                <p>画面上端に常駐するフローティングランチャー。マウスを上部に動かすと自動でスライド表示され、グループ分けしたアプリと URL にいつでも素早くアクセスできます。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/dock.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/dock.webp"
+                         alt="ドック" width="940" height="815"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
+                <h3>
+                    マウスジェスチャー
+                    
+                </h3>
+                <p>トリガーボタンを押したままジェスチャーを描くとアクションを実行：キー入力のシミュレート、ウィンドウ操作、音量調整、アプリ起動、タスク切り替え、Web 検索など。システム全体で動作し、デフォルトで有効です。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/gestures.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/gestures.webp"
+                         alt="マウスジェスチャー" width="998" height="780"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
+                <h3>
+                    システムクイック操作
+                    
+                </h3>
+                <p>音量調整・シャットダウン・再起動・ロック・USB取り出し・ごみ箱を空にするなど、よく使うシステム操作をコマンド一つで実行。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/sysquick.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/sysquick.webp"
+                         alt="システムクイック操作" width="551" height="625"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
+                <h3>
+                    アプリ使用統計
+                    
+                </h3>
+                <p>各アプリの使用時間とアクティブ化回数を記録し、グラフで時間の使い道を可視化します。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/appusage.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/appusage.webp"
+                         alt="アプリ使用統計" width="1100" height="700"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
+                <h3>
+                    リマインダー
+                    
+                </h3>
+                <p>1 回 / 毎日 / 毎週 / 毎月のリマインダー。時刻になるとデスクトップに通知します。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/reminder.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/reminder.webp"
+                         alt="リマインダー" width="1196" height="927"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
+                <h3>
+                    万年暦
+                    
+                </h3>
+                <p>新暦と旧暦の対照、二十四節気と祝日、干支や吉日の情報。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/calendar.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/calendar.webp"
+                         alt="万年暦" width="1200" height="700"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
                 <h3>
                     ライブ壁紙
                     
@@ -1221,7 +974,7 @@
         
         <div class="feat-row reveal rev ">
             <div class="feat-text">
-                <span class="feat-num">02</span>
+                <span class="feat-num">08</span>
                 <h3>
                     デスクトップエフェクト
                     
@@ -1242,7 +995,7 @@
         
         <div class="feat-row reveal  ">
             <div class="feat-text">
-                <span class="feat-num">03</span>
+                <span class="feat-num">09</span>
                 <h3>
                     ナビゲーションページ
                     
@@ -1255,6 +1008,305 @@
                     <source srcset="/screenshots/en-dark/navpage.webp" media="(prefers-color-scheme: dark)">
                     <img src="/screenshots/en-light/navpage.webp"
                          alt="ナビゲーションページ" width="940" height="815"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+    </div>
+</section>
+
+<section class="section " id="text">
+    <div class="wrap">
+        <div class="cat-head">
+            <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+                <h2>テキストとデータ</h2>
+                <p>翻訳、正規表現、エンコード、ハッシュ、暗号化、フォーマット変換、データ生成。Markdown エディタ、QR コード、計算メモもこの分類に含まれます。</p>
+            </div>
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
+                <h3>
+                    スーパー翻訳
+                    
+                </h3>
+                <p>選択範囲も全文も翻訳。翻訳先の言語を自分で選べます。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/translate.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/translate.webp"
+                         alt="スーパー翻訳" width="1125" height="750"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
+                <h3>
+                    正規表現
+                    
+                </h3>
+                <p>リアルタイムのマッチ強調表示、キャプチャグループの確認、よく使う表現の早見表。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/regex.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/regex.webp"
+                         alt="正規表現" width="900" height="760"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
+                <h3>
+                    エンコード・デコード
+                    
+                </h3>
+                <p>Base64 / URL / HTML / Unicode / 進数など、一般的なエンコード方式を相互変換します。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/codec.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/codec.webp"
+                         alt="エンコード・デコード" width="900" height="640"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">04</span>
+                <h3>
+                    ハッシュ計算
+                    
+                </h3>
+                <p>MD5 / SHA 系のダイジェスト。テキストとファイルの検証に対応します。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/hash.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/hash.webp"
+                         alt="ハッシュ計算" width="800" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">05</span>
+                <h3>
+                    暗号化・復号
+                    
+                </h3>
+                <p>OpenSSL を基盤とした共通鍵・公開鍵方式の暗号化と復号、鍵の生成。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/encryption.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/encryption.webp"
+                         alt="暗号化・復号" width="1125" height="1062"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">06</span>
+                <h3>
+                    データ変換
+                    
+                </h3>
+                <p>JSON / YAML / XML / TOML / CSV の構造化データの相互変換と整形。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/convert.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/convert.webp"
+                         alt="データ変換" width="880" height="800"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">07</span>
+                <h3>
+                    データ生成
+                    
+                </h3>
+                <p>UUID / GUID、ULID、ランダム文字列、テストデータの一括生成。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/datagen.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/datagen.webp"
+                         alt="データ生成" width="880" height="850"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">08</span>
+                <h3>
+                    Markdown エディター
+                    
+                </h3>
+                <p>milkdown ベースの WYSIWYG Markdown ファイルエディター。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/markdown.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/markdown.webp"
+                         alt="Markdown エディター" width="1250" height="900"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">09</span>
+                <h3>
+                    計算用紙
+                    
+                </h3>
+                <p>複数行の連続計算に対応し、変数、単位換算、関数も利用できます。数式は組版のように整えて表示します。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/calc.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/calc.webp"
+                         alt="計算用紙" width="1115" height="875"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">10</span>
+                <h3>
+                    QR コード
+                    
+                </h3>
+                <p>テキストや URL から QR コードを生成し、スクリーンショットや画像から読み取ることもできます。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/qrcode.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/qrcode.webp"
+                         alt="QR コード" width="1203" height="834"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+    </div>
+</section>
+
+<section class="section section-alt" id="extend">
+    <div class="wrap">
+        <div class="cat-head">
+            <div class="card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <div>
+                <h2>AI と拡張</h2>
+                <p>AI サービスへワンクリックで直行。オープン SDK で自作モジュールを作れ、内蔵ブラウザがウェブ系の機能を担います。</p>
+            </div>
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">01</span>
+                <h3>
+                    オープンSDK
+                    
+                </h3>
+                <p>388 個の .zenmod コマンドモジュールを内蔵（AI・アプリ・ゲーム・システム・Web の5分類）。SDK ドキュメントとサンプルプロジェクトも公開中。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/sdk.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/sdk.webp"
+                         alt="オープンSDK" width="950" height="675"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal rev ">
+            <div class="feat-text">
+                <span class="feat-num">02</span>
+                <h3>
+                    内蔵ブラウザー
+                    
+                </h3>
+                <p>枠なしの軽量ブラウザー。コマンドモジュールが URL を開くときに使われるため、普段のブラウザーを邪魔しません。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/browser.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/browser.webp"
+                         alt="内蔵ブラウザー" width="1269" height="893"
+                         loading="lazy" decoding="async">
+                </picture>
+            </figure>
+            
+        </div>
+        
+        <div class="feat-row reveal  ">
+            <div class="feat-text">
+                <span class="feat-num">03</span>
+                <h3>
+                    AI ショートカット
+                    
+                </h3>
+                <p>55 件のオンライン AI サービスへワンクリックで直行：DeepSeek、Kimi、ChatGPT、Claude、Gemini など。内蔵の枠なしブラウザで開くため、メインのブラウザを邪魔しません。</p>
+            </div>
+            
+            <figure class="shot">
+                <picture>
+                    <source srcset="/screenshots/en-dark/aientry.webp" media="(prefers-color-scheme: dark)">
+                    <img src="/screenshots/en-light/aientry.webp"
+                         alt="AI ショートカット" width="553" height="517"
                          loading="lazy" decoding="async">
                 </picture>
             </figure>
@@ -2224,7 +2276,7 @@
 
         <div class="footer-col">
             <h3>リソース</h3>
-            <a href="/ja/sdk.html">開発者</a>
+            <a href="/ja/developers.html">開発者</a>
             
             <a href="https://github.com/jearry/yyzTools/discussions" target="_blank" rel="noopener noreferrer">ディスカッション</a>
             <a href="https://github.com/jearry/yyzTools/issues" target="_blank" rel="noopener noreferrer">問題を報告</a>
